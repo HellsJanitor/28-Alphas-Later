@@ -571,8 +571,7 @@
 				<passive_effect name="HealthMax" operation="base_set" value="135"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
 			</effect_group>
-			<effect_group>
-				
+			<effect_group>				
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>
 				<requirement name="ProgressionLevel" progression_name="perkWellInsulated" operation="LTE" value="2" target="other"/>				
 			</effect_group>
@@ -2020,8 +2019,7 @@
 				<requirement name="NotHasBuff" target="other" buff="buffRadSuit"/>	
 			</effect_group>
 		</entity_class>
-		
-		
+	
 	<!-- *** hazmat loot bags *** -->
 		<entity_class name="zombieMaleHazmatLootBag">
 			<property name="Class" value="EntityLootContainer"/>
@@ -2061,7 +2059,25 @@
 			<property name="LootListOnDeath" value="zombieMaleMutatedHazmatLoot"/>
 			<property name="Faction" value="none"/>
 		</entity_class>
-	</append>	
+	</append>
+	
+	<!-- *** add slow effect to lumberjack *** -->
+	<append xpath="//entity_class[@name='zombieLumberjack']">
+		<effect_group>				
+			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>
+			<requirement name="ProgressionLevel" progression_name="perkWellInsulated" operation="LTE" value="2" target="other"/>				
+		</effect_group>
+	</append>
+	
+	<!-- *** adds particle effect to lumberjack *** -->
+	<insertafter xpath="//entity_class[@name='zombieLumberjack']//property[@name='Mesh']">
+		<property name="ParticleOnSpawn" value="ParticleEffects/p_breath" param1="SetShapeToMesh4"/>
+		<property name="TintColor" value="#f8f8ff"/>
+		<property name="TintShaderProperties" value="_EmissiveColor"/>
+	</insertafter>
+	
+	<!-- *** lumberjack immune to liquid nitrogen *** -->
+	<set xpath="//entity_class[@name=['zombieLumberjack']//property[@name='Tags']/@value">entity,zombie,walker,frozen</set>
 
 	<!-- *** 'Fat' zombies don't puke, but they do explode ... *** -->
 	<insertafter xpath="//entity_class[@name='zombieFemaleFat']//property[@name='Tags']">
