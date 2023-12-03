@@ -1,0 +1,11 @@
+<configs>
+	<append xpath="/ui_display_info/crafting_category_display" >
+
+		<crafting_category_list display_type="Chicken Coop">
+			<crafting_category name="Food/Cooking" icon="ui_game_symbol_fork" display_name="Eggs" />
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="Feathers" icon_color="153,0,0"/>
+		</crafting_category_list>
+		
+		
+	</append>
+</configs>

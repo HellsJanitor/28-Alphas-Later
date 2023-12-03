@@ -1,0 +1,7 @@
+Key,english
+idcXuiModifiers,MODIFIERS
+idcXuiAnimalSnare,Output
+ctnChickenCoop,Chicken coop
+ctnChickenCoopDesc,Produces eggs. Needs a chicken.
+fuelChicken,Chicken
+fuelChickenDesc,Use this chicken to produce eggs in a chicken coop.

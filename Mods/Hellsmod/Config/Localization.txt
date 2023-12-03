@@ -1,0 +1,425 @@
+Key,english
+goDifficultyDesc,"Choose from 6 Difficulty settings.\n\n1. Scavenger: [FFC800]Enemies deal 100% damage[-]\n[FF4500]Enemies have no health bonus[-]\n2. Adventurer: [FFC800]Enemies deal 25% more damage[-] \n[FF4500]Enemies have 20% more health[-]\n3. Nomad: [FFC800]Enemies deal 50% more damage[-] \n[FF4500]Enemies have 40% more health[-]\n4. Warrior: [FFC800]Enemies deal 75% more damage[-] \n[FF4500]Enemies have 60% more health[-]\n5. Survivalist: [FFC800]Enemies deal 100% more damage[-] \n[FF4500]Enemies have 80% more health[-]\n6. Insane: [FFC800]Enemies deal 150% more damage[-] \n[FF4500]Enemies have 100% more health[-]"
+HellsModSpawnText,"This mod will challenge you in ways that the vanilla game doesn't,\nwhile keeping the familiar vanilla look & feel.\n\n[00FF00]Important Points![-]\nZombies only take damage with [FFC800]headshots[-],[FFC800] fire[-], & [FFC800]explosives[-]!\nZombies[FF4500] DO NOT [-]bleed!\nThe Wasteland biome is [00FF00]IRRADIATED[-]! (a Hazmat suit is required)\n\nLoot is reduced, harvest counts are reduced, crafting costs more resources, and traders are more expensive.\n\nHave fun!!"
+HellsModSpawnText_title,"Welcome to [FFC800]28 ALPHAS LATER[-]!"
+4x4Bundle,4x4
+4x4BundleDesc,Take this bundle to where you want to place your 4x4 [FFC800]BEFORE[-] you open it!
+ammoArrowWood,Wooden arrow
+ammoArrowWoodDesc,"A basic arrow made from a branch.\n\nA pointy stick, effectively."
+ammoCrossbowBoltWood,Wooden bolt
+ammoCrossbowBoltWoodDesc,"A basic bolt made from a branch.\n\nA pointy stick, effectively."
+animalBear,Grizzly Bear
+animalChickenDesc,"A chicken. Use this in a chicken coop to produce eggs.\n\nMust be replaced periodically"
+animalDireWolf,Timber Wolf
+animalDoe,Mule Doe
+animalSnake,Rattlesnake
+animalStag,Mule Stag
+animalWolf,Grey Wolf
+antivenomDesc,"Use this to instantly remove the effects of venom.\n\nCan be crafted in a beaker at the campfire."
+armorSteelGroupDesc,Heavy armor will encumber you but provides good protection against damage.\nIt will not protect you from the weather.\n\nRepair with a Steel Armor Repair Kit.\nScrap to steel armor parts.
+armorMilitaryGroupDesc,Light armor will encumber you a little and provides some protection against damage.\nIt will not protect you from the weather.\n\nRepair with a Military Armour Repair Kit.\nScrap to military armor parts.
+attAgilityRank01LongDesc,"You are as clumsy as they come but you still do 200% head shot damage and have a 1% chance to dismember with bows, handguns, and knives."
+attAgilityRank02LongDesc,"You didn't make the football team but that didn't stop you from practicing. Deal 210% head shot damage and have a 2% chance to dismember with bows, handguns and knives."
+attAgilityRank03LongDesc,"You are still loud and clunky but can deal 220% head shot damage and have a 3% chance to dismember with bows, handguns and knives."
+attAgilityRank04LongDesc,"Your dexterity is a bit inept, but you can deal 230% head shot damage and have a 4% chance to dismember with bows, handguns and knives."
+attAgilityRank05LongDesc,"You are now agile and deal 240% head shot damage and have a 5% chance to dismember with bows, handguns and knives."
+attAgilityRank06LongDesc,"Your movement is now very nimble and deal 250% head shot damage and have a 6% chance to dismember with bows, handguns and knives."
+attAgilityRank07LongDesc,"Your dexterity is very impressive. Deal 260% head shot damage and have a 7% chance to dismember with bows, handguns and knives."
+attAgilityRank08LongDesc,"Moving fluid and landing on your feet are second nature for you. Deal 270% head shot damage and have a 8% chance to dismember with bows, handguns and knives."
+attAgilityRank09LongDesc,"Your agility is good enough you could be a professional athlete. Deal 285% head shot damage and have a 9% chance to dismember with bows, handguns and knives."
+attAgilityRank10LongDesc,"Your dexterity is unmatched. Deal 300% head shot damage and have a 10% chance to dismember with bows, handguns and knives."
+attFortitudeRank01LongDesc,You aren't very durable or healthy but at least you are alive. Deal 200% head shot damage and have a 1% chance to dismember with fists and machine guns.
+attFortitudeRank02LongDesc,You feel a little better than you used to. Deal 210% head shot damage and have a 2% chance to dismember with fists and machine guns.
+attFortitudeRank03LongDesc,You continue to defy gravity and keep standing. Deal 220% head shot damage and have a 3% chance to dismember with fists and machine guns.
+attFortitudeRank04LongDesc,You are starting to feel like normal people. Deal 230% head shot damage and have a 4% chance to dismember with fists and machine guns.
+attFortitudeRank05LongDesc,You are in good health. Deal 240% head shot damage and have a 5% chance to dismember with fists and machine guns.
+attFortitudeRank06LongDesc,You are very healthy. Deal 250% head shot damage and have a 6% chance to dismember with fists and machine guns.
+attFortitudeRank07LongDesc,You have vigorous health. Deal 260% head shot damage and have a 7% chance to dismember with fists and machine guns.
+attFortitudeRank08LongDesc,You are as resilient as they come. Deal 270% head shot damage and have a 8% chance to dismember with fists and machine guns.
+attFortitudeRank09LongDesc,You have an amazing constitution. Deal 285% head shot damage and have a 9% chance to dismember with fists and machine guns.
+attFortitudeRank10LongDesc,Your have exuberant fortitude and can put a beat down on a tornado. Deal 300% head shot damage and have a 10% chance to dismember with fists and machine guns.
+attIntellectRank10LongDesc,You are a mastermind of intellect. Deal 300% head shot damage and have a 10% chance to dismember with stun batons and Robotic turrets.
+attIntellectRank1LongDesc,You are as dumb as box of rocks but you still do 200% head shot damage and have a 1% chance to dismember with stun batons and Robotic turrets.
+attIntellectRank2LongDesc,"You aren't the brightest color in the box, but you occasionally hit the nail on the head. Deal 210% head shot damage and have a 2% chance to dismember with stun batons and Robotic turrets."
+attIntellectRank3LongDesc,Even dimwits have a bright idea once in a while. Deal 220% head shot damage and have a 3% chance to dismember with stun batons and Robotic turrets.
+attIntellectRank4LongDesc,You don't like to learn new stuff but you will if you have to. Deal 230% head shot damage and have a 4% chance to dismember with stun batons and Robotic turrets.
+attIntellectRank5LongDesc,Being average is better than being below average. Deal 240% head shot damage and have a 5% chance to dismember with stun batons and Robotic turrets.
+attIntellectRank6LongDesc,You are now getting pretty smart. Deal 250% head shot damage and have a 6% chance to dismember with stun batons and Robotic turrets.
+attIntellectRank7LongDesc,Your peers consider you brilliant. Deal 260% head shot damage and have a 7% chance to dismember with stun batons and Robotic turrets.
+attIntellectRank8LongDesc,Your intellect is quite impressive. Deal 270% head shot damage and have a 8% chance to dismember with stun batons and Robotic turrets.
+attIntellectRank9LongDesc,You are now a true genius. Deal 285% head shot damage and have a 9% chance to dismember with stun batons and Robotic turrets.
+attPerceptionRank01LongDesc,"You are pretty oblivious in the perception department. Deal 200% head shot damage and have a 1% chance to dismember with rifles, explosives, spears and tools governed by Salvage Operations.
+attPerceptionRank02LongDesc,"You are still unaware to most things around you. Deal 210% head shot damage and have a 2% chance to dismember with rifles, explosives, spears and tools governed by Salvage Operations."
+attPerceptionRank03LongDesc,"You are sometimes unobservant but getting better. Deal 220% head shot damage and have a 3% chance to dismember with rifles, explosives, spears and tools governed by Salvage Operations."
+attPerceptionRank04LongDesc,"Your incognizant perception is usually just a small setback. Deal 230% head shot damage and have a 4% chance to dismember with rifles, explosives, spears and tools governed by Salvage Operations."
+attPerceptionRank05LongDesc,"You are observant and notice just enough to make a big difference. Deal 240% head shot damage and have a 5% chance to dismember with rifles, explosives, spears and tools governed by Salvage Operations."
+attPerceptionRank06LongDesc,"Your attention to detail is clearly aiding you in combat. Deal 250% head shot damage and have a 6% chance to dismember with rifles, explosives, spears and tools governed by Salvage Operations."
+attPerceptionRank07LongDesc,"You can discern weak points in enemies with ease now. Deal 260% head shot damage and have a 7% chance to dismember with rifles, explosives, spears and tools governed by Salvage Operations."
+attPerceptionRank08LongDesc,"Your perception is astounding. Deal 270% head shot damage and have a 8% chance to dismember with rifles, explosives, spears and tools governed by Salvage Operations."
+attPerceptionRank09LongDesc,"Your awareness is astute. Deal 285% head shot damage and have a 9% chance to dismember with rifles, explosives, spears and tools governed by Salvage Operations."
+attPerceptionRank10LongDesc,"You are unrivaled at making heads go boom.  Deal 300% head shot damage and have a 10% chance to dismember with rifles, explosives, spears and tools governed by Salvage Operations."
+attStrengthRank01LongDesc,"Everyone wants to be a bodybuilder but nobody wants to lift those heavy ass weights. Deal 200% head shot damage and have a 1% greater chance to dismember with shotguns, clubs, sledgehammers and tools governed by Miner 69'er."
+attStrengthRank02LongDesc,"You might be scrawny but you have a fire inside to get big and strong. Deal 210% head shot damage and have a 2% chance to dismember with shotguns, clubs, sledgehammers and tools governed by Miner 69'er."
+attStrengthRank03LongDesc,"What is a milk drinker like you doing in the zombie apocalypse? Deal 220% head shot damage and have a 3% greater chance to dismember with shotguns, clubs, sledgehammers and tools governed by Miner 69'er."
+attStrengthRank04LongDesc,"Your spare tire might keep you from starving but isn't helping you swing a sledgehammer. Deal 230% head shot damage and have a 4% greater chance to dismember with shotguns, clubs, sledgehammers and tools governed by Miner 69'er."
+attStrengthRank05LongDesc,"You are fit and able to deal 240% head shot damage and have a 5% greater chance to dismember with shotguns, clubs, sledgehammers and tools governed by Miner 69'er."
+attStrengthRank06LongDesc,"You are very strong and all the normies at the gym are envious. Deal 250% head shot damage and have a 6% greater chance to dismember with shotguns, clubs, sledgehammers and tools governed by Miner 69'er."
+attStrengthRank07LongDesc,"Pumping clubs and sledgehammers has gave you some gains bro. Deal 260% head shot damage and have a 7% greater chance to dismember with shotguns, clubs, sledgehammers and tools governed by Miner 69'er."
+attStrengthRank08LongDesc,"Your massive strength is legendary. Deal 270% head shot damage and have a 8% greater chance to dismember with shotguns, clubs, sledgehammers and tools governed by Miner 69'er."
+attStrengthRank09LongDesc,"Size, strength and power are all champion level now. Deal 285% head shot damage and have a 9% greater chance to dismember with shotguns, clubs, sledgehammers and tools governed by Miner 69'er."
+attStrengthRank10LongDesc,"You could be an Olympic champion if the apocalypse hadn't crushed that dream. Now you can just crush zombies. Deal 300% head shot damage and have a 10% greater chance to dismember with shotguns, clubs, sledgehammers and tools governed by Miner 69'er."
+BarteringSauceFive,"Ultimate Sauce"
+BarteringSauceFiveDesc,"This will make you an Ultimate Adventurer.\n\nPermanently gain access to the best trader items and get 25% more dukes.\nPick three quest rewards.\n\nGet a 25% better deal when buying & selling."
+BarteringSauceFour,"Daring Sauce"
+BarteringSauceFourDesc,"This will make you a Daring Adventurer.\n\nPermanently gain access to the best trader items and get 20% more dukes.\nPick two quest rewards.\n\nGet a 20% better deal when buying & selling."
+BarteringSauceOne,"Looter's Sauce"
+BarteringSauceOneDesc,"This will make you a Looter.\n\nPermanently gain access to better trader items and get 5% more dukes.\n\nGet a 5% better deal when buying & selling."
+BarteringSauceThree,"Mercenary Sauce"
+BarteringSauceThreeDesc,"This will make you a Mercenary.\n\nPermanently gain access to much better trader items and get 15% more dukes.\n\nGet a 15% better deal when buying & selling."
+BarteringSauceTwo,"Plunderer's Sauce"
+BarteringSauceTwoDesc,"This will make you a Plunderer.\n\nPermanently gain access to even better trader items and get 10% more dukes.\n\nGet a 10% better deal when buying & selling."
+BowRepairKit,Bow Repair Kit
+BowRepairKitDesc,This Repair Kit is used to repair bows and crossbows.
+bucketRiverWaterDesc,Water can be dumped into an enclosed structure or hole in the ground to store it.\n\nIt is also an essential ingerdient in concrete mix.
+buffArrowBleedDesc,Your arrows & crossbow bolts have a 25% chance to make [FFC800]living[-] things bleed - when they hit that is...
+buffArrowBleedName,Arrows Cause Bleed
+buffArrowBleedtip,Arrows and bolts can make living things bleed
+buffDaringAdventurerFiveDesc,"You are an Ultimate Adventurer.\n\nYou have access to the best trader items, get 25% more Dukes from quests, and a 25% better deal when buying & selling.\n\nPick three quest rewards."
+buffDaringAdventurerFiveName,"Devoted Customer"
+buffDaringAdventurerFiveTooltip,"Your bartering & quest rewards have increased 5%!!"
+buffDaringAdventurerFourDesc,"You are a Daring Adventurer.\n\nYou have access to the best trader items, get 20% more Dukes from quests, and a 20% better deal when buying & selling.\n\nPick two quest rewards."
+buffDaringAdventurerFourName,"Loyal Patron"
+buffDaringAdventurerFourTooltip,"Your bartering & quest rewards have increased 5%!!"
+buffDaringAdventurerOneDesc,"You are a Looter.\n\nYou have access to better trader items, get 5% more Dukes from quests, and a 5% better deal when buying & selling."
+buffDaringAdventurerOneName,"Good Customer"
+buffDaringAdventurerOneTooltip,"Your bartering & quest rewards have increased 5%!!"
+buffDaringAdventurerThreeDesc,"You are a Mercenary.\n\nYou have access to better trader items, get 15% more Dukes from quests, and a 15% better deal when buying & selling."
+buffDaringAdventurerThreeName,"Patron"
+buffDaringAdventurerThreeTooltip,"Your bartering & quest rewards have increased 5%!!"
+buffDaringAdventurerTwoDesc,"You are a Plunderer.\n\nYou have access to better trader items, get 10% more Dukes from quests, and a 10% better deal when buying & selling."
+buffDaringAdventurerTwoName,"Loyal Customer"
+buffDaringAdventurerTwoTooltip,"Your bartering & quest rewards have increased 5%!!"
+buffDysentery01GetBetterDesc,You feel like throwing up and have the shits. That drink made you feel a bit better though.\n\nDiarrhea periodically reduces\nWater 7.5%\nFood 2.5%\nAll water and food consumed beyond the regular cap is lost over time.\n\n Debilitating but not fatal.
+buffDysentery01GetBetterName,Treated Dysentery
+buffDysentery01UntreatedDesc,You feel like throwing up and have the shits. Some Goldenrod tea or mineral water is needed.\n\nDiarrhea periodically reduces\nWater 7.5%\nFood 2.5%\nAll water and food consumed beyond the regular cap is lost over time.\n\n Debilitating but not fatal.
+buffDysentery01UntreatedName,Dysentery
+buffDysentery01UntreatedTooltip,You feel like throwing up and have the shits. Some Goldenrod tea or mineral water is needed.
+buffDysenteryCureDisplayDesc,You drank something which will sort out your guts ache. Drink some more if you don't feel better.
+buffDysenteryCureDisplayName,Dysentery Medicine
+buffImmobilizedDesc,"If you attempt to pick up any vehicle other than a bicycle, you will be unable to move until you put it down."
+buffImmobilizedName,Immobilization
+buffImmobilizedTooltip,"This vehicle is far too heavy. Put it down!!"
+buffPerkSurvivalInstinctDesc,"You are using your instincts of survival!"
+buffPoisonedDesc,"You're envenomed and are slowly taking damage.\n\nYou'll want some antivenom, and fast."
+buffPoisonedName,Envenomed!
+buffPoisonedTooltip,You've been envenomed!
+buffRadiation01,Radiation
+buffRadiation01Desc,"You have entered an area with increased radiation.\n\n[FFC800]A hazmat suit is required to survive here.[-]"
+buffRadiation01Name,Radiation
+buffRadiation01Tooltip,"You are in an irradiated biome"
+buffRadSuit,Radiation protection
+buffRadSuitDesc,"This hazmat suit will protect from this biome's radiation effects."
+buffRadSuitName,Radiation protection
+buffRadSuitTooltip,Radiation protection
+buffVehicleCrateDesc,"You are carrying a vehicle crate.\n\nThe contents of this crate will be [FFC800]HEAVY[-],\nso make sure you open it where you want the vehicle placed."
+buffVehicleCrateName,Vehicle Crate
+buffVehicleCrateTooltip,This crate contains a heavy vehicle. [FFC800]Open it outside![-]
+buffWasteland,Wasteland
+buffWastelanddDesc,"You are in a wasteland biome\nYou have:\n[FFC800]30%[-] increased loot stage.\n[FFC800]80%[-] increased scavenging time.\n[FFC800]50%[-] increased loot quantity.\n[FFC800]10%[-] increased Player XP Gain."
+buffWastelanddName,Wasteland
+buffWastelanddTooltip,"You are in a wasteland biome"
+chickenCoopDesc,"A home for your chickens.\n\n Place a chicken in the fuel slot to produce eggs over time.\n\nWill stop producing eggs when the chicken is spent."
+ClubRepairKit,Club Repair Kit
+ClubRepairKitDesc,This Repair Kit is used to repair steel clubs.
+foodCanBeefcooked,Cooked Beef Ration
+foodCanBeefcookedDesc,"It's not from your favorite steakhouse but this can of cooked beef will fill you up, and not be as likely to give you the shits..."
+foodCanCarrots,Can of Carrots
+foodCanCarrotscooked,Cooked carrots
+foodCanCarrotscookedDesc,"Convenient, budget-friendly, versatile...\n\n and cooked!"
+foodCanCarrotsDesc,"Convenient, budget-friendly and versatile, but are they as nutritious as fresh? Who cares...\n\nCook this food in a campfire to reduce the chance of illness from eating it."
+foodCanChickencooked,Cooked Chicken Ration
+foodCanChickencookedDesc,"Cooked chicken, straight from the can. Still tastes like crap."
+foodCanChickenDesc,"Tastes like chicken. Well, really old synthetic chicken with dirt on it.\n\nCook this food in a campfire to reduce the chance of illness from eating it."
+foodCanChilicooked,Cooked Chili
+foodCanChilicookedDesc,"Cooked Chili. Fiery finish, but less chance of a nasty finish..."
+foodCanChiliDesc,"Stash Chili goes down smooth but watch out for the fiery finish Paco.\n\nCook this food in a campfire to reduce the chance of illness from eating it."
+foodCanLambcooked,Cooked Lamb Rations
+foodCanLambcookedDesc,"Cooked lamb rations. Taste like lamb, texture like shoe leather."
+foodCanMisocooked,Cooked Miso soup
+foodCanMisocookedDesc,"Hot miso soup. Not bad at all."
+foodCanMisoDesc,"It's time to soup it up with some Miso soup mmm mmm good.\n\nCook this food in a campfire to reduce the chance of illness from eating it."
+foodCanPastacooked,Cooked pasta sauce
+foodCanPastacookedDesc,"Cooked Italian sauce. If only we had some pasta to go with it..."
+foodCanPastaDesc,"Now that's Italian! Che figata!\n\nCook this food in a campfire to reduce the chance of illness from eating it."
+foodCanPearscooked,Cooked pears
+foodCanPearscookedDesc,"Warm pears straight from the can. Might be weird to some, but it's less likely to make you ill..."
+foodCanPearsDesc,"Maintain that perfect pear shape by eating canned pears.\n\nCook this food in a campfire to reduce the chance of illness from eating it."
+foodCanPeascooked,Cooked peas
+foodCanPeascookedDesc,"One of your 5-a-day."
+foodCanPeasDesc,"You and your can of peas will be like two peas in a pod and you'll get your daily vegetables.\n\nCook this food in a campfire to reduce the chance of illness from eating it."
+foodCanSalmoncooked,Cooked salmon
+foodCanSalmoncookedDesc,"A healthy can of cooked salmon."
+foodCanSalmonDesc,"Enjoy this healthy can of salmon.\n\nCook this food in a campfire to reduce the chance of illness from eating it."
+foodCanShamcooked,Cooked Sham
+foodCanShamcookedDesc,"A can of high quality Shamway ham, but seriously - have you seen what they make this with?"
+foodCanShamDesc,"A can of high quality Shamway ham the number 1 maker of meat-like products. The lunch of champions.\n\nCrafted in lots of 5.\nCook this food in a campfire to reduce the chance of illness from eating it."
+foodCanSoupcooked,Cooked chicken soup
+foodCanSoupcookedDesc,"Hot chicken soup. Tasty."
+foodCanSoupDesc,"Chicken soup can keep the body and the soul together.\n\nCook this food in a campfire to reduce the chance of illness from eating it."
+foodCanStockcooked,Cooked stock
+foodCanStockcookedDesc,"It's not much, but it's better than starving, right?"
+foodCanStockDesc,"Stock up on stock or you could eat it now.\n\nCook this food in a campfire to reduce the chance of illness from eating it."
+foodCanTunacooked,Cooked tuna
+foodCanTunacookedDesc,"A can of cooked tuna. Reminds you of a simpler time."
+foodCanTunaDesc,"A can of tuna or better known as the chicken of the wasteland.\n\nCook this food in a campfire to reduce the chance of illness from eating it."
+foodChickenMiso,Chicken Miso
+foodChickenMisoDesc,"Chicken pieces, miso, eggs & mushrooms. All that's missing is the ramen..."
+foodChickenStew,Chicken Stew
+foodChickenStewDesc,"A much better use for chicken rations. Delicious and filling."
+foodHoney,Honeycomb
+foodScrambledEggs,Scrambled Eggs
+foodScrambledEggsDesc,"An apocalyptic breakfast that can be eaten any time.\n\nJust don't question what laid the eggs..."
+foodShepardsPie,Shepherd's Pie
+foodShepardsPieDesc,"Shepherd's Pie sure is tasty and super filling."
+foodShepardsPieSchematic,Shepherd's Pie Recipe
+gunBotT1JunkSledgeDesc,"You may not be good at punching but you have the technology.\nYou can also deploy this on the ground using the Secondary action.\nRepair with a Robot Repair Kit.\nScrap to Robotics Parts."
+gunBotT2JunkTurretDesc,"This contraption can be fired and reloaded like a gun. It uses Robotic Turret Ammo for ammunition.\nYou can also deploy it on the ground using the Secondary action.\nRepair with a Robot Repair Kit.\nScrap to Robotics Parts."
+gunBotT3JunkDroneDesc,"Crafted from robotic parts and scrap, the robotic drone is the ultimate companion in the apocalypse. It can heal you and carry some items. \nRepair with a Robot Repair Kit."
+gunBowT1IronCrossbowDesc,"A crossbow is slow to reload but does more damage than a bow.\nThis weapon can be fired underwater.\nHold reload to use alternate ammo.\nRepair with a Bow Repair Kit.\nScrap to Bow / Crossbow Parts."
+gunBowT1WoodenBowDesc,"Good for hunting and killing zombies. Uses arrows for ammunition.\nHold reload to use alternate ammo.\n\nRepair with a Bow Repair Kit.\nScrap to Bow / Crossbow Parts."
+gunBowT3CompoundBowDesc,"A compound bow does more damage and arrows fly straighter which makes it easier to aim.\n\nRepair with a Bow Repair Kit.\nScrap to Bow / Crossbow Parts."
+gunExplosivesT3RocketLauncherDesc,"A Rocket Launcher shoots rocket propelled grenades.\n\nRepair with a Rocket Launcher Repair Kit.\nScrap to Rocket Launcher parts."
+gunHandgunT1PistolDesc,"A basic pistol that uses 9mm ammo.\n\nRepair with a Handgun Repair Kit.\nScrap to Handgun Parts."
+gunHandgunT2Magnum44Desc,"The .44 Magnum is the king of handguns. It's the most powerful but makes the most noise. Wield this bad boy and make Clint proud.\n\nRepair with a Handgun Repair Kit.\nScrap to Handgun Parts."
+gunHandgunT3DesertVultureDesc,"This heavy pistol uses .44 Magnum ammo.\n\nRepair with a Handgun Repair Kit.\nScrap to Handgun Parts."
+gunHandgunT3SMG5Desc,"This submachine gun uses 9mm ammo.\n\nRepair with a Handgun Repair Kit.\nScrap to Handgun Parts."
+gunMGT1AK47Desc,"This badass AK-47 Machine Gun uses 7.62mm ammo.\n\nRepair with a Machine Gun Repair Kit.\nScrap to Machine Gun Parts."
+gunMGT2TacticalARDesc,"This Tactical Assault Rifle uses 7.62mm ammo.\n\nRepair with a Machine Gun Repair Kit.\nScrap to Machine Gun Parts."
+gunMGT3M60Desc,"Machine guns are somewhat cumbersome to use but excel at automatic fire. This one uses 7.62mm ammo.\n\nRepair with a Machine Gun Repair Kit.\nScrap to Machine Gun Parts."
+gunRifleT1HuntingRifleDesc,"This common farmer's hunting rifle uses 7.62mm ammo.\n\nRepair with a Rifle Repair Kit.\nScrap to Rifle parts."
+gunRifleT2LeverActionRifleDesc,"This Lever Action rifle uses 7.62mm ammo and is your first choice if you want to make that shot count.\n\nRepair with a Rifle Repair Kit.\nScrap to Rifle parts."
+gunRifleT3SniperRifleDesc,"This high precision, long ranged rifle is perfect for sniping enemies at great distances.\n\nRepair with a Rifle Repair Kit.\nScrap to Rifle parts."
+gunShotgunT1DoubleBarrelDesc,"A rusty old double barrel shotgun, great for close range carnage.\n\nRepair with a Shotgun Repair Kit.\nScrap to Shotgun Parts."
+gunShotgunT2PumpShotgunDesc,"A long-barreled shotgun with pump action loading .\n\nRepair with a Shotgun Repair Kit.\nScrap to Shotgun Parts."
+gunShotgunT3AutoShotgunDesc,"This semi automatic shotgun is a rare and devasting short range weapon capable of making minced meat out of anything in its path.\n\nRepair with a Shotgun Repair Kit.\nScrap to Shotgun Parts."
+GyroBundle,Gyrocopter
+GyroBundleDesc,Take this bundle to where you want to place your gyrocopter [FFC800]BEFORE[-] you open it!
+HandgunRepairKit,Handgun Repair Kit
+HandgunRepairKitDesc,"This Repair Kit is used to repair 9mm pistols, .44 handguns, and SMGs."
+infectionImmunity,T-Virus Immunity
+infectionImmunityDesc,"The chatter and the rumours were true!\nYou took the risk, and found the cure.\n\n[FFC800]You are now immune from any and all infections.[-]"
+KnucklesRepairKit,Knuckles Repair Kit
+KnucklesRepairKitDesc,This Repair Kit is used to repair steel knuckles.
+loadingTipBladedWeapons,"Bladed weapons such as knives and machetes are best at harvesting meat, hide and bones from animals and remains.\nThese weapons will apply a bleed debuff to living creatures, which can be bolstered by investing in the Deep Cuts perk.\nUnfortunately, undead creatures don't bleed."
+loadingTipBleedingArrows,"Any time you shoot a living thing with an arrow or crossbow bolt, it has a 25% chance to make your target bleed"
+loadingTipBleedingArrows_title,"Arrows can cause bleeding"
+loadingTipEncumbrance,"Carrying too many items in your inventory will slow you down, and carrying motor vehicles will prevent you from moving at all.\nFind or craft pocket mods for clothing or armor to remove encumbrance penalties. Alternatively you can purchase the Pack Mule perk."
+loadingTipHeadShotsOnly,"Don't you watch any zombie movies? The only way to kill anything undead is with a [FFC800]headshot[-].\nExplosives and fire will work too."
+loadingTipHeadShotsOnly_title,"Headsots only!"
+loadingTipPermanentInfection,"You are permanently infected. There is no cure, only treatment.\nThere are beehives in wild, which have a chance to contain a bee.\nUse this bee in your own beehive, and have a constant source of honey."
+loadingTipPermanentInfection_title,"Permanent Infection"
+MacheteRepairKit,Machete Repair Kit
+MacheteRepairKitDesc,This Repair Kit is used to repair machetes.
+MachinegunRepairKit,Machine Gun Repair Kit
+MachinegunRepairKitDesc,"This Repair Kit is used to repair AK47s, tactical assault rifles, and M60s."
+materialMresourceWoodScraps,Building
+meleeToolAxeT2SteelAxeDesc,"The steel axe has a durable blade and is great for harvesting wood.\n\nRepair with a Steel Tools Repair Kit.\nScrap to Steel Tool parts."
+meleeToolAxeT3ChainsawDesc,"Chop down the biggest trees or zombies faster than Paul Bunyan with this great chainsaw that uses gasoline for fuel.\n\nRepair with a Motor Tools Repair Kit.\nScrap to Motor Tool Parts."
+meleeToolPickT2SteelPickaxeDesc,"The steel pickaxe is best for breaking stone and harvesting minerals.\n\nRepair with a Steel Tools Repair Kit.\nScrap to Steel Tool parts."
+meleeToolPickT3AugerDesc,"Rock out with your auger out and be the envy of every miner when they see you sporting this sexy gas-powered auger.\n\nRepair with a Motor Tools Repair Kit.\nScrap to Motor Tool Parts."
+meleeToolSalvageT2RatchetDesc,"Great for disassembling mechanical devices like cars, air conditioners and more.\n\nRepair with a Steel Tools Repair Kit.\nScrap to Steel Tool Parts."
+meleeToolSalvageT3ImpactDriverDesc,"Great for disassembling mechanical devices like cars, air conditioners and more.\n\nRepair with a Motor Tools Repair Kit.\nScrap to Motor Tool Parts."
+meleeToolShovelT2SteelShovelDesc,"The steel shovel is very durable and the ideal tool for digging through earth, sand or snow.\n\nRepair with a Steel Tools Repair Kit.\nScrap to Steel Tool parts."
+meleeWpnBatonT2StunBatonDesc,"Goes zap.\n\nRepair with a Baton Repair Kit.\nScrap to Stun Baton parts."
+meleeWpnBladeT3MacheteDesc,"Great for chopping zombies and sometimes trees and gutting animals for meat.\nRegular attacks cause 1 Bleeding Wound and power attacks at least 2.\nRepair with a Machete Repair Kit.\nScrap to Machete parts."
+meleeWpnClubT3SteelClubDesc,"Steel clubs are very durable and hard-hitting.\n\nRepair with a Club Repair Kit.\nScrap to Steel Club Parts."
+meleeWpnKnucklesT3SteelKnucklesDesc,"Protect your hands and put some weight into those swings. These blades can also be useful for gutting animals.\n\nRepair with a Knuckles Repair Kit.\nScrap to Steel Knuckles parts."
+meleeWpnSledgeT3SteelSledgehammerDesc,"The sledgehammer is one of the best weapons for cracking skulls.\n\nRepair with a Sledgehammer Repair Kit.\nScrap to Steel Sledgehammer parts."
+meleeWpnSpearT3SteelSpearDesc,"Spears have more range than other weapons.\n\nRepair with a Spear Repair Kit.\nScrap to Steel Spear parts."
+MilitaryArmourRepairKit,Military Armour Repair Kit
+MilitaryArmourRepairKitDesc,This Repair Kit is used to repair military armour.
+MinibikeBundle,Minibike
+MinibikeBundleDesc,Take this bundle to where you want to place your minibike [FFC800]BEFORE[-] you open it!
+modBicycleStaminaSaverSchematic,Electric Motor Bicycle Mod
+modBicycleStaminaSaverSchematicDesc,Electric Motor\n\nUnlocks the electric motor bicycle mod.
+modBicycleStaminaSaver,Electric Bicycle motor
+modBicycleStaminaSaverDesc,Install this in your bicycle and save 50% on stamina usage.
+modGunMeleeBlessedMetal,"Blessed Metal mod"
+modGunMeleeBlessedMetalDesc,"Increase damage to all entities by 20%\n\nWill disable the regeneration ability of radiated & mutated zombies for 90 seconds."
+modHazmatBootsDesc,Slot this hazmat mod into your boots armour.\n\nAll [FFC800]five[-] seperate pieces are needed for full radiation protection.
+modHazmatBoots,Radiation protection (boots)
+modHazmatGlovesDesc,Slot this hazmat mod into your gloves armour.\n\nAll [FFC800]five[-] seperate pieces are needed for full radiation protection.
+modHazmatGloves,Radiation protection (gloves)
+modHazmatJacketDesc,Slot this hazmat mod into your chest armour.\n\nAll [FFC800]five[-] seperate pieces are needed for full radiation protection.
+modHazmatJacket,Radiation protection (chest)
+modHazmatMaskDesc,Slot this hazmat mod into your head armour.\n\nAll [FFC800]five[-] seperate pieces are needed for full radiation protection.
+modHazmatMask,Radiation protection (helmet)
+modHazmatPantsDesc,Slot this hazmat mod into your leg armour.\n\nAll [FFC800]five[-] seperate pieces are needed for full radiation protection.
+modHazmatPants,Radiation protection (legs)
+modMeleeSerratedBlade,Serrated Blade Mod
+modMeleeSerratedBladeDesc,"100% chance to cause a Bleeding Wound to [FFC800]living[-] creatures with a regular attack.\n\nThis mod can be used in spears and knuckles ONLY."
+MotorcycleBundle,Motorcycle
+MotorcycleBundleDesc,Take this bundle to where you want to place your motorcycle [FFC800]BEFORE[-] you open it!
+MotorToolRepairKit,Motor Tool Repair Kit
+MotorToolRepairKitDesc,"This Repair Kit is used to repair chainsaws, augers, & impact drivers."
+perkDeepCutsDesc,Specialize in using bladed weapons like knives or machetes. Bleed living things dry. Not much use for the undead though.
+perkDeepCutsName,Deep Cuts
+perkDeepCutsRank1Desc,Dull Blade
+perkDeepCutsRank1LongDesc,"You might have a dull blade, but you know how to use it. Bladed weapons deal 10% more damage. Inflict up to 3 Bleeding Wounds on 'living' things and a power attack inflicts 2. Every attack refreshes the duration on bleeding. Stamina costs are reduced by 8% and 15% for power attacks. Find more bladed weapons and parts in loot."
+perkDeepCutsRank2Desc,Knife Guy
+perkDeepCutsRank2LongDesc,Your friends say you're a really knife guy. Bladed weapons deal 20% more damage. Inflict up to 4 Bleeding Wounds on 'living' things and a power attack inflicts 3. Stamina costs are reduced by 15% and 30% for power attacks. Find more bladed weapons and parts in loot.
+perkDeepCutsRank3Desc,Fencer
+perkDeepCutsRank3LongDesc,You're a cut above the rest. Bladed weapons deal 30% more damage. Inflict up to 5 Bleeding Wounds on 'living' things and a power attack inflicts 4. Glancing blows have a 40% chance to cause 1 Bleeding Wound. Stamina costs are reduced by 20% and 40% for power attacks. Killing blows grant 10 stamina. Find more bladed weapons and parts in loot.
+perkDeepCutsRank4Desc,Swordsman
+perkDeepCutsRank4LongDesc,You're quite lethal with bladed weapons. Bladed weapons deal 40% more damage. Inflict up to 6 Bleeding Wounds on 'living' things and a power attack inflicts 4. Glancing blows have a 70% chance to cause 1 Bleeding Wound. Stamina costs are reduced by 25% and 50% for power attacks. Killing blows grant 20 stamina. Find more bladed weapons and parts in loot.
+perkDeepCutsRank5Desc,Samurai
+perkDeepCutsRank5LongDesc,You're a samurai and can make sushi out of your foes. Bladed weapons deal 50% more damage. Inflict up to 7 Bleeding Wounds on 'living' things and a power attack inflicts 5. All glancing blows cause 1 Bleeding Wound. Killing blows grant 30 stamina. Find more bladed weapons and parts in loot.
+perkLivingOffTheLandRank1LongDesc,Double the harvest of wild or planted crops.\nFarm plots cost 30% less to craft.
+perkLivingOffTheLandRank2LongDesc,50% chance to harvest 1 additional crop.\nFarm plots cost 50% less to craft.\nSeeds cost one crop fewer to craft.
+perkLivingOffTheLandRank3LongDesc,Triple the harvest of wild or planted crops.\n\nSeeds cost 2 crops fewer to craft.
+perkPackMuleRank3LongDesc,You know exactly where everything is. Carry three additional items without being encumbered 
+perkPackMuleRank4LongDesc,"You just passed inspection, private. Carry three more items without being encumbered."
+perkPackMuleRank5LongDesc,"Now you are just showing off, you are either part mule or a strongman. Carry three more items without being encumbered."
+perkSurvivalInstinctDesc,"You are a survivalist."
+perkSurvivalInstinctName,Survival Instinct
+perkSurvivalInstinctRank1Desc,Fit & Healthy
+perkSurvivalInstinctRank1LongDesc,"Your survival instinct gains you 5 health and stamina,and your block damage is increased by 10%, entity damage by 5%, and you gain 3% extra XP. Your carry capacity increases by 1."
+perkSurvivalInstinctRank2Desc,Brute Force
+perkSurvivalInstinctRank2LongDesc,"Your survival instinct increases. Gain another 5 health and stamina, block damage increase of 10%, entity damage of 5%, and you gain another 3% extra XP. You gain another carry capacity."
+perkSurvivalInstinctRank3Desc,Iron Skin
+perkSurvivalInstinctRank3LongDesc,"Your survival instinct increases even further! Gain another 5 health and stamina, block damage increase of 10%, entity damage of 5%, and you gain another 3% extra XP. You gain another carry capacity."
+perkSurvivalInstinctRank4Desc,Quick Learner
+perkSurvivalInstinctRank4LongDesc,"Your survival instinct is second to none!! Gain another 5 health and stamina, block damage increase of 10%, entity damage of 5%, and you gain another 3% extra XP. You gain another carry capacity."
+perkWellInsulatedRank3LongDesc,You can now handle severe weather and typically couldn't care less what the weather conditions are. You will never have the more severe stages of temperature status effects.\n\n[FFC800]Immune to slow effects from frozen zombie attacks.[-]
+playerTableSaw,Tablesaw
+potofbeefDesc,"Two cans of beef rations cooked in a pot. Tender and filling."
+potofchickenDesc,"Two chicken rations cooked in a pot. Tastes a little less like crap."
+potofchiliDesc,"Double portion of cooked chili. Still burns on the way out."
+potoflambDesc,"Two cans of lamb rations cooked in a pot. Leathery and filling."
+potofmisoDesc,"Miso times two. Twice as filling, still as tasty."
+potofpastaDesc,"Double the pasta sauce. A little more Italian-tasting"
+potofpearsDesc,"Eat them hot or wait for it to cool. Your choice."
+potofpeasDesc,"A large pot of green mush. Good for you though!"
+potofsalmonDesc,"Cooked salmon x2. Twice as filling, half as tasty."
+potofshamDesc,"Double portions of rancid meat marinated in battery acid."
+potofsoupDesc,"Warm, soothing, and twice as filling."
+potofstockDesc,"Twice as much stock in this pot doesn't make it any better really."
+potoftunaDesc,"Two cans of chunky tuna have got to be better than one, right?"
+resourceBranch,Branch
+resourceBranchDesc,"A small stout branch. Used for stone tools and arrows.\n\nCan also be used as fuel."
+resourceConcreteMixDesc,"Can be used as a resource to upgrade cobblestone into solid concrete walls or to craft concrete blocks in a cement mixer.\n\nRequires a bucket of water.\nCrafted in batches of 250."
+resourceConcreteMixDesc,Can be used as a resource to upgrade cobblestone into solid concrete walls or to craft concrete blocks in a cement mixer.\n\nCrafted in batches of 250
+resourceWaterFilter,Water Filter
+resourceWaterFilterDesc,"A limited-use water filter, used in the dew collector.\n\nGood for about 25 collection cycles.\n\nMust be replaced when broken."
+resourceWoodScraps,Wood scraps
+resourceWoodScrapsDesc,"Small fragments of wood.\n\nCan be used for fuel and basic building blocks, but not much else."
+RifleRepairKit,Rifle Repair Kit
+RifleRepairKitDesc,"This Repair Kit is used to repair hunting, lever-action, and sniper rifles."
+RobotRepairKit,Robot Repair Kit
+RobotRepairKitDesc,This Repair Kit is used to repair robotic weapons and drones.
+RocketLauncherRepairKit,Rocket Launcher Repair Kit
+RocketLauncherRepairKitDesc,This Repair Kit is used to repair rocket launchers.
+ShotgunRepairKit,Shotgun Repair Kit
+ShotgunRepairKitDesc,"This Repair Kit is used to repair double barrel, pump action, and auto shotguns."
+SledgehammerRepairKit,Sledgehammer Repair Kit
+SledgehammerRepairKitDesc,This Repair Kit is used to repair steel sledgehammers.
+SpearRepairKit,Spear Repair Kit
+SpearRepairKitDesc,This Repair Kit is used to repair steel spears.
+SteelArmourRepairKit,Steel Armour Repair Kit
+SteelArmourRepairKitDesc,This Repair Kit is used to repair steel armour.
+SteelToolRepairKit,Steel Tool Repair Kit
+SteelToolRepairKitDesc,"This Repair Kit is used to repair steel axes, picks, and shovels."
+StunBatonRepairKit,Stun Baton Repair Kit
+StunBatonRepairKitDesc,This Repair Kit is used to repair stun batons.
+tableSawDesc,"A workstation for turning logs into wood planks more quickly and effeciently."
+tablesawTip,"The Tablesaw unlocks the ability to turn wood logs into wood more quickly & effeciently. Inside your land claim area all workstations can be picked up by holding ''E'' and selecting ''TAKE'' from the radial menu."
+tablesawTip_title,Tablesaw
+TheCure,"The T-Virus Cure"
+TheCureDesc,"Cures 100% of infections, and protects against re-infection."
+ttItemNeedsRepair,"This item is knackered and needs fixing"
+ttRepairBeforePickup,"It's knackered and needs repairing before picking it up."
+venomDesc,"Key ingredient for antivenom."
+XuiCollectorModifiers,MODIFIERS
+xuiFilter,"Filter"
+xuiTSBasics,Basics
+zombieArleneMutated,Mutated Arlene
+zombieBikerMutated,Mutated Biker
+zombieBoeMutated,Mutated Boe
+zombieBurntMutated,Mutated Burnt
+zombieBusinessManMutated,Mutated Businessman
+zombieDarleneMutated,Mutated Darlene
+zombieFatCopMutated,Mutated Cop
+zombieFatHawaiianMutated,Mutated Tourist
+zombieFemaleFatMutated,Mutated Big Mama
+zombieJanitorMutated,Mutated Janitor
+zombieJoeMutated,Mutated Joe
+zombieLabMutated,Mutated Labworker
+zombieLumberjackMutated,Mutated Lumberjack
+zombieMaleHazmatMutated,Mutated Hazmat
+zombieMarleneMutated,Mutated Marlene
+zombieMoeMutated,Mutated Moe
+zombieMutatedDemolition,Nuclear Demolition
+zombieMutatedMutated,Mutated Hulk
+zombieNurseMutated,Mutated Nurse
+zombiePartyGirlMutated,Mutated Party Girl
+zombieScreamerMutated,Mutated Screamer
+zombieSkateboarderMutated,Mutated Thug
+zombieSoldierMutated,Mutated Soldier
+zombieSpiderMutated,Mutated Spider
+zombieSteveCrawlerMutated,Mutated Crawler
+zombieSteveMutated,Mutated Steve
+zombieTomClarkMutated,Mutated Tom Clark
+zombieUtilityWorkerMutated,Mutated Utility Worker
+zombieWightMutated,Mutated Wight
+zombieYoMutated,Mutated Yo
+zombieMaleHazmatLootBag,Dropped Hazmat Loot
+zombieMaleFeralHazmatLootBag,Dropped Hazmat Loot
+zombieMaleMutatedHazmatLootBag,Dropped Hazmat Loot
+zombieArleneRotten,Rotting Arlene
+zombieMarleneRotten,Rotting Marlene
+zombiePartyGirlRotten,Rotting Party Girl
+zombieNurseRotten,Rotting Nurse
+zombieJoeRotten,Rotting Joe
+zombieSteveRotten,Rotting Steve
+zombieTomClarkRotten,Rotting Tom Clark
+zombieBusinessManRotten,Rotting Businessman
+zombieBurntRotten,Rotting Burnt
+zombieSpiderRotten,Rotting Spider
+zombieBoeRotten,Rotting Boe
+zombieMaleHazmatRotten,Rotting Hazmat
+zombieJanitorRotten,Rotting Janitor
+zombieMoeRotten,Rotting Moe
+zombieLabRotten,Rotting Labworker
+zombieDarleneRotten,Rotting Darlene
+zombieYoRotten,Rotting Yo
+zombieUtilityWorkerRotten,Rotting Utility Worker
+zombieBikerRotten,Rotting Biker
+zombieLumberjackRotten,Rotting Lumberjack
+zombieFemaleFatRotten,Rotting Big Mama
+zombieFatHawaiianRotten,Rotting Tourist
+zombieSkateboarderRotten,Rotting Thug
+zombieSoldierRotten,Rotting Soldier
+zombieSteveCrawlerRotten,Rotting Crawler
+zombieArleneFrozen,Frozen Arlene
+zombieMarleneFrozen,Frozen Marlene
+zombiePartyGirlFrozen,Frozen Party Girl
+zombieNurseFrozen,Frozen Nurse
+zombieJoeFrozen,Frozen Joe
+zombieSteveFrozen,Frozen Steve
+zombieTomClarkFrozen,Frozen Tom Clark
+zombieBusinessManFrozen,Frozen Businessman
+zombieSpiderFrozen,Frozen Spider
+zombieBoeFrozen,Frozen Boe
+zombieMaleHazmatFrozen,Frozen Hazmat
+zombieJanitorFrozen,Frozen Janitor
+zombieMoeFrozen,Frozen Moe
+zombieLabFrozen,Frozen Labworker
+zombieDarleneFrozen,Frozen Darlene
+zombieYoFrozen,Frozen Yo
+zombieUtilityWorkerFrozen,Frozen Utility Worker
+zombieBikerFrozen,Frozen Biker
+zombieFemaleFatFrozen,Frozen Big Mama
+zombieFatHawaiianFrozen,Frozen Tourist
+zombieSkateboarderFrozen,Frozen Thug
+zombieSoldierFrozen,Frozen Soldier
+zombieSteveCrawlerFrozen,Frozen Crawler

@@ -1,0 +1,53 @@
+<configs>
+	<!-- search find all *** for changes -->
+	
+	<!-- *** increased buy markup, decreased sell markup *** -->
+	<setattribute xpath="/traders" name="buy_markup">5</setattribute>
+	<setattribute xpath="/traders" name="sell_markdown">0.1</setattribute>
+	<removeattribute xpath="//trader_info[@id='4']/@override_buy_markup"/>
+	<removeattribute xpath="//trader_info[@id='10']/@override_buy_markup"/>	
+	
+	<!-- *** traders open dawn 'til dusk *** -->
+	<set xpath="/traders/trader_info[@id='1']/@open_time">4:05</set>
+	<set xpath="/traders/trader_info[@id='2']/@open_time">4:05</set>
+	<set xpath="/traders/trader_info[@id='6']/@open_time">4:05</set>
+	<set xpath="/traders/trader_info[@id='7']/@open_time">4:05</set>
+	<set xpath="/traders/trader_info[@id='8']/@open_time">4:05</set>
+	
+	<!-- *** add new food to trader stock *** -->
+	<append xpath="//trader_item_group[@name='preparedFood']">
+		<item name="foodChickenStew" count="1,2"/>
+		<item name="foodChickenMiso" count="1,2"/>
+		<item name="foodScrambledEggs" count="1,2"/>
+	</append>
+	
+	<append xpath="//trader_item_group[@name='cannedfood']">
+	<item name="foodCanCarrots"/>
+	</append>
+	
+	<!-- *** add tablesaw to trader stock *** -->
+	<append xpath="//trader_item_group[@name='tools']">
+		<item name="playerTableSaw" prob="0.7"/>
+	</append>
+	
+	<!-- *** add new mods to trader stock *** -->
+	<append xpath="//trader_item_group[@name='groupMeleeMods']">
+		<item name="modGunMeleeBlessedMetal"/>
+		<item name="modGunMeleeNiCdBattery"/>
+		<item name="modGunMeleeFlammableOil"/>
+		<item name="modGunMeleeLiquidNitrogen"/>
+	</append>
+	
+	<!-- *** add new mod schematics to trader stock *** -->
+	<append xpath="//trader_item_group[@name='schematicsModsCommon']">
+		<!-- <item name="modGunMeleeNiCdBatterySchematic"/>
+		<item name="modGunMeleeFlammableOilSchematic"/>
+		<item name="modGunMeleeLiquidNitrogenSchematic"/> -->
+		<item name="modBicycleStaminaSaverSchematic"/>		
+	</append>
+	
+	<!-- *** add antivenom to medical trader stock *** -->
+	<append xpath="//trader_item_group[@name='medicine']">
+	<item name="antivenom"/>
+	</append>
+</configs>

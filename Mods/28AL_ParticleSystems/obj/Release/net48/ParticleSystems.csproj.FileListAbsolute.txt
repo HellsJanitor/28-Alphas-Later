@@ -1,0 +1,7 @@
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\28AL_ParticleSystems\obj\Release\net48\ParticleSystems.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\28AL_ParticleSystems\obj\Release\net48\ParticleSystems.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\28AL_ParticleSystems\obj\Release\net48\ParticleSystems.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\28AL_ParticleSystems\obj\Release\net48\ParticleSystems.dll
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\28AL_ParticleSystems\obj\Release\net48\ParticleSystems.pdb
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\28AL_ParticleSystems\ParticleSystems.dll
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\28AL_ParticleSystems\ParticleSystems.pdb

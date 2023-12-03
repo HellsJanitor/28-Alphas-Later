@@ -1,0 +1,25 @@
+<xml>
+
+	<append xpath="/buffs">
+
+		<buff name="buffFrostyPunch">
+			<effect_group>
+				<requirement name="IsPrimary"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="_28AL.ParticleSystems.Attach,ParticleSystems" target="other" particle="#@modfolder:Assets/28al_ps_frosty.unity3d?PS_Frosty_Prefab" shape_to_mesh="true"/>
+			</effect_group>
+
+			<effect_group>
+				<requirement name="IsSecondary"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="_28AL.ParticleSystems.Detach,ParticleSystems" target="other" particle="PS_Frosty_Prefab"/>
+			</effect_group>
+
+			<effect_group>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.99"/>
+			</effect_group>
+		</buff>
+		
+		
+
+	</append>
+
+</xml>

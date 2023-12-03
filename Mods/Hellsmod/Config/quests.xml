@@ -1,0 +1,44 @@
+<configs>
+	<!-- search find all *** for changes -->
+	
+	<!-- *** replace "gather wood" with "gather branches" *** -->
+	<set xpath="//quest[@id='quest_BasicSurvival1']//objective[@id='resourceYuccaFibers']/@value">12</set>
+	<set xpath="//quest[@id='quest_BasicSurvival2']//objective[2]/@id">resourceBranch</set>
+	<set xpath="//quest[@id='quest_BasicSurvival3']//objective[@id='resourceYuccaFibers']/@value">6</set>	
+	<set xpath="//quest[@id='quest_BasicSurvival5']/objective[1]/modifier[@type='TrackBlocks']//property[1]/@value">quest_wood</set>
+	<set xpath="//quest[@id='quest_BasicSurvival5']//objective[@id='resourceWood']/@value">6</set>
+	<set xpath="//quest[@id='quest_BasicSurvival5']//objective[@id='resourceWood']/@id">resourceBranch</set>
+	<insertbefore xpath="//quest[@id='quest_BasicSurvival5']//objective[1]">
+	<objective type="FetchKeep" id="resourceYuccaFibers" value="6" phase="1"/>
+	</insertbefore>	
+	<set xpath="//quest[@id='quest_BasicSurvival6']//objective[@id='resourceWood']/@value">11</set>
+	<set xpath="//quest[@id='quest_BasicSurvival6']//objective[@id='resourceWood']/@id">resourceBranch</set>
+	<set xpath="//quest[@id='quest_BasicSurvival6']//objective[@id='resourceYuccaFibers']/@value">4</set>
+	<set xpath="//quest[@id='quest_BasicSurvival6']/objective[1]/modifier[@type='TrackBlocks']//property[1]/@value">quest_wood</set>
+	<!-- <set xpath="//quest[@id='quest_BasicSurvival6']//reward[2]/@id">quest_BasicSurvival8</set> -->
+	<set xpath="//quest[@id='quest_BasicSurvival7']//objective[@id='resourceWood']/@value">6</set>
+	<set xpath="//quest[@id='quest_BasicSurvival7']//objective[@id='resourceWood']/@id">resourceWoodScraps</set>
+	<remove xpath="//quest[@id='quest_BasicSurvival7']//objective[@type='BlockUpgrade']"/>
+	<set xpath="//quest[@id='quest_BasicSurvival8']//objective[@id='resourceRockSmall']/@value">6</set>
+	<!-- <remove xpath="//quest[@id='quest_BasicSurvival7']"/> -->
+	
+	<!-- *** trader quests per tier increased to 10 *** -->
+	<setattribute xpath="/quests" name="quests_per_tier">10</setattribute>
+	
+	<!-- *** bartering sauce gives passive buff, reward for each tier completed *** -->
+	<insertafter xpath="//quest[@id='quest_tier1complete']//reward[1]">
+	<reward type="Item" id="BarteringSauceOne" value="1"/>
+	</insertafter>	
+	<insertafter xpath="//quest[@id='quest_tier2complete']//reward[1]">
+	<reward type="Item" id="BarteringSauceTwo" value="1"/>
+	</insertafter>	
+	<insertafter xpath="//quest[@id='quest_tier3complete']//reward[1]">
+	<reward type="Item" id="BarteringSauceThree" value="1"/>
+	</insertafter>	
+	<insertafter xpath="//quest[@id='quest_tier4complete']//reward[1]">
+	<reward type="Item" id="BarteringSauceFour" value="1"/>
+	</insertafter>	
+	<insertafter xpath="//quest[@id='quest_tier5complete']//reward[1]">
+	<reward type="Item" id="BarteringSauceFive" value="1"/>
+	</insertafter>	
+</configs>
