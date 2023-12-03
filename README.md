@@ -100,7 +100,7 @@ Knife base damage rebalanced to account for the lack of bleeding zombies.
 
 Starter items changed. You have a backpack in slot 2 of your toolbelt, open it for food, drink, first aid and a flashlight.
 
-60-slot backpack (credit: Khaine)
+60-slot backpack
 
 Zombie health increases with game difficulty. Scavenger starts with zombies dealing 100% damage and no health bonus. Zombie health increases by 20% per level, up to 100% more health on insane difficulty. Damage received by zombies increases by 25% per level up to Survivalist, and then a further 50% jump to Insane (150% more damage dealt at maximum difficulty)
 Hazmat zombies are now immune to burning.
