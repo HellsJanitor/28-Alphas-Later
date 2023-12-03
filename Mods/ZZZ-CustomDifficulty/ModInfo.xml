@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <xml>
   <ModInfo>
-    <Name value="SpencerMansionCustomDifficulty" />
-    <Description value="Difficulty settings for Spencer Mansion Incident mod" />
+    <Name value="CustomDifficulty" />
+    <Description value="Difficulty settings for 28 Alphas Later mod" />
     <Author value="Mythix" />
     <Version value="1.0" />
     <Website value="" />
