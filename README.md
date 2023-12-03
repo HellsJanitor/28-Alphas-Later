@@ -59,4 +59,23 @@ New Frozen zombie variant. Slightly tougher, slightly slower, slightly more XP, 
 New “rotting” zombie variant. They have low HP, lower XP reward, and they take more damage. Found in the forest and desert biomes.
 “Normal”, “frozen” & “rotting” ‘Fat’ zombies (Big Mama, tourist) don’t puke, but they do explode …
 
+Contributors:
+Particle systems/Unity edits 			-Author: redbeardt
+Original Chicken Coop model 			 -Author: DocRabbit
+HJStopVehiclesPickup					       -Author: w00kien00kie
+IDCAdvancedDewCollector 				    -Author: I Don't Care
+IDCAnimalSnare						           	-Author: I Don't Care
+IDCBeehive								              -Author: I Don't Care
+IDCCore								                	-Author: I Don't Care
+KHA21-HPBars						             	-Author: Khaine
+60-slot backpack (xml code)				 -Author: Khaine
+Khelldon Custom Menu 					      -Author: Khelldon
+Material Modifier 						        -Author: Zilox
+ColoredContainerStates				     	-Author: Scomar						
+WMMStaminaDehydrationFix			    	-Author: w00kien00kie
+WMMStashBackpack						          -Author: w00kien00kie
+CustomDifficulty						          -Author: Mythix
+						
+also a huge thank you to Frantic_Dan for the custom HUD base code, main menu localization changes, and ideas/balancing. Thanks to Frantic_Dan and YubiNashi for playtesting.
+
  
