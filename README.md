@@ -135,6 +135,8 @@ KHA21-HPBars					-Author: Khaine
 
 Khelldon Custom Menu 				-Author: Khelldon
 
+Custom Menu Music				-Author: Khaine
+
 Material Modifier 				-Author: Zilox
 
 ColoredContainerStates				-Author: Scomar	

@@ -372,19 +372,19 @@
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffImmobilized"/>			
 			<requirements compare_type="or">
-			<requirement name="PlayerItemCount" item_name="vehicleMinibikePlaceable" operation="GTE" value="1"/>
-			<requirement name="PlayerItemCount" item_name="vehicleMotorcyclePlaceable" operation="GTE" value="1"/>
-			<requirement name="PlayerItemCount" item_name="vehicle4x4TruckPlaceable" operation="GTE" value="1"/>
-			<requirement name="PlayerItemCount" item_name="vehicleGyrocopterPlaceable" operation="GTE" value="1"/>
+			<requirement name="HJPlayerItemCount, HJPlayerItemCount" item_name="vehicleMinibikePlaceable" operation="GTE" value="1"/>
+			<requirement name="HJPlayerItemCount, HJPlayerItemCount" item_name="vehicleMotorcyclePlaceable" operation="GTE" value="1"/>
+			<requirement name="HJPlayerItemCount, HJPlayerItemCount" item_name="vehicle4x4TruckPlaceable" operation="GTE" value="1"/>
+			<requirement name="HJPlayerItemCount, HJPlayerItemCount" item_name="vehicleGyrocopterPlaceable" operation="GTE" value="1"/>
 			</requirements>			
 		</effect_group>		
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffImmobilized"/>
 			<!-- <requirements compare_type="or"> -->
-			<requirement name="PlayerItemCount" item_name="vehicleMinibikePlaceable" operation="equals" value="0"/>
-			<requirement name="PlayerItemCount" item_name="vehicleMotorcyclePlaceable" operation="equals" value="0"/>
-			<requirement name="PlayerItemCount" item_name="vehicle4x4TruckPlaceable" operation="equals" value="0"/>
-			<requirement name="PlayerItemCount" item_name="vehicleGyrocopterPlaceable" operation="equals" value="0"/>
+			<requirement name="HJPlayerItemCount, HJPlayerItemCount" item_name="vehicleMinibikePlaceable" operation="equals" value="0"/>
+			<requirement name="HJPlayerItemCount, HJPlayerItemCount" item_name="vehicleMotorcyclePlaceable" operation="equals" value="0"/>
+			<requirement name="HJPlayerItemCount, HJPlayerItemCount" item_name="vehicle4x4TruckPlaceable" operation="equals" value="0"/>
+			<requirement name="HJPlayerItemCount, HJPlayerItemCount" item_name="vehicleGyrocopterPlaceable" operation="equals" value="0"/>
 			<!-- </requirements> -->
 		</effect_group>			
 		</buff>
