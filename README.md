@@ -1,4 +1,4 @@
-# 28-Alphas-Later
+# 28 Alphas Later
 
 The idea behind this mod is to slow progression, make traders less powerful, and generally extend the time for a playthrough, while keeping the vanilla look and feel.
 
