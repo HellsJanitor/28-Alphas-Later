@@ -122,7 +122,7 @@ Particle systems/Unity edits 			-Author: redbeardt
 
 Original Chicken Coop model 			-Author: DocRabbit
 
-HJStopVehiclesPickup				-Author: w00kien00kie
+HJPlayerItemCount				-Author: w00kien00kie
 
 IDCAdvancedDewCollector 			-Author: I Don't Care
 
@@ -143,6 +143,8 @@ Custom Menu Music				-Author: Khaine
 Material Modifier 				-Author: Zilox
 
 ColoredContainerStates				-Author: Scomar	
+
+WMMPersistGameOptions				-Author: w00kien00kie
 
 WMMStaminaDehydrationFix			-Author: w00kien00kie
 
