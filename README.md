@@ -4,6 +4,10 @@ The idea behind this mod is to slow progression, make traders less powerful, and
 
 *** FEATURES *** 
 
+"Starter" items are now in a backpack, found in slot 2 of your toolbelt. Open it with your primary action (LMB by default on PC)
+
+The starter quest is now just "place bedroll", which you'll receive on opening the starter backpack.
+
 The player is permanently infected, with no cure, and the infection persists through death.
 
 Headshots ONLY. Zombies can only be damaged/killed with headshots, or with fire, or with explosives.
