@@ -102,7 +102,8 @@ Starter items changed. You have a backpack in slot 2 of your toolbelt, open it f
 
 60-slot backpack
 
-Zombie health increases with game difficulty. Scavenger starts with zombies dealing 100% damage and no health bonus. Zombie health increases by 20% per level, up to 100% more health on insane difficulty. Damage received by zombies increases by 25% per level up to Survivalist, and then a further 50% jump to Insane (150% more damage dealt at maximum difficulty)
+Zombie health increases with game difficulty. Scavenger starts with zombies dealing 100% damage and no health bonus. Zombie health increases by 10% per level, up to 50% more health on insane difficulty. Damage received by zombies increases by 25% per level up to Survivalist, and then a further 50% jump to Insane (150% more damage dealt at maximum difficulty)
+
 Hazmat zombies are now immune to burning.
 
 New Frozen zombie variant. Slightly tougher, slightly slower, slightly more XP, and take slightly more damage than their “Normal” counterparts. Immune to the effects of liquid nitrogen. Found in the snow biome.
