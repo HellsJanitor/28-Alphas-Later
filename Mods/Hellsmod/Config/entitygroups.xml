@@ -33,19 +33,19 @@
 		zombieBurntRotten 
 		zombieSpiderRotten 
 		zombieBoeRotten 
-		zombieMaleHazmatRotten 
+		zombieMaleHazmatRotten, .05 
 		zombieJanitorRotten 
 		zombieMoeRotten 
 		zombieLabRotten 
 		zombieDarleneRotten 
 		zombieYoRotten 
-		zombieUtilityWorkerRotten  
-		zombieBikerRotten 
-		zombieLumberjackRotten 
-		zombieFemaleFatRotten  
-		zombieFatHawaiianRotten 
+		zombieUtilityWorkerRotten, .05  
+		zombieBikerRotten, .01
+		zombieLumberjackRotten, .01
+		zombieFemaleFatRotten, .01  
+		zombieFatHawaiianRotten, .01 
 		zombieSkateboarderRotten 
-		zombieSoldierRotten 
+		zombieSoldierRotten, .05 
 		zombieSteveCrawlerRotten 
 	</entitygroup>
 	</insertafter>

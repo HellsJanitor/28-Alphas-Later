@@ -17,8 +17,8 @@
 			<property name="Delay" value="0"/>
 			<property name="Use_time" value="0"/>
 			<property name="Sound_start" value="UseActions/open_backpack"/>
-			<property name="Create_item" value="drinkJarPureMineralWater,foodSteakAndPotato,medicalFirstAidBandage,meleeToolFlashlight02,noteDuke01"/>
-			<property name="Create_item_count" value="2,2,2,1,1"/>
+			<property name="Create_item" value="drinkJarPureMineralWater,foodSteakAndPotato,medicalFirstAidBandage,meleeToolFlashlight02,noteDuke01,meleeWpnClubT0WoodenClub,meleeToolRepairT0StoneAxe,gunBowT0PrimitiveBow,ammoArrowStone,bedrollBlockVariantHelper"/>
+			<property name="Create_item_count" value="2,2,2,1,1,1,1,1,10,1"/>
 		</property>
 	</item>
 	

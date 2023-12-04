@@ -7,15 +7,15 @@
 	<insertafter xpath="/entity_classes/entity_class//passive_effect[@name='HealthMax'][@operation='perc_add']">
 	<!--         <passive_effect name="HealthMax" operation="perc_add" value="0">
 				<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="0"/></passive_effect> -->
-			<passive_effect name="HealthMax" operation="perc_add" value=".2">
+			<passive_effect name="HealthMax" operation="perc_add" value=".1">
 				<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="1"/></passive_effect>
-			<passive_effect name="HealthMax" operation="perc_add" value=".4">
+			<passive_effect name="HealthMax" operation="perc_add" value=".2">
 				<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="2"/></passive_effect>
-			<passive_effect name="HealthMax" operation="perc_add" value=".6">
+			<passive_effect name="HealthMax" operation="perc_add" value=".3">
 				<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="3"/></passive_effect>
-			<passive_effect name="HealthMax" operation="perc_add" value=".8">
+			<passive_effect name="HealthMax" operation="perc_add" value=".4">
 				<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="4"/></passive_effect>
-			<passive_effect name="HealthMax" operation="perc_add" value="1">
+			<passive_effect name="HealthMax" operation="perc_add" value=".5">
 				<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="5"/></passive_effect>
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffEntitySpawnHeal"/>
 	</insertafter>
@@ -137,14 +137,14 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>			
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZArlene.prefab"/>			
-			<property name="TintColor" value="#664c28"/>
+			<property name="TintColor" value="#654321"/>
 			<property name="TintShaderProperties" value="_EmissiveColor"/>			
 
 			<!-- Gameplay zombieRotten -->							
 			<property name="ExperienceGain" value="300"/>						
 			<effect_group name="Base Effects">				
-				<passive_effect name="HealthMax" operation="base_set" value="75"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-25"/>
+				<passive_effect name="HealthMax" operation="base_set" value="65"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -152,15 +152,15 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZMarlene.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>			
 
 			<!-- Gameplay zombieRotten -->							
 			<property name="ExperienceGain" value="300"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="75"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-25"/>	
+				<passive_effect name="HealthMax" operation="base_set" value="65"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>	
 			</effect_group>
 		</entity_class>
 		
@@ -168,15 +168,15 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZCocktailWaitress.prefab"/>	
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>				
 
 			<!-- Gameplay zombieRotten -->							
 			<property name="ExperienceGain" value="300"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="80"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-25"/>
+				<passive_effect name="HealthMax" operation="base_set" value="70"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -184,15 +184,15 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZNurse.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>				
 
 			<!-- Gameplay zombieRotten -->							
 			<property name="ExperienceGain" value="300"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="80"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-25"/>
+				<passive_effect name="HealthMax" operation="base_set" value="70"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -200,15 +200,15 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZJoe.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>				
 
 			<!-- Gameplay zombieRotten -->							
 			<property name="ExperienceGain" value="300"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="80"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-25"/>
+				<passive_effect name="HealthMax" operation="base_set" value="70"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -216,15 +216,15 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZSteve.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>				
 
 			<!-- Gameplay zombieRotten -->							
 			<property name="ExperienceGain" value="300"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="80"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-25"/>
+				<passive_effect name="HealthMax" operation="base_set" value="70"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -232,15 +232,15 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZTomClark.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>				
 
 			<!-- Gameplay zombieRotten -->							
 			<property name="ExperienceGain" value="300"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="80"/>	
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-25"/>
+				<passive_effect name="HealthMax" operation="base_set" value="70"/>	
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -248,15 +248,15 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZSuit.prefab"/>	
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>				
 
 			<!-- Gameplay zombieRotten -->							
 			<property name="ExperienceGain" value="300"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="80"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-25"/>
+				<passive_effect name="HealthMax" operation="base_set" value="70"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -264,15 +264,15 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZBurnt.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>				
 
 			<!-- Gameplay zombieRotten -->							
 			<property name="ExperienceGain" value="300"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="80"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-25"/>
+				<passive_effect name="HealthMax" operation="base_set" value="70"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -281,15 +281,15 @@
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZSpider.prefab"/>
 			<property name="HandItem" value="meleeHandZombieSpider"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>				
 
 			<!-- Gameplay zombieRotten -->							
 			<property name="ExperienceGain" value="300"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="80"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-25"/>
+				<passive_effect name="HealthMax" operation="base_set" value="70"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -297,7 +297,7 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZBoe.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>	
 						
 
@@ -305,8 +305,8 @@
 			<property name="ExperienceGain" value="300"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="90"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-25"/>
+				<passive_effect name="HealthMax" operation="base_set" value="75"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -314,7 +314,7 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker,hazmat"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZHazmat.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>	
 						
 
@@ -322,8 +322,8 @@
 			<property name="ExperienceGain" value="300"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="90"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-25"/>
+				<passive_effect name="HealthMax" operation="base_set" value="75"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -331,7 +331,7 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZMechanic.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>	
 						
 
@@ -339,8 +339,8 @@
 			<property name="ExperienceGain" value="300"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="90"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-25"/>
+				<passive_effect name="HealthMax" operation="base_set" value="75"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -348,15 +348,15 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZMoe.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>				
 
 			<!-- Gameplay zombieRotten -->							
 			<property name="ExperienceGain" value="300"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="90"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-25"/>
+				<passive_effect name="HealthMax" operation="base_set" value="75"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -364,15 +364,15 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZLab.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>				
 
 			<!-- Gameplay zombieRotten -->							
 			<property name="ExperienceGain" value="300"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="90"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-25"/>
+				<passive_effect name="HealthMax" operation="base_set" value="75"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -380,15 +380,15 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZDarlene.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>				
 
 			<!-- Gameplay zombieRotten -->							
 			<property name="ExperienceGain" value="300"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="90"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-25"/>
+				<passive_effect name="HealthMax" operation="base_set" value="75"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -396,15 +396,15 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZYo.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>				
 
 			<!-- Gameplay zombieRotten -->							
 			<property name="ExperienceGain" value="300"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="90"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-25"/>
+				<passive_effect name="HealthMax" operation="base_set" value="75"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -412,15 +412,15 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZWorker.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>				
 
 			<!-- Gameplay zombieRotten -->							
 			<property name="ExperienceGain" value="300"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="90"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="75"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="-10"/>
 			</effect_group>
 		</entity_class>
 		
@@ -428,15 +428,15 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZBiker.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>				
 
 			<!-- Gameplay zombieRotten -->							
 			<property name="ExperienceGain" value="600"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="220"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="-10"/>
 			</effect_group>
 		</entity_class>
 		
@@ -444,15 +444,15 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZLumberjack.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>				
 
 			<!-- Gameplay zombieRotten -->							
 			<property name="ExperienceGain" value="600"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="240"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="HealthMax" operation="base_set" value="155"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -461,7 +461,7 @@
 			<property name="Class" value="EntityZombieCop"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZBigMama.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>	
 			<property name="SoundExplodeWarn" value="hulkexplodewarning"/>
 			<property name="Explosion.ParticleIndex" value="8"/>
@@ -476,8 +476,8 @@
 			<property name="ExperienceGain" value="600"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="240"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="HealthMax" operation="base_set" value="155"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -486,7 +486,7 @@
 			<property name="Class" value="EntityZombieCop"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZHawaiian.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>	
 			<property name="SoundExplodeWarn" value="hulkexplodewarning"/>
 			<property name="Explosion.ParticleIndex" value="8"/>
@@ -501,8 +501,8 @@
 			<property name="ExperienceGain" value="600"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="240"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="HealthMax" operation="base_set" value="155"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -510,7 +510,7 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZThug.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>	
 						
 
@@ -518,8 +518,8 @@
 			<property name="ExperienceGain" value="350"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="130"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-20"/>
+				<passive_effect name="HealthMax" operation="base_set" value="110"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
 			</effect_group>
 		</entity_class>
 		
@@ -527,15 +527,15 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,walker"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZSoldier.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>				
 
 			<!-- Gameplay zombieRotten -->							
 			<property name="ExperienceGain" value="600"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="150"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="130"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-10"/>
 			</effect_group>
 		</entity_class>
 		
@@ -543,14 +543,15 @@
 			<property name="UserSpawnType" value="Menu"/>
 			<property name="Tags" value="entity,zombie,crawler"/>
 			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZCrawler.prefab"/>
-			<property name="TintColor" value="#664c28"/>			
+			<property name="TintColor" value="#654321"/>			
 			<property name="TintShaderProperties" value="_EmissiveColor"/>				
 
 			<!-- Gameplay zombieRotten -->							
 			<property name="ExperienceGain" value="300"/>			
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="60"/>				
+				<passive_effect name="HealthMax" operation="base_set" value="60"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-10"/>
 			</effect_group>
 		</entity_class>
 		
@@ -2077,7 +2078,7 @@
 	</insertafter>
 	
 	<!-- *** lumberjack immune to liquid nitrogen *** -->
-	<set xpath="//entity_class[@name=['zombieLumberjack']//property[@name='Tags']/@value">entity,zombie,walker,frozen</set>
+	<set xpath="//entity_class[@name='zombieLumberjack']//property[@name='Tags']/@value">entity,zombie,walker,frozen</set>
 
 	<!-- *** 'Fat' zombies don't puke, but they do explode ... *** -->
 	<insertafter xpath="//entity_class[@name='zombieFemaleFat']//property[@name='Tags']">
@@ -2115,7 +2116,7 @@
 			
 			<!--use2 with name="TintShaderProperties" value="_Color"-->
 			<!-- <property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh5"/> -->
-			<!-- <property name="TintColor" value="#664c28"/>-->					
+			<!-- <property name="TintColor" value="#654321"/>-->					
 			
 			
 			<!--default for material modifier, _EmissiveColor-->

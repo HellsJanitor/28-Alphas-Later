@@ -1,5 +1,6 @@
 Key,english
-goDifficultyDesc,"Choose from 6 Difficulty settings.\n\n1. Scavenger: [FFC800]Enemies deal 100% damage[-]\n[FF4500]Enemies have no health bonus[-]\n2. Adventurer: [FFC800]Enemies deal 25% more damage[-] \n[FF4500]Enemies have 20% more health[-]\n3. Nomad: [FFC800]Enemies deal 50% more damage[-] \n[FF4500]Enemies have 40% more health[-]\n4. Warrior: [FFC800]Enemies deal 75% more damage[-] \n[FF4500]Enemies have 60% more health[-]\n5. Survivalist: [FFC800]Enemies deal 100% more damage[-] \n[FF4500]Enemies have 80% more health[-]\n6. Insane: [FFC800]Enemies deal 150% more damage[-] \n[FF4500]Enemies have 100% more health[-]"
+goDifficultyDesc,"Choose from 6 Difficulty settings.\n\n1. Scavenger: [FFC800]Enemies deal 100% damage[-]\n[FF4500]Enemies have no health bonus[-]\n2. Adventurer: [FFC800]Enemies deal 25% more damage[-] \n[FF4500]Enemies have 10% more health[-]\n3. Nomad: [FFC800]Enemies deal 50% more damage[-] \n[FF4500]Enemies have 20% more health[-]\n4. Warrior: [FFC800]Enemies deal 75% more damage[-] \n[FF4500]Enemies have 30% more health[-]\n5. Survivalist: [FFC800]Enemies deal 100% more damage[-] \n[FF4500]Enemies have 40% more health[-]\n6. Insane: [FFC800]Enemies deal 150% more damage[-] \n[FF4500]Enemies have 50% more health[-]"
+goLootAbundanceDesc,The percentage of loot to spawn in containers and on zombies. 100% [FFC800]MINIMUM[-] is [FFC800]HIGHLY[-] recommended.
 HellsModSpawnText,"This mod will challenge you in ways that the vanilla game doesn't,\nwhile keeping the familiar vanilla look & feel.\n\n[00FF00]Important Points![-]\nZombies only take damage with [FFC800]headshots[-],[FFC800] fire[-], & [FFC800]explosives[-]!\nZombies[FF4500] DO NOT [-]bleed!\nThe Wasteland biome is [00FF00]IRRADIATED[-]! (a Hazmat suit is required)\n\nLoot is reduced, harvest counts are reduced, crafting costs more resources, and traders are more expensive.\n\nHave fun!!"
 HellsModSpawnText_title,"Welcome to [FFC800]28 ALPHAS LATER[-]!"
 4x4Bundle,4x4
@@ -215,7 +216,7 @@ loadingTipBleedingArrows,"Any time you shoot a living thing with an arrow or cro
 loadingTipBleedingArrows_title,"Arrows can cause bleeding"
 loadingTipEncumbrance,"Carrying too many items in your inventory will slow you down, and carrying motor vehicles will prevent you from moving at all.\nFind or craft pocket mods for clothing or armor to remove encumbrance penalties. Alternatively you can purchase the Pack Mule perk."
 loadingTipHeadShotsOnly,"Don't you watch any zombie movies? The only way to kill anything undead is with a [FFC800]headshot[-].\nExplosives and fire will work too."
-loadingTipHeadShotsOnly_title,"Headsots only!"
+loadingTipHeadShotsOnly_title,"Headshots only!"
 loadingTipPermanentInfection,"You are permanently infected. There is no cure, only treatment.\nThere are beehives in wild, which have a chance to contain a bee.\nUse this bee in your own beehive, and have a constant source of honey."
 loadingTipPermanentInfection_title,"Permanent Infection"
 MacheteRepairKit,Machete Repair Kit

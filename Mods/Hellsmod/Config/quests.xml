@@ -1,8 +1,16 @@
 <configs>
 	<!-- search find all *** for changes -->
 	
-	<!-- *** replace "gather wood" with "gather branches" *** -->
-	<set xpath="//quest[@id='quest_BasicSurvival1']//objective[@id='resourceYuccaFibers']/@value">12</set>
+	<!-- *** removes starter quests *** -->
+	<remove xpath="//quest[@id='quest_BasicSurvival1']//objective[@type='FetchKeep']"/>
+	<remove xpath="//quest[@id='quest_BasicSurvival1']//objective[@type='Craft']"/>
+	<set xpath="//quest[@id='quest_BasicSurvival1']//objective[@type='BlockPlace']/@phase">1</set>
+	<set xpath="//quest[@id='quest_BasicSurvival1']//reward[@type='Quest']/@id">quest_whiteRiverCitizen1</set>
+	<append xpath="//quest[@id='quest_BasicSurvival1']">
+	<reward type="SkillPoints" value="4" chainreward="true"/>
+	</append>
+	<!-- *** changes to starter quests *** -->
+	<!-- <set xpath="//quest[@id='quest_BasicSurvival1']//objective[@id='resourceYuccaFibers']/@value">12</set>
 	<set xpath="//quest[@id='quest_BasicSurvival2']//objective[2]/@id">resourceBranch</set>
 	<set xpath="//quest[@id='quest_BasicSurvival3']//objective[@id='resourceYuccaFibers']/@value">6</set>	
 	<set xpath="//quest[@id='quest_BasicSurvival5']/objective[1]/modifier[@type='TrackBlocks']//property[1]/@value">quest_wood</set>
@@ -14,13 +22,12 @@
 	<set xpath="//quest[@id='quest_BasicSurvival6']//objective[@id='resourceWood']/@value">11</set>
 	<set xpath="//quest[@id='quest_BasicSurvival6']//objective[@id='resourceWood']/@id">resourceBranch</set>
 	<set xpath="//quest[@id='quest_BasicSurvival6']//objective[@id='resourceYuccaFibers']/@value">4</set>
-	<set xpath="//quest[@id='quest_BasicSurvival6']/objective[1]/modifier[@type='TrackBlocks']//property[1]/@value">quest_wood</set>
-	<!-- <set xpath="//quest[@id='quest_BasicSurvival6']//reward[2]/@id">quest_BasicSurvival8</set> -->
+	<set xpath="//quest[@id='quest_BasicSurvival6']/objective[1]/modifier[@type='TrackBlocks']//property[1]/@value">quest_wood</set>	
 	<set xpath="//quest[@id='quest_BasicSurvival7']//objective[@id='resourceWood']/@value">6</set>
 	<set xpath="//quest[@id='quest_BasicSurvival7']//objective[@id='resourceWood']/@id">resourceWoodScraps</set>
 	<remove xpath="//quest[@id='quest_BasicSurvival7']//objective[@type='BlockUpgrade']"/>
-	<set xpath="//quest[@id='quest_BasicSurvival8']//objective[@id='resourceRockSmall']/@value">6</set>
-	<!-- <remove xpath="//quest[@id='quest_BasicSurvival7']"/> -->
+	<set xpath="//quest[@id='quest_BasicSurvival8']//objective[@id='resourceRockSmall']/@value">6</set> -->
+	
 	
 	<!-- *** trader quests per tier increased to 10 *** -->
 	<setattribute xpath="/quests" name="quests_per_tier">10</setattribute>
