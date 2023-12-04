@@ -8,6 +8,8 @@ The idea behind this mod is to slow progression, make traders less powerful, and
 
 *** FEATURES ***
 
+"Starter" items are now in a backpack, found in slot 2 of your toolbelt. Open it with your primary action (LMB by default on PC)
+The starter quest is now just "place bedroll", which you'll receive on opening the starter backpack.
 Player is permanently infected, with no cure, and the infection persists through death.
 Headshots ONLY. Zombies can only be damaged/killed with headshots, or with fire, or with explosives.
 Zombies DON'T bleed. Nothing undead takes bleed damage.
@@ -55,9 +57,8 @@ Dismember chance lowered to 1% per attribute level, max at 10%
 Living off the Land now offers a discount to crops needed to make seeds, level 2 costs 4 crops per seed, level 3 costs 3 crops per seed.
 Honey infection treatment reduced to 3% from 5%
 Knife base damage rebalanced to account for the lack of bleeding zombies.
-Starter items changed. You have a backpack in slot 2 of your toolbelt, open it for food, drink, first aid and a flashlight
 60 slot backpack (credit: Khaine)
-Zombie health increases with game difficulty. Scavenger starts with zombies dealing 100% damage, and no health bonus. Zombie health increases by 20% per level, up to 100% more health on insane difficulty. Damage received by zombies increases by 25% per level up to Survivalist, and then a further 50% jump to Insane (150% more damage dealt at maximum difficulty)
+Zombie health increases with game difficulty. Scavenger starts with zombies dealing 100% damage, and no health bonus. Zombie health increases by 10% per level, up to 50% more health on insane difficulty. Damage received by zombies increases by 25% per level up to Survivalist, and then a further 50% jump to Insane (150% more damage dealt at maximum difficulty)
 Hazmat zombies now immune to burning.
 New Frozen zombie variant. Slightly tougher, slightly slower, slightly more XP, and take slightly more damage than their 'Normal' counterparts. Immune to the effects of liquid nitrogen. Found in the snow biome.
 New rotting zombie variant. Low HP, lower XP reward, and they take more damage. Found in the forest and desert biomes.
@@ -79,6 +80,7 @@ New rotting zombie variant. Low HP, lower XP reward, and they take more damage. 
 						Custom Menu Music						-Author: Khaine
 						Material Modifier 						-Author: Zilox
 						ColoredContainerStates					-Author: Scomar						
+						WMMPersistGameOptions					-Author: w00kien00kie
 						WMMStaminaDehydrationFix				-Author: w00kien00kie
 						WMMStashBackpack						-Author: w00kien00kie
 						CustomDifficulty						-Author: Mythix
