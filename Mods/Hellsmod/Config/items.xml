@@ -653,7 +653,7 @@
 		<property name="EconomicValue" value="0"/>
 		<property name="Stacknumber" value="5"/>
 		<property name="UnlockedBy" value="craftingMedical"/>
-		<property name="Group" value="Science,CFChemicals,Medical,Basics"/>
+		<property name="Group" value="Science,CFChemicals,Medical,TCMedical,Basics"/>
 		<property class="Action0">
 			<property name="Class" value="Eat"/>
 			<property name="Delay" value="1.0"/>			
@@ -864,7 +864,7 @@
 	</item>
 	</append>
 	
-	<!-- *** water filter is now a tool - breaks after 50 uses and must be replaced *** -->
+	<!-- *** water filter is now a tool - breaks after 25 uses and must be replaced *** -->
 	<remove xpath="//item[@name='resourceWaterFilter']"/>
 	<append xpath="/items">
 	<item name="resourceWaterFilter">
@@ -921,8 +921,8 @@
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="MresourceWood"/>
-			<property name="Weight" value="10"/>
+			<property name="Material" value="MresourceWoodScraps"/>
+			<property name="Weight" value="50"/>
 			<property name="Stacknumber" value="6000"/> <!-- STK resource -->
 			<property name="FuelValue" value="5"/>
 			<property name="EconomicValue" value="0"/>
@@ -1130,12 +1130,16 @@
 	<property name="CustomIcon" value="foodCanStockrusty"/>
 	</insertafter>	
 	
+	<insertafter xpath="//item[@name='foodShamChowder']//property[1]">
+	<property name="CustomIcon" value="foodShamChowder"/>
+	</insertafter>
+	
 	<!-- *** new canned carrots *** -->
 	<append xpath="/items">
 	<item name="foodCanCarrots">
 		<property name="Extends" value="foodCanMiso"/>
 		<property name="CustomIcon" value="foodCanCarrotsrusty"/>		
-		<property name="EconomicValue" value="60"/>
+		<property name="EconomicValue" value="40"/>
 		<effect_group tiered="false" name="Food Tier 0">
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="10"/><display_value name="dDysenteryRisk" value=".10"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
@@ -1313,7 +1317,7 @@
 	<item name="foodCanCarrotscooked">
 		<property name="CustomIcon" value="foodCanCarrots"/>
 		<property name="Extends" value="foodCanMisocooked"/>
-		<property name="EconomicValue" value="20"/>
+		<property name="EconomicValue" value="40"/>
 		<effect_group tiered="false" name="Food Tier 0">
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>

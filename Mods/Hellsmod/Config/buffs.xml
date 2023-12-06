@@ -79,14 +79,37 @@
 			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,2" tags="buffPoisoned"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value=".05"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buff_bleeding" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="buff_bleeding" play_in_head="true"/>
-			<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="buff_bleeding" play_in_head="true"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="PlaySound" sound="buff_bleeding" play_in_head="true"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value=".05"/>			
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Radiation" intensity="0.07" fade="1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="0"/>
+			<triggered_effect trigger="onSelfLeaveGame" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyScreenEffect" effect_name="Radiation" intensity=".07" fade="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="fx_acid" play_in_head="true"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="fx_acid" play_in_head="true"/>
+			<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="fx_acid" play_in_head="true"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="PlaySound" sound="fx_acid" play_in_head="true"/>
 			<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Infected" intensity="0" fade="0"/>
 		</effect_group>
 	</buff>	
+	
+	<!-- *** immunity from infection after taking "The Cure" *** -->	
+        <buff name="infectionImmunity" name_key="infectionImmunity" description_key="infectionImmunityDesc" icon="ui_game_symbol_infection" remove_on_death="false" icon_color="0,255,0">
+		<damage_type value="Infection"/>
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+		<update_rate value="1"/>
+		<display_value_key value="TheCureDescShort"/>
+		<display_value value="xxx"/>
+		<tags value="deathpenalty_injured" />
+		    <effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionMaxDuration" operation="set" value="-1">
+				<!-- <requirement name="CVarCompare" cvar="$infectionMaxDuration" operation="Equals" value="0"/> -->
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="infectionCounter" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="infectionCounter" operation="add" value="-1.25"/>
+            <passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInfectionCatch,buffInfectionMain,buffInfectionGetsWorse,buffInfection01Untreated,buffInfection02Untreated,buffInfection03Untreated,buffInfection04"/>
+            </effect_group>
+        </buff>    
 	</append>
 	
 	<!-- *** radiated zombie melee buff *** -->
@@ -206,8 +229,8 @@
 	<requirement name="!EntityTagCompare" tags="zombie"/>
 	</insertafter>
 	
-	<!-- *** remove stamina regen pause on power attack *** -->	
-	<set xpath="//buff[@name='buffPowerAttackStaminaStunt']/duration/@value">0.5</set>
+	<!-- *** lowers stamina regen pause on power attack *** -->	
+	<set xpath="//buff[@name='buffPowerAttackStaminaStunt']/duration/@value">1</set>
 	<!-- <set xpath="//buff[@name='buffStatusCheck01']/effect_group//triggered_effect[2]/@value">28800</set>
 	<set xpath="//buff[@name='buffInfectionMain']/duration/@value">28800</set> -->
 	
@@ -306,6 +329,7 @@
 		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffAlwaysHeadShotsOnly"/>
 		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffShieldEnemies"/>
 		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffArrowBleed"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="NoVehicleUnderwater"/>
 		<!-- <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffBadHarvester"/>	 -->
 		<!-- <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffBadLooter"/>	 -->
 		<!-- <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffBadCrafter"/>	 -->		
@@ -319,6 +343,7 @@
 		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffAlwaysHeadShotsOnly"/>
 		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffShieldEnemies"/>
 		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffArrowBleed"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="NoVehicleUnderwater"/>
 		<!-- <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffBadHarvester"/>	 -->
 		<!-- <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffBadLooter"/>	 -->
 		<!-- <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffBadCrafter"/>	 -->
@@ -387,6 +412,56 @@
 			<requirement name="HJPlayerItemCount, HJPlayerItemCount" item_name="vehicleGyrocopterPlaceable" operation="equals" value="0"/>
 			<!-- </requirements> -->
 		</effect_group>			
+		</buff>
+		
+	<!-- *** disables vehicle when vehicle is submerged *** -->
+		<buff name="NoVehicleUnderwater" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+		<update_rate value=".1"/>		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="disableVehicle"/>					
+			<requirements>
+			<requirement name="IsAttachedToEntity"/>			
+			<requirement name="CVarCompare"  cvar="_underwater" operation="GTE" value="1"/>			
+			</requirements>			
+		</effect_group>		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="disableVehicle"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffNoVehicle"/>			
+			<requirement name="CVarCompare"  cvar="_underwater" operation="LT" value="1"/>	
+		</effect_group>			
+		</buff>
+		
+		<buff name="disableVehicle" hidden="true" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<update_rate value=".1"/>	
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="buff_novehicle_submerged" />
+				<passive_effect name="NoVehicle" operation="base_set" value="1" />
+			</effect_group>		
+			</buff>	
+
+		<buff name="buffNoVehicle" name_key="TwitchBuff_NoVehicle" description_key="TwitchBuff_NoVehicleDesc" icon="ui_game_symbol_twitch_no_vehicle" icon_color="255,175,175">
+			<stack_type value="replace"/>
+			<duration value="0"/>			
+
+			<effect_group>
+				<!-- Blinks the display -->
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="twitch_buffNoVehicle"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="twitch_buffNoVehicle"/>
+
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="twitch_buffNoVehicle" >
+					<requirement name="HasBuff" buff="twitch_buffVoteNoVehicle"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffFinish" action="PlaySound" sound="twitch_bad_buff_ended" play_in_head="true" />
+			</effect_group>
+
+			<effect_group>
+				<passive_effect name="NoVehicle" operation="base_set" value="1" />
+			</effect_group>
 		</buff>
 	</append>	
 	

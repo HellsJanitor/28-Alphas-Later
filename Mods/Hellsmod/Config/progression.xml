@@ -11,7 +11,44 @@
 	<set xpath="//attribute//effect_group//passive_effect[@name='DismemberChance']/@value">.01,.09</set>
 	
 	<!-- *** antivenom crafting added *** -->
-	<set xpath="//crafting_skill[@name='craftingMedical']//display_entry[1]/@icon">medicalFirstAidBandage,drugFortBites,antivenom</set>
+	<remove xpath="//crafting_skill[@name='craftingMedical']"/>
+	<insertafter xpath="//crafting_skill[@name='craftingArmor']">
+	<crafting_skill name="craftingMedical" max_level="100" parent="attCrafting" name_key="craftingMedicalName" desc_key="craftingMedicalDesc" long_desc_key="craftingMedicalLongDesc" icon="ui_game_symbol_medical">
+
+		<display_entry icon="medicalFirstAidBandage,antivenom,drugFortBites" name_key="medicalT1-1,medicalT1-2,medicalT1-3" has_quality="false" unlock_level="5,10,15" >
+			<unlock_entry item="medicalFirstAidBandage" unlock_tier="1" />
+			<unlock_entry item="antivenom" unlock_tier="2" />
+			<unlock_entry item="drugFortBites" unlock_tier="3" />
+		</display_entry>
+		<display_entry icon="medicalPlasterCast,drugHerbalAntibiotics,drugRecog" name_key="medicalT2-1,medicalT2-2,medicalT2-3" has_quality="false" unlock_level="20,30,40" >
+			<unlock_entry item="medicalPlasterCast" unlock_tier="1" />
+			<unlock_entry item="drugHerbalAntibiotics" unlock_tier="2" />
+			<unlock_entry item="drugRecog" unlock_tier="3" />
+		</display_entry>
+		<display_entry icon="medicalFirstAidKit,drugAntibiotics,drugSteroids,TheCure" name_key="medicalT3-1,medicalT3-2,medicalT3-3,medicalT3-4" has_quality="false" unlock_level="50,60,75,100" >
+			<unlock_entry item="medicalFirstAidKit" unlock_tier="1" />
+			<unlock_entry item="drugAntibiotics" unlock_tier="2" />
+			<unlock_entry item="drugSteroids" unlock_tier="3" />
+			<unlock_entry item="TheCure" unlock_tier="4" />
+		</display_entry>
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,100" value="1" tags="medicalFirstAidBandage"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,100" value="1" tags="antivenom"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,100" value="1" tags="drugFortBites"/>
+
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,100" value="1" tags="medicalPlasterCast"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,100" value="1" tags="drugHerbalAntibiotics"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,100" value="1" tags="drugRecog"/>
+
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,100" value="1" tags="medicalFirstAidKit"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,100" value="1" tags="drugAntibiotics"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,100" value="1" tags="drugSteroids"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,100" value="1" tags="TheCure"/>
+		</effect_group>
+	</crafting_skill>
+	</insertafter>
+	<!-- <set xpath="//crafting_skill[@name='craftingMedical']//display_entry[1]/@icon">medicalFirstAidBandage,drugFortBites,antivenom</set>
 	<set xpath="//crafting_skill[@name='craftingMedical']/display_entry[1]//unlock_entry[2]/@item">antivenom</set>
 	<insertafter xpath="//crafting_skill[@name='craftingMedical']/display_entry[1]//unlock_entry[2]">
 		<unlock_entry item="drugFortBites" unlock_tier="3" />
@@ -19,7 +56,7 @@
 	<set xpath="//crafting_skill[@name='craftingMedical']/effect_group//passive_effect[2]/@tags">antivenom</set>
 	<insertafter xpath="//crafting_skill[@name='craftingMedical']/effect_group//passive_effect[2]">
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,100" value="1" tags="drugFortBites"/>
-	</insertafter>
+	</insertafter> -->
 	
 	<!-- *** remove dew collector from crafting progresion *** -->	
 	<remove xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[1]//unlock_entry[1]"/>

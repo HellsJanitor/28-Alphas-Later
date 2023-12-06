@@ -1,3 +1,47 @@
 <configs>
-<set xpath="/gameevents/action_sequence[@name='game_first_spawn']/action[@class='AddJournalTip']/property[@name='tip_name']/@value">HellsModSpawnText</set>
+	<set xpath="/gameevents/action_sequence[@name='game_first_spawn']/action[@class='AddJournalTip']/property[@name='tip_name']/@value">HellsModSpawnText</set>
+	
+	<!-- *** prevents use of vehicles underwater *** -->
+	<append xpath="/gameevents">
+	<action_sequence name="buff_novehicle_submerged">
+		<property name="category" value="twitch_actions" />
+
+		<requirement class="HasBuff">
+			<property name="buff_name" value="buffNoVehicle" param1="hasbuff" />
+			<property name="invert" value="true" />
+		</requirement>
+		
+		<action class="AddPartyToGroup">
+			<property name="phase" value="0" />
+			<property name="group_name" value="party" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="minibike_empty_" />
+			<property name="phase" value="1" />
+			<property name="inside_head" value="true" />
+			<property name="target_group" value="party" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="phase" value="1" />
+			<property name="sound" value="twitch_vehicle_overlay" />
+			<property name="inside_head" value="true" />
+			<property name="target_group" value="party" />
+			<property name="delay" value="1.6" />
+		</action>
+
+		<action class="EjectFromVehicle">
+			<property name="phase" value="1" />
+			<property name="target_group" value="party" />
+		</action>		
+
+		<action class="AddBuff">
+			<property name="phase" value="1" />
+			<property name="buff_name" value="buffNoVehicle" />
+			<property name="target_group" value="party" />
+		</action>
+
+	</action_sequence>	
+	</append>
 </configs>

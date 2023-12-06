@@ -280,5 +280,5 @@
 	</insertbefore>
 
 	<!-- *** remove triple pocket mod schematic from loot *** -->
-	<remove xpath="//lootgroup[@name='schematicsModsAndGeneralT2']//item[@name='modArmorTripleStoragePocketSchematic']"/>
+	<remove xpath="//lootgroup[@name='schematicsModsAndGeneralT2']//item[@name='modArmorTripleStoragePocketSchematic']"/>	
 </configs>

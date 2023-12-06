@@ -20,23 +20,51 @@
 		</recipe>
 	</append>
 	
-	<!-- *** adjust forge recipes to reflect raw ingredients used *** -->
-	<set xpath="//recipe[@name='glassBulletproofBlockVariantHelper']//ingredient[5]/@count">4</set>
-	<set xpath="//recipe[@name='glassBulletproofBlockVariantHelper']//ingredient[1]/@count">27</set>
+	<!-- *** adjust forge recipes to reflect raw ingredients used *** -->	
 	<set xpath="//recipe[@name='ironBars']//ingredient[2]/@count">4</set>
 	<set xpath="//recipe[@name='ironBarsCentered']//ingredient[2]/@count">4</set>
 	<set xpath="//recipe[@name='ironBarsCNR']//ingredient[2]/@count">4</set>
-	<set xpath="//recipe[@name='metalTrussingIBeamBlockVariantHelper']//ingredient[2]/@count">4</set>
-	<set xpath="//recipe[@name='resourceForgedIron']//ingredient[2]/@count">1</set>
-	<set xpath="//recipe[@name='resourceForgedSteel']//ingredient[2]/@count">2</set>
-	<set xpath="//recipe[@name='resourceMetalPipe']//ingredient[2]/@count">1</set>
-	<set xpath="//recipe[@name='resourceRocketCasing']//ingredient[2]/@count">6</set>
-	<set xpath="//recipe[@name='resourceRocketTip']//ingredient[2]/@count">6</set>
+	<set xpath="//recipe[@name='metalTrussingIBeamBlockVariantHelper']//ingredient[2]/@count">1</set>	
 	<set xpath="//recipe[@name='toolAnvil']//ingredient[2]/@count">20</set>
 	<set xpath="//recipe[@name='toolCookingGrill']//ingredient[2]/@count">1</set>
-	<set xpath="//recipe[@name='toolCookingPot']//ingredient[2]/@count">1</set>
-	<set xpath="//recipe[@name='trapGlassBusinessSheet1x1']//ingredient[4]/@count">1</set>
-	<set xpath="//recipe[@name='trapGlassBusinessCTRSheet1x1']//ingredient[4]/@count">1</set>
+	<set xpath="//recipe[@name='toolCookingPot']//ingredient[2]/@count">1</set>	
+	<set xpath="//recipe[@name='resourceNail']/@count">5</set>
+	<set xpath="//recipe[@name='resourceNail']//ingredient[@name='resourceScrapIron']/@count">5</set>
+	<set xpath="//recipe[@name='glassBlockVariantHelper']/@count">5</set>
+	<set xpath="//recipe[@name='glassBlockVariantHelper']//ingredient[@name='resourceBrokenGlass']/@count">70</set>
+	<set xpath="//recipe[@name='glassBlockVariantHelper']//ingredient[@name='resourceScrapLead']/@count">25</set>
+	<set xpath="//recipe[@name='resourceArrowHeadIron']/@count">5</set>
+	<set xpath="//recipe[@name='resourceArrowHeadIron']//ingredient[@name='resourceScrapIron']/@count">10</set>
+	<set xpath="//recipe[@name='resourceArrowHeadSteelAP']/@count">5</set>
+	<set xpath="//recipe[@name='resourceArrowHeadSteelAP']//ingredient[@name='resourceScrapIron']/@count">25</set>
+	<set xpath="//recipe[@name='resourceBuckshot']/@count">5</set>
+	<set xpath="//recipe[@name='resourceBuckshot']//ingredient[@name='resourceScrapLead']/@count">15</set>
+	<set xpath="//recipe[@name='resourceBulletCasing']/@count">5</set>
+	<set xpath="//recipe[@name='resourceBulletCasing']//ingredient[@name='resourceScrapBrass']/@count">25</set>
+	<set xpath="//recipe[@name='resourceBulletTip']/@count">5</set>
+	<set xpath="//recipe[@name='resourceBulletTip']//ingredient[@name='resourceScrapLead']/@count">10</set>
+	<set xpath="//recipe[@name='resourceCement']//ingredient[@name='resourceRockSmall']/@count">2</set>
+	<set xpath="//recipe[@name='resourceForgedIron']/@count">5</set>
+	<set xpath="//recipe[@name='resourceForgedIron']//ingredient[@name='resourceScrapIron']/@count">50</set>
+	<set xpath="//recipe[@name='resourceForgedSteel']/@count">5</set>
+	<set xpath="//recipe[@name='resourceForgedSteel']//ingredient[@name='resourceScrapIron']/@count">100</set>
+	<set xpath="//recipe[@name='resourceMetalPipe']/@count">5</set>
+	<set xpath="//recipe[@name='resourceMetalPipe']//ingredient[@name='resourceScrapIron']/@count">50</set>
+	<set xpath="//recipe[@name='resourceRocketCasing']/@count">5</set>
+	<set xpath="//recipe[@name='resourceRocketCasing']//ingredient[@name='resourceScrapIron']/@count">250</set>
+	<set xpath="//recipe[@name='resourceRocketTip']/@count">5</set>
+	<set xpath="//recipe[@name='resourceRocketTip']//ingredient[@name='resourceScrapLead']/@count">250</set>
+	<set xpath="//recipe[@name='trapGlassBusinessCTRSheet1x1']/@count">5</set>
+	<set xpath="//recipe[@name='trapGlassBusinessCTRSheet1x1']//ingredient[@name='resourceBrokenGlass']/@count">100</set>	
+	<set xpath="//recipe[@name='trapGlassBusinessCTRSheet1x1']//ingredient[@name='resourceRockSmall']/@count">25</set>
+	<set xpath="//recipe[@name='trapGlassBusinessCTRSheet1x1']//ingredient[@name='resourceScrapLead']/@count">25</set>
+	<set xpath="//recipe[@name='trapGlassBusinessSheet1x1']/@count">5</set>
+	<set xpath="//recipe[@name='trapGlassBusinessSheet1x1']//ingredient[@name='resourceBrokenGlass']/@count">100</set>	
+	<set xpath="//recipe[@name='trapGlassBusinessSheet1x1']//ingredient[@name='resourceRockSmall']/@count">25</set>
+	<set xpath="//recipe[@name='trapGlassBusinessSheet1x1']//ingredient[@name='resourceScrapLead']/@count">25</set>
+	<set xpath="//recipe[@name='metalFenceRailingTrellisSheetBlockVariantHelper']/@count">5</set>
+	<set xpath="//recipe[@name='metalFenceRailingTrellisSheetBlockVariantHelper']//ingredient[@name='resourceScrapIron']/@count">75</set>
+	
 	<append xpath="/recipes">
 		<recipe name="resourceMilitaryFiber" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap">
 			<wildcard_forge_category/>
@@ -102,45 +130,59 @@
 			<ingredient name="drinkJarBoiledWater" count="1"/>
 		</recipe>
 		
+		<recipe name="antivenom" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
+			<ingredient name="venom" count="2"/>
+			<ingredient name="drinkJarBoiledWater" count="2"/>
+		</recipe>
+		
+	<!-- *** The Cure *** -->
+		<recipe name="TheCure" count="1" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="drugAntibiotics" count="4"/>
+			<ingredient name="drugVitamins" count="4"/>
+			<ingredient name="medicalBloodBag" count="4"/>
+			<ingredient name="drinkJarPureMineralWater" count="8"/>
+			<ingredient name="drinkJarGrandpasForgettingElixir" count="2"/>
+		</recipe>
+		
 	<!-- *** hazmat armour mods *** -->
-	<recipe name="modHazmatBoots" count="1" craft_area="workbench">
-		<ingredient name="apparelHazmatBoots" count="1"/>
-		<!-- <ingredient name="modArmorCustomizedFittings" count="1"/> -->
-		<ingredient name="resourceMilitaryFiber" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>		
-	</recipe>
-	<recipe name="modHazmatGloves" count="1" craft_area="workbench">
-		<ingredient name="apparelHazmatGloves" count="1"/>
-		<!-- <ingredient name="modArmorCustomizedFittings" count="1"/> -->
-		<ingredient name="resourceMilitaryFiber" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>		
-	</recipe>
-	<recipe name="modHazmatJacket" count="1" craft_area="workbench">
-		<ingredient name="apparelHazmatJacket" count="1"/>
-		<!-- <ingredient name="modArmorCustomizedFittings" count="1"/> -->
-		<ingredient name="resourceMilitaryFiber" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>		
-	</recipe>
-	<recipe name="modHazmatMask" count="1" craft_area="workbench">
-		<ingredient name="apparelHazmatMask" count="1"/>
-		<!-- <ingredient name="modArmorCustomizedFittings" count="1"/> -->
-		<ingredient name="resourceMilitaryFiber" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>		
-	</recipe>
-	<recipe name="modHazmatPants" count="1" craft_area="workbench">
-		<ingredient name="apparelHazmatPants" count="1"/>
-		<!-- <ingredient name="modArmorCustomizedFittings" count="1"/> -->
-		<ingredient name="resourceMilitaryFiber" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>		
-	</recipe>
+		<recipe name="modHazmatBoots" count="1" craft_area="workbench">
+			<ingredient name="apparelHazmatBoots" count="1"/>
+			<!-- <ingredient name="modArmorCustomizedFittings" count="1"/> -->
+			<ingredient name="resourceMilitaryFiber" count="2"/>
+			<ingredient name="resourceDuctTape" count="2"/>		
+		</recipe>
+		<recipe name="modHazmatGloves" count="1" craft_area="workbench">
+			<ingredient name="apparelHazmatGloves" count="1"/>
+			<!-- <ingredient name="modArmorCustomizedFittings" count="1"/> -->
+			<ingredient name="resourceMilitaryFiber" count="2"/>
+			<ingredient name="resourceDuctTape" count="2"/>		
+		</recipe>
+		<recipe name="modHazmatJacket" count="1" craft_area="workbench">
+			<ingredient name="apparelHazmatJacket" count="1"/>
+			<!-- <ingredient name="modArmorCustomizedFittings" count="1"/> -->
+			<ingredient name="resourceMilitaryFiber" count="2"/>
+			<ingredient name="resourceDuctTape" count="2"/>		
+		</recipe>
+		<recipe name="modHazmatMask" count="1" craft_area="workbench">
+			<ingredient name="apparelHazmatMask" count="1"/>
+			<!-- <ingredient name="modArmorCustomizedFittings" count="1"/> -->
+			<ingredient name="resourceMilitaryFiber" count="2"/>
+			<ingredient name="resourceDuctTape" count="2"/>		
+		</recipe>
+		<recipe name="modHazmatPants" count="1" craft_area="workbench">
+			<ingredient name="apparelHazmatPants" count="1"/>
+			<!-- <ingredient name="modArmorCustomizedFittings" count="1"/> -->
+			<ingredient name="resourceMilitaryFiber" count="2"/>
+			<ingredient name="resourceDuctTape" count="2"/>		
+		</recipe>
 
 	<!-- *** recipes for new mods *** -->
-	<recipe name="modBicycleStaminaSaver" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="resourceForgedIron" count="5"/>
-		<ingredient name="resourceElectricParts" count="5"/>
-		<ingredient name="resourceMechanicalParts" count="5"/>
-		<ingredient name="resourceSpring" count="10"/>
-	</recipe>	
+		<recipe name="modBicycleStaminaSaver" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedIron" count="5"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceSpring" count="10"/>
+		</recipe>	
 	</append>	
 	
 	<!-- *** repair kits require oil & mech parts *** -->
@@ -432,6 +474,12 @@
 	<set xpath="//recipe[@name='meleeToolTorch']//ingredient[@name='resourceWood']/@count">4</set>
 	<set xpath="//recipe[@name='meleeToolTorch']//ingredient[@name='resourceWood']/@name">resourceBranch</set>
 	
+	<!-- *** iron arrows/bolts use branches instead of wood *** -->
+	<set xpath="//recipe[@name='ammoArrowIron']//ingredient[@name='resourceWood']/@name">resourceBranch</set>
+	<set xpath="//recipe[@name='ammoBundleArrowIron']//ingredient[@name='resourceWood']/@name">resourceBranch</set>
+	<set xpath="//recipe[@name='ammoCrossbowBoltIron']//ingredient[@name='resourceWood']/@name">resourceBranch</set>
+	<set xpath="//recipe[@name='ammoBundleCrossbowBoltIron']//ingredient[@name='resourceWood']/@name">resourceBranch</set>
+	
 	<!-- *** new wood arrow/bolt. No feathers, no stone, low damage, always breaks *** -->
 	<append xpath="/recipes">
 	<recipe name="ammoArrowWood" count="1">
@@ -541,7 +589,7 @@
 		</effect_group>
 	</recipe>
 	<recipe name="foodScrambledEggs" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef">
-		<ingredient name="foodEgg" count="4"/>		
+		<ingredient name="foodEgg" count="3"/>		
 		<effect_group>
 			<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="foodEgg"/>
 		</effect_group>
@@ -744,52 +792,52 @@
 	<remove xpath="/recipes/recipe[@name='modArmorTripleStoragePocket']"/>
 
 	<!-- *** increased crafting costs (25%) *** -->
-	<set xpath="//recipe/ingredient[@count='2400']/@count">3000</set>
+	<!-- <set xpath="//recipe/ingredient[@count='2400']/@count">3000</set> -->
 	<!-- <set xpath="//recipe[not (contains(@name,'ammoGasCanBundle'))]/ingredient[@count='2000']/@count">2500</set> -->
 	<set xpath="//recipe/ingredient[@count='1200']/@count">1500</set>
 	<set xpath="//recipe/ingredient[@count='900']/@count">1125</set>
-	<set xpath="//recipe/ingredient[@count='800']/@count">1000</set>
+	<!-- <set xpath="//recipe/ingredient[@count='800']/@count">1000</set> -->
 	<!-- <set xpath="//recipe/ingredient[@count='600']/@count">750</set> -->
-	<set xpath="//recipe/ingredient[@count='500']/@count">625</set>
-	<set xpath="//recipe/ingredient[@count='480']/@count">600</set>
-	<set xpath="//recipe/ingredient[@count='400']/@count">500</set>
-	<set xpath="//recipe/ingredient[@count='360']/@count">450</set>
-	<set xpath="//recipe/ingredient[@count='320']/@count">400</set>
-	<set xpath="//recipe/ingredient[@count='300']/@count">375</set>
-	<set xpath="//recipe/ingredient[@count='250']/@count">312</set>
-	<set xpath="//recipe/ingredient[@count='240']/@count">300</set>
-	<set xpath="//recipe/ingredient[@count='200']/@count">250</set>
-	<set xpath="//recipe/ingredient[@count='180']/@count">225</set>
-	<set xpath="//recipe/ingredient[@count='160']/@count">200</set>
-	<set xpath="//recipe/ingredient[@count='125']/@count">156</set>
-	<set xpath="//recipe/ingredient[@count='120']/@count">150</set>
-	<!-- <set xpath="//recipe/ingredient[@count='110']/@count">137</set> -->
-	<set xpath="//recipe/ingredient[@count='100']/@count">125</set>
-	<set xpath="//recipe/ingredient[@count='80']/@count">120</set>
-	<set xpath="//recipe/ingredient[@count='60']/@count">75</set>
-	<set xpath="//recipe/ingredient[@count='50']/@count">62</set>
-	<set xpath="//recipe/ingredient[@count='40']/@count">50</set>
-	<set xpath="//recipe/ingredient[@count='35']/@count">44</set>
-	<set xpath="//recipe/ingredient[@count='33']/@count">41</set>
-	<set xpath="//recipe/ingredient[@count='30']/@count">37</set>
-	<set xpath="//recipe/ingredient[@count='25']/@count">31</set>
-	<set xpath="//recipe/ingredient[@count='24']/@count">30</set>
-	<set xpath="//recipe/ingredient[@count='20']/@count">25</set>
-	<set xpath="//recipe/ingredient[@count='18']/@count">22</set>
-	<set xpath="//recipe/ingredient[@count='17']/@count">21</set>
-	<set xpath="//recipe/ingredient[@count='16']/@count">20</set>
-	<set xpath="//recipe/ingredient[@count='15']/@count">18</set>
-	<set xpath="//recipe/ingredient[@count='14']/@count">17</set>
-	<set xpath="//recipe/ingredient[@count='12']/@count">15</set>
-	<set xpath="//recipe/ingredient[@count='11']/@count">14</set>
-	<set xpath="//recipe/ingredient[@count='10']/@count">12</set>
-	<set xpath="//recipe/ingredient[@count='9']/@count">11</set>
-	<set xpath="//recipe/ingredient[@count='8']/@count">10</set>
-	<set xpath="//recipe/ingredient[@count='7']/@count">9</set>
-	<set xpath="//recipe/ingredient[@count='6']/@count">8</set>
-	<set xpath="//recipe/ingredient[@count='5']/@count">6</set>
-	<set xpath="//recipe/ingredient[@count='4']/@count">5</set>
-	<set xpath="//recipe/ingredient[@count='3']/@count">4</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='500']/@count">625</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='480']/@count">600</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='400']/@count">500</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='360']/@count">450</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='320']/@count">400</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='300']/@count">375</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='250']/@count">312</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='240']/@count">300</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='200']/@count">250</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='180']/@count">225</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='160']/@count">200</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='125']/@count">156</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='120']/@count">150</set>
+	<!-- <set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='110']/@count">137</set> -->
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='100']/@count">125</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='80']/@count">120</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='60']/@count">75</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='50']/@count">62</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='40']/@count">50</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='35']/@count">44</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='33']/@count">41</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='30']/@count">37</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='25']/@count">31</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='24']/@count">30</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='20']/@count">25</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='18']/@count">22</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='17']/@count">21</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='16']/@count">20</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='15']/@count">18</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='14']/@count">17</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='12']/@count">15</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='11']/@count">14</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='10']/@count">12</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='9']/@count">11</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='8']/@count">10</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='7']/@count">9</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='6']/@count">8</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='5']/@count">6</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='4']/@count">5</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='3']/@count">4</set>
 	
 	<!-- *** new vehicle bundles *** -->
 	<remove xpath="//recipe[@name='vehicle4x4TruckPlaceable']"/>

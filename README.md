@@ -8,7 +8,7 @@ The idea behind this mod is to slow progression, make traders less powerful, and
 
 The starter quest is now just "place bedroll", which you'll receive on opening the starter backpack.
 
-The player is permanently infected, with no cure, and the infection persists through death.
+Player is permanently infected, and the infection persists through death. There is a cure, but you’ll need to read a lot of medical magazines to learn how to make it.
 
 Headshots ONLY. Zombies can only be damaged/killed with headshots, or with fire, or with explosives.
 
@@ -81,6 +81,8 @@ The cement mixer now requires gasoline to work.
 The forge no longer requires you to smelt items. You can use the items directly from your inventory.
 
 All vehicles EXCEPT the bicycle are too heavy for you to carry.
+
+Vehicles CANNNOT be used underwater.
 
 Concrete now requires a bucket of water and is crafted in batches of 250.
 

@@ -16,7 +16,8 @@ animalDoe,Mule Doe
 animalSnake,Rattlesnake
 animalStag,Mule Stag
 animalWolf,Grey Wolf
-antivenomDesc,"Use this to instantly remove the effects of venom.\n\nCan be crafted in a beaker at the campfire."
+antivenom,"Anti-venom"
+antivenomDesc,"Use this to instantly remove the effects of venom.\n\nCan be crafted at the campfire, in a cooking pot, or use a beaker to save on ingredients."
 armorSteelGroupDesc,Heavy armor will encumber you but provides good protection against damage.\nIt will not protect you from the weather.\n\nRepair with a Steel Armor Repair Kit.\nScrap to steel armor parts.
 armorMilitaryGroupDesc,Light armor will encumber you a little and provides some protection against damage.\nIt will not protect you from the weather.\n\nRepair with a Military Armour Repair Kit.\nScrap to military armor parts.
 attAgilityRank01LongDesc,"You are as clumsy as they come but you still do 200% head shot damage and have a 1% chance to dismember with bows, handguns, and knives."
@@ -208,7 +209,7 @@ GyroBundleDesc,Take this bundle to where you want to place your gyrocopter [FFC8
 HandgunRepairKit,Handgun Repair Kit
 HandgunRepairKitDesc,"This Repair Kit is used to repair 9mm pistols, .44 handguns, and SMGs."
 infectionImmunity,T-Virus Immunity
-infectionImmunityDesc,"The chatter and the rumours were true!\nYou took the risk, and found the cure.\n\n[FFC800]You are now immune from any and all infections.[-]"
+infectionImmunityDesc,"The chatter and the rumours were true!\nThere WAS a cure, and you discovered how to make it!\n\n[FFC800]You are now immune from any and all infections.[-]"
 KnucklesRepairKit,Knuckles Repair Kit
 KnucklesRepairKitDesc,This Repair Kit is used to repair steel knuckles.
 loadingTipBladedWeapons,"Bladed weapons such as knives and machetes are best at harvesting meat, hide and bones from animals and remains.\nThese weapons will apply a bleed debuff to living creatures, which can be bolstered by investing in the Deep Cuts perk.\nUnfortunately, undead creatures don't bleed."
@@ -337,6 +338,7 @@ tablesawTip,"The Tablesaw unlocks the ability to turn wood logs into wood more q
 tablesawTip_title,Tablesaw
 TheCure,"The T-Virus Cure"
 TheCureDesc,"Cures 100% of infections, and protects against re-infection."
+TheCureDescShort,Immune
 ttItemNeedsRepair,"This item is knackered and needs fixing"
 ttRepairBeforePickup,"It's knackered and needs repairing before picking it up."
 venomDesc,"Key ingredient for antivenom."
