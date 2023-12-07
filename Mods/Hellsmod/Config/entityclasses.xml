@@ -143,7 +143,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="65"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -160,7 +160,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="65"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>	
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>	
 			</effect_group>
 		</entity_class>
 		
@@ -177,7 +177,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="70"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -194,7 +194,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="70"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -211,7 +211,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="70"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -228,7 +228,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="70"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -245,7 +245,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="70"/>	
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -262,7 +262,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="70"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -279,7 +279,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="70"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -297,7 +297,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="70"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -315,7 +315,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="75"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -333,7 +333,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="75"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -351,7 +351,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="75"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -368,7 +368,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="75"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -385,7 +385,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="75"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -402,7 +402,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="75"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -419,7 +419,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="75"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -436,7 +436,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="75"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_set" value="-10"/>
+				<!-- <passive_effect name="PhysicalDamageResist" operation="base_set" value="-10"/> -->
 			</effect_group>
 		</entity_class>
 		
@@ -453,7 +453,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="150"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_set" value="-10"/>
+				<!-- <passive_effect name="PhysicalDamageResist" operation="base_set" value="-10"/> -->
 			</effect_group>
 		</entity_class>
 		
@@ -470,7 +470,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="155"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -496,7 +496,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="155"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -522,7 +522,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="155"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -540,7 +540,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="110"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 		</entity_class>
 		
@@ -557,7 +557,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="EntityDamage" operation="perc_add" value="-0.2"/>
 				<passive_effect name="HealthMax" operation="base_set" value="130"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-10"/>
+				<!-- <passive_effect name="PhysicalDamageResist" operation="base_add" value="-10"/> -->
 			</effect_group>
 		</entity_class>
 		
@@ -593,7 +593,7 @@
 			<property name="ExperienceGain" value="425"/>						
 			<effect_group name="Base Effects">				
 				<passive_effect name="HealthMax" operation="base_set" value="135"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 			<effect_group>				
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>
@@ -615,7 +615,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="135"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>	
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>	
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -636,7 +636,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="135"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -657,7 +657,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="135"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -678,7 +678,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="135"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -699,7 +699,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="135"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -720,7 +720,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="135"/>	
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -741,7 +741,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="135"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -763,7 +763,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="135"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -785,7 +785,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="160"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -807,7 +807,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="160"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -829,7 +829,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="160"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -850,7 +850,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="165"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -871,7 +871,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="160"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -892,7 +892,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="160"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -913,7 +913,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="160"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -934,7 +934,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="160"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+				<!-- <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/> -->
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -955,7 +955,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="360"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>
+				<!-- <passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/> -->
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -985,7 +985,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="385"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -1016,7 +1016,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="385"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -1038,7 +1038,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="235"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-5"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -1059,7 +1059,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="210"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="20"/>
+				<!-- <passive_effect name="PhysicalDamageResist" operation="base_add" value="20"/> -->
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					
@@ -1080,7 +1080,7 @@
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="115"/>	
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="-10"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffFrozen_Slow"/>					

@@ -1,14 +1,192 @@
 <configs>
 	<!-- search find all *** for changes -->
 	
+	<!-- *** starter weapon quest item *** -->
+	<insertAfter xpath="/items/item[@name='noteDuke01']//property[1][@value]">
+	<property name="ItemTypeIcon" value="book"/>
+	<property name="Weight" value="0"/>
+	</insertAfter>
+	
+	<!-- *** starter weapon quest book reward *** -->
+	<insertAfter xpath="/items/item[@name='questMaster']">
+	<!--starter weapons-->
+	<item name="startermeleeWpnSpearT0StoneSpear">
+		<property name="CreativeMode" value="Dev"/>
+		<property name="ItemTypeIcon" value="book"/>
+		<property name="DescriptionKey" value="startermeleeWpnSpearT0StoneSpearDesc"/>
+		<property name="HoldType" value="21"/>
+		<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Mpaper"/>
+		<property name="CustomIcon" value="meleeWpnSpearT0StoneSpear"/>
+		<property name="Stacknumber" value="1"/> <!-- STK book -->
+		<property name="EconomicValue" value="0"/>
+		<property name="SellableToTrader" value="false"/>
+		<property class="Action0">
+			<property name="Class" value="Quest"/>
+			<property name="QuestGiven" value="quest_WeaponSpear"/>
+			<property name="Delay" value="0.5"/>
+			<property name="UseAnimation" value="false"/>
+			<property name="Use_time" value="..."/>
+		</property>
+		<property name="FuelValue" value="0"/>
+		<property name="Weight" value="0"/>
+		<property name="Group" value="Special Items,Mods"/>
+	</item>
+
+	<item name="startermeleeWpnClubT0WoodenClub">
+		<property name="CreativeMode" value="Dev"/>
+		<property name="ItemTypeIcon" value="book"/>
+		<property name="DescriptionKey" value="startermeleeWpnClubT0WoodenClubDesc"/>
+		<property name="HoldType" value="21"/>
+		<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Mpaper"/>
+		<property name="CustomIcon" value="meleeWpnClubT0WoodenClub"/>
+		<property name="Stacknumber" value="1"/> <!-- STK book -->
+		<property name="EconomicValue" value="0"/>
+		<property name="SellableToTrader" value="false"/>
+		<property class="Action0">
+			<property name="Class" value="Quest"/>
+			<property name="QuestGiven" value="quest_WeaponClub"/>
+			<property name="Delay" value="0.5"/>
+			<property name="UseAnimation" value="false"/>
+			<property name="Use_time" value="..."/>
+		</property>
+		<property name="FuelValue" value="0"/>
+		<property name="Weight" value="0"/>
+		<property name="Group" value="Special Items,Mods"/>
+	</item>
+
+	<item name="startermeleeWpnSledgeT0StoneSledgehammer">
+		<property name="CreativeMode" value="Dev"/>
+		<property name="ItemTypeIcon" value="book"/>
+		<property name="DescriptionKey" value="startermeleeWpnSledgeT0StoneSledgehammerDesc"/>
+		<property name="HoldType" value="21"/>
+		<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Mpaper"/>
+		<property name="CustomIcon" value="meleeWpnSledgeT0StoneSledgehammer"/>
+		<property name="Stacknumber" value="1"/> <!-- STK book -->
+		<property name="EconomicValue" value="0"/>
+		<property name="SellableToTrader" value="false"/>
+		<property class="Action0">
+			<property name="Class" value="Quest"/>
+			<property name="QuestGiven" value="quest_WeaponSledge"/>
+			<property name="Delay" value="0.5"/>
+			<property name="UseAnimation" value="false"/>
+			<property name="Use_time" value="..."/>
+		</property>
+		<property name="FuelValue" value="0"/>
+		<property name="Weight" value="0"/>
+		<property name="Group" value="Special Items,Mods"/>
+	</item>
+
+	<item name="startermeleeWpnKnucklesT0LeatherKnuckles">
+		<property name="CreativeMode" value="Dev"/>
+		<property name="ItemTypeIcon" value="book"/>
+		<property name="DescriptionKey" value="startermeleeWpnKnucklesT0LeatherKnucklesDesc"/>
+		<property name="HoldType" value="21"/>
+		<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Mpaper"/>
+		<property name="CustomIcon" value="meleeWpnKnucklesT0LeatherKnuckles"/>
+		<property name="Stacknumber" value="1"/> <!-- STK book -->
+		<property name="EconomicValue" value="0"/>
+		<property name="SellableToTrader" value="false"/>
+		<property class="Action0">
+			<property name="Class" value="Quest"/>
+			<property name="QuestGiven" value="quest_WeaponKnuckle"/>
+			<property name="Delay" value="0.5"/>
+			<property name="UseAnimation" value="false"/>
+			<property name="Use_time" value="..."/>
+		</property>
+		<property name="FuelValue" value="0"/>
+		<property name="Weight" value="0"/>
+		<property name="Group" value="Special Items,Mods"/>
+	</item>
+
+	<item name="startermeleeWpnBladeT0BoneKnife">
+		<property name="CreativeMode" value="Dev"/>
+		<property name="ItemTypeIcon" value="book"/>
+		<property name="DescriptionKey" value="startermeleeWpnBladeT0BoneKnifeDesc"/>
+		<property name="HoldType" value="21"/>
+		<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Mpaper"/>
+		<property name="CustomIcon" value="meleeWpnBladeT0BoneKnife"/>
+		<property name="Stacknumber" value="1"/> <!-- STK book -->
+		<property name="EconomicValue" value="0"/>
+		<property name="SellableToTrader" value="false"/>
+		<property class="Action0">
+			<property name="Class" value="Quest"/>
+			<property name="QuestGiven" value="quest_WeaponKnife"/>
+			<property name="Delay" value="0.5"/>
+			<property name="UseAnimation" value="false"/>
+			<property name="Use_time" value="..."/>
+		</property>
+		<property name="FuelValue" value="0"/>
+		<property name="Weight" value="0"/>
+		<property name="Group" value="Special Items,Mods"/>
+	</item>
+
+	<item name="startergunBowT0PrimitiveBow">
+		<property name="CreativeMode" value="Dev"/>
+		<property name="ItemTypeIcon" value="book"/>
+		<property name="DescriptionKey" value="startergunBowT0PrimitiveBowDesc"/>
+		<property name="HoldType" value="21"/>
+		<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Mpaper"/>
+		<property name="CustomIcon" value="gunBowT0PrimitiveBow"/>
+		<property name="Stacknumber" value="1"/> <!-- STK book -->
+		<property name="EconomicValue" value="0"/>
+		<property name="SellableToTrader" value="false"/>
+		<property class="Action0">
+			<property name="Class" value="Quest"/>
+			<property name="QuestGiven" value="quest_WeaponBow"/>
+			<property name="Delay" value="0.5"/>
+			<property name="UseAnimation" value="false"/>
+			<property name="Use_time" value="..."/>
+		</property>
+		<property name="FuelValue" value="0"/>
+		<property name="Weight" value="0"/>
+		<property name="Group" value="Special Items,Mods"/>
+	</item>
+
+	<item name="startermeleeWpnBatonT0PipeBaton">
+		<property name="CreativeMode" value="Dev"/>
+		<property name="ItemTypeIcon" value="book"/>
+		<property name="DescriptionKey" value="startermeleeWpnBatonT0PipeBatonDesc"/>
+		<property name="HoldType" value="21"/>
+		<property name="Meshfile" value="@:Other/Items/Misc/bookPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Mpaper"/>
+		<property name="CustomIcon" value="meleeWpnBatonT0PipeBaton"/>
+		<property name="Stacknumber" value="1"/> <!-- STK book -->
+		<property name="EconomicValue" value="0"/>
+		<property name="SellableToTrader" value="false"/>
+		<property class="Action0">
+			<property name="Class" value="Quest"/>
+			<property name="QuestGiven" value="quest_WeaponBaton"/>
+			<property name="Delay" value="0.5"/>
+			<property name="UseAnimation" value="false"/>
+			<property name="Use_time" value="..."/>
+		</property>
+		<property name="FuelValue" value="0"/>
+		<property name="Weight" value="0"/>
+		<property name="Group" value="Special Items,Mods"/>
+	</item>
+	</insertAfter>
+	
 	<append xpath="/items">	
 	<!-- *** starter backpack *** -->
 	<item name="Backpack">
 		<property name="CustomIcon" value="backpackMedium"/>
 		<property name="ItemTypeIcon" value="bundle"/>
 		<property name="HoldType" value="45"/>
-		<property name="Meshfile" value="@:Other/Items?Misc/sackPrefab.prefab"/>
-		<property name="DropMeshfile" value="@:Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 		<property name="Material" value="Mmetal"/>
 		<property name="Stacknumber" value="1"/> <!-- STK ammobundle high -->
 		<property name="EconomicValue" value="0"/>
@@ -17,8 +195,8 @@
 			<property name="Delay" value="0"/>
 			<property name="Use_time" value="0"/>
 			<property name="Sound_start" value="UseActions/open_backpack"/>
-			<property name="Create_item" value="drinkJarPureMineralWater,foodSteakAndPotato,medicalFirstAidBandage,meleeToolFlashlight02,noteDuke01,meleeWpnClubT0WoodenClub,meleeToolRepairT0StoneAxe,gunBowT0PrimitiveBow,ammoArrowStone,bedrollBlockVariantHelper"/>
-			<property name="Create_item_count" value="2,2,2,1,1,1,1,1,10,1"/>
+			<property name="Create_item" value="drinkJarPureMineralWater,foodSteakAndPotato,medicalFirstAidBandage,meleeToolFlashlight02,noteDuke01,meleeToolRepairT0StoneAxe,bedrollBlockVariantHelper"/>
+			<property name="Create_item_count" value="2,2,2,1,1,1,1"/>
 		</property>
 	</item>
 	
@@ -28,8 +206,8 @@
 		<property name="Tags" value="medical"/>
 		<property name="CustomIcon" value="drugSteroids"/> <property name="CustomIconTint" value="800080"/>
 		<property name="HoldType" value="16"/>
-		<property name="Meshfile" value="@:Other/Items?Health/painkillersPrefab.prefab"/>
-		<property name="DropMeshfile" value="@:Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Meshfile" value="@:Other/Items/Health/painkillersPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 		<property name="Material" value="Morganic"/>
 		<property name="EconomicValue" value="0"/>
 		<property name="Stacknumber" value="1"/> <!-- STK loot -->
@@ -171,9 +349,9 @@
 		<property name="StickyColliderUp" value="2"/>
 		<property name="StickyColliderRadius" value=".05"/>
 		<property name="StickyColliderLength" value="1"/>
-		<property name="Material" value="Mwood"/>
+		<property name="Material" value="MresourceWoodScraps"/>
 		<property name="Stacknumber" value="150"/> <!-- STK ammo low -->
-		<property name="Weight" value="0"/>
+		<property name="Weight" value="10"/>
 		<property name="EconomicValue" value="1"/>
 		<property name="TraderStageTemplate" value="arrowsTier0"/>
 		<property name="EconomicBundleSize" value="5"/>
@@ -205,14 +383,14 @@
 		<property name="HoldType" value="45"/>
 		<property name="HandMeshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-		<property name="Material" value="Mwood"/>
+		<property name="Material" value="MresourceWoodScraps"/>
 		<property name="IsSticky" value="false"/>
 		<property name="StickyOffset" value=".12"/>
 		<property name="StickyColliderUp" value="2"/>
 		<property name="StickyColliderRadius" value=".05"/>
 		<property name="StickyColliderLength" value=".75"/>
 		<property name="Stacknumber" value="150"/> <!-- STK ammo low -->
-		<property name="Weight" value="0"/>
+		<property name="Weight" value="10"/>
 		<property name="EconomicValue" value="1"/>
 		<property name="TraderStageTemplate" value="arrowsTier0"/>
 		<property name="EconomicBundleSize" value="5"/>
@@ -272,8 +450,13 @@
 	<set xpath="//item/property[@name='Weight'][@value='90']/@value">45</set>
 	<set xpath="//item/property[@name='Weight'][@value='120']/@value">60</set>
 	<set xpath="//item/property[@name='Weight'][@value='160']/@value">80</set>
-	<set xpath="//item/property[@name='Weight'][@value='200']/@value">100</set>
-	<set xpath="//item/property[@name='Weight'][@value='250']/@value">125</set>	
+	<set xpath="//item[starts-with(@name,'smallEngine')]/property[@name='Weight'][@value='200']/@value">50</set>
+	<set xpath="//item[not(contains(@name,'smallEngine'))]/property[@name='Weight'][@value='200']/@value">100</set>
+	<set xpath="//item[starts-with(@name,'apparel')]/property[@name='Weight'][@value='250']/@value">50</set>
+	<set xpath="//item[not(contains(@name,'apparel'))]/property[@name='Weight'][@value='250']/@value">125</set>	
+	<insertafter xpath="//item[@name='armorClothMaster']//property[@name='Material']">
+	<property name="Weight" value="50"/>
+	</insertafter>
 	
 	<!-- *** wrench can be used as a tool in workbench *** -->
 	<append xpath="//item[@name='meleeToolSalvageT1Wrench']">
@@ -872,8 +1055,8 @@
 			<property name="DescriptionKey" value="resourceWaterFilterDesc"/>
 			<property name="HoldType" value="45"/>
 			<property name="Tags" value="junk"/>
-			<property name="Meshfile" value="@:Other/Items?Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="@:Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Weight" value="160"/>
@@ -1163,7 +1346,7 @@
 		<property name="HoldType" value="31"/>
 		<property name="DisplayType" value="foodRaw"/>
 		<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
-		<property name="DropMeshfile" value="@:Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 		<property name="Material" value="Mmetal"/>
 		<property name="Weight" value="0"/>
 		<property name="EconomicValue" value="60"/>
@@ -1333,8 +1516,8 @@
 		<property name="CustomIcon" value="foodChickenStew"/>
 		<property name="HoldType" value="31"/>
 		<property name="DisplayType" value="foodWater"/>
-		<property name="Meshfile" value="@:Other/Items?Misc/parcelPrefab.prefab"/>
-		<property name="DropMeshfile" value="@:Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 		<property name="Material" value="Morganic"/>
 		<property name="Stacknumber" value="10"/> <!-- STK food -->
 		<property name="EconomicValue" value="140"/>
@@ -1362,8 +1545,8 @@
 		<property name="CustomIcon" value="foodChickenMiso"/>
 		<property name="HoldType" value="31"/>
 		<property name="DisplayType" value="foodWater"/>
-		<property name="Meshfile" value="@:Other/Items?Misc/parcelPrefab.prefab"/>
-		<property name="DropMeshfile" value="@:Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 		<property name="Material" value="Morganic"/>
 		<property name="Stacknumber" value="10"/> <!-- STK food -->
 		<property name="EconomicValue" value="140"/>

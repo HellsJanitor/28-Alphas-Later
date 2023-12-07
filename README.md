@@ -6,6 +6,8 @@ The idea behind this mod is to slow progression, make traders less powerful, and
 
 "Starter" items are now in a backpack, found in slot 2 of your toolbelt. Open it with your primary action (LMB by default on PC)
 
+When you open the backpack, read the note from The Duke to obtain your starter weapon of choice.
+
 The starter quest is now just "place bedroll", which you'll receive on opening the starter backpack.
 
 Player is permanently infected, and the infection persists through death. There is a cure, but you’ll need to read a lot of medical magazines to learn how to make it.

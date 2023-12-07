@@ -333,6 +333,20 @@ SteelToolRepairKit,Steel Tool Repair Kit
 SteelToolRepairKitDesc,"This Repair Kit is used to repair steel axes, picks, and shovels."
 StunBatonRepairKit,Stun Baton Repair Kit
 StunBatonRepairKitDesc,This Repair Kit is used to repair stun batons.
+startermeleeWpnSpearT0StoneSpear,Stone spear
+startermeleeWpnSpearT0StoneSpearDesc,Read this to receive a Q1 stone spear.
+startermeleeWpnClubT0WoodenClub,Wooden club
+startermeleeWpnClubT0WoodenClubDesc,Read this to receive a Q1 wooden club.
+startermeleeWpnSledgeT0StoneSledgehammer,Stone sledgehammer
+startermeleeWpnSledgeT0StoneSledgehammerDesc,Read this to receive a Q1 stone sledgehammer.
+startermeleeWpnKnucklesT0LeatherKnuckles,Knuckle wraps
+startermeleeWpnKnucklesT0LeatherKnucklesDesc,Read this to receive Q1 knuckle wraps.
+startermeleeWpnBladeT0BoneKnife,Bone knife
+startermeleeWpnBladeT0BoneKnifeDesc,Read this to receive a Q1 bone knife.
+startergunBowT0PrimitiveBow,Primitive bow
+startergunBowT0PrimitiveBowDesc,Read this to receive a Q1 primitive bow\nand 10 stone arrows.
+startermeleeWpnBatonT0PipeBaton,Pipe baton
+startermeleeWpnBatonT0PipeBatonDesc,Read this to receive a Q1 pipe baton.
 tableSawDesc,"A workstation for turning logs into wood planks more quickly and effeciently."
 tablesawTip,"The Tablesaw unlocks the ability to turn wood logs into wood more quickly & effeciently. Inside your land claim area all workstations can be picked up by holding ''E'' and selecting ''TAKE'' from the radial menu."
 tablesawTip_title,Tablesaw

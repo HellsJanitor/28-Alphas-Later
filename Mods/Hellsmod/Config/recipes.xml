@@ -495,6 +495,29 @@
 		<ingredient name="ammoCrossbowBoltWood" count="2"/>
 	</recipe>
 	
+	<!-- *** starter weapons *** -->
+	<recipe name="startermeleeWpnSpearT0StoneSpear" count="1" tags="perkJavelinMaster,craftingSpears">
+		<ingredient name="noteDuke01" count="1"/>
+	</recipe>
+	<recipe name="startermeleeWpnSledgeT0StoneSledgehammer" count="1" tags="perkSkullCrusher">
+		<ingredient name="noteDuke01" count="1"/>
+	</recipe>
+	<recipe name="startermeleeWpnClubT0WoodenClub" count="1" tags="perkPummelPete">
+		<ingredient name="noteDuke01" count="1"/>
+	</recipe>
+	<recipe name="startermeleeWpnKnucklesT0LeatherKnuckles" count="1" tags="perkBrawler">
+		<ingredient name="noteDuke01" count="1"/>
+	</recipe>
+	<recipe name="startermeleeWpnBladeT0BoneKnife" count="1" tags="perkDeepCuts,craftingBlades">
+		<ingredient name="noteDuke01" count="1"/>
+	</recipe>
+	<recipe name="startergunBowT0PrimitiveBow" count="1" tags="perkArchery">
+		<ingredient name="noteDuke01" count="1"/>
+	</recipe>
+	<recipe name="startermeleeWpnBatonT0PipeBaton" count="1" tags="perkElectrocutioner">
+		<ingredient name="noteDuke01" count="1"/>
+	</recipe>
+	
 	<!-- *** storage chest *** -->
 	<recipe name="cntHardenedChestSecure" count="1" craft_area="workbench" tags="workbenchCrafting">
 		<ingredient name="resourceForgedSteel" count="40"/>
