@@ -11,11 +11,10 @@
 		none, 80
 	</entitygroup>	
 	<entitygroup name="EnemyAnimalsForest">
-		animalSnake, 20
-		animalDireWolf, 3
+		animalSnake, 20		
 		animalWolf, 5
 		animalBear, 2
-		none, 70
+		none, 73
 	</entitygroup>
 	</insertafter>		
 	

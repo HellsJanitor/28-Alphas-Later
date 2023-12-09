@@ -23,4 +23,9 @@
 		<window name="windowNonPagingHeader" />		
 	</window_group>	
 	</insertafter>
+	
+	<!-- *** HUD *** -->
+	<insertAfter xpath="//window_group/window[@name='HUDLeftStatBars']">
+		<window name="HUDCenterStatBars" anchor="CenterBottom"/>
+	</insertAfter>
 </configs>

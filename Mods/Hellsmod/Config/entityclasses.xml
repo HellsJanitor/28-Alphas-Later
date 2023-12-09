@@ -5,15 +5,15 @@
 	<!-- *** zombies health increase with difficulty *** -->
 	<set xpath="/entity_classes/entity_class//passive_effect[@name='HealthMax'][@operation='perc_add']/@value">0</set>
 	<insertafter xpath="/entity_classes/entity_class//passive_effect[@name='HealthMax'][@operation='perc_add']">	
-			<passive_effect name="HealthMax" operation="perc_add" value=".1">
-				<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="1"/></passive_effect>
 			<passive_effect name="HealthMax" operation="perc_add" value=".2">
-				<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="2"/></passive_effect>
-			<passive_effect name="HealthMax" operation="perc_add" value=".3">
-				<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="3"/></passive_effect>
+				<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="1"/></passive_effect>
 			<passive_effect name="HealthMax" operation="perc_add" value=".4">
+				<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="2"/></passive_effect>
+			<passive_effect name="HealthMax" operation="perc_add" value=".6">
+				<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="3"/></passive_effect>
+			<passive_effect name="HealthMax" operation="perc_add" value=".8">
 				<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="4"/></passive_effect>
-			<passive_effect name="HealthMax" operation="perc_add" value=".5">
+			<passive_effect name="HealthMax" operation="perc_add" value="1">
 				<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="5"/></passive_effect>
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffEntitySpawnHeal"/>
 	</insertafter>
@@ -125,8 +125,18 @@
 	<effect_group>
 		<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffMeleeRadiation"/>			
 		<requirement name="NotHasBuff" target="other" buff="buffRadSuit"/>
+		<requirement name="NotHasBuff" target="other" buff="buffBurningElement"/>
 	</effect_group>
-	</insertafter>	
+	</insertafter>
+
+	<!-- *** burnt zombies set player on fire *** -->
+	<insertafter xpath="//entity_class[contains(@name,'Burnt') and not (contains(@name,'Radiated'))]/effect_group[@name='Base Effects']">
+	<effect_group>
+		<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffBurningElement"/>			
+		<requirement name="NotHasBuff" target="other" buff="buffRadSuit"/>
+		<requirement name="NotHasBuff" target="other" buff="buffMeleeRadiation"/>
+	</effect_group>
+	</insertafter>
 	
 	<!-- *** new zombies *** -->
 	<!-- *** rotten *** -->	

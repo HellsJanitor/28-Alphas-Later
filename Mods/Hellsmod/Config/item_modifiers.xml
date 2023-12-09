@@ -1,10 +1,6 @@
 <configs>
-	<!-- search find all *** for changes -->
+	<!-- search find all *** for changes -->	
 	
-	<!-- *** adds flat value for all mods *** -->
-	<append xpath="//item_modifier[@name='modGeneralMaster']">
-	<property name="EconomicValue" value="400"/>
-	</append>
 	<!-- *** adds Blessed Metal back to the game *** -->
 	<append xpath="/item_modifiers">
 	<item_modifier name="modGunMeleeBlessedMetal" installable_tags="weapon,tool,bow,turretMelee,turretRanged" modifier_tags="blessedmetal" blocked_tags="noMods" type="attachment">
@@ -195,50 +191,34 @@
 	</append>	
 	
 	<!-- *** bicycle stamina saver *** -->
-	<insertafter xpath="//item_modifier[@name='modVehicleMega']">
-	<item_modifier name="modBicycleStaminaSaver" installable_tags="vehicle" modifier_tags="misc" blocked_tags="noMods,vengine" type="attachment">
+	<insertafter xpath="//item_modifier[@name='modVehicleMega']">	
+	<item_modifier name="modBicycleStaminaSaver" installable_tags="legs" modifier_tags="misc" blocked_tags="noMods" type="attachment">
 		<property name="Extends" value="modGeneralMaster"/>
 		<property name="UnlockedBy" value="modBicycleStaminaSaverSchematic"/>
 		<property name="TraderStageTemplate" value="modsTier2"/>
-		<property name="CustomIcon" value="modBicycleStaminaSaver"/>
+		<property name="CustomIcon" value="modCyclingShorts"/>
 		<property name="DescriptionKey" value="modBicycleStaminaSaverDesc"/>
 		<effect_group tiered="false">
-		<requirement name="EntityTagCompare" tags="vehicle"/>
-			<passive_effect name="VehiclePlayerStaminaDrainRate" operation="base_set" value=".5"/>
-			<display_value name="dStaminaChangeOT" value=".5"/>				
+		<requirement name="IsAttachedToEntity"/>			
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value=".25"/>
+			<display_value name="dStaminaChangeOT" value=".25"/>				
 		</effect_group>
 	</item_modifier>
 	</insertafter>
+	
 	<!-- *** serrated blade can be added to spears and knuckles ONLY, 100% bleed proc *** -->
 	<set xpath="//item_modifier[@name='modMeleeSerratedBlade']/@installable_tags">perkBrawler,perkJavelinMaster</set>
-	<set xpath="/item_modifiers/item_modifier[@name='modMeleeSerratedBlade']/effect_group[1]//requirement[1]/@value">100</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modMeleeSerratedBlade']/effect_group[1]//requirement[1]/@value">100</set>	
+	
+	
+	<!-- *** adds flat sell/scrap value for all mods *** -->
+	<append xpath="//item_modifier[@name='modGeneralMaster']">
+	<property name="EconomicValue" value="400"/>
+	<property name="Weight" value="15"/>
+	</append>
 	
 	<!-- *** makes all dye sellable *** -->
-	<insertAfter xpath="//item_modifier[@name='modDyeWhite']//property[5]">
+	<insertAfter xpath="//item_modifier[contains(@name,'modDye')]//property[@name='Material']">
 	<property name="EconomicValue" value="500"/>
-	</insertAfter>
-	<insertAfter xpath="//item_modifier[@name='modDyeRed']//property[5]">
-	<property name="EconomicValue" value="500"/>
-	</insertAfter>
-	<insertAfter xpath="//item_modifier[@name='modDyeGreen']//property[5]">
-	<property name="EconomicValue" value="500"/>
-	</insertAfter>
-	<insertAfter xpath="//item_modifier[@name='modDyeBlack']//property[5]">
-	<property name="EconomicValue" value="500"/>
-	</insertAfter>
-	<insertAfter xpath="//item_modifier[@name='modDyeBlue']//property[5]">
-	<property name="EconomicValue" value="500"/>
-	</insertAfter>
-	<insertAfter xpath="//item_modifier[@name='modDyeBrown']//property[5]">
-	<property name="EconomicValue" value="500"/>
-	</insertAfter>
-	<insertAfter xpath="//item_modifier[@name='modDyePink']//property[5]">
-	<property name="EconomicValue" value="500"/>
-	</insertAfter>
-	<insertAfter xpath="//item_modifier[@name='modDyePurple']//property[5]">
-	<property name="EconomicValue" value="500"/>
-	</insertAfter>
-	<insertAfter xpath="//item_modifier[@name='modDyeYellow']//property[5]">
-	<property name="EconomicValue" value="500"/>
-	</insertAfter>
+	</insertAfter>	
 </configs>

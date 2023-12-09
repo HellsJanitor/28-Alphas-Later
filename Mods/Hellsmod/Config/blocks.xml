@@ -104,6 +104,18 @@
 	<insertafter xpath="//block[@name='frameShapes']//property[@name='Shape']">
 	<property name="Weight" value="100"/>
 	</insertafter>
+	<insertafter xpath="//block[@name='woodShapes']//property[@name='Shape']">
+	<property name="Weight" value="100"/>
+	</insertafter>
+	<insertafter xpath="//block[@name='cobblestoneShapes']//property[@name='Shape']">
+	<property name="Weight" value="100"/>
+	</insertafter>
+	<insertafter xpath="//block[@name='concreteShapes']//property[@name='Shape']">
+	<property name="Weight" value="100"/>
+	</insertafter>
+	<insertafter xpath="//block[@name='steelShapes']//property[@name='Shape']">
+	<property name="Weight" value="100"/>
+	</insertafter>
 	<set xpath="//block[@name='frameShapes']//property[@name='Material']/@value">MresourceWoodScraps</set>
 	<set xpath="//block[@name='frameShapes']//property[@name='FuelValue']/@value">20</set>
 	<set xpath="//block[@name='frameShapes']/property[@class='RepairItems']/property[@name='resourceWood']/@value">10</set>
@@ -140,6 +152,30 @@
 	<set xpath="//block/property[@name='Weight'][@value='90']/@value">45</set>
 	<set xpath="//block/property[@name='Weight'][@value='100']/@value">50</set>
 	<set xpath="//block/property[@name='Weight'][@value='125']/@value">60</set>
+	
+	<!-- *** battery bank/generator *** -->
+	<insertafter xpath="//block[contains(@name,'bank')]/property[@name='Material']">
+	<property name="Weight" value="50"/>
+	</insertafter>
+	<!-- *** traps/triggers *** -->
+	<insertafter xpath="//block[contains(@name,'Trap')]/property[@name='Material']">
+	<property name="Weight" value="50"/>
+	</insertafter>
+	<insertafter xpath="//block[contains(@name,'pressureplate')]/property[@name='Material']">
+	<property name="Weight" value="50"/>
+	</insertafter>
+	<!-- *** turrets *** -->
+	<insertafter xpath="//block[contains(@name,'autoTurret')]/property[@name='Material']">
+	<property name="Weight" value="50"/>
+	</insertafter>
+	<!-- *** steel hatches/doors *** -->
+	<insertafter xpath="//block[contains(@name,'vaultDoor')]/property[@name='Material']">
+	<property name="Weight" value="50"/>
+	</insertafter>
+	<!-- *** player crafted/picked up blocks can't be scrapped *** -->
+	<insertafter xpath="//block[contains(@name,'VariantHelper')]/property[1]">
+	<property name="Weight" value="0"/>
+	</insertafter>
 	
 	<!-- *** wood replaced by wood scraps when harvesting blocks *** -->	
 	<set xpath="//block[not (contains(@name,'woodPlanksStack'))]//drop[@event='Harvest' and @name='resourceWood']/@name">resourceWoodScraps</set>

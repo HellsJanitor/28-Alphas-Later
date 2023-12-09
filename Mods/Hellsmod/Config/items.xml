@@ -296,7 +296,7 @@
 	<item name="modBicycleStaminaSaverSchematic">
 		<property name="Extends" value="schematicNoQualityMaster"/>
 		<property name="CreativeMode" value="Player"/>
-		<property name="CustomIcon" value="modBicycleStaminaSaver"/>
+		<property name="CustomIcon" value="modCyclingShorts"/>
 		<property name="Unlocks" value="modBicycleStaminaSaver"/>
 		<effect_group tiered="false">
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modBicycleStaminaSaver" operation="set" value="1"/>
@@ -436,26 +436,97 @@
 	<set xpath="//item[@name='gunBowT1IronCrossbow']/property[@class='Action0']//property[@name='Magazine_items']/@value">ammoCrossbowBoltWood,ammoCrossbowBoltStone,ammoCrossbowBoltIron,ammoCrossbowBoltSteelAP,ammoCrossbowBoltFlaming,ammoCrossbowBoltExploding</set>
 	<set xpath="//item[@name='gunBowT3CompoundCrossbow']/property[@class='Action0']//property[@name='Magazine_items']/@value">ammoCrossbowBoltWood,ammoCrossbowBoltStone,ammoCrossbowBoltIron,ammoCrossbowBoltSteelAP,ammoCrossbowBoltFlaming,ammoCrossbowBoltExploding</set>
 		
-	<!-- *** scrapping values 50% lower *** -->
-	<set xpath="//item/property[@name='Weight'][@value='2']/@value">1</set>
+	<!-- *** scrapping values 50% lower *** -->	
+	<set xpath="//item[not(contains(@name,'resource'))]/property[@name='Weight'][@value='2']/@value">1</set>
 	<set xpath="//item/property[@name='Weight'][@value='4']/@value">2</set>
-	<set xpath="//item/property[@name='Weight'][@value='5']/@value">2</set>
-	<set xpath="//item/property[@name='Weight'][@value='8']/@value">4</set>
-	<set xpath="//item/property[@name='Weight'][@value='10']/@value">5</set>
-	<set xpath="//item/property[@name='Weight'][@value='15']/@value">7</set>
-	<set xpath="//item/property[@name='Weight'][@value='20']/@value">10</set>
-	<set xpath="//item/property[@name='Weight'][@value='25']/@value">12</set>
-	<set xpath="//item/property[@name='Weight'][@value='50']/@value">25</set>
-	<set xpath="//item/property[@name='Weight'][@value='60']/@value">30</set>
-	<set xpath="//item/property[@name='Weight'][@value='90']/@value">45</set>
-	<set xpath="//item/property[@name='Weight'][@value='120']/@value">60</set>
-	<set xpath="//item/property[@name='Weight'][@value='160']/@value">80</set>
-	<set xpath="//item[starts-with(@name,'smallEngine')]/property[@name='Weight'][@value='200']/@value">50</set>
-	<set xpath="//item[not(contains(@name,'smallEngine'))]/property[@name='Weight'][@value='200']/@value">100</set>
-	<set xpath="//item[starts-with(@name,'apparel')]/property[@name='Weight'][@value='250']/@value">50</set>
+	<set xpath="//item[not(contains(@name,'resource'))]/property[@name='Weight'][@value='5']/@value">2</set>
+	<set xpath="//item[not(contains(@name,'resource'))]/property[@name='Weight'][@value='8']/@value">4</set>
+	<set xpath="//item[not(contains(@name,'resource'))]/property[@name='Weight'][@value='10']/@value">5</set>
+	<set xpath="//item[not(contains(@name,'resource'))]/property[@name='Weight'][@value='15']/@value">7</set>
+	<set xpath="//item[not(contains(@name,'resource'))]/property[@name='Weight'][@value='20']/@value">10</set>
+	<set xpath="//item[not(contains(@name,'resource'))]/property[@name='Weight'][@value='25']/@value">12</set>
+	<set xpath="//item[not(contains(@name,'resource'))]/property[@name='Weight'][@value='50']/@value">25</set>
+	<set xpath="//item[not(contains(@name,'resource'))]/property[@name='Weight'][@value='60']/@value">30</set>
+	<set xpath="//item[not(contains(@name,'resource'))]/property[@name='Weight'][@value='90']/@value">45</set>
+	<set xpath="//item[not(contains(@name,'resource'))]/property[@name='Weight'][@value='120']/@value">60</set>
+	<set xpath="//item[not(contains(@name,'resource'))]/property[@name='Weight'][@value='160']/@value">80</set>
+	<set xpath="//item[starts-with(@name,'smallEngine')]/property[@name='Weight'][@value='200']/@value">100</set>
+	<!-- <set xpath="//item[not(contains(@name,'smallEngine'))]/property[@name='Weight'][@value='200']/@value">100</set> -->
+	<!-- *** bandages and first aid kit *** -->
+	<set xpath="//item[@name='medicalBandage']//property[@name='Weight']/@value">40</set>
+	<!-- *** clothing *** -->
+	<set xpath="//item[starts-with(@name,'apparel')]/property[@name='Weight'][@value='250']/@value">200</set>
 	<set xpath="//item[not(contains(@name,'apparel'))]/property[@name='Weight'][@value='250']/@value">125</set>	
+	<!-- *** padded armour *** -->
 	<insertafter xpath="//item[@name='armorClothMaster']//property[@name='Material']">
+	<property name="Weight" value="200"/>
+	</insertafter>
+	<!-- *** iron armour *** -->
+	<insertafter xpath="//item[@name='armorIronMaster']//property[@name='Material']">
+	<property name="Weight" value="200"/>
+	</insertafter>
+	<!-- *** pipe weapons *** -->
+	<insertafter xpath="//item[contains(@name,'T0Pipe')]/property[@name='Material']">
 	<property name="Weight" value="50"/>
+	</insertafter>
+	<!-- *** iron weapons/tools *** -->
+	<insertafter xpath="//item[contains(@name,'T1') and not (contains(@name,'Parts'))]/property[@name='Material']">
+	<property name="Weight" value="250"/>
+	</insertafter>
+	<!-- *** wire tool *** -->
+	<insertafter xpath="//item[@name='meleeToolWireTool']/property[@name='Material']">
+	<property name="Weight" value="15"/>
+	</insertafter>
+	<!-- *** torch *** -->
+	<insertafter xpath="//item[@name='meleeToolTorch']/property[@name='Material']">
+	<property name="Weight" value="15"/>
+	</insertafter>
+	<!-- *** brass ammo *** -->
+	<insertafter xpath="//item[contains(@name,'ammo') and (contains(@name,'Bullet'))]/property[@name='Material']">
+	<property name="Weight" value="5"/>
+	</insertafter>
+	<!-- *** shotgun ammo *** -->
+	<insertafter xpath="//item[contains(@name,'ammo') and (contains(@name,'Shotgun'))]/property[@name='Material']">
+	<property name="Weight" value="5"/>
+	</insertafter>
+	<!-- *** arrows *** -->
+	<insertafter xpath="//item[contains(@name,'ammo') and (contains(@name,'Arrow'))]/property[@name='Material']">
+	<property name="Weight" value="3"/>
+	</insertafter>
+	<!-- *** rocket ammo *** -->
+	<insertafter xpath="//item[contains(@name,'ammo') and (contains(@name,'Rocket'))]/property[@name='Material']">
+	<property name="Weight" value="15"/>
+	</insertafter>
+	<!-- *** forged iron/steel *** -->
+	<insertafter xpath="//item[contains(@name,'resourceForgedIron')]/property[@name='Material']">
+	<property name="Weight" value="15"/>
+	</insertafter>
+	<insertafter xpath="//item[contains(@name,'resourceForgedSteel')]/property[@name='Material']">
+	<property name="Weight" value="30"/>
+	</insertafter>
+	<!-- *** short iron pipe *** -->
+	<insertafter xpath="//item[contains(@name,'resourceMetalPipe')]/property[@name='Material']">
+	<property name="Weight" value="15"/>
+	</insertafter>
+	<!-- *** bullet tips/casings *** -->
+	<insertafter xpath="//item[starts-with(@name,'resourceBullet')]/property[@name='Material']">
+	<property name="Weight" value="1"/>
+	</insertafter>
+	<!-- *** arrow heads *** -->
+	<insertafter xpath="//item[contains(@name,'ArrowHead')]/property[@name='Material']">
+	<property name="Weight" value="5"/>
+	</insertafter>
+	<!-- *** buckshot *** -->
+	<insertafter xpath="//item[contains(@name,'Buckshot')]/property[@name='Material']">
+	<property name="Weight" value="1"/>
+	</insertafter>
+	<!-- *** rocket tips/casings *** -->
+	<insertafter xpath="//item[contains(@name,'resourceRocket')]/property[@name='Material']">
+	<property name="Weight" value="75"/>
+	</insertafter>
+	<!-- *** nails *** -->
+	<insertafter xpath="//item[contains(@name,'resourceNail')]/property[@name='Material']">
+	<property name="Weight" value="1"/>
 	</insertafter>
 	
 	<!-- *** wrench can be used as a tool in workbench *** -->
@@ -524,7 +595,7 @@
 		<property name="CreativeMode" value="None"/>
 		<property name="Degradation" value="99999" param1="true"/>
 		<property class="Action0">
-			<property name="Range" value="1.75"/>
+			<property name="Range" value="1"/>
 			<property name="DamageEntity" value="10"/>
 			<property name="DamageBlock" value="8"/>
 		</property>
@@ -567,7 +638,7 @@
 		<property name="CreativeMode" value="None"/>
 		<property name="Degradation" value="99999" param1="true"/>
 		<property class="Action0">
-			<property name="Range" value="1.75"/>
+			<property name="Range" value="1"/>
 			<property name="DamageEntity" value="20"/>
 			<property name="DamageBlock" value="24"/>
 		</property>
@@ -610,7 +681,7 @@
 		<property name="CreativeMode" value="None"/>
 		<property name="Degradation" value="99999" param1="true"/>
 		<property class="Action0">
-			<property name="Range" value="1.75"/>
+			<property name="Range" value="1"/>
 			<property name="DamageEntity" value="20"/>
 			<property name="DamageBlock" value="100"/>
 		</property>
@@ -794,7 +865,7 @@
 		<property name="HoldType" value="55"/>
 		<property class="Action0">
 			<property name="Delay" value="2.5"/>
-			<property name="Range" value="1.2"/>
+			<property name="Range" value="1.1"/>
 			<property name="DamageEntity" value="15"/>
 			<property name="DamageBlock" value="2"/>
 		</property>
@@ -848,6 +919,9 @@
 		</effect_group>
 	</item>	
 	</append>
+	
+	<!-- *** reduced zombie melee range *** -->
+	<set xpath="//item[starts-with(@name,'meleeHandZombie') and not (contains(@name,'Animal'))]//property[@name='Range']/@value">1.1</set>
 	
 	<!-- *** hazmat removes radiation *** -->
 	<append xpath="/items/item[@name='apparelHazmatMask']/effect_group">

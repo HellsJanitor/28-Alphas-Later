@@ -8,6 +8,10 @@
 	<!-- *** equalize molotov damage for all difficulties *** -->
 	<set xpath="//buff[@name='buffBurningMolotov']//effect_group//passive_effect[@name='HealthChangeOT']/@value">25,25,25,25</set>
 	
+	<!-- *** stage 2 infection starts at 30%, stage 3 at 60% *** -->
+	<set xpath="//buff[@name='buffInfectionMain']//effect_group//triggered_effect[@value='14']/@value">30</set>
+	<set xpath="//buff[@name='buffInfectionMain']//effect_group//triggered_effect[@value='57']/@value">60</set>
+	
 	<!-- *** hazmat zombies immune to fire damage *** -->
 	<append xpath="//buff[@name='buffBurningMolotov']">
 		<!-- if entity is hazmat, no burning -->
@@ -230,7 +234,7 @@
 	</insertafter>
 	
 	<!-- *** lowers stamina regen pause on power attack *** -->	
-	<set xpath="//buff[@name='buffPowerAttackStaminaStunt']/duration/@value">1</set>
+	<set xpath="//buff[@name='buffPowerAttackStaminaStunt']/duration/@value">.75</set>
 	<!-- <set xpath="//buff[@name='buffStatusCheck01']/effect_group//triggered_effect[2]/@value">28800</set>
 	<set xpath="//buff[@name='buffInfectionMain']/duration/@value">28800</set> -->
 	
@@ -251,9 +255,9 @@
 			<requirement name="HasBuff" buff="buffRadSuitLegs"/>
 			<requirement name="HasBuff" buff="buffRadSuitBoots"/>
 		</triggered_effect>
-
 	</append>
-		<append xpath="/buffs">
+	
+	<append xpath="/buffs">
 		<buff name="buffRadiation01" name_key="buffRadiation01Name" description_key="buffRadiation01Desc" tooltip_key="buffRadiation01Tooltip" icon="ui_game_symbol_radiation" icon_color="255,69,0" icon_blink="true">
 			<damage_type value="radiation"/>
 			<stack_type value="ignore"/>
@@ -480,51 +484,7 @@
 			<requirement name="!EntityTagCompare" tags="zombie" target="other"/>
 			<passive_effect name="HeadShotOnly" operation="base_set" value="0"/>
 		</effect_group>
-	</buff>
-	<!-- *** 25% lower harvest amount *** -->
-	<!-- <buff name="buffBadHarvester" hidden="true" remove_on_death="false">
-		<stack_type value="replace"/>
-		<duration value="0"/>
-		
-		<effect_group>
-			
-			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="twitch_buffBadHarvester"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="twitch_buffBadHarvester"/>
-		</effect_group>
-
-		<effect_group>
-			<passive_effect name="HarvestCount" operation="perc_add" value="-0.25" />
-		</effect_group>
-	</buff> -->
-	<!-- *** 25% less loot *** -->
-	<!-- <buff name="buffBadLooter" hidden="true" remove_on_death="false">
-		<stack_type value="replace"/>
-		<duration value="0"/>
-		
-		<effect_group>
-			
-			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="twitch_buffBadHarvester"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="twitch_buffBadHarvester"/>
-		</effect_group>
-
-		<effect_group>
-			<passive_effect name="LootQuantity" operation="perc_add" value="-0.25" />
-		</effect_group>
-	</buff> -->
-	<!-- *** 25% more expensive crafting *** -->
-	<!-- <buff name="buffBadCrafter" hidden="true" remove_on_death="false">
-		<stack_type value="replace"/>
-		<duration value="0"/>
-		
-		<effect_group>			
-			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="twitch_buffBadHarvester"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="twitch_buffBadHarvester"/>
-		</effect_group>
-
-		<effect_group>
-			<passive_effect name="CraftingIngredientCount" operation="perc_add" value="0.25" />
-		</effect_group>
-	</buff> -->
+	</buff>	
 	</append>	
 	
 	<!-- *** zombies have increased damage resistance *** -->
@@ -592,6 +552,15 @@
 			</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="SurvivalInstinctLevel" operation="GTE" value="4"/>
+				<passive_effect name="HealthMax" operation="base_add" value="5"/>
+				<passive_effect name="StaminaMax" operation="base_add" value="5"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".05"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value=".1" tags="melee"/>
+				<passive_effect name="CarryCapacity" operation="base_add" value="1"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value=".03"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="SurvivalInstinctLevel" operation="GTE" value="5"/>
 				<passive_effect name="HealthMax" operation="base_add" value="5"/>
 				<passive_effect name="StaminaMax" operation="base_add" value="5"/>
 				<passive_effect name="EntityDamage" operation="perc_add" value=".05"/>

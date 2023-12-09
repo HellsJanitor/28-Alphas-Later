@@ -242,10 +242,10 @@ MilitaryArmourRepairKit,Military Armour Repair Kit
 MilitaryArmourRepairKitDesc,This Repair Kit is used to repair military armour.
 MinibikeBundle,Minibike
 MinibikeBundleDesc,Take this bundle to where you want to place your minibike [FFC800]BEFORE[-] you open it!
-modBicycleStaminaSaverSchematic,Electric Motor Bicycle Mod
-modBicycleStaminaSaverSchematicDesc,Electric Motor\n\nUnlocks the electric motor bicycle mod.
-modBicycleStaminaSaver,Electric Bicycle motor
-modBicycleStaminaSaverDesc,Install this in your bicycle and save 50% on stamina usage.
+modBicycleStaminaSaverSchematic,Cycling shorts Mod
+modBicycleStaminaSaverSchematicDesc,Cycling shorts\n\nUnlocks the cycling shorts mod.
+modBicycleStaminaSaver,Cycling shorts
+modBicycleStaminaSaverDesc,Install these shorts to reduce drag on your legs and save 25% on stamina usage when cycling.
 modGunMeleeBlessedMetal,"Blessed Metal mod"
 modGunMeleeBlessedMetalDesc,"Increase damage to all entities by 20%\n\nWill disable the regeneration ability of radiated & mutated zombies for 90 seconds."
 modHazmatBootsDesc,Slot this hazmat mod into your boots armour.\n\nAll [FFC800]five[-] seperate pieces are needed for full radiation protection.
@@ -291,7 +291,10 @@ perkSurvivalInstinctRank2LongDesc,"Your survival instinct increases. Gain anothe
 perkSurvivalInstinctRank3Desc,Iron Skin
 perkSurvivalInstinctRank3LongDesc,"Your survival instinct increases even further! Gain another 5 health and stamina, block damage increase of 10%, entity damage of 5%, and you gain another 3% extra XP. You gain another carry capacity."
 perkSurvivalInstinctRank4Desc,Quick Learner
-perkSurvivalInstinctRank4LongDesc,"Your survival instinct is second to none!! Gain another 5 health and stamina, block damage increase of 10%, entity damage of 5%, and you gain another 3% extra XP. You gain another carry capacity."
+perkSurvivalInstinctRank4LongDesc,"Your survival instinct is incredible!! Gain another 5 health and stamina, block damage increase of 10%, entity damage of 5%, and you gain another 3% extra XP. You gain another carry capacity."
+perkSurvivalInstinctRank5Desc,Survival Master
+perkSurvivalInstinctRank5LongDesc,"Your survival instinct is second to none!! Gain another 5 health and stamina, block damage increase of 10%, entity damage of 5%, and you gain another 3% extra XP. You gain another carry capacity."
+
 perkWellInsulatedRank3LongDesc,You can now handle severe weather and typically couldn't care less what the weather conditions are. You will never have the more severe stages of temperature status effects.\n\n[FFC800]Immune to slow effects from frozen zombie attacks.[-]
 playerTableSaw,Tablesaw
 potofbeefDesc,"Two cans of beef rations cooked in a pot. Tender and filling."
@@ -359,84 +362,106 @@ venomDesc,"Key ingredient for antivenom."
 XuiCollectorModifiers,MODIFIERS
 xuiFilter,"Filter"
 xuiTSBasics,Basics
-zombieArleneMutated,Mutated Arlene
+zombieArlene,Putrid Girl
+zombieArleneFeral,Feral Putrid Girl
+zombieArleneFrozen,Frozen Putrid Girl
+zombieArleneMutated,Mutated Putrid Girl
+zombieArleneRotten,Rotting Putrid Girl
+zombieBikerFrozen,Frozen Biker
 zombieBikerMutated,Mutated Biker
-zombieBoeMutated,Mutated Boe
-zombieBurntMutated,Mutated Burnt
+zombieBikerRotten,Rotting Biker
+zombieBoe,Infected Survivor
+zombieBoeFeral,Feral Infected Survivor
+zombieBoeFrozen,Frozen Infected Survivor
+zombieBoeMutated,Mutated Infected Survivor
+zombieBoeRotten,Rotting Infected Survivor
+zombieBurnt,Burn Victim
+zombieBurntMutated,Mutated Burn Victim
+zombieBurntRotten,Rotting Burn Victim
+zombieBusinessManFrozen,Frozen Businessman
 zombieBusinessManMutated,Mutated Businessman
-zombieDarleneMutated,Mutated Darlene
+zombieBusinessManRotten,Rotting Businessman
+zombieDarlene,Decayed Mother
+zombieDarleneFeral,Feral Mother
+zombieDarleneFrozen,Frozen Mother
+zombieDarleneMutated,Mutated Mother
+zombieDarleneRotten,Rotting Mother
+zombieFatCop,Infected Cop
+zombieFatCopFeral,Feral Cop
 zombieFatCopMutated,Mutated Cop
+zombieFatCopRadiated,Radiated Cop
+zombieFatHawaiian,Disturbed Tourist
+zombieFatHawaiianFrozen,Frozen Tourist
 zombieFatHawaiianMutated,Mutated Tourist
-zombieFemaleFatMutated,Mutated Big Mama
+zombieFatHawaiianRotten,Rotting Tourist
+zombieFemaleFat,Hungry Zombie
+zombieFemaleFatFeral,Feral Hungry Zombie
+zombieFemaleFatFrozen,Frozen Hungry Zombie
+zombieFemaleFatMutated,Mutated Hungry Zombie
+zombieFemaleFatRotten,Rotting Hungry Zombie
+zombieJanitorFrozen,Frozen Janitor
 zombieJanitorMutated,Mutated Janitor
-zombieJoeMutated,Mutated Joe
+zombieJanitorRotten,Rotting Janitor
+zombieJoe,Festering Cadaver
+zombieJoeFrozen,Frozen Festering Cadaver
+zombieJoeMutated,Mutated Festering Cadaver
+zombieJoeRotten,Rotting Festering Cadaver
+zombieLabFrozen,Frozen Labworker
 zombieLabMutated,Mutated Labworker
+zombieLabRotten,Rotting Labworker
 zombieLumberjackMutated,Mutated Lumberjack
+zombieLumberjackRotten,Rotting Lumberjack
+zombieMaleFeralHazmatLootBag,Dropped Hazmat Loot
+zombieMaleHazmatFrozen,Frozen Hazmat
+zombieMaleHazmatLootBag,Dropped Hazmat Loot
 zombieMaleHazmatMutated,Mutated Hazmat
-zombieMarleneMutated,Mutated Marlene
-zombieMoeMutated,Mutated Moe
+zombieMaleHazmatRotten,Rotting Hazmat
+zombieMaleMutatedHazmatLootBag,Dropped Hazmat Loot
+zombieMarlene,Departed Woman
+zombieMarleneFrozen,Frozen Departed Woman
+zombieMarleneMutated,Mutated Departed Woman
+zombieMarleneRotten,Rotting Departed Woman
+zombieMoe,Bloated Walker
+zombieMoeFrozen,Frozen Bloated Walker
+zombieMoeMutated,Mutated Bloated Walker
+zombieMoeRotten,Rotting Bloated Walker
 zombieMutatedDemolition,Nuclear Demolition
 zombieMutatedMutated,Mutated Hulk
-zombieNurseMutated,Mutated Nurse
-zombiePartyGirlMutated,Mutated Party Girl
-zombieScreamerMutated,Mutated Screamer
-zombieSkateboarderMutated,Mutated Thug
-zombieSoldierMutated,Mutated Soldier
-zombieSpiderMutated,Mutated Spider
-zombieSteveCrawlerMutated,Mutated Crawler
-zombieSteveMutated,Mutated Steve
-zombieTomClarkMutated,Mutated Tom Clark
-zombieUtilityWorkerMutated,Mutated Utility Worker
-zombieWightMutated,Mutated Wight
-zombieYoMutated,Mutated Yo
-zombieMaleHazmatLootBag,Dropped Hazmat Loot
-zombieMaleFeralHazmatLootBag,Dropped Hazmat Loot
-zombieMaleMutatedHazmatLootBag,Dropped Hazmat Loot
-zombieArleneRotten,Rotting Arlene
-zombieMarleneRotten,Rotting Marlene
-zombiePartyGirlRotten,Rotting Party Girl
-zombieNurseRotten,Rotting Nurse
-zombieJoeRotten,Rotting Joe
-zombieSteveRotten,Rotting Steve
-zombieTomClarkRotten,Rotting Tom Clark
-zombieBusinessManRotten,Rotting Businessman
-zombieBurntRotten,Rotting Burnt
-zombieSpiderRotten,Rotting Spider
-zombieBoeRotten,Rotting Boe
-zombieMaleHazmatRotten,Rotting Hazmat
-zombieJanitorRotten,Rotting Janitor
-zombieMoeRotten,Rotting Moe
-zombieLabRotten,Rotting Labworker
-zombieDarleneRotten,Rotting Darlene
-zombieYoRotten,Rotting Yo
-zombieUtilityWorkerRotten,Rotting Utility Worker
-zombieBikerRotten,Rotting Biker
-zombieLumberjackRotten,Rotting Lumberjack
-zombieFemaleFatRotten,Rotting Big Mama
-zombieFatHawaiianRotten,Rotting Tourist
-zombieSkateboarderRotten,Rotting Thug
-zombieSoldierRotten,Rotting Soldier
-zombieSteveCrawlerRotten,Rotting Crawler
-zombieArleneFrozen,Frozen Arlene
-zombieMarleneFrozen,Frozen Marlene
-zombiePartyGirlFrozen,Frozen Party Girl
 zombieNurseFrozen,Frozen Nurse
-zombieJoeFrozen,Frozen Joe
-zombieSteveFrozen,Frozen Steve
-zombieTomClarkFrozen,Frozen Tom Clark
-zombieBusinessManFrozen,Frozen Businessman
-zombieSpiderFrozen,Frozen Spider
-zombieBoeFrozen,Frozen Boe
-zombieMaleHazmatFrozen,Frozen Hazmat
-zombieJanitorFrozen,Frozen Janitor
-zombieMoeFrozen,Frozen Moe
-zombieLabFrozen,Frozen Labworker
-zombieDarleneFrozen,Frozen Darlene
-zombieYoFrozen,Frozen Yo
-zombieUtilityWorkerFrozen,Frozen Utility Worker
-zombieBikerFrozen,Frozen Biker
-zombieFemaleFatFrozen,Frozen Big Mama
-zombieFatHawaiianFrozen,Frozen Tourist
+zombieNurseMutated,Mutated Nurse
+zombieNurseRotten,Rotting Nurse
+zombiePartyGirlFrozen,Frozen Party Girl
+zombiePartyGirlMutated,Mutated Party Girl
+zombiePartyGirlRotten,Rotting Party Girl
+zombieScreamerMutated,Mutated Screamer
 zombieSkateboarderFrozen,Frozen Thug
+zombieSkateboarderMutated,Mutated Thug
+zombieSkateboarderRotten,Rotting Thug
 zombieSoldierFrozen,Frozen Soldier
+zombieSoldierMutated,Mutated Soldier
+zombieSoldierRotten,Rotting Soldier
+zombieSpiderFrozen,Frozen Spider
+zombieSpiderMutated,Mutated Spider
+zombieSpiderRotten,Rotting Spider
+zombieSteve,Reanimated Corpse
+zombieSteveFeral,Feral Reanimated Corpse
+zombieSteveRadiated,Radiated Reanimated Corpse
 zombieSteveCrawlerFrozen,Frozen Crawler
+zombieSteveCrawlerMutated,Mutated Crawler
+zombieSteveCrawlerRotten,Rotting Crawler
+zombieSteveFrozen,Frozen Reanimated Corpse
+zombieSteveMutated,Mutated Reanimated Corpse
+zombieSteveRotten,Rotting Reanimated Corpse
+zombieTomClarkFrozen,Frozen Tom Clark
+zombieTomClarkMutated,Mutated Tom Clark
+zombieTomClarkRotten,Rotting Tom Clark
+zombieUtilityWorkerFrozen,Frozen Utility Worker
+zombieUtilityWorkerMutated,Mutated Utility Worker
+zombieUtilityWorkerRotten,Rotting Utility Worker
+zombieWightMutated,Mutated Wight
+zombieYo,Walking Carcass
+zombieYoFeral,Feral Carcass
+zombieYoRadiated,Radiated Carcass
+zombieYoFrozen,Frozen Carcass
+zombieYoMutated,Mutated Carcass
+zombieYoRotten,Rotting Carcass

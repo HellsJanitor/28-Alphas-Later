@@ -69,7 +69,7 @@
 	<!-- *** Single player version of Charismatic Nature, "Survival Instinct" added *** -->
 	<set xpath="//perk[@name='perkCharismaticNature']/@icon">ui_game_symbol_allies</set>	
 	<insertbefore xpath="//perk[@name='perkCharismaticNature']">
-	<perk name="perkSurvivalInstinct" max_level="4" parent="skillIntellectInfluence" name_key="perkSurvivalInstinctName" desc_key="perkSurvivalInstinctDesc" icon="ui_game_symbol_talk">
+	<perk name="perkSurvivalInstinct" max_level="5" parent="skillIntellectInfluence" name_key="perkSurvivalInstinctName" desc_key="perkSurvivalInstinctDesc" icon="ui_game_symbol_talk">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="2" desc_key="reqIntellectLevel02"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="4" desc_key="reqIntellectLevel04"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
@@ -93,8 +93,13 @@
 			</triggered_effect>
 
 			<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="SurvivalInstinctLevel" operation="set" value="4" target="self" target_tags="player">
-				<requirement name="ProgressionLevel" progression_name="perkSurvivalInstinct" operation="GTE" value="4"/>
+				<requirement name="ProgressionLevel" progression_name="perkSurvivalInstinct" operation="Equals" value="4"/>
 				<requirement name="CVarCompare" cvar="SurvivalInstinctLevel" target="self" operation="LT" value="4"/>
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="SurvivalInstinctLevel" operation="set" value="5" target="self" target_tags="player">
+				<requirement name="ProgressionLevel" progression_name="perkSurvivalInstinct" operation="GTE" value="5"/>
+				<requirement name="CVarCompare" cvar="SurvivalInstinctLevel" target="self" operation="LT" value="5"/>
 			</triggered_effect>
 
 			<triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffPerkSurvivalInstinct" target="self" target_tags="player">
