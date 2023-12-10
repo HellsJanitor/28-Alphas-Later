@@ -921,7 +921,7 @@
 	</append>
 	
 	<!-- *** reduced zombie melee range *** -->
-	<set xpath="//item[starts-with(@name,'meleeHandZombie') and not (contains(@name,'Animal'))]//property[@name='Range']/@value">1.1</set>
+	<!-- <set xpath="//item[starts-with(@name,'meleeHandZombie') and not (contains(@name,'Animal'))]//property[@name='Range']/@value">1.1</set> -->
 	
 	<!-- *** hazmat removes radiation *** -->
 	<append xpath="/items/item[@name='apparelHazmatMask']/effect_group">
