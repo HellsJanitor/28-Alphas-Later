@@ -172,9 +172,13 @@
 	<insertafter xpath="//block[contains(@name,'vaultDoor')]/property[@name='Material']">
 	<property name="Weight" value="50"/>
 	</insertafter>
-	<!-- *** player crafted/picked up blocks can't be scrapped *** -->
-	<insertafter xpath="//block[contains(@name,'VariantHelper')]/property[1]">
-	<property name="Weight" value="0"/>
+	<!-- *** potted plant *** -->
+	<insertafter xpath="//block[contains(@name,'plantPotted')]/property[@name='Material']">
+	<property name="Weight" value="50"/>
+	</insertafter>
+	<!-- *** bedroll *** -->
+	<insertafter xpath="//block[@name='bedroll']/property[@name='Material']">
+	<property name="Weight" value="5"/>
 	</insertafter>
 	
 	<!-- *** wood replaced by wood scraps when harvesting blocks *** -->	
