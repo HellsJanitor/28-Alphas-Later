@@ -366,6 +366,7 @@ zombieArlene,Putrid Girl
 zombieArleneFeral,Feral Putrid Girl
 zombieArleneFrozen,Frozen Putrid Girl
 zombieArleneMutated,Mutated Putrid Girl
+zombieArleneRadiated,Radiated Putrid Girl
 zombieArleneRotten,Rotting Putrid Girl
 zombieBikerFrozen,Frozen Biker
 zombieBikerMutated,Mutated Biker
@@ -375,9 +376,12 @@ zombieBoeFeral,Feral Infected Survivor
 zombieBoeFrozen,Frozen Infected Survivor
 zombieBoeMutated,Mutated Infected Survivor
 zombieBoeRotten,Rotting Infected Survivor
+zombieBoeRadiated,Radiated Infected Survivor
 zombieBurnt,Burn Victim
 zombieBurntMutated,Mutated Burn Victim
 zombieBurntRotten,Rotting Burn Victim
+zombieBurntRadiated,Radiated Burn Victim
+zombieBurntFeral,Feral Burn Victim
 zombieBusinessManFrozen,Frozen Businessman
 zombieBusinessManMutated,Mutated Businessman
 zombieBusinessManRotten,Rotting Businessman
@@ -386,6 +390,7 @@ zombieDarleneFeral,Feral Mother
 zombieDarleneFrozen,Frozen Mother
 zombieDarleneMutated,Mutated Mother
 zombieDarleneRotten,Rotting Mother
+zombieDarleneRadiated,Radiated Mother
 zombieFatCop,Infected Cop
 zombieFatCopFeral,Feral Cop
 zombieFatCopMutated,Mutated Cop
@@ -399,13 +404,16 @@ zombieFemaleFatFeral,Feral Hungry Zombie
 zombieFemaleFatFrozen,Frozen Hungry Zombie
 zombieFemaleFatMutated,Mutated Hungry Zombie
 zombieFemaleFatRotten,Rotting Hungry Zombie
+zombieFemaleFatRadiated,Radiated Hungry Zombie
 zombieJanitorFrozen,Frozen Janitor
 zombieJanitorMutated,Mutated Janitor
 zombieJanitorRotten,Rotting Janitor
 zombieJoe,Festering Cadaver
-zombieJoeFrozen,Frozen Festering Cadaver
-zombieJoeMutated,Mutated Festering Cadaver
-zombieJoeRotten,Rotting Festering Cadaver
+zombieJoeFrozen,Frozen Cadaver
+zombieJoeMutated,Mutated Cadaver
+zombieJoeRotten,Rotting Cadaver
+zombieJoeRadiated,Radiated Cadaver
+zombieJoeFeral,Feral Cadaver
 zombieLabFrozen,Frozen Labworker
 zombieLabMutated,Mutated Labworker
 zombieLabRotten,Rotting Labworker
@@ -421,10 +429,14 @@ zombieMarlene,Departed Woman
 zombieMarleneFrozen,Frozen Departed Woman
 zombieMarleneMutated,Mutated Departed Woman
 zombieMarleneRotten,Rotting Departed Woman
+zombieMarleneRadiated,Radiated Departed Woman
+zombieMarleneFeral,Feral Departed Woman
 zombieMoe,Bloated Walker
-zombieMoeFrozen,Frozen Bloated Walker
-zombieMoeMutated,Mutated Bloated Walker
-zombieMoeRotten,Rotting Bloated Walker
+zombieMoeFrozen,Frozen Walker
+zombieMoeMutated,Mutated Walker
+zombieMoeRotten,Rotting  Walker
+zombieMoeRadiated,Radiated Walker
+zombieMoeFeral,Feral Walker
 zombieMutatedDemolition,Nuclear Demolition
 zombieMutatedMutated,Mutated Hulk
 zombieNurseFrozen,Frozen Nurse
@@ -437,6 +449,9 @@ zombieScreamerMutated,Mutated Screamer
 zombieSkateboarderFrozen,Frozen Thug
 zombieSkateboarderMutated,Mutated Thug
 zombieSkateboarderRotten,Rotting Thug
+zombieSkateboarderRadiated,Radiated Thug
+zombieSkateboarderFeral,Feral Thug
+zombieSkateboarder,Thug
 zombieSoldierFrozen,Frozen Soldier
 zombieSoldierMutated,Mutated Soldier
 zombieSoldierRotten,Rotting Soldier
@@ -449,6 +464,9 @@ zombieSteveRadiated,Radiated Reanimated Corpse
 zombieSteveCrawlerFrozen,Frozen Crawler
 zombieSteveCrawlerMutated,Mutated Crawler
 zombieSteveCrawlerRotten,Rotting Crawler
+zombieSteveCrawlerRadiated,Radiated Crawler
+zombieSteveCrawlerFeral,Feral Crawler
+zombieSteveCrawler,Crawler
 zombieSteveFrozen,Frozen Reanimated Corpse
 zombieSteveMutated,Mutated Reanimated Corpse
 zombieSteveRotten,Rotting Reanimated Corpse
