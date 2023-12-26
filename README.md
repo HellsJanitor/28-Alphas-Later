@@ -12,7 +12,7 @@ copy the folder into `%AppData%\Roaming\7DaysToDie`. Alternatively, you can use 
 
 ## FEATURES 
 
-#STARTER ITEMS
+# STARTER ITEMS
 
 "Starter" items are now in a backpack, found in slot 2 of your toolbelt. Open it with your primary action (LMB by default on PC)
 
