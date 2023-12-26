@@ -12,7 +12,7 @@ copy the folder into `%AppData%\Roaming\7DaysToDie`. Alternatively, you can use 
 
 ## FEATURES 
 
-# STARTER ITEMS
+### STARTER ITEMS
 
 "Starter" items are now in a backpack, found in slot 2 of your toolbelt. Open it with your primary action (LMB by default on PC)
 
@@ -20,7 +20,7 @@ When you open the backpack, read the note from The Duke to obtain your starter w
 
 The starter quest is now just "place bedroll", which you'll receive on opening the starter backpack.
 
-# GENERAL GAMEPLAY
+### GENERAL GAMEPLAY
 
 Player is permanently infected, and the infection persists through death. There is a cure, but you’ll need to read a lot of medical magazines to learn how to make it.
 
@@ -50,7 +50,7 @@ Knife base damage rebalanced to account for the lack of bleeding zombies.
 
 60-slot backpack
 
-# AMMO, WEAPONS, MODS AND ARMOUR
+### AMMO, WEAPONS, MODS AND ARMOUR
 
 New basic wood arrow/bolt. Made from a single branch, its range is poor, its damage isn't great, and it always breaks on impact.
 
@@ -64,7 +64,7 @@ New mods - blessed metal for stopping mutated regen. NiCd is back, as is Flaming
 
 New clothing mod - cycling shorts. Install them in your leg armour/clothing and save 25% stamina when cycling.
 
-# BLOCKS/WORKSTATIONS
+### BLOCKS/WORKSTATIONS
 
 The beehive. Find bees (and honey) in specific tree stumps (beehives) in the world, and use them to produce honey. Normal wild tree stumps have a higher chance of giving honey too.
 
@@ -82,7 +82,7 @@ The cement mixer now requires gasoline to work.
 
 The forge no longer requires you to smelt items. You can use the items directly from your inventory.
 
-# BUFFS/DEBUFFS
+### BUFFS/DEBUFFS
 
 Snakes and Spider zombies will envenom you when they attack. Kill snakes to extract its venom, which can be used to make antivenom.
 
@@ -94,7 +94,7 @@ Burnt zombies now set the player on fire when they attack. A full hazmat suit or
 
 Honey infection treatment reduced to 3% from 5%.
 
-# ZOMBIES/ENEMIES
+### ZOMBIES/ENEMIES
 
 Bears and wolves are back in the forest.
 
@@ -110,7 +110,7 @@ New Rotting zombie variant. They have lower HP, lower XP reward, and they take m
 
 “Normal”, “frozen” & “rotting” ‘Fat’ zombies (Big Mama, tourist) don’t puke, but they do explode …
 
-# FOOD/FARMING
+### FOOD/FARMING
 
 All canned food found in loot, vending machines, and trader stock is "uncooked". Cook it to make it safe to eat, or eat it and run the risk of food poisoning ...
 
@@ -124,7 +124,7 @@ Pies and cheesecake need honey for that sweet, sweet taste now.
 
 Crops' growing time is double that of vanilla.
 
-# PROGRESSION
+### PROGRESSION
 
 There is no more Daring Adventurer or Better Barter. Traders will give a drink after every quest tier, which will increase bartering by 5% and trader level by one for each tier of quests completed. MAKE SURE YOU HAVE SPACE IN YOUR INVENTORY FOR IT!!
 
@@ -132,7 +132,7 @@ There is a new perk, Survival Instinct. It's a "single-player" version of Charis
 
 Living off the Land now offers a discount to crops needed to make seeds, level 2 costs 4 crops per seed, level 3 costs 3 crops per seed.
 
-# RESOURCES 
+### RESOURCES 
 
 Trees no longer give wood, they give wood logs, scraps, and branches. Logs can be placed and then chopped with an axe for wood, or use the table saw to do it quicker and better.
 
@@ -144,7 +144,7 @@ Concrete now requires a bucket of water and is crafted in batches of 250.
 
 Repair kits are more expensive, and weapons/armour/tools that require specific crafting parts now require a specific repair kit.
 
-# VEHICLES
+### VEHICLES
 
 All vehicles EXCEPT the bicycle are too heavy for you to carry.
 
