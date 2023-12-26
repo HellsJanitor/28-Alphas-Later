@@ -3,8 +3,8 @@
 The idea behind this mod is to slow progression, make traders less powerful, and generally extend the time for a playthrough, while keeping the vanilla look and feel.
 
 ## INSTALLATION INSTRUCTIONS
-[!NOTE]
-The mod was NOT tested for compatibility with any other mods/modlets, other than the ones that come bundled with it. It's recommended to remove any and all other mods/modlets when playing, as troubleshooting any issues that arise from using other untested mods/modlets won't be possible.
+>[!NOTE]
+>The mod was NOT tested for compatibility with any other mods/modlets, other than the ones that come bundled with it. It's recommended to remove any and all other mods/modlets when playing, as troubleshooting any issues that arise from using other untested mods/modlets won't be possible.
 
 The download .zip file contains a folder called `\Mods`. You can either copy this folder into your game directory, usually `C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die`, or
 
