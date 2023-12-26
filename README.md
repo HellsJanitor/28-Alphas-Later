@@ -6,7 +6,7 @@ The idea behind this mod is to slow progression, make traders less powerful, and
 
 The mod was NOT tested for compatibility with any other mods/modlets, other than the ones that come bundled with it.
 
-The download .zip file contains a folder called /Mods. You can either copy this folder into your game directory, usually `C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die`, or
+The download .zip file contains a folder called `\Mods`. You can either copy this folder into your game directory, usually `C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die`, or
 
 copy the folder into `%AppData%\Roaming\7DaysToDie`. Alternatively, you can use the mod launcher, available from here: [https://7d2dmodlauncher.org/](url)
 
