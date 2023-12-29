@@ -473,6 +473,10 @@
 	<insertafter xpath="//item[contains(@name,'T1') and not (contains(@name,'Parts'))]/property[@name='Material']">
 	<property name="Weight" value="250"/>
 	</insertafter>
+	<!-- *** steel knuckles *** -->
+	<insertafter xpath="//item[@name='meleeWpnKnucklesT3SteelKnuckles']/property[@name='Material']">
+	<property name="Weight" value="1"/>
+	</insertafter>
 	<!-- *** wire tool *** -->
 	<insertafter xpath="//item[@name='meleeToolWireTool']/property[@name='Material']">
 	<property name="Weight" value="15"/>
