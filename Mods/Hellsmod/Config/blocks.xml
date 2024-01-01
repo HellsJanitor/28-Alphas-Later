@@ -162,7 +162,7 @@
 	</append>
 	
 	<insertafter xpath="//block[starts-with(@name,'planted') and not (contains(@name,'HarvestPlayer'))]//property[1]">
-		<property name="CropsGrown.BonusHarvestDivisor" value="32"/>
+		<property name="CropsGrown.BonusHarvestDivisor" value="16"/>
 	</insertafter>
 	
 	<set xpath="//block[@name='plantedMushroom3Harvest']">
