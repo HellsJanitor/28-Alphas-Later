@@ -16,7 +16,7 @@
 	    <property name="FuelValue" value="0"/>
 	    <property name="Weight" value="0"/>
 	    <property name="Group" value="Resources"/>
-	    <property name="EconomicValue" value="300"/>
+	    <property name="EconomicValue" value="30"/>
 		<property name="CraftingIngredientTime" value=".5"/>
     </item>	
 	
