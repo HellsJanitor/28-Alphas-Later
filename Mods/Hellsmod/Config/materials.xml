@@ -14,5 +14,23 @@
 		<property name="MaxDamage" value="200"/>
 		<property name="Experience" value="1.5"/>
 	</material>
+	
+	<material id="MfertilizedFarmland3">
+		<property name="damage_category" value="earth"/>
+		<property name="surface_category" value="earth"/>
+		<property name="Hardness" type="float" value="1"/>
+		<property name="stepsound" value="dirt"/>
+		<property name="fertile_level" value="68"/>
+		<property name="stability_glue" value="20"/>
+		<property name="Mass" type="int" value="10"/>
+		<property name="MaxDamage" value="250"/>
+		<property name="Experience" value="2"/>
+	</material>
+	
+	<material id="MresourceFertilizer">
+		<property name="damage_category" value="organic"/>
+		<property name="surface_category" value="organic"/>
+		<property name="Experience" value="2"/>
+	</material>
 	</append>	
 </config>

@@ -85,7 +85,7 @@
 		zombiePartyGirlFeral, .05
 	</csv>
 	
-	<!-- *** adds  a small chance of feral/radiated zombies *** -->
+	<!-- *** adds a small chance of feral/radiated zombies *** -->
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesNight']/text()" delim="\n" op="add" >		
 		zombieBoeRadiated, .02
 		zombieMoeRadiated, .02
@@ -138,7 +138,30 @@
 		zombieSteveCrawlerRotten 
 	</csv>
 	
-	<csv xpath="/entitygroups/entitygroup[@name='ZombiesForestDowntownNight']/text()" delim="\n" op="add" >
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesForestDowntownNight']/text()" delim="\n" op="add" >		
+		zombieArleneMutated, .05
+		zombieMarleneMutated, .05
+		zombiePartyGirlMutated, .05
+		zombieNurseMutated, .05
+		zombieJoeMutated, .05
+		zombieSteveMutated, .05
+		zombieTomClarkMutated, .05
+		zombieBusinessManMutated, .05
+		zombieBurntMutated, .05
+		zombieSpiderMutated, .05
+		zombieBoeMutated, .05
+		zombieMaleHazmatMutated, .05
+		zombieJanitorMutated, .05
+		zombieMoeMutated, .05
+		zombieLabMutated, .05
+		zombieDarleneMutated, .05
+		zombieYoMutated, .05
+		zombieUtilityWorkerMutated, .05
+		zombieSoldierMutated, .05
+		zombieFemaleFatMutated, .05
+	</csv>
+	
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesDowntown']/text()" delim="\n" op="add" >		 
 		zombieArleneFeral, .05
 		zombieMarleneFeral, .05
 		zombiePartyGirlFeral, .05
@@ -163,30 +186,8 @@
 		zombieFatHawaiianFeral, .05 
 		zombieSkateboarderFeral, .05 
 		zombieSoldierFeral, .05 
-		zombieSteveCrawlerFeral, .05 
-	</csv>
-	
-	<csv xpath="/entitygroups/entitygroup[@name='ZombiesDowntown']/text()" delim="\n" op="add" >		 
-		zombieArleneMutated, .1
-		zombieMarleneMutated, .1
-		zombiePartyGirlMutated, .1
-		zombieNurseMutated, .1
-		zombieJoeMutated, .1
-		zombieSteveMutated, .1
-		zombieTomClarkMutated, .1
-		zombieBusinessManMutated, .1
-		zombieBurntMutated, .1
-		zombieSpiderMutated, .1
-		zombieBoeMutated, .1
-		zombieMaleHazmatMutated, .1
-		zombieJanitorMutated, .1
-		zombieMoeMutated, .1
-		zombieLabMutated, .1
-		zombieDarleneMutated, .1
-		zombieYoMutated, .1
-		zombieUtilityWorkerMutated, .1
-		zombieSoldierMutated, .1
-		zombieFemaleFatMutated, .1
+		zombieSteveCrawlerFeral, .05
+		
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']/text()" delim="\n" op="add" >
@@ -6413,7 +6414,7 @@
 		zombieBikerRadiated
 		zombieLumberjackRadiated
 	</entitygroup>
-	<entitygroup name="feralHordeStageGS103">
+	<entitygroup name="feralHordeStageGS103"> <!-- earlier demo trigger -->
 		zombieJoe
 		zombieBoe
 		zombieMoe
@@ -6518,6 +6519,7 @@
 		zombieFatHawaiianMutated
 		zombieBikerMutated
 		zombieLumberjackMutated
+		zombieDemolition, .18
 	</entitygroup>
 	<entitygroup name="feralHordeStageGS109">
 		zombieJoe
@@ -6624,6 +6626,7 @@
 		zombieFatHawaiianMutated
 		zombieBikerMutated
 		zombieLumberjackMutated
+		zombieDemolition, .18
 	</entitygroup>
 	<entitygroup name="feralHordeStageGS115">
 		zombieJoe
@@ -6730,6 +6733,7 @@
 		zombieFatHawaiianMutated
 		zombieBikerMutated
 		zombieLumberjackMutated
+		zombieDemolition, .18
 	</entitygroup>
 	<entitygroup name="feralHordeStageGS121">
 		zombieJoe
@@ -6836,6 +6840,7 @@
 		zombieFatHawaiianMutated
 		zombieBikerMutated
 		zombieLumberjackMutated
+		zombieDemolition, .18
 	</entitygroup>
 	<entitygroup name="feralHordeStageGS127">
 		zombieJoe
@@ -6942,6 +6947,7 @@
 		zombieFatHawaiianMutated
 		zombieBikerMutated
 		zombieLumberjackMutated
+		zombieDemolition, .18
 	</entitygroup>
 	<entitygroup name="feralHordeStageGS133">
 		zombieJoe
@@ -7048,6 +7054,7 @@
 		zombieFatHawaiianMutated
 		zombieBikerMutated
 		zombieLumberjackMutated
+		zombieDemolition, .18
 	</entitygroup>
 	<entitygroup name="feralHordeStageGS140">
 		zombieJoe
@@ -7154,6 +7161,7 @@
 		zombieFatHawaiianMutated
 		zombieBikerMutated
 		zombieLumberjackMutated
+		zombieDemolition, .18
 	</entitygroup>
 	<entitygroup name="feralHordeStageGS147"> <!-- demo trigger -->
 		zombieJoe
@@ -48701,5 +48709,9 @@
 		zombieMutatedDemolition
 		zombieSteveCrawlerMutated 
 	</entitygroup>
-	</append>	
+	</append>
+		
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name,'feralHordeStage')]/text()" delim="\n" op="add" >
+		zombieBunkerBuster, 2
+	</csv>
 </configs>

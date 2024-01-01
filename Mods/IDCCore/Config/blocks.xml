@@ -29,7 +29,7 @@
 				<property name="CropTrampleTag" value="cropTrample"/>
 			</property>
 			
-			<property name="MultipleOutputRecipes" value="false"/>
+			<property name="MultipleOutputRecipes" value="true"/>
 			
 			<property name="DebugTools" value="false"/>
 		</block>

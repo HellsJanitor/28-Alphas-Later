@@ -1,5 +1,103 @@
 <configs>
 	<!-- search find all *** for changes -->
+
+	<append xpath="/items">
+	<!-- *** fertilizer *** -->
+    <item name="resourceFertilizer">
+	    <property name="HoldType" value="45"/>
+	    <property name="Tags" value="junk"/>
+	    <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+	    <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	    <property name="Material" value="MresourceFertilizer"/>
+		<property name="CreativeMode" value="Player"/>
+	    <property name="CustomIcon" value="resourceFertilizer"/>
+		<property name="DescriptionKey" value="FertilizerDesc"/>
+	    <property name="Stacknumber" value="500"/> <!-- STK resource -->
+	    <property name="FuelValue" value="0"/>
+	    <property name="Weight" value="0"/>
+	    <property name="Group" value="Resources"/>
+	    <property name="EconomicValue" value="300"/>
+		<property name="CraftingIngredientTime" value=".5"/>
+    </item>	
+	
+	<!-- *** Hoe and Schematic *** -->
+	<item name="meleeToolFarmT2IronHoeSchematic">
+	    <property name="Extends" value="schematicMaster"/>
+	    <property name="CreativeMode" value="Player"/>
+	    <property name="CustomIcon" value="meleeToolFarmT2IronHoe"/>
+	    <property name="Unlocks" value="meleeToolFarmT2IronHoe"/>
+	    <effect_group tiered="false">
+		    <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolFarmT2IronHoe" operation="set" value="1"/>
+		    <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	    </effect_group>
+    </item>
+	
+	<item name="meleeToolFarmT2IronHoe"> 
+		<property name="Tags" value="melee,medium,tool,repairTool,attFortitude,perkLivingOffTheLand,canHaveCosmetic"/>
+		<property name="DisplayType" value="meleeRepairTool"/><property name="CreativeMode" value="Player"/>
+		<property name="DescriptionKey" value="meleeToolFarmT2IronHoeDesc"/>
+		<property name="CustomIcon" value="meleeToolFarmT2IronHoe"/>
+		<property name="HoldType" value="50"/>
+		<property name="Meshfile" value="@:Other/Items/Tools/hoe_ironPrefab.prefab"/>
+		<property name="Material" value="Mmetal"/>
+		<property name="RepairTools" value="resourceRepairKit"/>
+		<property name="DegradationBreaksAfter" value="false"/>
+		<property name="SoundJammed" value="ItemNeedsRepair"/>
+		<property name="SoundDestroy" value="wooddestroy1"/>
+		<property name="FuelValue" value="250"/>
+		<property name="EconomicValue" value="120"/>
+		<property name="UnlockedBy" value="meleeToolFarmT2IronHoeSchematic"/>
+		<property name="ShowQuality" value="true"/>
+		<property class="Action0">
+			<property name="Class" value="DynamicMelee"/>
+			<property name="Sphere" value=".15"/>
+			<property name="Sound_start" value="swoosh"/>
+			<property name="ToolCategory.cropHarvest" value="1" param1="1"/>
+			<property name="UseGrazingHits" value="true"/>
+			<property name="GrazeStart" value=".5"/>
+			<property name="GrazeEnd" value=".55"/>
+			<property name="SwingDegrees" value="65"/>
+			<property name="SwingAngle" value="160"/>
+		</property>
+		<property class="Action1"> <!-- UseAction -->
+			<property name="Class" value="Repair"/>
+			<property name="Repair_amount" value="50"/>
+			<property name="Upgrade_hit_offset" value="-4"/>
+			<property name="Sound_start" value="repair_block"/>
+			<property name="Delay" value="1.0"/> <!-- Repair actions still need the delay amount -->
+			<property name="Upgrade_action_sound" value="ImpactSurface/metalhitearth"/>
+			<property name="Allowed_upgrade_items" value="resourceClayLump,meleeToolFarmT2IronHoe,resourceFertilizer"/>
+			<property name="UsePowerAttackAnimation" value="true"/>
+			<property name="ToolCategory.harvestingTools" value="1" param1="1"/>
+		</property>
+		<effect_group name="meleeToolFarmT2IronHoe">
+			<passive_effect name="MaxRange" operation="base_set" value="2.9"/>
+			<passive_effect name="BlockRange" operation="base_set" value="10"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="10"/> <!-- meleeToolFarmT2IronHoe -->
+			<passive_effect name="BlockDamage" operation="base_set" value="1"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="wood"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="earth"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="-.9" tags="stone"/>
+			<passive_effect name="DamageModifier" operation="perc_set" value="-.9" tags="metal"/>
+			<passive_effect name="AttacksPerMinute" operation="base_set" value="60"/>
+			<passive_effect name="StaminaLoss" operation="base_set" value="14.2" tags="primary"/>
+			<passive_effect name="DegradationMax" operation="base_set" value="200,500" tier="1,6"/>
+			<passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+			<passive_effect name="ModPowerBonus" operation="perc_add" value=".15" tags="EntityDamage,BlockDamage"/>
+			<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+			<display_value name="dBlockRepairAmount" value="50"/>
+		</effect_group>
+		<effect_group name="Power Attack">
+			<passive_effect name="EntityDamage" operation="perc_add" value="0" tags="secondary"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value="0" tags="secondary"/>
+			<!-- <passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3" tags="secondary"/> -->
+			<passive_effect name="StaminaLoss" operation="base_set" value="0.6" tags="secondary"/>
+		</effect_group>
+		<property name="Group" value="Tools/Traps"/>
+		<property name="PickupJournalEntry" value="farmingTip"/>
+		<property name="RepairExpMultiplier" value="1.0"/>
+		</item>
+	</append>
 	
 	<!-- *** starter weapon quest item *** -->
 	<insertAfter xpath="/items/item[@name='noteDuke01']//property[1][@value]">
@@ -8,8 +106,7 @@
 	</insertAfter>
 	
 	<!-- *** starter weapon quest book reward *** -->
-	<insertAfter xpath="/items/item[@name='questMaster']">
-	<!--starter weapons-->
+	<insertAfter xpath="/items/item[@name='questMaster']">	
 	<item name="startermeleeWpnSpearT0StoneSpear">
 		<property name="CreativeMode" value="Dev"/>
 		<property name="ItemTypeIcon" value="book"/>
@@ -302,10 +399,88 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modBicycleStaminaSaver" operation="set" value="1"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 		</effect_group>
+	</item>	
+	
+	<!-- *** liquid lead, anti-rad ingredient for throwables *** -->
+	<item name="resourceLiquidLead">
+		<property name="CustomIcon" value="resourceLiquidLead"/>
+		<property name="DescriptionKey" value="resourceLiquidLeadDesc"/>
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="MresourceAcid"/>
+		<property name="Weight" value="0"/>
+		<property name="Stacknumber" value="100"/> <!-- STK resource -->
+		<property name="EconomicValue" value="140"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="Group" value="Resources,Chemicals"/>
 	</item>
 	
-	</append>	
+	<!-- *** anti-rad throwables *** -->
+	<item name="thrownAmmoAntiRadPipeBomb">
+		<property name="Extends" value="thrownAmmoPipeBomb"/>
+		<property name="Tags" value="ammo,weapon,attPerception,perkDemolitionsExpert,explosivesSkill"/>
+		<property name="CustomIcon" value="thrownAmmoAntiRadPipeBomb"/>
+		<property name="DescriptionKey" value="thrownAmmoAntiRadPipeBombDesc"/>
+		<property name="Stacknumber" value="20"/>		
+		
+		<effect_group>
+			<requirement name="EntityTagCompare" target="other" tags="radiated,mutated"/>
+			<triggered_effect trigger="onSelfExplosionDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
+		</effect_group>
+	</item>
 	
+	<item name="thrownGrenadeAntiRadContact">
+		<property name="Extends" value="thrownGrenadeContact"/>
+		<property name="Tags" value="ammo,weapon,attPerception,perkDemolitionsExpert,explosivesSkill"/>
+		<property name="CustomIcon" value="thrownGrenadeAntiRadContact"/>
+		<property name="DescriptionKey" value="thrownGrenadeAntiRadContactDesc"/>
+		<property name="Stacknumber" value="25"/>
+		
+		<effect_group>
+			<requirement name="EntityTagCompare" target="other" tags="radiated,mutated"/>
+			<triggered_effect trigger="onSelfExplosionDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
+		</effect_group>
+	</item>
+	
+	<item name="thrownAntiRadGrenade">
+		<property name="Extends" value="thrownGrenade"/>
+		<property name="Tags" value="ammo,weapon,attPerception,perkDemolitionsExpert,explosivesSkill"/>
+		<property name="CustomIcon" value="thrownGrenadeAntiRadContact"/>
+		<property name="DescriptionKey" value="thrownAntiRadGrenadeDesc"/>
+		<property name="Stacknumber" value="25"/>
+		
+		<effect_group>
+			<requirement name="EntityTagCompare" target="other" tags="radiated,mutated"/>
+			<triggered_effect trigger="onSelfExplosionDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
+		</effect_group>
+	</item>
+	
+	<item name="thrownAmmoAntiRadMolotovCocktail">
+		<property name="Tags" value="ammo,weapon,attPerception,perkDemolitionsExpert,explosivesSkill"/>
+		<property name="Extends" value="thrownAmmoMolotovCocktail"/>		
+		<property name="CustomIcon" value="thrownAmmoAntiRadMolotovCocktail"/>
+		<property name="DescriptionKey" value="thrownAmmoAntiRadMolotovCocktailDesc"/>
+		<property name="Stacknumber" value="20"/>
+		
+		<effect_group>
+			<requirement name="EntityTagCompare" target="other" tags="radiated,mutated"/>
+			<triggered_effect trigger="onSelfExplosionDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
+		</effect_group>
+	</item>
+	</append>
+	
+	<!-- *** adds a mod slot for eyewear & bandanna *** -->
+	<set xpath="/items/item[starts-with(@name,'apparel') and (contains(@name,'Goggles'))]/effect_group/passive_effect[@name='ModSlots']/@value">1</set>	
+	<set xpath="/items/item[starts-with(@name,'apparel') and (contains(@name,'Bandana'))]/effect_group/passive_effect[@name='ModSlots']/@value">1</set>
+
+	<!-- *** bellows increases craft time, not smelt time *** -->
+	<set xpath="//item[@name='toolBellows']/effect_group[@tiered='false']/passive_effect[@name='CraftingSmeltTime']/@name">CraftingTime</set>
+	<set xpath="//item[@name='toolBellows']/effect_group[@tiered='false']/display_value[@name='dCraftingSmeltTime']/@name">dCraftingTime</set>
+
+	<!-- *** buckets stacked in 5's *** -->
+	<set xpath="//item[@name='bucketEmpty']//property[@name='Stacknumber']/@value">5</set>
+	<set xpath="//item[@name='bucketRiverWater']//property[@name='Stacknumber']/@value">5</set>
 	
 	<!-- *** nerf honey to 3% cure for infection *** -->
 	<set xpath="//item[@name='foodHoney']/effect_group[@tiered='false']/display_value[@name='dCureInfection']/@value">.03</set>
@@ -532,12 +707,20 @@
 	<insertafter xpath="//item[contains(@name,'resourceNail')]/property[@name='Material']">
 	<property name="Weight" value="1"/>
 	</insertafter>
+	<!-- *** cobblestone *** -->
+	<insertafter xpath="//item[contains(@name,'resourceCobblestones')]/property[@name='Material']">
+	<property name="Weight" value="5"/>
+	</insertafter>
+	<!-- *** cement *** -->
+	<insertafter xpath="//item[contains(@name,'resourceCement')]/property[@name='Material']">
+	<property name="Weight" value="5"/>
+	</insertafter>
 	
 	<!-- *** wrench can be used as a tool in workbench *** -->
 	<append xpath="//item[@name='meleeToolSalvageT1Wrench']">
 		<property name="ItemTypeIcon" value="workbench"/>
 		<effect_group tiered="false">
-			<passive_effect name="ScrappingTime" operation="perc_add" value="-.333"/>
+			<passive_effect name="ScrappingTime" operation="perc_add" value="-.10"/>
 		</effect_group>
 	</append>
 	
@@ -545,33 +728,38 @@
 	<append xpath="//item[@name='meleeToolRepairT1ClawHammer']">
 		<property name="ItemTypeIcon" value="workbench"/>
 		<effect_group tiered="false">
-			<passive_effect name="CraftingTime" operation="perc_add" value="-.333"/>
+			<passive_effect name="CraftingTime" operation="perc_add" value="-.10"/>
 		</effect_group>
 	</append>
 	
 	<!-- *** ratchet can be used as a tool in workbench *** -->
 	<append xpath="//item[@name='meleeToolSalvageT2Ratchet']">
 		<property name="ItemTypeIcon" value="workbench"/>
-		<!-- <effect_group tiered="false">
-			<passive_effect name="CraftingTime" operation="perc_add" value="-.5"/>			
-		</effect_group> -->
+		<effect_group tiered="false">
+			<passive_effect name="CraftingTime" operation="perc_add" value="-.10"/>			
+		</effect_group>
 	</append>
 	
 	<!-- *** impact driver can be used as a tool in workbench *** -->
 	<append xpath="//item[@name='meleeToolSalvageT3ImpactDriver']">
 		<property name="ItemTypeIcon" value="workbench"/>
-		<!-- <effect_group tiered="false">
-			<passive_effect name="CraftingTime" operation="perc_add" value="-.75"/>			
-		</effect_group> -->
+		<effect_group tiered="false">
+			<passive_effect name="ScrappingTime" operation="perc_add" value="-.20"/>			
+		</effect_group>
 	</append>
 	
 	<!-- *** nailgun can be used as a tool in workbench *** -->
 	<append xpath="//item[@name='meleeToolRepairT3Nailgun']">
 		<property name="ItemTypeIcon" value="workbench"/>
 		<effect_group tiered="false">			
-			<passive_effect name="ScrappingTime" operation="perc_add" value="-.75"/>
+			<passive_effect name="CraftingTime" operation="perc_add" value="-.10"/>
 		</effect_group>
 	</append>
+	
+	<!-- *** knife can be used as a tool in workbench *** -->
+	<!-- <append xpath="//item[@name='meleeWpnBladeT1HuntingKnife']">
+		<property name="ItemTypeIcon" value="workbench"/>		
+	</append> -->
 	
 	<!-- *** tablesaw is a workbench tool *** -->
 	<!-- <append xpath="/items">
@@ -602,24 +790,9 @@
 			<property name="Range" value="1"/>
 			<property name="DamageEntity" value="10"/>
 			<property name="DamageBlock" value="8"/>
-		</property>
-		<property class="Action1"> <!-- UseAction -->
-			<property name="Class" value="Vomit"/>
-			<property name="Hitmask_override" value="Arrow"/>
-			<property name="Delay" value=".3"/> <!-- obsolete if rounds per minute exists -->
-			<property name="Range" value="200"/>
-			<property name="Infinite_ammo" value="true"/>
-			<property name="Magazine_items" value="ammoProjectileZombieSpider"/>
-			<property name="Sound_warning" value="hulkvomitwarning"/>
-			<property name="Sound_start" value="hulkvomitattack"/>
-			<property name="Sound_repeat" value=""/>
-			<property name="Sound_end" value=""/>
-			<property name="Sound_empty" value=""/>
-			<property name="Sound_reload" value=""/>
-		</property>
+		</property>		
 		<effect_group name="meleeHandZombieSpider" tiered="false">
 			<passive_effect name="ModSlots" operation="base_set" value="0"/>
-			<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
 			<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
 			<passive_effect name="MaxRange" operation="base_set" value="100"/>
 			<passive_effect name="MagazineSize" operation="base_set" value="1"/>
@@ -646,23 +819,9 @@
 			<property name="DamageEntity" value="20"/>
 			<property name="DamageBlock" value="24"/>
 		</property>
-		<property class="Action1"> <!-- UseAction -->
-			<property name="Class" value="Vomit"/>
-			<property name="Hitmask_override" value="Arrow"/>
-			<property name="Delay" value=".3"/> <!-- obsolete if rounds per minute exists -->
-			<property name="Range" value="200"/>
-			<property name="Infinite_ammo" value="true"/>
-			<property name="Magazine_items" value="ammoProjectileZombieSpiderFeral"/>
-			<property name="Sound_warning" value="hulkvomitwarning"/>
-			<property name="Sound_start" value="hulkvomitattack"/>
-			<property name="Sound_repeat" value=""/>
-			<property name="Sound_end" value=""/>
-			<property name="Sound_empty" value=""/>
-			<property name="Sound_reload" value=""/>
-		</property>
+		
 		<effect_group name="meleeHandZombieSpiderFeral" tiered="false">
 			<passive_effect name="ModSlots" operation="base_set" value="0"/>
-			<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
 			<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
 			<passive_effect name="MaxRange" operation="base_set" value="100"/>
 			<passive_effect name="MagazineSize" operation="base_set" value="1"/>
@@ -689,23 +848,9 @@
 			<property name="DamageEntity" value="20"/>
 			<property name="DamageBlock" value="100"/>
 		</property>
-		<property class="Action1"> <!-- UseAction -->
-			<property name="Class" value="Vomit"/>
-			<property name="Hitmask_override" value="Arrow"/>
-			<property name="Delay" value=".3"/> <!-- obsolete if rounds per minute exists -->
-			<property name="Range" value="200"/>
-			<property name="Infinite_ammo" value="true"/>
-			<property name="Magazine_items" value="ammoProjectileZombieSpiderFeral"/>
-			<property name="Sound_warning" value="hulkvomitwarning"/>
-			<property name="Sound_start" value="hulkvomitattack"/>
-			<property name="Sound_repeat" value=""/>
-			<property name="Sound_end" value=""/>
-			<property name="Sound_empty" value=""/>
-			<property name="Sound_reload" value=""/>
-		</property>
+		
 		<effect_group name="meleeHandZombieSpider" tiered="false">
 			<passive_effect name="ModSlots" operation="base_set" value="0"/>
-			<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
 			<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
 			<passive_effect name="MaxRange" operation="base_set" value="100"/>
 			<passive_effect name="MagazineSize" operation="base_set" value="1"/>
@@ -925,7 +1070,7 @@
 	</append>
 	
 	<!-- *** reduced zombie melee range *** -->
-	<!-- <set xpath="//item[starts-with(@name,'meleeHandZombie') and not (contains(@name,'Animal'))]//property[@name='Range']/@value">1.1</set> -->
+	<!-- <set xpath="//item[starts-with(@name,'meleeHandZombie') and not (contains(@name,'Animal'))]//property[@name='Range']/@value">1.4</set> -->
 	
 	<!-- *** hazmat removes radiation *** -->
 	<append xpath="/items/item[@name='apparelHazmatMask']/effect_group">
@@ -1608,12 +1753,12 @@
 		</property>
 		<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
 
-		<effect_group tiered="false" name="Food Tier 3">
+		<effect_group tiered="false" name="Food Tier 3">		
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="70"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="35"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="30"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="30"/>		
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>			
 		</effect_group>
 	</item>
 	
@@ -1638,12 +1783,12 @@
 		</property>
 		<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
 
-		<effect_group tiered="false" name="Food Tier 3">
+		<effect_group tiered="false" name="Food Tier 3">			
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="80"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="40"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="30"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>				
 		</effect_group>
 	</item>
 	
@@ -1666,11 +1811,11 @@
 		</property>
 		<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
 
-		<effect_group tiered="false" name="Food Tier 0/1">
+		<effect_group tiered="false" name="Food Tier 0/1">			
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="20"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="10"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>			
 		</effect_group>
 	</item>
 	
@@ -1846,9 +1991,181 @@
 	</item>
 	</append>
 	
+	<!-- *** UI display for despair treatment from food *** -->	
+	<!-- <set xpath="//item//property[@name='DisplayType'][@value='food']/@value">foodCureDespair</set>
+	<set xpath="//item//property[@name='DisplayType'][starts-with(@value,'food') and (contains(@value,'Water'))]/@value">foodCureDespair</set>
+	<set xpath="//item//property[@name='DisplayType'][starts-with(@value,'food') and (contains(@value,'Raw'))]/@value">foodCureDespair</set>	 -->
+	
+	<!-- *** Canned food despair treatment *** -->
+	<!-- <append xpath="//item[starts-with(@name,'foodCan') and (contains(@name,'cooked'))]/effect_group[@name='Food Tier 0']">
+		<display_value name="dCureDespair" value=".001"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value=".1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+	</append>
+	<append xpath="//item[starts-with(@name,'foodCan') and (contains(@name,'Catfood'))]/effect_group[@name='Food Tier 0']">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="-.2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+	</append>
+	<append xpath="//item[starts-with(@name,'foodCan') and (contains(@name,'Dogfood'))]/effect_group[@name='Food Tier 0']">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="-.2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+	</append>	 -->
+
+	<!-- *** Tier 0/1 food despair treatment *** -->
+	<!-- <append xpath="//item[starts-with(@name,'food')]/effect_group[@name='Food Tier 0/1']">
+		<display_value name="dCureDespair" value=".002"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value=".2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+	</append> -->
+	
+	<!-- *** Tier 1 food despair treatment *** -->
+	<append xpath="//item[starts-with(@name,'food') and not (contains(@name,'BaconAndEggs'))]/effect_group[@name='Food Tier 1']">
+		<display_value name="dCureDespair" value=".0025"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value=".25"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+	</append>
+	<append xpath="//item[starts-with(@name,'food') and (contains(@name,'BaconAndEggs'))]/effect_group[@name='Food Tier 1']">
+		<display_value name="dCureDespair" value=".005"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value=".5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+	</append>
+	
+	<!-- *** Tier 2 food despair treatment *** -->
+	<append xpath="//item[starts-with(@name,'food')]/effect_group[@name='Food Tier 2']">
+		<display_value name="dCureDespair" value=".01"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+	</append>
+	
+	<!-- *** Tier 3 food despair treatment *** -->
+	<append xpath="//item[starts-with(@name,'food')]/effect_group[@name='Food Tier 3']">
+		<display_value name="dCureDespair" value=".015"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="1.5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+	</append>
+	
+	<!-- *** Tier 4 food despair treatment *** -->
+	<append xpath="//item[starts-with(@name,'food')]/effect_group[@name='Food Tier 4']">
+		<display_value name="dCureDespair" value=".025"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="2.5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+	</append>
+	
+	<!-- *** Tier 0 drink despair treatment *** -->
+	<!-- <append xpath="//item[starts-with(@name,'drink')]/effect_group[@name='Drink Tier 0']">		
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="-0.2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+	</append> -->
+	
+	<!-- *** Tier 0/1 drink despair treatment *** -->
+	<!-- <append xpath="//item[starts-with(@name,'drink') and not (contains(@name,'BoiledWater'))]/effect_group[@name='Drink Tier 0/1']">
+		<display_value name="dCureDespair" value=".001"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="0.1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+	</append> -->
+	
+	<!-- *** Coffee despair treatment *** -->
+	<append xpath="//item[@name='drinkJarCoffee']/effect_group[@name='Drink Tier 1']">
+		<display_value name="dCureDespair" value=".025"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="0.25"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+	</append>
+	
+	<append xpath="//item[@name='drinkJarBlackStrapCoffee']/effect_group[@name='Drink Tier Found']">
+		<display_value name="dCureDespair" value=".01"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+	</append>
+	
+	<!-- *** Tea despair treatment *** -->
+	<append xpath="//item[starts-with(@name,'drink')and (contains(@name,'Tea'))]/effect_group[@name='Drink Tier 1']">
+		<display_value name="dCureDespair" value=".001"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="0.1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+	</append>
+	
+	<!-- *** Smoothie despair treatment *** -->
+	<append xpath="//item[@name='drinkYuccaJuiceSmoothie']/effect_group[@name='Drink Tier 3']">
+		<display_value name="dCureDespair" value=".005"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value=".5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+	</append>
+	
+	<!-- *** Beer despair treatment *** -->
+	<append xpath="//item[@name='drinkJarBeer']/effect_group[@name='Drink Tier 3']">
+		<display_value name="dCureDespair" value=".005"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value=".5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+	</append>
+	
+	<!-- *** Mineral Water despair treatment *** -->
+	<append xpath="//item[contains(@name,'drinkJarPureMineralWater')]/effect_group[@name='Drink Tier Found']">
+		<display_value name="dCureDespair" value=".005"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value=".5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+	</append>	
+	
+	<!-- *** despair meds *** -->
+	<insertafter xpath="//item[@name='drugAntibiotics']">
+	<item name="drugLithium">
+		<property name="Tags" value="medical,medicalSkill"/>
+		<property name="CustomIcon" value="drugLithium"/>
+		<property name="DescriptionKey" value="drugLithiumDesc"/>
+		<property name="HoldType" value="16"/>
+		<property name="Meshfile" value="@:Other/Items/Health/painkillersPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="EconomicValue" value="240"/>
+		<property name="Stacknumber" value="10"/> <!-- STK loot -->
+		<property name="UnlockedBy" value="craftingMedical"/><!-- perkPhysician,drugAntibioticsSchematic, -->
+		<property name="DisplayType" value="cureDespair"/>
+		<property name="Group" value="Science,CFChemicals,Medical,TCMedical"/>
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1.0"/>
+			<property name="Sound_start" value="player_painkillers"/>
+		</property>
+		<effect_group tiered="false">
+			<display_value name="dCureDespair" value=".25"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="25"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+		</effect_group>
+	</item>
+	
+	<item name="drugStJohnsWort">
+		<property name="Tags" value="medical,medicalSkill"/>
+		<property name="CustomIcon" value="drugStJohnsWort"/>
+		<property name="DescriptionKey" value="drugStJohnsWortDesc"/>
+		<property name="HoldType" value="16"/>
+		<property name="Meshfile" value="@:Other/Items/Health/painkillersPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="EconomicValue" value="120"/>
+		<property name="Stacknumber" value="10"/> <!-- STK loot -->
+		<property name="UnlockedBy" value="craftingMedical"/><!-- drugHerbalAntibioticsSchematic, -->
+		<property name="DisplayType" value="cureDespair"/>
+		<property name="TintColor" value="120,255,120"/>
+		<property name="Group" value="Science,CFChemicals,Medical,TCMedical"/>
+
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1.0"/>
+			<property name="Sound_start" value="player_painkillers"/>
+		</property>
+		<effect_group tiered="false">
+			<display_value name="dCureDespair" value=".1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="10"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+		</effect_group>
+	</item>
+	</insertafter>	
+	
 	<!-- *** pairs custom repair kits to respective item *** -->
 	<setattribute xpath="/items/item[@name='meleeToolPickT2SteelPickaxe']//property[@name='RepairTools']" name="value">SteelToolRepairKit</setattribute>
 	<setattribute xpath="/items/item[@name='meleeToolShovelT2SteelShovel']//property[@name='RepairTools']" name="value">SteelToolRepairKit</setattribute>
+	<insertafter xpath="//item[@name='meleeToolAxeT2SteelAxe']//property[2]">
+	<property name="RepairTools" value="SteelToolRepairKit"/>
+	</insertafter>	
 	<setattribute xpath="/items/item[@name='meleeToolAxeT3Chainsaw']//property[@name='RepairTools']" name="value">MotorToolRepairKit</setattribute>
 	<setattribute xpath="/items/item[@name='meleeToolPickT3Auger']//property[@name='RepairTools']" name="value">MotorToolRepairKit</setattribute>
 	<setattribute xpath="/items/item[@name='meleeToolSalvageT2Ratchet']//property[@name='RepairTools']" name="value">SteelToolRepairKit</setattribute>

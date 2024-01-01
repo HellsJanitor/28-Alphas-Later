@@ -28,7 +28,7 @@
 	</set>	
 	
 	<append xpath="/windows">	
-	<!-- *** adds wrench, hammer,ratchet and tablesaw as workbench tools *** -->
+	<!-- *** adds wrench, hammer, ratchet, impact driver, nailgun and knife as workbench tools *** -->
 	<window name="windowToolsWorkbench" width="228" height="121" panel="Right" cursor_area="true" >
 	<!--#$-IGS END.-$#-->
 		<panel style="header.panel">
@@ -39,7 +39,7 @@
 		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
 
 			<grid name="inventory" rows="2" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true"
-			required_tools="meleeToolSalvageT1Wrench,meleeToolRepairT1ClawHammer,meleeToolSalvageT2Ratchet,meleeToolSalvageT3ImpactDriver,meleeToolRepairT3Nailgun" required_tools_only="true"> <!--,toolTablesaw-->
+			required_tools="meleeToolSalvageT1Wrench,meleeToolRepairT1ClawHammer,meleeToolSalvageT2Ratchet,meleeToolSalvageT3ImpactDriver,meleeToolRepairT3Nailgun" required_tools_only="true"> <!--,toolTablesaw,meleeWpnBladeT1HuntingKnife-->
 				<item_stack controller="RequiredItemStack" name="0"/>
 			</grid>
 		</rect>

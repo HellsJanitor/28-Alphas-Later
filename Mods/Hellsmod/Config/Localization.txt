@@ -80,30 +80,59 @@ BarteringSauceThree,"Mercenary Sauce"
 BarteringSauceThreeDesc,"This will make you a Mercenary.\n\nPermanently gain access to much better trader items and get 15% more dukes.\n\nGet a 15% better deal when buying & selling."
 BarteringSauceTwo,"Plunderer's Sauce"
 BarteringSauceTwoDesc,"This will make you a Plunderer.\n\nPermanently gain access to even better trader items and get 10% more dukes.\n\nGet a 10% better deal when buying & selling."
+bedPlayer,King-size bed
 BowRepairKit,Bow Repair Kit
 BowRepairKitDesc,This Repair Kit is used to repair bows and crossbows.
 bucketRiverWaterDesc,Water can be dumped into an enclosed structure or hole in the ground to store it.\n\nIt is also an essential ingerdient in concrete mix.
+buffDespairCureDisplayName,Treated Despair
+buffDespairCureDisplayDesc,You are feeling optimistic about your chances of surviving.
+buffDespair01UntreatedName,Despair
+buffDespair01UntreatedDesc,"You are not very optimistic about your survival.\n\nEating certain foods, finding warmth and shelter, or taking medication will help you start to feel better."
+buffDespair01UntreatedTooltip,It's feeling a little hopeless ...
+buffDespair01GetBetterName,More optimistic
+buffDespair01GetBetterDesc,You are starting to feel better about your chances of surviving.
+buffDespair02UntreatedName,Isolation
+buffDespair02UntreatedDesc,"You are starting to feel worse about your chances of survival.\n\nEating certain foods, finding warmth and shelter, or taking medication will help you start to feel better."
+buffDespair02GetBetterName,Positive outlook
+buffDespair02GetBetterDesc,You are starting to feel better about your chances of surviving.
+buffDespair03UntreatedName,Depths of despair
+buffDespair03UntreatedDesc,"You feel the outlook is bleak, and are close to giving up.\n\nEating certain foods, finding warmth and shelter, or taking medication will help you start to feel better."
+buffDespair03GetBetterName,Hopeful
+buffDespair03GetBetterDesc,You are starting to feel better about your chances of surviving.
+buffDespair04Tooltip,The hopelessness of your situation has gotten too much for you to bear.
+buffDespairCureDisplayPositiveName,Optimism
+buffDespairCureDisplayPositiveDesc,"You are feeling positive and energized.\n\nYou have:\n10% decreased stamina loss.\n10% decreased health loss.\n50% critical hit resistance."
+buffResurrectName,Double Tap!
+buffResurrectDesc,"You might wanna double check that these guys are actually dead ...\n\nDuring horde night, [FFC800]most[-] zombies have a 10% chance to respawn. Kill them with [CC5500]fire[-] damage or [CC5500]explosives[-] to ensure they stay dead."
+buffCampfireAOEEffectDesc,You are warmed by the fire.\n\nCold Resist +15\n\nThis warming effect can slowly reduce your despair.
+statCureDespair,Treat Despair
+drugLithium,Lithium
+drugLithiumDesc,Lithium is the most effective treatment for despair.
+drugStJohnsWort,St. John's Wort
+drugStJohnsWortDesc,"St. John's wort is a herbal treatment, and is effective at treating despair."
+DespairTip,"You are overwhelmed by how hopeless the situation appears. You can combat this by staying in a well-lit area, staying warm, and staying dry.\n\nProlonged periods of being wet, in darkness, or cold temperatures will increase the rate at which your despair grows. Injuries sustained, along with hunger and thirst also have an adverse effect.\n\nThere is medication available to reduce your symptoms, and consuming certain food or drink may help too.\nTreatment from consumables:\nGoldenrod & Red Tea: [FFC800]0.1%[-]\nTier 1 food & coffee: [FFC800]0.25%[-]\nBacon & Eggs, Smoothies, Beer & Mineral Water: [FFC800]0.5%[-]\nTier 2 food & Blackstrap coffee: [FFC800]1%[-]\nTier 3 food: [FFC800]1.5%[-]\nTier 4 food: [FFC800]2.5%[-]"
+DespairTip_title,Despair
 buffArrowBleedDesc,Your arrows & crossbow bolts have a 25% chance to make [FFC800]living[-] things bleed - when they hit that is...
 buffArrowBleedName,Arrows Cause Bleed
 buffArrowBleedtip,Arrows and bolts can make living things bleed
 buffDaringAdventurerFiveDesc,"You are an Ultimate Adventurer.\n\nYou have access to the best trader items, get 25% more Dukes from quests, and a 25% better deal when buying & selling.\n\nPick three quest rewards."
-buffDaringAdventurerFiveName,"Devoted Customer"
+buffDaringAdventurerFiveName,"Ultimate Adventurer"
 buffDaringAdventurerFiveTooltip,"Your bartering & quest rewards have increased 5%!!"
 buffDaringAdventurerFourDesc,"You are a Daring Adventurer.\n\nYou have access to the best trader items, get 20% more Dukes from quests, and a 20% better deal when buying & selling.\n\nPick two quest rewards."
-buffDaringAdventurerFourName,"Loyal Patron"
+buffDaringAdventurerFourName,"Daring Adventurer"
 buffDaringAdventurerFourTooltip,"Your bartering & quest rewards have increased 5%!!"
 buffDaringAdventurerOneDesc,"You are a Looter.\n\nYou have access to better trader items, get 5% more Dukes from quests, and a 5% better deal when buying & selling."
-buffDaringAdventurerOneName,"Good Customer"
+buffDaringAdventurerOneName,"Looter"
 buffDaringAdventurerOneTooltip,"Your bartering & quest rewards have increased 5%!!"
 buffDaringAdventurerThreeDesc,"You are a Mercenary.\n\nYou have access to better trader items, get 15% more Dukes from quests, and a 15% better deal when buying & selling."
-buffDaringAdventurerThreeName,"Patron"
+buffDaringAdventurerThreeName,"Mercenary"
 buffDaringAdventurerThreeTooltip,"Your bartering & quest rewards have increased 5%!!"
 buffDaringAdventurerTwoDesc,"You are a Plunderer.\n\nYou have access to better trader items, get 10% more Dukes from quests, and a 10% better deal when buying & selling."
-buffDaringAdventurerTwoName,"Loyal Customer"
+buffDaringAdventurerTwoName,"Plunderer"
 buffDaringAdventurerTwoTooltip,"Your bartering & quest rewards have increased 5%!!"
-buffDysentery01GetBetterDesc,You feel like throwing up and have the shits. That drink made you feel a bit better though.\n\nDiarrhea periodically reduces\nWater 7.5%\nFood 2.5%\nAll water and food consumed beyond the regular cap is lost over time.\n\n Debilitating but not fatal.
+buffDysentery01GetBetterDesc,You feel like throwing up and have the shits. That drink made you feel a bit better though.\n\nDiarrhea periodically reduces\nWater 7.5%\nFood 2.5%\nAll water and food consumed beyond the regular cap is lost over time.
 buffDysentery01GetBetterName,Treated Dysentery
-buffDysentery01UntreatedDesc,You feel like throwing up and have the shits. Some Goldenrod tea or mineral water is needed.\n\nDiarrhea periodically reduces\nWater 7.5%\nFood 2.5%\nAll water and food consumed beyond the regular cap is lost over time.\n\n Debilitating but not fatal.
+buffDysentery01UntreatedDesc,You feel like throwing up and have the shits. Some Goldenrod tea or mineral water is needed.\n\nDiarrhea periodically reduces\nWater 7.5%\nFood 2.5%\nAll water and food consumed beyond the regular cap is lost over time.
 buffDysentery01UntreatedName,Dysentery
 buffDysentery01UntreatedTooltip,You feel like throwing up and have the shits. Some Goldenrod tea or mineral water is needed.
 buffDysenteryCureDisplayDesc,You drank something which will sort out your guts ache. Drink some more if you don't feel better.
@@ -184,6 +213,11 @@ foodScrambledEggsDesc,"An apocalyptic breakfast that can be eaten any time.\n\nJ
 foodShepardsPie,Shepherd's Pie
 foodShepardsPieDesc,"Shepherd's Pie sure is tasty and super filling."
 foodShepardsPieSchematic,Shepherd's Pie Recipe
+foodT2-6,Tier 2: MegaCrush
+foodT3-6,Tier 3: Chicken Stew
+foodT3-7,Tier 3: Chicken Miso
+medicalT1-2,Tier 1: Antivenom
+medicalT1-3,Tier 1: Fort Bites
 gunBotT1JunkSledgeDesc,"You may not be good at punching but you have the technology.\nYou can also deploy this on the ground using the Secondary action.\nRepair with a Robot Repair Kit.\nScrap to Robotics Parts."
 gunBotT2JunkTurretDesc,"This contraption can be fired and reloaded like a gun. It uses Robotic Turret Ammo for ammunition.\nYou can also deploy it on the ground using the Secondary action.\nRepair with a Robot Repair Kit.\nScrap to Robotics Parts."
 gunBotT3JunkDroneDesc,"Crafted from robotic parts and scrap, the robotic drone is the ultimate companion in the apocalypse. It can heal you and carry some items. \nRepair with a Robot Repair Kit."
@@ -218,13 +252,18 @@ loadingTipBleedingArrows_title,"Arrows can cause bleeding"
 loadingTipEncumbrance,"Carrying too many items in your inventory will slow you down, and carrying motor vehicles will prevent you from moving at all.\nFind or craft pocket mods for clothing or armor to remove encumbrance penalties. Alternatively you can purchase the Pack Mule perk."
 loadingTipHeadShotsOnly,"Don't you watch any zombie movies? The only way to kill anything undead is with a [FFC800]headshot[-].\nExplosives and fire will work too."
 loadingTipHeadShotsOnly_title,"Headshots only!"
-loadingTipPermanentInfection,"You are permanently infected. There is no cure, only treatment.\nThere are beehives in wild, which have a chance to contain a bee.\nUse this bee in your own beehive, and have a constant source of honey."
-loadingTipPermanentInfection_title,"Permanent Infection"
+loadingTipPermanentInfection,"You are permanently affected by [FFC800]Despair[-]. There is no cure, only treatment.\nYour environment is a factor as to how Despair will affect you; so stay warm, dry, sheltered and well lit.\nConsuming certain food & drink will help. There is medication available in loot and from traders to treat Despair."
+loadingTipPermanentInfection_title,"Despair"
 MacheteRepairKit,Machete Repair Kit
 MacheteRepairKitDesc,This Repair Kit is used to repair machetes.
 MachinegunRepairKit,Machine Gun Repair Kit
 MachinegunRepairKitDesc,"This Repair Kit is used to repair AK47s, tactical assault rifles, and M60s."
 materialMresourceWoodScraps,Building
+resourceFertilizer,Fertilizer
+FertilizerDesc,Fertilizer is made in a Chemistry Station or Cement Mixer. Use a hoe to fertilize your farmland and increase crop yield.
+meleeToolFarmT2IronHoe,Iron Hoe
+meleeToolFarmT2IronHoeDesc,Required tool for tilling terrain.
+meleeToolFarmT2IronHoeSchematic,Iron Hoe Schematic
 meleeToolAxeT2SteelAxeDesc,"The steel axe has a durable blade and is great for harvesting wood.\n\nRepair with a Steel Tools Repair Kit.\nScrap to Steel Tool parts."
 meleeToolAxeT3ChainsawDesc,"Chop down the biggest trees or zombies faster than Paul Bunyan with this great chainsaw that uses gasoline for fuel.\n\nRepair with a Motor Tools Repair Kit.\nScrap to Motor Tool Parts."
 meleeToolPickT2SteelPickaxeDesc,"The steel pickaxe is best for breaking stone and harvesting minerals.\n\nRepair with a Steel Tools Repair Kit.\nScrap to Steel Tool parts."
@@ -246,8 +285,18 @@ modBicycleStaminaSaverSchematic,Cycling shorts Mod
 modBicycleStaminaSaverSchematicDesc,Cycling shorts\n\nUnlocks the cycling shorts mod.
 modBicycleStaminaSaver,Cycling shorts
 modBicycleStaminaSaverDesc,Install these shorts to reduce drag on your legs and save 25% on stamina usage when cycling.
+modGlassesPerceptionDesc,Sunglasses make you look cool and boost your perception.\n\nSlot this mod in your glasses or bandanna. 
+modGlassesPerception,Shades mod
+modGlassesStrengthDesc,Look intimidating and boost your strength!\n\nSlot this mod in your glasses or bandanna.
+modGlassesStrength,Cigar mod
+modGlassesFortitudeDesc,Look like a badass action hero in these cool tough guy sunglasses and boost your fortitude!\n\nSlot this mod in your glasses or bandanna.
+modGlassesFortitude,Tough Guy Sunglasses mod
+modGlassesAgilityDesc,Ski Goggles pimp your look and boost your agility.\n\nSlot this mod in your glasses or bandanna.
+modGlassesAgility,Ski Goggles mod
+modGlassesIntellectDesc,Wearing these nerdy looking glasses might not help your sex appeal but you boost your intellect.\n\nSlot this mod in your glasses or bandanna.
+modGlassesIntellect,Nerdy Glasses mod
 modGunMeleeBlessedMetal,"Blessed Metal mod"
-modGunMeleeBlessedMetalDesc,"Increase damage to all entities by 20%\n\nWill disable the regeneration ability of radiated & mutated zombies for 90 seconds."
+modGunMeleeBlessedMetalDesc,"Increase damage to all entities by 30%\n\nWill disable the regeneration ability of radiated & mutated zombies for 90 seconds."
 modHazmatBootsDesc,Slot this hazmat mod into your boots armour.\n\nAll [FFC800]five[-] seperate pieces are needed for full radiation protection.
 modHazmatBoots,Radiation protection (boots)
 modHazmatGlovesDesc,Slot this hazmat mod into your gloves armour.\n\nAll [FFC800]five[-] seperate pieces are needed for full radiation protection.
@@ -276,9 +325,9 @@ perkDeepCutsRank4Desc,Swordsman
 perkDeepCutsRank4LongDesc,You're quite lethal with bladed weapons. Bladed weapons deal 40% more damage. Inflict up to 6 Bleeding Wounds on 'living' things and a power attack inflicts 4. Glancing blows have a 70% chance to cause 1 Bleeding Wound. Stamina costs are reduced by 25% and 50% for power attacks. Killing blows grant 20 stamina. Find more bladed weapons and parts in loot.
 perkDeepCutsRank5Desc,Samurai
 perkDeepCutsRank5LongDesc,You're a samurai and can make sushi out of your foes. Bladed weapons deal 50% more damage. Inflict up to 7 Bleeding Wounds on 'living' things and a power attack inflicts 5. All glancing blows cause 1 Bleeding Wound. Killing blows grant 30 stamina. Find more bladed weapons and parts in loot.
-perkLivingOffTheLandRank1LongDesc,Double the harvest of wild or planted crops.\nFarm plots cost 30% less to craft.
-perkLivingOffTheLandRank2LongDesc,50% chance to harvest 1 additional crop.\nFarm plots cost 50% less to craft.\nSeeds cost one crop fewer to craft.
-perkLivingOffTheLandRank3LongDesc,Triple the harvest of wild or planted crops.\n\nSeeds cost 2 crops fewer to craft.
+perkLivingOffTheLandRank1LongDesc,Farm plots cost 30% less to craft.
+perkLivingOffTheLandRank2LongDesc,Farm plots cost 50% less to craft.\nSeeds cost one crop fewer to craft.
+perkLivingOffTheLandRank3LongDesc,Seeds cost 2 crops fewer to craft.
 perkPackMuleRank3LongDesc,You know exactly where everything is. Carry three additional items without being encumbered 
 perkPackMuleRank4LongDesc,"You just passed inspection, private. Carry three more items without being encumbered."
 perkPackMuleRank5LongDesc,"Now you are just showing off, you are either part mule or a strongman. Carry three more items without being encumbered."
@@ -294,7 +343,8 @@ perkSurvivalInstinctRank4Desc,Quick Learner
 perkSurvivalInstinctRank4LongDesc,"Your survival instinct is incredible!! Gain another 5 health and stamina, block damage increase of 10%, entity damage of 5%, and you gain another 3% extra XP. You gain another carry capacity."
 perkSurvivalInstinctRank5Desc,Survival Master
 perkSurvivalInstinctRank5LongDesc,"Your survival instinct is second to none!! Gain another 5 health and stamina, block damage increase of 10%, entity damage of 5%, and you gain another 3% extra XP. You gain another carry capacity."
-
+perkWasteTreasuresAcidDesc,Adds a chance to harvest acid from cars and medical equipment.\n\nUnlocks acid crafting.
+perkWasteTreasuresAcidLongDesc,"Acid: Acid is an extremely rare and powerful crafting agent. I figured out this tip to sometimes harvest a little from cars and medical equipment. Adds a chance to harvest acid from cars, medical equipment and acid barrels. You can extract acid from car batteries in your Workbench, and you can craft it in the Chemistry Station."
 perkWellInsulatedRank3LongDesc,You can now handle severe weather and typically couldn't care less what the weather conditions are. You will never have the more severe stages of temperature status effects.\n\n[FFC800]Immune to slow effects from frozen zombie attacks.[-]
 playerTableSaw,Tablesaw
 potofbeefDesc,"Two cans of beef rations cooked in a pot. Tender and filling."
@@ -314,6 +364,8 @@ resourceBranch,Branch
 resourceBranchDesc,"A small stout branch. Used for stone tools and arrows.\n\nCan also be used as fuel."
 resourceConcreteMixDesc,"Can be used as a resource to upgrade cobblestone into solid concrete walls or to craft concrete blocks in a cement mixer.\n\nRequires a bucket of water.\nCrafted in batches of 250."
 resourceConcreteMixDesc,Can be used as a resource to upgrade cobblestone into solid concrete walls or to craft concrete blocks in a cement mixer.\n\nCrafted in batches of 250
+resourceLiquidLead,Liquid Lead
+resourceLiquidLeadDesc,Liquid Lead is an ingredient that has radiation removing properties.\n\nUsed for crafting anti-rad thrown explosives.
 resourceWaterFilter,Water Filter
 resourceWaterFilterDesc,"A limited-use water filter, used in the dew collector.\n\nGood for about 25 collection cycles.\n\nMust be replaced when broken."
 resourceWoodScraps,Wood scraps
@@ -356,6 +408,14 @@ tablesawTip_title,Tablesaw
 TheCure,"The T-Virus Cure"
 TheCureDesc,"Cures 100% of infections, and protects against re-infection."
 TheCureDescShort,Immune
+thrownAmmoAntiRadPipeBomb,Rad-removing Pipe Bomb
+thrownAmmoAntiRadPipeBombDesc,"Make pipe bombs with gunpowder, pipes & plant fibers.\nLight with [action:local:Secondary]\nThrow with [action:local:Primary]\n\nContains radiation removing properties."
+thrownGrenadeAntiRadContact,Rad-removing Contact Grenade
+thrownGrenadeAntiRadContactDesc,Contact-fused grenades are volatile devices that explode on contact when armed.\nArm with [action:local:Secondary]\nThrow with [action:local:Primary]\n\nContains radiation removing properties.
+thrownAntiRadGrenade,Rad-removing Grenade
+thrownAntiRadGrenadeDesc,Pull pin. Throw.\nArm with [action:local:Secondary]\nThrow with [action:local:Primary]\n\nContains radiation removing properties.
+thrownAmmoAntiRadMolotovCocktail,Rad-removing Molotov Cocktail
+thrownAmmoAntiRadMolotovCocktailDesc,Page one of the Anarchist's Cookbook.\nLight with [action:local:Secondary]\nThrow with [action:local:Primary]\n\nContains radiation removing properties.
 ttItemNeedsRepair,"This item is knackered and needs fixing"
 ttRepairBeforePickup,"It's knackered and needs repairing before picking it up."
 venomDesc,"Key ingredient for antivenom."
@@ -483,3 +543,4 @@ zombieYoRadiated,Radiated Carcass
 zombieYoFrozen,Frozen Carcass
 zombieYoMutated,Mutated Carcass
 zombieYoRotten,Rotting Carcass
+zombieBunkerBuster,Bunker Buster

@@ -1,8 +1,264 @@
 <configs>
 	<!-- search find all *** for changes -->
 	
+	<!-- *** player heals when standing on player crafted king-size bed *** -->
+	<insertafter xpath="//block[@name='bed02']">
+	<block name="bedPlayer">
+		<property name="Class" value="SleepingBag"/>
+		<property name="CustomIcon" value="bed02"/>
+		<property name="DescriptionKey" value="bedGroupDesc"/>
+		<property name="DisplayType" value="blockMulti"/>
+		<property name="Material" value="Mfurniture"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Furniture/kingSizedBedPrefab"/>
+		<property name="MultiBlockDim" value="2,1,2"/>
+		<property name="WaterFlow" value="permitted"/>
+		<property name="IsTerrainDecoration" value="true"/>
+		<property name="EconomicValue" value="2600"/>
+		<property name="FallDamage" value=".6"/>
+		<property class="RepairItems">
+			<property name="resourceCloth" value="40"/>
+			<property name="resourceSpring" value="20"/>
+			<property name="resourceWood" value="20"/>
+			<property name="resourceMetalPipe" value="10"/>
+		</property>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+		<drop event="Harvest" name="resourceCloth" count="16" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceWood" count="8" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceSpring" count="6" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceMetalPipe" count="2,3" tag="salvageHarvest"/>
+		<drop event="Destroy" name="resourceScrapIron" count="10,15"/>
+		<property name="CanPickup" value="true" param1="bedPlayer"/>
+		<property name="SortOrder1" value="B434"/>
+		<property name="SortOrder2" value="0000"/>
+		<property name="Group" value="Decor/Miscellaneous"/>
+		<property name="FilterTags" value="MC_building,SC_decor"/>
+		<property name="BuffsWhenWalkedOn" value="buffHealHealth" />
+			<requirement name="IsItemActive" value="true"/>
+			<requirement name="EntityTagCompare" tags="player"/>					
+	</block>
+	</insertafter>	
+	
 	<!-- *** double planted crops growth time *** -->
 	<set xpath="//block[@name='cropsGrowingMaster']//property[@name='PlantGrowing.GrowthRate']/@value">126</set>
+	
+	<!-- *** new fertilized terrain *** -->
+	<append xpath="/blocks" >	
+	    <block name="terrFertileFarmland">
+	        <property name="Material" value="Mfarmland"/>
+	        <property name="Shape" value="Terrain"/>
+	        <property name="Mesh" value="terrain"/>
+	        <property name="Texture" value="11"/>
+			<property name="TerrainIndex" value="9"/>
+			<property name="LPHardnessScale" value="2"/>
+	        <property name="Map.Color" value="20,50,21"/>
+	        <property name="ImposterExclude" value="true"/>
+	        <property name="CanMobsSpawnOn" value="false"/>
+	        <property class="RepairItems"> <property name="resourceClayLump" value="14"/> </property>
+			<property class="UpgradeBlock">
+		        <property name="ToBlock" value="terrFertilizedFarmland"/>
+		        <property name="Item" value="resourceFertilizer"/>
+		        <property name="ItemCount" value="5"/>
+		        <property name="UpgradeHitCount" value="4"/>
+	        </property>
+	        <drop event="Harvest" name="resourceClayLump" count="22" tag="oreWoodHarvest"/>
+	        <drop event="Destroy" count="0"/>
+	        <drop event="Fall" name="terrFertileDirt" count="1" prob="0.25" stick_chance="1"/>
+	        <drop event="Fall" name="resourceClayLump" count="44" prob="0.187" stick_chance="0"/>
+	        <property name="DescriptionKey" value="terrainBlockGroupDesc"/>
+	        <property name="FilterTags" value="fterrain"/>
+	        <property name="SortOrder1" value="d0m0"/>
+	        <property name="SortOrder2" value="0050"/>
+	        <property name="DisplayType" value="blockTerrainFertile" />
+        </block>
+	
+	    <block name="terrFertilizedFarmland">
+	        <property name="Material" value="MfertilizedFarmland"/>
+	        <property name="Shape" value="Terrain"/>
+	        <property name="Mesh" value="terrain"/>
+	        <property name="Texture" value="1"/>
+	        <property name="ImposterExclude" value="true"/>
+	        <property name="CanMobsSpawnOn" value="false"/>
+	        <property class="RepairItems"> <property name="resourceClayLump" value="14"/> </property>
+			<property class="UpgradeBlock">
+		        <property name="ToBlock" value="terrFertilizedFarmland3"/>
+		        <property name="Item" value="resourceFertilizer"/>
+		        <property name="ItemCount" value="10"/>
+		        <property name="UpgradeHitCount" value="4"/>
+	        </property>
+	        <drop event="Harvest" name="resourceClayLump" count="22" tag="oreWoodHarvest"/>
+	        <drop event="Destroy" count="0"/>
+	        <drop event="Fall" name="terrFertileDirt" count="1" prob="0.25" stick_chance="1"/>
+	        <drop event="Fall" name="resourceClayLump" count="44" prob="0.187" stick_chance="0"/>
+	        <property name="DescriptionKey" value="terrainBlockGroupDesc"/>
+	        <property name="FilterTags" value="fterrain"/>
+	        <property name="SortOrder1" value="d0m0"/>
+	        <property name="SortOrder2" value="0050"/>
+	        <property name="DisplayType" value="blockTerrainFertile" />
+        </block>
+        
+		<block name="terrFertilizedFarmland3">
+	        <property name="Material" value="MfertilizedFarmland3"/>
+	        <property name="Shape" value="Terrain"/>
+	        <property name="Mesh" value="terrain"/>
+	        <property name="Texture" value="2"/>
+	        <property name="ImposterExclude" value="true"/>
+	        <property name="CanMobsSpawnOn" value="false"/>
+	        <property class="RepairItems"> <property name="resourceClayLump" value="14"/> </property>
+	        <drop event="Harvest" name="resourceClayLump" count="22" tag="oreWoodHarvest"/>
+	        <drop event="Destroy" count="0"/>
+	        <drop event="Fall" name="terrFertileDirt" count="1" prob="0.25" stick_chance="1"/>
+	        <drop event="Fall" name="resourceClayLump" count="44" prob="0.187" stick_chance="0"/>
+	        <property name="DescriptionKey" value="terrainBlockGroupDesc"/>
+	        <property name="FilterTags" value="fterrain"/>
+	        <property name="SortOrder1" value="d0m0"/>
+	        <property name="SortOrder2" value="0050"/>
+	        <property name="DisplayType" value="blockTerrainFertile" />
+        </block>		
+	</append>
+
+	<!-- *** biome terrain upgrades to plantable terrain with hoe *** -->
+	<append xpath="/blocks/block[@name='terrDirt']">
+	    <property class="UpgradeBlock">
+		    <property name="ToBlock" value="terrFertileFarmland"/>
+		    <property name="Item" value="meleeToolFarmT2IronHoe"/>
+		    <property name="ItemCount" value="0"/>
+		    <property name="UpgradeHitCount" value="4"/>
+	    </property>
+	</append>
+	
+	<append xpath="/blocks/block[@name='terrForestGround']">
+	    <property class="UpgradeBlock">
+		    <property name="ToBlock" value="terrFertileFarmland"/>
+		    <property name="Item" value="meleeToolFarmT2IronHoe"/>
+		    <property name="ItemCount" value="0"/>
+		    <property name="UpgradeHitCount" value="4"/>
+	    </property>
+	</append>
+	
+	<append xpath="/blocks/block[@name='terrBurntForestGround']">
+	    <property class="UpgradeBlock">
+		    <property name="ToBlock" value="terrFertileFarmland"/>
+		    <property name="Item" value="meleeToolFarmT2IronHoe"/>
+		    <property name="ItemCount" value="0"/>
+		    <property name="UpgradeHitCount" value="4"/>
+	    </property>
+	</append>
+	
+	<append xpath="/blocks/block[@name='terrDesertGround']">
+	    <property class="UpgradeBlock">
+		    <property name="ToBlock" value="terrFertileFarmland"/>
+		    <property name="Item" value="meleeToolFarmT2IronHoe"/>
+		    <property name="ItemCount" value="0"/>
+		    <property name="UpgradeHitCount" value="4"/>
+	    </property>
+	</append>	
+	
+	<!-- sets crops grown quantity *** -->
+	<set xpath="//block[starts-with(@name,'planted') and contains(@name,'HarvestPlayer')]//drop[@event='Harvest'][@tag='cropHarvest']/@count">1</set>	
+	
+	<append xpath="//block[starts-with(@name,'planted') and contains(@name,'HarvestPlayer')]">
+		<property name="Class" value="CropsGrown"/>
+	</append>
+	
+	<insertafter xpath="//block[starts-with(@name,'planted') and not (contains(@name,'HarvestPlayer'))]//property[1]">
+		<property name="CropsGrown.BonusHarvestDivisor" value="32"/>
+	</insertafter>
+	
+	<set xpath="//block[@name='plantedMushroom3Harvest']">
+		<property name="Material" value="Mmushrooms"/>
+		<property name="PlantGrowing.FertileLevel" value="0"/>
+		<property name="CropsGrown.BonusHarvestDivisor" value="16"/>
+		<property name="PickupJournalEntry" value="farmingTip"/>
+		<property name="DisplayType" value="blockMulti"/>
+		<property name="DisplayInfo" value="Description"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/OutdoorDecor/mushroomHarvestPrefab"/>
+		<property name="WaterFlow" value="permitted"/>
+		<property name="Collide" value="melee"/>
+		<property name="IsTerrainDecoration" value="true"/>
+		<property name="VehicleHitScale" value=".1"/>
+		<property name="HarvestOverdamage" value="false"/>
+		<drop event="Harvest" name="foodCropMushrooms" count="1" tag="wildCropsHarvest"/>
+		<drop event="Harvest" name="foodCropMushrooms" prob="0.5" count="1" tag="bonusCropHarvest"/>
+		<drop event="Destroy" count="0"/>
+		<drop event="Fall" name="resourceYuccaFibers" count="0" prob="1" stick_chance="0"/>
+		<property name="SortOrder1" value="B951"/>
+		<property name="SortOrder2" value="0004"/>
+		<property name="FilterTags" value="MC_outdoor,SC_crops"/>
+	</set>	
+	
+	<!-- *** wild crops can be picked up *** -->	
+	<append xpath="//block[@name='mushroom01']">
+		<property name="CanPickup" value="true" param1="foodCropMushrooms"/>		
+	</append>
+	
+	<append xpath="//block[@name='plantedMushroom3Harvest']">
+		<property name="CanPickup" value="true" param1="foodCropMushrooms"/>		
+	</append>
+	
+	<append xpath="//block[@name='plantedYucca3Harvest']">
+		<property name="CanPickup" value="true" param1="foodCropYuccaFruit"/>
+	</append>
+	
+	<append xpath="//block[@name='plantedCotton3Harvest']">
+		<property name="CanPickup" value="true" param1="resourceCropCottonPlant"/>
+	</append>
+	
+	<append xpath="//block[@name='plantedGoldenrod3Harvest']">
+		<property name="CanPickup" value="true" param1="resourceCropGoldenrodPlant"/>
+	</append>
+	
+	<append xpath="//block[@name='plantedAloe3Harvest']">
+		<property name="CanPickup" value="true" param1="resourceCropAloeLeaf"/>
+	</append>
+	
+	<append xpath="//block[@name='plantedBlueberry3Harvest']">
+		<property name="CanPickup" value="true" param1="foodCropBlueberries"/>
+	</append>
+	
+	<append xpath="//block[@name='plantedPotato3Harvest']">
+		<property name="CanPickup" value="true" param1="foodCropPotato"/>
+	</append>
+	
+	<append xpath="//block[@name='plantedChrysanthemum3Harvest']">
+		<property name="CanPickup" value="true" param1="resourceCropChrysanthemumPlant"/>
+	</append>
+	
+	<append xpath="//block[@name='plantedCorn3Harvest']">
+		<property name="CanPickup" value="true" param1="foodCropCorn"/>
+	</append>
+	
+	<append xpath="//block[@name='plantedGraceCorn3Harvest']">
+		<property name="CanPickup" value="true" param1="foodCropGraceCorn"/>
+	</append>
+	
+	<append xpath="//block[@name='plantedHop3Harvest']">
+		<property name="CanPickup" value="true" param1="resourceCropHopsFlower"/>
+	</append>
+	
+	<append xpath="//block[@name='plantedPumpkin3Harvest']">
+		<property name="CanPickup" value="true" param1="foodCropPumpkin"/>
+	</append>
+	
+	<!-- *** POI farm plots not plantable *** -->
+	<set xpath="//block[starts-with(@name,'farmPlotBlock') and not (contains(@name,'Player'))]//property[@name='Material']/@value">Mdirt</set>
+	
+	<!-- *** Player farm plots yield max crops *** -->
+	<set xpath="//block[starts-with(@name,'farmPlotBlock') and contains(@name,'Player')]//property[@name='Material']/@value">MfertilizedFarmland3</set>		
+	<set xpath="//block[@name='farmPlotBlockVariantHelper']">
+		<property name="Extends" value="farmPlotBlock"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="Material" value="MfertilizedFarmland3"/>
+		<property name="CustomIcon" value="farmPlotBlock"/>
+		<property name="ItemTypeIcon" value="all_blocks"/>
+		<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+		<property name="SelectAlternates" value="true"/>
+		<property name="PlaceAltBlockValue" value="farmPlotBlockPlayer,farmPlotBlockPlayerCornerRound,farmPlotBlockPlayerRaised"/>
+		<property name="SortOrder1" value="U200"/>
+		<property name="SortOrder2" value="0000"/>
+		<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>	
+	</set>
 	
 	<!-- *** adds tool slots to workbench *** -->
 	<set xpath="//block[@name='workbench']/property[2]//property[1]/@value">tools,output</set>
@@ -15,10 +271,11 @@
 	
 	<append xpath="//block[@name='campfire']">
 	<property name="HasModifiers" value="true"/>
+	<property name="NumModifiersSlots" value="3"/>
 	</append>
 	
 	<!-- *** increased drop rate for honey from vanilla stumps *** -->
-	<set xpath="//block[@name='treeStump']//drop[2]/@prob">.75</set>
+	<set xpath="//block[@name='treeStump']//drop[2]/@prob">.4</set>
 	
 	<!-- *** adds honeybee harvest from trees with WastelandTreasures book *** -->
 	<insertafter xpath="//block[@name='treeMaster']//drop[@event='Harvest'][@name='foodHoney']">
@@ -85,17 +342,7 @@
 	<!-- *** tablesaw can be picked up *** -->
 	<append xpath="//block[@name='tableSaw']">
 	<property name="CanPickup" value="true" param1="playerTableSaw"/>
-	</append>
-	
-	<!-- *** plants can be picked up *** -->
-	<!-- <append xpath="//block[contains(@name,'Harvest') and not (starts-with(@name,'plantedSnowberry'))]">
-	<property name="CanPickup" value="true"/>
-	</append> -->
-	
-	<!-- *** POI farmplots no longer plantable *** -->
-	<!-- <setattribute xpath="/blocks/block[@name='farmPlotBlock']//property[@name='Material']" name="value">Mdirt</setattribute> -->
-	<!-- <set xpath="/blocks/block[@name='farmPlotBlock']/drop[@event='Harvest'][@name='resourceClayLump']/@count">20</set> -->
-	<!-- <set xpath="/blocks/block[@name='farmPlotBlock']/drop[@event='Harvest'][@name='resourcePotassiumNitratePowder']/@count">12</set> -->
+	</append>	
 	
 	<!-- *** dew collector now replaced by advanced dew collector *** -->
 	<remove xpath="//block[@name='cntDewCollector']"/>		
@@ -173,7 +420,7 @@
 	<property name="Weight" value="50"/>
 	</insertafter>
 	<!-- *** potted plant *** -->
-	<insertafter xpath="//block[contains(@name,'plantPotted')]/property[@name='Material']">
+	<insertafter xpath="//block[contains(@name,'plantPotted')]/property[1]">
 	<property name="Weight" value="50"/>
 	</insertafter>
 	<!-- *** bedroll *** -->
@@ -274,7 +521,7 @@
 	</append>
 	<append xpath="//block[starts-with(@name,'treeOak')]">
 	<drop event="Harvest" name="resourceWoodScraps" count="35,70" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceBranch" count="5,10" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceBranch" count="5,10" tag="allHarvest"/>	
 	</append>
 	<append xpath="//block[starts-with(@name,'treePlanted')]">
 	<drop event="Harvest" name="resourceWoodScraps" count="35,70" tag="allHarvest"/>

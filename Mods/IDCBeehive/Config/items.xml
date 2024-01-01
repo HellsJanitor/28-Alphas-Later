@@ -16,7 +16,7 @@
 			<property name="ShowQuality" value="true"/> 
 			
 			<property class="Attributes">
-				<property name="DegradationMax" value="25"/> 
+				<property name="DegradationMax" value="10"/> 
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>

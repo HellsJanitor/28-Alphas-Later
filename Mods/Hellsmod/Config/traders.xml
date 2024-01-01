@@ -1,6 +1,23 @@
 <configs>
 	<!-- search find all *** for changes -->
 	
+	<!-- *** iron hoe schematic and fertilzier added to trader stock *** -->
+	<append xpath="//trader_item_group[@name='perkBooks']">
+	    <item name="meleeToolFarmT2IronHoeSchematic"/>		
+	</append>
+    
+	<append xpath="//trader_item_group[@name='traderAlways']">
+	    <item name="meleeToolFarmT2IronHoeSchematic"/>		
+	</append>
+	
+	<append xpath="//trader_item_group[@name='seeds']">
+	    <item name="resourceFertilizer" count="50,100"/>
+	</append>	
+	
+	<append xpath="//trader_item_group[@name='traderGeneral']">
+	    <item name="resourceFertilizer" count="50,100"/>
+	</append>
+	
 	<!-- *** increased buy markup, decreased sell markup *** -->
 	<setattribute xpath="/traders" name="buy_markup">5</setattribute>
 	<setattribute xpath="/traders" name="sell_markdown">0.1</setattribute>
@@ -21,9 +38,9 @@
 		<item name="foodScrambledEggs" count="1,2"/>
 	</append>
 	
-	<append xpath="//trader_item_group[@name='cannedfood']">
+	<insertbefore xpath="//trader_item_group[@name='cannedfood']//item[1]">
 	<item name="foodCanCarrots"/>
-	</append>
+	</insertbefore>
 	
 	<!-- *** add tablesaw to trader stock *** -->
 	<append xpath="//trader_item_group[@name='tools']">
@@ -46,8 +63,70 @@
 		<item name="modBicycleStaminaSaverSchematic"/>		
 	</append>
 	
-	<!-- *** add antivenom to medical trader stock *** -->
+	<!-- *** add antivenom/St. John's wort to medical trader stock *** -->
 	<append xpath="//trader_item_group[@name='medicine']">
 	<item name="antivenom"/>
+	<item name="drugStJohnsWort" count="1,2"/>
 	</append>
+	
+	<!-- *** add lithium to rare medical trader stock *** -->
+	<append xpath="//trader_item_group[@name='rareMedicine']">
+	<item name="drugLithium" count="1,2"/>
+	</append>
+	
+	<!-- *** remove all eye/face wear EXCEPT looting goggles & bandanna *** -->
+	<set xpath="//trader_item_group[@name='clothes']">
+	<item name="apparelCoatPufferCoat"/>
+	<item group="skullCapAll"/>
+	<item group="shirtLongAll"/>
+	<item group="pantsAll"/>
+	<item name="apparelTankTop"/>
+	<item name="apparelBandana"/>
+	<item name="apparelSweatshirt"/>
+	<item name="apparelHoodySweatshirt"/>
+	<item group="cowboyHatAll"/>
+	<item group="ballCapAll"/>
+	<item group="pressboyCapAll"/>
+	<item group="suitAll" prob="0.2"/>
+	<item name="apparelCowboyBoots"/>
+	<item name="apparelTShirtPlain"/>
+	<item name="apparelWornBoots"/>	
+	<item name="apparelAviatorGoggles" prob=".7"/>
+	<item name="apparelNightvisionGoggles" prob=".7"/>
+	<item name="armorFootballHelmet"/>
+	<item name="apparelCoatLeatherDuster" prob="0.2"/>
+	<item group="hazmatGear" prob="0.1"/>
+	<item name="apparelFacialPiercings" prob="0.1"/>
+	<item name="apparelGothBoots" prob=".3"/>
+	<item name="apparelGothPants" prob=".3"/>
+	</set>
+	
+	<set xpath="//trader_item_group[@name='groupArmorMods']">
+	<!-- *** T1_Armor_Mods -->
+		<item name="modArmorSkullCap"/>
+		<item name="modArmorPressboyCap"/>
+		<item name="modArmorBallCap"/>
+		<item name="modArmorHelmetLight"/>
+		<item name="modArmorInsulatedLiner"/>
+		<item name="modArmorCoolingMesh"/>
+		<item name="modArmorPlatingBasic"/>
+		<item name="modArmorStoragePocket"/>
+		<item name="modArmorImprovedFittings"/>
+		<item name="modGlassesPerception"/>
+		<item name="modGlassesStrength"/>
+		<item name="modGlassesFortitude"/>
+		<item name="modGlassesAgility"/>
+		<item name="modGlassesIntellect"/>
+	<!-- *** T2_Armor_Mods -->
+		<item name="modArmorWaterPurifier"/>
+		<item name="modArmorImpactBracing"/>
+		<item name="modArmorPlatingReinforced"/>
+		<item name="modArmorMuffledConnectors"/>
+		<item name="modArmorDoubleStoragePocket"/>
+		<item name="modArmorCustomizedFittings"/>		
+	<!-- *** T3_Armor_Mods -->
+		<item name="modArmorBandolier"/>
+		<item name="modArmorTripleStoragePocket"/>
+		<item name="modArmorAdvancedMuffledConnectors"/>
+	</set>
 </configs>

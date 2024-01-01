@@ -7,6 +7,64 @@
 	<!-- *** change to packmule *** -->
 	<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity'][@value='3,6,10,14,18']/@value">3,6,9,12,15</set>
 	
+	<!-- *** change to Nightstalker Adrenaline Thief *** -->
+	<set xpath="/progression/perks/book[@name='perkNightStalkerThiefAdrenaline']/effect_group/passive_effect[@name='CarryCapacity']/@value">30</set>
+	
+	<!-- *** acid from car batteries unlocked with Wasteland treasures Vol. 3 *** -->
+	<append xpath="/progression/perks/book[@name='perkWasteTreasuresAcid']/effect_group">
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceAcid"/>
+	</append>
+	
+	<!-- *** rad removing throwables unlocks *** -->
+	<set xpath="//crafting_skill[@name='craftingExplosives']/display_entry[@name_key='explosivesT1-1,explosivesT1-2,explosivesT1-3']//unlock_entry[@item='thrownAmmoPipeBomb']/@item">thrownAmmoPipeBomb,thrownAmmoAntiRadPipeBomb</set>
+	<set xpath="//crafting_skill[@name='craftingExplosives']/display_entry[@name_key='explosivesT1-1,explosivesT1-2,explosivesT1-3']//unlock_entry[@item='thrownGrenade']/@item">thrownGrenade,thrownAntiRadGrenade</set>
+	<set xpath="//crafting_skill[@name='craftingExplosives']/display_entry[@name_key='explosivesT2-1,explosivesT2-2,explosivesT2-3']//unlock_entry[@item='thrownGrenadeContact']/@item">thrownGrenadeContact,thrownGrenadeAntiRadContact</set>
+	
+	<set xpath="//crafting_skill[@name='craftingExplosives']/effect_group//passive_effect[@tags='thrownAmmoPipeBomb']/@tags">thrownAmmoPipeBomb,thrownAmmoAntiRadPipeBomb</set>
+	<set xpath="//crafting_skill[@name='craftingExplosives']/effect_group//passive_effect[@tags='thrownGrenade']/@tags">thrownGrenade,thrownAntiRadGrenade</set>
+	<set xpath="//crafting_skill[@name='craftingExplosives']/effect_group//passive_effect[@tags='thrownGrenadeContact']/@tags">thrownGrenadeContact,thrownGrenadeAntiRadContact</set>
+	
+	<!-- *** Urban Combat Vol. 2 unlocks *** -->
+	<!-- <set xpath="/progression/perks/book[@name='perkUrbanCombatCigar']/effect_group/passive_effect[@name='RecipeTagUnlocked']/@tags"></set> -->
+	
+	<!-- *** removes harvesting boost and bonus from crops (lines 41 & 42) *** -->
+	<set xpath="//perk[@name='perkLivingOffTheLand']">
+	<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="1" desc_key="reqFortitudeLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="3" desc_key="reqFortitudeLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="5" desc_key="reqFortitudeLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="7" desc_key="reqFortitudeLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="10" desc_key="reqFortitudeLevel10"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_set" level="0,3" value="0,3" tags="perkLivingOffTheLandCrafting"/><!-- fake crafting perk that is used to scale resources -->
+
+			<!-- <passive_effect name="HarvestCount" operation="perc_add" level="1,2,3" value="0,0,0" tags="cropHarvest,wildCropsHarvest"/> -->
+			<!-- <passive_effect name="HarvestCount" operation="base_set" level="2,3" value="1,1" tags="bonusCropHarvest"/> -->
+
+			<!-- Increase the chance to find seeds with each perk rank -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="seedSkill"/>
+
+			<!-- Increase the chance to find seed crafting skill magazines with each perk rank up to crafting skill 20 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="seedCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingSeeds" operation="LT" value="20"/>
+			</passive_effect>
+
+			<!-- Once seed crafting skill reaches 20, set the probability bonus of finding seed crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="seedCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingSeeds" operation="Equals" value="20"/>
+			</passive_effect>
+
+			<effect_description level="1" desc_key="perkLivingOffTheLandRank1Desc" long_desc_key="perkLivingOffTheLandRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkLivingOffTheLandRank2Desc" long_desc_key="perkLivingOffTheLandRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkLivingOffTheLandRank3Desc" long_desc_key="perkLivingOffTheLandRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkLivingOffTheLandRank4Desc" long_desc_key="perkLivingOffTheLandRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkLivingOffTheLandRank5Desc" long_desc_key="perkLivingOffTheLandRank5LongDesc"/>
+		</effect_group>	
+	</set>
+	
+	<!-- *** reduce lockpick break chance *** -->
+	<set xpath="//perk[@name='perkLockPicking']/effect_group//passive_effect[@name='LockPickBreakChance']/@value">.3,.5</set>
+	
 	<!-- *** reduced dismember chance *** -->
 	<set xpath="//attribute//effect_group//passive_effect[@name='DismemberChance']/@value">.01,.09</set>
 	

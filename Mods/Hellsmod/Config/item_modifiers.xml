@@ -1,5 +1,13 @@
 <configs>
-	<!-- search find all *** for changes -->	
+	<!-- search find all *** for changes -->
+
+	<!-- *** adds flat sell/scrap value for all mods (except dye. For some weird reason, it can't be scrapped?) *** -->
+	<remove xpath="//item_modifier[starts-with (@name,'modDye')]/property[@name='Weight']"/>
+	
+	<insertafter xpath="//item_modifier[starts-with (@name,'mod') and not (contains(@name,'modGeneralMaster'))]/property[1]">
+	<property name="EconomicValue" value="750"/>
+	<property name="Weight" value="20"/>
+	</insertafter>	
 	
 	<!-- *** adds Blessed Metal back to the game *** -->
 	<append xpath="/item_modifiers">
@@ -8,11 +16,12 @@
 		<property name="DescriptionKey" value="modGunMeleeBlessedMetalDesc"/>		
 		<property name="CustomIcon" value="modGunMeleeBlessedMetal"/>		
 		<property name="Material" value="Mmetal"/>
+		<property name="EconomicValue" value="750"/>
 		<property name="Weight" value="20"/>		
 		<property name="TraderStageTemplate" value="modsTier3"/>
 		
 		<effect_group tiered="false">
-			<passive_effect name="EntityDamage" operation="perc_add" value=".20"/>			
+			<passive_effect name="EntityDamage" operation="perc_add" value=".30"/>			
 			<requirement name="EntityTagCompare" target="other" tags="radiated,mutated"/>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
 		</effect_group>		
@@ -24,7 +33,7 @@
 		<property name="DescriptionKey" value="modHazmatBootsDesc"/>
 		<property name="CustomIcon" value="apparelHazmatBoots"/>
 		<property name="Material" value="MmilitaryFiber"/>
-		<property name="Weight" value="20"/>		
+		<property name="Weight" value="1"/>		
 		<property name="TraderStageTemplate" value="modsTier3"/>
 		<item_property_overrides name="*">			
 			<property name="UMA.Mesh" value="armor_hazmat_feet"/>
@@ -46,7 +55,7 @@
 		<property name="DescriptionKey" value="modHazmatGlovesDesc"/>
 		<property name="CustomIcon" value="apparelHazmatGloves"/>
 		<property name="Material" value="MmilitaryFiber"/>
-		<property name="Weight" value="20"/>		
+		<property name="Weight" value="1"/>		
 		<property name="TraderStageTemplate" value="modsTier3"/>
 		<item_property_overrides name="*">			
 			<property name="UMA.Mesh" value="armor_hazmat_hands"/>
@@ -68,7 +77,7 @@
 		<property name="DescriptionKey" value="modHazmatJacketDesc"/>
 		<property name="CustomIcon" value="apparelHazmatJacket"/>
 		<property name="Material" value="MmilitaryFiber"/>
-		<property name="Weight" value="20"/>		
+		<property name="Weight" value="1"/>		
 		<property name="TraderStageTemplate" value="modsTier3"/>
 		<item_property_overrides name="*">			
 			<property name="UMA.Mesh" value="armor_hazmat_chest"/>
@@ -85,12 +94,12 @@
 		</effect_group>
 	</item_modifier>
 	
-	<item_modifier name="modHazmatMask" installable_tags="armorHead" modifier_tags="modHazmatMask" blocked_tags="noMods" type="attachment">
+	<item_modifier name="modHazmatMask" installable_tags="armorHead" modifier_tags="modHazmatMask" blocked_tags="noMods,clothing" type="attachment">
 		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
 		<property name="DescriptionKey" value="modHazmatMaskDesc"/>
 		<property name="CustomIcon" value="apparelHazmatMask"/>
 		<property name="Material" value="MmilitaryFiber"/>
-		<property name="Weight" value="20"/>		
+		<property name="Weight" value="1"/>		
 		<property name="TraderStageTemplate" value="modsTier3"/>		
 		<item_property_overrides name="*">			
 			<property name="UMA.Mesh" value="armor_hazmat_head"/>
@@ -114,7 +123,7 @@
 		<property name="DescriptionKey" value="modHazmatPantsDesc"/>
 		<property name="CustomIcon" value="apparelHazmatPants"/>
 		<property name="Material" value="MmilitaryFiber"/>
-		<property name="Weight" value="20"/>		
+		<property name="Weight" value="1"/>		
 		<property name="TraderStageTemplate" value="modsTier3"/>
 		<item_property_overrides name="*">			
 			<property name="UMA.Mesh" value="armor_hazmat_legs"/>
@@ -129,6 +138,105 @@
 			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffRadSuit"/>
 		</effect_group>
 	</item_modifier>
+	
+	<!-- *** eyewear/bandanna mods to replace eyewear items *** -->
+	<item_modifier name="modGlassesPerception" installable_tags="clothing,glasses,head" blocked_tags="armorHead,chest,arms,legs,feet" type="attachment">
+		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="DisplayType" value="clothingShades"/>
+		<property name="DescriptionKey" value="modGlassesPerceptionDesc"/>
+		<property name="CustomIcon" value="apparelShades"/>
+		<property name="Material" value="Mmetal"/>
+		<property name="EconomicValue" value="750"/>	
+		<property name="Weight" value="1"/>		
+		<property name="TraderStageTemplate" value="modsTier1"/>
+		<item_property_overrides name="*">			
+			<property name="UMA.Mesh" value="gear_shades"/>
+			<property name="UMA.Overlay0" value="gear_shades"/>			
+		</item_property_overrides>	
+				
+		<effect_group tiered="false">		
+		<passive_effect name="AttributeLevel" tags="attPerception" operation="base_add" value="1"/>
+		</effect_group>		
+	</item_modifier>
+	
+	<item_modifier name="modGlassesStrength" installable_tags="clothing,glasses,head" blocked_tags="armorHead,chest,arms,legs,feet" type="attachment">
+		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="DisplayType" value="apparelCigar"/>
+		<property name="DescriptionKey" value="modGlassesStrengthDesc"/>
+		<property name="CustomIcon" value="apparelCigar"/>
+		<property name="Material" value="Mmetal"/>
+		<property name="Weight" value="1"/>	
+		<property name="EconomicValue" value="750"/>	
+		<property name="TraderStageTemplate" value="modsTier1"/>
+		<item_property_overrides name="*">			
+			<property name="UMA.Mesh" value="gear_cigar"/>
+			<property name="UMA.Overlay0" value="gear_cigar"/>
+			<!-- <property name="Overlay0Tint" value="30,30,30"/> -->
+		</item_property_overrides>		
+				
+		<effect_group tiered="false">
+		<passive_effect name="AttributeLevel" tags="attStrength" operation="base_add" value="1"/>
+		</effect_group>
+	</item_modifier>
+	
+	<item_modifier name="modGlassesFortitude" installable_tags="clothing,glasses,head" blocked_tags="armorHead,chest,arms,legs,feet" type="attachment">
+		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="DisplayType" value="apparelToughGuySunglasses"/>
+		<property name="DescriptionKey" value="modGlassesFortitudeDesc"/>
+		<property name="CustomIcon" value="apparelShades"/>
+		<property name="CustomIconTint" value="100C08"/>
+		<property name="Material" value="Mmetal"/>
+		<property name="Weight" value="1"/>
+		<property name="EconomicValue" value="750"/>	
+		<property name="TraderStageTemplate" value="modsTier1"/>
+		<item_property_overrides name="*">			
+			<property name="UMA.Mesh" value="gear_shades"/>
+			<property name="UMA.Overlay0" value="gear_shades"/>
+			<property name="UMA.Overlay0Tint" value="30,30,30"/>
+		</item_property_overrides>		
+					
+		<effect_group tiered="false">
+		<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="1"/>
+		</effect_group>
+	</item_modifier>
+	
+	<item_modifier name="modGlassesAgility" installable_tags="clothing,glasses,head" blocked_tags="armorHead,chest,arms,legs,feet" type="attachment">
+		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="DisplayType" value="clothingSkiGoggles"/>
+		<property name="DescriptionKey" value="modGlassesAgilityDesc"/>
+		<property name="CustomIcon" value="apparelSkiGoggles"/>
+		<property name="Material" value="Mmetal"/>
+		<property name="Weight" value="1"/>
+		<property name="EconomicValue" value="750"/>	
+		<property name="TraderStageTemplate" value="modsTier1"/>
+		<item_property_overrides name="*">			
+			<property name="UMA.Mesh" value="gear_goggles"/>
+			<property name="UMA.Overlay0" value="gear_goggles"/>			
+		</item_property_overrides>	
+				
+		<effect_group tiered="false">
+		<passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="1"/>
+		</effect_group>
+	</item_modifier>
+	
+	<item_modifier name="modGlassesIntellect" installable_tags="clothing,glasses,head" blocked_tags="armorHead,chest,arms,legs,feet" type="attachment">
+		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="DisplayType" value="apparelNerdGlasses"/>
+		<property name="DescriptionKey" value="modGlassesIntellectDesc"/>
+		<property name="CustomIcon" value="apparelNerdGlasses"/>
+		<property name="Material" value="Mmetal"/>
+		<property name="Weight" value="1"/>	
+		<property name="EconomicValue" value="750"/>	
+		<property name="TraderStageTemplate" value="modsTier1"/>
+		<item_property_overrides name="*">			
+			<property name="UMA.Mesh" value="specs"/>
+			<property name="UMA.Overlay0" value="specs"/>			
+		</item_property_overrides>
+					
+		<effect_group tiered="false">
+		<passive_effect name="AttributeLevel" tags="attIntellect" operation="base_add" value="1"/>
+		</effect_group>
+	</item_modifier>	
 	</append>
 	
 	<!-- *** adds NiCd, Flammable Oil, and Liquid Nitrogen mods back *** -->
@@ -139,6 +247,7 @@
 	<item_modifier name="modGunMeleeNiCdBattery" installable_tags="tool,weapon" blocked_tags="stunBaton,noMods" modifier_tags="elemental" type="attachment" rarity="0.5">
 		<!-- <property name="UnlockedBy" value="modGunMeleeNiCdBatterySchematic"/> -->
 		<property name="TraderStageTemplate" value="modsTier3"/>
+		<property name="EconomicValue" value="750"/>
 		<property name="Stacknumber" value="1"/>
 
 		<effect_group tiered="false">
@@ -153,6 +262,7 @@
 	<item_modifier name="modGunMeleeFlammableOil" installable_tags="tool,weapon" blocked_tags="stunBaton,noMods" modifier_tags="elemental" type="attachment" rarity="0.5">
 			<!-- <property name="UnlockedBy" value="modGunMeleeFlammableOilSchematic"/> -->
 			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="EconomicValue" value="750"/>
 			<property name="Stacknumber" value="1"/>
 			
 			<effect_group tiered="false">
@@ -177,6 +287,7 @@
 		<item_modifier name="modGunMeleeLiquidNitrogen" installable_tags="tool,weapon" blocked_tags="stunBaton,shotgun,noMods" modifier_tags="elemental" type="attachment" rarity="0.5">
 			<!-- <property name="UnlockedBy" value="modGunMeleeLiquidNitrogenSchematic"/> -->
 			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="EconomicValue" value="750"/>
 			<property name="Stacknumber" value="1"/>
 
 			<effect_group tiered="false">
@@ -198,6 +309,8 @@
 		<property name="TraderStageTemplate" value="modsTier2"/>
 		<property name="CustomIcon" value="modCyclingShorts"/>
 		<property name="DescriptionKey" value="modBicycleStaminaSaverDesc"/>
+		<property name="EconomicValue" value="750"/>
+		<property name="Group" value="Mods,Tool/Weapon Mods,clothing"/>
 		<effect_group tiered="false">
 		<requirement name="IsAttachedToEntity"/>			
 			<passive_effect name="StaminaChangeOT" operation="perc_add" value=".25"/>
@@ -208,17 +321,6 @@
 	
 	<!-- *** serrated blade can be added to spears and knuckles ONLY, 100% bleed proc *** -->
 	<set xpath="//item_modifier[@name='modMeleeSerratedBlade']/@installable_tags">perkBrawler,perkJavelinMaster</set>
-	<set xpath="/item_modifiers/item_modifier[@name='modMeleeSerratedBlade']/effect_group[1]//requirement[1]/@value">100</set>	
+	<set xpath="/item_modifiers/item_modifier[@name='modMeleeSerratedBlade']/effect_group[1]//requirement[1]/@value">100</set>		
 	
-	
-	<!-- *** adds flat sell/scrap value for all mods *** -->
-	<append xpath="//item_modifier[@name='modGeneralMaster']">
-	<property name="EconomicValue" value="400"/>
-	<property name="Weight" value="15"/>
-	</append>
-	
-	<!-- *** makes all dye sellable *** -->
-	<insertAfter xpath="//item_modifier[contains(@name,'modDye')]//property[@name='Material']">
-	<property name="EconomicValue" value="500"/>
-	</insertAfter>	
 </configs>

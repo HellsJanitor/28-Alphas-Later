@@ -4,4 +4,4 @@ idcXuiAnimalSnare,Output
 ctnChickenCoop,Chicken coop
 ctnChickenCoopDesc,Produces eggs. Needs a chicken.
 fuelChicken,Chicken
-fuelChickenDesc,Use this chicken to produce eggs in a chicken coop.
+fuelChickenDesc,"Use this chicken to produce eggs in a chicken coop.\n\nCan also be butchered for meat, bones & feathers\n with a hunting knife in your inventory/toolbelt."

@@ -165,6 +165,14 @@
 		<item name="modBicycleStaminaSaverSchematic"/>
 	</append>
 	
+	<append xpath="/lootcontainers/lootgroup[@name='groupJunk02']">
+		<item name="meleeToolFarmT2IronHoeSchematic" prob="0.2"/>
+    </append>	
+	
+    <append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralCommon']">
+        <item name="meleeToolFarmT2IronHoeSchematic" prob="0.4"/>
+    </append>	
+	
 	<!-- *** mods *** -->
 	<append xpath="//lootgroup[@name='modMeleeT3']">
 		<item name="modGunMeleeNiCdBattery"/>
@@ -182,10 +190,19 @@
 		<item name="modGunMeleeLiquidNitrogen"/>
 	</append>
 	
-	<!-- *** food/drinks in loot *** -->
-	<append xpath="//lootgroup[@name='cannedfood']">
-	<item name="foodCanCarrots"/>
+	<!-- *** despair meds in loot *** -->
+	<append xpath="//lootgroup[@name='groupMedicalUncommon']">
+	<item name="drugStJohnsWort" loot_prob_template="veryLow"/>
 	</append>
+	
+	<append xpath="//lootgroup[@name='groupMedicalRare']">
+	<item name="drugLithium" loot_prob_template="veryLow"/>
+	</append>
+	
+	<!-- *** food/drinks in loot *** -->
+	<insertbefore xpath="//lootgroup[@name='cannedfood']//item[1]">
+	<item name="foodCanCarrots"/>
+	</insertbefore>
 	<remove xpath="//lootgroup[@name='groupDrinksUncommon']"/>
 	<remove xpath="//lootgroup[@name='groupDrinksRare']"/>
 	<remove xpath="//lootgroup[@name='rareFoodDrink']"/>
@@ -240,6 +257,23 @@
 	</append>
 	<append xpath="//lootgroup[@name='groupZpackBoss02']">
 	<item group="groupApparelHazmat" loot_prob_template="medHigh" force_prob="true"/>
+	</append>
+	
+	<!-- *** remove all eye/face wear EXCEPT looting goggles & bandanna *** -->
+	<set xpath="//lootgroup[@name='groupApparelFaceCover']">
+	<item name="apparelBandana" mods="dye" mod_chance="0"/>
+	<item name="apparelAviatorGoggles"  loot_prob_template="high"/>
+	</set>
+	
+	<remove xpath="//lootgroup//item[@name='apparelCigar']"/>
+	
+	<!-- *** adds new eye/face wear mods to loot *** -->
+	<append xpath="//lootgroup[@name='modArmorT1']">
+	<item name="modGlassesPerception"/>
+	<item name="modGlassesStrength"/>
+	<item name="modGlassesFortitude"/>
+	<item name="modGlassesAgility"/>
+	<item name="modGlassesIntellect"/>
 	</append>
 	
 	<!-- *** hazmat zombies guaranteed hazmat gear when loot drops *** -->

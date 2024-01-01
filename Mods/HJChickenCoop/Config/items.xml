@@ -20,7 +20,7 @@
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="50" />
+				<passive_effect name="DegradationMax" operation="base_set" value="10" />
 			</effect_group>
 		</item>
 	</append>

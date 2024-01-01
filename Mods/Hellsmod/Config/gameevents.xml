@@ -43,5 +43,18 @@
 		</action>
 
 	</action_sequence>	
+	
+	<!-- *** hordes called in from Boomer explosions *** -->
+	<action_sequence name="boomer_horde_1" template="vote_minor">
+		<variable name="zombiename" value="zombieArlene,zombieBoe,zombieJoe,zombieLab,zombieDarlene,zombieMarlene,zombieYo,zombieSteve,zombieBusinessMan,zombieNurse,zombieSkateboarder,zombiePartyGirl,zombieBurnt,zombieJanitor" />
+		<variable name="spawncount" value="10" />
+		<variable name="alertsound" value="zombiemalealert" />
+	</action_sequence>
+	
+	<action_sequence name="boomer_horde_feral" template="vote_minor">
+		<variable name="zombiename" value="zombieArleneFeral,zombieBoeFeral,zombieJoeFeral,zombieLabFeral,zombieDarleneFeral,zombieMarleneFeral,zombieYoFeral,zombieSteveFeral,zombieBusinessManFeral,zombieNurseFeral,zombieSkateboarderFeral,zombiePartyGirlFeral,zombieJanitorFeral" />
+		<variable name="spawncount" value="10" />
+		<variable name="alertsound" value="zombieferalalert" />
+	</action_sequence>
 	</append>
 </configs>
