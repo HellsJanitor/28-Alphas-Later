@@ -180,7 +180,7 @@
 		<!-- increase despair tick rate if suffering from hunger/thirst -->	
 		<!-- Hungry/Thirsty -->
 		<effect_group>		
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value="12.6">
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value="6.3">
 			<requirement name="!HasBuff" buff="buffDespairCureDisplay"/>				
 			</triggered_effect>	
 			<requirements compare_type="or">				
@@ -190,7 +190,7 @@
 		</effect_group>
 		<!-- very hungry/thirsty -->
 		<effect_group>		
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value="25.2">
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value="12.6">
 			<requirement name="!HasBuff" buff="buffDespairCureDisplay"/>				
 			</triggered_effect>	
 			<requirements compare_type="or">				
@@ -200,7 +200,7 @@
 		</effect_group>
 		<!-- starving/dehydrated -->
 		<effect_group>		
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value="63">
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value="25.2">
 			<requirement name="!HasBuff" buff="buffDespairCureDisplay"/>				
 			</triggered_effect>	
 			<requirements compare_type="or">				
