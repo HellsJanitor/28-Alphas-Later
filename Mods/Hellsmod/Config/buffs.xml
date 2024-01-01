@@ -106,7 +106,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value="31.5">
 			<requirement name="!HasBuff" buff="buffDespairCureDisplay"/>
 			<requirement name="!HasBuff" buff="buffCampfireAOEEffect"/>
-			<!-- <requirement name="!HasBuff" buff="buffCrouching"/> -->
+			<requirement name="!HasBuff" buff="buffCrouching"/>
 			<requirement name="!IsAttachedToEntity"/>			
 			</triggered_effect>	
 			<requirements compare_type="or">
