@@ -111,7 +111,7 @@
 			</triggered_effect>	
 			<requirements compare_type="or">
 				<!-- darkness -->
-				<requirement name="CVarCompare" cvar="_lightlevel" operation="LTE" value="50"/> 
+				<requirement name="CVarCompare" cvar="_lightlevel" operation="LTE" value="50"/>				
 				<!-- wet -->
 				<requirement name="CVarCompare" cvar="_wetness" operation="GTE" value=".9"/> 
 				<!-- freezing -->
@@ -972,6 +972,40 @@
 			<triggered_effect trigger="onSelfBuffStart"  action="ModifyScreenEffect" effect_name="Blur" intensity="1" fade=".1"/>
 			<triggered_effect trigger="onSelfBuffFinish" action="ModifyScreenEffect" effect_name="Blur" intensity="0" fade="5"/>
 		</effect_group>
+	</buff>
+	
+	<!-- *** trader buff that reduces despair when in range *** -->
+	<buff name="buffGoodCompany" hidden="true" >
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>    
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="6" buff="buffGoodCompanyFromTrader">            
+				<requirement name="EntityTagCompare" target="other" tags="player"/>        
+			</triggered_effect>    
+		</effect_group>            
+	</buff>
+	
+	<buff name="buffGoodCompanyFromTrader" name_key="buffGoodCompanyFromTraderName" description_key="buffGoodCompanyFromTraderDesc" icon="ui_game_symbol_allies" icon_color="0,255,0">
+		<stack_type value="replace"/>
+		<duration value="5"/>
+		
+		<effect_group>			
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value="-1">
+			<requirement name="CVarCompare" cvar="_lightlevel" operation="GTE" value="60"/> 
+			<!-- <requirement name="HasBuff" buff="buffGoodCompany"/> -->
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+			<requirement name="!HasBuff" buff="buffDespairCureDisplay"/>
+		</triggered_effect>		
+		</effect_group>
+		
+		<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value="-1">
+			<requirement name="CVarCompare" cvar="_lightlevel" operation="GTE" value="30"/> 
+			<!-- <requirement name="HasBuff" buff="buffGoodCompany"/> -->
+			<requirement name="HasBuff" buff="buffCrouching"/>
+			<requirement name="!HasBuff" buff="buffDespairCureDisplay"/>
+		</triggered_effect>		
+		</effect_group>			           
 	</buff>
 	
 	<!-- *** buffs for new eyewear/bandanna mods *** -->

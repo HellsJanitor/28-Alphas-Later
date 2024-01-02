@@ -32,6 +32,7 @@ Player starts with a new debuff - Despair. Despair is dynamically affected by va
 8. Killing zombies and animals will reduce your overall despair. Conversely, getting hit by enemies will increase it.
 9: Player “wellness”. Your maximum health will also slow down the effects of despair. Levelling up  increases your resistance to despair for every 10 levels.
 10: The morale booster from the drone will decrease the rate at which despair affects you.
+11: The trader has an effect. Being close to a trader will slow down and/or reduce your Despair.
 
 Headshots ONLY. Zombies can only be damaged/killed with headshots, or with fire, or with explosives.
 

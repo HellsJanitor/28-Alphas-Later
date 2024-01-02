@@ -28,6 +28,13 @@
 		</effect_group>		
 	</append>
 	
+	<!-- *** trader buff that reduces despair when in range *** -->
+	<append xpath="//entity_class[@name='npcTraderTemplate']">
+		<effect_group>			
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffGoodCompany"/>			
+		</effect_group>	
+	</append>
+	
 	<!-- *** zombies health increase with difficulty *** -->
 	<set xpath="/entity_classes/entity_class//passive_effect[@name='HealthMax'][@operation='perc_add']/@value">0</set>
 	<insertafter xpath="/entity_classes/entity_class//passive_effect[@name='HealthMax'][@operation='perc_add']">	
