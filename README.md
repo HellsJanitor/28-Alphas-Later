@@ -71,6 +71,7 @@ All arrows and bolts have a 25% chance of causing bleeding on a living target. S
 Ammo can be “dismantled” into its component parts.
 
 The serrated blade only fits on spears and knuckles now.
+
 Hazmat armour mods can be crafted from hazmat gear. You’ll still need all five mods (head, gloves, chest, legs, and boots) for full radiation protection.
 
 New mods - blessed metal for stopping mutated regen. NiCd is back, as is Flaming Oil and Liquid Nitrogen.
