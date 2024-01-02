@@ -24,18 +24,19 @@ The starter quest is now just "place bedroll", which you'll receive on opening t
 
 ### GENERAL GAMEPLAY
 
-Player starts with a new debuff - Despair. Despair is dynamically affected by various different factors, including:
+A player starts with a new debuff - Despair. Despair is dynamically affected by various factors, including:
 
-1. Darkness. Too dark, and your Despair will increase dramatically. Torches, helmet lights and flashlights will mitigate this. Use these in conjunction with a campfire for the best effect.
+1. Darkness. Too dark, and your Despair will increase dramatically. Torches, helmet lights, and flashlights will mitigate this. Use these in conjunction with a campfire for the best effect.
 2. Temperature. If you’re freezing, your Despair will also increase dramatically. Find shelter!
-3. Environment: Varying degrees of “wetness” will change how Despair affects you, as will your shelter. If you’re warm, dry, sheltered, well lit, AND near an operating campfire,forge or chem station you can effectively “treat” Despair.
+3. Environment: Varying degrees of “wetness” will change how Despair affects you, as will your shelter. If you’re warm, dry, sheltered, well-lit, AND near an operating campfire, forge, or chem station you can effectively “treat” Despair.
 4. Hunger and thirst affect how quickly your despair increases. Starvation/dehydration will drastically increase the rate at which you become affected by despair.
 5. Injuries will affect how quickly your despair increases.
 6. There is medication in trader stock and rare medical loot to treat your despair.
 7. Food has an effect. Tier 1 foods will mitigate your despair a little. Tier 4 foods are the most effective.
 8. Killing zombies & animals will reduce your overall despair. Conversely, getting hit by enemies will increase it.
-9. Player “wellness”. Your maximum health will also slow down the effects of despair. Levelling up  increases your resistance to despair for every 10 levels.
+9. Player “wellness”. Your maximum health will also slow down the effects of despair. Leveling up  increases your resistance to despair for every 10 levels.
 10. The morale booster from the drone will decrease the rate at which despair affects you.
+11. The trader has an effect. Being close to a trader will slow down and/or reduce your Despair.
 
 Headshots ONLY. Zombies can only be damaged/killed with headshots, or with fire, or with explosives.
 
@@ -43,7 +44,7 @@ Zombies DON'T bleed. Nothing undead takes bleed damage.
 
 Hazmat zombies are a guaranteed source of hazmat gear. Kill one, and if it drops loot, it'll have some hazmat gear in there.
 
-There are more zombies in the world. Biomes are gamestaged, which means zombies get tougher and their number increases as you level up.
+There are more zombies in the world. Biomes are game-staged, which means zombies get tougher and their number increases as you level up.
 
 Zombies are tougher.
 
@@ -51,9 +52,9 @@ Nights are dangerous, downtown is much more dangerous.
 
 Traders are still protected, but they open from dawn 'til dusk. No more waiting for 6 am anymore.
 
-Traders and vending machines are MUCH more expensive to buy from, and will buy from you at a much lower price.
+Traders and vending machines are MUCH more expensive to buy from and will buy from you at a much lower price.
 
-Crafting is 25% more expensive, and loot, harvesting and scrapping quantities are much lower.
+Crafting is 25% more expensive, and loot, harvesting, and scrapping quantities are much lower.
 
 XP required to level increased by 25%.
 Dismember chance lowered to 1% per attribute level, max at 10%.
@@ -108,7 +109,7 @@ Some Burnt zombies now set the player on fire when they attack. A full hazmat su
 
 Honey infection treatment reduced to 3% from 5%.
 
-Despair medication (St. John’s Wort and Lithium) is in rare medical loot, and in trader stock. Not currently craftable.
+Despair medication (St. John’s Wort and Lithium) is in rare medical loot and trader stock. Not currently craftable.
 
 ### ZOMBIES/ENEMIES
 
@@ -118,7 +119,7 @@ Zombie health increases with game difficulty. Scavenger starts with zombies deal
 
 Hazmat zombies are now immune to burning.
 
-New Bunker Buster zombie. Only appears during bloodmoon(s), and can appear from the very first Bloodmoon. You’ll want to take it out quickly … think of it as a “light” demolition zombie.
+New Bunker Buster zombie. Only appears during blood moon(s), and can appear from the very first Bloodmoon. You’ll want to take it out quickly … think of it as a “light” demolition zombie.
 
 Demolition zombies appear at a much earlier gamestage.
 
@@ -130,9 +131,9 @@ New Rotting zombie variant. They have lower HP, lower XP reward, and they take m
 
 “Normal”, “frozen” & “rotting” ‘Fat’ zombies (Big Mama, tourist) don’t puke, but they do explode …
 
-During bloodmoons, ‘some’ zombies have a 10% chance to respawn after death, unless they’re killed with fire or explosives. There is also a 5% chance that a “boss” zombie will spawn, which boosts all zombies within range; their damage by 20%, and gives them regenerative properties. The boss is marked with a specific symbol, so target them with extreme prejudice.
+During bloodmoons, ‘some’ zombies have a 10% chance to respawn after death unless they’re killed with fire or explosives. There is also a 5% chance that a “boss” zombie will spawn, which boosts all zombies within range; their damage by 20%, and gives them regenerative properties. The boss is marked with a specific symbol, so target them with extreme prejudice.
 
-“Fat” zombies (Cop,Big Mama and Tourist) are filled with a substance that’s irresistible to all zombies. If you are within range when they explode, they’ll cover you in this stuff - and attract other zombies …
+“Fat” zombies (Cop, Big Mama, and Tourist) are filled with a substance that’s irresistible to all zombies. If you are within range when they explode, they’ll cover you in this stuff - and attract other zombies …
 
 ### FOOD/FARMING
 
@@ -148,13 +149,13 @@ Pies and cheesecake need honey for that sweet, sweet taste now.
 
 Crops' growing time is double that of vanilla.
 
-Farming is reworked entirely. You need a hoe to till the ground to plant seeds. Use the hoe with fertiliser to upgrade the tilled ground (can be upgraded twice). Level one tilled ground yields 2 crop, level two (first fertilised level) yields 4 crops and level three (second fertilised level)  yields 6.
+Farming is reworked entirely. You need a hoe to till the ground to plant seeds. Use the hoe with fertiliser to upgrade the tilled ground (can be upgraded twice). Level one tilled ground yields 2 crops, level two (first fertilised level) yields 4 crops, and level three (second fertilised level)  yields 6.
 
 Farm Plots require fertiliser and nails to craft, are crafted in the workbench with a hammer,  and are the same fertile level as level 3 fertilised ground.
 
-Farmplots found in POI’s are no longer plantable.
+Farmplots found in POIs are no longer plantable.
 
-There is no harvest bonus for Living off the Land, instead, seeds cost less crops to make per level, and the amount of fertiliser required to make farmplots is reduced per level. Fertiliser is craftable in the cement mixer and chem station, and is in *some* trader stock.
+There is no harvest bonus for Living off the Land, instead, seeds cost fewer crops to make per level, and the amount of fertiliser required to make farmplots is reduced per level. Fertiliser is craftable in the cement mixer and chem station and is in *some* trader stock.
 
 Wild plants can be picked up - press ‘E’ by default to pick them up. Wild plants always give one crop, whether they’re picked up or “punched”.
 
@@ -162,9 +163,9 @@ Wild plants can be picked up - press ‘E’ by default to pick them up. Wild pl
 
 There is no more Daring Adventurer or Better Barter. Traders will give a drink after every quest tier, which will increase bartering by 5% and trader level by one for each tier of quests completed. MAKE SURE YOU HAVE SPACE IN YOUR INVENTORY FOR IT!!
 
-There is a new perk, Survival Instinct. It's a "single-player" version of Charismatic Nature. 5 levels, each level gains you an additional 5 health/stamina, 10% block damage, 5% entity damage, 3% XP, and carry capacity increases by 1.
+There is a new perk, Survival Instinct. It's a "single-player" version of Charismatic Nature. With 5 levels, each level gains you an additional 5 health/stamina, 10% block damage, 5% entity damage, 3% XP, and carry capacity increases by 1.
 
-Living off the Land now offers a discount to crops needed to make seeds, level 2 costs 4 crops per seed, level 3 costs 3 crops per seed.
+Living off the Land now offers a discount to crops needed to make seeds, level 2 costs 4 crops per seed, and level 3 costs 3 crops per seed.
 
 Cigars, and other clothing which gives perk updates have been removed. Instead, the looting and night vision goggles, and the bandanna, have a mod slot. There are 5 mods available, specifically for these items, and each mod increases the 5 different perks by one. The bartering bonus (from cigars originally), and the crafting speed and XP gain (from the nerdy glasses) have been removed.
 
@@ -186,7 +187,7 @@ Repair kits are more expensive, and weapons/armour/tools that require specific c
 
 All vehicles EXCEPT the bicycle are too heavy for you to carry.
 
-Vehicles CANNNOT be used underwater.
+Vehicles CANNOT be used underwater.
 
 
 
