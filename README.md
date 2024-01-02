@@ -26,16 +26,16 @@ The starter quest is now just "place bedroll", which you'll receive on opening t
 
 Player starts with a new debuff - Despair. Despair is dynamically affected by various different factors, including:
 
-1: Darkness. Too dark, and your Despair will increase dramatically. Torches, helmet lights and flashlights will mitigate this. Use these in conjunction with a campfire for the best effect.
-2: Temperature. If you’re freezing, your Despair will also increase dramatically. Find shelter!
-3: Environment: Varying degrees of “wetness” will change how Despair affects you, as will your shelter. If you’re warm, dry, sheltered, well lit, AND near an operating campfire,forge or chem station you can effectively “treat” Despair.
-4: Hunger and thirst affect how quickly your despair increases. Starvation/dehydration will drastically increase the rate at which you become affected by despair.
-5: Injuries will affect how quickly your despair increases.
-6: There is medication in trader stock and rare medical loot to treat your despair.
-7: Food has an effect. Tier 1 foods will mitigate your despair a little. Tier 4 foods are the most effective.
+1. Darkness. Too dark, and your Despair will increase dramatically. Torches, helmet lights and flashlights will mitigate this. Use these in conjunction with a campfire for the best effect.
+2. Temperature. If you’re freezing, your Despair will also increase dramatically. Find shelter!
+3. Environment: Varying degrees of “wetness” will change how Despair affects you, as will your shelter. If you’re warm, dry, sheltered, well lit, AND near an operating campfire,forge or chem station you can effectively “treat” Despair.
+4. Hunger and thirst affect how quickly your despair increases. Starvation/dehydration will drastically increase the rate at which you become affected by despair.
+5. Injuries will affect how quickly your despair increases.
+6. There is medication in trader stock and rare medical loot to treat your despair.
+7. Food has an effect. Tier 1 foods will mitigate your despair a little. Tier 4 foods are the most effective.
 8. Killing zombies & animals will reduce your overall despair. Conversely, getting hit by enemies will increase it.
-9: Player “wellness”. Your maximum health will also slow down the effects of despair. Levelling up  increases your resistance to despair for every 10 levels.
-10: The morale booster from the drone will decrease the rate at which despair affects you.
+9. Player “wellness”. Your maximum health will also slow down the effects of despair. Levelling up  increases your resistance to despair for every 10 levels.
+10. The morale booster from the drone will decrease the rate at which despair affects you.
 
 Headshots ONLY. Zombies can only be damaged/killed with headshots, or with fire, or with explosives.
 
