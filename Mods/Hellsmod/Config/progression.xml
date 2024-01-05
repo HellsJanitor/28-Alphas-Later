@@ -24,6 +24,12 @@
 	<set xpath="//crafting_skill[@name='craftingExplosives']/effect_group//passive_effect[@tags='thrownGrenade']/@tags">thrownGrenade,thrownAntiRadGrenade</set>
 	<set xpath="//crafting_skill[@name='craftingExplosives']/effect_group//passive_effect[@tags='thrownGrenadeContact']/@tags">thrownGrenadeContact,thrownGrenadeAntiRadContact</set>
 	
+	<!-- *** vehicle bundle unlocks *** -->
+	<set xpath="//crafting_skill[@name='craftingVehicles']/effect_group//passive_effect[2]/@tags">vehicleMinibikeChassis,vehicleMinibikeHandlebars,carBattery,resourceOil,ammoGasCan,MinibikeBundle</set>
+	<set xpath="//crafting_skill[@name='craftingVehicles']/effect_group//passive_effect[3]/@tags">vehicleMotorcycleChassis,vehicleMotorcycleHandlebars,ammoGasCanBundle,MotorcycleBundle</set>
+	<set xpath="//crafting_skill[@name='craftingVehicles']/effect_group//passive_effect[4]/@tags">vehicle4x4TruckChassis,vehicle4x4TruckAccessories,4x4Bundle</set>
+	<set xpath="//crafting_skill[@name='craftingVehicles']/effect_group//passive_effect[5]/@tags">vehicleGyroCopterChassis,vehicleGyroCopterAccessories,GyroBundle</set>
+	
 	<!-- *** Urban Combat Vol. 2 unlocks *** -->
 	<!-- <set xpath="/progression/perks/book[@name='perkUrbanCombatCigar']/effect_group/passive_effect[@name='RecipeTagUnlocked']/@tags"></set> -->
 	
