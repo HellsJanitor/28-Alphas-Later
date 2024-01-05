@@ -42,6 +42,16 @@
 	<item name="foodCanCarrots"/>
 	</insertbefore>
 	
+	<!-- *** add lavender seed *** -->
+	<append xpath="//trader_item_group[@name='seeds']">
+	<item name="plantedLavender1"/>
+	</append>
+	
+	<!-- *** add lavender flower *** -->
+	<append xpath="//trader_item_group[@name='traderGeneral']">
+	    <item name="resourceCropLavender" count="10,20"/>
+	</append>
+	
 	<!-- *** add tablesaw to trader stock *** -->
 	<append xpath="//trader_item_group[@name='tools']">
 		<item name="playerTableSaw" prob="0.7"/>

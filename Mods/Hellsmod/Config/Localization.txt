@@ -92,11 +92,11 @@ buffDespair01UntreatedTooltip,It's feeling a little hopeless ...
 buffDespair01GetBetterName,More optimistic
 buffDespair01GetBetterDesc,You are starting to feel better about your chances of surviving.
 buffDespair02UntreatedName,Isolation
-buffDespair02UntreatedDesc,"You are starting to feel worse about your chances of survival.\n\nEating certain foods, finding warmth and shelter, or taking medication will help you start to feel better."
+buffDespair02UntreatedDesc,"You are starting to feel worse about your chances of survival.\n\nEating certain foods, finding warmth and shelter, or taking medication will help you start to feel better.\n\nStamina regen is 12.5% slower."
 buffDespair02GetBetterName,Positive outlook
 buffDespair02GetBetterDesc,You are starting to feel better about your chances of surviving.
 buffDespair03UntreatedName,Depths of despair
-buffDespair03UntreatedDesc,"You feel the outlook is bleak, and are close to giving up.\n\nEating certain foods, finding warmth and shelter, or taking medication will help you start to feel better."
+buffDespair03UntreatedDesc,"You feel the outlook is bleak, and are close to giving up.\n\nEating certain foods, finding warmth and shelter, or taking medication will help you start to feel better.\n\nStamina regen is 25% slower.\nAll Attributes are lowered by 1."
 buffDespair03GetBetterName,Hopeful
 buffDespair03GetBetterDesc,You are starting to feel better about your chances of surviving.
 buffDespair04Tooltip,The hopelessness of your situation has gotten too much for you to bear.
@@ -112,7 +112,7 @@ drugLithium,Lithium
 drugLithiumDesc,Lithium is the most effective treatment for despair.
 drugStJohnsWort,St. John's Wort
 drugStJohnsWortDesc,"St. John's wort is a herbal treatment, and is effective at treating despair."
-DespairTip,"You are overwhelmed by how hopeless the situation appears. You can combat this by staying in a well-lit area, staying warm, and staying dry.\n\nProlonged periods of being wet, in darkness, or cold temperatures will increase the rate at which your despair grows. Injuries sustained, along with hunger and thirst also have an adverse effect.\n\nThere is medication available to reduce your symptoms, and consuming certain food or drink may help too.\nTreatment from consumables:\nGoldenrod & Red Tea: [FFC800]0.1%[-]\nTier 1 food & coffee: [FFC800]0.25%[-]\nBacon & Eggs, Smoothies, Beer & Mineral Water: [FFC800]0.5%[-]\nTier 2 food & Blackstrap coffee: [FFC800]1%[-]\nTier 3 food: [FFC800]1.5%[-]\nTier 4 food: [FFC800]2.5%[-]"
+DespairTip,"You are overwhelmed by how hopeless the situation appears. You can combat this by staying in a well-lit area, staying warm, and staying dry.\n\nProlonged periods of being wet, in darkness, or cold temperatures will increase the rate at which your despair grows. Injuries sustained, along with hunger and thirst also have an adverse effect.\n\nThere is medication available to reduce your symptoms, and consuming certain food or drink may help too.\nTreatment from consumables:\nCooked Canned Food: [FFC800]0.1%[-]\nBoiled egg & Charred meat: [FFC800]0.20%[-]\nTier 1 food: [FFC800]0.25%[-]\nGoldenrod & Red tea: [FFC800]0.5%[-]\nBacon & Eggs and Coffee: [FFC800]1%[-]\nTier 2 food, Blackstrap coffee,smoothies, mineral water & beer: [FFC800]2%[-]\nTier 3 food: [FFC800]3%[-]\nTier 4 food: [FFC800]5%[-]"
 DespairTip_title,Despair
 buffArrowBleedDesc,Your arrows & crossbow bolts have a 25% chance to make [FFC800]living[-] things bleed - when they hit that is...
 buffArrowBleedName,Arrows Cause Bleed
@@ -372,6 +372,17 @@ resourceWaterFilter,Water Filter
 resourceWaterFilterDesc,"A limited-use water filter, used in the dew collector.\n\nGood for about 25 collection cycles.\n\nMust be replaced when broken."
 resourceWoodScraps,Wood scraps
 resourceWoodScrapsDesc,"Small fragments of wood.\n\nCan be used for fuel and basic building blocks, but not much else."
+resourceCropLavender,Lavender Flower
+resourceCropLavenderDesc,"Lavender has medicinal properties. Use it to make lavender oil in a campfire.\n\nLavender oil can help treat your despair"
+resourceCropLavenderDesc,Lavender
+drugLavenderOil,Lavender Oil
+drugLavenderOilDesc,"A few drops of lavender on a cloth fragment can provide a moment of relaxation when you’re on the go.\n\nApply it like a bandage - treats 3% Despair."
+plantedLavender1,Lavender (Seed)
+plantedLavender2,Lavender (Growing)
+plantedLavender3HarvestPlayer,Lavender Flower
+plantedLavender3HarvestDesc,Lavender Flower
+plantedCropsGroupDesc,"Plant these seeds on a craftable Farm Plot block, or on tilled ground to grow plants for you to harvest.\n\nWhen harvested, you'll need to craft a seed for replanting.\n\nFertilize the ground twice, or use a Farm Plot for maximum yield."
+plantedMushroom1Desc,"Mushroom spores can be planted on all surfaces and walls and will grow without sunlight.\n\nWhen harvested, you'll need to craft a seed for replanting.\n\nPlant in twice-fertilized ground or a Farm Plot for maximum yield."
 RifleRepairKit,Rifle Repair Kit
 RifleRepairKitDesc,"This Repair Kit is used to repair hunting, lever-action, and sniper rifles."
 RobotRepairKit,Robot Repair Kit

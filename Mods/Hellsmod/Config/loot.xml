@@ -32,19 +32,19 @@
 	<set xpath="//item[@count='3,10']/@count">1,5</set>
 	<set xpath="//item[@count='3,20']/@count">1,10</set>
 	
-	<set xpath="//item[@count='4,6']/@count">2,3</set>
+	<set xpath="//item[@count='4,6']/@count">2,4</set>
 	<set xpath="//item[@count='4,8']/@count">2,4</set>
 	<set xpath="//item[@count='4,10']/@count">2,5</set>
 	
-	<set xpath="//item[@count='5,7']/@count">2,3</set>
+	<set xpath="//item[@count='5,7']/@count">3,5</set>
 	<!-- <set xpath="//item[@count='5,8']/@count">2,4</set> -->
 	<set xpath="//item[@count='5,10']/@count">2,5</set>
 	<set xpath="//item[@count='5,20']/@count">2,10</set>
 	<set xpath="//item[@count='5,60']/@count">2,30</set>
 	
-	<set xpath="//item[@count='6,8']/@count">3,4</set>
+	<set xpath="//item[@count='6,8']/@count">4,6</set>
 	<!-- <set xpath="//item[@count='6,9']/@count">3,4</set> -->
-	<set xpath="//item[@count='6,10']/@count">3,5</set>
+	<set xpath="//item[@count='6,10']/@count">4,7</set>
 	<!-- <set xpath="//item[@count='6,11']/@count">3,5</set> -->
 	<!-- <set xpath="//item[@count='6,12']/@count">3,6</set> -->
 	<set xpath="//item[@count='6,14']/@count">3,7</set>
@@ -53,13 +53,14 @@
 	
 	<!-- <set xpath="//item[@count='7,15']/@count">3,7</set> -->
 	
-	<set xpath="//item[@count='8,12']/@count">4,6</set>
-	<set xpath="//item[@count='8,15']/@count">4,7</set>
+	<set xpath="//item[@count='8,12']/@count">5,8</set>
+	<set xpath="//item[@count='8,15']/@count">5,10</set>
 	<!-- <set xpath="//item[@count='8,17']/@count">4,8</set> -->
 	<!-- <set xpath="//item[@count='8,18']/@count">4,9</set> -->
 	<!-- <set xpath="//item[@count='8,19']/@count">4,10</set> -->
 	
-	<set xpath="//item[@count='10,20']/@count">5,10</set>
+	<set xpath="//item[not (contains(@name,'ammo'))][@count='10,20']/@count">5,10</set>
+	<set xpath="//item[contains(@name,'ammo')][@count='10,20']/@count">7,14</set>
 	<set xpath="//item[@count='10,30']/@count">5,15</set>
 	<set xpath="//item[@count='10,40']/@count">5,20</set>
 	<set xpath="//item[@count='10,50']/@count">5,25</set>
@@ -74,21 +75,21 @@
 	<set xpath="//item[@count='15,30']/@count">7,15</set>
 	<set xpath="//item[@count='15,35']/@count">8,17</set>
 	
-	<set xpath="//item[@count='16,24']/@count">8,12</set>
-	<set xpath="//item[@count='16,26']/@count">8,13</set>
+	<set xpath="//item[@count='16,24']/@count">10,16</set>
+	<set xpath="//item[@count='16,26']/@count">10,17</set>
 	<set xpath="//item[@count='16,30']/@count">8,15</set>
 	
-	<set xpath="//item[@count='20,30']/@count">10,15</set>
+	<set xpath="//item[@count='20,30']/@count">13,20</set>
 	<!-- <set xpath="//item[@count='20,40']/@count">10,20</set> -->
 	<set xpath="//item[@count='20,50']/@count">10,25</set>
 	<set xpath="//item[@count='20,60']/@count">10,30</set>
 	<set xpath="//item[@count='20,80']/@count">10,40</set>
 	<set xpath="//item[@count='20,120']/@count">10,60</set>
 	
-	<set xpath="//item[@count='25,35']/@count">13,17</set>
+	<set xpath="//item[@count='25,35']/@count">16,24</set>
 	<set xpath="//item[@count='25,50']/@count">13,25</set>
 	
-	<set xpath="//item[@count='30,40']/@count">15,20</set>
+	<set xpath="//item[@count='30,40']/@count">20,26</set>
 	<set xpath="//item[@count='30,45']/@count">15,22</set>
 	<set xpath="//item[@count='30,60']/@count">15,30</set>
 	<set xpath="//item[@count='30,70']/@count">15,35</set>
@@ -193,10 +194,15 @@
 	<!-- *** despair meds in loot *** -->
 	<append xpath="//lootgroup[@name='groupMedicalUncommon']">
 	<item name="drugStJohnsWort" loot_prob_template="veryLow"/>
+	<item name="drugLavenderOil" loot_prob_template="low"/>
 	</append>
 	
 	<append xpath="//lootgroup[@name='groupMedicalRare']">
 	<item name="drugLithium" loot_prob_template="veryLow"/>
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupMedicalCommon']">
+	<item name="resourceCropLavender" count="5,10"/>
 	</append>
 	
 	<!-- *** food/drinks in loot *** -->

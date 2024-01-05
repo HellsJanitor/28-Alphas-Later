@@ -139,7 +139,7 @@
 		</recipe>		
 		
 	<!-- *** antivenom *** -->
-		<recipe name="antivenom" count="1" craft_area="campfire" craft_tool="toolBeaker" tags="learnable">
+		<recipe name="antivenom" count="1" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
 			<ingredient name="venom" count="1"/>
 			<ingredient name="drinkJarBoiledWater" count="1"/>
 		</recipe>
@@ -240,6 +240,10 @@
 			<passive_effect name="CraftingIngredientCount" level="0,1,2,3" operation="perc_add" value="0,-.3,-.5,-.5" tags="resourceFertilizer"/>
 		</effect_group>
 	</set>
+	
+	<!-- *** splint uses branches instead of wood *** -->
+	<set xpath="//recipe[@name='medicalSplint']//ingredient[@name='resourceWood']/@name">resourceBranch</set>
+	<set xpath="//recipe[@name='medicalSplint']//ingredient[@name='resourceBranch']/@count">2</set>
 
 	<!-- *** remove vanilla king size bed *** -->
 	<remove xpath="//recipe[@name='bed02']"/>
@@ -1045,6 +1049,16 @@
 		<ingredient name="resourceMechanicalParts" count="2"/>
 		<ingredient name="resourceOil" count="2"/>
 	</recipe>
+	
+	<!-- *** lavender oil *** -->
+	<recipe name="drugLavenderOil" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef">
+		<ingredient name="resourceCropLavender" count="8"/>
+		<ingredient name="drinkJarBoiledWater" count="1"/>
+		<ingredient name="resourceCloth" count="1"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="resourceCropLavender"/>
+		</effect_group>
+	</recipe>
 	</append>
 	
 	<!-- *** adds eggs to paint recipe *** -->
@@ -1220,7 +1234,18 @@
 	<effect_group>
       <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add" value="0,-1,-2" tags="foodCropPumpkin"/>
     </effect_group>
-	</insertafter>	
+	</insertafter>
+	
+	<!-- *** new crop - lavender *** -->
+	<insertafter xpath="//recipe[@name='plantedPumpkin1']">
+	<recipe name="plantedLavender1" count="1" craft_time="1" tags="perkLivingOffTheLandCrafting">
+		<ingredient name="resourceCropLavender" count="5"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add" value="0,-1,-2" tags="resourceCropLavender"/>
+		</effect_group>
+	</recipe>	
+	</insertafter>
+	
 	
 	<!-- <set xpath="//recipe/ingredient[contains(@name,'Parts')]/@count">2</set> -->
 	

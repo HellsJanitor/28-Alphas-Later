@@ -15,7 +15,7 @@
 	    <property name="Stacknumber" value="500"/> <!-- STK resource -->
 	    <property name="FuelValue" value="0"/>
 	    <property name="Weight" value="0"/>
-	    <property name="Group" value="Resources"/>
+	    <property name="Group" value="Resources,Chemicals,CFChemicals"/>
 	    <property name="EconomicValue" value="30"/>
 		<property name="CraftingIngredientTime" value=".5"/>
     </item>	
@@ -97,6 +97,21 @@
 		<property name="PickupJournalEntry" value="farmingTip"/>
 		<property name="RepairExpMultiplier" value="1.0"/>
 		</item>
+		
+	<!-- *** lavender *** -->
+	<item name="resourceCropLavender">
+		<property name="DescriptionKey" value="resourceCropLavenderDesc"/>
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="resourceCropLavenderPlayer"/>
+		<property name="Material" value="MresourceCrop"/>
+		<property name="Stacknumber" value="500"/> <!-- STK resource -->
+		<property name="EconomicValue" value="12"/>
+		<!-- <property name="EconomicBundleSize" value="5"/> -->
+		<property name="CraftingIngredientTime" value="5"/>
+		<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+	</item>
 	</append>
 	
 	<!-- *** starter weapon quest item *** -->
@@ -424,7 +439,7 @@
 		<property name="DescriptionKey" value="thrownAmmoAntiRadPipeBombDesc"/>
 		<property name="Stacknumber" value="20"/>		
 		
-		<effect_group>
+		<effect_group tiered="false">
 			<requirement name="EntityTagCompare" target="other" tags="radiated,mutated"/>
 			<triggered_effect trigger="onSelfExplosionDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
 		</effect_group>
@@ -437,7 +452,7 @@
 		<property name="DescriptionKey" value="thrownGrenadeAntiRadContactDesc"/>
 		<property name="Stacknumber" value="25"/>
 		
-		<effect_group>
+		<effect_group tiered="false">
 			<requirement name="EntityTagCompare" target="other" tags="radiated,mutated"/>
 			<triggered_effect trigger="onSelfExplosionDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
 		</effect_group>
@@ -450,7 +465,7 @@
 		<property name="DescriptionKey" value="thrownAntiRadGrenadeDesc"/>
 		<property name="Stacknumber" value="25"/>
 		
-		<effect_group>
+		<effect_group tiered="false">
 			<requirement name="EntityTagCompare" target="other" tags="radiated,mutated"/>
 			<triggered_effect trigger="onSelfExplosionDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
 		</effect_group>
@@ -463,7 +478,7 @@
 		<property name="DescriptionKey" value="thrownAmmoAntiRadMolotovCocktailDesc"/>
 		<property name="Stacknumber" value="20"/>
 		
-		<effect_group>
+		<effect_group tiered="false">
 			<requirement name="EntityTagCompare" target="other" tags="radiated,mutated"/>
 			<triggered_effect trigger="onSelfExplosionDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
 		</effect_group>
@@ -1997,26 +2012,26 @@
 	<set xpath="//item//property[@name='DisplayType'][starts-with(@value,'food') and (contains(@value,'Raw'))]/@value">foodCureDespair</set>	 -->
 	
 	<!-- *** Canned food despair treatment *** -->
-	<!-- <append xpath="//item[starts-with(@name,'foodCan') and (contains(@name,'cooked'))]/effect_group[@name='Food Tier 0']">
+	<append xpath="//item[starts-with(@name,'foodCan') and (contains(@name,'cooked'))]/effect_group[@name='Food Tier 0']">
 		<display_value name="dCureDespair" value=".001"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value=".1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
 	</append>
 	<append xpath="//item[starts-with(@name,'foodCan') and (contains(@name,'Catfood'))]/effect_group[@name='Food Tier 0']">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="-.2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="-.25"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
 	</append>
 	<append xpath="//item[starts-with(@name,'foodCan') and (contains(@name,'Dogfood'))]/effect_group[@name='Food Tier 0']">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="-.2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="-.25"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
-	</append>	 -->
+	</append>	
 
 	<!-- *** Tier 0/1 food despair treatment *** -->
-	<!-- <append xpath="//item[starts-with(@name,'food')]/effect_group[@name='Food Tier 0/1']">
+	<append xpath="//item[starts-with(@name,'food')]/effect_group[@name='Food Tier 0/1']">
 		<display_value name="dCureDespair" value=".002"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
-	</append> -->
+	</append>
 	
 	<!-- *** Tier 1 food despair treatment *** -->
 	<append xpath="//item[starts-with(@name,'food') and not (contains(@name,'BaconAndEggs'))]/effect_group[@name='Food Tier 1']">
@@ -2025,29 +2040,29 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
 	</append>
 	<append xpath="//item[starts-with(@name,'food') and (contains(@name,'BaconAndEggs'))]/effect_group[@name='Food Tier 1']">
-		<display_value name="dCureDespair" value=".005"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value=".5"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
-	</append>
-	
-	<!-- *** Tier 2 food despair treatment *** -->
-	<append xpath="//item[starts-with(@name,'food')]/effect_group[@name='Food Tier 2']">
 		<display_value name="dCureDespair" value=".01"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
 	</append>
 	
+	<!-- *** Tier 2 food despair treatment *** -->
+	<append xpath="//item[starts-with(@name,'food')]/effect_group[@name='Food Tier 2']">
+		<display_value name="dCureDespair" value=".02"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+	</append>
+	
 	<!-- *** Tier 3 food despair treatment *** -->
 	<append xpath="//item[starts-with(@name,'food')]/effect_group[@name='Food Tier 3']">
-		<display_value name="dCureDespair" value=".015"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="1.5"/>
+		<display_value name="dCureDespair" value=".03"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
 	</append>
 	
 	<!-- *** Tier 4 food despair treatment *** -->
 	<append xpath="//item[starts-with(@name,'food')]/effect_group[@name='Food Tier 4']">
-		<display_value name="dCureDespair" value=".025"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="2.5"/>
+		<display_value name="dCureDespair" value=".05"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
 	</append>
 	
@@ -2066,42 +2081,42 @@
 	
 	<!-- *** Coffee despair treatment *** -->
 	<append xpath="//item[@name='drinkJarCoffee']/effect_group[@name='Drink Tier 1']">
-		<display_value name="dCureDespair" value=".025"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="0.25"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
-	</append>
-	
-	<append xpath="//item[@name='drinkJarBlackStrapCoffee']/effect_group[@name='Drink Tier Found']">
 		<display_value name="dCureDespair" value=".01"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
 	</append>
 	
+	<append xpath="//item[@name='drinkJarBlackStrapCoffee']/effect_group[@name='Drink Tier Found']">
+		<display_value name="dCureDespair" value=".02"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+	</append>
+	
 	<!-- *** Tea despair treatment *** -->
 	<append xpath="//item[starts-with(@name,'drink')and (contains(@name,'Tea'))]/effect_group[@name='Drink Tier 1']">
-		<display_value name="dCureDespair" value=".001"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="0.1"/>
+		<display_value name="dCureDespair" value=".005"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="0.5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
 	</append>
 	
 	<!-- *** Smoothie despair treatment *** -->
 	<append xpath="//item[@name='drinkYuccaJuiceSmoothie']/effect_group[@name='Drink Tier 3']">
-		<display_value name="dCureDespair" value=".005"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value=".5"/>
+		<display_value name="dCureDespair" value=".02"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
 	</append>
 	
 	<!-- *** Beer despair treatment *** -->
 	<append xpath="//item[@name='drinkJarBeer']/effect_group[@name='Drink Tier 3']">
-		<display_value name="dCureDespair" value=".005"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value=".5"/>
+		<display_value name="dCureDespair" value=".02"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
 	</append>
 	
 	<!-- *** Mineral Water despair treatment *** -->
 	<append xpath="//item[contains(@name,'drinkJarPureMineralWater')]/effect_group[@name='Drink Tier Found']">
-		<display_value name="dCureDespair" value=".005"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value=".5"/>
+		<display_value name="dCureDespair" value=".02"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
 	</append>	
 	
@@ -2158,7 +2173,42 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
 		</effect_group>
 	</item>
-	</insertafter>	
+	
+	<item name="drugLavenderOil">
+		<property name="Tags" value="medical,medicalSkill"/>
+		<property name="CustomIcon" value="drugLavenderOil"/>
+		<property name="DescriptionKey" value="drugLavenderOilDesc"/>
+		<property name="HoldType" value="64"/>
+		<property name="Meshfile" value="@:Other/Items/Health/bandage.FBX"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="EconomicValue" value="60"/>
+		<property name="Stacknumber" value="10"/> <!-- STK loot -->
+		<!-- <property name="UnlockedBy" value="craftingMedical"/> -->
+		<property name="DisplayType" value="cureDespair"/>
+		<property name="TintColor" value="221,160,221"/>
+		<property name="Group" value="Science,CFChemicals,Medical,TCMedical"/>
+
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1.0"/>
+			<property name="Sound_start" value="player_ointment"/>
+		</property>
+		<property class="Action1">
+			<property name="Class" value="UseOther"/>
+			<property name="Delay" value="1.0"/>
+			<property name="Sound_start" value="player_ointment"/>		
+		</property>
+		<effect_group tiered="false">
+			<display_value name="dCureDespair" value=".03"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="3"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+		</effect_group>
+	</item>
+	</insertafter>
+
+	<!-- *** increase stack number for first aid bandage *** -->
+	<set xpath="//item[@name='medicalFirstAidBandage']//property[@name='Stacknumber']/@value">10</set>
 	
 	<!-- *** pairs custom repair kits to respective item *** -->
 	<setattribute xpath="/items/item[@name='meleeToolPickT2SteelPickaxe']//property[@name='RepairTools']" name="value">SteelToolRepairKit</setattribute>
