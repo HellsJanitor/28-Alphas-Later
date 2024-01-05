@@ -109,7 +109,7 @@ Some Burnt zombies now set the player on fire when they attack. A full hazmat su
 
 Honey infection treatment reduced to 3% from 5%.
 
-Despair medication (St. John’s Wort and Lithium) is in rare medical loot and trader stock. Not currently craftable.
+Despair medication (Lavender, St. John’s Wort and Lithium) can be found in medical loot, and in trader stock. Lavender oil can be crafted from lavender flowers and used to treat despair.
 
 ### ZOMBIES/ENEMIES
 
@@ -158,6 +158,8 @@ Farmplots found in POIs are no longer plantable.
 There is no harvest bonus for Living off the Land, instead, seeds cost fewer crops to make per level, and the amount of fertiliser required to make farmplots is reduced per level. Fertiliser is craftable in the cement mixer and chem station and is in *some* trader stock.
 
 Wild plants can be picked up - press ‘E’ by default to pick them up. Wild plants always give one crop, whether they’re picked up or “punched”.
+
+New plant - lavender. Purple flower found growing in the wild and in some POIs. Seeds crafted from lavender flowers, no unlock required. Lavender flowers can be found in loot and trader stock, and Lavender seeds in trader stock.
 
 ### PROGRESSION
 
