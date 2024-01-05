@@ -204,6 +204,7 @@
 	<append xpath="/blocks">
 	<block name="plantedLavender1">
 		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+		<property name="CropsGrown.BonusHarvestDivisor" value="16"/>
 		<property name="CustomIcon" value="plantedLavender1"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="PlantGrowing.Next" value="plantedLavender2"/>		
@@ -219,6 +220,7 @@
 
 	<block name="plantedLavender2">
 		<property name="Extends" value="cropsGrowingMaster"/>
+		<property name="CropsGrown.BonusHarvestDivisor" value="16"/>
 		<property name="CreativeMode" value="None"/>
 		<property name="PlantGrowing.Next" value="plantedLavender3HarvestPlayer"/>
 		<property name="CustomIcon" value="resourceCropLavenderPlayer"/>
@@ -230,6 +232,7 @@
 	
 	<block name="plantedLavender3HarvestPlayer">
 		<property name="Extends" value="cropsHarvestableMaster"/>
+		<property name="CropsGrown.BonusHarvestDivisor" value="16"/>
 		<property name="CreativeMode" value="None"/>
 		<property name="CustomIcon" value="resourceCropLavenderPlayer"/>
 		<property name="DescriptionKey" value="plantedLavender3HarvestDesc"/>
