@@ -3,8 +3,7 @@
 The idea behind this mod is to slow progression, make traders less powerful, and generally extend the time for a playthrough, while keeping the vanilla look and feel.
 
 ## INSTALLATION INSTRUCTIONS
->![WARN]
->The mod is currently NOT SUITABLE for hosted servers, and there are possible issues with peer-to-peer multiplayer games also.
+
 >[!NOTE]
 >The mod was NOT tested for compatibility with any other mods/modlets, other than the ones that come bundled with it. It's recommended to remove any and all other mods/modlets when playing, as troubleshooting any issues that arise from using other untested mods/modlets won't be possible.
 
