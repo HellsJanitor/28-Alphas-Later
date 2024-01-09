@@ -315,8 +315,21 @@
 	
 	<!-- *** Player farm plots yield max crops *** -->
 	<set xpath="//block[starts-with(@name,'farmPlotBlock') and contains(@name,'Player')]//property[@name='Material']/@value">MfertilizedFarmland3</set>		
-	<set xpath="//block[@name='farmPlotBlockVariantHelper']">
+	<set xpath="//block[@name='farmPlotBlockPlayer']">
 		<property name="Extends" value="farmPlotBlock"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="Material" value="MfertilizedFarmland3"/>
+		<property name="CanMobsSpawnOn" value="false"/>
+		<property name="CustomIcon" value="farmPlotBlock"/>
+		<drop event="Harvest" name="resourceClayLump" count="0" tag="oreWoodHarvest"/>
+		<drop event="Harvest" name="resourcePotassiumNitratePowder" count="0" tag="oreWoodHarvest"/>
+		<drop event="Destroy" name="farmPlotBlockVariantHelper" count="1"/>
+		<property name="SortOrder1" value="B965"/>
+		<property name="SortOrder2" value="0001"/>
+		<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+	</set>
+	<set xpath="//block[@name='farmPlotBlockVariantHelper']">
+		<property name="Extends" value="farmPlotBlockPlayer"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="Material" value="MfertilizedFarmland3"/>
 		<property name="CustomIcon" value="farmPlotBlock"/>
