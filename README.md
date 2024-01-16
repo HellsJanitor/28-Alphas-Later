@@ -6,7 +6,8 @@ The idea behind this mod is to slow progression, make traders less powerful, and
 
 >[!NOTE]
 >The mod was NOT tested for compatibility with any other mods/modlets, other than the ones that come bundled with it. It's recommended to remove any and all other mods/modlets when playing, as troubleshooting any issues that arise from using other untested mods/modlets won't be possible.
->
+
+>[!NOTE]
 >Now updated for multiplayer!!
 
 The download .zip file contains a folder called `\Mods`. You can either:
