@@ -11,15 +11,25 @@ The idea behind this mod is to slow progression, make traders less powerful, and
 >Changelog for v1.2
 >Now updated for multiplayer!!
 > Despair system has a complete rework (feedback is encouraged)
+>
 >Hoe now added to trader stock & loot.
+>
 >Rebalanced recipes for farm plots, and for fertilizer required to till the ground.
+>
 >Reworked the zombie "boomers".
+>
 >Slightly increased ammo in loot.
+>
 >Removed the workbench/tool requirement for chicken coops and beehives. They can now be crafted in your inventory, but you need a repair tool in your inventory.
+>
 >Rebalanced the amount hunger and thirst affect your despair.
+>
 >The liquid nitrogen mod now has a DoT effect, as well as its slow effect.
+>
 >Being in close proximity to zombies now affects your despair. The stronger the zombie, the worse the effect.
+>
 >Two additional food recipes added - Tramp and vagabond stew. Basic recipes, no unlock required. A use for early game cat/dog food, but still needs a cooking pot.
+>
 >Custom mesh files for some food/drink/candy (thanks Schrader :) )
 
 >[!TIP]
