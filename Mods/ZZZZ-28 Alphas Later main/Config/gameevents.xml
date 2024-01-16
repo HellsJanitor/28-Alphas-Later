@@ -89,15 +89,15 @@
 			<property name="sound" value="twitch_enrage" />
 		</action>
 
-		<action class="RageZombies">
+		<!-- <action class="RageZombies">
 			<property name="time" value="30" />
 			<property name="speed_percent" value="1.25" />
 			<property name="target_group" value="zombies" />
-		</action>
+		</action> -->
 		
 		<!-- <action class="CallGameEvent">
 			<property name="game_events" value="boomer_horde_normal" />
-		</action> -->			
+		</action>		 -->	
 	</action_sequence>	
 	
 	<action_sequence name="boomer_horde_normal" template="vote_minor">
