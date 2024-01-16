@@ -162,9 +162,9 @@ New Frozen zombie variant. Slightly tougher, slightly slower, slightly more XP, 
 
 New Rotting zombie variant. They have lower HP, lower XP reward, and they take more damage. Found in the forest and desert biomes.
 
-“Normal”, “frozen” and “rotting” ‘Fat’ zombies (Big Mama, tourist) don’t puke, but they do explode …
-
 During bloodmoons, ‘some’ zombies have a 10% chance to respawn after death, unless they’re killed with fire or explosives. There is also a 5% chance that a “boss” zombie will spawn, which boosts all zombies within range; their damage by 20%, and gives them regenerative properties. The boss is marked with a specific symbol, so target them with extreme prejudice.
+
+“Normal”, “frozen” and “rotting” ‘Fat’ zombies (Big Mama, tourist) don’t puke, but they do explode …
 
 Rotten and Normal “Fat” zombies (Cop,Big Mama and Tourist) are filled with a substance that’s irresistible to all zombies. If you are within range when they explode, they’ll cover you in this stuff - and attract other zombies …
 
