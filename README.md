@@ -4,9 +4,6 @@ The idea behind this mod is to slow progression, make traders less powerful, and
 
 ## INSTALLATION INSTRUCTIONS
 
->[!WARNING]
->The mod was NOT tested for compatibility with any other mods/modlets, other than the ones that come bundled with it. It's recommended to remove any and all other mods/modlets when playing, as troubleshooting any issues that arise from using other untested mods/modlets won't be possible.
-
 >[!NOTE]
 ># Changelog for v1.2
 >
@@ -33,6 +30,9 @@ The idea behind this mod is to slow progression, make traders less powerful, and
 >Two additional food recipes added - Tramp and vagabond stew. Basic recipes, no unlock required. A use for early game cat/dog food, but still needs a cooking pot.
 >
 >Custom mesh files for some food/drink/candy (thanks Schrader :) )
+
+>[!WARNING]
+>The mod was NOT tested for compatibility with any other mods/modlets, other than the ones that come bundled with it. It's recommended to remove any and all other mods/modlets when playing, as troubleshooting any issues that arise from using other untested mods/modlets won't be possible.
 
 >[!TIP]
 >The download .zip file contains a folder called `\Mods`. You can either:
