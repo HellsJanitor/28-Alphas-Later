@@ -9,7 +9,9 @@ The idea behind this mod is to slow progression, make traders less powerful, and
 
 >[!NOTE]
 >Changelog for v1.2
+>
 >Now updated for multiplayer!!
+>
 > Despair system has a complete rework (feedback is encouraged)
 >
 >Hoe now added to trader stock & loot.
