@@ -8,13 +8,25 @@ The idea behind this mod is to slow progression, make traders less powerful, and
 >The mod was NOT tested for compatibility with any other mods/modlets, other than the ones that come bundled with it. It's recommended to remove any and all other mods/modlets when playing, as troubleshooting any issues that arise from using other untested mods/modlets won't be possible.
 
 >[!NOTE]
+>Changelog for v1.2
 >Now updated for multiplayer!!
+> Despair system has a complete rework (feedback is encouraged)
+>Hoe now added to trader stock & loot.
+>Rebalanced recipes for farm plots, and for fertilizer required to till the ground.
+>Reworked the zombie "boomers".
+>Slightly increased ammo in loot.
+>Removed the workbench/tool requirement for chicken coops and beehives. They can now be crafted in your inventory, but you need a repair tool in your inventory.
+>Rebalanced the amount hunger and thirst affect your despair.
+>The liquid nitrogen mod now has a DoT effect, as well as its slow effect.
+>Being in close proximity to zombies now affects your despair. The stronger the zombie, the worse the effect.
+>Two additional food recipes added - Tramp and vagabond stew. Basic recipes, no unlock required. A use for early game cat/dog food, but still needs a cooking pot.
+>Custom mesh files for some food/drink/candy (thanks Schrader :) )
 
-The download .zip file contains a folder called `\Mods`. You can either:
-
-1. Copy this folder into your game directory, usually `C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die`
-2. Copy the folder into `%AppData%\Roaming\7DaysToDie`
-3.  Alternatively, you can use the mod launcher, available from here: [https://7d2dmodlauncher.org/](url)
+>[!INFORMATION]
+>The download .zip file contains a folder called `\Mods`. You can either:
+>1. Copy this folder into your game directory, usually `C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die`
+>2. Copy the folder into `%AppData%\Roaming\7DaysToDie`
+>3. Alternatively, you can use the mod launcher, available from here: [https://7d2dmodlauncher.org/](url)
 
 ## FEATURES 
 
