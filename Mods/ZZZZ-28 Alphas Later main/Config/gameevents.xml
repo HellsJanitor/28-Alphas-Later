@@ -68,7 +68,7 @@
 			<property name="fade_time" value="10" />
 		</action>
 
-		<action class="SpawnEntity">
+		<!-- <action class="SpawnEntity">
 			<property name="entity_group" value="SleeperGSList" />
 			<property name="spawn_count" value="5"  />
 			<property name="air_spawn" value="false" />
@@ -77,13 +77,13 @@
 			<property name="min_distance" value="10" />
 			<property name="max_distance" value="20" />
 			<property name="spawn_type" value="WanderingHorde" />
-		</action>
+		</action> -->
 		
-		<action class="AddEntitiesToGroup">
+		<!-- <action class="AddEntitiesToGroup">
 			<property name="phase" value="0" />
 			<property name="group_name" value="zombies" />
 			<property name="max_distance" value="20" />
-		</action>
+		</action> -->
 
 		<action class="PlaySound">
 			<property name="sound" value="twitch_enrage" />
@@ -95,9 +95,9 @@
 			<property name="target_group" value="zombies" />
 		</action> -->
 		
-		<!-- <action class="CallGameEvent">
+		<action class="CallGameEvent">
 			<property name="game_events" value="boomer_horde_normal" />
-		</action>		 -->	
+		</action>	
 	</action_sequence>	
 	
 	<action_sequence name="boomer_horde_normal" template="vote_minor">

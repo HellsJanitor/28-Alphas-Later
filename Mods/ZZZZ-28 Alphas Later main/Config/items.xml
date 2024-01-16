@@ -2703,7 +2703,7 @@
 	</append>
 	
 	<append xpath="//item[@name='meleeToolTorch']">
-	<effect_group>
+	<effect_group tiered="false">
 		<!-- <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHeldTorch"/> -->
 		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHeldLight"/>
 		<!-- <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHeldTorch"/> -->
