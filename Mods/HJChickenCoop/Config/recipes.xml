@@ -1,9 +1,0 @@
-<config>
-	<append xpath="/recipes">
-		<recipe name="ctnChickenCoop" count="1" craft_time="120" craft_area="workbench" craft_tool="meleeToolRepairT1ClawHammer" craft_exp_gain="500" tags="workbenchCrafting">
-			<ingredient name="resourceWood" count="200"/>
-			<ingredient name="resourceScrapIron" count="100"/>
-			<ingredient name="resourceNail" count="20"/>
-		</recipe>
-	</append>
-</config>

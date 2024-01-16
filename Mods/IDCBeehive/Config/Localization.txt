@@ -1,8 +1,0 @@
-Key,english
-idcXuiModifiers,MODIFIERS
-ctnIDCBeehive,Beehive
-ctnIDCBeehiveDesc,Produces honey.
-idcXuiBait,Bee
-beehiveTreeStump,Beehive
-honeyBeeDesc,A wild honey bee. Will produce up to 20 honey when placed in a bee hive.
-honeyBee,Bee

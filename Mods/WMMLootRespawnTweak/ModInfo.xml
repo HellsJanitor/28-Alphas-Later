@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="WMMStashBackpack" />
-	<DisplayName value="Stash Backpack" />
-	<Version value="21.2.30.4" />
+	<Name value="WMMLootRespawnTweak" />
+	<DisplayName value="Loot Respawn Tweak" />
+	<Version value="1.0.0.0" />
 	<Description value="" />
 	<Author value="w00kie n00kie" />
 	<Website value="" />

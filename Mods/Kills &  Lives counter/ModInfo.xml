@@ -1,0 +1,8 @@
+<xml>
+	<ModInfo>
+		<Name value="Kills and Lives"/>
+		<Description value="for 'almost' permadeath. Player gains one life per 100 enemies killed"/>
+		<Author value="HellsJanitor"/>
+		<Version value="1.1"/>
+	</ModInfo>
+</xml>

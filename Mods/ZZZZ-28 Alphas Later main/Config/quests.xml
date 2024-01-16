@@ -1,0 +1,145 @@
+<configs>
+	<!-- search find all *** for changes -->
+	
+	<!-- *** removes starter quests *** -->
+	<remove xpath="//quest[@id='quest_BasicSurvival1']//objective[@type='FetchKeep']"/>
+	<remove xpath="//quest[@id='quest_BasicSurvival1']//objective[@type='Craft']"/>
+	<set xpath="//quest[@id='quest_BasicSurvival1']//objective[@type='BlockPlace']/@phase">1</set>
+	<set xpath="//quest[@id='quest_BasicSurvival1']//reward[@type='Quest']/@id">quest_whiteRiverCitizen1</set>
+	<append xpath="//quest[@id='quest_BasicSurvival1']">
+	<reward type="SkillPoints" value="4" chainreward="true"/>
+	</append>
+	
+	<!-- *** starter weapon offer *** -->
+	<insertAfter xpath="/quests/quest[@id='quest_BasicSurvival8']">
+	<quest id="quest_WeaponSpear">
+		<property name="name" value="Your Stone Spear"/>
+		<property name="subtitle" value="Stone Spear"/>
+		<property name="description" value="Your Favourite Weapon Class"/>
+		<property name="icon" value="ui_game_symbol_spear"/>
+		<property name="offer" value="My favourite weapon of choice!"/>
+		<property name="category" value="Weapon"/>
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false"/>
+
+		<reward type="Item" id="meleeWpnSpearT0StoneSpear" value="4"/>
+	</quest>
+
+	<quest id="quest_WeaponClub">
+		<property name="name" value="Your Wooden Club"/>
+		<property name="subtitle" value="Wooden Club"/>
+		<property name="description" value="Your Favourite Weapon Class"/>
+		<property name="icon" value="ui_game_symbol_stunned"/>
+		<property name="offer" value="My favourite weapon of choice!"/>
+		<property name="category" value="Weapon"/>
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false"/>
+
+		<reward type="Item" id="meleeWpnClubT0WoodenClub" value="4"/>
+	</quest>
+
+	<quest id="quest_WeaponSledge">
+		<property name="name" value="Your Stone Sledge"/>
+		<property name="subtitle" value="Stone Sledge"/>
+		<property name="description" value="Your Favourite Weapon Class"/>
+		<property name="icon" value="ui_game_symbol_sledge"/>
+		<property name="offer" value="My favourite weapon of choice!"/>
+		<property name="category" value="Weapon"/>
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false"/>
+
+		<reward type="Item" id="meleeWpnSledgeT0StoneSledgehammer" value="4"/>
+	</quest>
+
+	<quest id="quest_WeaponKnuckle">
+		<property name="name" value="Your Leather Wraps"/>
+		<property name="subtitle" value="Knuckle Wraps"/>
+		<property name="description" value="Your Favourite Weapon Class"/>
+		<property name="icon" value="ui_game_symbol_boxer"/>
+		<property name="offer" value="My favourite weapon of choice!"/>
+		<property name="category" value="Weapon"/>
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false"/>
+
+		<reward type="Item" id="meleeWpnKnucklesT0LeatherKnuckles" value="4"/>
+	</quest>
+
+	<quest id="quest_WeaponKnife">
+		<property name="name" value="Your Bone Knife"/>
+		<property name="subtitle" value="Bone Knife"/>
+		<property name="description" value="Your Favourite Weapon Class"/>
+		<property name="icon" value="ui_game_symbol_knife"/>
+		<property name="offer" value="My favourite weapon of choice!"/>
+		<property name="category" value="Weapon"/>
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false"/>
+
+		<reward type="Item" id="meleeWpnBladeT0BoneKnife" value="4"/>		
+	</quest>
+
+	<quest id="quest_WeaponBow">
+		<property name="name" value="Your Primitive Bow"/>
+		<property name="subtitle" value="Primitive Bow"/>
+		<property name="description" value="Your Favourite Weapon Class"/>
+		<property name="icon" value="ui_game_symbol_archery"/>
+		<property name="offer" value="My favourite weapon of choice!"/>
+		<property name="category" value="Weapon"/>
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false"/>
+
+		<reward type="Item" id="gunBowT0PrimitiveBow" value="4"/>
+		<reward type="Item" id="ammoArrowStone" value="10"/>		
+	</quest>
+
+	<quest id="quest_WeaponBaton">
+		<property name="name" value="Your Pipe Baton"/>
+		<property name="subtitle" value="Pipe Baton"/>
+		<property name="description" value="Your Favourite Weapon Class"/>
+		<property name="icon" value="ui_game_symbol_stunned"/>
+		<property name="offer" value="My favourite weapon of choice!"/>
+		<property name="category" value="Weapon"/>
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false"/>
+		<reward type="Item" id="meleeWpnBatonT0PipeBaton" value="4"/>		
+	</quest>
+	</insertAfter>
+	<!-- *** changes to starter quests *** -->
+	<!-- <set xpath="//quest[@id='quest_BasicSurvival1']//objective[@id='resourceYuccaFibers']/@value">12</set>
+	<set xpath="//quest[@id='quest_BasicSurvival2']//objective[2]/@id">resourceBranch</set>
+	<set xpath="//quest[@id='quest_BasicSurvival3']//objective[@id='resourceYuccaFibers']/@value">6</set>	
+	<set xpath="//quest[@id='quest_BasicSurvival5']/objective[1]/modifier[@type='TrackBlocks']//property[1]/@value">quest_wood</set>
+	<set xpath="//quest[@id='quest_BasicSurvival5']//objective[@id='resourceWood']/@value">6</set>
+	<set xpath="//quest[@id='quest_BasicSurvival5']//objective[@id='resourceWood']/@id">resourceBranch</set>
+	<insertbefore xpath="//quest[@id='quest_BasicSurvival5']//objective[1]">
+	<objective type="FetchKeep" id="resourceYuccaFibers" value="6" phase="1"/>
+	</insertbefore>	
+	<set xpath="//quest[@id='quest_BasicSurvival6']//objective[@id='resourceWood']/@value">11</set>
+	<set xpath="//quest[@id='quest_BasicSurvival6']//objective[@id='resourceWood']/@id">resourceBranch</set>
+	<set xpath="//quest[@id='quest_BasicSurvival6']//objective[@id='resourceYuccaFibers']/@value">4</set>
+	<set xpath="//quest[@id='quest_BasicSurvival6']/objective[1]/modifier[@type='TrackBlocks']//property[1]/@value">quest_wood</set>	
+	<set xpath="//quest[@id='quest_BasicSurvival7']//objective[@id='resourceWood']/@value">6</set>
+	<set xpath="//quest[@id='quest_BasicSurvival7']//objective[@id='resourceWood']/@id">resourceWoodScraps</set>
+	<remove xpath="//quest[@id='quest_BasicSurvival7']//objective[@type='BlockUpgrade']"/>
+	<set xpath="//quest[@id='quest_BasicSurvival8']//objective[@id='resourceRockSmall']/@value">6</set> -->
+	
+	
+	<!-- *** trader quests per tier increased to 10 *** -->
+	<setattribute xpath="/quests" name="quests_per_tier">10</setattribute>
+	
+	<!-- *** bartering sauce gives passive buff, reward for each tier completed *** -->
+	<insertafter xpath="//quest[@id='quest_tier1complete']//reward[1]">
+	<reward type="Item" id="BarteringSauceOne" value="1"/>
+	</insertafter>	
+	<insertafter xpath="//quest[@id='quest_tier2complete']//reward[1]">
+	<reward type="Item" id="BarteringSauceTwo" value="1"/>
+	</insertafter>	
+	<insertafter xpath="//quest[@id='quest_tier3complete']//reward[1]">
+	<reward type="Item" id="BarteringSauceThree" value="1"/>
+	</insertafter>	
+	<insertafter xpath="//quest[@id='quest_tier4complete']//reward[1]">
+	<reward type="Item" id="BarteringSauceFour" value="1"/>
+	</insertafter>	
+	<insertafter xpath="//quest[@id='quest_tier5complete']//reward[1]">
+	<reward type="Item" id="BarteringSauceFive" value="1"/>
+	</insertafter>	
+</configs>

@@ -1,0 +1,7 @@
+Key,english
+buffDeathCounterDesc,"This is how many times you've died in this playthrough."
+buffDeathCounterName," "
+buffKillCounterName," "
+buffKillCounterDesc,"Number of enemies killed since last death ..."
+buffPlayerLivesName," "
+buffPlayerLivesDesc,"Number of lives (respawns) remaining ..."
