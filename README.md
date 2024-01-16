@@ -22,7 +22,7 @@ The idea behind this mod is to slow progression, make traders less powerful, and
 >Two additional food recipes added - Tramp and vagabond stew. Basic recipes, no unlock required. A use for early game cat/dog food, but still needs a cooking pot.
 >Custom mesh files for some food/drink/candy (thanks Schrader :) )
 
->[!INFORMATION]
+>[!TIP]
 >The download .zip file contains a folder called `\Mods`. You can either:
 >1. Copy this folder into your game directory, usually `C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die`
 >2. Copy the folder into `%AppData%\Roaming\7DaysToDie`
