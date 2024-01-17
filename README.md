@@ -260,6 +260,8 @@ ColoredContainerStates				- Author: Scomar
 
 WMMStaminaDehydrationFix			- Author: w00kien00kie
 
+WMMTraderQuestMap				- Author: w00kien00kie
+
 CustomDifficulty				- Author: Mythix
 						
 ### Also a huge thank you to Frantic_Dan & redbeardt for the custom HUD base code, main menu localization changes, and to YubiNashi and Frantic_Dan for ideas/balancing and playtesting.
