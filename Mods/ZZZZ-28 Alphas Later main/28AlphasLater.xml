@@ -7,6 +7,15 @@
 ### THIS IS VERSION 1.2 - A FRESH SAVE IS ABSOLUTELY RECOMMENDED!!! ###
 ### 99% of features are now functioning correctly in multiplayer. Headshots only remains non-functional on dedicated servers ###
 
+Bug fix:
+
+Fixed the NRE from fat zombies exploding.
+Fixed the stack issue with torches.
+
+Changes:
+
+Removed some folders that weren't meant to be included with the mod.
+
 Changelog:
 
 1. The mod is now supported in peer-to-peer and dedicated server multiplayer games.
