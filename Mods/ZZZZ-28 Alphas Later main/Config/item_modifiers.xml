@@ -27,9 +27,12 @@
 	</append>
 	
 	<!-- *** adds flat sell/scrap value for all mods (except dye. For some weird reason, it can't be scrapped?) *** -->
-	<remove xpath="//item_modifier[starts-with (@name,'modDye')]/property[@name='Weight']"/>
+	<insertafter xpath="//item_modifier[starts-with (@name,'modDye')]//property[@name='Weight']">
+	<property name="EconomicValue" value="50"/>
+	</insertafter>
+	<!-- <set xpath="//item_modifier[starts-with (@name,'modDye')]//property[@name='Weight']/@value">20</set> -->
 	
-	<insertafter xpath="//item_modifier[starts-with (@name,'mod') and not (contains(@name,'modGeneralMaster'))]/property[1]">
+	<insertafter xpath="//item_modifier[starts-with (@name,'mod') and not (@name='modGeneralMaster') and not (contains(@name,'modDye'))]/property[1]">
 	<property name="EconomicValue" value="750"/>
 	<property name="Weight" value="20"/>
 	</insertafter>
@@ -54,7 +57,21 @@
 	
 	<!-- *** serrated blade can be added to spears and knuckles ONLY, 100% bleed proc *** -->
 	<set xpath="//item_modifier[@name='modMeleeSerratedBlade']/@installable_tags">perkBrawler,perkJavelinMaster</set>
-	<set xpath="/item_modifiers/item_modifier[@name='modMeleeSerratedBlade']/effect_group[1]//requirement[1]/@value">100</set>	
+	<set xpath="/item_modifiers/item_modifier[@name='modMeleeSerratedBlade']/effect_group[1]//requirement[1]/@value">100</set>
+
+	<!-- *** rad remover only works on radiated zombies *** -->
+	<set xpath="//item_modifier[@name='modGunMeleeRadRemover']">
+		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="UnlockedBy" value="modGunMeleeRadRemoverSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		
+		<!-- Increases damage against irradiated enemies, all melee only -->
+		<effect_group tiered="false">
+			<requirement name="EntityTagCompare" target="other" tags="radiated"/>
+			<requirement name="!EntityTagCompare" target="other" tags="mutated"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
+		</effect_group>
+	</set>
 	
 	<!-- *** adds Blessed Metal back to the game *** -->
 	<append xpath="/item_modifiers">

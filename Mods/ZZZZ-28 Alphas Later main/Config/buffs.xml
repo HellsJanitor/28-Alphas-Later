@@ -11,7 +11,7 @@
 	<effect_group>
 		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value="5"/>
 		<requirement name="!IsIndoors"/>
-		<requirement name="CVarCompare" cvar="$WetTempModifierDisplay" operation="GTE" value="90"/>
+		<requirement name="CVarCompare" cvar="$WetTempModifierDisplay" operation="GTE" value="80"/>
 	</effect_group>
 	</append>
 	
@@ -102,7 +102,7 @@
 	
 	<append xpath="//buff[@name='buffStatusHungry01']">
 	<effect_group>		
-		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value=".5"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value="1"/>
 		<requirement name="!HasBuff" buff="buffDespairCureDisplay"/>				
 		<requirement name="HasBuff" buff="buffStatusHungry01"/> 					
 	</effect_group>
@@ -110,7 +110,7 @@
 	
 	<append xpath="//buff[@name='buffStatusThirsty01']">
 	<effect_group>		
-		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value=".5"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value="1"/>
 		<requirement name="!HasBuff" buff="buffDespairCureDisplay"/>				
 		<requirement name="HasBuff" buff="buffStatusThirsty01"/> 					
 	</effect_group>
@@ -701,7 +701,7 @@
 		</effect_group>
 	</buff>
 
-	<!-- *** knife required to butcher chickens, stone axe required to assemble chicken coops and beehives *** -->
+	<!-- *** knife required to butcher chickens, repair tool required to assemble chicken coops and beehives *** -->
 	<buff name="buffCraftingCount" hidden="true">	
 		<stack_type value="replace"/>
 		<duration value="0"/>
@@ -1066,7 +1066,15 @@
 	<!-- *** Fatties are Boomers *** -->
 	<buff name="buffExplodeEffect">
 		<effect_group>
-			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" buff="buffCopTimerCheck"/>
+			<!-- <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" buff="buffCopTimerCheck"/> -->
+			<triggered_effect trigger="onSelfExplosionAttackedOther" target="other" tags="player" action="AddBuff" buff="buffBoomerHorde">
+			<requirement name="EntityTagCompare" target="other" tags="player"/>	
+			<requirement name="!EntityTagCompare" target="other" tags="zombie"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfExplosionDamagedOther" target="other" tags="player" action="AddBuff" buff="buffBoomerHorde">
+			<requirement name="EntityTagCompare" target="other" tags="player"/>	
+			<requirement name="!EntityTagCompare" target="other" tags="zombie"/>
+			</triggered_effect>
 		</effect_group>
 	</buff>
 
@@ -1081,16 +1089,16 @@
 	<buff name="buffCopTimer">
 		<duration value="5.89"/>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffTimeDelay" target="selfAOE" range="6"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffGoo" target="otherAOE" range="6"/>
+			<requirement name="EntityTagCompare" target="other" tags="player"/>	
+			<requirement name="!EntityTagCompare" target="other" tags="zombie"/>
 		</effect_group>
 	</buff>
-	
-	<buff name="buffTimeDelay">
-		<duration value="0.3"/>
 		
-		<effect_group>
-			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffBoomerHorde" target="positionAOE" range="1"/>
-			<requirement name="CVarCompare" cvar="is_bloodmoon" operation="Equals" value="0" />
+	<buff name="buffGoo">
+		<duration value=".26"/>
+		<effect_group>			
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" target="self" buff="buffBoomerHorde"/>
 		</effect_group>
 	</buff>
 
@@ -1101,7 +1109,7 @@
 			<!-- <triggered_effect trigger="onSelfBuffStart"  action="ModifyScreenEffect" effect_name="Blur" intensity="1" fade=".1"/> -->
 			<!-- <triggered_effect trigger="onSelfBuffFinish" action="ModifyScreenEffect" effect_name="Blur" intensity="0" fade="5"/> -->
 		</effect_group>
-	</buff>
+	</buff>	
 	
 	<!-- *** trader buff that reduces despair when in range *** -->
 	<buff name="buffGoodCompany" hidden="true" >
@@ -1283,7 +1291,7 @@
 			
 			<triggered_effect trigger="onSelfAttackedOther" action="Explode" blast_power="0" block_damage="0" block_radius="1" entity_damage="30" entity_radius="4" />
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyStats" stat="Health" operation="set" value="0" />
-			<triggered_effect trigger="onSelfDamagedBlock" action="Explode" blast_power="0" block_damage="1000" block_radius="5" entity_damage="30" entity_radius="4"/>
+			<triggered_effect trigger="onSelfDamagedBlock" action="Explode" blast_power="0" block_damage="750" block_radius="5" entity_damage="30" entity_radius="4"/>
 			<triggered_effect trigger="onSelfDamagedBlock" action="ModifyStats" stat="Health" operation="set" value="0" />
 			<triggered_effect trigger="onSelfDied" action="Explode" blast_power="0" block_damage="0" block_radius="1" entity_damage="50" entity_radius="4" />
 		</effect_group>
@@ -1403,16 +1411,14 @@
 	<!-- *** always headshots *** -->
 	<buff name="buffAlwaysHeadShotsOnly" name_key="buffHeadShotsOnlyName" description_key="buffHeadShotsOnlyDesc" tooltip_key="buffHeadShotsOnlyTooltip" showonhud="false" icon="ui_game_symbol_head_shot" icon_color="255,128,0" remove_on_death="false">
 		<stack_type value="ignore"/>
-		<duration value="214748364"/>	
+		<duration value="0"/>		
 
 		<effect_group>
 			<requirement name="EntityTagCompare" target="other" tags="entity,zombie,walker,spider"/>
-			<!-- <requirement name="!EntityTagCompare" tags="animal,vulture"/> -->
 			<passive_effect name="HeadShotOnly" operation="base_set" value="1"/>			
 		</effect_group>
 		<effect_group>
 			<requirement name="EntityTagCompare" target="other" tags="animal"/>
-			<!-- <requirement name="!EntityTagCompare" tags="zombie"/> -->
 			<passive_effect name="HeadShotOnly" operation="base_set" value="0"/>
 		</effect_group>
 		<effect_group>
@@ -1643,7 +1649,7 @@
 
 	<!-- *** Survival Instinct *** -->
 	<insertAfter xpath="//buff[@name='buffDeadEye']">
-	<buff name="buffPerkSurvivalInstinct" name_key="perkSurvivalInstinctName" description_key="buffPerkSurvivalInstinctDesc" icon="ui_game_symbol_talk" icon_color="0,255,0" icon_blink="false" hidden="false">
+	<buff name="buffPerkSurvivalInstinct" name_key="perkSurvivalInstinctName" description_key="buffPerkSurvivalInstinctDesc" showonhud="false" icon="ui_game_symbol_talk" icon_color="0,255,0" icon_blink="false" hidden="false">
 		<stack_type value="replace"/>
 		<duration value="10"/>
 

@@ -2,7 +2,7 @@ Key,english
 idcXuiModifiers,MODIFIERS
 idcXuiAnimalSnare,Output
 ctnChickenCoop,Chicken coop
-ctnChickenCoopDesc,Produces eggs. Needs a chicken.
+ctnChickenCoopDesc,Produces eggs. Needs a chicken.\n\nCan be crafted with any [FF4500]repair tool[-] in your [008000]inventory[-].
 fuelChicken,Chicken
 fuelChickenDesc,"Use this chicken to produce eggs in a chicken coop.\n\nCan also be butchered for meat, bones & feathers\n with a hunting knife in your inventory/toolbelt."
 cntAdvancedDewCollector,Dew Collector
@@ -35,7 +35,7 @@ idcAnimalBait,Animal Bait
 idcAnimalBaitDesc,It attracts animals. Place in the animal snare.
 idcXuiBaitSnare,Bait
 ctnIDCBeehive,Beehive
-ctnIDCBeehiveDesc,Produces honey.
+ctnIDCBeehiveDesc,Produces honey.\n\nCan be crafted with any [FF4500]repair tool[-] in your [008000]inventory[-].
 idcXuiBait,Bee
 beehiveTreeStump,Beehive
 honeyBeeDesc,A wild honey bee. Will produce up to 20 honey when placed in a bee hive.
