@@ -7,6 +7,9 @@
 ### THIS IS VERSION 1.2 - A FRESH SAVE IS ABSOLUTELY RECOMMENDED!!! ###
 ### 99% of features are now functioning correctly in multiplayer. Headshots only remains non-functional on dedicated servers ###
 
+Update: 19/01/24 Finally fixed zombie "boomers" so they only spawn zombies on the player and not on other zombies.
+Various balances, tweaks, and localization changes.
+
 Bug fix:
 
 Fixed the NRE from fat zombies exploding.
