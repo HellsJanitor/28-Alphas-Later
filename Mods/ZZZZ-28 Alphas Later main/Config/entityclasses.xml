@@ -22,7 +22,14 @@
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBossAOETrigger">
 			<requirement name="CVarCompare" cvar="is_bloodmoon" operation="Equals" value="1"/>
 			</triggered_effect>
-		</effect_group>		
+		</effect_group>			
+	</append>
+	
+	<!-- *** buff for random zombie walk type *** -->
+	<append xpath="//entity_class[starts-with(@name,'zombie') and not (@name='zombieTemplateMale') and not (contains(@name,'Spider')) and not (contains(@name,'Crawler'))]">
+		<effect_group>
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffRandomWalk"/>			
+		</effect_group>
 	</append>
 	
 	<!-- *** Boomer zombie buff *** -->

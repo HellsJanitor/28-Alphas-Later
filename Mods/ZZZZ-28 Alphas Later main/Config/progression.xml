@@ -31,7 +31,7 @@
 	<set xpath="//crafting_skill[@name='craftingVehicles']/effect_group//passive_effect[5]/@tags">vehicleGyroCopterChassis,vehicleGyroCopterAccessories,GyroBundle</set>
 	
 	<!-- *** Urban Combat Vol. 2 unlocks *** -->
-	<!-- <set xpath="/progression/perks/book[@name='perkUrbanCombatCigar']/effect_group/passive_effect[@name='RecipeTagUnlocked']/@tags"></set> -->
+	<set xpath="/progression/perks/book[@name='perkUrbanCombatCigar']/effect_group/passive_effect[@name='RecipeTagUnlocked']/@tags">modGlassesStrength,modGlassesPerception,modGlassesFortitude,modGlassesAgility,modGlassesIntellect</set>
 	
 	<!-- *** removes harvesting boost and bonus from crops (lines 47 & 48) *** -->
 	<set xpath="//perk[@name='perkLivingOffTheLand']">

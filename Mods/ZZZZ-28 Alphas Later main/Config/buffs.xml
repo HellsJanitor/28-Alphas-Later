@@ -157,6 +157,102 @@
 	</append>
 	
 	<append xpath="/buffs">
+	<!-- *** buff for random zombie walk types *** -->
+	<buff name="buffRandomWalk" hidden="true">
+	<duration value="0"/>
+	
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="walktype" operation="set" value="randomint(1,22)"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="1"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="2"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="2"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="3"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="3"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="4"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="2"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="5"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="5"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="6"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="6"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="7"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="7"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="8"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="1"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="9"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="2"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="10"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="3"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="11"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="3"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="12"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="5"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="13"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="6"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="14"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="7"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="15"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="1"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="16"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="2"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="17"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="3"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="18"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="5"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="19"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="5"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="20"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="6"/>
+	</effect_group>	
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="21"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="7"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="walktype" operation="Equals" value="22"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetWalkType,IDCCoreV2" value="22"/>
+	</effect_group>	
+	</buff>
 
 	<!-- *** buff for helmet lights, flashlights, torches, nightvision, burning shaft etc. *** -->
 	<buff name="buffHeldLight" hidden="true">
@@ -722,7 +818,6 @@
 			<requirement name="HJPlayerItemCount, HJPlayerItemCount" item_name="meleeToolRepairT1ClawHammer" operation="GTE" value="1"/>
 			<requirement name="HJPlayerItemCount, HJPlayerItemCount" item_name="meleeToolRepairT3Nailgun" operation="GTE" value="1"/>
 			</requirements>			
-			<!-- <requirement name="HJPlayerItemCount, HJPlayerItemCount" item_name="meleeToolRepairT0StoneAxe" operation="GTE" value="1"/> -->
 			<passive_effect name="RecipeTagUnlocked" tags="ctnChickenCoop" operation="base_set" value="1"/>
 		</effect_group>
 		<effect_group>
@@ -732,7 +827,6 @@
 			<requirement name="HJPlayerItemCount, HJPlayerItemCount" item_name="meleeToolRepairT1ClawHammer" operation="GTE" value="1"/>
 			<requirement name="HJPlayerItemCount, HJPlayerItemCount" item_name="meleeToolRepairT3Nailgun" operation="GTE" value="1"/>
 			</requirements>	
-			<!-- <requirement name="HJPlayerItemCount, HJPlayerItemCount" item_name="meleeToolRepairT0StoneAxe" operation="GTE" value="1"/> -->
 			<passive_effect name="RecipeTagUnlocked" tags="ctnIDCBeehive" operation="base_set" value="1"/>
 		</effect_group>
 	</buff>

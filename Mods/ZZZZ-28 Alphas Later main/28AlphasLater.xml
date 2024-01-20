@@ -7,6 +7,13 @@
 ### THIS IS VERSION 1.2 - A FRESH SAVE IS ABSOLUTELY RECOMMENDED!!! ###
 ### 99% of features are now functioning correctly in multiplayer. Headshots only remains non-functional on dedicated servers ###
 
+Update: 20/01/24
+Added: Random walk types to zombies
+Changed: Lowered block damage from bunker busters 25%
+Removed: Cigar crafting, replaced with eyewear/facewear mod crafting.
+Fixed: Dye is scrappable again.
+Increased zombie night spawns for every biome.
+
 Update: 19/01/24 Finally fixed zombie "boomers" so they only spawn zombies on the player and not on other zombies.
 Various balances, tweaks, and localization changes.
 

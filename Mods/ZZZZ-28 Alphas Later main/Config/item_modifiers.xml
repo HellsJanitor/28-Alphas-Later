@@ -26,11 +26,10 @@
 	</effect_group>
 	</append>
 	
-	<!-- *** adds flat sell/scrap value for all mods (except dye. For some weird reason, it can't be scrapped?) *** -->
+	<!-- *** adds flat sell/scrap value for all mods (except dye. Changing the recipe makes it unscrappable??) *** -->
 	<insertafter xpath="//item_modifier[starts-with (@name,'modDye')]//property[@name='Weight']">
 	<property name="EconomicValue" value="50"/>
 	</insertafter>
-	<!-- <set xpath="//item_modifier[starts-with (@name,'modDye')]//property[@name='Weight']/@value">20</set> -->
 	
 	<insertafter xpath="//item_modifier[starts-with (@name,'mod') and not (@name='modGeneralMaster') and not (contains(@name,'modDye'))]/property[1]">
 	<property name="EconomicValue" value="750"/>
@@ -206,6 +205,7 @@
 	<!-- *** eyewear/bandanna mods to replace eyewear items *** -->
 	<item_modifier name="modGlassesPerception" installable_tags="clothing,glasses,head" blocked_tags="armorHead,chest,arms,legs,feet" type="attachment">
 		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="UnlockedBy" value="perkUrbanCombatCigar"/>
 		<property name="DisplayType" value="clothingShades"/>
 		<property name="DescriptionKey" value="modGlassesPerceptionDesc"/>
 		<property name="CustomIcon" value="apparelShades"/>
@@ -225,6 +225,7 @@
 	
 	<item_modifier name="modGlassesStrength" installable_tags="clothing,glasses,head" blocked_tags="armorHead,chest,arms,legs,feet" type="attachment">
 		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="UnlockedBy" value="perkUrbanCombatCigar"/>
 		<property name="DisplayType" value="apparelCigar"/>
 		<property name="DescriptionKey" value="modGlassesStrengthDesc"/>
 		<property name="CustomIcon" value="apparelCigar"/>
@@ -245,6 +246,7 @@
 	
 	<item_modifier name="modGlassesFortitude" installable_tags="clothing,glasses,head" blocked_tags="armorHead,chest,arms,legs,feet" type="attachment">
 		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="UnlockedBy" value="perkUrbanCombatCigar"/>
 		<property name="DisplayType" value="apparelToughGuySunglasses"/>
 		<property name="DescriptionKey" value="modGlassesFortitudeDesc"/>
 		<property name="CustomIcon" value="apparelShades"/>
@@ -266,6 +268,7 @@
 	
 	<item_modifier name="modGlassesAgility" installable_tags="clothing,glasses,head" blocked_tags="armorHead,chest,arms,legs,feet" type="attachment">
 		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="UnlockedBy" value="perkUrbanCombatCigar"/>
 		<property name="DisplayType" value="clothingSkiGoggles"/>
 		<property name="DescriptionKey" value="modGlassesAgilityDesc"/>
 		<property name="CustomIcon" value="apparelSkiGoggles"/>
@@ -285,6 +288,7 @@
 	
 	<item_modifier name="modGlassesIntellect" installable_tags="clothing,glasses,head" blocked_tags="armorHead,chest,arms,legs,feet" type="attachment">
 		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="UnlockedBy" value="perkUrbanCombatCigar"/>
 		<property name="DisplayType" value="apparelNerdGlasses"/>
 		<property name="DescriptionKey" value="modGlassesIntellectDesc"/>
 		<property name="CustomIcon" value="apparelNerdGlasses"/>

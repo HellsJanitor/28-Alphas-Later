@@ -394,7 +394,9 @@ perkSurvivalInstinctRank4Desc,Quick Learner
 perkSurvivalInstinctRank4LongDesc,"Your survival instinct is incredible!! Gain another 5 health and stamina, block damage increase of 10%, entity damage of 5%, and you gain another 3% extra XP. You gain another carry capacity."
 perkSurvivalInstinctRank5Desc,Survival Master
 perkSurvivalInstinctRank5LongDesc,"Your survival instinct is second to none!! Gain another 5 health and stamina, block damage increase of 10%, entity damage of 5%, and you gain another 3% extra XP. You gain another carry capacity."
-perkWasteTreasuresAcidDesc,Adds a chance to harvest acid from cars and medical equipment.\n\nUnlocks acid crafting.
+perkUrbanCombatCigarDesc,"Craft all eyewear/facewear mods, look cool, and boost your attributes."
+perkUrbanCombatCigarLongDesc,"Unlocks crafting for eyewear and facewear mods.\nShades: Boost Perception attribute by 1. Cigar: Boost Strength attribute by 1\nTough Guy shades: Boost Fortitude attribute by 1.\nSki Goggles: Boost Agility attribute by 1. Nerdy Glasses: Boost Intellect attribute by 1\n\nThese mods can be slotted in looting/nightvision goggles, and/or your bandanna."
+perkWasteTreasuresAcidDesc,Adds a chance to harvest acid from cars and medical equipment. Unlocks acid crafting.
 perkWasteTreasuresAcidLongDesc,"Acid: Acid is an extremely rare and powerful crafting agent. I figured out this tip to sometimes harvest a little from cars and medical equipment. Adds a chance to harvest acid from cars, medical equipment and acid barrels. You can extract acid from car batteries in your Workbench, and you can craft it in the Chemistry Station."
 perkWellInsulatedRank3LongDesc,You can now handle severe weather and typically couldn't care less what the weather conditions are. You will never have the more severe stages of temperature status effects.\n\n[FFC800]Immune to slow effects from frozen zombie attacks.[-]
 playerTableSaw,Tablesaw

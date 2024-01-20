@@ -13,6 +13,52 @@
 	</recipe>
 	</append>
 	
+	<!-- *** remove cigar crafting *** -->
+	<remove xpath="//recipe[@name='apparelCigar']"/>
+	
+	<!-- *** Urban Combat Volume 2 unlocks *** -->
+	<append xpath="/recipes">
+	<recipe name="modGlassesStrength" count="1" craft_area="workbench" craft_tool="meleeToolRepairT1ClawHammer" tags="learnable,workbenchCrafting">
+		<ingredient name="resourceYuccaFibers" count="250"/>
+		<ingredient name="resourceGlue" count="1"/>
+		<ingredient name="resourcePaper" count="1"/>
+		<ingredient name="resourceTestosteroneExtract" count="1"/>
+	</recipe>
+	
+	<recipe name="modGlassesPerception" count="1" craft_area="workbench" craft_tool="meleeToolRepairT1ClawHammer" tags="learnable,workbenchCrafting">
+		<ingredient name="resourceForgedIron" count="5"/>
+		<ingredient name="resourceBrokenGlass" count="5"/>
+		<ingredient name="resourceMechanicalParts" count="1"/>
+		<ingredient name="resourceSilverNugget" count="1"/>
+		<ingredient name="resourceGoldNugget" count="1"/>
+	</recipe>
+	
+	<recipe name="modGlassesFortitude" count="1" craft_area="workbench" craft_tool="meleeToolRepairT1ClawHammer" tags="learnable,workbenchCrafting">
+		<ingredient name="resourceForgedIron" count="5"/>
+		<ingredient name="resourceBrokenGlass" count="5"/>
+		<ingredient name="resourceMechanicalParts" count="1"/>
+		<ingredient name="resourceSilverNugget" count="1"/>
+		<ingredient name="resourceGoldNugget" count="1"/>
+	</recipe>
+	
+	<recipe name="modGlassesAgility" count="1" craft_area="workbench" craft_tool="meleeToolRepairT1ClawHammer" tags="learnable,workbenchCrafting">
+		<ingredient name="resourceForgedIron" count="5"/>
+		<ingredient name="resourceBrokenGlass" count="5"/>
+		<ingredient name="resourceMechanicalParts" count="1"/>
+		<ingredient name="resourceSilverNugget" count="1"/>
+		<ingredient name="resourceGoldNugget" count="1"/>
+	</recipe>
+	
+	<recipe name="modGlassesIntellect" count="1" craft_area="workbench" craft_tool="meleeToolRepairT1ClawHammer" tags="learnable,workbenchCrafting">
+		<ingredient name="resourceForgedIron" count="5"/>
+		<ingredient name="resourceBrokenGlass" count="5"/>
+		<ingredient name="resourceMechanicalParts" count="1"/>
+		<ingredient name="resourceSilverNugget" count="1"/>
+		<ingredient name="resourceGoldNugget" count="1"/>
+	</recipe>
+	
+	</append>
+	
 	<!-- *** removes forge smelting *** -->
 	<set xpath="//recipe//ingredient[@name='unit_iron']/@name">resourceScrapIron</set>
 	<set xpath="//recipe//ingredient[@name='unit_clay']/@name">resourceClayLump</set>
@@ -155,7 +201,7 @@
 			<ingredient name="drugVitamins" count="4"/>
 			<ingredient name="medicalBloodBag" count="4"/>
 			<ingredient name="drinkJarPureMineralWater" count="8"/>
-			<ingredient name="drinkJarGrandpasForgettingElixir" count="2"/>
+			<ingredient name="drinkJarGrandpasMoonshine" count="2"/>
 		</recipe>
 		
 	<!-- *** hazmat armour mods *** -->
@@ -1133,10 +1179,10 @@
 	</recipe>
 	</append>
 	
-	<!-- *** adds eggs to paint recipe *** -->
-	<append xpath="//recipe[@name='resourcePaint']">
+	<!-- *** adds eggs to paint recipe (disabled as it makes dye unscrappable?) *** -->
+	<!-- <append xpath="//recipe[@name='resourcePaint']">
 	<ingredient name="foodEgg" count="4"/>
-	</append>
+	</append> -->
 	
 	<!-- *** more uses for honey in food *** -->
 		<append xpath="//recipe[@name='foodBlueberryPie']">
