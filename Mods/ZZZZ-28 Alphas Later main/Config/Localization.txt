@@ -306,6 +306,8 @@ MacheteRepairKitDesc,This Repair Kit is used to repair machetes.
 MachinegunRepairKit,Machine Gun Repair Kit
 MachinegunRepairKitDesc,"This Repair Kit is used to repair AK47s, tactical assault rifles, and M60s."
 materialMresourceWoodScraps,Building
+noteDuke01,Anonymous Help
+noteDuke01Desc,"You don't know me, but I was able to sneak you some food, water and medical supplies in a backpack. I'll do what I can to sneak you some extra supplies by plane. Be safe out there!\n\nPS: I packed your favourite weapon.\n\nA good samaritan."
 resourceFertilizer,Fertilizer
 FertilizerDesc,Fertilizer is made in a Chemistry Station or Cement Mixer. Use a hoe to fertilize your farmland and increase crop yield.
 meleeToolFarmT2IronHoe,Iron Hoe
@@ -452,19 +454,19 @@ SteelToolRepairKitDesc,"This Repair Kit is used to repair steel axes, picks, and
 StunBatonRepairKit,Stun Baton Repair Kit
 StunBatonRepairKitDesc,This Repair Kit is used to repair stun batons.
 startermeleeWpnSpearT0StoneSpear,Stone spear
-startermeleeWpnSpearT0StoneSpearDesc,Read this to receive a Q1 stone spear.
+startermeleeWpnSpearT0StoneSpearDesc,Read this to receive a Q4 stone spear.
 startermeleeWpnClubT0WoodenClub,Wooden club
-startermeleeWpnClubT0WoodenClubDesc,Read this to receive a Q1 wooden club.
+startermeleeWpnClubT0WoodenClubDesc,Read this to receive a Q4 wooden club.
 startermeleeWpnSledgeT0StoneSledgehammer,Stone sledgehammer
-startermeleeWpnSledgeT0StoneSledgehammerDesc,Read this to receive a Q1 stone sledgehammer.
+startermeleeWpnSledgeT0StoneSledgehammerDesc,Read this to receive a Q4 stone sledgehammer.
 startermeleeWpnKnucklesT0LeatherKnuckles,Knuckle wraps
-startermeleeWpnKnucklesT0LeatherKnucklesDesc,Read this to receive Q1 knuckle wraps.
+startermeleeWpnKnucklesT0LeatherKnucklesDesc,Read this to receive Q4 knuckle wraps.
 startermeleeWpnBladeT0BoneKnife,Bone knife
-startermeleeWpnBladeT0BoneKnifeDesc,Read this to receive a Q1 bone knife.
+startermeleeWpnBladeT0BoneKnifeDesc,Read this to receive a Q4 bone knife.
 startergunBowT0PrimitiveBow,Primitive bow
-startergunBowT0PrimitiveBowDesc,Read this to receive a Q1 primitive bow\nand 10 stone arrows.
+startergunBowT0PrimitiveBowDesc,Read this to receive a Q4 primitive bow\nand 10 stone arrows.
 startermeleeWpnBatonT0PipeBaton,Pipe baton
-startermeleeWpnBatonT0PipeBatonDesc,Read this to receive a Q1 pipe baton.
+startermeleeWpnBatonT0PipeBatonDesc,Read this to receive a Q4 pipe baton.
 tableSawDesc,"A workstation for turning logs into wood planks more quickly and effeciently."
 tablesawTip,"The Tablesaw unlocks the ability to turn wood logs into wood more quickly & effeciently. Inside your land claim area all workstations can be picked up by holding ''E'' and selecting ''TAKE'' from the radial menu."
 tablesawTip_title,Tablesaw
