@@ -7,6 +7,12 @@
 ### THIS IS VERSION 1.2 - A FRESH SAVE IS ABSOLUTELY RECOMMENDED!!! ###
 ### 99% of features are now functioning correctly in multiplayer. Headshots only remains non-functional on dedicated servers ###
 
+Update: 22/01/24
+Changed: Helmet light and held light buffs are now separated.
+Changed: Molotov player damage adjusted (not quite as harsh if you accidentally set yourself on fire).
+Updated: Modinfo.xml from legacy format.
+Fixed: Removed the "honk" on first spawn.
+
 Update: 20/01/24
 Added: Random walk types to zombies
 Changed: Lowered block damage from bunker busters 25%
