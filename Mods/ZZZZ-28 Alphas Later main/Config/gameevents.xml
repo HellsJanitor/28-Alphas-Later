@@ -98,7 +98,48 @@
 		<!-- <action class="CallGameEvent">
 			<property name="game_events" value="boomer_horde_normal" />
 		</action>	 -->
-	</action_sequence>	
+	</action_sequence>
+
+	<action_sequence name="000_action_pull">
+        <property name="allow_user_trigger" value="true"/>
+        <property name="category" value="twitch_actions"/>
+        <action class="SetScreenEffect">
+            <property name="phase" value="1"/>
+            <property name="screen_effect" value="Blur"/>
+            <property name="intensity" value="1"/>
+            <property name="fade_time" value="0.1"/>
+        </action>
+        <action class="Delay">
+            <property name="time" value=".5"/>
+            <property name="phase" value="2"/>
+        </action>
+        <action class="SetScreenEffect">
+            <property name="phase" value="3"/>
+            <property name="screen_effect" value="Blur"/>
+            <property name="intensity" value="0"/>
+            <property name="fade_time" value="5"/>
+        </action>
+        <action class="PlaySound">
+            <property name="sound" value="zombiemalealert" param1="alertsound"/>
+            <property name="phase" value="3"/>
+        </action>
+        <action class="AddSpawnedEntitiesToGroup">
+            <property name="phase" value="4"/>
+            <property name="group_name" value="pulledEntities"/>
+            <property name="entity_tags" value="zombie"/>
+            <property name="max_distance" value="100"/>
+            <property name="target_only" value="false"/>
+        </action>
+        <action class="PullEntities">
+            <property name="phase" value="5"/>
+            <property name="target_group" value="pulledEntities"/>
+            <property name="pull_sound" value="twitch_pull"/>
+        </action>
+        <action class="AddChatMessage">
+            <property name="text" value="[[6441a5]Twitch[-]] Land Claim Broken! [ff0000]Your safe zone has been removed![-]"/>
+            <property name="phase" value="6"/>
+        </action>
+    </action_sequence>
 	
 	<action_sequence name="boomer_horde_normal" template="vote_minor">
 		<variable name="zombiename" value="zombieArlene,zombieBoe,zombieJoe,zombieLab,zombieDarlene,zombieMarlene,zombieYo,zombieSteve,zombieBusinessMan,zombieNurse,zombieSkateboarder,zombiePartyGirl,zombieBurnt,zombieJanitor" />
@@ -142,7 +183,7 @@
 	<action_sequence name="buffAlwaysHeadShotsOnly" template="buff_template">
 		<variable name="addbuff" value="buffAlwaysHeadShotsOnly" />
 		<variable name="removebuff" value="" />
-		<variable name="twitch_negative" value="true" />
+		<!-- <variable name="twitch_negative" value="true" /> -->
 	</action_sequence>
 	</append>
 </configs>
