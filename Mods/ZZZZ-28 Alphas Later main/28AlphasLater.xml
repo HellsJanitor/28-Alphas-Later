@@ -8,6 +8,9 @@
 ### 99% of features are now functioning correctly in multiplayer. Headshots only remains non-functional on dedicated servers ###
 
 Update: 22/01/24
+Changed: Reverted change to helmet light and held light buffs (needs more work)
+
+Update: 22/01/24
 Changed: Helmet light and held light buffs are now separated.
 Changed: Molotov player damage adjusted (not quite as harsh if you accidentally set yourself on fire).
 Updated: Modinfo.xml from legacy format.

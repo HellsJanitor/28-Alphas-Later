@@ -2713,10 +2713,10 @@
 	
 	<append xpath="//item[@name='apparelNightvisionGoggles']">
 	<effect_group>
-		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffHelmetLight"/>
-		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffHelmetLight"/>
-		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHelmetLight"/>
-		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHelmetLight"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffHeldLight"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffHeldLight"/>
+		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHeldLight"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHeldLight"/>
 	</effect_group>
 	</append>
 </configs>
