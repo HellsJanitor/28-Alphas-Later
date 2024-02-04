@@ -6,8 +6,11 @@ ctnChickenCoopDesc,Produces eggs. Needs a chicken.\n\nCan be crafted with any [F
 fuelChicken,Chicken
 fuelChickenDesc,"Use this chicken to produce eggs in a chicken coop.\n\nCan also be butchered for meat, bones & feathers\n with a hunting knife in your inventory/toolbelt."
 cntAdvancedDewCollector,Dew Collector
+cntRainCollector,Rain Collector
 advancedDewCollectorDesc,Collects dew over time for clean drinking water.\n\nRepair with Scrap Polymers.\nCan be upgraded by placing tools into the appropriate slots.\n\nRequires a water filter to work.
+RainCollectorDesc,Collects rainwater in buckets.\n\nRepair with scrap polymer.\n\nRequires an empty bucket to work.
 xuiAdvancedDewCollector,Dew Collector
+xuiRainCollector," "
 adcMineralInfuser,Mineral Infuser
 adcAdvancedFilter,Advanced Water Filter
 adcLargeCatcher,Large Water Catcher
@@ -184,7 +187,7 @@ buffImmobilizedDesc,"If you attempt to pick up any vehicle other than a bicycle,
 buffImmobilizedName,Immobilization
 buffImmobilizedTooltip,"This vehicle is far too heavy. Put it down!!"
 buffPerkSurvivalInstinctDesc,"You are using your instincts of survival!"
-buffPoisonedDesc,"You're envenomed and are slowly taking damage.\n\nYou'll want some antivenom, and fast."
+buffPoisonedDesc,"You're envenomed. Your attributes are lowered by one, and you are slowly taking damage.\n\nYou'll want some antivenom, and fast."
 buffPoisonedName,Envenomed!
 buffPoisonedTooltip,You've been envenomed!
 buffRadiation01,Radiation
@@ -195,6 +198,7 @@ buffRadSuit,Radiation protection
 buffRadSuitDesc,"This hazmat suit will protect from this biome's radiation effects."
 buffRadSuitName,Radiation protection
 buffRadSuitTooltip,Radiation protection
+buffRadSuitRespawnDesc,"You are temporarily immune to radiation effects."
 buffVehicleCrateDesc,"You are carrying a vehicle crate.\n\nThe contents of this crate will be [FFC800]HEAVY[-],\nso make sure you open it where you want the vehicle placed."
 buffVehicleCrateName,Vehicle Crate
 buffVehicleCrateTooltip,This crate contains a heavy vehicle. [FFC800]Open it outside![-]
@@ -326,6 +330,8 @@ meleeWpnClubT3SteelClubDesc,"Steel clubs are very durable and hard-hitting.\n\nR
 meleeWpnKnucklesT3SteelKnucklesDesc,"Protect your hands and put some weight into those swings. These blades can also be useful for gutting animals.\n\nRepair with a Knuckles Repair Kit.\nScrap to Steel Knuckles parts."
 meleeWpnSledgeT3SteelSledgehammerDesc,"The sledgehammer is one of the best weapons for cracking skulls.\n\nRepair with a Sledgehammer Repair Kit.\nScrap to Steel Sledgehammer parts."
 meleeWpnSpearT3SteelSpearDesc,"Spears have more range than other weapons.\n\nRepair with a Spear Repair Kit.\nScrap to Steel Spear parts."
+meleeWpnBladeT666LegendaryPaintbrush,Red's Legendary Paintbrush
+meleeWpnBladeT666LegendaryPaintbrushDesc,"Red's Legendary Paintbrush is a rare, powerful, & ancient artifact. It is rumoured that only Master Decorators can weild it.\n\nGo out, and paint the apocalypse red!\nStops all radiated regen. 30% damage bonus to radiated & mutated zombies.\n\nRepair with Wood."
 MilitaryArmourRepairKit,Military Armour Repair Kit
 MilitaryArmourRepairKitDesc,This Repair Kit is used to repair military armour.
 MinibikeBundle,Minibike
@@ -334,6 +340,8 @@ modBicycleStaminaSaverSchematic,Cycling shorts Mod
 modBicycleStaminaSaverSchematicDesc,Cycling shorts\n\nUnlocks the cycling shorts mod.
 modBicycleStaminaSaver,Cycling shorts
 modBicycleStaminaSaverDesc,Install these shorts to reduce drag on your legs and save 25% on stamina usage when cycling.
+modGunBrassCatcher,Brass Catcher
+modGunBrassCatcherDesc,"Will return 50% of bullet casings when installed in 9mm, 7.62mm, & .44 calibre weapons, but makes them a little slower to reload."
 modGlassesPerceptionDesc,Sunglasses make you look cool and boost your perception.\n\nSlot this mod in your glasses or bandanna. 
 modGlassesPerception,Shades mod
 modGlassesStrengthDesc,Look intimidating and boost your strength!\n\nSlot this mod in your glasses or bandanna.
@@ -366,6 +374,11 @@ MotorcycleBundle,Motorcycle
 MotorcycleBundleDesc,Take this bundle to where you want to place your motorcycle [FFC800]BEFORE[-] you open it!
 MotorToolRepairKit,Motor Tool Repair Kit
 MotorToolRepairKitDesc,"This Repair Kit is used to repair chainsaws, augers, & impact drivers."
+perkCharismaticNatureRank1LongDesc,"People find your survival stories inspiring.\nAllies and Party Members regenerate lost health 50% faster.\n\nDespair affects Allies & Party Members 2.5 - 5% less."
+perkCharismaticNatureRank2LongDesc,"You're a team leader that empowers others.\nAllies and Party Members gain 20% more Block and Melee Damage.\n\nDespair affects Allies & Party Members an additional 2.5 - 5% less."
+perkCharismaticNatureRank3LongDesc,"You're a strong motivational force.\nAllies and Party Members take 10% less damage from all sources, take half damage from bleeding and stop bleeding twice as fast.\n\nDespair affects Allies & Party Members an additional 5 - 10% less."
+perkCharismaticNatureRank4LongDesc,"Your leadership abilities are top shelf.\nAllies and Party Members find 10% better loot.\n\nDespair affects Allies & Party Members an additional 5 - 10% less."
+perkCharismaticNatureRank5LongDesc,"You're a true hero.\nAllies and Party Members find 20% better loot and gain +1 to all attributes.\n\nDespair affects Allies & Party Members an additional 10 - 20% less."
 perkDeepCutsDesc,Specialize in using bladed weapons like knives or machetes. Bleed living things dry. Not much use for the undead though.
 perkDeepCutsName,Deep Cuts
 perkDeepCutsRank1Desc,Dull Blade
@@ -396,8 +409,8 @@ perkSurvivalInstinctRank4Desc,Quick Learner
 perkSurvivalInstinctRank4LongDesc,"Your survival instinct is incredible!! Gain another 5 health and stamina, block damage increase of 10%, entity damage of 5%, and you gain another 3% extra XP. You gain another carry capacity."
 perkSurvivalInstinctRank5Desc,Survival Master
 perkSurvivalInstinctRank5LongDesc,"Your survival instinct is second to none!! Gain another 5 health and stamina, block damage increase of 10%, entity damage of 5%, and you gain another 3% extra XP. You gain another carry capacity."
-perkUrbanCombatCigarDesc,"Craft all eyewear/facewear mods, look cool, and boost your attributes."
-perkUrbanCombatCigarLongDesc,"Unlocks crafting for eyewear and facewear mods.\nShades: Boost Perception attribute by 1. Cigar: Boost Strength attribute by 1\nTough Guy shades: Boost Fortitude attribute by 1.\nSki Goggles: Boost Agility attribute by 1. Nerdy Glasses: Boost Intellect attribute by 1\n\nThese mods can be slotted in looting/nightvision goggles, and/or your bandanna."
+perkUrbanCombatCigarDesc,"Craft Brass Catcher mod"
+perkUrbanCombatCigarLongDesc,"Unlocks crafting for the brass catcher mod.\n\nReturns approximately 50% of spent bullet casings for 9mm, 7.62mm, & .44 calibre firearms."
 perkWasteTreasuresAcidDesc,Adds a chance to harvest acid from cars and medical equipment. Unlocks acid crafting.
 perkWasteTreasuresAcidLongDesc,"Acid: Acid is an extremely rare and powerful crafting agent. I figured out this tip to sometimes harvest a little from cars and medical equipment. Adds a chance to harvest acid from cars, medical equipment and acid barrels. You can extract acid from car batteries in your Workbench, and you can craft it in the Chemistry Station."
 perkWellInsulatedRank3LongDesc,You can now handle severe weather and typically couldn't care less what the weather conditions are. You will never have the more severe stages of temperature status effects.\n\n[FFC800]Immune to slow effects from frozen zombie attacks.[-]
@@ -481,11 +494,13 @@ thrownAntiRadGrenade,Rad-removing Grenade
 thrownAntiRadGrenadeDesc,Pull pin. Throw.\nArm with [action:local:Secondary]\nThrow with [action:local:Primary]\n\nContains radiation removing properties.
 thrownAmmoAntiRadMolotovCocktail,Rad-removing Molotov Cocktail
 thrownAmmoAntiRadMolotovCocktailDesc,Page one of the Anarchist's Cookbook.\nLight with [action:local:Secondary]\nThrow with [action:local:Primary]\n\nContains radiation removing properties.
+toolBellowsDesc,A tool that can be installed in a forge. It increases air flow and so the crafting speed of the forge.
 ttItemNeedsRepair,"This item is knackered and needs fixing"
 ttRepairBeforePickup,"It's knackered and needs repairing before picking it up."
 venomDesc,"Key ingredient for antivenom."
 XuiCollectorModifiers,MODIFIERS
 xuiFilter,"Filter"
+xuiBucket,"Bucket"
 xuiTSBasics,Basics
 zombieArlene,Putrid Girl
 zombieArleneFeral,Feral Putrid Girl

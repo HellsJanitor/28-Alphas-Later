@@ -1,6 +1,37 @@
 <configs>
 	<!-- search find all *** for changes -->
 	
+	<!-- *** adds legendary paintbrush to loot *** -->
+	<insertafter xpath="//lootqualitytemplates/lootqualitytemplate[@name='qualQ1Template']">
+		<lootqualitytemplate name="qualLegendaryTemplate">
+			<qualitytemplate level="1,999999" default_quality="6">
+				<loot quality="6" prob="1"/>
+			</qualitytemplate>
+		</lootqualitytemplate>
+	</insertafter>
+	
+	<insertafter xpath="//lootgroup[@name='groupToolsT3']">
+	<lootgroup name="groupLegendary" loot_quality_template="qualLegendaryTemplate">
+		<item name="meleeWpnBladeT666LegendaryPaintbrush"/>
+	</lootgroup>
+	</insertafter>	
+	
+	<append xpath="//lootgroup[@name='groupToolsTiered']">
+		<item group="groupLegendary" prob="0.02"/>
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupRareToolsTiered']">
+		<item group="groupLegendary" prob="0.02"/>
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupToolsTieredBonus']">
+		<item group="groupLegendary" prob="0.02"/>
+	</append>
+
+	<append xpath="//lootgroup[@name='groupHardenedChestT5']">
+		<item group="groupLegendary" prob="0.02"/>
+	</append>	
+	
 	<!-- *** Make player dropped bags bigger to accomodate new size *** -->
 	<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">10,10</set>	
 	
@@ -173,8 +204,12 @@
     </append>	
 	
     <append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralCommon']">
-        <item name="meleeToolFarmT2IronHoeSchematic" prob="0.4"/>
-    </append>	
+        <item name="meleeToolFarmT2IronHoeSchematic" prob="0.2"/>
+    </append>
+
+	<!-- <append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralT2']">
+		<item name="modGunBrassCatcherSchematic"/>
+	</append> -->
 	
 	<!-- *** mods *** -->
 	<append xpath="//lootgroup[@name='modMeleeT3']">
@@ -184,13 +219,14 @@
 	</append>
 	
 	<append xpath="//lootgroup[@name='modGunMeleeT3']">
-		<item name="modGunMeleeBlessedMetal"/>
+		<item name="modGunMeleeBlessedMetal" prob="0.2"/>
 	</append>
 	
 	<append xpath="//lootgroup[@name='modGunT3']">
 		<item name="modGunMeleeNiCdBattery"/>
 		<item name="modGunMeleeFlammableOil"/>
 		<item name="modGunMeleeLiquidNitrogen"/>
+		<item name="modGunBrassCatcher"/>
 	</append>
 	
 	<!-- *** despair meds in loot *** -->

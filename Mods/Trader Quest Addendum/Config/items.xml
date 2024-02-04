@@ -1,0 +1,48 @@
+<Config>
+
+	<!-- AidTheAfflicted -->
+	<set xpath="/items/item[@name='medicalBandage']/property[@name='Tags']/@value">medical,medicalSkill,stopsBleeding,AidTheAfflicted_medicalBandage</set> <!-- default: medical,medicalSkill,stopsBleeding -->
+	<set xpath="/items/item[@name='medicalAloeCream']/property[@name='Tags']/@value">medical,medicalSkill,AidTheAfflicted_medicalAloeCream</set> <!-- default: medical,medicalSkill -->
+	<set xpath="/items/item[@name='medicalSplint']/property[@name='Tags']/@value">medical,AidTheAfflicted_medicalSplint</set> <!-- default: medical -->
+	<set xpath="/items/item[@name='drugHerbalAntibiotics']/property[@name='Tags']/@value">medical,medicalSkill,AidTheAfflicted_drugHerbalAntibiotics</set> <!-- default: medical,medicalSkill -->
+	<set xpath="/items/item[@name='drugAntibiotics']/property[@name='Tags']/@value">medical,medicalSkill,AidTheAfflicted_drugAntibiotics</set> <!-- default: medical,medicalSkill -->
+
+	<append xpath="/items/item[@name='medicalFirstAidBandage']">
+		<property name="Tags" value="medical,medicalSkill,stopsBleeding,AidTheAfflicted_medicalFirstAidBandage"/>
+	</append>
+	<append xpath="/items/item[@name='drugFortBites']">
+		<property name="Tags" value="medical,medicalSkill,AidTheAfflicted_drugFortBites"/>
+	</append>
+	<append xpath="/items/item[@name='medicalPlasterCast']">
+		<property name="Tags" value="medical,AidTheAfflicted_medicalPlasterCast"/>
+	</append>
+	<append xpath="/items/item[@name='medicalFirstAidKit']">
+		<property name="Tags" value="medical,medicalSkill,stopsBleeding,AidTheAfflicted_medicalFirstAidKit"/>
+	</append>
+
+	<!-- FeedTheFamished -->
+	<set xpath="/items/item[@name='foodCornBread']/property[@name='Tags']/@value">food,foodSkill,FeedTheFamished_foodCornBread</set> <!-- default: food,foodSkill -->
+	<set xpath="/items/item[@name='foodGrilledMeat']/property[@name='Tags']/@value">food,foodSkill,FeedTheFamished_foodGrilledMeat</set> <!-- default: food,foodSkill -->
+	<set xpath="/items/item[@name='drinkJarGoldenRodTea']/property[@name='Tags']/@value">drinks,foodSkill,FeedTheFamished_drinkJarGoldenRodTea</set> <!-- default: drinks,foodSkill -->
+	<set xpath="/items/item[@name='drinkJarRedTea']/property[@name='Tags']/@value">drinks,foodSkill,FeedTheFamished_drinkJarRedTea</set> <!-- default: drinks,foodSkill -->
+	<set xpath="/items/item[@name='foodBaconAndEggs']/property[@name='Tags']/@value">food,foodSkill,FeedTheFamished_foodBaconAndEggs</set> <!-- default: food,foodSkill -->
+	<set xpath="/items/item[@name='drinkJarCoffee']/property[@name='Tags']/@value">drinks,foodSkill,FeedTheFamished_drinkJarCoffee</set> <!-- default: drinks,foodSkill -->
+	<set xpath="/items/item[@name='foodBlueberryPie']/property[@name='Tags']/@value">food,foodSkill,FeedTheFamished_foodBlueberryPie</set> <!-- default: food,foodSkill --> 
+	<set xpath="/items/item[@name='foodPumpkinBread']/property[@name='Tags']/@value">food,foodSkill,FeedTheFamished_foodPumpkinBread</set> <!-- default: food,foodSkill -->
+	<set xpath="/items/item[@name='foodMeatStew']/property[@name='Tags']/@value">food,foodSkill,FeedTheFamished_foodMeatStew</set> <!-- default: food,foodSkill -->
+	<set xpath="/items/item[@name='foodHoboStew']/property[@name='Tags']/@value">food,foodSkill,FeedTheFamished_foodHoboStew</set> <!-- default: food,foodSkill -->
+	<!--<set xpath="/items/item[@name='foodShamChowder']/property[@name='Tags']/@value">food,foodSkill,FeedTheFamished_foodShamChowder</set> default: food,foodSkill -->
+	<set xpath="/items/item[@name='drinkJarBeer']/property[@name='Tags']/@value">drinks,foodSkill,FeedTheFamished_drinkJarBeer</set> <!-- default: drinks,foodSkill -->
+	<set xpath="/items/item[@name='foodTunaFishGravyToast']/property[@name='Tags']/@value">food,foodSkill,FeedTheFamished_foodTunaFishGravyToast</set> <!-- default: food,foodSkill -->
+	<set xpath="/items/item[@name='foodShepardsPie']/property[@name='Tags']/@value">food,foodSkill,FeedTheFamished_foodShepardsPie</set> <!-- default: food,foodSkill -->
+	<set xpath="/items/item[@name='drinkJarGrandpasAwesomeSauce']/property[@name='Tags']/@value">drinks,foodSkill,FeedTheFamished_drinkJarGrandpasAwesomeSauce</set> <!-- default: drinks,foodSkill -->
+	<set xpath="/items/item[@name='foodSpaghetti']/property[@name='Tags']/@value">food,foodSkill,FeedTheFamished_foodSpaghetti</set> <!-- default: food,foodSkill -->
+	<set xpath="/items/item[@name='foodGumboStew']/property[@name='Tags']/@value">food,foodSkill,FeedTheFamished_foodGumboStew</set> <!-- default: food,foodSkill -->
+
+
+	<append xpath="/items/item[@name='foodShamChowder']">
+		<property name="Tags" value="food,foodSkill,FeedTheFamished_foodShamChowder"/>
+	</append>
+
+
+</Config>

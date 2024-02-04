@@ -275,6 +275,57 @@
 		</rect>
 	</window>
 	
+	<window name="windowRainCollector" width="{windowWidth}" height="378" controller="PassiveCollectorWindow, IDCCoreV2" panel="Left" anchor_side="bottomright" visible="false" cursor_area="true" >
+		<panel name="header" height="43" depth="0" disableautobackground="true" anchor_left="queue,0,-3" anchor_right="queue,1,0" >
+			<sprite depth="1" name="headerbackground" sprite="ui_game_panel_header" anchor_left="queue,0,-3" anchor_right="queue,1,0" />
+			<sprite depth="3" name="windowIcon" style="icon32px" pivot="center" pos="21,-21" sprite="ui_game_symbol_loot_sack" />
+			<label depth="2" name="lootName" pos="39,-6" width="180" height="32" text_key="xuiRainCollector" font_size="32" />
+			
+			<rect anchor_left="queue,1,-300" anchor_right="queue,1,0" pivot="topleft" pos="0,0" controller="ContainerStandardControls" createuiwidget="true" visible="false"></rect>
+		</panel>
+		<rect name="content" pos="3,-49" >
+			<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="queue,0,-3" anchor_bottom="queue,0,0" anchor_right="queue,1,0" anchor_top="queue,1,49" on_press="true" />
+			<grid depth="12" name="queue" rows="3" cols="1" cell_width="75" cell_height="75" repeat_content="true" controller="PassiveCollectorContainer, IDCCoreV2" required_item="drinkJarEmpty">
+				<dewcollector_stack controller="DewCollectorStack" override_stack_count="1" name="0"/>
+			</grid>
+		</rect>
+	</window>
+	
+	<window name="windowToolsRainCollector" width="230" height="121" panel="Right" cursor_area="true" >
+		<!-- <panel style="header.panel">
+			<sprite style="header.icon" sprite="ui_game_symbol_wrench"/>
+			<label style="header.name" text="MODIFIERS" text_key="adcXuiModifiers" />
+		</panel> -->
+
+		<!-- <rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="PassiveCollectorToolGrid, IDCCoreV2" repeat_content="true"
+			required_tools="adcAdvancedFilter,adcLargeCatcher,adcBigBarrel" required_tools_only="true">
+				<item_stack controller="RequiredItemStack" name="0"/>
+			</grid>
+		</rect> -->
+	</window>
+	
+	<window name="idcWindowFuelRainCollector" width="125" height="166" panel="Right" cursor_area="true">
+	<!--#$-IGS END.-$#-->
+		<panel style="header.panel" pos="0,130">
+			<sprite style="header.icon" sprite="bucketEmpty"/>
+			<label style="header.name" text="FUEL" text_key="xuiBucket" />
+		</panel>
+
+		<rect name="content" depth="0" pos="0,82" height="79" >
+			<rect disablefallthrough="true">
+				<grid rows="1" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="PassiveCollectorFuelStackGrid, IDCCoreV2" repeat_content="true">
+					<item_stack name="0"/>
+				</grid>
+			</rect>
+			<grid name="slot_preview" depth="1" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="SlotPreview">
+				<rect>
+					<sprite name="slot" depth="2" width="64" height="64" sprite="bucketEmpty" atlas="ItemIconAtlasGreyscale" pos="35,-35" pivot="center" foregroundlayer="true"/>
+				</rect>
+			</grid>
+		</rect>
+	</window>
+	
 	<window name="windowToolsAnimalSnare" width="156" height="121" panel="Right" cursor_area="true" >
 		<panel style="header.panel">
 			<sprite style="header.icon" sprite="ui_game_symbol_wrench"/>
@@ -493,26 +544,131 @@
 					<sprite depth="8" name="border" sprite="menu_empty3px" color="0,0,0,255" type="sliced" fillcenter="false"/>
 				</rect>
 			</rect>
-		</window>	
+		</window>
+
+		<!-- icons appear/face depending on conditions met -->
+		<window name="HUDTopLeftStatBars" anchor="LeftTop" pos="20,-20" visible="{# cvar('warm') > 0}">
+		<grid name="HUDInfoLeft" cols="3" cell_width="120" arrangement="horizontal">
+			<rect name="hudWarmth" width="32" height="32" controller="HUDStatBar" visible="{# cvar('warmAlpha') > 1}"> <!--visible="{# cvar('warmAlpha') > 1}"-->
+				<sprite depth="1" name="background" color="0,0,0,{cvar(warmAlpha)}" type="sliced"/>
+				<filledsprite depth="2" name="BarContent" pos="2,-2" width="29" height="29" color="{# cvar('warm') > 0 ? '0,128,0' : '255,0,0' },{cvar(warmAlpha)}" />
+				<sprite depth="3" name="Icon" sprite="{# cvar('warm') > 0 ? 'ui_game_symbol_check' : 'ui_game_symbol_x' }" color="{# cvar('warm') > 0 ? '255,255,255' : '255,255,255' },{cvar(warmAlpha)}" size="24,24" pos="16,-16" pivot="center" foregroundlayer="true"/>
+				<label depth="4" name="TextContent" pos="8,-16" font_size="24" color="255,255,255,{cvar(warmAlpha)}" justify="center" pivot="left" text="Warmth" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
+				<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,{cvar(warmAlpha)}" type="sliced" />
+			</rect>
+			
+			<rect name="hudShelter" width="32" height="32" controller="HUDStatBar" visible="{# cvar('shelterAlpha') > 1}"> <!--visible="{# cvar('shelterAlpha') > 1}"-->
+				<sprite depth="1" name="background" color="0,0,0,{cvar(shelterAlpha)}" type="sliced"/>
+				<filledsprite depth="2" name="BarContent" pos="2,-2" width="29" height="29" color="{# cvar('shelter') > 0 ? '0,128,0' : '255,0,0' },{cvar(shelterAlpha)}" />
+				<sprite depth="3" name="Icon" sprite="{# cvar('shelter') > 0 ? 'ui_game_symbol_check' : 'ui_game_symbol_x' }" color="{# cvar('shelter') > 0 ? '255,255,255' : '255,255,255' },{cvar(shelterAlpha)}" size="24,24" pos="16,-16" pivot="center" foregroundlayer="true"/>
+				<label depth="4" name="TextContent" pos="8,-16" font_size="24" color="255,255,255,{cvar(shelterAlpha)}" justify="center" pivot="left" text="Shelter" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
+				<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,{cvar(shelterAlpha)}" type="sliced" />
+			</rect>
+			
+			<rect name="hudComfort" width="32" height="32" controller="HUDStatBar" visible="{# cvar('welllitAlpha') > 1}"> <!--visible="{# cvar('welllitAlpha') > 1}"-->
+				<sprite depth="1" name="background" color="0,0,0,{cvar(welllitAlpha)}" type="sliced"/>
+				<filledsprite depth="2" name="BarContent" pos="2,-2" width="29" height="29" color="{# cvar('comfort') > 0 ? '0,128,0' : '255,0,0' },{cvar(welllitAlpha)}" />
+				<sprite depth="3" name="Icon" sprite="{# cvar('comfort') > 0 ? 'ui_game_symbol_check' : 'ui_game_symbol_x' }" color="{# cvar('shelter') > 0 ? '255,255,255' : '255,255,255' },{cvar(welllitAlpha)}" size="24,24" pos="16,-16" pivot="center" foregroundlayer="true"/>
+				<label depth="4" name="TextContent" pos="8,-16" font_size="24" color="255,255,255,{cvar(welllitAlpha)}" justify="center" pivot="left" text="Well Lit" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
+				<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,{cvar(welllitAlpha)}" type="sliced" />
+			</rect>
+		</grid>
+	</window>
+	
+	<!-- always visible, true/false conditions change colour and icon -->
+	<!-- <window name="HUDTopLeftStatBars" anchor="LeftTop" pos="20,-20">
+		<grid name="HUDInfoLeft" cols="3" cell_width="120" arrangement="horizontal">
+			<rect name="hudWarmth" width="32" height="32" controller="HUDStatBar">
+				<sprite depth="1" name="background" color="0,0,0,220" type="sliced"/>
+				<filledsprite depth="2" name="BarContent" pos="2,-2" width="29" height="29" color="{# cvar('warm') > 0 ? '0,255,0,100' : '255,0,0,100' }" />
+				<sprite depth="3" name="Icon" sprite="{# cvar('warm') > 0 ? 'ui_game_symbol_check' : 'ui_game_symbol_x' }" size="24,24" pos="16,-16" pivot="center" foregroundlayer="true"/>
+				<label depth="4" name="TextContent" pos="8,-16" font_size="24" color="[white]" justify="center" pivot="left" text="Warmth" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
+				<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,240" type="sliced" />
+			</rect>
+			
+			<rect name="hudShelter" width="32" height="32" controller="HUDStatBar">
+				<sprite depth="1" name="background" color="0,0,0,220" type="sliced"/>
+				<filledsprite depth="2" name="BarContent" pos="2,-2" width="29" height="29" color="{# cvar('shelter') > 0 ? '0,255,0,100' : '255,0,0,100' }" />
+				<sprite depth="3" name="Icon" sprite="{# cvar('shelter') > 0 ? 'ui_game_symbol_check' : 'ui_game_symbol_x' }" size="24,24" pos="16,-16" pivot="center" foregroundlayer="true"/>
+				<label depth="4" name="TextContent" pos="8,-16" font_size="24" color="[white]" justify="center" pivot="left" text="Shelter" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
+				<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,240" type="sliced" />
+			</rect>
+			
+			<rect name="hudComfort" width="32" height="32" controller="HUDStatBar">
+				<sprite depth="1" name="background" color="0,0,0,220" type="sliced"/>
+				<filledsprite depth="2" name="BarContent" pos="2,-2" width="29" height="29" color="{# cvar('comfort') > 0 ? '0,255,0,100' : '255,0,0,100' }" />
+				<sprite depth="3" name="Icon" sprite="{# cvar('comfort') > 0 ? 'ui_game_symbol_check' : 'ui_game_symbol_x' }" size="24,24" pos="16,-16" pivot="center" foregroundlayer="true"/>
+				<label depth="4" name="TextContent" pos="8,-16" font_size="24" color="[white]" justify="center" pivot="left" text="Well Lit" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
+				<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,240" type="sliced" />
+			</rect>
+		</grid>
+	</window> -->
 	</append>
 	<!-- ### -->
 
 	<set xpath="/windows/window[@name='HUDLeftStatBars']">
 		<rect name="hud" pos="90,90" side="left" controller="BuffPopoutList" pivot="BottomLeft">
-			<panel width="168" height="46" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0" style="press" sound="[recipe_click]" on_hover="true" >
-				<sprite depth="3" pos="0,0"  name="Background" sprite="ui_game_popup" height="46" width="162" pivot="center" flip="Horizontally" color="[transparent]" />
-				<sprite depth="4" name="Icon" size="40,40" pos="-54,0" pivot="center" color="[transparent]"/>
-				<label depth="6" name="TextContent" pos="-37,0" font_size="28" color="[white]" justify="center" width="118" height="40" pivot="left"/>
+			<panel width="168" height="46" name="item" visible="false" pivot="right" disableautobackground="true" pos="70,-80" style="press" sound="[recipe_click]" on_hover="true" >
+				<sprite depth="3" pos="0,-40"  name="Background" sprite="ui_game_popup" height="46" width="162" pivot="center" flip="Horizontally" color="[transparent]" />
+				<sprite depth="4" name="Icon" size="40,40" pos="-54,-40" pivot="center" color="[transparent]"/>
+				<label depth="6" name="TextContent" pos="-37,-40" font_size="28" color="[white]" justify="center" width="118" height="40" pivot="left"/>
 			</panel>
 		</rect>	
 	
-		<rect name="hudStealth" width="171" height="44" pos="10,110" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
+		<rect name="hudStealth" width="171" height="44" pos="10,70" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
 			<sprite depth="1" name="background" color="0,0,0,220" type="sliced"/>
 			<filledsprite depth="2" name="BarContent" pos="2,-2" width="167" height="40" color="{stealthcolor}" type="filled" fill="0" />
 			<sprite depth="3" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="35,35" pos="26,-22" pivot="center" foregroundlayer="true"/>
 			<label depth="4" name="TextContent" pos="44,-23" font_size="32" color="[white]" justify="center" pivot="left" text="{statcurrent}" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
 			<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,240" type="sliced" />
 		</rect>
+		
+		<!-- <rect name="hudWarmth" width="33" height="33" pos="10,1000" controller="HUDStatBar" visible="{# cvar('warm') > 0}">
+			<sprite depth="1" name="background" width="33" height="33" color="0,0,0,220" type="sliced"/>
+			<filledsprite depth="2" name="BarContent" pos="2,-2" width="29" height="29" color="0,255,0,100" />
+			<sprite depth="3" name="Icon" sprite="ui_game_symbol_check" size="24,24" pos="15,-16" pivot="center" foregroundlayer="true"/>
+			<label depth="4" name="TextContent" pos="16,-18" font_size="24" color="[white]" justify="center" pivot="left" text="Warmth" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
+			<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,240" type="sliced" />
+		</rect>
+		<rect name="hudNoWarmth" width="33" height="33" pos="10,1000" controller="HUDStatBar" visible="{# cvar('warm') &lt; 1}">
+			<sprite depth="1" name="background" width="33" height="33" color="0,0,0,220" type="sliced"/>
+			<filledsprite depth="2" name="BarContent" pos="2,-2" width="29" height="29" color="255,0,0,100" />
+			<sprite depth="3" name="Icon" sprite="ui_game_symbol_x" size="24,24" pos="15,-16" pivot="center" foregroundlayer="true"/>
+			<label depth="4" name="TextContent" pos="16,-18" font_size="24" color="[white]" justify="center" pivot="left" text="Warmth" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
+			<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,240" type="sliced" />
+		</rect>
+		
+		<rect name="hudShelter" width="33" height="33" pos="150,1000" controller="HUDStatBar" visible="{# cvar('shelter') > 0}">
+			<sprite depth="1" name="background" width="33" height="33" color="0,0,0,220" type="sliced"/>
+			<filledsprite depth="2" name="BarContent" pos="2,-2" width="29" height="29" color="0,255,0,100" />
+			<sprite depth="3" name="Icon" sprite="ui_game_symbol_check" size="24,24" pos="15,-16" pivot="center" foregroundlayer="true"/>
+			<label depth="4" name="TextContent" pos="16,-18" font_size="24" color="[white]" justify="center" pivot="left" text="Shelter" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
+			<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,240" type="sliced" />
+		</rect>
+		
+		<rect name="hudNoShelter" width="33" height="33" pos="150,1000" controller="HUDStatBar" visible="{# cvar('shelter') &lt; 1}">
+			<sprite depth="1" name="background" width="33" height="33" color="0,0,0,220" type="sliced"/>
+			<filledsprite depth="2" name="BarContent" pos="2,-2" width="29" height="29" color="255,0,0,100" />
+			<sprite depth="3" name="Icon" sprite="ui_game_symbol_x" size="24,24" pos="15,-16" pivot="center" foregroundlayer="true"/>
+			<label depth="4" name="TextContent" pos="16,-18" font_size="24" color="[white]" justify="center" pivot="left" text="Shelter" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
+			<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,240" type="sliced" />
+		</rect>
+		
+		<rect name="hudComfort" width="33" height="33" pos="290,1000" controller="HUDStatBar" visible="{# cvar('comfort') > 0}">
+			<sprite depth="1" name="background" width="33" height="33" color="0,0,0,220" type="sliced"/>
+			<filledsprite depth="2" name="BarContent" pos="2,-2" width="29" height="29" color="0,255,0,100" />
+			<sprite depth="3" name="Icon" sprite="ui_game_symbol_check" size="24,24" pos="15,-16" pivot="center" foregroundlayer="true"/>
+			<label depth="4" name="TextContent" pos="16,-18" font_size="24" color="[white]" justify="center" pivot="left" text="Well Lit" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
+			<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,240" type="sliced" />
+		</rect>
+		
+		<rect name="hudNoComfort" width="33" height="33" pos="290,1000" controller="HUDStatBar" visible="{# cvar('comfort') &lt; 1}">
+			<sprite depth="1" name="background" width="33" height="33" color="0,0,0,220" type="sliced"/>
+			<filledsprite depth="2" name="BarContent" pos="2,-2" width="29" height="29" color="255,0,0,100" />
+			<sprite depth="3" name="Icon" sprite="ui_game_symbol_x" size="24,24" pos="15,-16" pivot="center" foregroundlayer="true"/>
+			<label depth="4" name="TextContent" pos="16,-18" font_size="24" color="[white]" justify="center" pivot="left" text="Well Lit" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
+			<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,240" type="sliced" />
+		</rect> -->
 	</set>
 	
 	<set xpath="/windows/window[@name='windowToolbelt']/@pos">-388, 98</set>

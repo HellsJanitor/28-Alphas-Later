@@ -1,28 +1,28 @@
 <HellsJanitor>
 	<append xpath="//item_modifier[@name='modArmorHelmetLight']">
 	<effect_group>
-		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffHeldLight"/>
-		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffHeldLight"/>
-		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHeldLight"/>
-		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHeldLight"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffHelmetLight"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffHelmetLight"/>
+		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHelmetLight"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHelmetLight"/>
 	</effect_group>
 	</append>
 	
 	<append xpath="//item_modifier[@name='modGunFlashlight']">
 	<effect_group>
-		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffHeldLight"/>
-		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffHeldLight"/>
-		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHeldLight"/>
-		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHeldLight"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffGunFlashlight"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffGunFlashlight"/>
+		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffGunFlashlight"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffGunFlashlight"/>
 	</effect_group>
 	</append>
 	
 	<append xpath="//item_modifier[@name='modMeleeClubBurningShaft']">
 	<effect_group>
-		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffHeldLight"/>
-		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffHeldLight"/>
-		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHeldLight"/>
-		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHeldLight"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffBurningShaft"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffBurningShaft"/>
+		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffBurningShaft"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffBurningShaft"/>
 	</effect_group>
 	</append>
 	
@@ -70,7 +70,7 @@
 			<requirement name="!EntityTagCompare" target="other" tags="mutated"/>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
 		</effect_group>
-	</set>
+	</set>	
 	
 	<!-- *** adds Blessed Metal back to the game *** -->
 	<append xpath="/item_modifiers">
@@ -360,6 +360,26 @@
 					<requirement name="HoldingItemHasTags" tags="rocketLauncher"/>
 				</triggered_effect>
 			</effect_group>			
+		</item_modifier>
+		
+	<!-- *** brass catcher *** -->
+		<item_modifier name="modGunBrassCatcher" installable_tags="weapon" blocked_tags="shotgun,melee,perkArchery,turretMelee,turretRanged,noMods" modifier_tags="sideAttachment" type="attachment">
+			<property name="CustomIcon" value="resourceBulletCasing" />
+			<property name="DescriptionKey" value="modGunBrassCatcherDesc"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="EconomicValue" value="750"/>
+			<property name="Stacknumber" value="1"/>			
+			<property name="UnlockedBy" value="perkUrbanCombatCigar"/>
+			<effect_group tiered="false">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				<requirement name="RoundsInMagazine" operation="GTE" value="1"/>
+				<requirement name="!HoldingItemBroken"/>
+					<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" target="self" buff="buffReclaimBrass"/>
+					<triggered_effect trigger="onSelfRangedBurstShotEnd" action="AddBuff" target="self" buff="buffReclaimBrass"/>
+			</effect_group>	
+			<effect_group>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="-.15"/>
+			</effect_group>
 		</item_modifier>
 	</append>
 </HellsJanitor>

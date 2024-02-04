@@ -31,7 +31,7 @@
 	<set xpath="//crafting_skill[@name='craftingVehicles']/effect_group//passive_effect[5]/@tags">vehicleGyroCopterChassis,vehicleGyroCopterAccessories,GyroBundle</set>
 	
 	<!-- *** Urban Combat Vol. 2 unlocks *** -->
-	<set xpath="/progression/perks/book[@name='perkUrbanCombatCigar']/effect_group/passive_effect[@name='RecipeTagUnlocked']/@tags">modGlassesStrength,modGlassesPerception,modGlassesFortitude,modGlassesAgility,modGlassesIntellect</set>
+	<set xpath="/progression/perks/book[@name='perkUrbanCombatCigar']/effect_group/passive_effect[@name='RecipeTagUnlocked']/@tags">modGunBrassCatcher</set>
 	
 	<!-- *** removes harvesting boost and bonus from crops (lines 47 & 48) *** -->
 	<set xpath="//perk[@name='perkLivingOffTheLand']">
@@ -126,12 +126,14 @@
 	<remove xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[1]//unlock_entry[1]"/>
 	<remove xpath="//crafting_skill[@name='craftingWorkstations']/effect_group//passive_effect[1]"/>
 	
-	<!-- *** new dew collector *** -->
+	<!-- *** new dew & rain collector *** -->
 	<insertbefore xpath="/progression//crafting_skill[@name='craftingWorkstations']/display_entry[1]//unlock_entry[@item='forge']">
 		<unlock_entry item="cntAdvancedDewCollector" unlock_tier="1" />
+		<unlock_entry item="cntRainCollector" unlock_tier="1" />
 	</insertbefore>
 	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/effect_group">
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,100" value="1" tags="cntAdvancedDewCollector"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,100" value="1" tags="cntRainCollector"/>
 	</append>
 	
 	<!-- *** Better Barter & Daring Adventurer removed from skill tree - now a "passive" unlock *** -->	

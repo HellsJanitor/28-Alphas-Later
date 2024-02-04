@@ -1,0 +1,10 @@
+<xml>
+	<append xpath="/*[1]">
+		<buff name="buffLightLevelTest" hidden="true">
+			<update_rate value=".05"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="_28AL.CC.MinEventActions.GetLightLevel,28ALCC" receiving_cvar=".LightLevel"/>
+			</effect_group>
+		</buff>
+	</append>
+</xml>

@@ -1,0 +1,37 @@
+<xml>
+	<set xpath="//block[@name='wallTorchLightPlayer']/property[@name='Class' and @value='TorchHeatMap']/@value">_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC</set>
+	<append xpath="//block[@name='wallTorchLightPlayer']">
+		<property name="ActiveRadiusEffects" value="buffCampfireAOE(2);buffWallTorch(2)"/>
+	</append>
+
+	<set xpath="//block[@name='candleWallLightPlayer']/property[@name='Class']/@value">_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC</set>
+	<append xpath="//block[@name='candleWallLightPlayer']">
+		<property name="ActiveRadiusEffects" value="buffCampfireAOE(1);buffWallTorch(1)"/>
+	</append>	
+	
+	<append xpath="//block[@name='candleTableLightPlayer']">
+		<property name="ActiveRadiusEffects" value="buffCampfireAOE(1);buffWallTorch(1)"/>
+	</append>
+	
+	<!-- <set xpath="//block[@name='lanternDecorLightWhite_player']/property[@name='Class']/@value">_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC</set>
+	<append xpath="//block[@name='lanternDecorLightWhite_player']">
+		<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+	</append> -->
+</xml>
+
+	<!-- property classes for buffs -->
+	<!-- _28AL.CC.Blocks.GenericTE,28ALCC -->
+	<!-- _28AL.CC.Blocks.LightTE,28ALCC -->
+	<!-- _28AL.CC.Blocks.LightAlwaysOnTE,28ALCC -->
+	
+	<!-- Examples of usage: -->
+	
+	<!-- <append xpath="//block[@name='cntBathTubEmpty']">
+		<property name="Class" value="_28AL.CC.Blocks.GenericTE,28ALCC"/>
+		<property name="ActiveRadiusEffects" value="buffBurningEnvironment(5)"/>
+	</append> -->
+	
+	<!-- <set xpath="//block[@name='candleWallLightPlayer']/property[@name='Class']/@value">_28AL.CC.Blocks.LightTE,28ALCC</set> -->
+	<!-- <append xpath="//block[@name='candleWallLightPlayer']"> -->
+	<!-- 	<property name="ActiveRadiusEffects" value="buffShocked(5)"/> -->
+	<!-- </append> -->

@@ -89,9 +89,14 @@
 		<item name="modGunMeleeLiquidNitrogen"/>
 	</append>
 	
+	<append xpath="//trader_item_group[@name='groupRangedMods']">
+		<item name="modGunBrassCatcher"/>
+	</append>
+	
 	<!-- *** add new mod schematics to trader stock *** -->
 	<append xpath="//trader_item_group[@name='schematicsModsCommon']">		
-		<item name="modBicycleStaminaSaverSchematic"/>		
+		<item name="modBicycleStaminaSaverSchematic"/>	
+		<!-- <item name="modGunBrassCatcherSchematic"/> -->
 	</append>
 	
 	<!-- *** add antivenom/St. John's wort to medical trader stock *** -->
@@ -103,6 +108,11 @@
 	<!-- *** add lithium to rare medical trader stock *** -->
 	<append xpath="//trader_item_group[@name='rareMedicine']">
 	<item name="drugLithium" count="1,2"/>
+	</append>
+	
+	<!-- *** legendary paintbrush *** -->
+	<append xpath="//trader_item_group[@name='rareTools']">
+	<item name="meleeWpnBladeT666LegendaryPaintbrush" quality="6"/>
 	</append>
 	
 	<!-- *** remove all eye/face wear EXCEPT looting goggles & bandanna *** -->

@@ -1,0 +1,12 @@
+<Config>
+
+	<!-- ContrabandCollection -->
+<!--<set xpath="/blocks/block[@name='cntFetchQuestSatchel']/property[@name='FilterTags']/@value">medical,medicalSkill,stopsBleeding,AidTheAfflicted_medicalBandage</set> -->
+
+<append xpath="/blocks/block[@name='cntFetchQuestSatchel']">
+	<property name="Tags" value="ContrabandCollection_cntFetchQuestSatchel"/>
+</append>
+
+
+
+</Config>

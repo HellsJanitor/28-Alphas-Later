@@ -1,0 +1,84 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+
+quest_tier2_accelerated_annihiliation_name,Quest,Quest Info,,,Tier 2 Infested Speed Clear
+quest_tier3_accelerated_annihiliation_name,Quest,Quest Info,,,Tier 3 Infested Speed Clear
+quest_tier4_accelerated_annihiliation_name,Quest,Quest Info,,,Tier 4 Infested Speed Clear
+quest_tier5_accelerated_annihiliation_name,Quest,Quest Info,,,Tier 5 Infested Speed Clear
+quest_tier6_accelerated_annihiliation_name,Quest,Quest Info,,,Tier 6 Infested Speed Clear
+quest_accelerated_annihiliation_subtitle,Quest,Quest Info,,,Accelerated Annihiliation
+quest_accelerated_annihiliation_description,Quest,Quest Info,,,I need your help clearing out [DECEA3]{poi.name}[-] which is infested with zombies. An operative is inbound and I need it cleared ASAP so I'm paying a bonus for a fast clear.  Get in there and get it done!
+quest_tier1_accelerated_annihiliation_offer,Quest,Quest Info,,,I need your help clearing out [DECEA3]{poi.name}[-] which is infested with zombies. An operative is inbound and I need it cleared ASAP so I'm paying a bonus for a fast clear.  Get in there and get it done!
+quest_accelerated_annihiliation_statement,Quest,Quest Info,,,Infested Speed Clear
+quest_accelerated_annihiliation_response,Quest,Quest Info,,,Infested Speed Clear ([DECEA3]{poi.distance} {poi.direction}[-])
+quest_accelerated_annihiliation_completion,Quest,Quest Info,,,Thanks for your help clearing out the zombies - great job!
+quest_accelerated_annihiliation_completion_silver,Quest,Quest Info,,,Pretty quick job - nice work! Take some ammo for your efforts.  (Silver Clear)
+quest_accelerated_annihiliation_completion_gold,Quest,Quest Info,,,Amazing - I can't believe you took out all the zombies like that!  Take an extra reward on the house! (Gold Clear)
+tier1_aid_the_afflicted_name,Quest,Quest Info,,,Tier 1 Clear + Meds
+tier2_aid_the_afflicted_name,Quest,Quest Info,,,Tier 2 Clear + Meds
+tier3_aid_the_afflicted_name,Quest,Quest Info,,,Tier 3 Clear + Meds
+tier4_aid_the_afflicted_name,Quest,Quest Info,,,Tier 4 Clear + Meds
+tier5_aid_the_afflicted_name,Quest,Quest Info,,,Tier 5 Clear + Meds
+aid_the_afflicted_subtitle,Quest,Quest Info,,,Aid the Afflicted
+aid_the_afflicted_description,Quest,Quest Info,,,We're all in the apocalypse together and there's an encampment nearby that are doing it tough - they've left payment and a bonus item in a dead drop nearby at [DECEA3]{poi.name}[-]. It's all yours if you can clear the place and leave them some medical items to help them get back on their feet.
+tier1_aid_the_afflicted_offer,Quest,Quest Info,,,Leave some medical items in the dead drop at [DECEA3]{poi.name}[-]. Take the payment and any spare items they left you after you clear the place and leave the supplies!
+tier1_aid_the_afflicted_statement,Quest,Quest Info,,,Clear + Meds
+tier1_aid_the_afflicted_response,Quest,Quest Info,,,Clear + Meds ([DECEA3]{poi.distance} {poi.direction}[-])
+aid_the_afflicted_completion,Quest,Quest Info,,,Thanks for leaving the supplies - hopefully that will help them out of this rough patch.
+tier1_aid_the_afflicted_reward_name,Quest,Quest Info,,,Tier 1 Clear + Meds Reward
+tier2_aid_the_afflicted_reward_name,Quest,Quest Info,,,Tier 2 Clear + Meds Reward
+tier3_aid_the_afflicted_reward_name,Quest,Quest Info,,,Tier 3 Clear + Meds Reward
+tier4_aid_the_afflicted_reward_name,Quest,Quest Info,,,Tier 4 Clear + Meds Reward
+tier5_aid_the_afflicted_reward_name,Quest,Quest Info,,,Tier 5 Clear + Meds Reward
+aid_the_afflicted_reward_description,Quest,Quest Info,,,After dropping off the supplies it's time to return to the trader for your reward.
+tier1_aid_the_afflicted_reward_offer,Quest,Quest Info,,,After dropping off the supplies it's time to return to the trader for your reward.
+tier1_contraband_collection_name,Quest,Quest Info,,,Tier 1 Supply Drop
+tier2_contraband_collection_name,Quest,Quest Info,,,Tier 2 Supply Drop
+tier3_contraband_collection_name,Quest,Quest Info,,,Tier 3 Supply Drop
+tier4_contraband_collection_name,Quest,Quest Info,,,Tier 4 Supply Drop
+tier5_contraband_collection_name,Quest,Quest Info,,,Tier 5 Supply Drop
+contraband_collection_subtitle,Quest,Quest Info,,,Contraband Collection
+contraband_collection_description,Quest,Quest Info,,,So... I might have setup a delivery from a buddy of mine in the military who's slipped a special package for me into a supply crate - but he can only deliver overnight when a supply crate going missing from the official drops might go unnoticed.  Are you up for heading out and collecting it for me?  Oh and a warning - the package is a bit volatile - be wary of explosions!
+contraband_collection_offer,Quest,Quest Info,,,So... I might have setup a delivery from a buddy of mine in the military who's slipped a special package for me into a supply crate - but he can only deliver overnight when a supply crate going missing from the official drops might go unnoticed.  Are you up for heading out and collecting it for me? Oh and a warning - the package is a bit volatile - be wary of explosions!
+contraband_collection_statement,Quest,Quest Info,,,Supply Drop
+contraband_collection_response,Quest,Quest Info,,,Supply Drop [[DECEA3]Night Only[-]] ([DECEA3]{treasure.distance} {treasure.direction}[-])
+tier1_courier_rescue_name,Quest,Quest Info,,,Tier 1 Defend Safehouse
+tier2_courier_rescue_name,Quest,Quest Info,,,Tier 2 Defend Safehouse
+tier3_courier_rescue_name,Quest,Quest Info,,,Tier 3 Defend Safehouse
+tier4_courier_rescue_name,Quest,Quest Info,,,Tier 4 Defend Safehouse
+tier5_courier_rescue_name,Quest,Quest Info,,,Tier 5 Defend Safehouse
+courier_rescue_subtitle,Quest,Quest Info,,,Defend the Safehouse
+courier_rescue_description,Quest,Quest Info,,,A scout spotted a horde heading towards our safehouse at [DECEA3]{poi.name}[-].  Head there and clear out any zombies inside - then reinforce the structure and kill all the incoming zombies so that we can continue to use the building. If you feel like grabbing the satchel of goods you can - but I won't pay you any extra for it!
+courier_rescue_offer,Quest,Quest Info,,,One of our scouts spotted a small horde heading towards our safehouse at [DECEA3]{poi.name}[-]. Go and clear out any zombies inside - then stop the horde from trashing the place. If you feel like grabbing the satchel of goods you can - but I won't pay you any extra for it!
+courier_rescue_statement,Quest,Quest Info,,,Defend the safehouse.
+courier_rescue_response,Quest,Quest Info,,,Defend Safehouse ([DECEA3]{poi.distance} {poi.direction}[-])
+quest_tier1_speed_clear_name,Quest,Quest Info,,,Tier 1 Speed Clear
+quest_tier2_speed_clear_name,Quest,Quest Info,,,Tier 2 Speed Clear
+quest_tier3_speed_clear_name,Quest,Quest Info,,,Tier 3 Speed Clear
+quest_tier4_speed_clear_name,Quest,Quest Info,,,Tier 4 Speed Clear
+quest_tier5_speed_clear_name,Quest,Quest Info,,,Tier 5 Speed Clear
+quest_speed_clear_subtitle,Quest,Quest Info,,,Expedited Eradication
+quest_speed_clear_description,Quest,Quest Info,,,I need your help clearing out all the zombies at [DECEA3]{poi.name}[-]. An operative is inbound and I need it cleared ASAP so I'm paying a bonus for a fast clear.  Get in there and get it done!
+quest_tier1_speed_clear_offer,Quest,Quest Info,,,I need your help clearing out all the zombies at [DECEA3]{poi.name}[-]. An operative is inbound and I need it cleared ASAP so I'm paying a bonus for a fast clear.  Get in there and get it done!
+quest_speed_clear_statement,Quest,Quest Info,,,Speed Clear
+quest_speed_clear_response,Quest,Quest Info,,,Speed Clear ([DECEA3]{poi.distance} {poi.direction}[-])
+quest_speed_clear_completion,Quest,Quest Info,,,Thanks for your help clearing out the zombies - great job!
+quest_speed_clear_completion_silver,Quest,Quest Info,,,Pretty quick job - nice work! Take some ammo for your efforts.  (Silver Clear)
+quest_speed_clear_completion_gold,Quest,Quest Info,,,Amazing - I can't believe you took out all the zombies like that!  Take an extra reward on the house! (Gold Clear)
+tier1_feed_the_famished_name,Quest,Quest Info,,,Tier 1 Clear + Food
+tier2_feed_the_famished_name,Quest,Quest Info,,,Tier 2 Clear + Food
+tier3_feed_the_famished_name,Quest,Quest Info,,,Tier 3 Clear + Food
+tier4_feed_the_famished_name,Quest,Quest Info,,,Tier 4 Clear + Food
+tier5_feed_the_famished_name,Quest,Quest Info,,,Tier 5 Clear + Food
+feed_the_famished_subtitle,Quest,Quest Info,,,Feed the Famished
+feed_the_famished_description,Quest,Quest Info,,,There's a group of survivors nearby that are almost starving - they've left payment and a bonus item in a dead drop nearby at [DECEA3]{poi.name}[-] which is yours if you can clear the place and leave them some food.
+tier1_feed_the_famished_offer,Quest,Quest Info,,,Leave some food in the dead drop at [DECEA3]{poi.name}[-]. Take the payment and any spare items they left you after you clear the place and leave the meals!
+tier1_feed_the_famished_statement,Quest,Quest Info,,,Clear + Food
+tier1_feed_the_famished_response,Quest,Quest Info,,,Clear + Food ([DECEA3]{poi.distance} {poi.direction}[-])
+feed_the_famished_completion,Quest,Quest Info,,,Thanks for helping out - hopefully that will help them out of this rough patch.
+tier1_feed_the_famished_reward_name,Quest,Quest Info,,,Tier 1 Clear + Food Reward
+tier2_feed_the_famished_reward_name,Quest,Quest Info,,,Tier 2 Clear + Food Reward
+tier3_feed_the_famished_reward_name,Quest,Quest Info,,,Tier 3 Clear + Food Reward
+tier4_feed_the_famished_reward_name,Quest,Quest Info,,,Tier 4 Clear + Food Reward
+tier5_feed_the_famished_reward_name,Quest,Quest Info,,,Tier 5 Clear + Food Reward
+feed_the_famished_reward_description,Quest,Quest Info,,,After dropping off the food it's time to return to the trader for your reward.
+tier1_feed_the_famished_reward_offer,Quest,Quest Info,,,After dropping off the food it's time to return to the trader for your reward.

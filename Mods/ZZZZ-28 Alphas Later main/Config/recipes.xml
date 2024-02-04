@@ -18,7 +18,7 @@
 	
 	<!-- *** Urban Combat Volume 2 unlocks *** -->
 	<append xpath="/recipes">
-	<recipe name="modGlassesStrength" count="1" craft_area="workbench" craft_tool="meleeToolRepairT1ClawHammer" tags="learnable,workbenchCrafting">
+	<!-- <recipe name="modGlassesStrength" count="1" craft_area="workbench" craft_tool="meleeToolRepairT1ClawHammer" tags="learnable,workbenchCrafting">
 		<ingredient name="resourceYuccaFibers" count="250"/>
 		<ingredient name="resourceGlue" count="1"/>
 		<ingredient name="resourcePaper" count="1"/>
@@ -55,8 +55,14 @@
 		<ingredient name="resourceMechanicalParts" count="1"/>
 		<ingredient name="resourceSilverNugget" count="1"/>
 		<ingredient name="resourceGoldNugget" count="1"/>
-	</recipe>
+	</recipe> -->
 	
+	<recipe name="modGunBrassCatcher" count="1" craft_area="workbench" craft_tool="meleeToolRepairT1ClawHammer" tags="learnable,workbenchCrafting">
+		<ingredient name="resourceForgedSteel" count="10"/>
+		<ingredient name="resourceMechanicalParts" count="10"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
+		<ingredient name="resourceGlue" count="5"/>
+	</recipe>
 	</append>
 	
 	<!-- *** removes forge smelting *** -->
@@ -310,6 +316,19 @@
 		<ingredient name="resourceDuctTape" count="30"/>
 	</recipe>
 	
+	<!-- *** rain catcher *** -->
+	<recipe name="cntRainCollector" count="1" craft_time="45" craft_exp_gain="500" tags="learnable,workbenchCrafting">
+		<ingredient name="resourceScrapPolymers" count="100"/>
+		<ingredient name="resourceMetalPipe" count="4"/>
+		<ingredient name="resourceDuctTape" count="4"/>
+	</recipe>
+	
+	<recipe name="cntRainCollector" count="1" craft_time="45" craft_area="workbench" craft_exp_gain="500" tags="learnable,workbenchCrafting">
+		<ingredient name="resourceScrapPolymers" count="80"/>
+		<ingredient name="resourceMetalPipe" count="3"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+	</recipe>
+	
 	<!-- *** chicken trap *** -->
 	<recipe name="cntIDCAnimalSnare" count="1" craft_time="60" craft_exp_gain="500">
 		<ingredient name="resourceScrapIron" count="50"/>
@@ -341,7 +360,7 @@
 	<set xpath="//recipe[@name='farmPlotBlockVariantHelper']">
 		<ingredient name="resourceWood" count="10"/>
 		<ingredient name="resourceNail" count="5"/>
-		<ingredient name="resourceFertilizer" count="30"/>
+		<ingredient name="resourceFertilizer" count="24"/>
 		<effect_group>
 			<passive_effect name="CraftingIngredientCount" level="0,1,2,3" operation="perc_add" value="0,-.3,-.5,-.5" tags="resourceFertilizer"/>
 		</effect_group>
@@ -921,18 +940,7 @@
 		<effect_group>
 			<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-1" tags="foodCanChicken"/>
 		</effect_group>
-	</recipe>
-	<recipe name="foodHoboStew" count="1"  craft_time="65" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
-		<ingredient name="foodRottingFlesh" count="10"/>
-		<ingredient name="foodCanCatfood" count="2"/>			
-		<ingredient name="foodCropPotato" count="2"/>
-		<ingredient name="foodCanCarrots" count="2"/>
-		<ingredient name="resourceAnimalFat" count="1"/>
-		<ingredient name="drinkJarBoiledWater" count="1"/>
-		<effect_group>
-			<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-2,-4" tags="foodRottingFlesh"/>
-		</effect_group>
-	</recipe>
+	</recipe>	
 	<recipe name="foodMeatStew" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
 		<ingredient name="foodRawMeat" count="5"/>
 		<ingredient name="foodCanCarrots" count="2"/>
@@ -997,7 +1005,7 @@
 	</recipe>
 	
 	<!-- *** acid can be stripped from batteries in a workbench *** -->
-	<recipe name="resourceAcid" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable,workbenchCrafting" craft_time="1800">
+	<recipe name="resourceAcid" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable,workbenchCrafting" craft_time="800">
 		<ingredient name="carBattery" count="1"/>
 	</recipe>
 	
@@ -1177,7 +1185,30 @@
 			<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="resourceCropLavender"/>
 		</effect_group>
 	</recipe>
-	</append>
+	
+	<!-- *** hobo stew *** -->
+	<recipe name="foodHoboStew" count="1"  craft_time="65" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+		<ingredient name="foodCanDogfood" count="3"/>
+		<ingredient name="foodCropPotato" count="2"/>
+		<ingredient name="foodCropCorn" count="2"/>
+		<ingredient name="resourceAnimalFat" count="1"/>
+		<ingredient name="drinkJarBoiledWater" count="1"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="foodCanDogfood"/>
+		</effect_group>
+	</recipe>
+	</append>	
+	
+	<set xpath="//recipe[@name='foodHoboStew']">
+		<ingredient name="foodCanCatfood" count="3"/>			
+		<ingredient name="foodCropPotato" count="2"/>
+		<ingredient name="foodCropCorn" count="2"/>
+		<ingredient name="resourceAnimalFat" count="1"/>
+		<ingredient name="drinkJarBoiledWater" count="1"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="foodCanCatfood"/>
+		</effect_group>
+	</set>
 	
 	<!-- *** adds eggs to paint recipe (disabled as it makes dye unscrappable?) *** -->
 	<!-- <append xpath="//recipe[@name='resourcePaint']">
@@ -1203,13 +1234,7 @@
 	<!-- *** animal fat added to bacon and egg recipe *** -->
 	<insertAfter xpath="/recipes/recipe[@name='foodBaconAndEggs']//ingredient[2]">
 		<ingredient name="resourceAnimalFat" count="1"/>
-	</insertAfter>
-	
-	<!-- *** hobostew recipe changes *** -->
-	<set xpath="/recipes/recipe[@name='foodHoboStew']//ingredient[@name='foodRottingFlesh']/@count">12</set>
-	<insertAfter xpath="/recipes/recipe[@name='foodHoboStew']//ingredient[@name='foodRottingFlesh']">
-		<ingredient name="foodCanCatfood" count="1"/>
-	</insertAfter>
+	</insertAfter>	
 	
 	<!-- *** triple pocket armour mod no longer craftable *** -->
 	<remove xpath="/recipes/recipe[@name='modArmorTripleStoragePocket']"/>
