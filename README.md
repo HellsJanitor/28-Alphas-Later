@@ -277,7 +277,9 @@ Vehicles CANNOT be used underwater.
 
 Particle systems/Unity edits 			- Author: redbeardt
 
-Custom mesh files				- Author: Schrader97
+28AL Item Offsets/Core					- Author: redbeardt
+
+Custom mesh files						- Author: Schrader97
 
 Farming template (xml code)			- Author: Gouki
 
@@ -297,6 +299,8 @@ HPBars template (xml code)			- Author: Khaine
 
 60-slot backpack (xml code)			- Author: Khaine
 
+NVG changes (xml code)				- Author: Khaine
+
 Khelldon Custom Menu 				- Author: Khelldon
 
 Custom Menu Music				- Author: Khaine
@@ -310,6 +314,8 @@ WMMStaminaDehydrationFix			- Author: w00kien00kie
 WMMTraderQuestMap				- Author: w00kien00kie
 
 CustomDifficulty				- Author: Mythix
+
+Trader Quest addendum				- Author: CautiousPancake
 						
 ### Also a huge thank you to Frantic_Dan & redbeardt for the custom HUD base code, main menu localization changes, and to YubiNashi and Frantic_Dan for ideas/balancing and playtesting.
 
