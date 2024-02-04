@@ -8,6 +8,7 @@
 ### 99% of features are now functioning correctly in multiplayer. Headshots only remains non-functional on dedicated servers ###
 
 Update: 03/02/24
+lowered probability for Blessed Metal in loot.
 removed "spider" walk type for all bipedal zombies
 tweaked upgrade material counts to match crafting quantities
 reworked crafting speed bonus for anvil and bellows
@@ -283,6 +284,8 @@ Contributors:
 
 Particle systems/Unity edits 			- Author: redbeardt
 
+28AL Item Offsets/Core					- Author: redbeardt
+
 Custom mesh files						- Author: Schrader97
 
 Farming template (xml code)				- Author: Gouki
@@ -303,6 +306,8 @@ HPBars template (xml code)				- Author: Khaine
 
 60-slot backpack (xml code)				- Author: Khaine
 
+NVG changes (xml code)					- Author: Khaine
+
 Khelldon Custom Menu 					- Author: Khelldon
 
 Custom Menu Music						- Author: Khaine
@@ -316,6 +321,8 @@ WMMStaminaDehydrationFix				- Author: w00kien00kie
 WMMTraderQuestMap						- Author: w00kien00kie
 
 CustomDifficulty						- Author: Mythix
+
+Trader Quest addendum					- Author: CautiousPancake
 						
 Also a huge thank you to Frantic_Dan and redbeardt for the custom HUD base code, main menu localization changes, and to YubiNashi and Frantic_Dan for ideas/balancing and playtesting.			
             </Description>
