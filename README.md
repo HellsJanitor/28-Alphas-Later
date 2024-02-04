@@ -5,6 +5,53 @@ The idea behind this mod is to slow progression, make traders less powerful, and
 ## INSTALLATION INSTRUCTIONS
 
 >[!NOTE]
+># Changelog for v1.2.2
+>lowered probability for Blessed Metal in loot.
+>
+>removed "spider" walk type for all bipedal zombies
+>
+>tweaked upgrade material counts to match crafting quantities
+>
+>reworked crafting speed bonus for anvil and bellows
+>
+>changed screen effect for NVG (credit: Khaine)
+>
+>reworked dew collectors (doubled collection speed).
+>
+>reworked advanced filter - halves collection speed, and is cheaper to buy.
+>
+>added rain catcher - uses an empty bucket to collect rainwater.
+>
+>added visible UI element to show when the player is warm, sheltered and well-lit.
+>
+>torches and candles now give the campfire buff (slightly smaller radius than the campfire).
+>
+>Frozen zombie variant movement speed re-adjusted.
+>
+>Added new respawn protection buff. 2 minutes of radiation immunity.
+>
+>Lowered zombie animal counts in wasteland.
+>
+>POI Farmplots can now be "upgraded" to plantable, with a hoe and fertilizer.
+>
+>Red's Legendary Paintbrush added.
+>
+>Brass Catcher mod added for 9mm, 7.62mm, and .44 calibre firearms. Returns 50% of ammo casings.
+>
+>Mutated "grunts" HP lowered considerably.
+>
+>Rotten flesh removed from hobo stew recipe.
+>
+>Farm plot fertilizer requirements lowered.
+>
+>Trader quest addendum added - credit CautiousPancake.
+>
+>Posion debuff reworked. Now lasts 7 days, all attributes lowered by one for its duration, 5 second screen effect and sound reminder at random intervals.
+>
+>Despair mitigation added to Charismatic Nature (for multiplayer games). Each point in Charismatic Nature reduces how despair affects allies and party members.
+
+
+>[!NOTE]
 ># Changelog for v1.2
 >
 >Now updated for multiplayer!!
