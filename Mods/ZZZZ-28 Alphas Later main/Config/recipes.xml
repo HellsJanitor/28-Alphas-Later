@@ -16,6 +16,9 @@
 	<!-- *** remove cigar crafting *** -->
 	<remove xpath="//recipe[@name='apparelCigar']"/>
 	
+	<!-- *** remove vanilla hobo stew recipe *** -->
+	<remove xpath="//recipe[@name='foodHoboStew']"/>
+	
 	<!-- *** Urban Combat Volume 2 unlocks *** -->
 	<append xpath="/recipes">
 	<!-- <recipe name="modGlassesStrength" count="1" craft_area="workbench" craft_tool="meleeToolRepairT1ClawHammer" tags="learnable,workbenchCrafting">
@@ -1197,10 +1200,9 @@
 			<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="foodCanDogfood"/>
 		</effect_group>
 	</recipe>
-	</append>	
 	
-	<set xpath="//recipe[@name='foodHoboStew']">
-		<ingredient name="foodCanCatfood" count="3"/>			
+	<recipe name="foodHoboStew" count="1"  craft_time="65" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+		<ingredient name="foodCanCatfood" count="3"/>
 		<ingredient name="foodCropPotato" count="2"/>
 		<ingredient name="foodCropCorn" count="2"/>
 		<ingredient name="resourceAnimalFat" count="1"/>
@@ -1208,7 +1210,8 @@
 		<effect_group>
 			<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="foodCanCatfood"/>
 		</effect_group>
-	</set>
+	</recipe>
+	</append>	
 	
 	<!-- *** adds eggs to paint recipe (disabled as it makes dye unscrappable?) *** -->
 	<!-- <append xpath="//recipe[@name='resourcePaint']">
