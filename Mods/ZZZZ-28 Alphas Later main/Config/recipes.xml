@@ -700,15 +700,15 @@
 	</recipe>
 	
 	<recipe name="resourceArrowHeadSteelAP" count="1" craft_area="workbench" tags="workbenchCrafting">
-		<secondary_output name="resourceScrapPolymers" count="2"/>
-		<secondary_output name="resourceGunPowder" count="2"/>
-		<secondary_output name="resourceCloth" count="5"/>		
+		<secondary_output name="resourceScrapPolymers" count="1"/>
+		<secondary_output name="resourceGunPowder" count="1"/>
+		<secondary_output name="resourceCloth" count="3"/>		
 		<ingredient name="ammoArrowFlaming" count="1"/>
 	</recipe>
 	
 	<recipe name="resourceArrowHeadSteelAP" count="1" craft_area="workbench" tags="workbenchCrafting">
-		<secondary_output name="resourceScrapPolymers" count="2"/>
-		<secondary_output name="resourceGunPowder" count="6"/>		
+		<secondary_output name="resourceScrapPolymers" count="1"/>
+		<secondary_output name="resourceGunPowder" count="4"/>		
 		<ingredient name="ammoArrowExploding" count="1"/>
 	</recipe>
 	
@@ -726,111 +726,111 @@
 	</recipe>	
 	
 	<recipe name="resourceArrowHeadSteelAP" count="1" craft_area="workbench" tags="workbenchCrafting">
-		<secondary_output name="resourceScrapPolymers" count="2"/>
+		<secondary_output name="resourceScrapPolymers" count="1"/>
 		<ingredient name="ammoCrossbowBoltSteelAP" count="1"/>
 	</recipe>
 	
 	<recipe name="resourceArrowHeadSteelAP" count="1" craft_area="workbench" tags="workbenchCrafting">
-		<secondary_output name="resourceScrapPolymers" count="2"/>
-		<secondary_output name="resourceGunPowder" count="2"/>
-		<secondary_output name="resourceCloth" count="5"/>		
+		<secondary_output name="resourceScrapPolymers" count="1"/>
+		<secondary_output name="resourceGunPowder" count="1"/>
+		<secondary_output name="resourceCloth" count="3"/>		
 		<ingredient name="ammoCrossbowBoltFlaming" count="1"/>
 	</recipe>
 	
 	<recipe name="resourceArrowHeadSteelAP" count="1" craft_area="workbench" tags="workbenchCrafting">
-		<secondary_output name="resourceScrapPolymers" count="2"/>
-		<secondary_output name="resourceGunPowder" count="8"/>		
+		<secondary_output name="resourceScrapPolymers" count="1"/>
+		<secondary_output name="resourceGunPowder" count="5"/>		
 		<ingredient name="ammoCrossbowBoltExploding" count="1"/>
 	</recipe>
 	
-	<!-- *** bullets/shells dismantle to component parts *** -->
+	<!-- *** bullets/shells dismantle to component parts (70% return) *** -->
 	<!-- 9mm -->
-	<recipe name="resourceBulletTip" count="1" craft_area="workbench" tags="workbenchCrafting">
-		<secondary_output name="resourceGunPowder" count="1"/>
-		<secondary_output name="resourceBulletCasing" count="1"/>		
-		<ingredient name="ammo9mmBulletBall" count="1"/>
+	<recipe name="resourceBulletTip" count="7" craft_area="workbench" tags="workbenchCrafting">
+		<secondary_output name="resourceGunPowder" count="7"/>
+		<secondary_output name="resourceBulletCasing" count="7"/>		
+		<ingredient name="ammo9mmBulletBall" count="10"/>
 	</recipe>
 	
-	<recipe name="resourceBulletTip" count="2" craft_area="workbench" tags="workbenchCrafting">
-		<secondary_output name="resourceGunPowder" count="1"/>
-		<secondary_output name="resourceBulletCasing" count="1"/>		
-		<ingredient name="ammo9mmBulletHP" count="1"/>
+	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting">
+		<secondary_output name="resourceGunPowder" count="7"/>
+		<secondary_output name="resourceBulletCasing" count="7"/>		
+		<ingredient name="ammo9mmBulletHP" count="10"/>
 	</recipe>
 	
-	<recipe name="resourceBulletTip" count="2" craft_area="workbench" tags="workbenchCrafting">
-		<secondary_output name="resourceGunPowder" count="2"/>
-		<secondary_output name="resourceBulletCasing" count="1"/>		
-		<ingredient name="ammo9mmBulletAP" count="1"/>
+	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting">
+		<secondary_output name="resourceGunPowder" count="14"/>
+		<secondary_output name="resourceBulletCasing" count="7"/>		
+		<ingredient name="ammo9mmBulletAP" count="10"/>
 	</recipe>
 	
 	<!-- .44 -->
-	<recipe name="resourceBulletTip" count="1" craft_area="workbench" tags="workbenchCrafting">
-		<secondary_output name="resourceGunPowder" count="2"/>
-		<secondary_output name="resourceBulletCasing" count="1"/>		
-		<ingredient name="ammo44MagnumBulletBall" count="1"/>
+	<recipe name="resourceBulletTip" count="7" craft_area="workbench" tags="workbenchCrafting">
+		<secondary_output name="resourceGunPowder" count="14"/>
+		<secondary_output name="resourceBulletCasing" count="7"/>		
+		<ingredient name="ammo44MagnumBulletBall" count="10"/>
 	</recipe>
 	
-	<recipe name="resourceBulletTip" count="2" craft_area="workbench" tags="workbenchCrafting">
-		<secondary_output name="resourceGunPowder" count="2"/>
-		<secondary_output name="resourceBulletCasing" count="1"/>		
-		<ingredient name="ammo44MagnumBulletHP" count="1"/>
+	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting">
+		<secondary_output name="resourceGunPowder" count="14"/>
+		<secondary_output name="resourceBulletCasing" count="7"/>		
+		<ingredient name="ammo44MagnumBulletHP" count="10"/>
 	</recipe>
 	
-	<recipe name="resourceBulletTip" count="2" craft_area="workbench" tags="workbenchCrafting">
-		<secondary_output name="resourceGunPowder" count="3"/>
-		<secondary_output name="resourceBulletCasing" count="1"/>		
-		<ingredient name="ammo44MagnumBulletAP" count="1"/>
+	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting">
+		<secondary_output name="resourceGunPowder" count="21"/>
+		<secondary_output name="resourceBulletCasing" count="7"/>		
+		<ingredient name="ammo44MagnumBulletAP" count="10"/>
 	</recipe>
 	
 	<!-- 7.62mm -->
-	<recipe name="resourceBulletTip" count="1" craft_area="workbench" tags="workbenchCrafting">
-		<secondary_output name="resourceGunPowder" count="3"/>
-		<secondary_output name="resourceBulletCasing" count="1"/>		
-		<ingredient name="ammo762mmBulletBall" count="1"/>
+	<recipe name="resourceBulletTip" count="7" craft_area="workbench" tags="workbenchCrafting">
+		<secondary_output name="resourceGunPowder" count="21"/>
+		<secondary_output name="resourceBulletCasing" count="7"/>		
+		<ingredient name="ammo762mmBulletBall" count="10"/>
 	</recipe>
 	
-	<recipe name="resourceBulletTip" count="2" craft_area="workbench" tags="workbenchCrafting">
-		<secondary_output name="resourceGunPowder" count="3"/>
-		<secondary_output name="resourceBulletCasing" count="1"/>		
-		<ingredient name="ammo762mmBulletHP" count="1"/>
+	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting">
+		<secondary_output name="resourceGunPowder" count="21"/>
+		<secondary_output name="resourceBulletCasing" count="7"/>		
+		<ingredient name="ammo762mmBulletHP" count="10"/>
 	</recipe>
 	
-	<recipe name="resourceBulletTip" count="2" craft_area="workbench" tags="workbenchCrafting">
-		<secondary_output name="resourceGunPowder" count="5"/>
-		<secondary_output name="resourceBulletCasing" count="1"/>		
-		<ingredient name="ammo762mmBulletAP" count="1"/>
+	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting">
+		<secondary_output name="resourceGunPowder" count="35"/>
+		<secondary_output name="resourceBulletCasing" count="7"/>		
+		<ingredient name="ammo762mmBulletAP" count="10"/>
 	</recipe>
 	
 	<!-- shotgun shells -->
-	<recipe name="resourceBuckshot" count="1" craft_area="workbench" tags="workbenchCrafting">
-		<secondary_output name="resourceGunPowder" count="4"/>
-		<secondary_output name="resourcePaper" count="1"/>		
-		<ingredient name="ammoShotgunShell" count="1"/>
+	<recipe name="resourceBuckshot" count="7" craft_area="workbench" tags="workbenchCrafting">
+		<secondary_output name="resourceGunPowder" count="28"/>
+		<secondary_output name="resourcePaper" count="7"/>		
+		<ingredient name="ammoShotgunShell" count="10"/>
 	</recipe>
 	
-	<recipe name="resourceBulletTip" count="2" craft_area="workbench" tags="workbenchCrafting">
-		<secondary_output name="resourceGunPowder" count="5"/>
-		<secondary_output name="resourceScrapPolymers" count="1"/>		
-		<ingredient name="ammoShotgunSlug" count="1"/>
+	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting">
+		<secondary_output name="resourceGunPowder" count="35"/>
+		<secondary_output name="resourceScrapPolymers" count="7"/>		
+		<ingredient name="ammoShotgunSlug" count="10"/>
 	</recipe>
 	
-	<recipe name="resourceForgedSteel" count="3" craft_area="workbench" tags="workbenchCrafting">
-		<secondary_output name="resourceClayLump" count="2"/>
-		<secondary_output name="resourceGunPowder" count="4"/>
-		<secondary_output name="resourceScrapPolymers" count="1"/>
-		<ingredient name="ammoShotgunBreachingSlug" count="1"/>
+	<recipe name="resourceForgedSteel" count="35" craft_area="workbench" tags="workbenchCrafting">
+		<secondary_output name="resourceClayLump" count="14"/>
+		<secondary_output name="resourceGunPowder" count="28"/>
+		<secondary_output name="resourceScrapPolymers" count="7"/>
+		<ingredient name="ammoShotgunBreachingSlug" count="10"/>
 	</recipe>
 
 	<!-- *** rockets can be dismantled into component parts (50% gasoline return) *** -->
 	<recipe name="resourceRocketCasing" count="1" craft_area="workbench" tags="workbenchCrafting">
-		<secondary_output name="resourceGunPowder" count="15"/>
+		<secondary_output name="resourceGunPowder" count="11"/>
 		<secondary_output name="ammoGasCan" count="250"/>
-		<secondary_output name="resourceBuckshot" count="25"/>		
+		<secondary_output name="resourceBuckshot" count="18"/>		
 		<ingredient name="ammoRocketFrag" count="1"/>
 	</recipe>
 	
 	<recipe name="resourceRocketCasing" count="1" craft_area="workbench" tags="workbenchCrafting">
-		<secondary_output name="resourceGunPowder" count="15"/>
+		<secondary_output name="resourceGunPowder" count="11"/>
 		<secondary_output name="ammoGasCan" count="250"/>
 		<secondary_output name="resourceRocketTip" count="1"/>		
 		<ingredient name="ammoRocketHE" count="1"/>
