@@ -331,7 +331,7 @@ meleeWpnKnucklesT3SteelKnucklesDesc,"Protect your hands and put some weight into
 meleeWpnSledgeT3SteelSledgehammerDesc,"The sledgehammer is one of the best weapons for cracking skulls.\n\nRepair with a Sledgehammer Repair Kit.\nScrap to Steel Sledgehammer parts."
 meleeWpnSpearT3SteelSpearDesc,"Spears have more range than other weapons.\n\nRepair with a Spear Repair Kit.\nScrap to Steel Spear parts."
 meleeWpnBladeT666LegendaryPaintbrush,Red's Legendary Paintbrush
-meleeWpnBladeT666LegendaryPaintbrushDesc,"Red's Legendary Paintbrush is a rare, powerful, & ancient artifact. It is rumoured that only Master Decorators can weild it.\n\nGo out, and paint the apocalypse red!\nStops all radiated regen. 30% damage bonus to radiated & mutated zombies.\n\nRepair with Wood."
+meleeWpnBladeT666LegendaryPaintbrushDesc,"Red's Legendary Paintbrush is a rare, powerful, & ancient artifact. It is rumoured that only Master Decorators can wield it.\n\nGo out, and paint the apocalypse red!\nStops all radiated regen. 30% damage bonus to radiated & mutated zombies.\n\nRepair with Wood."
 MilitaryArmourRepairKit,Military Armour Repair Kit
 MilitaryArmourRepairKitDesc,This Repair Kit is used to repair military armour.
 MinibikeBundle,Minibike
@@ -365,7 +365,7 @@ modHazmatMask,Radiation protection (helmet)
 modHazmatPantsDesc,Slot this hazmat mod into your leg armour.\n\nAll [FFC800]five[-] seperate pieces are needed for full radiation protection.
 modHazmatPants,Radiation protection (legs)
 modMeleeSerratedBlade,Serrated Blade Mod
-modMeleeSerratedBladeDesc,"100% chance to cause a Bleeding Wound to [FFC800]living[-] creatures with a regular attack.\n\nThis mod can be used in spears and knuckles ONLY."
+modMeleeSerratedBladeDesc,"100% chance to cause a Bleeding Wound to [FFC800]living[-] creatures with a regular attack.\n\nThis mod can be used in spears and steel knuckles ONLY."
 modGunSoundSuppressorSilencer,Suppressor Mod
 modGunSoundSuppressorSilencerSchematic,Suppressor Mod Schematic
 perkUrbanCombatCompleteDesc,Suppressors have no damage penalty.
