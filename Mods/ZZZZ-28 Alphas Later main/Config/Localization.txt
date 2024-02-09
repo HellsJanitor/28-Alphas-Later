@@ -314,6 +314,7 @@ noteDuke01,Anonymous Help
 noteDuke01Desc,"You don't know me, but I was able to sneak you some food, water and medical supplies in a backpack. I'll do what I can to sneak you some extra supplies by plane. Be safe out there!\n\nPS: I packed your favourite weapon.\n\nA good samaritan."
 resourceFertilizer,Fertilizer
 FertilizerDesc,Fertilizer is made in a Chemistry Station or Cement Mixer. Use a hoe to fertilize your farmland and increase crop yield.
+medicalT3-4,Tier 3: The T-Virus Cure
 meleeToolFarmT2IronHoe,Iron Hoe
 meleeToolFarmT2IronHoeDesc,Required tool for tilling terrain.
 meleeToolFarmT2IronHoeSchematic,Iron Hoe Schematic
