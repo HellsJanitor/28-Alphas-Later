@@ -246,6 +246,7 @@
 	<!-- *** Reds Legendary Paintbrush *** -->
 	<item name="meleeWpnBladeT666LegendaryPaintbrush">
 		<property name="CreativeMode" value="Player"/>
+		<property name="DisplayType" value="meleeKnife"/>
 		<property name="CrosshairUpAfterShot" value="false"/>
 		<property name="DescriptionKey" value="meleeWpnBladeT666LegendaryPaintbrushDesc"/>
 		<property name="CustomIcon" value="meleeToolPaintTool"/>
@@ -341,14 +342,22 @@
 				<passive_effect name="EntityDamage" operation="perc_add" value="4" tags="perkDeepCuts"/>
 				<display_value name="dEntityDamageSneak" value="4"/>
 		</effect_group>
+		<effect_group>					
+			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>				
+		</effect_group>
 		<effect_group>
-			<requirement name="EntityTagCompare" target="other" tags="radiated,mutated">
-			<passive_effect name="EntityDamage" operation="perc_add" value=".30"/>			
-			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
-			</requirement>	
+			<requirement name="EntityTagCompare" target="other" tags="radiated,mutated"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".30"/>
 		</effect_group>
 	</item>
 	</append>
+	
+	<!-- *** increase mod slots for T2 & T3 armor *** -->
+	<set xpath="//item[starts-with (@name,'armorLeather') and not (contains(@name,'Master'))]/effect_group//passive_effect[@name='ModSlots']/@value">2,2,2,3,4,5</set>
+	<set xpath="//item[starts-with (@name,'armorMilitary') and not (contains(@name,'Master'))]/effect_group//passive_effect[@name='ModSlots']/@value">3,3,3,4,5,6</set>
+	<set xpath="//item[starts-with (@name,'armorIron') and not (contains(@name,'Master'))]/effect_group//passive_effect[@name='ModSlots']/@value">2,2,2,3,4,5</set>
+	<set xpath="//item[starts-with (@name,'armorSteel') and not (contains(@name,'Master'))]/effect_group//passive_effect[@name='ModSlots']/@value">3,3,3,4,5,6</set>
+	<set xpath="//item[starts-with (@name,'armorSwat') and not (contains(@name,'Master'))]/effect_group//passive_effect[@name='ModSlots']/@value">2,2,2,3,4,5</set>
 	
 	<!-- *** starter weapon quest item *** -->
 	<insertAfter xpath="/items/item[@name='noteDuke01']//property[1][@value]">
@@ -571,7 +580,7 @@
 	<item name="TheCure">
 		<property name="DescriptionKey" value="TheCureDesc" />
 		<property name="Tags" value="medical"/>
-		<property name="CustomIcon" value="drugSteroids"/> <property name="CustomIconTint" value="800080"/>
+		<property name="CustomIcon" value="drugTheCure"/>
 		<property name="HoldType" value="16"/>
 		<property name="Meshfile" value="@:Other/Items/Health/painkillersPrefab.prefab"/>
 		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -920,7 +929,6 @@
 	<set xpath="//item[not(contains(@name,'resource'))]/property[@name='Weight'][@value='120']/@value">60</set>
 	<set xpath="//item[not(contains(@name,'resource'))]/property[@name='Weight'][@value='160']/@value">80</set>
 	<set xpath="//item[starts-with(@name,'smallEngine')]/property[@name='Weight'][@value='200']/@value">100</set>
-	<!-- <set xpath="//item[not(contains(@name,'smallEngine'))]/property[@name='Weight'][@value='200']/@value">100</set> -->
 	<!-- *** bandages and first aid kit *** -->
 	<set xpath="//item[@name='medicalBandage']//property[@name='Weight']/@value">40</set>
 	<!-- *** clothing *** -->
@@ -932,15 +940,15 @@
 	</insertafter>
 	<!-- *** iron armour *** -->
 	<insertafter xpath="//item[@name='armorIronMaster']//property[@name='Material']">
-	<property name="Weight" value="200"/>
+	<property name="Weight" value="100"/>
 	</insertafter>
 	<!-- *** pipe weapons *** -->
 	<insertafter xpath="//item[contains(@name,'T0Pipe')]/property[@name='Material']">
-	<property name="Weight" value="50"/>
+	<property name="Weight" value="25"/>
 	</insertafter>
 	<!-- *** iron weapons/tools *** -->
 	<insertafter xpath="//item[contains(@name,'T1') and not (contains(@name,'Parts'))]/property[@name='Material']">
-	<property name="Weight" value="250"/>
+	<property name="Weight" value="40"/>
 	</insertafter>
 	<!-- *** steel knuckles *** -->
 	<insertafter xpath="//item[@name='meleeWpnKnucklesT3SteelKnuckles']/property[@name='Material']">
@@ -1442,6 +1450,10 @@
 		<effect_group tiered="false">			
 				<display_value name="dBartering" value=".05"/>
 				<display_value name="dBarteringSellBuy" value=".05"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer2"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer3"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer4"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer5"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDaringAdventurer1"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBetterBarter1"/>
 		</effect_group>		
@@ -1471,6 +1483,9 @@
 				<display_value name="dBartering" value=".10"/>
 				<display_value name="dBarteringSellBuy" value=".10"/>
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer1"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer3"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer4"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer5"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDaringAdventurer2"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBetterBarter2"/>
 		</effect_group>		
@@ -1499,7 +1514,10 @@
 		<effect_group tiered="false">			
 				<display_value name="dBartering" value=".15"/>
 				<display_value name="dBarteringSellBuy" value=".15"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer1"/>
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer2"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer4"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer5"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDaringAdventurer3"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBetterBarter3"/>
 		</effect_group>		
@@ -1528,7 +1546,10 @@
 		<effect_group tiered="false">			
 				<display_value name="dBartering" value=".20"/>
 				<display_value name="dBarteringSellBuy" value=".20"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer1"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer2"/>
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer3"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer5"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDaringAdventurer4"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBetterBarter4"/>
 		</effect_group>		
@@ -1557,6 +1578,9 @@
 		<effect_group tiered="false">			
 				<display_value name="dBartering" value=".25"/>
 				<display_value name="dBarteringSellBuy" value=".25"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer1"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer2"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer3"/>
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="RemoveBuff" buff="buffDaringAdventurer4"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDaringAdventurer5"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBetterBarter5"/>

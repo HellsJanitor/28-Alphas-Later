@@ -9,6 +9,11 @@
             <requirement name="CVarCompare" cvar="is_bloodmoon" operation="Equals" value="1" />
         </passive_effect>
 	</effect_group>
+	
+	<effect_group>
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffAddHeatTrigger"/>
+	</effect_group>
+	
 	<!-- adds "headshot only" to player on spawn -->
 	<effect_group>
 		<triggered_effect trigger="onSelfEnteredGame" action="CallGameEvent" event="buffAlwaysHeadShotsOnly"/>

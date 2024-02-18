@@ -26,6 +26,14 @@ idcXuiAnimalSnare,Contents
 idcXuiBait,Animal Feed
 cntIDCAnimalSnare,Chicken trap
 cntIDCAnimalSnareDesc,A chicken trap. Will trap a chicken to use in a chicken coop. Can be upgraded with tools.
+flagBlockVariantHelper,Flags
+JailVariantHelper,Jail Doors
+HoistVariantHelper,Hoist Parts
+barbedWireSpindleVariantHelper,Barbed Wire
+barbedWireSpindleVariantHelperBlock,"Craft various barbed wire shapes with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
+flagVariantHelper,"Craft various flags with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
+jailBlockVariantHelper,"Craft various jail doors & bars with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
+decoHoistVariantHelper,"Craft various hoists & hoist parts with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
 idcMeatCooker,Meat Cooker
 idcMeatCookerDesc,A meat cooker for the snare. It dropped out of culinary school so hopefully you like your steak well done.
 idcEnhancedSkinningDevice,Enhanced Skinning Device
@@ -148,7 +156,7 @@ buffDespairCureDisplayPositiveName,Optimism
 buffDespairCureDisplayPositiveDesc,"You are feeling positive and energized.\n\nYou have:\n10% decreased stamina loss.\n10% decreased health loss.\n50% critical hit resistance."
 buffResurrectName,Double Tap!
 buffResurrectDesc,"You might wanna double check that these guys are actually dead ...\n\nDuring horde night, [FFC800]most[-] zombies have a 10% chance to respawn. Kill them with [CC5500]fire[-] damage or [CC5500]explosives[-] to ensure they stay dead."
-buffCampfireAOEEffectDesc,You are warmed by the fire.\n\nCold Resist +15\n\nThis warming effect can slowly reduce your despair.
+buffCampfireAOEEffectDesc,"You are warmed by the fire.\n\nCold Resist +15\n\nThis warming effect, combined with shelter and light, can slowly reduce your despair."
 buffGoodCompanyFromTraderName,Good Company
 buffGoodCompanyFromTraderDesc,Your spirits are raised by being in good company.
 statCureDespair,Treat Despair
@@ -161,6 +169,8 @@ DespairTip_title,Despair
 buffArrowBleedDesc,Your arrows & crossbow bolts have a 25% chance to make [FFC800]living[-] things bleed - when they hit that is...
 buffArrowBleedName,Arrows Cause Bleed
 buffArrowBleedtip,Arrows and bolts can make living things bleed
+buffCorpseRunName,Corpse Run
+buffCorpseRunDesc,"After your recent *ahem* 'Near Death Experience', you have a temporary boost to run speed, stamina regen, and damage resistance.\n\nTry to stay safe from now on, ok?"
 buffDaringAdventurerFiveDesc,"You are an Ultimate Adventurer.\n\nYou have access to the best trader items, get 25% more Dukes from quests, and a 25% better deal when buying & selling.\n\nPick three quest rewards."
 buffDaringAdventurerFiveName,"Ultimate Adventurer"
 buffDaringAdventurerFiveTooltip,"Your bartering & quest rewards have increased 5%!!"
@@ -195,10 +205,12 @@ buffRadiation01Desc,"You have entered an area with increased radiation.\n\n[FFC8
 buffRadiation01Name,Radiation
 buffRadiation01Tooltip,"You are in an irradiated biome"
 buffRadSuit,Radiation protection
-buffRadSuitDesc,"This hazmat suit will protect from this biome's radiation effects."
+buffRadSuitDesc,"This hazmat suit will protect you from radiation effects."
 buffRadSuitName,Radiation protection
 buffRadSuitTooltip,Radiation protection
 buffRadSuitRespawnDesc,"You are temporarily immune to radiation effects."
+buffSmellName,"Alerted"
+buffSmellDesc,"The food you are carrying is attracting unwanted attention.\n\nKeep an eye out for scout zombies - they can alert other zombies to your location."
 buffVehicleCrateDesc,"You are carrying a vehicle crate.\n\nThe contents of this crate will be [FFC800]HEAVY[-],\nso make sure you open it where you want the vehicle placed."
 buffVehicleCrateName,Vehicle Crate
 buffVehicleCrateTooltip,This crate contains a heavy vehicle. [FFC800]Open it outside![-]
@@ -269,6 +281,7 @@ foodT3-6,Tier 3: Chicken Stew
 foodT3-7,Tier 3: Chicken Miso
 medicalT1-2,Tier 1: Antivenom
 medicalT1-3,Tier 1: Fort Bites
+medicalT3-4,Tier 3: The T-Virus Cure
 gunBotT1JunkSledgeDesc,"You may not be good at punching but you have the technology.\nYou can also deploy this on the ground using the Secondary action.\nRepair with a Robot Repair Kit.\nScrap to Robotics Parts."
 gunBotT2JunkTurretDesc,"This contraption can be fired and reloaded like a gun. It uses Robotic Turret Ammo for ammunition.\nYou can also deploy it on the ground using the Secondary action.\nRepair with a Robot Repair Kit.\nScrap to Robotics Parts."
 gunBotT3JunkDroneDesc,"Crafted from robotic parts and scrap, the robotic drone is the ultimate companion in the apocalypse. It can heal you and carry some items. \nRepair with a Robot Repair Kit."
@@ -332,7 +345,7 @@ meleeWpnKnucklesT3SteelKnucklesDesc,"Protect your hands and put some weight into
 meleeWpnSledgeT3SteelSledgehammerDesc,"The sledgehammer is one of the best weapons for cracking skulls.\n\nRepair with a Sledgehammer Repair Kit.\nScrap to Steel Sledgehammer parts."
 meleeWpnSpearT3SteelSpearDesc,"Spears have more range than other weapons.\n\nRepair with a Spear Repair Kit.\nScrap to Steel Spear parts."
 meleeWpnBladeT666LegendaryPaintbrush,Red's Legendary Paintbrush
-meleeWpnBladeT666LegendaryPaintbrushDesc,"Red's Legendary Paintbrush is a rare, powerful, & ancient artifact. It is rumoured that only Master Decorators can wield it.\n\nGo out, and paint the apocalypse red!\nStops all radiated regen. 30% damage bonus to radiated & mutated zombies.\n\nRepair with Wood."
+meleeWpnBladeT666LegendaryPaintbrushDesc,"This ancient & mysterious brush has built up thousands of layers of paint & varnish, which have hardened to be more durable than steel. In RambunctiousRed's hands, it has been honed into a deadly weapon.\n\nGo out, and paint the apocalypse red!!\n\nStops all radiated regen. 30% damage bonus to radiated & mutated zombies.\n\nRepair with Wood."
 MilitaryArmourRepairKit,Military Armour Repair Kit
 MilitaryArmourRepairKitDesc,This Repair Kit is used to repair military armour.
 MinibikeBundle,Minibike
@@ -416,6 +429,7 @@ perkWasteTreasuresAcidDesc,Adds a chance to harvest acid from cars and medical e
 perkWasteTreasuresAcidLongDesc,"Acid: Acid is an extremely rare and powerful crafting agent. I figured out this tip to sometimes harvest a little from cars and medical equipment. Adds a chance to harvest acid from cars, medical equipment and acid barrels. You can extract acid from car batteries in your Workbench, and you can craft it in the Chemistry Station."
 perkWellInsulatedRank3LongDesc,You can now handle severe weather and typically couldn't care less what the weather conditions are. You will never have the more severe stages of temperature status effects.\n\n[FFC800]Immune to slow effects from frozen zombie attacks.[-]
 playerTableSaw,Tablesaw
+playerWoodBurningStove,Wood Burning Stove
 potofbeefDesc,"Two cans of beef rations cooked in a pot. Tender and filling."
 potofchickenDesc,"Two chicken rations cooked in a pot. Tastes a little less like crap."
 potofchiliDesc,"Double portion of cooked chili. Still burns on the way out."
@@ -435,6 +449,7 @@ resourceConcreteMixDesc,"Can be used as a resource to upgrade cobblestone into s
 resourceConcreteMixDesc,Can be used as a resource to upgrade cobblestone into solid concrete walls or to craft concrete blocks in a cement mixer.\n\nCrafted in batches of 250
 resourceLiquidLead,Liquid Lead
 resourceLiquidLeadDesc,Liquid Lead is an ingredient that has radiation removing properties.\n\nUsed for crafting anti-rad thrown explosives.
+resourcePaperDesc,"Paper can be used with other ingredients to make shotgun ammo and dynamite. Crafted in lots of 50."
 resourceWaterFilter,Water Filter
 resourceWaterFilterDesc,"A limited-use water filter, used in the dew collector.\n\nGood for about 25 collection cycles.\n\nMust be replaced when broken."
 resourceWoodScraps,Wood scraps

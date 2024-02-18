@@ -405,6 +405,7 @@
 			<item_conversion item="foodHoney" lower_range="1" upper_range="2"/>
 			<property name="FuelItem" value="honeyBee"/>
 		</block>
+		
 		<block name="beehiveTreeStump">
 			<property name="Class" value="Loot"/>
 			<property name="LootList" value="beehiveTreeStump"/>
@@ -428,9 +429,63 @@
 			<property name="SortOrder2" value="0000"/>
 			<property name="Tags" value="wood"/>
 			<property name="FilterTags" value="MC_outdoor,SC_trees"/>
-		</block>						  
-	</append>
+		</block>
 
+	<!-- *** player wood burning stove *** -->
+		<block name="playerWoodBurningStove">
+			<property name="Class" value="Campfire"/>
+			<property name="CustomIcon" value="cntWoodBurningStove"/>
+			<property class="Workstation">
+				<property name="CraftingAreaRecipes" value="campfire"/>
+				<property name="Modules" value="tools,output,fuel"/>
+				<property name="Collide" value="melee,bullet,arrow,rocket"/>
+			</property>
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="campfireDesc"/>
+			<property name="PickupJournalEntry" value="campfireTip"/>
+			<property name="WorkstationIcon" value="ui_game_symbol_campfire"/>
+			<property name="WorkstationJournalTip" value="heatMapTip"/>
+			<property name="CraftIcon" value="ui_game_symbol_spatula"/>
+			<property name="CraftActionName" value="lblContextActionCook"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Furniture/woodBurningStovePrefab"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="ParticleName" value="campfire"/>
+			<property name="ParticleOffset" value="0.5,0.5,0.5"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="MaxDamage" value="100"/>
+			<property name="HeatMapStrength" value="5"/>
+			<property name="HeatMapTime" value="5000"/>
+			<property name="HeatMapFrequency" value="1000"/>
+			<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+			<property name="OpenSound" value="campfire_open"/>
+			<property name="CloseSound" value="campfire_close"/>
+			<property name="CraftSound" value="campfire_cook_click"/>
+			<property name="CraftCompleteSound" value="campfire_complete_item"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="10"/>
+				<!-- <property name="resourceElectricParts" value="4"/> -->
+			</property>
+			<drop event="Destroy" name="resourceScrapIron" count="3,6"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="SortOrder1" value="B281"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			
+			<property name="Fuels" value="resourceWood,100"/>
+		</block>
+	</append>
+	
 	<!-- *** biome terrain upgrades to plantable terrain with hoe *** -->
 	<append xpath="/blocks/block[@name='terrDirt']">
 	    <property class="UpgradeBlock">
@@ -570,6 +625,156 @@
 	<set xpath="//block[@name='palletBagFertilizerCapSml']//drop[@name='resourceFertilizer']/@count">2,3</set>
 	<set xpath="//block[@name='palletBagFertilizerSingleBent']//drop[@name='resourceFertilizer']/@count">1,2</set>
 	<set xpath="//block[@name='palletBagFertilizerSingleFlat']//drop[@name='resourceFertilizer']/@count">1,2</set>	
+	
+	<!-- *** makes various deco blocks able to be picked up *** -->
+	<!-- *** neon signs *** -->
+	<remove xpath="//block[@name='signNeonColdBeer']/drop[@event='Harvest']"/>
+	<remove xpath="//block[@name='signShopOpen']/drop[@event='Harvest']"/>
+	<remove xpath="//block[@name='signNeonColdBeer']/drop[@event='Destroy']"/>
+	<remove xpath="//block[@name='signShopOpen']/drop[@event='Destroy']"/>
+	
+	<append xpath="//block[@name='signShopOpen']" >
+      	<drop event="Destroy" name="signShopOpen" count="1" tag="salvageHarvest"/>
+		<property name="Class" value="PoweredLight"/>
+		<property name="TakeDelay" value="3"/>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+		<property name="CanPickup" value="true"/>
+		<property name="RuntimeSwitch" value="true"/>
+    </append>
+	<append xpath="//block[@name='signNeonColdBeer']" >
+      	<drop event="Destroy" name="signNeonColdBeer" count="1" tag="salvageHarvest"/>
+		<property name="Class" value="PoweredLight"/>
+		<property name="TakeDelay" value="3"/>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+		<property name="CanPickup" value="true"/>
+		<property name="RuntimeSwitch" value="true"/>
+    </append>
+	
+	<!-- *** signs *** -->
+	<append xpath="//block[starts-with(@name,'signPoster') or (starts-with(@name,'signBread'))]">
+	<property name="CanPickup" value="true"/>
+	</append>
+	
+	<!-- *** mannequins *** -->
+	<append xpath="//block[starts-with(@name,'deco') and (contains(@name,'Mannequin'))]">
+	<property name="CanPickup" value="true"/>
+	</append>
+	
+	<!-- *** pool table(s) *** -->
+	<append xpath="//block[starts-with(@name,'decoPool')]">
+	<property name="CanPickup" value="true"/>
+	</append>
+	
+	<!-- *** hoists *** -->
+	<append xpath="//block[starts-with(@name,'decoHoist')]">
+	<property name="CanPickup" value="true" param1="HoistVariantHelper"/>
+	</append>
+	
+	<!-- *** wine bottles *** -->
+	<append xpath="//block[starts-with(@name,'decoWine')]">
+	<property name="CanPickup" value="true"/>
+	</append>
+	
+	<!-- *** animal/pet houses *** -->
+	<append xpath="//block[@name='decoReptileTerrarium']">
+	<property name="CanPickup" value="true"/>
+	</append>
+	
+	<append xpath="//block[@name='decoClassicDogHouse']">
+	<property name="CanPickup" value="true"/>
+	</append>
+	
+	<append xpath="//block[@name='decoLargePetCage']">
+	<property name="CanPickup" value="true"/>
+	</append>
+	
+	<!-- *** radio *** -->
+	<append xpath="//block[@name='radioHam']">
+	<property name="CanPickup" value="true"/>
+	</append>
+	
+	<!-- *** pictures *** -->
+	<append xpath="//block[starts-with(@name,'picture') and not (@name='pictureVariantHelper')]">
+	<property name="CanPickup" value="true" param1="pictureVariantHelper"/>
+	</append>
+	
+	<!-- *** flags *** -->
+	<append xpath="//block[starts-with(@name,'flag') and not (@name='flagBlockVariantHelper')]">
+	<property name="CanPickup" value="true" param1="flagBlockVariantHelper"/>
+	</append>
+	
+	<!-- *** adds craftable bath tubs to sink variant helper *** -->
+	<append xpath="//block[@name='sinksToiletsBlockVariantHelper']//property[@name='PlaceAltBlockValue']/@value">
+	,cntBathTubEmpty,decoClawFootBathTub
+	</append>
+	
+	<!-- *** wood burning stove is craftable *** -->
+	<append xpath="//block[@name='appliancesVariantHelper']//property[@name='PlaceAltBlockValue']/@value">
+	,playerWoodBurningStove
+	</append>
+	
+	<!-- *** bearskin rug *** -->
+	<append xpath="//block[@name='rugBear']">
+	<property name="CanPickup" value="true"/>
+	</append>
+	
+	<!-- *** flag variant helper *** -->
+	<append xpath="/blocks">
+	<block name="flagBlockVariantHelper">
+		<property name="Extends" value="flagWallHungUSA"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="flagWallHungUSA"/>
+		<property name="ItemTypeIcon" value="all_blocks"/>
+		<property name="DescriptionKey" value="flagVariantHelper"/>
+		<property name="SelectAlternates" value="true"/>
+		<property name="PlaceAltBlockValue" value="flagWallHungUSA,flagWallHungDuke,flagWallHungHonorDuty,flagWallHungValiant,flagWallHungTFP,flagWallHungGadsdenWhite,flagWallHungGadsdenBrown,flagWallHungGadsdenRed,flagWallHungGadsdenOrange,flagWallHungGadsdenYellow,flagWallHungGadsdenGreen,flagWallHungGadsdenBlue,flagWallHungGadsdenPurple,flagWallHungGadsdenGrey,flagWallHungGadsdenPink,flagWallHungGadsdenArmyGreen,flagTopWallHungUSA,flagTopWallHungDuke,flagTopWallHungHonorDuty,flagTopWallHungValiant,flagTopWallHungTFP,flagTopWallHungGadsdenWhite,flagTopWallHungGadsdenBrown,flagTopWallHungGadsdenRed,flagTopWallHungGadsdenOrange,flagTopWallHungGadsdenYellow,flagTopWallHungGadsdenGreen,flagTopWallHungGadsdenBlue,flagTopWallHungGadsdenPurple,flagTopWallHungGadsdenGrey,flagTopWallHungGadsdenPink,flagTopWallHungGadsdenArmyGreen,flagWallHungThick44Black,flagWallHungThick44Purple,flagTopWallHungThick44Purple,flagTopWallHungThick44Black"/>
+		<property name="SortOrder1" value="U200"/>
+		<property name="SortOrder2" value="0000"/>
+		<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	</block>
+	
+	<!-- *** jail doors/bars variant helper *** -->
+	<block name="JailVariantHelper">
+		<property name="Extends" value="jailDoorWhite"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="jailDoorWhite"/>
+		<property name="ItemTypeIcon" value="all_blocks"/>
+		<property name="DescriptionKey" value="jailBlockVariantHelper"/>
+		<property name="SelectAlternates" value="true"/>
+		<property name="PlaceAltBlockValue" value="jailDoorWhite,jailDoorBrown,jailDoorYellow,jailDoorGreen,jailDoorBlue,jailDoorGrey,jailDoorDoubleWhite,jailDoorDoubleBrown,jailDoorDoubleYellow,jailDoorDoubleGreen,jailDoorDoubleBlue,jailDoorDoubleGrey,jailBarsWhite,jailBarsBrown,jailBarsYellow,jailBarsGreen,jailBarsBlue,jailBarsGrey"/>
+		<property name="SortOrder1" value="U200"/>
+		<property name="SortOrder2" value="0000"/>
+		<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	</block>
+	
+	<!-- *** hoist variant helper *** -->
+	<block name="HoistVariantHelper">
+		<property name="Extends" value="decoHoistHook"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="decoHoistHook"/>
+		<property name="ItemTypeIcon" value="all_blocks"/>
+		<property name="DescriptionKey" value="decoHoistVariantHelper"/>
+		<property name="SelectAlternates" value="true"/>
+		<property name="PlaceAltBlockValue" value="decoHoistHook,decoHoistChain,decoHoistSpreader,decoHoistMagnet,decoHoistTopMount"/>
+		<property name="SortOrder1" value="U200"/>
+		<property name="SortOrder2" value="0000"/>
+		<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	</block>
+	
+	<!-- *** barbed wire variant helper *** -->
+	<block name="barbedWireSpindleVariantHelper">
+		<property name="Extends" value="barbedWireSpindle1m"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="barbedWireSpindle1m"/>
+		<property name="ItemTypeIcon" value="all_blocks"/>
+		<property name="DescriptionKey" value="barbedWireSpindleVariantHelperBlock"/>
+		<property name="SelectAlternates" value="true"/>
+		<property name="PlaceAltBlockValue" value="barbedWireSpindle1m,barbedWireSheet,barbedWireSpindle,barbedWireSpindleDiagonal1m,barbedWireSpindle2,barbedWireSpindle3,barbedWireSpindle4"/>
+		<property name="SortOrder1" value="U200"/>
+		<property name="SortOrder2" value="0000"/>
+		<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	</block>
+	</append>
 	
 	<!-- *** wild crops can be picked up *** -->	
 	<append xpath="//block[@name='mushroom01']">

@@ -17,23 +17,30 @@
 	</insertafter>	
 	
 	<append xpath="//lootgroup[@name='groupToolsTiered']">
-		<item group="groupLegendary" prob="0.02"/>
+		<item group="groupLegendary" loot_prob_template="ProbT3"/>
 	</append>
 	
 	<append xpath="//lootgroup[@name='groupRareToolsTiered']">
-		<item group="groupLegendary" prob="0.02"/>
+		<item group="groupLegendary" loot_prob_template="ProbT3"/>
 	</append>
 	
 	<append xpath="//lootgroup[@name='groupToolsTieredBonus']">
-		<item group="groupLegendary" prob="0.02"/>
+		<item group="groupLegendary" loot_prob_template="ProbT3"/>
 	</append>
 
 	<append xpath="//lootgroup[@name='groupHardenedChestT5']">
-		<item group="groupLegendary" prob="0.02"/>
+		<item group="groupLegendary" loot_prob_template="ProbT3"/>
 	</append>	
 	
 	<!-- *** Make player dropped bags bigger to accomodate new size *** -->
-	<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">10,10</set>	
+	<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">10,10</set>
+
+	<!-- *** storage container size increases *** -->
+	<set xpath="//lootcontainer[@name='refrigeratorNOPOP']/@size">8,10</set>
+	<set xpath="//lootcontainer[@name='playerCooler']/@size">6,5</set>
+	<set xpath="//lootcontainer[@name='cupboard']/@size">8,6</set>
+	<set xpath="//lootcontainer[@name='sinks']/@size">8,6</set>
+	<set xpath="//lootcontainer[@name='bookcase']/@size">8,6</set>
 	
 	<!-- <set xpath="//lootprobtemplate[@name='low']/loot[@level='1,999999']/@prob">.1</set>
 	<set xpath="//lootprobtemplate[@name='medLow']/loot[@level='1,999999']/@prob">.2</set>
@@ -355,6 +362,7 @@
 	<lootcontainer name="zombieMaleMutatedHazmatLoot" count="1" size="6,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">	
 	<item group="groupHazmatMutated" />
 	</lootcontainer>
+	
 	<lootcontainer name="beehiveTreeStump" count="1,2" size="6,2" sound_open="UseActions/open_stump" sound_close="UseActions/close_stump" loot_quality_template="qualBaseTemplate">
 		<item name="foodHoney" loot_prob_template="high" count="1,2"/>
 		<item name="honeyBee" loot_prob_template="med" count="1"/>

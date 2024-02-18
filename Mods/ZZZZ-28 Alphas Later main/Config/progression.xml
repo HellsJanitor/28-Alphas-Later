@@ -89,7 +89,7 @@
 			<unlock_entry item="drugHerbalAntibiotics" unlock_tier="2" />
 			<unlock_entry item="drugRecog" unlock_tier="3" />
 		</display_entry>
-		<display_entry icon="medicalFirstAidKit,drugAntibiotics,drugSteroids,TheCure" name_key="medicalT3-1,medicalT3-2,medicalT3-3,medicalT3-4" has_quality="false" unlock_level="50,60,75,100" >
+		<display_entry icon="medicalFirstAidKit,drugAntibiotics,drugSteroids,drugTheCure" name_key="medicalT3-1,medicalT3-2,medicalT3-3,medicalT3-4" has_quality="false" unlock_level="50,60,75,100" >
 			<unlock_entry item="medicalFirstAidKit" unlock_tier="1" />
 			<unlock_entry item="drugAntibiotics" unlock_tier="2" />
 			<unlock_entry item="drugSteroids" unlock_tier="3" />
