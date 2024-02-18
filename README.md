@@ -142,14 +142,15 @@ Player starts with a new debuff - Despair. Despair is dynamically affected by va
 4. Hunger and thirst affect how quickly your despair increases. Starvation/dehydration will drastically increase the rate at which you become affected by despair.
 5. Injuries will affect how quickly your despair increases.
 6. There is medication in trader stock and rare medical loot to treat your despair.
+
 6a. There is also lavender growing wild, which can be collected to make your own lavender seeds, and is also used to make Lavender Oil in a cooking pot at a campfire. Treats 3% Despair.
-7. All food has a positive effect. The better the food, the more effective the treatment.
-8. Killing zombies and animals will reduce your overall despair. Conversely, getting hit by enemies will increase it.
-9. Being in close proximity to zombies increases your Despair. The tougher the zombie, the worse the effect. The effect is compounded, so the more zombies there are, the worse it'll be.
-10. Player “wellness”. Your maximum health will also slow down the effects of despair. Every 10 additional health slows down the rate at which Despair affects you.
-11. The morale booster from the drone will decrease the rate at which despair affects you.
-12. The trader has an effect. Being close to a trader will slow down and/or reduce your Despair.
-13. The perk "From the Shadows" also has an effect on the way Despair affects you at NIGHT. The more points in the perk, the less Despair affects you at night.
+8. All food has a positive effect. The better the food, the more effective the treatment.
+9. Killing zombies and animals will reduce your overall despair. Conversely, getting hit by enemies will increase it.
+10. Being in close proximity to zombies increases your Despair. The tougher the zombie, the worse the effect. The effect is compounded, so the more zombies there are, the worse it'll be.
+11. Player “wellness”. Your maximum health will also slow down the effects of despair. Every 10 additional health slows down the rate at which Despair affects you.
+12. The morale booster from the drone will decrease the rate at which despair affects you.
+13. The trader has an effect. Being close to a trader will slow down and/or reduce your Despair.
+14. The perk "From the Shadows" also has an effect on the way Despair affects you at NIGHT. The more points in the perk, the less Despair affects you at night.
 
 Headshots ONLY. Zombies can only be damaged/killed with headshots, or with fire, or with explosives. (currently only works in single player games)
 
