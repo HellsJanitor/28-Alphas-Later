@@ -8,6 +8,38 @@ The idea behind this mod is to slow progression, make traders less powerful, and
 > Clients can keep this folder without issue, but it must NOT be present on the SERVER or the HOST.
 
 >[!NOTE]
+># Changelog/Updates for v1.2.3
+>various balancing tweaks
+>
+>Increased mod slots for T2 and T3 armour. Now 2,2,2,3,4,5 for Quality 1,2,3,4,5,6 Leather and Iron, and 3,3,3,4,5,6 for Quality 1,2,3,4,5,6 Military and Steel.
+>
+>Added "corpse run" buff. After death, you have increased run speed, stamina regen, and damage resistance for 30 seconds.
+>
+>Increased storage sizes for a few containers. NOTE: You 'may' get a console error when accessing the storage in a CURRENT save. If so, press 'F1', and type xui reload, or you can relog. That should fix it. New saves should be fine.
+>
+>Added stats display for Red's Legendary Paintbrush.
+>
+>Reworded its description.
+>
+>A few more minor localization tweaks.
+>
+>Added pick-up ability and crafting to several deco blocks/posters/signs/flags.
+>
+>Added ability to pick up, place and power "cold beer" and "shop open" signs.
+>
+>Expanded sinks variable helper to include bath tubs.
+>
+>Expanded appliances variant helper to include wood burning stove.
+>
+>Added craftable barbed wire variable shape helper block.
+>
+>Non-specific (generic) repair kits are now more expensive to make.
+>
+>Specific repair kits can now be made with a generic repair kit and a weapon/tool/armour part as required.
+>
+>The "smell" mechanic is back! Carrying differing quantities of certain food will increase the heat map, and subsequently alert screamers.
+>Currently NON-FUNCTIONAL in multiplayer. Please read the warning note at the top of this document.
+>
 ># Changelog for v1.2.2
 >lowered probability for Blessed Metal in loot.
 >
