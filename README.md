@@ -3,6 +3,9 @@
 The idea behind this mod is to slow progression, make traders less powerful, and generally extend the time for a playthrough, while keeping the vanilla look and feel.
 
 ## INSTALLATION INSTRUCTIONS
+> [!WARNING]
+> The "food smell" mechanic is currently NON-FUNCTIONAL in multiplayer. If you plan on using this mod in a multiplayer environment, make sure you remove the `ZZZZ-Food Smell` folder from your SERVER or your HOST.
+> Clients can keep this folder without issue, but it must NOT be present on the SERVER or the HOST.
 
 >[!NOTE]
 ># Changelog for v1.2.2
