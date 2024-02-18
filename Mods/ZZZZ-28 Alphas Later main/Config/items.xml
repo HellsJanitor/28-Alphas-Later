@@ -761,6 +761,15 @@
 	</item>
 	</append>
 	
+	<!-- *** icon tint for bukcet(s) *** -->
+	<insertbefore xpath="//item[@name='bucketEmpty']//property[@name='HoldType']">
+	<property name="TintColor" value="35,41,122"/>
+	</insertbefore>
+	
+	<insertbefore xpath="//item[@name='bucketRiverWater']//property[@name='HoldType']">
+	<property name="TintColor" value="35,41,122"/>
+	</insertbefore>
+	
 	<!-- *** modifies waterproof value for clothing *** -->
 	<set xpath="//item[@name='apparelCoatLeatherDuster']//property[@name='Waterproof']/@value">.80</set>
 	<set xpath="//item[@name='apparelCoatLeatherPoncho']//property[@name='Waterproof']/@value">.70</set>

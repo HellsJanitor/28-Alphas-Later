@@ -217,11 +217,10 @@
 	</buff>
 	
 	<!-- *** food smell *** -->
-	<buff name="buffAddHeatTrigger" hidden="true">
+	<!-- <buff name="buffAddHeatTrigger" hidden="true">
 	<duration value="0"/>
 	
 	<effect_group compare_type="or">
-		<!-- <requirement name="PlayerItemCount" item_name="foodRottingFlesh" operation="GTE" value="1"/> -->
 		<requirement name="PlayerItemCount" item_name="foodCornBread" operation="GTE" value="5"/>
 		<requirement name="PlayerItemCount" item_name="foodShamSandwich" operation="GTE" value="5"/>
 		<requirement name="PlayerItemCount" item_name="foodCharredMeat" operation="GTE" value="5"/>
@@ -278,7 +277,7 @@
 		<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="smell" operation="set" value="30"/>
 		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="smell" operation="set" value="30"/>
 	</effect_group>
-	</buff>	
+	</buff> -->	
 	
 	<!-- *** buff for random zombie walk types *** -->
 	<buff name="buffRandomWalk" hidden="true">
@@ -2326,9 +2325,9 @@
 	
 	<!-- *** new starting buffs *** -->
 	<append xpath="//buff[@name='buffStatusCheck01']/effect_group">
-		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffAddHeatTrigger"/>
+		<!-- <triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffAddHeatTrigger"/>
 		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffAddHeatTrigger"/>
-		<triggered_effect trigger="onSelfRespawn" action="AddBuff" target="self" buff="buffAddHeatTrigger"/>
+		<triggered_effect trigger="onSelfRespawn" action="AddBuff" target="self" buff="buffAddHeatTrigger"/> -->
 		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffVehicleCrateTrigger"/>
 		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffVehicleCrateTrigger"/>
 		<triggered_effect trigger="onSelfRespawn" action="AddBuff" buff="buffVehicleCrateTrigger"/>

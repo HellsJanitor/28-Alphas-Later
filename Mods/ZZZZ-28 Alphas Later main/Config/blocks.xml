@@ -747,6 +747,33 @@
 		<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
 	</block>
 	
+	<!-- *** player craftable doors *** -->
+	<block name="playerDoorSingleVariantHelper">
+		<property name="Extends" value="exteriorHouseDoorWhite"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="exteriorHouseDoorWhite"/>
+		<property name="ItemTypeIcon" value="all_blocks"/>
+		<property name="DescriptionKey" value="playerDoorSingleVariantHelper"/>
+		<property name="SelectAlternates" value="true"/>
+		<property name="PlaceAltBlockValue" value="exteriorHouseDoorWhite,exteriorHouseDoorBrown,exteriorHouseDoorRed,exteriorHouseDoorOrange,exteriorHouseDoorYellow,exteriorHouseDoorGreen,exteriorHouseDoorBlue,exteriorHouseDoorPurple,exteriorHouseDoorGrey,exteriorHouseDoorPink,exteriorHouseDoorOak"/>
+		<property name="SortOrder1" value="U200"/>
+		<property name="SortOrder2" value="0000"/>
+		<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	</block>
+	
+	<block name="playerDoorDoubleVariantHelper">
+		<property name="Extends" value="exteriorHouseDoorDoubleWhite"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="exteriorHouseDoorDoubleWhite"/>
+		<property name="ItemTypeIcon" value="all_blocks"/>
+		<property name="DescriptionKey" value="playerDoorDoubleVariantHelper"/>
+		<property name="SelectAlternates" value="true"/>
+		<property name="PlaceAltBlockValue" value="exteriorHouseDoorDoubleWhite,exteriorHouseDoorDoubleBrown,exteriorHouseDoorDoubleRed,exteriorHouseDoorDoubleOrange,exteriorHouseDoorDoubleYellow,exteriorHouseDoorDoubleGreen,exteriorHouseDoorDoubleBlue,exteriorHouseDoorDoublePurple,exteriorHouseDoorDoubleGrey,exteriorHouseDoorDoublePink,exteriorHouseDoorDoubleOak"/>
+		<property name="SortOrder1" value="U200"/>
+		<property name="SortOrder2" value="0000"/>
+		<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+	</block>
+	
 	<!-- *** hoist variant helper *** -->
 	<block name="HoistVariantHelper">
 		<property name="Extends" value="decoHoistHook"/>

@@ -367,6 +367,17 @@
 		<ingredient name="resourceMechanicalParts" count="10"/>
 	</recipe>
 	
+	<!-- *** player crafted doors *** -->
+	<recipe name="playerDoorSingleVariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceWood" count="20"/>
+		<ingredient name="resourceScrapBrass" count="50"/>
+	</recipe>
+	
+	<recipe name="playerDoorDoubleVariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceWood" count="40"/>
+		<ingredient name="resourceScrapBrass" count="100"/>
+	</recipe>
+	
 	<!-- *** barbed wire *** -->
 	<recipe name="barbedWireSpindleVariantHelper" count="1">
 		<ingredient name="resourceScrapIron" count="25"/>

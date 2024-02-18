@@ -28,6 +28,10 @@ cntIDCAnimalSnare,Chicken trap
 cntIDCAnimalSnareDesc,A chicken trap. Will trap a chicken to use in a chicken coop. Can be upgraded with tools.
 flagBlockVariantHelper,Flags
 JailVariantHelper,Jail Doors
+playerDoorSingleVariantHelper,Single Exterior Door
+playerDoorDoubleVariantHelper,Double Exterior Door
+playerDoorSingleVariantHelperBlock,"Craft various single exterior doors with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
+playerDoorDoubleVariantHelperBlock,"Craft various double exterior doors with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
 HoistVariantHelper,Hoist Parts
 barbedWireSpindleVariantHelper,Barbed Wire
 barbedWireSpindleVariantHelperBlock,"Craft various barbed wire shapes with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."

@@ -10,9 +10,9 @@
         </passive_effect>
 	</effect_group>
 	
-	<effect_group>
+	<!-- <effect_group>
 		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffAddHeatTrigger"/>
-	</effect_group>
+	</effect_group> -->
 	
 	<!-- adds "headshot only" to player on spawn -->
 	<effect_group>
