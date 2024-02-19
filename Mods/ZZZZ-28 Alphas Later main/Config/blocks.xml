@@ -639,7 +639,7 @@
 		<property name="TakeDelay" value="3"/>
 		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 		<property name="CanPickup" value="true"/>
-		<property name="RuntimeSwitch" value="true"/>
+		<!-- <property name="RuntimeSwitch" value="true"/> -->
     </append>
 	<append xpath="//block[@name='signNeonColdBeer']" >
       	<drop event="Destroy" name="signNeonColdBeer" count="1" tag="salvageHarvest"/>
@@ -647,7 +647,7 @@
 		<property name="TakeDelay" value="3"/>
 		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 		<property name="CanPickup" value="true"/>
-		<property name="RuntimeSwitch" value="true"/>
+		<!-- <property name="RuntimeSwitch" value="true"/> -->
     </append>
 	
 	<!-- *** signs *** -->
@@ -753,7 +753,7 @@
 		<property name="CreativeMode" value="Player"/>
 		<property name="CustomIcon" value="exteriorHouseDoorWhite"/>
 		<property name="ItemTypeIcon" value="all_blocks"/>
-		<property name="DescriptionKey" value="playerDoorSingleVariantHelper"/>
+		<property name="DescriptionKey" value="playerDoorSingleVariantHelperBlock"/>
 		<property name="SelectAlternates" value="true"/>
 		<property name="PlaceAltBlockValue" value="exteriorHouseDoorWhite,exteriorHouseDoorBrown,exteriorHouseDoorRed,exteriorHouseDoorOrange,exteriorHouseDoorYellow,exteriorHouseDoorGreen,exteriorHouseDoorBlue,exteriorHouseDoorPurple,exteriorHouseDoorGrey,exteriorHouseDoorPink,exteriorHouseDoorOak"/>
 		<property name="SortOrder1" value="U200"/>
@@ -766,7 +766,7 @@
 		<property name="CreativeMode" value="Player"/>
 		<property name="CustomIcon" value="exteriorHouseDoorDoubleWhite"/>
 		<property name="ItemTypeIcon" value="all_blocks"/>
-		<property name="DescriptionKey" value="playerDoorDoubleVariantHelper"/>
+		<property name="DescriptionKey" value="playerDoorDoubleVariantHelperBlock"/>
 		<property name="SelectAlternates" value="true"/>
 		<property name="PlaceAltBlockValue" value="exteriorHouseDoorDoubleWhite,exteriorHouseDoorDoubleBrown,exteriorHouseDoorDoubleRed,exteriorHouseDoorDoubleOrange,exteriorHouseDoorDoubleYellow,exteriorHouseDoorDoubleGreen,exteriorHouseDoorDoubleBlue,exteriorHouseDoorDoublePurple,exteriorHouseDoorDoubleGrey,exteriorHouseDoorDoublePink,exteriorHouseDoorDoubleOak"/>
 		<property name="SortOrder1" value="U200"/>
