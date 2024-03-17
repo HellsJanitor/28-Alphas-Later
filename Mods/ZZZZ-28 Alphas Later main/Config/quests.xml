@@ -141,5 +141,31 @@
 	</insertafter>	
 	<insertafter xpath="//quest[@id='quest_tier5complete']//reward[1]">
 	<reward type="Item" id="BarteringSauceFive" value="1"/>
-	</insertafter>	
+	</insertafter>
+
+	<!-- *** reduced Dukes by 1/3 from quest rewards *** -->
+	<set xpath="//quest//reward[@value='200']/@value">130</set>
+	<set xpath="//quest//reward[@value='330']/@value">220</set>
+	<set xpath="//quest//reward[@value='350']/@value">230</set>
+	<set xpath="//quest//reward[@value='560']/@value">370</set>
+	<set xpath="//quest//reward[@value='800']/@value">530</set>
+	<set xpath="//quest//reward[@value='940']/@value">625</set>
+	<set xpath="//quest//reward[@value='1020']/@value">675</set>
+	<set xpath="//quest//reward[@value='1320']/@value">880</set>
+	<set xpath="//quest//reward[@value='1350']/@value">890</set>
+	<set xpath="//quest//reward[@value='1400']/@value">935</set>
+	<set xpath="//quest//reward[@value='1690']/@value">1125</set>
+	<set xpath="//quest//reward[@value='1800']/@value">1200</set>
+	<set xpath="//quest//reward[@value='2000']/@value">1335</set>
+	<set xpath="//quest//reward[@value='2040']/@value">1350</set>
+	<set xpath="//quest//reward[@value='2250']/@value">1500</set>
+	<set xpath="//quest//reward[@value='2300']/@value">1530</set>
+	<set xpath="//quest//reward[@value='2550']/@value">1700</set>	
+	<set xpath="//quest//reward[@value='4080']/@value">2720</set>
+	<set xpath="//quest//reward[@value='4600']/@value">3065</set>
+	<set xpath="//quest//reward[@value='5100']/@value">3400</set>
+	<set xpath="//quest//reward[@value='6000']/@value">4000</set>
+	<set xpath="//quest//reward[@value='7200']/@value">4800</set>
+	<set xpath="//quest//reward[@value='8000']/@value">5330</set>	
+	<set xpath="//quest//reward[@value='9000']/@value">6000</set>			
 </configs>

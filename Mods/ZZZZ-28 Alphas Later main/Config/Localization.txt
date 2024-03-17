@@ -30,8 +30,34 @@ flagBlockVariantHelper,Flags
 JailVariantHelper,Jail Doors
 playerDoorSingleVariantHelper,Single Exterior Door
 playerDoorDoubleVariantHelper,Double Exterior Door
+playerDoorSideLightSingleVariantHelper,Single Door with sidelight
+playerDoorSideLightVariantHelper,Door with sidelight
+playerOldDoorSingleVariantHelper,Single Old Door
+playerOldDoorDoubleVariantHelper,Double Old Door
+playerScreenDoorVariantHelper,Screen Door
+playerSlidingDoorVariantHelper,Sliding Door
+playerFrenchDoorVariantHelper,Single French Door
+playerFrenchDoorDoubleVariantHelper,Double French Door
+playerInteriorHouseDoorVariantHelper,Single Interior Door
+playerInteriorHouseDoorDoubleVariantHelper,Double Interior Door
+playerClosetDoorVariantHelper,Single Closet Door
+playerClosetDoorDoubleVariantHelper,Double Closet Door
+playerPantryDoorVariantHelper,Pantry Door
 playerDoorSingleVariantHelperBlock,"Craft various single exterior doors with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
 playerDoorDoubleVariantHelperBlock,"Craft various double exterior doors with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
+playerDoorSideLightSingleVariantHelperBlock,"Craft various single sidelight doors with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
+playerDoorSideLightVariantHelperBlock,"Craft various double sidelight doors with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
+playerOldDoorSingleVariantHelperBlock,"Craft various single old doors with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
+playerOldDoorDoubleVariantHelperBlock,"Craft various double old doors with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
+playerScreenDoorVariantHelperBlock,"Craft various screen doors with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
+playerSlidingDoorVariantHelperBlock,"Craft various sliding doors with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
+playerFrenchDoorVariantHelperBlock,"Craft various single French doors with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
+playerFrenchDoorDoubleVariantHelperBlock,"Craft various double French doors with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
+playerInteriorHouseDoorVariantHelperBlock,"Craft various single interior doors with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
+playerInteriorHouseDoorDoubleVariantHelperBlock,"Craft various double interior doors with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
+playerClosetDoorVariantHelperBlock,"Craft various single closet doors with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
+playerClosetDoorDoubleVariantHelperBlock,"Craft various double closet doors with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
+playerPantryDoorVariantHelperBlock,"Craft various pantry doors with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
 HoistVariantHelper,Hoist Parts
 barbedWireSpindleVariantHelper,Barbed Wire
 barbedWireSpindleVariantHelperBlock,"Craft various barbed wire shapes with this helper block.\nPut the crafted block on your hotbar, hold the Reload action and select the Shape entry from the menu. Click or Shift-Click to select a variant to build with."
@@ -168,7 +194,7 @@ drugLithium,Lithium
 drugLithiumDesc,Lithium is the most effective treatment for despair.
 drugStJohnsWort,St. John's Wort
 drugStJohnsWortDesc,"St. John's wort is a herbal treatment, and is effective at treating despair."
-DespairTip,"You are overwhelmed by how hopeless the situation appears. You can combat this by staying in a well-lit area, staying warm, and staying dry.\n\nProlonged periods of being wet, in darkness, or cold temperatures will increase the rate at which your despair grows. Injuries sustained, along with hunger and thirst also have an adverse effect.\n\nThere is medication available to reduce your symptoms, and consuming certain food or drink may help too.\nTreatment from consumables:\nCooked Canned Food: [FFC800]0.1%[-]\nBoiled egg & Charred meat: [FFC800]0.20%[-]\nTier 1 food: [FFC800]0.25%[-]\nGoldenrod & Red tea: [FFC800]0.5%[-]\nBacon & Eggs and Coffee: [FFC800]1%[-]\nTier 2 food, Blackstrap coffee,smoothies, mineral water & beer: [FFC800]2%[-]\nTier 3 food: [FFC800]3%[-]\nTier 4 food: [FFC800]5%[-]"
+DespairTip,"You are overwhelmed by how hopeless the situation appears. You can combat this by staying in a well-lit area, staying warm, and staying dry.\n\nProlonged periods of being wet, in darkness, or cold temperatures will increase the rate at which your despair grows. Injuries sustained, along with hunger and thirst also have an adverse effect, as does being in close proximity to zombies.\n\nThere is medication available to reduce your symptoms, and consuming certain food or drink may help too.\n\nTreatment from consumables:\n\nCooked Canned Food: [FFC800]0.1%[-]\nBoiled egg & Charred meat: [FFC800]0.20%[-]\nTier 1 food: [FFC800]0.25%[-]\nGoldenrod & Red tea: [FFC800]0.5%[-]\nBacon & Eggs and Coffee: [FFC800]1%[-]\nTier 2 food, Blackstrap coffee,smoothies, mineral water & beer: [FFC800]2%[-]\nTier 3 food: [FFC800]3%[-]\nTier 4 food: [FFC800]5%[-]"
 DespairTip_title,Despair
 buffArrowBleedDesc,Your arrows & crossbow bolts have a 25% chance to make [FFC800]living[-] things bleed - when they hit that is...
 buffArrowBleedName,Arrows Cause Bleed
@@ -213,8 +239,6 @@ buffRadSuitDesc,"This hazmat suit will protect you from radiation effects."
 buffRadSuitName,Radiation protection
 buffRadSuitTooltip,Radiation protection
 buffRadSuitRespawnDesc,"You are temporarily immune to radiation effects."
-buffSmellName,"Alerted"
-buffSmellDesc,"The food you are carrying is attracting unwanted attention.\n\nKeep an eye out for scout zombies - they can alert other zombies to your location."
 buffVehicleCrateDesc,"You are carrying a vehicle crate.\n\nThe contents of this crate will be [FFC800]HEAVY[-],\nso make sure you open it where you want the vehicle placed."
 buffVehicleCrateName,Vehicle Crate
 buffVehicleCrateTooltip,This crate contains a heavy vehicle. [FFC800]Open it outside![-]
@@ -225,6 +249,7 @@ buffWastelanddTooltip,"You are in a wasteland biome"
 chickenCoopDesc,"A home for your chickens.\n\n Place a chicken in the fuel slot to produce eggs over time.\n\nWill stop producing eggs when the chicken is spent."
 ClubRepairKit,Club Repair Kit
 ClubRepairKitDesc,This Repair Kit is used to repair steel clubs.
+drinkJarGrandpasForgettingElixirPromptDesc,Are you sure you want to reset all of your skills?\n\nAll points will be returned for use on other skills.\n\n[FFC800]ALL ACTION SKILLS WILL BE RESET ALSO!![-]
 foodCanBeefcooked,Cooked Beef Ration
 foodCanBeefcookedDesc,"It's not from your favorite steakhouse but this can of cooked beef will fill you up, and not be as likely to give you the shits..."
 foodCanCarrots,Can of Carrots
@@ -331,6 +356,8 @@ noteDuke01,Anonymous Help
 noteDuke01Desc,"You don't know me, but I was able to sneak you some food, water and medical supplies in a backpack. I'll do what I can to sneak you some extra supplies by plane. Be safe out there!\n\nPS: I packed your favourite weapon.\n\nA good samaritan."
 resourceFertilizer,Fertilizer
 FertilizerDesc,Fertilizer is made in a Chemistry Station or Cement Mixer. Use a hoe to fertilize your farmland and increase crop yield.
+resourceFeldspar,Feldspar
+resourceFeldsparDesc,"Feldspar is a crucial ingredient for concrete mix, allowing for fast-hardening while maintaining good workability during the setting process.\n\nFound exclusively in the Wasteland biome, in small quantities from surface terrain & boulders."
 medicalT3-4,Tier 3: The T-Virus Cure
 meleeToolFarmT2IronHoe,Iron Hoe
 meleeToolFarmT2IronHoeDesc,Required tool for tilling terrain.

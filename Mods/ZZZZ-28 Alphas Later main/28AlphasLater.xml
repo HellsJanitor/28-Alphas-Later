@@ -4,10 +4,27 @@
         <Server Name="28 Alphas Later" Logo="https://media.discordapp.net/attachments/1155647724478275614/1180961617417085000/background.png">
             <Description>### 28 Alphas Later ###
 			
-### THIS IS VERSION 1.2 - A FRESH SAVE IS ABSOLUTELY RECOMMENDED!!! ###
+
 ### 99% of features are now functioning correctly in multiplayer. "Headshots only" remains non-functional on dedicated servers ###
 
-Update 14/02/24
+Update 22/02/24
+Version 1.3 - REQUIRES A FRESH SAVE!!
+Reduced Dukes by 1/3 from quest rewards.
+Reworked the Despair Journal tip so it actually unlocks properly.
+Added Journal Tip and Tooltip for smell from food.
+Added various shape helpers for internal and external doors.
+More blocks can be picked up. Added the skull and piano.
+Action Skills!! Weapon and tool efficacy is now increased with action skills. IE, the more you use a tool/weapon, the more effective with it you become.
+Perk points NOT governed by action skills remain, but their cost is doubled from 1 to 2.
+Perks that govern melee weapon attack speed now additionally reduce stamina use for that weapon.
+Loot probability for crafting magazines and books for weapons/tools is now increased by reading more of that tools/weapons magazine. IE, the more you read shotgun magazines, the more likely you are to find shotgun magazines and Shotgun Messiah books in loot.
+Portable light sources (NVG, headlmap, flashlight etc) require batteries to operate, and the batteries will need replacing periodically.
+Helmet water filter is now a "housing unit". Requires a filter to operate. Limited use filters will need replacing periodically.
+New material: Feldspar. Required for concrete mixing, and only found in the wasteland from surface terrain and surface boulders.
+Removed all shape crafting except basic wood frames. Blocks can be upgraded as usual though.
+Removed all "Clear +" quests as they don't share properly in multiplayer.
+
+Update 18/02/24
 various balancing tweaks
 Increased mod slots for T2 and T3 armour. Now 2,2,2,3,4,5 for Quality 1,2,3,4,5,6 Leather and Iron, and 3,3,3,4,5,6 for Quality 1,2,3,4,5,6 Military and Steel.
 Added "corpse run" buff. After death, you have increased run speed, stamina regen, and damage resistance for 30 seconds.

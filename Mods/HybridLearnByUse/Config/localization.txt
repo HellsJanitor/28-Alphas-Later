@@ -1,0 +1,162 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+LearnByUse,progression,Attribute,,,"Learn By Use"
+LearnByUseDesc,progression,Attribute,,,"Increase Mining, Scavenging and Weapons stats (eg. Damage and Stamina) by using tools and weapons. Gain an extra Skill Point at level 100 for each Perk."
+LearnByUseName,progression,Attribute,,,"Learn By Use"
+lbu_DemolitionsExpertName,progression,Perk,,,"Demolitions Expert Skills"
+lbu_DemolitionsExpertDesc,progression,Perk,,,"Learn by Use: [Perception] Use any explosives, including Rocket Launchers, to upgrade Demolitions Expert skill points. Increases are applied cumulatively per Level."
+lbu_Miner69erName,progression,Perk,,,"Miner69r & MotherLode Skills"
+lbu_Miner69erDesc,progression,Perk,,,"Learn by Use: [Strength] Use any axe, pick, shovel, chainsaw or auger to upgrade the Miner69er/MotherLode skill points. Increases are applied cumulatively per Level. There are 2 StaminaLoss values shown below - the second one is for Power Attacks."
+lbu_SalvageName,progression,Perk,,,"Salvage Operation Skills"
+lbu_SalvageDesc,progression,Perk,,,"Learn by Use: [Perception] Use any Wrench, Ratchet or Impact Driver to upgrade the Salvage skill points. Increases are applied cumulatively per Level. There are 2 StaminaLoss values shown below - the second one is for Power Attacks."
+lbu_DeadEyeName,progression,Perk,,,"Dead Eye Skills"
+lbu_DeadEyeDesc,progression,Perk,,,"Learn by Use: [Perception] Use any Rifle to upgrade the DeadEye skill points. Increases are applied cumulatively per Level."
+lbu_SpearMasterName,progression,Perk,,,"Spearmaster Skills"
+lbu_SpearMasterDesc,progression,Perk,,,"Learn by Use: [Perception] Use any Spear to upgrade the Spearmaster skill points. Increases are applied cumulatively per Level. There are 2 StaminaLoss values shown below - the second one is for Power Attacks."
+lbu_BoomstickName,progression,Perk,,,"Boomstick Skills"
+lbu_BoomstickDesc,progression,Perk,,,"Learn by Use: [Strength] Use any Shotgun to upgrade the Boomstick skill points. Increases are applied cumulatively per Level."
+lbu_PummelPeteName,progression,Perk,,,"Pummel Pete Skills"
+lbu_PummelPeteDesc,progression,Perk,,,"Learn by Use: [Strength] Use any Club to upgrade the PummelPete skill points. Killing blows grant from 1 to 30 stamina over levels 1-100. There are 2 EntityDamage values shown below - the 2nd one is additional damage when target stunned. There are 2 StaminaLoss values shown below - the 2nd one is for Power Attacks."
+lbu_SkullCrusherName,progression,Perk,,,"Skull Crusher Skills"
+lbu_SkullCrusherDesc,progression,Perk,,,"Learn by Use: [Strength] Use any Sledgehammer to upgrade the SkullCrusher skill points. Increases are applied cumulatively per Level. Killing blows grant from 1 to 30 stamina over levels 1-100. There are 2 StaminaLoss values shown below - the second one is for Power Attacks."
+lbu_BrawlerName,progression,Perk,,,"Brawler Skills"
+lbu_BrawlerDesc,progression,Perk,,,"Learn by Use: [Fortitude] Use your Fists to upgrade the Brawler skill points. Increases are applied cumulatively per Level. Killing blows grant from 1 to 30 stamina over levels 1-100. There are 2 StaminaLoss values shown below - the second one is for Power Attacks."
+lbu_MachineGunnerName,progression,Perk,,,"Machine Gunner Skills"
+lbu_MachineGunnerDesc,progression,Perk,,,"Learn by Use: [Fortitude] Use any Assault Rifle or Machinegun to upgrade the Machinegunner skill points. Increases are applied cumulatively per Level."
+lbu_ArcheryName,progression,Perk,,,"Archery Skills"
+lbu_ArcheryDesc,progression,Perk,,,"Learn by Use: [Agility] Use any Bow to upgrade the Archery skill points. Increases are applied cumulatively per Level."
+lbu_GunslingerName,progression,Perk,,,"Gunslinger Skills"
+lbu_GunslingerDesc,progression,Perk,,,"Learn by Use: [Agility] Use any Handgun or SMG to upgrade the Gunslinger skill points. Increases are applied cumulatively per Level."
+lbu_DeepCutsName,progression,Perk,,,"Deep Cuts Skills"
+lbu_DeepCutsDesc,progression,Perk,,,"Learn by Use: [Agility] Use any Bladed Weapon to upgrade the DeapCuts skill points. Increases are applied cumulatively per Level. Killing blows grant from 1 to 30 stamina over levels 1-100. There are 2 StaminaLoss values shown below - the second one is for Power Attacks."
+lbu_ElectrocutionerName,progression,Perk,,,"Electrocutioner Skills"
+lbu_ElectrocutionerDesc,progression,Perk,,,"Learn by Use: [Intellect] Use any Baton to upgrade the Electrocutioner skill points. Increases are applied cumulatively per Level. Killing blows grant from 1 to 30 stamina over levels 1-100. There are 2 StaminaLoss values shown below - the second one is for Power Attacks."
+lbu_RoboticsName,progression,Perk,,,"Robotics Skills"
+lbu_RoboticsDesc,progression,Perk,,,"Learn by Use: [Intellect] Use any Robotic Weapon to upgrade the Robotics skill points. There are 2 RoundsPerMinute values shown below. The first is melee (holding the Turret) and the second is ranged (Turret placed)."
+perkFlurryOfAgilityName,progression,perk Agi,,,Whirlwind of Blades and Efficiency
+perkFlurryOfFortitudeName,progression,perk For,,,Lightning Hands of Efficiency
+perkFlurryOfIntellectName,progression,perk Int,,,Calculated Attack of Efficiency
+perkFlurryOfPerceptionName,progression,perk Per,,,"Quick and Perceptive, and Efficient"
+perkFlurryOfStrengthName,progression,perk Str,,,"Big and Fast, and Efficient"
+perkFlurryOfAgilityDesc,progression,perk Agi,,,Learn to swing your blades faster and use less stamina to become a whirlwind of destruction and carnage.
+perkFlurryOfFortitudeDesc,progression,perk For,,,Pulverize your enemies with faster brawling strikes that use less stamina.
+perkFlurryOfIntellectDesc,progression,perk Int,,,Use your intellect to determine the shortest trajectory to the target and effectively increase your attack speed and use less stamina with batons!
+perkFlurryOfPerceptionDesc,progression,perk Per,,,You are quick and perceptive. Improve attack speeds and use less stamina with spears.
+perkFlurryOfStrengthDesc,progression,perk Str,,,"You are not just strong, but you are fast as well. Increase club and sledgehammer speeds and use less stamina."
+skillPointTip,"You have earned Skill Points.\nSpend them by accessing your Inventory and navigating to the Skills menu, then highlight the desired Attribute or Perk and purchase it by clicking on the shopping cart symbol.\nPerks grant you specific abilities and higher perk levels require certain attribute levels.\n\nLearn by Use, or Action Skills, are increased by using the relevant weapon or tool - the more you use it, the higher your skill in using the item will be.\n\nSome perks increase the chance to find related tools, weapons, ammo, or crafting skill magazines. For example, perking into Master Chef will increase the chance to find Home Cooking Weekly Magazines."
+perkFlurryOfAgilityRank1LongDesc,progression,perk Agi,,,"They won't see it coming.\n\nKnife attacks are 10% faster.\n\nUse 8% less stamina with regular attacks, 7% less stamina with heavy attacks."
+perkFlurryOfAgilityRank2LongDesc,progression,perk Agi,,,Slice and dice your enemies to ribbons with your blazing knife speeds.\n\nKnife attacks are 17% faster.\n\nUse 15% less stamina with regular and heavy attacks.
+perkFlurryOfAgilityRank3LongDesc,progression,perk Agi,,,Rip and tear with no despair!\n\nKnife attacks are 25% faster.\n\nUse 25% less stamina with regular and heavy attacks.
+perkFlurryOfFortitudeRank1LongDesc,progression,perk For,,,"You have really developed your quick jab.\n\nPunching is 10% faster.\n\nUse 8% less stamina with regular attacks, 7% less stamina with heavy attacks."
+perkFlurryOfFortitudeRank2LongDesc,progression,perk For,,,Put your enemies to sleep with bombs and haymakers.\n\nPunching is 17% faster.\n\nUse 15% less stamina with regular and heavy attacks.
+perkFlurryOfFortitudeRank3LongDesc,progression,perk For,,,Your fists are so fast now that enemies will quickly be overwhelmed by your relentless onslaught of punches.\n\nPunching is 25% faster.\n\nUse 25% less stamina with regular and heavy attacks.
+perkFlurryOfIntellectRank1LongDesc,progression,perk Int,,,"It's as simple as basic math.\n\nAttack speeds with batons are 10% faster.\n\nUse 8% less stamina with regular attacks, 7% less stamina with heavy attacks."
+perkFlurryOfIntellectRank2LongDesc,progression,perk Int,,,You see even quicker routes to success.\n\nAttack speeds with batons are 17% faster.\n\nUse 15% less stamina with regular and heavy attacks.
+perkFlurryOfIntellectRank3LongDesc,progression,perk Int,,,You see the outcome before it happens and use your enemies movements against them.\n\nAttack speeds with batons are 25% faster.\n\nUse 25% less stamina with regular and heavy attacks.
+perkFlurryOfPerceptionRank1LongDesc,progression,perk Per,,,"You have developed quick hands.\n\nAttacks with spears are 10% faster.\n\nUse 8% less stamina with regular attacks, 7% less stamina with heavy attacks."
+perkFlurryOfPerceptionRank2LongDesc,progression,perk Per,,,Your training has paid off and you have now mastered the sudden strike.\n\nAttacks with spears are 17% faster.\n\nUse 15% less stamina with regular and heavy attacks.
+perkFlurryOfPerceptionRank3LongDesc,progression,perk Per,,,"With lightning reflexes, most opponents never see it coming.\n\nAttacks with spears are 25% faster.\n\nUse 25% less stamina with regular and heavy attacks."
+perkFlurryOfStrengthRank1LongDesc,progression,perk Str,,,"Swing those big guns faster!\n\nClubs and sledgehammers are 10% faster.\n\nUse 8% less stamina with regular attacks, 7% less stamina with heavy attacks."
+perkFlurryOfStrengthRank2LongDesc,progression,perk Str,,,"The faster you swing, the harder you hit!\n\nClubs and sledgehammers are 17% faster.\n\nUse 15% less stamina with regular and heavy attacks."
+perkFlurryOfStrengthRank3LongDesc,progression,perk Str,,,Let your enemies take a ride on heavy metal.\n\nClubs and sledgehammers are 25% faster.\n\nUse 25% less stamina with regular and heavy attacks.
+perkMiner69rDesc,progression,perk Str,,,"Maximize your mining efforts."
+perkMiner69rRank1LongDesc,progression,perk Str,,,"Everyone has to start somewhere. Find more tools and parts in loot."
+perkMiner69rRank2LongDesc,progression,perk Str,,,"You're still a little green, but you aren't fetching the Muckmen blackstrap anymore. Find more tools and parts in loot."
+perkMiner69rRank3LongDesc,progression,perk Str,,,"You're now a professional miner, or what they called “Muckmen”, back in the day. Find more tools and parts in loot."
+perkMiner69rRank4LongDesc,progression,perk Str,,,"You can crack rock with the best of them now. Find more tools and parts in loot."
+perkMiner69rRank5LongDesc,progression,perk Str,,,"You're the legendary Miner 69'er and can find the juicy center of any rock faster than a horny bullfrog. Find more tools and parts in loot."
+perkMotherLodeDesc,progression,perk Str,,,"Harvest more resources and bring home the mother lode."
+perkMotherLodeRank1LongDesc,progression,perk Str,,,"You've found your first small vein and are envy of all the Johnny Newcomes.\nHarvest 10% more from ore, stone, terrain blocks and trees with any axe, pick, shovel, chainsaw or auger."
+perkMotherLodeRank2LongDesc,progression,perk Str,,,"Finding more ore is starting to become second nature to you. Harvest 20% more from ore, stone, terrain blocks and trees with any axe, pick, shovel, chainsaw or auger."
+perkMotherLodeRank3LongDesc,progression,perk Str,,,"You've hit your stride and can probably make a decent living at this. Harvest 30% more from ore, stone, terrain blocks and trees with any axe, pick, shovel, chainsaw or auger."
+perkMotherLodeRank4LongDesc,progression,perk Str,,,"You are going to need an Irish baby buggy to carry all this ore. Harvest 40% more from ore, stone, terrain blocks and trees with any axe, pick, shovel, chainsaw or auger."
+perkMotherLodeRank5LongDesc,progression,perk Str,,,"Mining is second nature to you and you find the mother lode everywhere you go. Harvest 50% more from ore, stone, terrain blocks and trees with any axe, pick, shovel, chainsaw or auger."
+perkPummelPeteDesc,progression,perk Str,,,"Specialize in knocking your foes senseless with clubs and bats."
+perkPummelPeteRank1LongDesc,progression,perk Str,,,"You might not pack a punch, but as a roughneck you can swing a club! Find more clubs and parts in loot."
+perkPummelPeteRank2LongDesc,progression,perk Str,,,"You're making a name for yourself as a dangerous thug. Find more clubs and parts in loot."
+perkPummelPeteRank3LongDesc,progression,perk Str,,,"You hit hard enough to be in the big leagues now. Attacks do 60% more damage to stunned enemies, and power attacks have a 80% chance to knock foes down. Landing 5 successive hits in a short time causes the last blow to do 100% extra damage. Find more clubs and parts in loot."
+perkPummelPeteRank4LongDesc,progression,perk Str,,,"When you said stay down, you meant it. Attacks do 80% more damage to stunned enemies, and power attacks have a 90% chance to knock foes down. 4 successive hits in a short time causes the last blow to do 100% extra damage. Find more clubs and parts in loot."
+perkPummelPeteRank5LongDesc,progression,perk Str,,,"Pummel Pete once took on 50 zombies with just a club and he would be proud of you. Attacks do 100% more damage to stunned enemies, and power attacks have a 100% chance to knock foes back down. 3 successive hits in a short time causes the last blow to do 100% extra damage. Find more clubs and parts in loot."
+perkSalvageOperationsDesc,progression,perk Per,,,"Waste not, want not! Salvage items for more resources with a wrench, ratchet or impact driver."
+perkSalvageOperationsRank1LongDesc,progression,perk Per,,,"Who knows what useful items can be found when tearing things apart? Find more salvage tools and parts in loot."
+perkSalvageOperationsRank2LongDesc,progression,perk Per,,,"Most people call you “Scavver”, but at least it's an honest living. Find more salvage tools and parts in loot."
+perkSalvageOperationsRank3LongDesc,progression,perk Per,,,"You have a knack for salvaging more useful parts than the average scrapper. Find more salvage tools and parts in loot."
+perkSalvageOperationsRank4LongDesc,progression,perk Per,,,"Your ability to gather salvaged parts is remarkable. Find more salvage tools and parts in loot."
+perkSalvageOperationsRank5LongDesc,progression,perk Per,,,"You're king of the junk dealers and envy of the grease monkeys of the apocalypse. Find more salvage tools and parts in loot."
+perkDeadEyeDesc,progression,perk Per,,,"Specialize in taking keen aim with rifles and wasting your target with an expertly-placed bullet. One shot, one kill."
+perkDeadEyeRank1LongDesc,progression,perk Per,,,Pot Shot. You can hit the broad side of a barn. Find more rifles and rifle parts in loot.
+perkDeadEyeRank2LongDesc,progression,perk Per,,,"You are a rifleman and can hit a large rock at 30 yards. Find more rifles and rifle parts in loot."
+perkDeadEyeRank3LongDesc,progression,perk Per,,,"You are now a marksman and can hold your own. Find more rifles and rifle parts in loot.\nKill Streak: Successive kills increase damage bonus by 10%, 20% to a maximum of 30%."
+perkDeadEyeRank4LongDesc,progression,perk Per,,,"You are now a sharpshooter. Find more rifles and rifle parts in loot.\nKill Streak: Successive kills increase damage bonus by 20%, 30% to a maximum of 40%."
+perkDeadEyeRank5LongDesc,progression,perk Per,,,"Dead Eye: Through all the hard training and countless shooting, you are now a dead eye sniper. Find more rifles and rifle parts in loot.\nKill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum of 50%."
+perkDemolitionsExpertDesc,progression,perk Per,,,"Specialize in explosive weapons to stun, cripple and dismember your foes."
+perkDemolitionsExpertName,progression,perk Per,,,Demolitions Expert
+perkDemolitionsExpertRank1Desc,progression,perk Per,,,Grenadier Initiate
+perkDemolitionsExpertRank1LongDesc,progression,perk Per,,,"You are now a grenadier initiate, be careful with those explosives. Find more explosives and parts in loot."
+perkDemolitionsExpertRank2Desc,progression,perk Per,,,"I'm TNT, I'm dynamite. "
+perkDemolitionsExpertRank2LongDesc,progression,perk Per,,,"You know your way around explosives. Find more explosives and parts in loot."
+perkDemolitionsExpertRank3Desc,progression,perk Per,,,Explosives Handler
+perkDemolitionsExpertRank3LongDesc,progression,perk Per,,,"You are now an explosives handler. Find more explosives and parts in loot."
+perkDemolitionsExpertRank4Desc,progression,perk Per,,,Rocket Man
+perkDemolitionsExpertRank4LongDesc,progression,perk Per,,,"You are now a Rocket Man. Find more explosives and parts in loot."
+perkDemolitionsExpertRank5Desc,progression,perk Per,,,Demolitions Expert
+perkDemolitionsExpertRank5LongDesc,progression,perk Per,,,"Demolitions expert. You make things go boom in a big way. Find more explosives and parts in loot."
+perkJavelinMasterDesc,progression,perk Per,,,"Learn to inflict more damage and slow your enemies with power attacks."
+perkJavelinMasterRank1LongDesc,progression,perk Per,,,"Sticks and stones can't break my bones, but if combined make a nice spear. Power attacks have a 10% chance to slow enemies. Find more spears and parts in loot."
+perkJavelinMasterRank2LongDesc,progression,perk Per,,,Power attacks have a 20% chance to slow enemies. Find more spears and parts in loot.
+perkJavelinMasterRank3LongDesc,progression,perk Per,,,Power attacks have a 30% chance to slow enemies. Killing blows grant 10 stamina. Find more spears and parts in loot.
+perkJavelinMasterRank4LongDesc,progression,perk Per,,,Power attacks have a 40% chance to slow enemies. Killing blows grant 20 stamina. Find more spears and parts in loot.
+perkJavelinMasterRank5LongDesc,progression,perk Per,,,"You're now a Spear Master! If this wasn't the apocalypse, you could be in the Olympics! Power attacks have a 50% chance to slow enemies. Killing blows grant 30 stamina. Find more spears and parts in loot."
+perkBoomstickDesc,progression,perk Str,,,"Specialize with shotguns and send your enemies to meet their maker."
+perkBoomstickRank1LongDesc,progression,perk Str,,,"Maybe your aim isn't so good or you just like doing a lot of damage up close and personal. Either way a hobo with a shotgun is not to be messed with. Stun enemies for 6 seconds.\nIncreases chance to dismember by 5%. Find more shotguns and parts in loot."
+perkBoomstickRank2LongDesc,progression,perk Str,,,"Roaming the wastelands as a nomad have improved your abilities with shotguns.\nIncreases chance to dismember by 10%. Find more shotguns and parts in loot."
+perkBoomstickRank3LongDesc,progression,perk Str,,,"If shotgun meets were still a thing, you'd be hitting those clay ducks and be considered a shotgun pro. Stun enemies for 8 seconds.\nFind more shotguns and parts in loot."
+perkBoomstickRank4LongDesc,progression,perk Str,,,"You are now very deadly with a shotgun and considered a shotgun master and master of the shotgun.\nFind more shotguns and parts in loot."
+perkBoomstickRank5LongDesc,progression,perk Str,,,"You've ascended to the legendary status of Shotgun Messiah, as you are the last thing they see before meeting their maker.\nLegs shots cripple opponents. Find more shotguns and parts in loot."
+perkSkullCrusherDesc,progression,perk Str,,,"Specialize in destroying enemies and structures with sledgehammers."
+perkSkullCrusherRank1LongDesc,progression,perk Str,,,"You're a bruiser! With a little luck, you can sometimes knock down geriatric zombies. 15% chance to knock down enemies with power attacks. Find more sledges and parts in loot."
+perkSkullCrusherRank2LongDesc,progression,perk Str,,,"You're now a mauler, but don't get too cocky yet. 30% chance to knock down enemies with power attacks. Find more sledges and parts in loot."
+perkSkullCrusherRank3LongDesc,progression,perk Str,,,You're a certified smasher of things that get in your way. Power attacks have a 45% chance to knock down enemies and a 20% chance to knock down nearby foes. Killing blows grant 5 stamina. Find more sledges and parts in loot.
+perkSkullCrusherRank4LongDesc,progression,perk Str,,,You're a bone breaker! Power attacks have a 60% chance to knock down enemies and a 35% chance to knock down nearby foes. Killing blows grant 10 stamina. Find more sledges and parts in loot.
+perkSkullCrusherRank5LongDesc,progression,perk Str,,,"Skull Crusher. If anyone pisses you off, you have the means to crush their skull. Power attacks have a 75% chance to knock down enemies and a 50% chance to knock down nearby foes. Killing blows grant 15 stamina. Find more sledges and parts in loot."
+perkBrawlerDesc,progression,perk For,,,"Learn martial arts and use your fists to stun, knock down, disarm and ragdoll your opponent."
+perkBrawlerRank1LongDesc,progression,perk For,,,Tired of being bullied by the undead? Zombies can't bite if you knock their damn teeth out! Punches to the head negate infection ability. Find more knuckle weapons and parts in loot.
+perkBrawlerRank2LongDesc,progression,perk For,,,You've been in a few fights and can hold your own. Knuckle weapons have a 30% chance to stagger opponents with power attacks. Find more knuckle weapons and parts in loot.
+perkBrawlerRank3LongDesc,progression,perk For,,,All the fighting and scrapping has added up and you're a real slugger now. Power attacks to the head have a 20% chance to knock down your opponent. Killing blows grant 5 stamina. Find more knuckle weapons and parts.
+perkBrawlerRank4LongDesc,progression,perk For,,,"You're now good enough to compete in professional boxing, but smashing zombies faces in will have to do. Power attacks to the head have a 30% chance to knock down your opponent. Killing blows grant 10 stamina. Find more knuckle weapons and parts in loot."
+perkBrawlerRank5LongDesc,progression,perk For,,,You're now a complete mixed martial artist and a registered lethal weapon. Knuckle weapons have a higher chance to explode heads with punches. Killing blows grant 15 stamina. Find more knuckle weapons and parts in loot.
+perkMachineGunnerDesc,progression,perk For,,,"Become a commando using assault rifles to slay your foes."
+perkMachineGunnerRank1LongDesc,progression,perk For,,,"Spray and Pray is your thing.\nFind more machine guns, parts, and 7.62mm ammo in loot."
+perkMachineGunnerRank2LongDesc,progression,perk For,,,"You are no commando, but you do what it takes to get the job done.\nFind more machine guns, parts, and 7.62mm ammo in loot."
+perkMachineGunnerRank3LongDesc,progression,perk For,,,"All the combat has sharpened your skills and you are now a soldier. Commando Adrenaline: Each shot scored with automatic weapons gives you 2 stamina.\nFind more machine guns, parts, and 7.62mm ammo in loot."
+perkMachineGunnerRank4LongDesc,progression,perk For,,,"Your skill now matches the special forces. Commando Adrenaline: Each shot scored with automatic weapons gives you 4 stamina.\nFind more machine guns, parts, and 7.62mm ammo in loot."
+perkMachineGunnerRank5LongDesc,progression,perk For,,,"You are now the ultimate machine gunner. Commando Adrenaline: Each shot scored with automatic weapons gives you 6 stamina.\nFind more machine guns, parts, and 7.62mm ammo in loot."
+perkArcheryDesc,progression,perk Agi,,,"Master the use of bows and crossbows.\nCaters for of the available increases for damage, stamina etc - increase the other by Learn-By-Use."
+perkArcheryRank1LongDesc,progression,perk Agi,,,"Many start on the path of the ranger but few can reach it.\nFind more bows and parts in loot."
+perkArcheryRank2LongDesc,progression,perk Agi,,,"You still have much to learn, grasshopper.\nFind more bows and parts in loot."
+perkArcheryRank3LongDesc,progression,perk Agi,,,"All the rigorous training has turned you into a marksman with Bows.\nFind more bows and parts in loot."
+perkArcheryRank4LongDesc,progression,perk Agi,,,"You can split a hair you are so good at archery now.\nFind more bows and parts in loot."
+perkArcheryRank5LongDesc,progression,perk Agi,,,"You have mastered archery and are now a ranger.\nFind more bows and parts in loot."
+perkGunslingerDesc,progression,perk Agi,,,"Settle your disputes the old way and be a gunslinger in the apocalypse. Master the use of handguns and SMG."
+perkGunslingerRank1LongDesc,progression,perk Agi,,,"You're no Wyatt Earp but you're better than the average drifter.\nFind more handguns, parts, and 9mm ammo in loot."
+perkGunslingerRank2LongDesc,progression,perk Agi,,,"You are making a name for yourself, outlaw.\nFind more handguns, parts, and 9mm ammo in loot."
+perkGunslingerRank3LongDesc,progression,perk Agi,,,"You can keep most situations under control, sheriff. Critical Damage: 5 successive hits in a short time cause critical damage.\nFind more handguns, parts, and 9mm ammo in loot."
+perkGunslingerRank4LongDesc,progression,perk Agi,,,"You're now a gunfighter and can clear out a saloon full of rowdy bastards at the drop of a hat. Critical Damage: 4 successive hits in a short time cause the last shot to do 100% extra damage.\nFind more handguns, parts, and 9mm ammo in loot."
+perkGunslingerRank5LongDesc,progression,perk Agi,,,"You are the fastest gunslinger in Navezgane. Critical Damage: 3 successive hits in a short time cause the last shot to do 100% extra damage.\nFind more handguns, parts, and 9mm ammo in loot."
+perkDeepCutsDesc,progression,perk Agi,,,"Specialize in using bladed weapons like knives or machetes (not axes) to bleed your foes dry."
+perkDeepCutsRank1LongDesc,progression,perk Agi,,,"You might have a dull blade, but you know how to use it. Inflict up to 3 Bleeding Wounds on an enemy and a power attack inflicts 2. Every attack refreshes the duration on bleeding. Enemies run 10% slower while bleeding. Find more bladed weapons and parts in loot."
+perkDeepCutsRank2LongDesc,progression,perk Agi,,,Your friends say you're a really knife guy. Inflict up to 4 Bleeding Wounds on an enemy and a power attack inflicts 3. Find more bladed weapons and parts in loot.
+perkDeepCutsRank3LongDesc,progression,perk Agi,,,You're a cut above the rest. Inflict up to 5 Bleeding Wounds on an enemy and a power attack inflicts 4. Glancing blows have a 40% chance to cause 1 Bleeding Wound. Enemies run 15% slower while bleeding. Killing blows grant 5 stamina. Find more bladed weapons and parts in loot.
+perkDeepCutsRank4LongDesc,progression,perk Agi,,,You're quite lethal with bladed weapons. Inflict up to 6 Bleeding Wounds on an enemy and a power attack inflicts 4. Glancing blows have a 70% chance to cause 1 Bleeding Wound. Killing blows grant 10 stamina. Find more bladed weapons and parts in loot.
+perkDeepCutsRank5LongDesc,progression,perk Agi,,,You're a samurai and can make sushi out of your foes. Inflict up to 7 Bleeding Wounds on an enemy and a power attack inflicts 5. All glancing blows cause 1 Bleeding Wound. Enemies run 20% slower while bleeding. Killing blows grant 15 stamina. Find more bladed weapons and parts in loot.
+perkElectrocutionerDesc,progression,perk Int,,,"Learn how to use batons more effectively. Incapacitate your victims easier and do more damage."
+perkElectrocutionerRank1LongDesc,progression,perk Int,,,"Where are the instructions? You're smart, but remember to point it away from you and pull the trigger. Stun batons electrify victims 20% longer. Find more batons and parts in loot."
+perkElectrocutionerRank2LongDesc,progression,perk Int,,,You're getting the hang of using batons to incapacitate your enemies. Stun batons electrify victims 40% longer. Find more batons and parts in loot.
+perkElectrocutionerRank3LongDesc,progression,perk Int,,,You're getting dangerous with batons. You could probably knock out cattle if the zombies hadn't ate them all. Stun batons electrify victims 60% longer. Killing blows grant 5 stamina. Find more batons and parts in loot.
+perkElectrocutionerRank4LongDesc,progression,perk Int,,,You're lethal with batons. Stun batons electrify victims 80% longer. Killing blows grant 10 stamina. Find more batons and parts in loot.
+perkElectrocutionerRank5LongDesc,progression,perk Int,,,You're the last thing they see coming and an executioner with batons. Stun batons electrify victims 100% longer. Killing blows grant 15 stamina.
+perkTurretsDesc,progression,perk Int,,,"You are fascinated with robotics. Learn to use and deploy robotic weapons."
+perkTurretsRank1LongDesc,progression,perk Int,,,"You have some crazy innovative ideas but your implementation could use some work. Robot active range is increased from 10 to 14 meters.\nYou can deploy multiple robots but only the closest will be active."
+perkTurretsRank2LongDesc,progression,perk Int,,,"You are taking your projects to the next level now. Robot active range is 15 meters."
+perkTurretsRank3LongDesc,progression,perk Int,,,"You have mastered the basics of automated weaponry. Robot active range is 16 meters."
+perkTurretsRank4LongDesc,progression,perk Int,,,"You must be from the year 2077. You are creating some futuristic technology. Reload robotic weapons 10% faster. Robot active range is 17 meters."
+perkTurretsRank5LongDesc,progression,perk Int,,,You are now a top expert in robotics. Robot active range is 18 meters.\nTwo deployed robots can be active at once.

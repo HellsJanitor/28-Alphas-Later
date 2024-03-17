@@ -214,71 +214,8 @@
 		<passive_effect name="StaminaChangeOT" operation="perc_add" value=".5"/>
 		<passive_effect name="RunSpeed" operation="perc_add" value=".5"/>
 	</effect_group>
-	</buff>
-	
-	<!-- *** food smell *** -->
-	<!-- <buff name="buffAddHeatTrigger" hidden="true">
-	<duration value="0"/>
-	
-	<effect_group compare_type="or">
-		<requirement name="PlayerItemCount" item_name="foodCornBread" operation="GTE" value="5"/>
-		<requirement name="PlayerItemCount" item_name="foodShamSandwich" operation="GTE" value="5"/>
-		<requirement name="PlayerItemCount" item_name="foodCharredMeat" operation="GTE" value="5"/>
-		<requirement name="PlayerItemCount" item_name="foodGrilledMeat" operation="GTE" value="5"/>
-		<requirement name="PlayerItemCount" item_name="foodBoiledMeat" operation="GTE" value="5"/>
-		<requirement name="PlayerItemCount" item_name="foodMeatStew" operation="GTE" value="3"/>
-		<requirement name="PlayerItemCount" item_name="foodSteakAndPotato" operation="GTE" value="3"/>
-		<requirement name="PlayerItemCount" item_name="foodShamChowder" operation="GTE" value="3"/>
-		<requirement name="PlayerItemCount" item_name="foodHoboStew" operation="GTE" value="3"/>
-		<requirement name="PlayerItemCount" item_name="foodFishTacos" operation="GTE" value="3"/>
-		<requirement name="PlayerItemCount" item_name="foodChiliDog" operation="GTE" value="3"/>
-		<requirement name="PlayerItemCount" item_name="foodBakedPotato" operation="GTE" value="5"/>
-		<requirement name="PlayerItemCount" item_name="foodBlueberryPie" operation="GTE" value="3"/>
-		<requirement name="PlayerItemCount" item_name="foodPumpkinPie" operation="GTE" value="3"/>
-		<requirement name="PlayerItemCount" item_name="foodPumpkinCheesecake" operation="GTE" value="3"/>
-		<requirement name="PlayerItemCount" item_name="foodPumpkinBread" operation="GTE" value="5"/>
-		<requirement name="PlayerItemCount" item_name="foodGumboStew" operation="GTE" value="2"/>
-		<requirement name="PlayerItemCount" item_name="foodShepardsPie" operation="GTE" value="2"/>
-		<requirement name="PlayerItemCount" item_name="foodSpaghetti" operation="GTE" value="2"/>
-		<requirement name="PlayerItemCount" item_name="foodTunaFishGravyToast" operation="GTE" value="2"/>
-		<requirement name="PlayerItemCount" item_name="foodEggBoiled" operation="GTE" value="3"/>
-		<requirement name="PlayerItemCount" item_name="foodBaconAndEggs" operation="GTE" value="3"/>
-		<requirement name="PlayerItemCount" item_name="foodVegetableStew" operation="GTE" value="3"/>
-		<requirement name="PlayerItemCount" item_name="foodRawMeat" operation="GTE" value="10"/>
-		<requirement name="PlayerItemCount" item_name="foodChickenStew" operation="GTE" value="3"/>
-		<requirement name="PlayerItemCount" item_name="foodChickenMiso" operation="GTE" value="3"/>
-		<requirement name="PlayerItemCount" item_name="foodScrambledEggs" operation="GTE" value="5"/>
-		<requirement name="PlayerItemCount" item_name="foodTrampStew" operation="GTE" value="5"/>
-		<requirement name="PlayerItemCount" item_name="foodVagabondStew" operation="GTE" value="5"/>		
-		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffSmell"/>
-	</effect_group>	
-	</buff>
-	
-	<buff name="buffSmell" name_key="buffSmellName" description_key="buffSmellDesc" remove_on_death="true" icon="ui_game_symbol_smell" icon_color="192,192,192">
-	<duration value="30"/>
-	<stack_type value="effect"/>
-	<display_value value="smell"/>
-	<display_value_format value="time"/>
-	<display_value_key value="{0:0}"/>
-	<update_rate value="1"/>
-	
-	<effect_group>
-		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="smell" operation="set" value="30"/>
-	</effect_group>
-	<effect_group>
-		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="smell" operation="add" value="-1"/>
-		<triggered_effect trigger="onSelfBuffUpdate" action="AddChunkHeat,IDCCoreV2" event_type="Smell" value="5"/>
-	</effect_group>
-	<effect_group>
-		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="smell" operation="set" value="30"/>
-		<requirement name="CVarCompare" cvar="smell" operation="LTE" value="0"/>
-	</effect_group>
-	<effect_group>
-		<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="smell" operation="set" value="30"/>
-		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="smell" operation="set" value="30"/>
-	</effect_group>
-	</buff> -->	
-	
+	</buff>	
+		
 	<!-- *** buff for random zombie walk types *** -->
 	<buff name="buffRandomWalk" hidden="true">
 	<duration value="0"/>
@@ -447,7 +384,7 @@
 		<stack_type value="ignore"/>
 		<duration value="0"/>
 		<update_rate value="1"/>
-		<tags value="deathpenalty_injured" />
+		<tags value="deathpenalty_injured" />		
 
 		<!-- Despair is fully %-based. DespairCounter is a float % value. Despair kills the player when it reaches 100%, and can't be removed. -->
 		<effect_group>
@@ -473,9 +410,7 @@
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$DespairDisplayDivisor" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$DespairCureCounter" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$DespairStage2Duration" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$DespairStage3Duration" operation="set" value="0"/>
-			
-			<triggered_effect trigger="onSelfBuffStart" action="AddJournalEntry" journal="DespairTip"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$DespairStage3Duration" operation="set" value="0"/>			
 		</effect_group>	
 
 		<!-- adjust despair tick rates based on conditional requirements -->
@@ -1008,7 +943,7 @@
 		<duration value="0"/>
 		<display_value_key value="{0:0.0}%"/>
 		<display_value value=".DespairDisplayPerc"/>
-		<tags value="deathpenalty_injured" />
+		<tags value="deathpenalty_injured" />		
 
 		<effect_group>
 			<!-- Blinks the display -->
@@ -1022,7 +957,7 @@
 		<effect_group>
 			<requirement name="CVarCompare" cvar="DespairCounter" operation="LTE" value="0"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDespair01Untreated"/>
-		</effect_group>
+		</effect_group>		
 	</buff>
 	
 	<buff name="buffDespair01GetBetter" remove_on_death="false" name_key="buffDespair01GetBetterName" description_key="buffDespair01GetBetterDesc" icon="ui_game_symbol_intellect" showonhud="true" icon_color="219,112,147">

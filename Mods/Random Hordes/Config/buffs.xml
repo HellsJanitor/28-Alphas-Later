@@ -1,0 +1,28 @@
+<HellsJanitor>
+	<append xpath="/buffs">
+	<buff name="buffRandomHorde" hidden="true">
+	<duration value="0"/>
+	<update_rate value="1"/>
+	
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="hordetimer" operation="set" value="randomint(1,5000)"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="hordetimer" operation="LTE" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="random_horde_sequence"/>
+	</effect_group>	
+	<!-- <effect_group>
+		<requirement name="CVarCompare" cvar="hordetimer" operation="LTE" value="3"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="defense_horde_sequence"/>
+	</effect_group>	
+	<effect_group>
+		<requirement name="CVarCompare" cvar="hordetimer" operation="LTE" value="2"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="bikerbar_horde_sequence"/>
+	</effect_group>
+	<effect_group>
+		<requirement name="CVarCompare" cvar="hordetimer" operation="LTE" value="1"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="fatcop_horde_sequence"/>
+	</effect_group> -->
+	</buff>
+	</append>
+</HellsJanitor>

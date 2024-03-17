@@ -1,0 +1,3 @@
+v1.3	Fixed quitting the game (in singleplayer) during the contraband collection quest while the crate exists can cause an infinite number of console errors when re-loading the game.  
+		Fixed failing the quest with the satchel in inventory did not remove the satchel
+		Note that after handing in the quest (or failing the quest), there can be several seconds lag before the satchel is removed, this is by design.

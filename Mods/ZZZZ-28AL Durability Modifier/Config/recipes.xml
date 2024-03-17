@@ -1,0 +1,18 @@
+<Hells_Janitor>
+	<append xpath="/recipes">
+		<recipe name="resourceNiCdBattery" count="10" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="resourceScrapLead" count="180"/>
+			<ingredient name="resourceAcid" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>			
+		</recipe>
+		
+		<recipe name="resourceHelmetWaterFilter" count="1" craft_time="360" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceCoal" count="125"/>
+			<ingredient name="resourceRockSmall" count="250"/>
+			<ingredient name="resourceCrushedSand" count="500"/>		
+			<ingredient name="resourceScrapPolymers" count="50"/>
+			<ingredient name="resourceCloth" count="5"/>
+			<!-- <ingredient name="resourcePaper" count="5"/> -->
+		</recipe>
+	</append>
+</Hells_Janitor>

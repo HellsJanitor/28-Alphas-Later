@@ -1,0 +1,12 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+
+tier1_courier_rescue_name,Quest,Quest Info,,,Tier 1 Defend Safehouse
+tier2_courier_rescue_name,Quest,Quest Info,,,Tier 2 Defend Safehouse
+tier3_courier_rescue_name,Quest,Quest Info,,,Tier 3 Defend Safehouse
+tier4_courier_rescue_name,Quest,Quest Info,,,Tier 4 Defend Safehouse
+tier5_courier_rescue_name,Quest,Quest Info,,,Tier 5 Defend Safehouse
+courier_rescue_subtitle,Quest,Quest Info,,,Defend the Safehouse
+courier_rescue_description,Quest,Quest Info,,,A scout spotted a horde heading towards our safehouse at [DECEA3]{poi.name}[-].  Head there and clear out any zombies inside - then reinforce the structure and kill all the incoming zombies so that we can continue to use the building. If you feel like grabbing the satchel of goods you can - but I won't pay you any extra for it!
+courier_rescue_offer,Quest,Quest Info,,,One of our scouts spotted a small horde heading towards our safehouse at [DECEA3]{poi.name}[-]. Go and clear out any zombies inside - then stop the horde from trashing the place. If you feel like grabbing the satchel of goods you can - but I won't pay you any extra for it!
+courier_rescue_statement,Quest,Quest Info,,,Defend the safehouse.
+courier_rescue_response,Quest,Quest Info,,,Defend Safehouse ([DECEA3]{poi.distance} {poi.direction}[-])

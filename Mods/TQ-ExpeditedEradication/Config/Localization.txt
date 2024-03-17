@@ -1,0 +1,15 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+
+quest_tier1_speed_clear_name,Quest,Quest Info,,,Tier 1 Speed Clear
+quest_tier2_speed_clear_name,Quest,Quest Info,,,Tier 2 Speed Clear
+quest_tier3_speed_clear_name,Quest,Quest Info,,,Tier 3 Speed Clear
+quest_tier4_speed_clear_name,Quest,Quest Info,,,Tier 4 Speed Clear
+quest_tier5_speed_clear_name,Quest,Quest Info,,,Tier 5 Speed Clear
+quest_speed_clear_subtitle,Quest,Quest Info,,,Expedited Eradication
+quest_speed_clear_description,Quest,Quest Info,,,I need your help clearing out all the zombies at [DECEA3]{poi.name}[-]. An operative is inbound and I need it cleared ASAP so I'm paying a bonus for a fast clear.  Get in there and get it done!
+quest_tier1_speed_clear_offer,Quest,Quest Info,,,I need your help clearing out all the zombies at [DECEA3]{poi.name}[-]. An operative is inbound and I need it cleared ASAP so I'm paying a bonus for a fast clear.  Get in there and get it done!
+quest_speed_clear_statement,Quest,Quest Info,,,Speed Clear
+quest_speed_clear_response,Quest,Quest Info,,,Speed Clear ([DECEA3]{poi.distance} {poi.direction}[-])
+quest_speed_clear_completion,Quest,Quest Info,,,Thanks for your help clearing out the zombies - great job!
+quest_speed_clear_completion_silver,Quest,Quest Info,,,Pretty quick job - nice work! Take some ammo for your efforts.  (Silver Clear)
+quest_speed_clear_completion_gold,Quest,Quest Info,,,Amazing - I can't believe you took out all the zombies like that!  Take an extra reward on the house! (Gold Clear)

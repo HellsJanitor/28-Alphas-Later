@@ -1,0 +1,69 @@
+<Hells_Janitor>
+	<append xpath="//item[@name='drinkJarRiverWater']//effect_group[@name='Drink Tier 0']">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="helmetPurifierDurability" operation="subtract" value="1">
+			<requirement name="CVarCompare" cvar="helmetPurifierDurability" operation="GT" value="0"/>
+			<requirement name="HasBuff" buff="buffHelmetPurifierActive"/>
+		</triggered_effect>
+	</append>
+	
+	<!-- <append xpath="//item[@name='resourceWaterFilter']">
+		<property name="Tags" value="filter"/>
+	</append> -->
+	
+	<append xpath="/items">
+		<item name="resourceNiCdBattery">
+			<property name="CustomIcon" value="modGunMeleeNiCdBattery"/>
+			<property name="DescriptionKey" value="resourceNiCdBatteryDesc"/>
+			<property name="Tags" value="battery"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mlead_scrap"/>
+			<property name="Stacknumber" value="50"/><!-- STK resource -->
+			<property name="EconomicValue" value="750"/>
+			<property name="TraderStageTemplate" value="electricTier2"/>
+			<property name="Group" value="Resources"/>
+			<property name="SellableToTrader" value="false"/>
+		</item>
+		
+		<item name="resourceHelmetWaterFilter">
+			<property name="Tags" value="filter"/>
+			<property name="CustomIcon" value="resourceWaterFilter"/>
+			<property name="DescriptionKey" value="resourceHelmetWaterFilterDesc"/>
+			<property name="CustomIconTint" value="00ffff"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceScrapPolymers"/>
+			<property name="Stacknumber" value="50"/><!-- STK resource -->
+			<property name="EconomicValue" value="5"/>
+			<property name="Group" value="Resources"/>
+		</item>
+	</append>
+	
+	<remove xpath="//item[@name='meleeToolFlashlight02']/effect_group[@name='meleeToolFlashlight02']//triggered_effect[@trigger='onSelfItemActivate']"/>
+	<remove xpath="//item[@name='meleeToolFlashlight02']/effect_group[@name='meleeToolFlashlight02']//triggered_effect[@trigger='onSelfItemDeactivate']"/>
+	
+	<append xpath="//item[@name='meleeToolFlashlight02']/effect_group[@name='meleeToolFlashlight02']">
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffFlashLightDeactivate"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffFlashLightActivate"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffFlashLightActive"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffFlashLightActive"/>
+	</append>
+	
+	<set xpath="/items/item[@name='apparelNightvisionGoggles']/effect_group">
+		<requirement name="IsLocalPlayer"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffNVGDeactivate"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffNVGActivate"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffNVGActive"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffNVGActive"/>
+
+		<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="HeadLightTPV" prefab="ScreenEffects/DeferredNV/NVGLight" parentTransform="Spotlight" localPos="0,0,0" localRot="90,0,0"/>
+		<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="HeadLightFPV" prefab="ScreenEffects/DeferredNV/NVGLight" parentTransform="CameraNode" localPos="0,0,.1" localRot="-90,0,0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="HeadLightTPV"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="HeadLightFPV"/>
+			
+		<triggered_effect trigger="onSelfItemDeactivate" action="SetPartActive" part="HeadLightTPV" active="false"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="SetPartActive" part="HeadLightFPV" active="false"/>
+	</set>
+</Hells_Janitor>

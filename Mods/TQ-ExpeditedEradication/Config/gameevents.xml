@@ -1,0 +1,1220 @@
+<Config>
+	<!-- SpeedClear -->
+	<!--
+				<requirement class="HasBuff">
+			<property name="buff_name" value="twitch_buffDistort" param1="hasbuff" />
+				<property name="invert" value="true" />
+			</requirement>
+			-->
+	<insertAfter xpath="/gameevents/action_sequence[@name='action_block_DowngradedTo']">
+		<action_sequence name="tier1_speed_clear_start">
+			<!--<action class="AddChatMessage">
+				<property name="text" value="tier1_speed_clear_start"/>
+			</action>-->
+			<!-- reverse order so gold is on top in the display -->
+			<action class="AddBuff">
+				<property name="buff_name" value="SpeedClearBronzeBuff"/>
+			</action>
+			<action class="AddBuff">
+				<property name="buff_name" value="SpeedClearSilverBuff"/>
+			</action>
+			<action class="AddBuff">
+				<property name="buff_name" value="SpeedClearGoldBuff"/>
+			</action>
+		</action_sequence>
+		<action_sequence name="tier1_speed_clear_stop">
+			<!--<action class="AddChatMessage">
+				<property name="text" value="tier1_speed_clear_stop"/>
+			</action>-->
+			<action class="AddBuff">
+				<property name="removes_buff" value="SpeedClearGoldBuff" param1="removebuff"/>
+			</action>
+			<action class="AddBuff">
+				<property name="removes_buff" value="SpeedClearSilverBuff" param1="removebuff"/>
+			</action>
+			<action class="AddBuff">
+				<property name="removes_buff" value="SpeedClearBronzeBuff" param1="removebuff"/>
+			</action>
+			
+
+			<action class="BeltTooltip">
+				<property name="text" value="Time completed: GOLD!!"/>
+				<property name="sound" value="twitch_celebrate"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+			
+			
+			<decision class="If">
+				<property name="condition_type" value="All"/>
+				<requirement class="CVar">
+					<property name="operation" value="Equals"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearSilverBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+						<action class="BeltTooltip">
+				<property name="text" value="Time completed: SILVER!"/>
+				<property name="sound" value="twitch_celebrate"/>
+				</action>
+            </decision> 
+			
+						<decision class="If">
+				<property name="condition_type" value="All"/>
+				<requirement class="CVar">
+					<property name="operation" value="Equals"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+								<requirement class="CVar">
+					<property name="operation" value="Equals"/>
+					<property name="cvar" value="SpeedClearSilverBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearBronzeBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+						<action class="BeltTooltip">
+				<property name="text" value="Time completed: BRONZE"/>
+				<property name="sound" value="twitch_celebrate"/>
+				</action>
+            </decision> 
+			
+		</action_sequence>
+		<action_sequence name="tier1_speed_clear_reward">
+		
+			<!-- refund_inactivity is the magic property that will stop gameevent after 40-50 seconds - set to false to make it run forever -->
+			<property name="refund_inactivity" value="false" />
+			
+			
+			<!--<action class="AddChatMessage">
+				<property name="text" value="reward time!"/>
+			</action>-->
+			<loop class="While">
+				<property name="phase" value="1"/>
+				<requirement class="OnQuest">
+					<property name="quest" value="tier1_speed_clear"/>
+				</requirement>
+			</loop>
+			<!-- Gold rewards -->
+			<!--<action class="AddChatMessage">
+				<property name="text" value="Gold!"/>
+			<property name="phase" value="2" />
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>-->
+			<action class="AddQuest">
+				<property name="quest" value="tier1_speed_clear_reward_quest_gold"/>
+				<property name="phase" value="2"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+			<!--<action class="AddChatMessage">
+				<property name="text" value="Silver!"/>
+			<property name="phase" value="3" />
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearSilverBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>-->
+			<action class="AddQuest">
+				<property name="quest" value="tier1_speed_clear_reward_quest_silver"/>
+				<property name="phase" value="3"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearSilverBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+			<!--<action class="AddChatMessage">
+				<property name="text" value="Bronze!"/>
+			<property name="phase" value="4" />
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearBronzeBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>-->
+			<action class="AddXP">
+				<property name="xp_amount" value="1500"/>
+				<property name="phase" value="4"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearBronzeBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+			<action class="AddItems">
+				<property name="phase" value="4"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearBronzeBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+				<property name="added_items" value="casinoCoin"/>
+				<property name="added_item_counts" value="400"/>
+			</action>
+		</action_sequence>
+		<!-- TIER 2-->
+		<action_sequence name="tier2_speed_clear_start">
+			<!-- reverse order so gold is on top in the display -->
+			<action class="AddBuff">
+				<property name="buff_name" value="SpeedClearBronzeBuffTier2"/>
+			</action>
+			<action class="AddBuff">
+				<property name="buff_name" value="SpeedClearSilverBuffTier2"/>
+			</action>
+			<action class="AddBuff">
+				<property name="buff_name" value="SpeedClearGoldBuffTier2"/>
+			</action>
+		</action_sequence>
+		<action_sequence name="tier2_speed_clear_stop">
+			<action class="AddBuff">
+				<property name="removes_buff" value="SpeedClearGoldBuffTier2" param1="removebuff"/>
+			</action>
+			<action class="AddBuff">
+				<property name="removes_buff" value="SpeedClearSilverBuffTier2" param1="removebuff"/>
+			</action>
+			<action class="AddBuff">
+				<property name="removes_buff" value="SpeedClearBronzeBuffTier2" param1="removebuff"/>
+			</action>
+			
+						<action class="BeltTooltip">
+				<property name="text" value="Time completed: GOLD!!"/>
+				<property name="sound" value="twitch_celebrate"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+			
+			
+			<decision class="If">
+				<property name="condition_type" value="All"/>
+				<requirement class="CVar">
+					<property name="operation" value="Equals"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearSilverBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+						<action class="BeltTooltip">
+				<property name="text" value="Time completed: SILVER!"/>
+				<property name="sound" value="twitch_celebrate"/>
+				</action>
+            </decision> 
+			
+						<decision class="If">
+				<property name="condition_type" value="All"/>
+				<requirement class="CVar">
+					<property name="operation" value="Equals"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+								<requirement class="CVar">
+					<property name="operation" value="Equals"/>
+					<property name="cvar" value="SpeedClearSilverBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearBronzeBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+						<action class="BeltTooltip">
+				<property name="text" value="Time completed: BRONZE"/>
+				<property name="sound" value="twitch_celebrate"/>
+				</action>
+            </decision> 
+		</action_sequence>
+		<action_sequence name="tier2_speed_clear_reward">
+					<!-- refund_inactivity is the magic property that will stop gameevent after 40-50 seconds - set to false to make it run forever -->
+			<property name="refund_inactivity" value="false" />
+			<loop class="While">
+				<property name="phase" value="1"/>
+				<requirement class="OnQuest">
+					<property name="quest" value="tier2_speed_clear"/>
+				</requirement>
+			</loop>
+			<!-- Gold rewards -->
+			<action class="AddQuest">
+				<property name="quest" value="tier2_speed_clear_reward_quest_gold"/>
+				<property name="phase" value="2"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+			<!-- Silver -->
+			<action class="AddQuest">
+				<property name="quest" value="tier2_speed_clear_reward_quest_silver"/>
+				<property name="phase" value="3"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearSilverBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+
+			<!-- Bronze -->
+			<action class="AddXP">
+				<property name="xp_amount" value="2250"/>
+				<property name="phase" value="4"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearBronzeBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+			<action class="AddItems">
+				<property name="phase" value="4"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearBronzeBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+				<property name="added_items" value="casinoCoin"/>
+				<property name="added_item_counts" value="675"/>
+			</action>
+		</action_sequence>
+		<!-- TIER 3-->
+				<action_sequence name="tier3_speed_clear_start">
+			<!-- reverse order so gold is on top in the display -->
+			<action class="AddBuff">
+				<property name="buff_name" value="SpeedClearBronzeBuffTier3"/>
+			</action>
+			<action class="AddBuff">
+				<property name="buff_name" value="SpeedClearSilverBuffTier3"/>
+			</action>
+			<action class="AddBuff">
+				<property name="buff_name" value="SpeedClearGoldBuffTier3"/>
+			</action>
+		</action_sequence>
+		<action_sequence name="tier3_speed_clear_stop">
+			<action class="AddBuff">
+				<property name="removes_buff" value="SpeedClearGoldBuffTier3" param1="removebuff"/>
+			</action>
+			<action class="AddBuff">
+				<property name="removes_buff" value="SpeedClearSilverBuffTier3" param1="removebuff"/>
+			</action>
+			<action class="AddBuff">
+				<property name="removes_buff" value="SpeedClearBronzeBuffTier3" param1="removebuff"/>
+			</action>
+			
+						<action class="BeltTooltip">
+				<property name="text" value="Time completed: GOLD!!"/>
+				<property name="sound" value="twitch_celebrate"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+			
+			
+			<decision class="If">
+				<property name="condition_type" value="All"/>
+				<requirement class="CVar">
+					<property name="operation" value="Equals"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearSilverBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+						<action class="BeltTooltip">
+				<property name="text" value="Time completed: SILVER!"/>
+				<property name="sound" value="twitch_celebrate"/>
+				</action>
+            </decision> 
+			
+						<decision class="If">
+				<property name="condition_type" value="All"/>
+				<requirement class="CVar">
+					<property name="operation" value="Equals"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+								<requirement class="CVar">
+					<property name="operation" value="Equals"/>
+					<property name="cvar" value="SpeedClearSilverBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearBronzeBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+						<action class="BeltTooltip">
+				<property name="text" value="Time completed: BRONZE"/>
+				<property name="sound" value="twitch_celebrate"/>
+				</action>
+            </decision> 
+		</action_sequence>
+		<action_sequence name="tier3_speed_clear_reward">
+					<!-- refund_inactivity is the magic property that will stop gameevent after 40-50 seconds - set to false to make it run forever -->
+			<property name="refund_inactivity" value="false" />
+			<loop class="While">
+				<property name="phase" value="1"/>
+				<requirement class="OnQuest">
+					<property name="quest" value="tier3_speed_clear"/>
+				</requirement>
+			</loop>
+			<!-- Gold rewards -->
+			<action class="AddQuest">
+				<property name="quest" value="tier3_speed_clear_reward_quest_gold"/>
+				<property name="phase" value="2"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+			<!-- Silver -->
+			<action class="AddQuest">
+				<property name="quest" value="tier3_speed_clear_reward_quest_silver"/>
+				<property name="phase" value="3"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearSilverBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+
+			<!-- Bronze -->
+			<action class="AddXP">
+				<property name="xp_amount" value="3000"/>
+				<property name="phase" value="4"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearBronzeBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+			<action class="AddItems">
+				<property name="phase" value="4"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearBronzeBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+				<property name="added_items" value="casinoCoin"/>
+				<property name="added_item_counts" value="900"/>
+			</action>
+		</action_sequence>
+		<!-- TIER 4-->
+						<action_sequence name="tier4_speed_clear_start">
+			<!-- reverse order so gold is on top in the display -->
+			<action class="AddBuff">
+				<property name="buff_name" value="SpeedClearBronzeBuffTier4"/>
+			</action>
+			<action class="AddBuff">
+				<property name="buff_name" value="SpeedClearSilverBuffTier4"/>
+			</action>
+			<action class="AddBuff">
+				<property name="buff_name" value="SpeedClearGoldBuffTier4"/>
+			</action>
+		</action_sequence>
+		<action_sequence name="tier4_speed_clear_stop">
+			<action class="AddBuff">
+				<property name="removes_buff" value="SpeedClearGoldBuffTier4" param1="removebuff"/>
+			</action>
+			<action class="AddBuff">
+				<property name="removes_buff" value="SpeedClearSilverBuffTier4" param1="removebuff"/>
+			</action>
+			<action class="AddBuff">
+				<property name="removes_buff" value="SpeedClearBronzeBuffTier4" param1="removebuff"/>
+			</action>
+			
+						<action class="BeltTooltip">
+				<property name="text" value="Time completed: GOLD!!"/>
+				<property name="sound" value="twitch_celebrate"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+			
+			
+			<decision class="If">
+				<property name="condition_type" value="All"/>
+				<requirement class="CVar">
+					<property name="operation" value="Equals"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearSilverBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+						<action class="BeltTooltip">
+				<property name="text" value="Time completed: SILVER!"/>
+				<property name="sound" value="twitch_celebrate"/>
+				</action>
+            </decision> 
+			
+						<decision class="If">
+				<property name="condition_type" value="All"/>
+				<requirement class="CVar">
+					<property name="operation" value="Equals"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+								<requirement class="CVar">
+					<property name="operation" value="Equals"/>
+					<property name="cvar" value="SpeedClearSilverBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearBronzeBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+						<action class="BeltTooltip">
+				<property name="text" value="Time completed: BRONZE"/>
+				<property name="sound" value="twitch_celebrate"/>
+				</action>
+            </decision> 
+		</action_sequence>
+		<action_sequence name="tier4_speed_clear_reward">
+					<!-- refund_inactivity is the magic property that will stop gameevent after 40-50 seconds - set to false to make it run forever -->
+			<property name="refund_inactivity" value="false" />
+			<loop class="While">
+				<property name="phase" value="1"/>
+				<requirement class="OnQuest">
+					<property name="quest" value="tier4_speed_clear"/>
+				</requirement>
+			</loop>
+			<!-- Gold rewards -->
+			<action class="AddQuest">
+				<property name="quest" value="tier4_speed_clear_reward_quest_gold"/>
+				<property name="phase" value="2"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+			<!-- Silver -->
+			<action class="AddQuest">
+				<property name="quest" value="tier4_speed_clear_reward_quest_silver"/>
+				<property name="phase" value="3"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearSilverBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+			<!-- Bronze -->
+			<action class="AddXP">
+				<property name="xp_amount" value="3750"/>
+				<property name="phase" value="4"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearBronzeBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+			<action class="AddItems">
+				<property name="phase" value="4"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearBronzeBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+				<property name="added_items" value="casinoCoin"/>
+				<property name="added_item_counts" value="1000"/>
+			</action>
+		</action_sequence>
+		<!-- TIER 5-->
+							<action_sequence name="tier5_speed_clear_start">
+			<!-- reverse order so gold is on top in the display -->
+			<action class="AddBuff">
+				<property name="buff_name" value="SpeedClearBronzeBuffTier5"/>
+			</action>
+			<action class="AddBuff">
+				<property name="buff_name" value="SpeedClearSilverBuffTier5"/>
+			</action>
+			<action class="AddBuff">
+				<property name="buff_name" value="SpeedClearGoldBuffTier5"/>
+			</action>
+		</action_sequence>
+		<action_sequence name="tier5_speed_clear_stop">
+			<action class="AddBuff">
+				<property name="removes_buff" value="SpeedClearGoldBuffTier5" param1="removebuff"/>
+			</action>
+			<action class="AddBuff">
+				<property name="removes_buff" value="SpeedClearSilverBuffTier5" param1="removebuff"/>
+			</action>
+			<action class="AddBuff">
+				<property name="removes_buff" value="SpeedClearBronzeBuffTier5" param1="removebuff"/>
+			</action>
+			
+						<action class="BeltTooltip">
+				<property name="text" value="Time completed: GOLD!!"/>
+				<property name="sound" value="twitch_celebrate"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+			
+			
+			<decision class="If">
+				<property name="condition_type" value="All"/>
+				<requirement class="CVar">
+					<property name="operation" value="Equals"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearSilverBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+						<action class="BeltTooltip">
+				<property name="text" value="Time completed: SILVER!"/>
+				<property name="sound" value="twitch_celebrate"/>
+				</action>
+            </decision> 
+			
+						<decision class="If">
+				<property name="condition_type" value="All"/>
+				<requirement class="CVar">
+					<property name="operation" value="Equals"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+								<requirement class="CVar">
+					<property name="operation" value="Equals"/>
+					<property name="cvar" value="SpeedClearSilverBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearBronzeBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+						<action class="BeltTooltip">
+				<property name="text" value="Time completed: BRONZE"/>
+				<property name="sound" value="twitch_celebrate"/>
+				</action>
+            </decision> 
+		</action_sequence>
+		<action_sequence name="tier5_speed_clear_reward">
+					<!-- refund_inactivity is the magic property that will stop gameevent after 40-50 seconds - set to false to make it run forever -->
+			<property name="refund_inactivity" value="false" />
+			<loop class="While">
+				<property name="phase" value="1"/>
+				<requirement class="OnQuest">
+					<property name="quest" value="tier5_speed_clear"/>
+				</requirement>
+			</loop>
+			<!-- Gold rewards -->
+			<action class="AddQuest">
+				<property name="quest" value="tier5_speed_clear_reward_quest_gold"/>
+				<property name="phase" value="2"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearGoldBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+			<!-- Silver -->
+			<action class="AddQuest">
+				<property name="quest" value="tier5_speed_clear_reward_quest_silver"/>
+				<property name="phase" value="3"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearSilverBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+			<!-- Bronze -->
+			<action class="AddXP">
+				<property name="xp_amount" value="7500"/>
+				<property name="phase" value="4"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearBronzeBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+			</action>
+			<action class="AddItems">
+				<property name="phase" value="4"/>
+				<requirement class="CVar">
+					<property name="operation" value="GreaterThan"/>
+					<property name="cvar" value="SpeedClearBronzeBuffCvar"/>
+					<property name="value" value="0"/>
+				</requirement>
+				<property name="added_items" value="casinoCoin"/>
+				<property name="added_item_counts" value="2000"/>
+			</action>
+		</action_sequence>
+
+	</insertAfter>
+</Config>
+<!--
+
+	Game Events - These events are each a sequence of actions with Requirements.
+		action_type - The type of action sequence. (TwitchAction, TwitchVote, Game)
+		target_type - The target type of the action sequence. (Entity, POI, Block)
+		allow_while_dead - If the event should continue even when the target has died.
+
+	Requirements:
+		Requirements can be used for either the event itself or a single action in the event. These also control the while loop.
+
+		CVar - Checks if the Target has a cvar set.
+			operation - Allows for checking common (None, Equals, NotEquals, Less, LessThan, LT, Greater, GreaterThan, GT, LessOrEqual, LessThanOrEqualTo, LTE,	GreaterOrEqual, GreaterThanOrEqualTo, GTE)
+			cvar - The cvar to check.
+			value - The value to check the cvar for.
+		
+		FullHealth - Checks if the Target has full health.
+		
+		Gamestage - Checks the gamestage of the player
+			operation - Allows for checking common (None, Equals, NotEquals, Less, LessThan, LT, Greater, GreaterThan, GT, LessOrEqual, LessThanOrEqualTo, LTE,	GreaterOrEqual, GreaterThanOrEqualTo, GTE)
+			game_stage - The gamestage number to check for.
+		
+		GameStatBool - Checks the boolean gamestate of the game.
+			gamestat - The gamestat name to test.
+		
+		GameStatFloat - Checks the float gamestate of the game.
+		GameStatInt - Checks the integer gamestate of the game.
+			operation - Allows for checking common (None, Equals, NotEquals, Less, LessThan, LT, Greater, GreaterThan, GT, LessOrEqual, LessThanOrEqualTo, LTE,	GreaterOrEqual, GreaterThanOrEqualTo, GTE)
+			gamestat - The gamestat name to test.		
+		
+		GroupLiveCount - Checks the number of live entities in the target_group.
+			operation - Allows for checking common (None, Equals, NotEquals, Less, LessThan, LT, Greater, GreaterThan, GT, LessOrEqual, LessThanOrEqualTo, LTE,	GreaterOrEqual, GreaterThanOrEqualTo, GTE)
+			target_group - The group to test.
+			count - The value to check.
+			
+		HasBuff - Checks if the Target has a buff.
+			buff_name - The name of the buff to check for.
+
+		HasBuffByTag - Checks if the Target has any buff by tag.
+			buff_tags - The name of the buff tags to check for.
+
+		HasSpawnedEntities - Check if there are spawned entities.
+			entity_tags - The entity tags of the spawned entities.
+			target_only - If the spawned entities must be spawns of the Target.
+
+		InBiome - Checks if the Target is in one of the specified biomes.
+			biomes - The comma delimited list of biomes to check for.
+		
+		InPOI - Checks if the Target is in the specified POI.
+			name - The name of the POI.
+			tier - The tier of the POI.
+			tags - The tags of the POI.
+		
+		InQuestZone - Checks if the target is in a quest zone.
+
+		InSafeZone - Checks if the target is in a safe zone.
+
+		InVehicle - Checks if the target is in a vehicle.
+			
+		IsIndoors - Checks if the player is indoors
+			invert - can be used to check if they are not indoors.
+		
+		IsTwitchActive - Checks if the target has twitch integration on.
+		
+		NearbyEntities - Check if the Target has nearby entities.
+			entity_tags - The entity tags of the nearby entities. (If no tag is supplied, defaults to any enemies or animals)
+			max_distance - The maximum distance to check for nearby entities.
+			target_is_owner - If the vehicle/turret is owned by the target.
+
+		OnQuest - Check if the Target is on a quest.
+			quest - The name of the quest. If not specified then it checks that you have an active quest.
+
+		Progression - Checks the target's progression
+			operation - Allows for checking common (None, Equals, NotEquals, Less, LessThan, LT, Greater, GreaterThan, GT, LessOrEqual, LessThanOrEqualTo, LTE,	GreaterOrEqual, GreaterThanOrEqualTo, GTE)
+			name - The progression name to check (Skill,Perk,Book,Crafting)
+			value - The value to check.
+
+		RandomRoll - Checks the value against a random roll.
+			min_max - The numbers to check between.
+			operation - Allows for checking common (None, Equals, NotEquals, Less, LessThan, LT, Greater, GreaterThan, GT, LessOrEqual, LessThanOrEqualTo, LTE,	GreaterOrEqual, GreaterThanOrEqualTo, GTE)
+			value - The value to check the number with.
+		
+		VarFloat - Checks the float variable in the game event.
+		VarInt - Checks the integer variable in the game event.
+			operation - Allows for checking common (None, Equals, NotEquals, Less, LessThan, LT, Greater, GreaterThan, GT, LessOrEqual, LessThanOrEqualTo, LTE,	GreaterOrEqual, GreaterThanOrEqualTo, GTE)
+			var_name - The variable to test.
+		
+	Common Properties for all Actions:
+		Phase - This is the phase that the action runs in.
+
+	Target Actions:
+		Most actions can be supplied a target_group for the actions. These actions listed below will add entities to those groups.
+
+		AddClosestEntityToGroup - Adds the closest entity to the group.
+		AddEntitiesToGroup - Adds all entities to the group with the defined criteria.
+			group_name - The group to add to. This can be any name you want to define.
+			entity_tags - The entity tags to search for. (If no tag is supplied, defaults to any enemies or animals)
+			max_distance - The distance from the target.
+			twitch_negative - This defines if the twitch disabled targets can be added or not. Note: Players are considered twitch disabled when they die.
+			target_is_owner - If the vehicle/turret is owned by the target.
+			y_height (AddEntitiesToGroup) - overrides the height used.
+			exclude_target - Excludes the target from the entities.
+			allow_player - Allows the entity to be a player.
+
+		AddPartyToGroup - Adds the party members of the Target to the group.
+			group_name - The group to add to. This can be any name you want to define.
+			twitch_negative - This defines if the twitch disabled targets can be added or not. Note: Players are considered twitch disabled when they die.
+			exclude_target - Excludes the target of the action.
+			exclude_twitch_active - Excludes any one that is streaming other than the target.
+
+		AddPlayerToGroup - Adds the specified party member to the group. (NOTE: They must be in the target's party.)
+			player_name - The name of the party member to add.
+			group_name - The group to add to. This can be any name you want to define.
+			twitch_negative - This defines if the twitch disabled targets can be added or not. Note: Players are considered twitch disabled when they die.
+
+		AddSpawnedEntitiesToGroup - Adds all the spawned enemies to the group.
+			group_name - The group to add to. This can be any name you want to define.
+			entity_tags - The entity tags to search for.
+			target_only - If the zombies must be spawned on the target or any zombies that have been spawned.
+
+		ClearGroup - Clears all the entities in a group.
+			group_name - The group to clear.
+
+	Player Actions:
+		Common Properties:
+			target_group - The target group to target for this action.
+
+		AddBuff - Adds the buff to target or target_group.
+			buff_name - The buff to add to the target.
+			removes_buff - If this buff is active, remove it instead of adding the defined buff.
+			alt_vision_buff_name - If this is defined then if someone has "Allow Vision Effects" set to false, it will apply this buff instead.
+			check_already_exists - Checks to see if it already exists before allowing the buff to be added.
+
+		AddChatMessage - Adds a message the the player's chat.
+			text - The text to show.
+			text_key - the localized key of the text to show.
+
+		AddItemDurability - Adds durability to items on your player.
+			items_location - The location that is affected by this. Can be comma delimited. (Toolbelt, Backpack, Equipment, Held).
+			items_tags - The tag of the items you want affected by this.
+			amount - the amount of durability to add.
+			is_percent - If the amount is a percent.
+			count_type - The type of count to use (Items,Slots)
+			count - The count of items to add durability to, if you don't specify a count it will add durability to all.
+
+		AddItems - Adds items to your player.
+			added_items - Comma delimited list for items to be added. Must have matching entry in the added_item_counts.
+			added_item_counts - Comma delimited list for item counts to be added. Must have matching entry in the added_items.
+
+		AddJournalTip - Adds a journal tip to the player.
+			tip_name - Name of the journal tip.
+			show_window - Should it show the pop up tip window.
+
+		AddQuest - Adds a quest to the player.
+			quest - Quest added for player.
+			
+		AddRandomBuff - Adds a random buff to the target or target_group
+			buff_names - The list of buffs to randomly pick from to add to the target.
+			removes_buff - If this buff is active, remove it instead of adding the defined buff.
+
+		AddSkillPoints - Adds x amount of skill points to the target or target_group.
+			skill_points - The amount of skill points to add.
+	
+		AddXP - Adds x amount of XP to the target or target_group.
+			xp_amount - The amount of XP to add.
+
+		AddXPDeficit - Adds an XP deficit to the target player.
+			xp_amount - The amount of XP Deficit to add.
+
+		BeltTooltip - Shows a belt tooltip.
+			text - Text to show.
+			text_key - Localization key to show.
+			sound - Sound that can play with the toolbelt message.
+
+		CallGameEvent - Calls another game event from this game event.
+				NOTE: This could cause an issue if you accidentally cause too many events to be fired. Be very careful when using this.
+			game_events - The list of game events to pick from. This will pick a single one at random. This can be used like a mystery random event.
+
+		CloseWindow - Closes the specified window. 
+			window - The window to close. If no window is specified, close all windows.
+
+		Delay - Used to put a delay in between actions. Common use is to put this in it's own phase so that phase is delayed until this is done.
+			time - The time to delay.
+
+		DestroySafeZone - Destroys the safe zone area.
+			destruction_type - The type of destruction to do. This can be a comma delimited list that it chooses randomly from.
+									(Cube, Sphere, Cylinder, LandClaimOnly)
+			new_name - The name to show on the signs around the crater. You can use {viewer} for the viewer who triggered it.
+
+		DropHeldItem - Drops the held item for the target.
+		
+		DropItems - Drops the items for the target.
+			items_location - The location that is affected by this. Can be comma delimited. (Toolbelt, Backpack, Equipment, Held).
+			items_tags - The tag of the items you want drop.
+			drop_sound - The sound to play when the drop happens.
+			replaced_by_item - The item to replace the dropped item with.
+			count_type - The type of count to use (Items,Slots)
+			count - The count of items to drop, if you don't specify a count it will drop all.
+
+		EjectFromVehicle - Causes the targets to be ejected from the vehicle.
+
+		EmptyContainers - Empties all containers / workstations
+			targeting_type - SafeZone or Distance
+			new_name - The name to show on sign boxes. You can use {viewer} for the viewer who triggered it.
+			include_fuel - Includes any fuel for the workstation.
+			include_inputs - Includes the input areas for the workstations. Forge smelted materials is an example. 
+			include_outputs - Includes the output areas for workstations. (Will clear recipe queue)
+			include_tools - Includes any tools on the workstation. (Will clear recipe queue)
+
+		EnemyToCrawler - Forces the targets to be crawlers. (Does not work on player)
+		
+		Explode - Causes an explosion on the target.
+			blast_power - Power of the blast.
+			block_damage - Amount of damage done to the blocks.
+			block_radius - The radius of the block damage.
+			block_tags - The blocks that are affected by the block damage.
+			entity_damage - Amount of damage done to the entities.
+			entity_radius - The radius of the entity damage.
+			particle_index - The particle index of the explosion.
+			
+		FailQuest - Causes an active quest to fail.
+			quest - Name of the active quest to fail.
+			remove_quest - Removes the quest from the list on fail.
+
+		FillSafeZone - Fills the safe zone with a specified block.
+			fill_type - The shape which it fills the land claim area. This can be a comma delimited list that it chooses randomly from.
+							(Cube, Sphere, Cylinder, and Pyramid)
+			destroy_claim - If the land claim should be destroyed (Defaults to false).
+			block - The block to fill the land claim with. Defaults to terrDirtTwitch
+			new_name - The name to show on the signs around the filled base. You can use {viewer} for the viewer who triggered it.
+			block_tags - The tags of blocks to replace.
+
+		FlipRotation - Changes the direction the player is facing to behind them.
+
+		GetNearbyPoint - Sets a target point that can be used for spawning multiple zombies together.
+			min_distance - The minimum distance from target.
+			max_distance - The maximum distance fromt target.
+			safe_spawn - If the point can happen in a safe zone.
+			air_spawn - This defines if it should complete a ground check to see if the point is valid. Vultures use this to allow spawning in flight.
+			yOffset - This allows the point to be offset on the y.
+		
+		GetLandClaimPosition - Sets a target point for the nearby land claim.
+		
+		Kill - Kills the target or target_group
+
+		ModifyCVar - Modifies the value of a CVar.
+			cvar - The cvar to set.
+			value - The value to set the CVar to.
+			operation - what operation should happen (Set, Add, Subtract, Multiply)
+		
+		ModifyEntityStat - Modifies the an entity stat of the target or target_group.
+			stat - The stat to modify (Health, Stamina, Food, Water)
+			value - The value to set the CVar to.
+			operation - what operation should happen (Set, Add, Subtract, Multiply)
+		
+		PauseBuff - Pauses a buff which stops the updates and hides the icon.
+			buff_tags - The buff tags of which buffs to pause.
+			state - If it's paused or not. (true/false)
+		
+		PlaySound - Play a sound for the target.
+			sound - Name of the sound to play.
+			inside_head - If the sound plays in the head of the target.
+			behind_player - If the sound should pick a spot behind the player. (Does not work with inside_head.)
+			loop_duration - If it's a looping sound, only play for this many seconds.
+
+		PrimeEntity - Primes the cop/demo zombie's explosive to explode in the specified seconds.
+			override_time - The number of seconds from when it starts the beep to when it explodes.
+			min_override_time - The minimum amount of time for the random explosion time.
+			max_override_time - The maximum amount of time for the random explosion time.
+
+		PullEntities - Forces all entities to respawn around the target.
+			target_group - The group to pull to the Target. (This is different then most uses so the property name may change.)
+			min_distance - minimum distance they can spawn.
+			max_distance - maximum distance they can spawn.
+			pull_sound - sound that is played when an entity is pulled.
+
+		PushEntity - Pushes the player/zombie in a direction the specified distance.
+			direction - The direction to push the entity. (Random, Forward, Backward, Right, Left)
+			distance - The distance to push the entity.
+
+		Ragdoll - Ragdolls the target  or target_group
+			stun_duration - The stun duration applied to the target/target_group.
+
+		RandomCVar - Modifies the value of a CVar with a random value.
+			cvar - The cvar to set.
+			min_value - The min value to set the CVar to.
+			max_value - The max value to set the CVar to.
+			operation - what operation should happen (Set, Add, Subtract, Multiply)
+			
+		RandomDelay - Delay with a random value.
+			min_time - minimum amount of time the delay can be.
+			max_time - maximum amount of time the delay can be.
+
+		RandomizeRotation - Randomizes the rotation of the player on the y.
+
+		RandomTeleport - Randomly teleports the target/target_group.
+			min_distance - minimum distance they can teleport.
+			max_distance - maximum distance they can teleport.
+
+		RemoveBuff - Removes the specified buff.
+			buff_name - The name of the buff that should be removed.
+
+		RemoveEntities - Removes the target_group entities. This will probably throw a huge error if you try it on the Target.
+
+		RemoveItems - Removes the items from the player.
+			items_location - The location that is affected by this. Can be comma delimited. (Toolbelt, Backpack, Equipment, Held).
+			items_tags - The tag of the items you want removed.
+			count_type - The type of count to use (Items,Slots)
+			count - The count of items to replace, if you don't specify a count it will remove all.
+
+		RemoveSpawnedBlocks - Removes all spawned blocks.
+			target_only - Remove only for the target.
+
+		RemoveVehicles - Removes a vehicles/turrets from the world.
+			return_items - places all items from the vehicle on the ground in a bag.
+			include_vehicle - includes the vehicle itself in the bag on the ground.
+
+		ReplaceBuff - Replaces a single buff with another buff.
+			replace_buff - The buff to be replaced.
+			replace_with_buff - The buff to replace the replaced buff with.
+			
+		ReplaceEntities - Replaces the target_group entities. This will probably throw a huge error if you try it on the Target.
+			entity_names - The entity to replace the target_group with. If more than one it will choose one at random.
+			single_choice - If more than one entity is being replaced, only choose the zombie type once and use it for all.
+
+		ReplaceItems - Replaces the specified items with another item.
+			items_location - The location that is affected by this. Can be comma delimited. (Toolbelt, Backpack, Equipment, Held).
+			replaced_by_item - The item that you replace the tagged items with.
+			items_tags - The item tag for the items that should be replaced.
+			count_type - The type of count to use (Items,Slots)
+			count - The count of items to replace, if you don't specify a count it will replace all.
+
+		ReplaceItemsContainers - Replaces the contents of nearby containers or containers in the land claim.
+			targeting_type - SafeZone or Distance
+			new_name - The name to show on sign boxes. You can use {viewer} for the viewer who triggered it.
+			max_distance - maximum distance of the containers.
+			include_outputs - Includes the output areas for workstations. (Will clear recipe queue)
+			replaced_by_item - The item that you replace the tagged items with.
+			items_tags - The item tag for the items that should be replaced.
+						
+		ResetPlayerData - Resets the player back to level one and optionally removes all landclaims / bedrolls.
+			reset_skills - Resets your skills back to 1.
+			reset_levels - Resets the level back to 1 (automatically resets skills if selected).
+			reset_crafting - Resets your crafting levels back to 1.
+			reset_books - Resets all book perks back to 0.
+			remove_landclaims - Removes all land claims.
+			remove_bedroll - Removes the bedroll for the player.
+
+		RespawnEntities - Respawns all dead entities from the supplied target_group.
+			target_group - The group of entities to respawn.
+			is_multi - Should this run continuously or one time.
+			respawn_sound - Sound played when an entity is respawned.
+
+		SetFuel - Sets the fuel of the targeted vehicles.
+			target_group - The group of vehicles to interact with.
+			setting_type - Which operation it should complete with the vehicles. (Remove, Fill)
+
+		SetHordeNight - Sets the next hordnight to today.
+			day_offset - How many days from the current game day is the horde night.
+			keep_bm_day - Keeps the previous blood moon day.
+			
+		SetScreenEffect - Sets the screen effect for the local player.
+			screen_effect - The screen effect to set.
+			intensity - The intensity of the screen effect.
+			fade_time - The amount of time it takes to fade to that intensity in seconds.
+
+		SetWeather - Sets the global weather to the defined weather group.
+			weather_group - The weather group to set the world to.
+
+		ShuffleContainers - Shuffles the contents of all nearby block containers. NOTE: This could make players very angry. Try to use with caution.
+			targeting_type - SafeZone or Distance
+			new_name - The name to show on sign boxes. You can use {viewer} for the viewer who triggered it.
+			max_distance - maximum distance of the containers.
+			include_outputs - Includes the output areas for workstations. (Will clear recipe queue)
+
+		ShuffleItems - Shuffles the contents of the target's backpack / toolbelt.
+			items_location - the locations to shuffle (Backpack, Toolbelt)
+
+		SpawnContainer - Spawns a container on the ground. (Handles the crate sharing code)
+		SpawnEntity - Spawns an entity on the ground.
+			entity_names - The entities to spawn. If more than one it will choose one at random.
+			entity_group - The entity group to spawn from. (This cannot be used with entity_names)
+			single_choice - If more than one entity is being spawned, only choose the random choice once.
+			spawn_count - The number of entities to spawn.
+			min_distance - The minimum distance to spawn.
+			max_distance - The maximum distance to spawn.
+			safe_spawn - If the spawn can happen in a safe zone.
+			target_group - Can be used to spawn on a group of players such as the party.
+			add_to_group - Adds the spawned entities to the specified group. (Probably should rename this to avoid confusion)
+			attack_target - If the spawn should immediately attack the target. (Doesn't work for crates or animals that don't attack.)
+			air_spawn - This defines if it should complete a ground check to see if it should spawn. Vultures use this to allow spawning in flight.
+			yOffset - This allows the spawn to be offset on the y.
+			spawn_type - The spawn type (NearTarget, Position, NearPosition, WanderingHorde) 
+			clear_position_on_complete - Clears the target position on completion.
+
+		Teleport - teleports target to defined location or offset.
+			target_position - The position/offset to teleport the target to.
+			offset_type - None: teleports to a world position.
+                          Relative: teleports relative to your position.
+						  World: teleports relative to the world based on your position.
+						  
+		TeleportNearby - Teleports target to defined nearby location (use GetNearbyPoint).
+
+		TeleportToSpecial - teleports the target to special location. (Only works for players.)
+			special_type - this can be Bedroll, Landclaim, or Backpack.
+
+		TeleportToTarget - teleports the target to a target. 
+			target_group - Target group to teleport to target. (Defaults to action target)
+			teleport_to_group - Target to teleport to. If more than one in the group, teleport to a random one. 
+				(Defaults to action target)
+			min_distance - The minimum distance to teleport.
+			max_distance - The maximum distance to teleport.
+			safe_spawn - If the teleport can happen in a safe zone.
+			air_spawn - This defines if it should complete a ground check to see if it should teleport.
+			yOffset - This allows the teleport to be offset on the y.
+
+		TimeChange - moves time forward or back based on the time_preset and the offset.
+			time_preset - sets the time to a predefined time (Current, Morning, Noon, Night, NextMorning, NextNoon, NextNight, HordeNight) 
+			min_time - minimum amount of time to move time based off the time_preset.
+			max_time - maximum amount of time to move time based off the time_preset.
+		
+		WaitForDead - Similar to the Delay, this doesn't move to the next phase until the specified target_group is all dead.
+			phase_on_despawn - the phase to go to if one of the targets is despawned.
+
+	Block Actions:
+		Common Properties:
+			min_offset - minimum range for the offsets.
+			max_offset - maximum range for the offsets.
+			spacing - spacing between each block action.
+			inner_offset - how much space from the center to exclude.
+			random_chance - random chance for the action to happen for each block within the offset range.
+			safe_allowed - Whether this is allowed in safe zones.
+			block_tags - The blocks that are affected by the block actions.
+			allow_terrain - If the blocks that are affected can be terrain blocks.
+			
+		BlockAnimateBlock - Sets all the blocks within the defined range to trigger an animation.
+			animation_bool - The Animation bool value to set.
+			animation_bool_value - The value to set for the animation bool.
+			animation_integer - The Animation integer value to set.
+			animation_integer_value - The value to set for the animation integer.
+			animation_trigger - The animation trigger to enable.
+			
+		BlockDoorState - Sets all the doors within the defined range to the set open state.
+			set_open - If the doors should be set open or closed. (true/false)
+			set_lock - If the doors should be locked (true/false)
+			
+		BlockDowngrade - Sets all the blocks within the defined range to their defined Downgrade block.
+		
+		BlockGrowCrops - Sets all nearby plants to their next growth stage.
+		
+		BlockUpgrade - Sets all the blocks within the defined range to their defined Upgrade block.
+		
+		BlockHealth - Sets all the blocks within the defined range to the health specified.
+			health_state - The health of the blocks. (Full, Half, OneHealth)
+		
+		BlockReplace - Replaces the block with the defined block.
+			block_to - the new block to change the old block to.
+			empty_only - only replace if its an empty air block.
+			
+	POI Actions:
+
+		POISetLightState - Allows setting the state of lights in a POI.
+			enable_lights - If the lights should be on or off in the POI.
+			index_block_name - The indexed blocks name set for the lights that need to be turned on/off.
+
+		POIReset - Resets the POI chunks.
+		
+	Twitch Actions:
+	
+		TwitchAddPoints - Adds an amount of points to the defined viewer.
+			amount - amount of points.
+			point_type - the type of points (PP, SP, Bits)
+			recipient_type - The recipient of these points (Requester, All, Random) 
+				NOTE: Bit Credit cannot be given to All.
+			award_text - The text that shows in twitch chat when awarded.
+			requester_only - If it should only be in the chat that it was initiated from. If you are multistreaming 
+				with streamers who are using integration then if this is set to false it will give points on their chat too.
+	
+		TwitchAddActionCooldown - Adds an amount of cooldown to the defined actions.
+			action_name - The list of actions that will be set to cooldown. This is the name not the #command name.
+			time - The amount of time the actions will be on cooldown.
+			search_type - Whether we use the ones named or all positive or negative. (Name, Positive, Negative)
+	
+		TwitchEndCooldown - Ends the current cooldown.
+	
+		TwitchSendChannelMessage - Sends a channel message. You can use the variables {target} and {viewer}.
+			text - The text to send. 
+			text_key - The localized text to send.
+	
+		TwitchStartCooldown - Starts a timed cooldown.
+			time - The amount of time for the cooldown.
+	
+		TwitchStartVote - Starts a vote.
+			vote_type - The name of the vote group to start.
+	
+		TwitchVoteDelay - delays the next vote by the defined amount of seconds.
+			time - The time to delay.
+		
+	Variable Actions:
+		These allow temporarily storing a value to be used in requirements. More to come later.
+		
+		ModifyVarFloat - Modifies the float value of a variable.
+			var_name - The name of the variable
+			value - The value to set the variable to.
+			operation - what operation should happen (Set, Add, Subtract, Multiply)
+			
+		ModifyVarInt - Modifies the int value of a variable.
+			var_name - The name of the variable
+			value - The value to set the variable to.
+			operation - what operation should happen (Set, Add, Subtract, Multiply)
+		
+	Decisions:
+		These are defined using <decision>. They can contain any number of requirements/actions. You currently cannot use loops inside decisions.
+		
+		If - Checks if the requirements are met to perform the actions.
+			condition_type - This defines if its all or any on the requirements. (All,Any)
+	
+	Loops:
+		These are defined using <loop>. They can contain any number of actions/waits. You cannot use a loop inside a loop.
+		
+		For - Loops through a defined number of loops.
+			loop_count - The number of loops this will use.
+			min_loop_count - If you are wanting a random number of loops, this is the minimum.
+			max_loop_count - If you are wanting a random number of loops, this is the maximum.
+			loop_count_cvar - The number of loops can also come from a CVar. 
+			
+		While - Loops until the requirements are invalid.
+			condition_type - This defines if its all or any on the requirements. (All,Any)
+		
+	Wait:
+		These are defined using <wait>. They contain any number of requirements.
+		
+		Common Properties:
+			condition_type - This defines if its all or any on the requirements. (All,Any)
+		
+		While - Waits while the wait conditions are true.
+		
+		Until - Waits until the wait conditions are true.
+-->

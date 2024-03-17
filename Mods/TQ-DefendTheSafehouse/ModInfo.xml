@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xml>
+        <Name value="CautiousPancakeDefendPOIFromHorde"/>
+        <DisplayName value="CautiousPancake Defend POI From Horde" />
+        <Version value="1.3"/>
+        <Description value="Adds a new quest to defend a random POI from a mini horde, with limited time to build defences"/>
+        <Author value="CautiousPancake"/>
+        <Website value="https://www.youtube.com/@CautiousPancake"/>
+  
+</xml>

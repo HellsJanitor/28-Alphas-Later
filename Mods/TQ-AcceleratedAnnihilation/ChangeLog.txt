@@ -1,0 +1,1 @@
+v1.3	Fixed quest progress reset on logout before handin (singleplayer), and issues with other quests reseting progress or preventing other quest starts in server and singleplayer. Aligned final phases with ReturnToNPC and InteractWithNPC. 

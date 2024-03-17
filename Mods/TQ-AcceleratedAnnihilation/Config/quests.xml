@@ -1,0 +1,829 @@
+<Config>
+
+<!-- AcceleratedAnnihiliation -->
+
+
+<insertAfter xpath="/quests/quest[@id='tier1_fetch']">  
+
+<!-- Zombie Challenge Quests -->
+
+	<quest id="tier2_accelerated_annihilation">
+		<property name="name_key" value="quest_tier2_accelerated_annihiliation_name" param1="name"/>
+		<property name="subtitle_key" value="quest_accelerated_annihiliation_subtitle"/>
+		<property name="description_key" value="quest_accelerated_annihiliation_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_accelerated_annihiliation_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="2" param1="difficulty"/>
+		<property name="statement_key" value="quest_accelerated_annihiliation_statement"/>
+		<property name="response_key" value="quest_accelerated_annihiliation_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="infested" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_accelerated_annihiliation_completion"/>
+	
+		<property name="spawn_multiplier" value="2" param1="spawn_multiplier" />
+		<property name="gamestage_mod" value=".6" param1="gamestage_mod" />
+		<property name="gamestage_bonus" value="30" param1="gamestage_bonus" />
+		
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1"/>
+			<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type" />
+			<property name="biome_filter" value="burnt_forest" param1="biome_filter" />
+			<property name="nav_object" value="quest" />
+			<property name="poi_tier" value="1" param1="poi_tier" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="rally" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier2_accelerated_annihiliation_start"/>
+			<property name="phase" value="3"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+<!--  Using buffs instead as they tie to the actual completion criteria 
+		<objective type="Time" time="4" value="45" phase="3" optional="true" /> <!- 45 seconds for gold
+		<objective type="Time" time="4" value="75" phase="3" optional="true" /> <!- 75 seconds for silver mins real time 
+		<objective type="Time" time="4" value="120" phase="3" optional="true" /> <!- 120 seconds for bronze -->
+
+		<objective type="ClearSleepers">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="sleeper_volume"/>
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3"/>
+			<property name="radius" value="25"/>
+		</objective>
+		
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier2_accelerated_annihiliation_stop"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+		<action type="UnlockPOI" >
+			<property name="phase" value="4"/>
+		</action>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier2_accelerated_annihiliation_reward"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+		
+
+
+		<reward type="Exp" value="5625"/>
+		<reward type="Item" id="casinoCoin" value="1690"/>
+
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestAmmo,groupQuestSchematics,groupQuestMods" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestAmmo,groupQuestSchematics,groupQuestMods,groupQuestT1SkillMagazineBundle" ischosen="true" value="2"/>
+	</quest>
+	
+		<quest id="tier3_accelerated_annihilation">
+		<property name="name_key" value="quest_tier3_accelerated_annihiliation_name" param1="name"/>
+		<property name="subtitle_key" value="quest_accelerated_annihiliation_subtitle"/>
+		<property name="description_key" value="quest_accelerated_annihiliation_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_accelerated_annihiliation_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="3" param1="difficulty"/>
+		<property name="statement_key" value="quest_accelerated_annihiliation_statement"/>
+		<property name="response_key" value="quest_accelerated_annihiliation_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+			<property name="extra_tags" value="infested" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_accelerated_annihiliation_completion"/>
+	
+		<variable name="poi_tier" value="2" />
+		<variable name="spawn_multiplier" value="2" />
+		<variable name="gamestage_mod" value=".6"/>
+		<variable name="gamestage_bonus" value="30"/>
+		
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1"/>
+			<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type" />
+			<property name="biome_filter" value="burnt_forest" param1="biome_filter" />
+			<property name="nav_object" value="quest" />
+			<property name="poi_tier" value="-1" param1="poi_tier" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="rally" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier2_accelerated_annihiliation_start"/>
+			<property name="phase" value="3"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+<!--  Using buffs instead as they tie to the actual completion criteria 
+		<objective type="Time" time="4" value="45" phase="3" optional="true" /> <!- 45 seconds for gold
+		<objective type="Time" time="4" value="75" phase="3" optional="true" /> <!- 75 seconds for silver mins real time 
+		<objective type="Time" time="4" value="120" phase="3" optional="true" /> <!- 120 seconds for bronze -->
+
+		<objective type="ClearSleepers">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="sleeper_volume"/>
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3"/>
+			<property name="radius" value="25"/>
+		</objective>
+		
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier2_accelerated_annihiliation_stop"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+		<action type="UnlockPOI" >
+			<property name="phase" value="4"/>
+		</action>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier2_accelerated_annihiliation_reward"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+		
+
+		<reward type="Exp" value="7500"/>
+		<reward type="Item" id="casinoCoin" value="2250"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="3"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+	</quest>
+	
+		<quest id="tier4_accelerated_annihilation">
+		<property name="name_key" value="quest_tier4_accelerated_annihiliation_name" param1="name"/>
+		<property name="subtitle_key" value="quest_accelerated_annihiliation_subtitle"/>
+		<property name="description_key" value="quest_accelerated_annihiliation_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_accelerated_annihiliation_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="4" param1="difficulty"/>
+		<property name="statement_key" value="quest_accelerated_annihiliation_statement"/>
+		<property name="response_key" value="quest_accelerated_annihiliation_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+			<property name="extra_tags" value="infested" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_accelerated_annihiliation_completion"/>
+	
+				<variable name="poi_tier" value="3" />
+		<variable name="spawn_multiplier" value="1.5" />
+		<variable name="gamestage_mod" value=".6"/>
+		<variable name="gamestage_bonus" value="30"/>
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1"/>
+			<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type" />
+			<property name="biome_filter" value="burnt_forest" param1="biome_filter" />
+			<property name="nav_object" value="quest" />
+			<property name="poi_tier" value="-1" param1="poi_tier" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="rally" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier3_accelerated_annihiliation_start"/>
+			<property name="phase" value="3"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+<!--  Using buffs instead as they tie to the actual completion criteria 
+		<objective type="Time" time="4" value="45" phase="3" optional="true" /> <!- 45 seconds for gold
+		<objective type="Time" time="4" value="75" phase="3" optional="true" /> <!- 75 seconds for silver mins real time 
+		<objective type="Time" time="4" value="120" phase="3" optional="true" /> <!- 120 seconds for bronze -->
+
+		<objective type="ClearSleepers">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="sleeper_volume"/>
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3"/>
+			<property name="radius" value="25"/>
+		</objective>
+		
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier3_accelerated_annihiliation_stop"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+		<action type="UnlockPOI" >
+			<property name="phase" value="4"/>
+		</action>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier3_accelerated_annihiliation_reward"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+		
+
+		<reward type="Exp" value="9375"/>
+		<reward type="Item" id="casinoCoin" value="2550"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="4"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+	</quest>
+	
+		<quest id="tier5_accelerated_annihilation">
+		<property name="name_key" value="quest_tier5_accelerated_annihiliation_name" param1="name"/>
+		<property name="subtitle_key" value="quest_accelerated_annihiliation_subtitle"/>
+		<property name="description_key" value="quest_accelerated_annihiliation_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_accelerated_annihiliation_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="5" param1="difficulty"/>
+		<property name="statement_key" value="quest_accelerated_annihiliation_statement"/>
+		<property name="response_key" value="quest_accelerated_annihiliation_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+			<property name="extra_tags" value="infested" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_accelerated_annihiliation_completion"/>
+	
+				<variable name="poi_tier" value="4" />
+		<variable name="spawn_multiplier" value="1.5" />
+		<variable name="gamestage_mod" value=".6"/>
+		<variable name="gamestage_bonus" value="30"/>
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1"/>
+			<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type" />
+			<property name="biome_filter" value="burnt_forest" param1="biome_filter" />
+			<property name="nav_object" value="quest" />
+			<property name="poi_tier" value="-1" param1="poi_tier" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="rally" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier4_accelerated_annihiliation_start"/>
+			<property name="phase" value="3"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+<!--  Using buffs instead as they tie to the actual completion criteria 
+		<objective type="Time" time="4" value="45" phase="3" optional="true" /> <!- 45 seconds for gold
+		<objective type="Time" time="4" value="75" phase="3" optional="true" /> <!- 75 seconds for silver mins real time 
+		<objective type="Time" time="4" value="120" phase="3" optional="true" /> <!- 120 seconds for bronze -->
+
+		<objective type="ClearSleepers">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="sleeper_volume"/>
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3"/>
+			<property name="radius" value="25"/>
+		</objective>
+		
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier4_accelerated_annihiliation_stop"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+		<action type="UnlockPOI" >
+			<property name="phase" value="4"/>
+		</action>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier4_accelerated_annihiliation_reward"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+		
+
+		<reward type="Exp" value="18750"/>
+		<reward type="Item" id="casinoCoin" value="5100"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="5"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="5"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+	</quest>
+	
+		<quest id="tier6_accelerated_annihilation">
+		<property name="name_key" value="quest_tier6_accelerated_annihiliation_name" param1="name"/>
+		<property name="subtitle_key" value="quest_accelerated_annihiliation_subtitle"/>
+		<property name="description_key" value="quest_accelerated_annihiliation_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_accelerated_annihiliation_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="6" param1="difficulty"/>
+		<property name="statement_key" value="quest_accelerated_annihiliation_statement"/>
+		<property name="response_key" value="quest_accelerated_annihiliation_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="infested" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_accelerated_annihiliation_completion"/>
+	
+				<variable name="poi_tier" value="5" />
+		<variable name="spawn_multiplier" value="1.5" />
+		<variable name="gamestage_mod" value=".6"/>
+		<variable name="gamestage_bonus" value="30"/>
+		
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1"/>
+			<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type" />
+			<property name="biome_filter" value="burnt_forest" param1="biome_filter" />
+			<property name="nav_object" value="quest" />
+			<property name="poi_tier" value="-1" param1="poi_tier" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="rally" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier5_accelerated_annihiliation_start"/>
+			<property name="phase" value="3"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+<!--  Using buffs instead as they tie to the actual completion criteria 
+		<objective type="Time" time="4" value="45" phase="3" optional="true" /> <!- 45 seconds for gold
+		<objective type="Time" time="4" value="75" phase="3" optional="true" /> <!- 75 seconds for silver mins real time 
+		<objective type="Time" time="4" value="120" phase="3" optional="true" /> <!- 120 seconds for bronze -->
+
+		<objective type="ClearSleepers">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="sleeper_volume"/>
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3"/>
+			<property name="radius" value="25"/>
+		</objective>
+		
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier5_accelerated_annihiliation_stop"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+		<action type="UnlockPOI" >
+			<property name="phase" value="4"/>
+		</action>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier5_accelerated_annihiliation_reward"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+		
+
+		<reward type="Exp" value="30000"/>
+		<reward type="Item" id="casinoCoin" value="9000"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="6"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="6"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+	</quest>
+	
+	<quest id="tier2_accelerated_annihiliation_reward_quest_silver">
+		<property name="name_key" value="quest_tier2_accelerated_annihiliation_name" param1="name"/>
+		<property name="subtitle_key" value="quest_accelerated_annihiliation_subtitle"/>
+		<property name="description_key" value="quest_accelerated_annihiliation_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_accelerated_annihiliation_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="2" param1="difficulty"/>
+		<property name="statement_key" value="quest_accelerated_annihiliation_statement"/>
+		<property name="response_key" value="quest_accelerated_annihiliation_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_accelerated_annihiliation_completion_silver"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+	</quest>
+		<quest id="tier3_accelerated_annihiliation_reward_quest_silver">
+		<property name="name_key" value="quest_tier3_accelerated_annihiliation_name" param1="name"/>
+		<property name="subtitle_key" value="quest_accelerated_annihiliation_subtitle"/>
+		<property name="description_key" value="quest_accelerated_annihiliation_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_accelerated_annihiliation_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="3" param1="difficulty"/>
+		<property name="statement_key" value="quest_accelerated_annihiliation_statement"/>
+		<property name="response_key" value="quest_accelerated_annihiliation_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_accelerated_annihiliation_completion_silver"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+	</quest>
+		<quest id="tier4_accelerated_annihiliation_reward_quest_silver">
+		<property name="name_key" value="quest_tier4_accelerated_annihiliation_name" param1="name"/>
+		<property name="subtitle_key" value="quest_accelerated_annihiliation_subtitle"/>
+		<property name="description_key" value="quest_accelerated_annihiliation_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_accelerated_annihiliation_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="4" param1="difficulty"/>
+		<property name="statement_key" value="quest_accelerated_annihiliation_statement"/>
+		<property name="response_key" value="quest_accelerated_annihiliation_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_accelerated_annihiliation_completion_silver"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
+	</quest>
+		<quest id="tier5_accelerated_annihiliation_reward_quest_silver">
+		<property name="name_key" value="quest_tier5_accelerated_annihiliation_name" param1="name"/>
+		<property name="subtitle_key" value="quest_accelerated_annihiliation_subtitle"/>
+		<property name="description_key" value="quest_accelerated_annihiliation_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_accelerated_annihiliation_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="5" param1="difficulty"/>
+		<property name="statement_key" value="quest_accelerated_annihiliation_statement"/>
+		<property name="response_key" value="quest_accelerated_annihiliation_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_accelerated_annihiliation_completion_silver"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
+	</quest>
+		<quest id="tier6_accelerated_annihiliation_reward_quest_silver">
+		<property name="name_key" value="quest_tier6_accelerated_annihiliation_name" param1="name"/>
+		<property name="subtitle_key" value="quest_accelerated_annihiliation_subtitle"/>
+		<property name="description_key" value="quest_accelerated_annihiliation_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_accelerated_annihiliation_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="6" param1="difficulty"/>
+		<property name="statement_key" value="quest_accelerated_annihiliation_statement"/>
+		<property name="response_key" value="quest_accelerated_annihiliation_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_accelerated_annihiliation_completion_silver"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="6"/>
+	</quest>
+	
+	<quest id="tier2_accelerated_annihiliation_reward_quest_gold">
+		<property name="name_key" value="quest_tier2_accelerated_annihiliation_name" param1="name"/>
+		<property name="subtitle_key" value="quest_accelerated_annihiliation_subtitle"/>
+		<property name="description_key" value="quest_accelerated_annihiliation_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_accelerated_annihiliation_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="2" param1="difficulty"/>
+		<property name="statement_key" value="quest_accelerated_annihiliation_statement"/>
+		<property name="response_key" value="quest_accelerated_annihiliation_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_accelerated_annihiliation_completion_gold"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+	</quest>
+		<quest id="tier3_accelerated_annihiliation_reward_quest_gold">
+		<property name="name_key" value="quest_tier3_accelerated_annihiliation_name" param1="name"/>
+		<property name="subtitle_key" value="quest_accelerated_annihiliation_subtitle"/>
+		<property name="description_key" value="quest_accelerated_annihiliation_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_accelerated_annihiliation_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="3" param1="difficulty"/>
+		<property name="statement_key" value="quest_accelerated_annihiliation_statement"/>
+		<property name="response_key" value="quest_accelerated_annihiliation_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_accelerated_annihiliation_completion_gold"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+	</quest>
+		<quest id="tier4_accelerated_annihiliation_reward_quest_gold">
+		<property name="name_key" value="quest_tier4_accelerated_annihiliation_name" param1="name"/>
+		<property name="subtitle_key" value="quest_accelerated_annihiliation_subtitle"/>
+		<property name="description_key" value="quest_accelerated_annihiliation_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_accelerated_annihiliation_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="4" param1="difficulty"/>
+		<property name="statement_key" value="quest_accelerated_annihiliation_statement"/>
+		<property name="response_key" value="quest_accelerated_annihiliation_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_accelerated_annihiliation_completion_gold"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+	</quest>
+		<quest id="tier5_accelerated_annihiliation_reward_quest_gold">
+		<property name="name_key" value="quest_tier5_accelerated_annihiliation_name" param1="name"/>
+		<property name="subtitle_key" value="quest_accelerated_annihiliation_subtitle"/>
+		<property name="description_key" value="quest_accelerated_annihiliation_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_accelerated_annihiliation_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="5" param1="difficulty"/>
+		<property name="statement_key" value="quest_accelerated_annihiliation_statement"/>
+		<property name="response_key" value="quest_accelerated_annihiliation_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_accelerated_annihiliation_completion_gold"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+	</quest>
+		<quest id="tier6_accelerated_annihiliation_reward_quest_gold">
+		<property name="name_key" value="quest_tier6_accelerated_annihiliation_name" param1="name"/>
+		<property name="subtitle_key" value="quest_accelerated_annihiliation_subtitle"/>
+		<property name="description_key" value="quest_accelerated_annihiliation_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_accelerated_annihiliation_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="6" param1="difficulty"/>
+		<property name="statement_key" value="quest_accelerated_annihiliation_statement"/>
+		<property name="response_key" value="quest_accelerated_annihiliation_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_accelerated_annihiliation_completion_gold"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+	</quest>
+	
+	
+</insertAfter>
+
+<append xpath="/quests/quest_list[@id='trader_quests']">  
+	<quest id="tier2_accelerated_annihilation"/>
+	<quest id="tier3_accelerated_annihilation"/>
+	<quest id="tier4_accelerated_annihilation"/>
+	<quest id="tier5_accelerated_annihilation"/>
+	<quest id="tier6_accelerated_annihilation"/>
+</append>
+
+</Config>

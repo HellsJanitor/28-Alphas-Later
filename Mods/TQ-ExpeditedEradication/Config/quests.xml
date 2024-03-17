@@ -1,0 +1,810 @@
+<Config>
+
+<!-- SpeedClear -->
+
+
+<insertAfter xpath="/quests/quest[@id='tier1_fetch']">  
+
+<!-- Zombie Challenge Quests -->
+
+	<quest id="tier1_speed_clear">
+		<property name="name_key" value="quest_tier1_speed_clear_name" param1="name"/>
+		<property name="subtitle_key" value="quest_speed_clear_subtitle"/>
+		<property name="description_key" value="quest_speed_clear_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_speed_clear_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="1" param1="difficulty"/>
+		<property name="statement_key" value="quest_speed_clear_statement"/>
+		<property name="response_key" value="quest_speed_clear_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_speed_clear_completion"/>
+	
+		
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1"/>
+			<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type" />
+			<property name="biome_filter" value="burnt_forest" param1="biome_filter" />
+			<property name="nav_object" value="quest" />
+			<property name="poi_tier" value="-1" param1="poi_tier" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="rally" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier1_speed_clear_start"/>
+			<property name="phase" value="3"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+<!--  Using buffs instead as they tie to the actual completion criteria 
+		<objective type="Time" time="4" value="45" phase="3" optional="true" /> <!- 45 seconds for gold
+		<objective type="Time" time="4" value="75" phase="3" optional="true" /> <!- 75 seconds for silver mins real time 
+		<objective type="Time" time="4" value="120" phase="3" optional="true" /> <!- 120 seconds for bronze -->
+
+		<objective type="ClearSleepers">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="sleeper_volume"/>
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3"/>
+			<property name="radius" value="25"/>
+		</objective>
+		
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier1_speed_clear_stop"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+		<action type="UnlockPOI" >
+			<property name="phase" value="4"/>
+		</action>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier1_speed_clear_reward"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+		
+
+		<reward type="Exp" value="3000"/>
+		<reward type="Item" id="casinoCoin" value="800"/>
+
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="1"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="1"/>
+		<reward type="LootItem" id="groupQuestResources" ischosen="true" value="1"/>
+		<reward type="LootItem" id="groupQuestAmmo,groupQuestResources,groupQuestMods,groupQuestT1SkillMagazineBundle" ischosen="true" value="1"/>
+	</quest>
+	
+		<quest id="tier2_speed_clear">
+		<property name="name_key" value="quest_tier2_speed_clear_name" param1="name"/>
+		<property name="subtitle_key" value="quest_speed_clear_subtitle"/>
+		<property name="description_key" value="quest_speed_clear_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_speed_clear_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="2" param1="difficulty"/>
+		<property name="statement_key" value="quest_speed_clear_statement"/>
+		<property name="response_key" value="quest_speed_clear_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_speed_clear_completion"/>
+	
+		
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1"/>
+			<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type" />
+			<property name="biome_filter" value="burnt_forest" param1="biome_filter" />
+			<property name="nav_object" value="quest" />
+			<property name="poi_tier" value="-1" param1="poi_tier" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="rally" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier2_speed_clear_start"/>
+			<property name="phase" value="3"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+<!--  Using buffs instead as they tie to the actual completion criteria 
+		<objective type="Time" time="4" value="45" phase="3" optional="true" /> <!- 45 seconds for gold
+		<objective type="Time" time="4" value="75" phase="3" optional="true" /> <!- 75 seconds for silver mins real time 
+		<objective type="Time" time="4" value="120" phase="3" optional="true" /> <!- 120 seconds for bronze -->
+
+		<objective type="ClearSleepers">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="sleeper_volume"/>
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3"/>
+			<property name="radius" value="25"/>
+		</objective>
+		
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier2_speed_clear_stop"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+		<action type="UnlockPOI" >
+			<property name="phase" value="4"/>
+		</action>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier2_speed_clear_reward"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+		
+
+		<reward type="Exp" value="4500"/>
+		<reward type="Item" id="casinoCoin" value="1350"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+	</quest>
+	
+		<quest id="tier3_speed_clear">
+		<property name="name_key" value="quest_tier3_speed_clear_name" param1="name"/>
+		<property name="subtitle_key" value="quest_speed_clear_subtitle"/>
+		<property name="description_key" value="quest_speed_clear_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_speed_clear_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="3" param1="difficulty"/>
+		<property name="statement_key" value="quest_speed_clear_statement"/>
+		<property name="response_key" value="quest_speed_clear_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_speed_clear_completion"/>
+	
+		
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1"/>
+			<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type" />
+			<property name="biome_filter" value="burnt_forest" param1="biome_filter" />
+			<property name="nav_object" value="quest" />
+			<property name="poi_tier" value="-1" param1="poi_tier" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="rally" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier3_speed_clear_start"/>
+			<property name="phase" value="3"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+<!--  Using buffs instead as they tie to the actual completion criteria 
+		<objective type="Time" time="4" value="45" phase="3" optional="true" /> <!- 45 seconds for gold
+		<objective type="Time" time="4" value="75" phase="3" optional="true" /> <!- 75 seconds for silver mins real time 
+		<objective type="Time" time="4" value="120" phase="3" optional="true" /> <!- 120 seconds for bronze -->
+
+		<objective type="ClearSleepers">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="sleeper_volume"/>
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3"/>
+			<property name="radius" value="25"/>
+		</objective>
+		
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier3_speed_clear_stop"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+		<action type="UnlockPOI" >
+			<property name="phase" value="4"/>
+		</action>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier3_speed_clear_reward"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+		
+
+		<reward type="Exp" value="6000"/>
+		<reward type="Item" id="casinoCoin" value="1800"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+	</quest>
+	
+		<quest id="tier4_speed_clear">
+		<property name="name_key" value="quest_tier4_speed_clear_name" param1="name"/>
+		<property name="subtitle_key" value="quest_speed_clear_subtitle"/>
+		<property name="description_key" value="quest_speed_clear_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_speed_clear_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="4" param1="difficulty"/>
+		<property name="statement_key" value="quest_speed_clear_statement"/>
+		<property name="response_key" value="quest_speed_clear_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_speed_clear_completion"/>
+	
+		
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1"/>
+			<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type" />
+			<property name="biome_filter" value="burnt_forest" param1="biome_filter" />
+			<property name="nav_object" value="quest" />
+			<property name="poi_tier" value="-1" param1="poi_tier" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="rally" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier4_speed_clear_start"/>
+			<property name="phase" value="3"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+<!--  Using buffs instead as they tie to the actual completion criteria 
+		<objective type="Time" time="4" value="45" phase="3" optional="true" /> <!- 45 seconds for gold
+		<objective type="Time" time="4" value="75" phase="3" optional="true" /> <!- 75 seconds for silver mins real time 
+		<objective type="Time" time="4" value="120" phase="3" optional="true" /> <!- 120 seconds for bronze -->
+
+		<objective type="ClearSleepers">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="sleeper_volume"/>
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3"/>
+			<property name="radius" value="25"/>
+		</objective>
+		
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier4_speed_clear_stop"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+		<action type="UnlockPOI" >
+			<property name="phase" value="4"/>
+		</action>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier4_speed_clear_reward"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+		
+
+		<reward type="Exp" value="7500"/>
+		<reward type="Item" id="casinoCoin" value="2040"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+	</quest>
+	
+		<quest id="tier5_speed_clear">
+		<property name="name_key" value="quest_tier5_speed_clear_name" param1="name"/>
+		<property name="subtitle_key" value="quest_speed_clear_subtitle"/>
+		<property name="description_key" value="quest_speed_clear_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_speed_clear_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="5" param1="difficulty"/>
+		<property name="statement_key" value="quest_speed_clear_statement"/>
+		<property name="response_key" value="quest_speed_clear_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_speed_clear_completion"/>
+	
+		
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1"/>
+			<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type" />
+			<property name="biome_filter" value="burnt_forest" param1="biome_filter" />
+			<property name="nav_object" value="quest" />
+			<property name="poi_tier" value="-1" param1="poi_tier" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="rally" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier5_speed_clear_start"/>
+			<property name="phase" value="3"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+<!--  Using buffs instead as they tie to the actual completion criteria 
+		<objective type="Time" time="4" value="45" phase="3" optional="true" /> <!- 45 seconds for gold
+		<objective type="Time" time="4" value="75" phase="3" optional="true" /> <!- 75 seconds for silver mins real time 
+		<objective type="Time" time="4" value="120" phase="3" optional="true" /> <!- 120 seconds for bronze -->
+
+		<objective type="ClearSleepers">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="sleeper_volume"/>
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3"/>
+			<property name="radius" value="25"/>
+		</objective>
+		
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier5_speed_clear_stop"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+
+		<action type="UnlockPOI" >
+			<property name="phase" value="4"/>
+		</action>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+		
+		<action type="GameEvent" >
+			<property name="event" value="tier5_speed_clear_reward"/>
+			<property name="phase" value="4"/>
+			<property name="hidden" value="true"/>
+		</action>
+		
+
+		<reward type="Exp" value="15000"/>
+		<reward type="Item" id="casinoCoin" value="4080"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+	</quest>
+	
+	<quest id="tier1_speed_clear_reward_quest_silver">
+		<property name="name_key" value="quest_tier1_speed_clear_name" param1="name"/>
+		<property name="subtitle_key" value="quest_speed_clear_subtitle"/>
+		<property name="description_key" value="quest_speed_clear_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_speed_clear_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="1" param1="difficulty"/>
+		<property name="statement_key" value="quest_speed_clear_statement"/>
+		<property name="response_key" value="quest_speed_clear_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_speed_clear_completion_silver"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+	</quest>
+		<quest id="tier2_speed_clear_reward_quest_silver">
+		<property name="name_key" value="quest_tier2_speed_clear_name" param1="name"/>
+		<property name="subtitle_key" value="quest_speed_clear_subtitle"/>
+		<property name="description_key" value="quest_speed_clear_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_speed_clear_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="2" param1="difficulty"/>
+		<property name="statement_key" value="quest_speed_clear_statement"/>
+		<property name="response_key" value="quest_speed_clear_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_speed_clear_completion_silver"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+	</quest>
+		<quest id="tier3_speed_clear_reward_quest_silver">
+		<property name="name_key" value="quest_tier3_speed_clear_name" param1="name"/>
+		<property name="subtitle_key" value="quest_speed_clear_subtitle"/>
+		<property name="description_key" value="quest_speed_clear_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_speed_clear_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="3" param1="difficulty"/>
+		<property name="statement_key" value="quest_speed_clear_statement"/>
+		<property name="response_key" value="quest_speed_clear_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_speed_clear_completion_silver"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+	</quest>
+		<quest id="tier4_speed_clear_reward_quest_silver">
+		<property name="name_key" value="quest_tier4_speed_clear_name" param1="name"/>
+		<property name="subtitle_key" value="quest_speed_clear_subtitle"/>
+		<property name="description_key" value="quest_speed_clear_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_speed_clear_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="4" param1="difficulty"/>
+		<property name="statement_key" value="quest_speed_clear_statement"/>
+		<property name="response_key" value="quest_speed_clear_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_speed_clear_completion_silver"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
+	</quest>
+		<quest id="tier5_speed_clear_reward_quest_silver">
+		<property name="name_key" value="quest_tier5_speed_clear_name" param1="name"/>
+		<property name="subtitle_key" value="quest_speed_clear_subtitle"/>
+		<property name="description_key" value="quest_speed_clear_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_speed_clear_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="5" param1="difficulty"/>
+		<property name="statement_key" value="quest_speed_clear_statement"/>
+		<property name="response_key" value="quest_speed_clear_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_speed_clear_completion_silver"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
+	</quest>
+	
+	<quest id="tier1_speed_clear_reward_quest_gold">
+		<property name="name_key" value="quest_tier1_speed_clear_name" param1="name"/>
+		<property name="subtitle_key" value="quest_speed_clear_subtitle"/>
+		<property name="description_key" value="quest_speed_clear_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_speed_clear_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="1" param1="difficulty"/>
+		<property name="statement_key" value="quest_speed_clear_statement"/>
+		<property name="response_key" value="quest_speed_clear_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_speed_clear_completion_gold"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+	</quest>
+		<quest id="tier2_speed_clear_reward_quest_gold">
+		<property name="name_key" value="quest_tier2_speed_clear_name" param1="name"/>
+		<property name="subtitle_key" value="quest_speed_clear_subtitle"/>
+		<property name="description_key" value="quest_speed_clear_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_speed_clear_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="2" param1="difficulty"/>
+		<property name="statement_key" value="quest_speed_clear_statement"/>
+		<property name="response_key" value="quest_speed_clear_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_speed_clear_completion_gold"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+	</quest>
+		<quest id="tier3_speed_clear_reward_quest_gold">
+		<property name="name_key" value="quest_tier3_speed_clear_name" param1="name"/>
+		<property name="subtitle_key" value="quest_speed_clear_subtitle"/>
+		<property name="description_key" value="quest_speed_clear_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_speed_clear_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="3" param1="difficulty"/>
+		<property name="statement_key" value="quest_speed_clear_statement"/>
+		<property name="response_key" value="quest_speed_clear_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_speed_clear_completion_gold"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="4"/>
+		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+	</quest>
+		<quest id="tier4_speed_clear_reward_quest_gold">
+		<property name="name_key" value="quest_tier4_speed_clear_name" param1="name"/>
+		<property name="subtitle_key" value="quest_speed_clear_subtitle"/>
+		<property name="description_key" value="quest_speed_clear_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_speed_clear_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="4" param1="difficulty"/>
+		<property name="statement_key" value="quest_speed_clear_statement"/>
+		<property name="response_key" value="quest_speed_clear_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_speed_clear_completion_gold"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="5"/>
+		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+	</quest>
+		<quest id="tier5_speed_clear_reward_quest_gold">
+		<property name="name_key" value="quest_tier5_speed_clear_name" param1="name"/>
+		<property name="subtitle_key" value="quest_speed_clear_subtitle"/>
+		<property name="description_key" value="quest_speed_clear_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_speed_clear_offer" param1="offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="5" param1="difficulty"/>
+		<property name="statement_key" value="quest_speed_clear_statement"/>
+		<property name="response_key" value="quest_speed_clear_response"/>
+		<property name="login_rally_reset" value="true"/>
+		<property name="reward_choices_count" value="5" />
+		<property name="extra_tags" value="" param1="extra_tags" />
+		<property name="shareable" value="false"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_speed_clear_completion_gold"/>
+		
+		<property name="add_to_tier_complete" value="false" />
+		
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+	</quest>
+	
+	
+</insertAfter>
+
+<append xpath="/quests/quest_list[@id='trader_quests']">  
+	<quest id="tier1_speed_clear"/>
+	<quest id="tier2_speed_clear"/>
+	<quest id="tier3_speed_clear"/>
+	<quest id="tier4_speed_clear"/>
+	<quest id="tier5_speed_clear"/>
+</append>
+
+</Config>

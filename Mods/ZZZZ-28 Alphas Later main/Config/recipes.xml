@@ -378,6 +378,73 @@
 		<ingredient name="resourceScrapBrass" count="100"/>
 	</recipe>
 	
+	<recipe name="playerDoorSideLightSingleVariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceWood" count="20"/>
+		<ingredient name="resourceScrapBrass" count="50"/>
+		<ingredient name="glassBusinessSheet" count="6"/>
+	</recipe>
+	
+	<recipe name="playerDoorSideLightVariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceWood" count="40"/>
+		<ingredient name="resourceScrapBrass" count="100"/>
+		<ingredient name="glassBusinessSheet" count="6"/>
+	</recipe>
+	
+	<recipe name="playerOldDoorSingleVariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceWood" count="20"/>
+		<ingredient name="resourceScrapBrass" count="50"/>
+	</recipe>
+	
+	<recipe name="playerOldDoorDoubleVariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceWood" count="40"/>
+		<ingredient name="resourceScrapBrass" count="100"/>
+	</recipe>
+	
+	<recipe name="playerScreenDoorVariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceWood" count="20"/>
+		<ingredient name="resourceScrapIron" count="50"/>
+	</recipe>
+	
+	<recipe name="playerSlidingDoorVariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceWood" count="40"/>
+		<ingredient name="resourceScrapIron" count="100"/>
+	</recipe>
+	
+	<recipe name="playerFrenchDoorVariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceWood" count="20"/>
+		<ingredient name="resourceScrapIron" count="50"/>
+	</recipe>
+	
+	<recipe name="playerFrenchDoorDoubleVariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceWood" count="40"/>
+		<ingredient name="resourceScrapIron" count="100"/>
+	</recipe>
+	
+	<recipe name="playerInteriorHouseDoorVariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceWood" count="20"/>
+		<ingredient name="resourceScrapBrass" count="50"/>
+	</recipe>
+	
+	<recipe name="playerInteriorHouseDoorDoubleVariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceWood" count="40"/>
+		<ingredient name="resourceScrapBrass" count="100"/>
+	</recipe>
+	
+	<recipe name="playerClosetDoorVariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceWood" count="20"/>
+		<!-- <ingredient name="resourceScrapBrass" count="50"/> -->
+	</recipe>
+	
+	<recipe name="playerClosetDoorDoubleVariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceWood" count="40"/>
+		<!-- <ingredient name="resourceScrapBrass" count="100"/> -->
+	</recipe>
+	
+	<recipe name="playerPantryDoorVariantHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceWood" count="20"/>
+		<!-- <ingredient name="resourceScrapBrass" count="50"/> -->
+	</recipe>
+	
 	<!-- *** barbed wire *** -->
 	<recipe name="barbedWireSpindleVariantHelper" count="1">
 		<ingredient name="resourceScrapIron" count="25"/>
@@ -774,7 +841,13 @@
 	
 	<!-- *** frameshapes recipe *** -->
 	<set xpath="//recipe[@name='frameShapes:VariantHelper']/ingredient[@name='resourceWood']/@count">5</set>
-	<set xpath="//recipe[@name='frameShapes:VariantHelper']/ingredient[@name='resourceWood']/@name">resourceWoodScraps</set>	
+	<set xpath="//recipe[@name='frameShapes:VariantHelper']/ingredient[@name='resourceWood']/@name">resourceWoodScraps</set>
+
+	<!-- *** removes all block crafting except basic frames *** -->
+	<remove xpath="//recipe[@name='woodShapes:VariantHelper']"/>
+	<remove xpath="//recipe[@name='cobblestoneShapes:VariantHelper']"/>
+	<remove xpath="//recipe[@name='concreteShapes:VariantHelper']"/>
+	<remove xpath="//recipe[@name='steelShapes:VariantHelper']"/>
 	
 	<!-- *** logs from trees make planks in a tablesaw *** -->
 	<remove xpath="//recipe[@name='woodLogPillar100']"/>
@@ -1607,13 +1680,14 @@
 	
 	<!-- <set xpath="//recipe/ingredient[contains(@name,'Parts')]/@count">2</set> -->
 	
-	<!-- *** concrete requires water to craft, in batches of 250 *** -->
+	<!-- *** concrete requires water & feldspar to craft, in batches of 250 *** -->
 	<set xpath="//recipe[@name='resourceConcreteMix']/@count">250</set>
 	<set xpath="/recipes/recipe[@name='resourceConcreteMix']">
 	<secondary_output name="bucketEmpty" count="1"/>
 	<ingredient name="resourceCrushedSand" count="250"/>
 	<ingredient name="resourceRockSmall" count="250"/>			
 	<ingredient name="resourceCement" count="250"/>
+	<ingredient name="resourceFeldspar" count="25"/>
 	<ingredient name="bucketRiverWater" count="1"/>
 	</set>	
 </configs>

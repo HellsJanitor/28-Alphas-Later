@@ -15,9 +15,9 @@
 	</effect_group> -->
 	
 	<!-- adds "headshot only" to player on spawn -->
-	<effect_group>
+	<!-- <effect_group>
 		<triggered_effect trigger="onSelfEnteredGame" action="CallGameEvent" event="buffAlwaysHeadShotsOnly"/>
-	</effect_group>	
+	</effect_group> -->	
 	</append>
 	
 	<!-- *** blood moon boss buff *** -->

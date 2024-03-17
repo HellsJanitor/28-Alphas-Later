@@ -2,17 +2,29 @@
 	<append xpath="//item_modifier[@name='modArmorHelmetLight']">
 	<effect_group>
 		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffHelmetLight"/>
-		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffHelmetLight"/>
+		<requirement name="CVarCompare" cvar="batteryHelmetLight" operation="GT" value="0"/>
+	</effect_group>
+	<effect_group>
 		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHelmetLight"/>
+		<requirement name="CVarCompare" cvar="batteryHelmetLight" operation="GT" value="0"/>
+	</effect_group>
+	<effect_group>		
 		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHelmetLight"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffHelmetLight"/>
 	</effect_group>
 	</append>
 	
 	<append xpath="//item_modifier[@name='modGunFlashlight']">
 	<effect_group>
 		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffGunFlashlight"/>
-		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffGunFlashlight"/>
+		<requirement name="CVarCompare" cvar="batteryWeaponLight" operation="GT" value="0"/>
+	</effect_group>
+	<effect_group>
 		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffGunFlashlight"/>
+		<requirement name="CVarCompare" cvar="batteryWeaponLight" operation="GT" value="0"/>
+	</effect_group>
+	<effect_group>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffGunFlashlight"/>		
 		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffGunFlashlight"/>
 	</effect_group>
 	</append>

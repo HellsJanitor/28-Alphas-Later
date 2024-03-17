@@ -1,0 +1,84 @@
+<CautiousPancakeDefendPOIFromHorde>
+	<append xpath="/buffs">
+		<!-- initial buff, that is then swapped out for second buff, to seperate the spawn loop from the quest events -->
+		<buff name="buffSpawner1a" hidden="false" remove_on_death="true">
+			<stack_type value="ignore"/>
+			<update_rate value="0"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="tier1_courier_rescue_mainLoop"/>
+			</effect_group>
+		</buff>
+		<buff name="buffSpawner1b" hidden="false" remove_on_death="true">
+			<stack_type value="ignore"/>
+			<update_rate value="5"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="tier1_courier_rescue_failedQuestCheck"/>
+			</effect_group>
+		</buff>
+		
+		<!-- tier2 -->
+				<buff name="buffSpawner2a" hidden="false" remove_on_death="true">
+			<stack_type value="ignore"/>
+			<update_rate value="0"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="tier2_courier_rescue_mainLoop"/>
+			</effect_group>
+		</buff>
+		<buff name="buffSpawner2b" hidden="false" remove_on_death="true">
+			<stack_type value="ignore"/>
+			<update_rate value="5"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="tier2_courier_rescue_failedQuestCheck"/>
+			</effect_group>
+		</buff>
+		
+		<!-- tier 3 -->
+				<buff name="buffSpawner3a" hidden="false" remove_on_death="true">
+			<stack_type value="ignore"/>
+			<update_rate value="0"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="tier3_courier_rescue_mainLoop"/>
+			</effect_group>
+		</buff>
+		<buff name="buffSpawner3b" hidden="false" remove_on_death="true">
+			<stack_type value="ignore"/>
+			<update_rate value="5"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="tier3_courier_rescue_failedQuestCheck"/>
+			</effect_group>
+		</buff>
+		
+		<!-- tier 4 -->
+		<buff name="buffSpawner4a" hidden="false" remove_on_death="true">
+			<stack_type value="ignore"/>
+			<update_rate value="0"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="tier4_courier_rescue_mainLoop"/>
+			</effect_group>
+		</buff>
+		<buff name="buffSpawner4b" hidden="false" remove_on_death="true">
+			<stack_type value="ignore"/>
+			<update_rate value="5"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="tier4_courier_rescue_failedQuestCheck"/>
+			</effect_group>
+		</buff>
+		
+		<!-- tier 5 -->
+				<buff name="buffSpawner5a" hidden="false" remove_on_death="true">
+			<stack_type value="ignore"/>
+			<update_rate value="0"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="tier5_courier_rescue_mainLoop"/>
+			</effect_group>
+		</buff>
+		<buff name="buffSpawner5b" hidden="false" remove_on_death="true">
+			<stack_type value="ignore"/>
+			<update_rate value="5"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="tier5_courier_rescue_failedQuestCheck"/>
+			</effect_group>
+		</buff>
+		
+	</append>
+</CautiousPancakeDefendPOIFromHorde>

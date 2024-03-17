@@ -1,5 +1,17 @@
 <configs>
 	<set xpath="/gameevents/action_sequence[@name='game_first_spawn']/action[@class='AddJournalTip']/property[@name='tip_name']/@value">HellsModSpawnText</set>
+	<append xpath="//action_sequence[@name='game_first_spawn']">
+		<action class="Delay">
+			<property name="time" value="2" />
+			<property name="phase" value="4" />
+		</action>
+		
+		<action class="AddJournalTip">
+			<property name="tip_name" value="DespairTip" />
+			<property name="show_window" value="false" />
+			<property name="phase" value="5" />
+		</action>
+	</append>
 	
 	<!-- *** prevents use of vehicles underwater *** -->
 	<append xpath="/gameevents">

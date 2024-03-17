@@ -220,19 +220,19 @@
 	
 	<!-- *** mods *** -->
 	<append xpath="//lootgroup[@name='modMeleeT3']">
-		<item name="modGunMeleeNiCdBattery"/>
-		<item name="modGunMeleeFlammableOil"/>
-		<item name="modGunMeleeLiquidNitrogen"/>
+		<item name="modGunMeleeNiCdBattery" loot_prob_template="ProbT2"/>
+		<item name="modGunMeleeFlammableOil" loot_prob_template="ProbT2"/>
+		<item name="modGunMeleeLiquidNitrogen" loot_prob_template="ProbT2"/>
 	</append>
 	
 	<append xpath="//lootgroup[@name='modGunMeleeT3']">
-		<item name="modGunMeleeBlessedMetal" prob="0.2"/>
+		<item name="modGunMeleeBlessedMetal" loot_prob_template="ProbT3"/>
 	</append>
 	
 	<append xpath="//lootgroup[@name='modGunT3']">
-		<item name="modGunMeleeNiCdBattery"/>
-		<item name="modGunMeleeFlammableOil"/>
-		<item name="modGunMeleeLiquidNitrogen"/>
+		<item name="modGunMeleeNiCdBattery" loot_prob_template="ProbT2"/>
+		<item name="modGunMeleeFlammableOil" loot_prob_template="ProbT2"/>
+		<item name="modGunMeleeLiquidNitrogen" loot_prob_template="ProbT2"/>
 		<item name="modGunBrassCatcher"/>
 	</append>
 	

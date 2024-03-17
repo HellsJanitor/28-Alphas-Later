@@ -1,0 +1,20 @@
+Key,English
+buffHelmetPurifierActive,Filter status:
+buffHelmetPurifierActiveDesc,"Your Helmet Purifier is currently working, so you can safely drink from any water source.\n\nThe filter has limited uses, and will need to be replaced eventually."
+buffHelmetPurifierReloadSuccess,"Reloading your Helmet Water Purifer."
+modArmorWaterPurifier,Water Filtration Unit
+modArmorWaterPurifierDesc,Requires a limited-use filter to allow safe consumption of murky water.
+resourceHelmetWaterFilterDesc,A home-made component used to recharge a Water Filtration Unit.
+resourceHelmetWaterFilter,Portable Water Filter
+resourceNiCdBattery,Ni-Cd battery
+resourceNiCdBatteryDesc,A limited-use battery, required to operate various portable light sources.
+buffHelmetLightActive,Battery Status
+buffHelmetLightActiveDesc,"Your Helmet Light is currently powered.\n\nThe battery is being depleted, and when empty, requires replacing."
+buffWeaponLightActive,Battery Status
+buffWeaponLightActiveDesc,"Your Weapon Flashlight is currently powered.\n\nThe battery is being depleted, and when empty, requires replacing."
+buffLaserLightActive,Battery Status
+buffLaserLightActiveDesc,"Your Laser Sight is currently powered.\n\nThe battery is being depleted, and when empty, requires replacing."
+buffFlashLightActive,Battery Status
+buffFlashLightActiveDesc,"Your flashlight is currently powered.\n\nThe battery is being depleted, and when empty, requires replacing."
+buffNVGActive,Battery Status
+buffNVGActiveDesc,"Your Night Vision Goggles are currently powered.\n\nThe battery is being depleted, and when empty, requires replacing."

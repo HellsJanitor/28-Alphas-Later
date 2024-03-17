@@ -1,0 +1,84 @@
+<Config>
+	<!-- ContrabandCollection -->
+	
+<append xpath="/buffs">	
+
+
+	<!-- ContrabandCollectionBuff is added to the player from the quest, to control the spawning of zombies -->
+	<buff name="ContrabandCollectionBuff" hidden="true" remove_on_death="true">
+		<stack_type value="ignore"/>
+		<update_rate value="10"/>
+		<duration value="120"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="tier1_contraband_collection_spawn" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="tier2_contraband_collection_spawn" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="tier3_contraband_collection_spawn" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="tier4_contraband_collection_spawn" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="tier5_contraband_collection_spawn" />
+		</effect_group>
+	</buff>
+	
+	<buff name="ContrabandCollectionExplodeCrateOnQuestFailBuff" hidden="true" remove_on_death="true">
+		<stack_type value="ignore"/>
+		<update_rate value="5"/>
+		<duration value="135"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="contraband_collection_crate_explode_crate_on_quest_fail" />
+		</effect_group>
+	</buff>
+	
+		<buff name="ContrabandCollectionExplodeCrateAfterTimeBuff" hidden="true" remove_on_death="true">
+		<stack_type value="ignore"/>
+		<update_rate value="125"/>
+		<duration value="130"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="explode_me" />
+		</effect_group>
+	</buff>
+	
+	
+	<buff name="tier1_remove_satchel_buff" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<update_rate value="5"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="tier1_contraband_collection_remove_satchel_b" />
+		</effect_group>
+	</buff>
+	
+		<buff name="tier2_remove_satchel_buff" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<update_rate value="5"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="tier2_contraband_collection_remove_satchel_b" />
+		</effect_group>
+	</buff>
+	
+		<buff name="tier3_remove_satchel_buff" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<update_rate value="5"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="tier3_contraband_collection_remove_satchel_b" />
+		</effect_group>
+	</buff>
+	
+		<buff name="tier4_remove_satchel_buff" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<update_rate value="5"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="tier4_contraband_collection_remove_satchel_b" />
+		</effect_group>
+	</buff>
+	
+		<buff name="tier5_remove_satchel_buff" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<update_rate value="5"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="tier5_contraband_collection_remove_satchel_b" />
+		</effect_group>
+	</buff>
+	
+</append>
+
+
+
+</Config>

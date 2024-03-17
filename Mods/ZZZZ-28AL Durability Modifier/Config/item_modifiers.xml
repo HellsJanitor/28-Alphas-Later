@@ -1,0 +1,81 @@
+<Hells_Janitor>
+	<!-- *** helmet water purifier *** -->
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorWaterPurifier']">
+		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="UnlockedBy" value="modArmorWaterPurifierSchematic"/>
+		<property name="Material" value="Msteel"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffHelmetPurifierDeactivate"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHelmetPurifierActivate"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHelmetPurifierActive"/>
+		</effect_group>
+	</set>
+	
+	<!-- *** helmet light *** -->
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']">
+		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="UnlockedBy" value="modArmorHelmetLightSchematic,perkArtOfMiningLantern"/>
+		<property name="Material" value="Msteel"/>
+		<property name="LightValue" value=".4"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="HeadLight" prefab="Entities/Lighting/miningHelmetLightSource" parentTransform="Spotlight" localPos="0,0,0" localRot="90,0,0"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="HeadLightCam" prefab="Entities/Lighting/miningHelmetLightSource" parentTransform="CameraNode" localPos="0,0,0" localRot="-90,0,0"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="HeadLight"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="HeadLightCam"/>
+			<triggered_effect trigger="onSelfItemDeactivate" action="SetPartActive" part="HeadLight" active="false"/>
+			<triggered_effect trigger="onSelfItemDeactivate" action="SetPartActive" part="HeadLightCam" active="false"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffHelmetLightDeactivate"/>
+			<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffHelmetLightActivate"/>
+			<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffHelmetLightActive"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHelmetLightActive"/>
+		</effect_group>
+	</set>
+	
+	<!-- *** weapon flashlight *** -->
+	<set xpath="//item_modifier[@name='modGunFlashlight']//effect_group[@name='external attachment prefab (old way)']">
+		<requirement name="!HoldingItemHasTags" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="SetTransformActive" active="false" parent_transform="Side" transform_path="lightSource"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="Side" transform_path="lightSource"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffWeaponLightDeactivate"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffWeaponLightActivate"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffWeaponLightActive"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffWeaponLightActive"/>
+	</set>
+	
+	<set xpath="//item_modifier[@name='modGunFlashlight']//effect_group[@name='internal attachment prefab (A19)']">
+		<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="SetTransformActive" active="false" parent_transform="Gunjoint" transform_path="flashlight_lightSource"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="Gunjoint" transform_path="flashlight_lightSource"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffWeaponLightDeactivate"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffWeaponLightActivate"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffWeaponLightActive"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffWeaponLightActive"/>
+	</set>
+	
+	<!-- *** laser sight *** -->
+	<set xpath="//item_modifier[@name='modGunLaserSight']//effect_group[@name='external attachment prefab (old way)']">
+		<requirement name="!HoldingItemHasTags" tags="attachmentsIncluded"/>		
+		<triggered_effect trigger="onSelfItemDeactivate" action="SetTransformChildrenActive" active="false" parent_transform="Side" transform_path="gun_laser"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformChildrenActive" active="false" parent_transform="Side" transform_path="gun_laser"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffLaserLightDeactivate"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffLaserLightActivate"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffLaserLightActive"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffLaserLightActive"/>
+	</set>
+	
+	<set xpath="//item_modifier[@name='modGunLaserSight']//effect_group[@name='internal attachment prefab (A19)']">
+		<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="SetTransformActive" active="false" parent_transform="gunlaser" transform_path="gunlaser"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="gunlaser" transform_path="gunlaser"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffLaserLightDeactivate"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffLaserLightActivate"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffLaserLightActive"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffLaserLightActive"/>
+	</set>
+	
+	<set xpath="//item_modifier[@name='modGunLaserSight']//effect_group[@name='mod effects']">
+		<requirement name="HasBuff" buff="buffLaserLightActive"/>
+		<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="-.2"/>
+		<passive_effect name="WeaponHandling" operation="perc_add" value=".2"/>
+	</set>
+</Hells_Janitor>

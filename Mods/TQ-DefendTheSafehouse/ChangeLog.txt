@@ -1,0 +1,6 @@
+v1.2	Fixed Tier 4 - while loop was checking the wrong buff for spawning new zombies, thanks senliem.
+v1.3	Fixed quest progress reset on logout before handin (singleplayer), and issues with other quests reseting progress or preventing other quest starts in server and singleplayer. Added "UnlockPOI" action and aligned final phases with ReturnToNPC and InteractWithNPC.  Thanks FuriousRamsay and Argent Nomad.
+		"UnlockPOI" and satchel collection should hopefully prevent multiplayer large area resets 
+		Multiplayer inconsistent zombie spawning should now be fixed
+		Multiplayer and singleplayer issue where zombies stop spawning should now be fixed
+		Added localisation to indicate collecting satchel is not worth additional reward.

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xml>
+        <Name value="CautiousPancakeContrabandCollection"/>
+        <DisplayName value="CautiousPancake Contraband Collection quest" />
+        <Version value="1.3"/>
+        <Description value="Adds a new quest to retrieve some supplies for the trader"/>
+        <Author value="CautiousPancake"/>
+        <Website value="https://www.youtube.com/@CautiousPancake"/>
+  
+</xml>

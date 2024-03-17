@@ -1,0 +1,57 @@
+<Hells_Janitor>
+	<!-- <set xpath="//window[@name='HUDLeftStatBars']">
+		<rect name="hud" pos="9,156" rows="2" cols="1" width="168" side="right">
+			<rect width="171" height="46" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
+				<sprite depth="1" name="border" color="0,0,0,150" height="46" type="sliced"/>
+				<sprite depth="2" name="background" color="0,0,0,140" type="sliced"/>
+				<filledsprite depth="3" name="background" color="110,110,110,128" type="filled" fill="1"/>
+				<filledsprite depth="4" name="BarContent" color="{stealthcolor}" type="filled" fill="0"/>
+				<sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="35,35" pos="26,-24" pivot="center" foregroundlayer="true"/>
+				<label depth="6" name="TextContent" pos="44,-23" font_size="32" color="[white]" justify="center" pivot="left" text="{statcurrent}" width="125" height="35"/>
+				<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+				<filledsprite depth="8" name="background" color="0,0,0,255" width="171" fillcenter="false" type="filled" fill="1"/>
+				<filledsprite depth="3" name="background" color="0,0,0,255" width="170" fillcenter="false" type="filled" fill="1"/>
+			</rect>
+			<rect width="171" height="46" pos="179,-100" controller="HUDStatBar" visible="{# cvar('batteryHelmetLightDisplay') &gt; 0}">
+				<sprite depth="1" name="border" color="0,0,0,150" height="46" type="sliced"/>
+				<sprite depth="2" name="background" color="0,0,0,140" type="sliced"/>
+				<filledsprite depth="3" name="background" color="110,110,110,128" type="filled" fill="1"/>
+				<filledsprite depth="4" name="BarContent" color="0,255,0,128" type="filled" fill="{cvar('batteryHelmetLightDisplay')}"/>
+				<sprite depth="5" name="Icon" sprite="ui_game_symbol_electric_power" size="35,35" pos="26,-24" pivot="center" foregroundlayer="true"/>
+				<label depth="6" name="TextContent" pos="44,-23" font_size="32" color="[white]" justify="center" pivot="left" text="Battery %" width="125" height="35"/>
+				<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+				<filledsprite depth="8" name="background" color="0,0,0,255" width="171" fillcenter="false" type="filled" fill="1"/>
+				<filledsprite depth="3" name="background" color="0,0,0,255" width="170" fillcenter="false" type="filled" fill="1"/>
+			</rect>
+			<rect width="171" height="46" pos="0,-50" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
+				<sprite depth="1" name="border" color="0,0,0,128" type="sliced"/>
+				<sprite depth="2" name="background" color="0,0,0,140" type="sliced"/>
+				<filledsprite depth="3" name="background" color="110,110,110,128" width="169" type="filled" fill="{statmodifiedmax}"/>
+				<filledsprite depth="5" name="BarContent" color="0,54,255,128" width="169" type="filled" fill="0"/>
+				<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_agility" size="35,35" pos="26,-24" pivot="center" foregroundlayer="true"/>
+				<label depth="7" name="TextContent" pos="44,-23" font_size="32" color="[white]" justify="center" pivot="left" text="{statcurrentwithmax}" width="125" height="35"/>
+				<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+				<filledsprite depth="8" name="background" color="0,0,0,255" width="171" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
+				<filledsprite depth="3" name="background" color="0,0,0,255" width="170" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
+			</rect>
+			<rect width="171" height="46" pos="0,-100" controller="HUDStatBar" stat_type="Health" visible="{statvisible}">
+				<sprite depth="1" name="border" color="0,0,0,128" type="sliced"/>
+				<sprite depth="2" name="background" color="0,0,0,140" type="sliced"/>
+				<filledsprite depth="3" name="background" color="110,110,110,128" width="169" type="filled" fill="{statmodifiedmax}"/>
+				<filledsprite depth="5" name="BarContent" color="255,0,0,128" width="169" type="filled" fill="0"/>
+				<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="35,35" pos="26,-24" pivot="center" foregroundlayer="true"/>
+				<label depth="7" name="TextContent" pos="44,-23" font_size="32" color="[white]" justify="center" pivot="left" text="{statcurrentwithmax}" width="125" height="35"/>
+				<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
+				<filledsprite depth="8" name="background" color="0,0,0,255" width="171" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
+				<filledsprite depth="3" name="background" color="0,0,0,255" width="170" fillcenter="false" type="filled" fill="{statmodifiedmax}"/>
+			</rect>
+		</rect>
+		<rect name="hud" pos="90,132" side="left" controller="BuffPopoutList" pivot="BottomLeft">
+			<panel width="168" height="46" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0" style="press" sound="[recipe_click]" on_hover="true">
+				<sprite depth="3" pos="0,0" name="Background" sprite="ui_game_popup" height="46" width="162" pivot="center" flip="Horizontally" color="[transparent]"/>
+				<sprite depth="4" name="Icon" size="40,40" pos="-54,0" pivot="center" color="[transparent]"/>
+				<label depth="6" name="TextContent" pos="-37,0" font_size="28" color="[white]" justify="center" width="118" height="40" pivot="left"/>
+			</panel>
+		</rect>
+	</set> -->
+</Hells_Janitor>
