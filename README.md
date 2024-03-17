@@ -3,9 +3,39 @@
 The idea behind this mod is to slow progression, make traders less powerful, and generally extend the time for a playthrough, while keeping the vanilla look and feel.
 
 ## INSTALLATION INSTRUCTIONS
-> [!WARNING]
-> The "food smell" mechanic is currently NON-FUNCTIONAL in multiplayer. If you plan on using this mod in a multiplayer environment, make sure you remove the `ZZZZ-Food Smell` folder from your SERVER or your HOST.
-> Clients can keep this folder without issue, but it must NOT be present on the SERVER or the HOST.
+
+>[!NOTE]
+># Changelog/updates for v1.3.0
+># REQUIRES A FRESH SAVE!!
+>
+>Reduced Dukes by 1/3 from quest rewards.
+>
+>Reworked the Despair Journal tip so it actually unlocks properly.
+>
+>Added Journal Tip and Tooltip for smell from food. [currently NON-FUNCTIONAL]
+>
+>Added various shape helpers for internal and external doors.
+>
+>More blocks can be picked up. Added the skull and piano.
+>
+>Action Skills!! Weapon and tool efficacy is now increased with action skills. IE, the more you use a tool/weapon, the more effective with it you become.
+>
+>Perk points NOT governed by action skills remain, but their cost is doubled from 1 to 2.
+>
+>Perks that govern melee weapon attack speed now additionally reduce stamina use for that weapon.
+>
+>Loot probability for crafting magazines and books for weapons/tools is now increased by reading more of that tools/weapons magazine. IE, the more you read shotgun magazines, the more likely you are to find shotgun magazines and Shotgun Messiah books in loot.
+>
+>Portable light sources (NVG, headlmap, flashlight etc) require batteries to operate, and the batteries will need replacing periodically.
+>
+>Helmet water filter is now a "housing unit". Requires a player-crafted filter to operate. Limited use filters will need replacing periodically.
+>
+>New material: Feldspar. Required for concrete mixing, and only found in the wasteland from surface terrain and surface boulders.
+>
+>Removed all shape crafting except basic wood frames. Blocks can be upgraded as usual though.
+>
+>Removed all "Clear +" quests as they don't share properly in multiplayer.
+>
 
 >[!NOTE]
 ># Changelog/Updates for v1.2.3
