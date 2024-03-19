@@ -14,7 +14,7 @@
 	<!-- *** helmet light *** -->
 	<set xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']">
 		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
-		<property name="UnlockedBy" value="modArmorHelmetLightSchematic,perkArtOfMiningLantern"/>
+		<property name="UnlockedBy" value="modArmorHelmetLightSchematic"/>
 		<property name="Material" value="Msteel"/>
 		<property name="LightValue" value=".4"/>
 		<effect_group tiered="false">
