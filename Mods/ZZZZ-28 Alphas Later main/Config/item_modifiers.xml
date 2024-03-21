@@ -23,9 +23,9 @@
 		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffGunFlashlight"/>
 		<requirement name="CVarCompare" cvar="batteryWeaponLight" operation="GT" value="0"/>
 	</effect_group>
-	<effect_group>
-		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffGunFlashlight"/>		
+	<effect_group>			
 		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffGunFlashlight"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffGunFlashlight"/>	
 	</effect_group>
 	</append>
 	

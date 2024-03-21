@@ -103,6 +103,7 @@
 			<display_value value="batteryHelmetLight"/>
 			<display_value_key value="Helmet: {0:0}%"/>
 			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffHelmetLight"/>
 				<triggered_effect trigger="onSelfBuffStart" action="SetPartActive" part="HeadLight" active="@!.IsFPV"/>
 				<triggered_effect trigger="onSelfBuffStart" action="SetPartActive" part="HeadLightCam" active="@.IsFPV"/>
 				<!-- 100 = 100%, duration = 30 min, ticks every 10 seconds = 180 ticks; 0.556 per tick to be subtracted -->
@@ -118,6 +119,7 @@
 				</triggered_effect>
 				<triggered_effect trigger="onSelfBuffRemove" action="SetPartActive" part="HeadLight" active="false"/>
 				<triggered_effect trigger="onSelfBuffRemove" action="SetPartActive" part="HeadLightCam" active="false"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffHelmetLight"/>
 			</effect_group>
 			
 			<effect_group>
@@ -131,6 +133,8 @@
 			<duration value=".1"/>
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffHelmetLightActive"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetPartActive" part="HeadLight" active="false"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetPartActive" part="HeadLightCam" active="false"/>
 				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="removeHelmetBattery">
 					<requirement name="PlayerItemCount" item_name="resourceNiCdBattery" operation="GT" value="0"/></triggered_effect>
 			</effect_group>
@@ -177,6 +181,7 @@
 			<display_value value="batteryWeaponLight"/>
 			<display_value_key value="Weapon: {0:0}%"/>
 			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffGunFlashlight"/>
 				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="flashlight"/>
 				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="true" parent_transform="Gunjoint" transform_path="flashlight_lightSource"/>
 				<!-- 100 = 100%, duration = 30 min, ticks every 10 seconds = 180 ticks; 0.556 per tick to be subtracted -->
@@ -192,6 +197,7 @@
 				</triggered_effect>
 				<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive" active="false" parent_transform="Side" transform_path="lightSource"/>
 				<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive" active="false" parent_transform="Gunjoint" transform_path="flashlight_lightSource"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffGunFlashlight"/>
 			</effect_group>
 			
 			<effect_group>
@@ -205,6 +211,8 @@
 			<duration value=".1"/>
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffWeaponLightActive"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Side" transform_path="lightSource"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Gunjoint" transform_path="flashlight_lightSource"/>
 				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="removeWeaponBattery">
 					<requirement name="PlayerItemCount" item_name="resourceNiCdBattery" operation="GT" value="0"/></triggered_effect>
 			</effect_group>
@@ -281,6 +289,8 @@
 			<duration value=".1"/>
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffLaserLightActive"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformChildrenActive" active="false" parent_transform="Side" transform_path="gun_laser"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="gunlaser" transform_path="gunlaser"/>
 				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="removeLaserBattery">
 					<requirement name="PlayerItemCount" item_name="resourceNiCdBattery" operation="GT" value="0"/></triggered_effect>
 			</effect_group>
@@ -326,6 +336,7 @@
 			<display_value value="batteryFlashLight"/>
 			<display_value_key value="Held: {0:0}%"/>
 			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffHeldLight"/>
 				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="lightSource"/>
 				<!-- 100 = 100%, duration = 30 min, ticks every 10 seconds = 180 ticks; 0.556 per tick to be subtracted -->
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$batteryFlashLightTick" operation="set" value="0.556"/>
@@ -339,6 +350,7 @@
 					<requirement name="CVarCompare" cvar="batteryFlashLight" operation="LT" value="0"/>
 				</triggered_effect>
 				<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="lightSource"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffHeldLight"/>
 			</effect_group>
 			
 			<effect_group>
@@ -352,6 +364,7 @@
 			<duration value=".1"/>
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffFlashLightActive"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="lightSource"/>
 				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="removeFlashLightBattery">
 					<requirement name="PlayerItemCount" item_name="resourceNiCdBattery" operation="GT" value="0"/></triggered_effect>
 			</effect_group>
@@ -387,6 +400,7 @@
 				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffNVGActive"/>
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Bright" intensity="0" fade="0"/>
 				<triggered_effect trigger="onSelfBuffStart" action="SetPartActive" part="HeadLightTPV" active="false"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetPartActive" part="HeadLightFPV" active="false"/>
 			</effect_group>
 		</buff>
 		
@@ -398,6 +412,7 @@
 			<display_value value="batteryNVG"/>
 			<display_value_key value="NVG: {0:0}%"/>
 			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffNightVision"/>
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Bright" intensity="0.75" fade="0"/>
 				<triggered_effect trigger="onSelfBuffStart" action="SetPartActive" part="HeadLightTPV" active="@!.IsFPV"/>
 				<triggered_effect trigger="onSelfBuffStart" action="SetPartActive" part="HeadLightFPV" active="@.IsFPV"/>
@@ -416,6 +431,7 @@
 				</triggered_effect>
 				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Bright" intensity="0" fade="0"/>
 				<triggered_effect trigger="onSelfBuffRemove" action="SetPartActive" part="HeadLightTPV" active="false"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffNightVision"/>
 			</effect_group>
 			
 			<effect_group>
@@ -429,6 +445,9 @@
 			<duration value=".1"/>
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffNVGActive"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Bright" intensity="0" fade="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetPartActive" part="HeadLightTPV" active="false"/>
+				<triggered_effect trigger="onSelfBuffStart" action="SetPartActive" part="HeadLightFPV" active="false"/>
 				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="removeNVGBattery">
 					<requirement name="PlayerItemCount" item_name="resourceNiCdBattery" operation="GT" value="0"/></triggered_effect>
 			</effect_group>

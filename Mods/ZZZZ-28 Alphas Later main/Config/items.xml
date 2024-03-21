@@ -2978,8 +2978,8 @@
 			<requirement name="CVarCompare" cvar="batteryNVG" operation="GT" value="0"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffNightVision"/>			
 			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffNightVision"/>
+			<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffNightVision"/>			
 		</effect_group>
 	</append>
 </configs>
