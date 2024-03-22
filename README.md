@@ -381,6 +381,8 @@ WMMTraderQuestMap				- Author: w00kien00kie
 CustomDifficulty				- Author: Mythix
 
 Trader Quest addendum				- Author: CautiousPancake
+
+Radiated Wasteland (xml code)	- Author: gemini
 						
 ### Also a huge thank you to Frantic_Dan & redbeardt for the custom HUD base code, main menu localization changes, and to YubiNashi and Frantic_Dan for ideas/balancing and playtesting.
 
