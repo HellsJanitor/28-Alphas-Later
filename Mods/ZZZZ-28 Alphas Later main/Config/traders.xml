@@ -170,4 +170,6 @@
 		<item name="modArmorTripleStoragePocket"/>
 		<item name="modArmorAdvancedMuffledConnectors"/>
 	</set>
+	
+	<set xpath="//trader_item_group[@name='constructionSupplies']//item[@name='resourceConcreteMix']/@count">10,50</set>
 </configs>

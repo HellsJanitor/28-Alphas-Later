@@ -116,7 +116,7 @@
 			<property name="DisplayType" value="blockTerrainFertile"/>
 		</block>
 		
-		<!-- *** chicken coop *** -->
+	<!-- *** chicken coop *** -->
 		<block name="ctnChickenCoop">
 			<property name="CustomIcon" value="ChickenCoop"/>
 			<property name="Class" value="PassiveCollector, IDCCoreV2"/>
@@ -171,7 +171,7 @@
 			
 		</block>
 
-		<!-- *** dew collector *** -->
+	<!-- *** dew collector *** -->
 		<block name="cntAdvancedDewCollector">
 			<property name="CustomIcon" value="cntDewCollector"/>
 			<property name="Class" value="PassiveCollector, IDCCoreV2"/>
@@ -235,7 +235,7 @@
 			<modifier name="adcBigBarrel" effect="OutputSlots" value="2"/><!-- Additive effect -->
 		</block>
 	
-		<!-- *** rain catcher for buckets of water *** -->
+	<!-- *** rain catcher for buckets of water *** -->
 		<block name="cntRainCollector">
 			<property name="CustomIcon" value="cntDewCollector"/>
 			<property name="Class" value="PassiveCollector, IDCCoreV2"/>
@@ -290,7 +290,7 @@
 			<item_conversion item="bucketRiverWater" lower_range="1" upper_range="1"/>
 		</block>
 	
-		<!-- *** chicken trap *** -->
+	<!-- *** chicken trap *** -->
 		<block name="cntIDCAnimalSnare">
 			<property name="CustomIcon" value="AnimalSnare"/>
 			<property name="Class" value="PassiveCollector, IDCCoreV2"/>
@@ -353,7 +353,7 @@
 			<modifier name="plantedGraceCorn1" effect="Speed" value="-0.2"/>
 		</block>
 	
-		<!-- *** beehive and treestump *** -->
+	<!-- *** beehive and treestump *** -->
 		<block name="ctnIDCBeehive">
 			<property name="CustomIcon" value="Beehive"/>
 			<property name="Class" value="PassiveCollector, IDCCoreV2"/>
@@ -431,7 +431,7 @@
 			<property name="FilterTags" value="MC_outdoor,SC_trees"/>
 		</block>
 
-		<!-- *** player wood burning stove *** -->
+	<!-- *** player wood burning stove *** -->
 		<block name="playerWoodBurningStove">
 			<property name="Class" value="Campfire"/>
 			<property name="CustomIcon" value="cntWoodBurningStove"/>
@@ -485,7 +485,7 @@
 			<property name="Fuels" value="resourceWood,100"/>
 		</block>
 		
-		<!-- *** wasteland boulders *** -->
+	<!-- *** wasteland boulders *** -->
 		<block name="rockWastelandRockResource"><!-- biome decoration -->
 			<property name="CreativeMode" value="Dev"/>
 			<property name="DisplayType" value="blockHardenedMulti"/>
@@ -559,7 +559,7 @@
 			<property name="DowngradedToEvent" value="action_block_DowngradedTo"/>
 		</block>
 		
-		<!-- *** wasteland terrain *** -->
+	<!-- *** wasteland terrain *** -->
 		<block name="terrWastelandDestroyedStone">
 			<property name="CanMobsSpawnOn" value="true"/>
 			<property name="DisplayType" value="blockTerrainFertile"/>
@@ -843,7 +843,7 @@
 			<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
 		</block>
 	
-		<!-- *** jail doors/bars variant helper *** -->
+	<!-- *** jail doors/bars variant helper *** -->
 		<block name="JailVariantHelper">
 			<property name="Extends" value="jailDoorWhite"/>
 			<property name="CreativeMode" value="Player"/>
@@ -857,7 +857,7 @@
 			<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
 		</block>
 	
-		<!-- *** player craftable doors *** -->
+	<!-- *** player craftable doors *** -->
 		<block name="playerDoorSingleVariantHelper">
 			<property name="Extends" value="exteriorHouseDoorWhite"/>
 			<property name="CreativeMode" value="Player"/>
@@ -1053,7 +1053,7 @@
 			<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
 		</block>
 	
-		<!-- *** hoist variant helper *** -->
+	<!-- *** hoist variant helper *** -->
 		<block name="HoistVariantHelper">
 			<property name="Extends" value="decoHoistHook"/>
 			<property name="CreativeMode" value="Player"/>
@@ -1067,7 +1067,7 @@
 			<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
 		</block>
 	
-		<!-- *** barbed wire variant helper *** -->
+	<!-- *** barbed wire variant helper *** -->
 		<block name="barbedWireSpindleVariantHelper">
 			<property name="Extends" value="barbedWireSpindle1m"/>
 			<property name="CreativeMode" value="Player"/>
@@ -1198,6 +1198,19 @@
 		<property name="SortOrder2" value="0000"/>
 		<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
 	</set>
+	
+	<!-- *** adds a chance to harvest a battery from various blocks *** -->
+	<insertafter xpath="//block[@name='wallClock']//drop[@name='resourceElectricParts']">
+	<drop event="Destroy" name="resourceNiCdBattery" count="1" prob=".5" tag="salvageHarvest"/>
+	</insertafter>
+	
+	<insertafter xpath="//block[@name='lanternDecorLightWhite']//drop[@name='resourceScrapIron']">
+	<drop event="Destroy" name="resourceNiCdBattery" count="1" prob=".5" tag="salvageHarvest"/>
+	</insertafter>
+	
+	<insertafter xpath="//block[@name='cntVendingMachine2Broken']//drop[@name='resourceScrapIron']">
+	<drop event="Destroy" name="resourceNiCdBattery" count="1" prob=".5" tag="salvageHarvest"/>
+	</insertafter>
 	
 	<!-- *** adds tool slots to workbench *** -->
 	<set xpath="//block[@name='workbench']/property[2]//property[1]/@value">tools,output</set>
