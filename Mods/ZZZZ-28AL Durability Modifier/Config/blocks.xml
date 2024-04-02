@@ -1,0 +1,16 @@
+<Hells_Janitor>
+	<!-- *** adds a chance to harvest a battery from various blocks *** -->
+	<insertafter xpath="//block[@name='wallClock']//drop[@name='resourceElectricParts']">
+		<drop event="Destroy" name="resourceNiCdBattery" count="1" prob=".2" tag="salvageHarvest"/>
+	</insertafter>
+	<insertafter xpath="//block[@name='lanternDecorLightWhite']//drop[@name='resourceScrapIron']">
+		<drop event="Destroy" name="resourceNiCdBattery" count="1" prob=".2" tag="salvageHarvest"/>
+	</insertafter>
+	<insertafter xpath="//block[@name='cntVendingMachine2Broken']//drop[@name='resourceScrapIron']">
+		<drop event="Destroy" name="resourceNiCdBattery" count="1" prob=".2" tag="salvageHarvest"/>
+	</insertafter>
+	
+	<append xpath="//block[starts-with(@name,'flashlight')]">
+		<drop event="Destroy" name="resourceNiCdBattery" count="1" prob=".2" tag="salvageHarvest"/>
+	</append>
+</Hells_Janitor>

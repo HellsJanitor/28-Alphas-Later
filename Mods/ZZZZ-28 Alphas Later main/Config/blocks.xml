@@ -952,7 +952,7 @@
 		<block name="playerSlidingDoorVariantHelper">
 			<property name="Extends" value="houseSlidingDoorWhite"/>
 			<property name="CreativeMode" value="Player"/>
-			<property name="CustomIcon" value="houseSlidingDoor"/>
+			<property name="CustomIcon" value="houseSlidingDoorWhite"/>
 			<property name="ItemTypeIcon" value="all_blocks"/>
 			<property name="DescriptionKey" value="playerSlidingDoorVariantHelperBlock"/>
 			<property name="SelectAlternates" value="true"/>
@@ -1197,20 +1197,7 @@
 		<property name="SortOrder1" value="U200"/>
 		<property name="SortOrder2" value="0000"/>
 		<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
-	</set>
-	
-	<!-- *** adds a chance to harvest a battery from various blocks *** -->
-	<insertafter xpath="//block[@name='wallClock']//drop[@name='resourceElectricParts']">
-	<drop event="Destroy" name="resourceNiCdBattery" count="1" prob=".5" tag="salvageHarvest"/>
-	</insertafter>
-	
-	<insertafter xpath="//block[@name='lanternDecorLightWhite']//drop[@name='resourceScrapIron']">
-	<drop event="Destroy" name="resourceNiCdBattery" count="1" prob=".5" tag="salvageHarvest"/>
-	</insertafter>
-	
-	<insertafter xpath="//block[@name='cntVendingMachine2Broken']//drop[@name='resourceScrapIron']">
-	<drop event="Destroy" name="resourceNiCdBattery" count="1" prob=".5" tag="salvageHarvest"/>
-	</insertafter>
+	</set>	
 	
 	<!-- *** adds tool slots to workbench *** -->
 	<set xpath="//block[@name='workbench']/property[2]//property[1]/@value">tools,output</set>

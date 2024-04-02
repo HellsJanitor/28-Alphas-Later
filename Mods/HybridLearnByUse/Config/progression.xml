@@ -103,18 +103,13 @@
 			<effect_group>
 				<requirement name="ItemHasTags" tags="perkDemolitionsExpert"/>
 				<requirement name="ProgressionLevel" progression_name="lbu_DemolitionsExpert" operation="LT" value="100"/>
-				<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" cvar="lbu_DemolitionsExpert_XP" operation="add" value="10">
+				<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="lbu_Demolition_XP" operation="add" value="11">
+					<requirement name="TriggerHasTags" tags="perkGreatHeistSafes"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfExplosionDamagedOther" action="ModifyCVar" cvar="lbu_DemolitionsExpert_XP" operation="add" value="10">
 					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
 				</triggered_effect>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="lbu_DemolitionsExpert_XP" operation="add" value="24"/>
-			</effect_group>
-			<effect_group>
-				<requirement name="ItemHasTags" tags="perkDemolitionsExpert"/>
-				<requirement name="ProgressionLevel" progression_name="lbu_DemolitionsExpert" operation="LT" value="100"/>
-				<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" cvar="lbu_DemolitionsExpert_XP" operation="add" value="20">
-					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="lbu_DemolitionsExpert_XP" operation="add" value="48"/>
 			</effect_group>
 			<!--Increase ProgressLevel if xp greater than value for next level-->
 			<effect_group>
@@ -164,8 +159,8 @@
 				<requirement name="ItemHasTags" tags="perkJavelinMaster"/>
 				<passive_effect name="BlockDamage" operation="perc_add" value=".01,1" level="1,100" tags="perkJavelinMaster"/>
 				<passive_effect name="EntityDamage" operation="perc_add" value=".01,1" level="1,100" tags="perkJavelinMaster"/>
-				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.1" level="1,100" tags="primary"/>
-				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.2" level="1,100" tags="secondary"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.05,-.25" level="1,100" tags="primary"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.05,-.50" level="1,100" tags="secondary"/>
 			</effect_group>
 			<!--apply any level xp gain for damage or kill triggers-->
 			<effect_group>
@@ -215,27 +210,23 @@
 			<effect_group>
 				<requirement name="ItemHasTags" tags="perkJavelinMaster"/>
 				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffInjuryCrippled01">
-					<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="GTE" value="1"/>
-					<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="LT" value="15"/>
+					<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="Equals" value="1"/>
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
 				</triggered_effect>
 				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffInjuryCrippled01">
-					<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="GTE" value="15"/>
-					<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="LT" value="30"/>
+					<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="Equals" value="2"/>
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
 				</triggered_effect>
 				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffInjuryCrippled01">
-					<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="GTE" value="30"/>
-					<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="LT" value="45"/>
+					<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="Equals" value="3"/>
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="60"/>
 				</triggered_effect>
 				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffInjuryCrippled01">
-					<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="GTE" value="45"/>
-					<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="LT" value="60"/>
+					<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="Equals" value="4"/>
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="80"/>
 				</triggered_effect>
 				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffInjuryCrippled01">
-					<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="GTE" value="60"/>
+					<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="Equals" value="5"/>
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="100"/>
 				</triggered_effect>
 			</effect_group>
@@ -268,7 +259,9 @@
 				<requirement name="ProgressionLevel" progression_name="lbu_Salvage" operation="LT" value="100"/>
 				<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="lbu_Salvage_XP" operation="add" value="12"/>
 				<!-- add additional damage for destruction-->
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="lbu_Salvage_XP" operation="add" value="20"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="lbu_Salvage_XP" operation="add" value="20">
+					<requirement name="CVarCompare" cvar="lbu_Salvage_XP" operation="GT" value="0"/>
+				</triggered_effect>
 			</effect_group>
 			<!--Increase ProgressLevel if xp greater than value for next level-->
 			<effect_group>
@@ -370,8 +363,8 @@
 				<passive_effect name="EntityDamage" operation="perc_add" value="0.01,2" level="1,100" tags="perkPummelPete">
 					<requirement name="CVarCompare" cvar="_stunned" operation="Equals" value="1" target="other"/>
 				</passive_effect>
-				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.1" level="1,100" tags="primary"/>
-				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.2" level="1,100" tags="secondary"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.25" level="1,100" tags="primary"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.50" level="1,100" tags="secondary"/>
 				<!--For each level, Kills return +0.3% to Stamina up to a total of 15 at level 50 (half of Skull Pummel Pete lvl 5)-->
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="@lbu_PP_StamIncrement" delay="1.0"/>
 			</effect_group>
@@ -483,8 +476,8 @@
 				<requirement name="ItemHasTags" tags="perkSkullCrusher"/>
 				<passive_effect name="BlockDamage" operation="perc_add" value=".01,1" level="1,100" tags="perkSkullCrusher"/>
 				<passive_effect name="EntityDamage" operation="perc_add" value=".01,0.50" level="1,100" tags="perkSkullCrusher"/>
-				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.1" level="1,100" tags="primary"/>
-				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.2" level="1,100" tags="secondary"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.25" level="1,100" tags="primary"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.50" level="1,100" tags="secondary"/>
 				<!--Kills return Stamina: +0.3% stamina for each level up to max of 15 at level 50 (half of Skull Crusher Perk lvl 5)-->
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="@lbu_SC_StamIncrement" delay="1.0"/>
 			</effect_group>
@@ -597,7 +590,7 @@
 				<requirement name="ItemHasTags" tags="perkMiner69r,perkMotherLode"/>
 				<passive_effect name="BlockDamage" operation="perc_add" value="0.01,1.5" level="1,100"/>
 				<passive_effect name="EntityDamage" operation="perc_add" value="0.01,0.50" level="1,100"/>
-				<passive_effect name="HarvestCount" operation="perc_add" value="0.01,1" level="1,100" tags="oreWoodHarvest"/>
+				<passive_effect name="HarvestCount" operation="perc_add" value="0.01,1" level="1,100"/>
 				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.25" level="1,100" tags="primary"/>/>
 				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.50" level="1,100" tags="secondary"/>
 			</effect_group>
@@ -645,8 +638,8 @@
 				<requirement name="!ItemHasTags" tags="perkTurrets"/>
 				<passive_effect name="BlockDamage" operation="perc_add" value=".01,1" level="1,100" tags="perkBrawler"/>
 				<passive_effect name="EntityDamage" operation="perc_add" value=".01,0.50" level="1,100" tags="perkBrawler"/>
-				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.1" level="1,100" tags="primary"/>
-				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.2" level="1,100" tags="secondary"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.25" level="1,100" tags="primary"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.50" level="1,100" tags="secondary"/>
 				<!--double on power attack-->
 				<!--Kills return Stamina: +0.3% stamina for each level up to max of 15 at level 50 (half of Brawler Perk lvl 5)-->
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="@lbu_Brawler_StamIncrement" delay="1.0"/>
@@ -923,7 +916,7 @@
 			</effect_group>
 		</perk>
 		<!-- end gunslinger Learn By Use (lbu)-->
-		<!-- begin Deep Cuts Learn By Use (lbu)-->
+		<!-- begin Deap Cuts Learn By Use (lbu)-->
 		<perk name="lbu_DeepCuts" max_level="100" parent="lbu_AgilitySkills" base_skill_point_cost="0" name_key="lbu_DeepCutsName" desc_key="lbu_DeepCutsDesc" long_desc_key="lbu_DeepCutsDesc" icon="ui_game_symbol_deep_cuts">
 			<!--initialise if first time-->
 			<effect_group>
@@ -938,9 +931,9 @@
 				<requirement name="ItemHasTags" tags="perkDeepCuts"/>
 				<passive_effect name="BlockDamage" operation="perc_add" value=".01,1" level="1,100" tags="perkDeepCuts"/>
 				<passive_effect name="EntityDamage" operation="perc_add" value=".01,.50" level="1,100" tags="perkDeepCuts"/>
-				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.1" level="1,100" tags="primary"/>
-				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.2" level="1,100" tags="secondary"/>
-				<!--Kills return Stamina: +0.3% stamina for each level up to max of 15 at level 50 (half of Deep Cuts lvl 5)-->
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.25" level="1,100" tags="primary"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.50" level="1,100" tags="secondary"/>
+				<!--Kills return Stamina: +0.3% stamina for each level up to max of 15 at level 50 (half of Deap Cuts lvl 5)-->
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="@lbu_DCuts_StamIncrement" delay="1.0"/>
 			</effect_group>
 			<!--apply any level xp gain for damage or kill triggers-->
@@ -963,11 +956,11 @@
 				</triggered_effect>
 				<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" cvar="lbu_DeepCuts_XP" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddProgressionLevel" progression_name="lbu_DeepCuts" level="1"/>
-				<!--Kills return Stamina: +0.3% stamina for each level up to max of 15 at level 50 (half of Deep Cuts lvl 5)-->
+				<!--Kills return Stamina: +0.3% stamina for each level up to max of 15 at level 50 (half of Deap Cuts lvl 5)-->
 				<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" cvar="lbu_DCuts_StamIncrement" operation="add" value="0.3">
 					<requirement name="CVarCompare" cvar="@lbu_DCuts_StamIncrement" operation="LTE" value="15"/>
 				</triggered_effect>
-				<triggered_effect trigger="onSelfDamagedOther" action="ShowToolbeltMessage" message="Deep Cuts Skill Increased!"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="ShowToolbeltMessage" message="Deap Cuts Skill Increased!"/>
 				<!--if max level then give free Skill Point-->
 				<triggered_effect trigger="onSelfDamagedOther" action="CallGameEvent" event="lbu_action_give_points">
 					<requirement name="ProgressionLevel" progression_name="lbu_DeepCuts" operation="EQ" value="100"/>
@@ -1124,7 +1117,7 @@
 				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
 			</effect_group>
 		</perk>
-		<!-- end Deep Cuts Learn By Use (lbu)-->
+		<!-- end Deap Cuts Learn By Use (lbu)-->
 		<!-- begin Electrocutioner Learn By Use (lbu)-->
 		<perk name="lbu_Electrocutioner" max_level="100" parent="lbu_IntellectSkills" base_skill_point_cost="0" name_key="lbu_ElectrocutionerName" desc_key="lbu_ElectrocutionerDesc" long_desc_key="lbu_ElectrocutionerDesc" icon="ui_game_symbol_electric_power">
 			<!--initialise if first time-->
@@ -1140,8 +1133,8 @@
 				<requirement name="ItemHasTags" tags="perkElectrocutioner"/>
 				<passive_effect name="BlockDamage" operation="perc_add" value=".01,1" level="1,100" tags="perkElectrocutioner"/>
 				<passive_effect name="EntityDamage" operation="perc_add" value=".01,.50" level="1,100" tags="perkElectrocutioner"/>
-				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.1" level="1,100" tags="primary"/>
-				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.2" level="1,100" tags="secondary"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.25" level="1,100" tags="primary"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.01,-.50" level="1,100" tags="secondary"/>
 				<!--Kills return Stamina: +0.3% stamina for each level up to max of 15 at level 50 (half of Electrocutioner lvl 5)-->
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="@lbu_Elec_StamIncrement" delay="1.0"/>
 			</effect_group>

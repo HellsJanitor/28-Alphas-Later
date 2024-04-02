@@ -7,6 +7,9 @@
 
 ### 99% of features are now functioning correctly in multiplayer. "Headshots only" remains non-functional on dedicated servers ###
 
+Update 27/03/24
+added deco flashlights for harvesting small batteries, and lowered chance of battery to 20%
+
 Update 26/03/24
 Small batteries can be wrenched from clocks, lanterns and broken vending machines (50% chance on destroy)
 Localization tweaks

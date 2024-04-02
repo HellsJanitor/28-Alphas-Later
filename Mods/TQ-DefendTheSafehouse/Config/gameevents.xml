@@ -3,7 +3,7 @@
 	<insertAfter xpath="/gameevents/action_sequence[@name='action_block_DowngradedTo']">
 	
 	
-	<!-- TIER 1 start -->
+		<!-- TIER 1 start -->
 		<action_sequence name="tier1_courier_rescue_start">
 			<action class="AddBuff">
 				<property name="phase" value="1"/>
@@ -28,7 +28,7 @@
 		<action_sequence name="tier1_courier_rescue_mainLoop">
 		
 			<!-- refund_inactivity is the magic property that will stop gameevent after 40-50 seconds - set to false to make it run forever -->
-			<property name="refund_inactivity" value="false" />
+			<property name="refund_inactivity" value="false"/>
 			
 			
 			<action class="AddBuff">
@@ -43,7 +43,7 @@
 			</action>
 			<action class="SpawnEntity">
 				<property name="phase" value="3"/>
-				<property name="entity_group" value="BloodMoonHorde" />
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="4"/>
 				<property name="air_spawn" value="true"/>
 				<property name="add_to_group" value="safehouse"/>
@@ -57,7 +57,7 @@
 			
 			<action class="Delay">
 				<property name="phase" value="5"/>
-				<property name="time" value="5" />
+				<property name="time" value="5"/>
 			</action>
 			
 			
@@ -72,18 +72,18 @@
 				
 				<!-- remove buff if player has killed 25 -->
 				<decision class="If">
-				<requirement class="CVar">
-					<property name="operation" value="GTE"/>
-					<property name="cvar" value="cvar_t1_courier_rescue_kill_counter"/>
-					<property name="value" value="25"/>
-				</requirement>
-				<action class="AddBuff">
-					<property name="phase" value="1" />
-					<property name="removes_buff" value="buffSpawner1b" param1="removebuff"/>
-				</action>
+					<requirement class="CVar">
+						<property name="operation" value="GTE"/>
+						<property name="cvar" value="cvar_t1_courier_rescue_kill_counter"/>
+						<property name="value" value="25"/>
+					</requirement>
+					<action class="AddBuff">
+						<property name="phase" value="1"/>
+						<property name="removes_buff" value="buffSpawner1b" param1="removebuff"/>
+					</action>
 
 
-			</decision>
+				</decision>
 			
 				<!-- spawn more if less than 5 alive -->
 				<decision class="If">
@@ -96,7 +96,7 @@
 				
 					<action class="SpawnEntity">
 						<property name="phase" value="1"/>
-						<property name="entity_group" value="BloodMoonHorde" />
+						<property name="entity_group" value="SleeperGSList"/>
 						<property name="spawn_count" value="1"/>
 						<property name="air_spawn" value="true"/>
 						<property name="add_to_group" value="safehouse"/>
@@ -108,15 +108,15 @@
 						<property name="phase" value="2"/>
 					</action>
 					<action class="Delay">
-					<property name="phase" value="3" />
-					<property name="time" value="3" />
-			</action>
+						<property name="phase" value="3"/>
+						<property name="time" value="3"/>
+					</action>
 					
 					<action class="RageZombies">
-					<property name="phase" value="4" />
-						<property name="time" value="10" />
-						<property name="speed_percent" value="10.0" />
-						<property name="target_group" value="safehouse" />
+						<property name="phase" value="4"/>
+						<property name="time" value="10"/>
+						<property name="speed_percent" value="10.0"/>
+						<property name="target_group" value="safehouse"/>
 					</action>
 				</decision>
 			</loop>
@@ -142,7 +142,7 @@
 			</decision>
 		</action_sequence>
 		
-			<!-- TIER 2 start -->
+		<!-- TIER 2 start -->
 		<action_sequence name="tier2_courier_rescue_start">
 			<action class="AddBuff">
 				<property name="phase" value="1"/>
@@ -165,7 +165,7 @@
 		<action_sequence name="tier2_courier_rescue_mainLoop">
 
 			<!-- refund_inactivity is the magic property that will stop gameevent after 40-50 seconds - set to false to make it run forever -->
-			<property name="refund_inactivity" value="false" />
+			<property name="refund_inactivity" value="false"/>
 
 			
 			<action class="AddBuff">
@@ -178,7 +178,7 @@
 			</action>
 			<action class="SpawnEntity">
 				<property name="phase" value="3"/>
-				<property name="entity_group" value="BloodMoonHorde" />
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="9"/>
 				<property name="air_spawn" value="true"/>
 				<property name="add_to_group" value="safehouse"/>
@@ -190,9 +190,9 @@
 				<property name="phase" value="4"/>
 			</action>
 			
-						<action class="Delay">
+			<action class="Delay">
 				<property name="phase" value="5"/>
-				<property name="time" value="5" />
+				<property name="time" value="5"/>
 			</action>
 			
 			
@@ -204,16 +204,16 @@
 				
 				<!-- remove buff if player has killed 50 -->
 				<decision class="If">
-				<requirement class="CVar">
-					<property name="operation" value="GTE"/>
-					<property name="cvar" value="cvar_t2_courier_rescue_kill_counter"/>
-					<property name="value" value="50"/>
-				</requirement>
-				<action class="AddBuff">
-					<property name="phase" value="1"/>
-					<property name="removes_buff" value="buffSpawner2b" param1="removebuff"/>
-				</action>
-			</decision>
+					<requirement class="CVar">
+						<property name="operation" value="GTE"/>
+						<property name="cvar" value="cvar_t2_courier_rescue_kill_counter"/>
+						<property name="value" value="50"/>
+					</requirement>
+					<action class="AddBuff">
+						<property name="phase" value="1"/>
+						<property name="removes_buff" value="buffSpawner2b" param1="removebuff"/>
+					</action>
+				</decision>
 			
 				<!-- spawn more if less than 10 alive -->
 				<decision class="If">
@@ -224,7 +224,7 @@
 					</requirement>
 					<action class="SpawnEntity">
 						<property name="phase" value="1"/>
-						<property name="entity_group" value="BloodMoonHorde" />
+						<property name="entity_group" value="SleeperGSList"/>
 						<property name="spawn_count" value="1"/>
 						<property name="air_spawn" value="true"/>
 						<property name="add_to_group" value="safehouse"/>
@@ -236,16 +236,16 @@
 						<property name="phase" value="2"/>
 					</action>
 					
-										<action class="Delay">
-					<property name="phase" value="3" />
-					<property name="time" value="3" />
-			</action>
+					<action class="Delay">
+						<property name="phase" value="3"/>
+						<property name="time" value="3"/>
+					</action>
 					
 					<action class="RageZombies">
 						<property name="phase" value="4"/>
-						<property name="time" value="10" />
-						<property name="speed_percent" value="10.0" />
-						<property name="target_group" value="safehouse" />
+						<property name="time" value="10"/>
+						<property name="speed_percent" value="10.0"/>
+						<property name="target_group" value="safehouse"/>
 					</action>
 				</decision>
 			</loop>
@@ -271,7 +271,7 @@
 			</decision>
 		</action_sequence>
 		
-	<!-- TIER 3 start -->
+		<!-- TIER 3 start -->
 		<action_sequence name="tier3_courier_rescue_start">
 			<action class="AddBuff">
 				<property name="phase" value="1"/>
@@ -293,7 +293,7 @@
 		<action_sequence name="tier3_courier_rescue_mainLoop">
 
 			<!-- refund_inactivity is the magic property that will stop gameevent after 40-50 seconds - set to false to make it run forever -->
-			<property name="refund_inactivity" value="false" />
+			<property name="refund_inactivity" value="false"/>
 
 			
 			<action class="AddBuff">
@@ -306,7 +306,7 @@
 			</action>
 			<action class="SpawnEntity">
 				<property name="phase" value="3"/>
-				<property name="entity_group" value="BloodMoonHorde" />
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="14"/>
 				<property name="air_spawn" value="true"/>
 				<property name="add_to_group" value="safehouse"/>
@@ -318,9 +318,9 @@
 				<property name="phase" value="4"/>
 			</action>
 			
-						<action class="Delay">
+			<action class="Delay">
 				<property name="phase" value="5"/>
-				<property name="time" value="5" />
+				<property name="time" value="5"/>
 			</action>
 			
 			<loop class="While">
@@ -331,16 +331,16 @@
 				
 				<!-- remove buff if player has killed 75 -->
 				<decision class="If">
-				<requirement class="CVar">
-					<property name="operation" value="GTE"/>
-					<property name="cvar" value="cvar_t3_courier_rescue_kill_counter"/>
-					<property name="value" value="75"/>
-				</requirement>
-				<action class="AddBuff">
-					<property name="phase" value="1"/>
-					<property name="removes_buff" value="buffSpawner3b" param1="removebuff"/>
-				</action>
-			</decision>
+					<requirement class="CVar">
+						<property name="operation" value="GTE"/>
+						<property name="cvar" value="cvar_t3_courier_rescue_kill_counter"/>
+						<property name="value" value="75"/>
+					</requirement>
+					<action class="AddBuff">
+						<property name="phase" value="1"/>
+						<property name="removes_buff" value="buffSpawner3b" param1="removebuff"/>
+					</action>
+				</decision>
 			
 				<!-- spawn more if less than 15 alive -->
 				<decision class="If">
@@ -351,7 +351,7 @@
 					</requirement>
 					<action class="SpawnEntity">
 						<property name="phase" value="1"/>
-						<property name="entity_group" value="BloodMoonHorde" />
+						<property name="entity_group" value="SleeperGSList"/>
 						<property name="spawn_count" value="1"/>
 						<property name="air_spawn" value="true"/>
 						<property name="add_to_group" value="safehouse"/>
@@ -363,16 +363,16 @@
 						<property name="phase" value="2"/>
 					</action>
 					
-										<action class="Delay">
-					<property name="phase" value="3" />
-					<property name="time" value="3" />
-			</action>
+					<action class="Delay">
+						<property name="phase" value="3"/>
+						<property name="time" value="3"/>
+					</action>
 					
 					<action class="RageZombies">
 						<property name="phase" value="4"/>
-						<property name="time" value="10" />
-						<property name="speed_percent" value="10.0" />
-						<property name="target_group" value="safehouse" />
+						<property name="time" value="10"/>
+						<property name="speed_percent" value="10.0"/>
+						<property name="target_group" value="safehouse"/>
 					</action>
 				</decision>
 			</loop>
@@ -396,7 +396,7 @@
 					<property name="removes_buff" value="buffSpawner3b" param1="removebuff"/>
 				</action>
 			</decision>
-		</action_sequence>	
+		</action_sequence>
 
 		<!-- TIER 4 start -->
 		<action_sequence name="tier4_courier_rescue_start">
@@ -420,7 +420,7 @@
 		<action_sequence name="tier4_courier_rescue_mainLoop">
 
 			<!-- refund_inactivity is the magic property that will stop gameevent after 40-50 seconds - set to false to make it run forever -->
-			<property name="refund_inactivity" value="false" />
+			<property name="refund_inactivity" value="false"/>
 
 			
 			<action class="AddBuff">
@@ -433,7 +433,7 @@
 			</action>
 			<action class="SpawnEntity">
 				<property name="phase" value="3"/>
-				<property name="entity_group" value="BloodMoonHorde" />
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="20"/>
 				<property name="air_spawn" value="true"/>
 				<property name="add_to_group" value="safehouse"/>
@@ -445,9 +445,9 @@
 				<property name="phase" value="4"/>
 			</action>
 			
-						<action class="Delay">
+			<action class="Delay">
 				<property name="phase" value="5"/>
-				<property name="time" value="5" />
+				<property name="time" value="5"/>
 			</action>
 			
 			<loop class="While">
@@ -458,16 +458,16 @@
 				
 				<!-- remove buff if player has killed 100 -->
 				<decision class="If">
-				<requirement class="CVar">
-					<property name="operation" value="GTE"/>
-					<property name="cvar" value="cvar_t4_courier_rescue_kill_counter"/>
-					<property name="value" value="100"/>
-				</requirement>
-				<action class="AddBuff">
-					<property name="phase" value="1"/>
-					<property name="removes_buff" value="buffSpawner4b" param1="removebuff"/>
-				</action>
-			</decision>
+					<requirement class="CVar">
+						<property name="operation" value="GTE"/>
+						<property name="cvar" value="cvar_t4_courier_rescue_kill_counter"/>
+						<property name="value" value="100"/>
+					</requirement>
+					<action class="AddBuff">
+						<property name="phase" value="1"/>
+						<property name="removes_buff" value="buffSpawner4b" param1="removebuff"/>
+					</action>
+				</decision>
 			
 				<!-- spawn more if less than 20 alive -->
 				<decision class="If">
@@ -478,7 +478,7 @@
 					</requirement>
 					<action class="SpawnEntity">
 						<property name="phase" value="1"/>
-						<property name="entity_group" value="BloodMoonHorde" />
+						<property name="entity_group" value="SleeperGSList"/>
 						<property name="spawn_count" value="1"/>
 						<property name="air_spawn" value="true"/>
 						<property name="add_to_group" value="safehouse"/>
@@ -490,16 +490,16 @@
 						<property name="phase" value="2"/>
 					</action>
 					
-										<action class="Delay">
-					<property name="phase" value="3" />
-					<property name="time" value="3" />
-			</action>
+					<action class="Delay">
+						<property name="phase" value="3"/>
+						<property name="time" value="3"/>
+					</action>
 					
 					<action class="RageZombies">
 						<property name="phase" value="4"/>
-						<property name="time" value="10" />
-						<property name="speed_percent" value="10.0" />
-						<property name="target_group" value="safehouse" />
+						<property name="time" value="10"/>
+						<property name="speed_percent" value="10.0"/>
+						<property name="target_group" value="safehouse"/>
 					</action>
 				</decision>
 			</loop>
@@ -525,7 +525,7 @@
 			</decision>
 		</action_sequence>
 		
-			<!-- TIER 5 start -->
+		<!-- TIER 5 start -->
 		<action_sequence name="tier5_courier_rescue_start">
 			<action class="AddBuff">
 				<property name="phase" value="1"/>
@@ -547,7 +547,7 @@
 		<action_sequence name="tier5_courier_rescue_mainLoop">
 
 			<!-- refund_inactivity is the magic property that will stop gameevent after 40-50 seconds - set to false to make it run forever -->
-			<property name="refund_inactivity" value="false" />
+			<property name="refund_inactivity" value="false"/>
 
 			
 			<action class="AddBuff">
@@ -560,7 +560,7 @@
 			</action>
 			<action class="SpawnEntity">
 				<property name="phase" value="3"/>
-				<property name="entity_group" value="BloodMoonHorde" />
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="25"/>
 				<property name="air_spawn" value="true"/>
 				<property name="add_to_group" value="safehouse"/>
@@ -572,9 +572,9 @@
 				<property name="phase" value="4"/>
 			</action>
 			
-						<action class="Delay">
+			<action class="Delay">
 				<property name="phase" value="5"/>
-				<property name="time" value="5" />
+				<property name="time" value="5"/>
 			</action>
 			
 			
@@ -586,16 +586,16 @@
 				
 				<!-- remove buff if player has killed 125 -->
 				<decision class="If">
-				<requirement class="CVar">
-					<property name="operation" value="GTE"/>
-					<property name="cvar" value="cvar_t5_courier_rescue_kill_counter"/>
-					<property name="value" value="125"/>
-				</requirement>
-				<action class="AddBuff">
-					<property name="phase" value="1"/>
-					<property name="removes_buff" value="buffSpawner5b" param1="removebuff"/>
-				</action>
-			</decision>
+					<requirement class="CVar">
+						<property name="operation" value="GTE"/>
+						<property name="cvar" value="cvar_t5_courier_rescue_kill_counter"/>
+						<property name="value" value="125"/>
+					</requirement>
+					<action class="AddBuff">
+						<property name="phase" value="1"/>
+						<property name="removes_buff" value="buffSpawner5b" param1="removebuff"/>
+					</action>
+				</decision>
 			
 				<!-- spawn more if less than 25 alive -->
 				<decision class="If">
@@ -606,7 +606,7 @@
 					</requirement>
 					<action class="SpawnEntity">
 						<property name="phase" value="1"/>
-						<property name="entity_group" value="BloodMoonHorde" />
+						<property name="entity_group" value="SleeperGSList"/>
 						<property name="spawn_count" value="1"/>
 						<property name="air_spawn" value="true"/>
 						<property name="add_to_group" value="safehouse"/>
@@ -618,16 +618,16 @@
 						<property name="phase" value="2"/>
 					</action>
 					
-										<action class="Delay">
-					<property name="phase" value="3" />
-					<property name="time" value="3" />
-			</action>
+					<action class="Delay">
+						<property name="phase" value="3"/>
+						<property name="time" value="3"/>
+					</action>
 					
 					<action class="RageZombies">
 						<property name="phase" value="4"/>
-						<property name="time" value="10" />
-						<property name="speed_percent" value="10.0" />
-						<property name="target_group" value="safehouse" />
+						<property name="time" value="10"/>
+						<property name="speed_percent" value="10.0"/>
+						<property name="target_group" value="safehouse"/>
 					</action>
 				</decision>
 			</loop>

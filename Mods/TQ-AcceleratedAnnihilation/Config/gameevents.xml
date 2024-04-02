@@ -60,20 +60,20 @@
 					<property name="cvar" value="AcceleratedAnnihiliationSilverBuffCvar"/>
 					<property name="value" value="0"/>
 				</requirement>
-						<action class="BeltTooltip">
-				<property name="text" value="Time completed: SILVER!"/>
-				<property name="sound" value="twitch_celebrate"/>
+				<action class="BeltTooltip">
+					<property name="text" value="Time completed: SILVER!"/>
+					<property name="sound" value="twitch_celebrate"/>
 				</action>
-            </decision> 
+			</decision>
 			
-						<decision class="If">
+			<decision class="If">
 				<property name="condition_type" value="All"/>
 				<requirement class="CVar">
 					<property name="operation" value="Equals"/>
 					<property name="cvar" value="AcceleratedAnnihiliationGoldBuffCvar"/>
 					<property name="value" value="0"/>
 				</requirement>
-								<requirement class="CVar">
+				<requirement class="CVar">
 					<property name="operation" value="Equals"/>
 					<property name="cvar" value="AcceleratedAnnihiliationSilverBuffCvar"/>
 					<property name="value" value="0"/>
@@ -83,17 +83,17 @@
 					<property name="cvar" value="AcceleratedAnnihiliationBronzeBuffCvar"/>
 					<property name="value" value="0"/>
 				</requirement>
-						<action class="BeltTooltip">
-				<property name="text" value="Time completed: BRONZE"/>
-				<property name="sound" value="twitch_celebrate"/>
+				<action class="BeltTooltip">
+					<property name="text" value="Time completed: BRONZE"/>
+					<property name="sound" value="twitch_celebrate"/>
 				</action>
-            </decision> 
+			</decision>
 			
 		</action_sequence>
 		<action_sequence name="tier2_accelerated_annihiliation_reward">
 		
 			<!-- refund_inactivity is the magic property that will stop gameevent after 40-50 seconds - set to false to make it run forever -->
-			<property name="refund_inactivity" value="false" />
+			<property name="refund_inactivity" value="false"/>
 			
 			
 			<!--<action class="AddChatMessage">
@@ -195,7 +195,7 @@
 				<property name="removes_buff" value="AcceleratedAnnihiliationBronzeBuffTier3" param1="removebuff"/>
 			</action>
 			
-						<action class="BeltTooltip">
+			<action class="BeltTooltip">
 				<property name="text" value="Time completed: GOLD!!"/>
 				<property name="sound" value="twitch_celebrate"/>
 				<requirement class="CVar">
@@ -218,20 +218,20 @@
 					<property name="cvar" value="AcceleratedAnnihiliationSilverBuffCvar"/>
 					<property name="value" value="0"/>
 				</requirement>
-						<action class="BeltTooltip">
-				<property name="text" value="Time completed: SILVER!"/>
-				<property name="sound" value="twitch_celebrate"/>
+				<action class="BeltTooltip">
+					<property name="text" value="Time completed: SILVER!"/>
+					<property name="sound" value="twitch_celebrate"/>
 				</action>
-            </decision> 
+			</decision>
 			
-						<decision class="If">
+			<decision class="If">
 				<property name="condition_type" value="All"/>
 				<requirement class="CVar">
 					<property name="operation" value="Equals"/>
 					<property name="cvar" value="AcceleratedAnnihiliationGoldBuffCvar"/>
 					<property name="value" value="0"/>
 				</requirement>
-								<requirement class="CVar">
+				<requirement class="CVar">
 					<property name="operation" value="Equals"/>
 					<property name="cvar" value="AcceleratedAnnihiliationSilverBuffCvar"/>
 					<property name="value" value="0"/>
@@ -241,15 +241,15 @@
 					<property name="cvar" value="AcceleratedAnnihiliationBronzeBuffCvar"/>
 					<property name="value" value="0"/>
 				</requirement>
-						<action class="BeltTooltip">
-				<property name="text" value="Time completed: BRONZE"/>
-				<property name="sound" value="twitch_celebrate"/>
+				<action class="BeltTooltip">
+					<property name="text" value="Time completed: BRONZE"/>
+					<property name="sound" value="twitch_celebrate"/>
 				</action>
-            </decision> 
+			</decision>
 		</action_sequence>
 		<action_sequence name="tier3_accelerated_annihiliation_reward">
-					<!-- refund_inactivity is the magic property that will stop gameevent after 40-50 seconds - set to false to make it run forever -->
-			<property name="refund_inactivity" value="false" />
+			<!-- refund_inactivity is the magic property that will stop gameevent after 40-50 seconds - set to false to make it run forever -->
+			<property name="refund_inactivity" value="false"/>
 			<loop class="While">
 				<property name="phase" value="1"/>
 				<requirement class="OnQuest">
@@ -299,7 +299,7 @@
 			</action>
 		</action_sequence>
 		<!-- TIER 3-->
-				<action_sequence name="tier4_accelerated_annihiliation_start">
+		<action_sequence name="tier4_accelerated_annihiliation_start">
 			<!-- reverse order so gold is on top in the display -->
 			<action class="AddBuff">
 				<property name="buff_name" value="AcceleratedAnnihiliationBronzeBuffTier4"/>
@@ -322,7 +322,7 @@
 				<property name="removes_buff" value="AcceleratedAnnihiliationBronzeBuffTier4" param1="removebuff"/>
 			</action>
 			
-						<action class="BeltTooltip">
+			<action class="BeltTooltip">
 				<property name="text" value="Time completed: GOLD!!"/>
 				<property name="sound" value="twitch_celebrate"/>
 				<requirement class="CVar">
@@ -345,20 +345,20 @@
 					<property name="cvar" value="AcceleratedAnnihiliationSilverBuffCvar"/>
 					<property name="value" value="0"/>
 				</requirement>
-						<action class="BeltTooltip">
-				<property name="text" value="Time completed: SILVER!"/>
-				<property name="sound" value="twitch_celebrate"/>
+				<action class="BeltTooltip">
+					<property name="text" value="Time completed: SILVER!"/>
+					<property name="sound" value="twitch_celebrate"/>
 				</action>
-            </decision> 
+			</decision>
 			
-						<decision class="If">
+			<decision class="If">
 				<property name="condition_type" value="All"/>
 				<requirement class="CVar">
 					<property name="operation" value="Equals"/>
 					<property name="cvar" value="AcceleratedAnnihiliationGoldBuffCvar"/>
 					<property name="value" value="0"/>
 				</requirement>
-								<requirement class="CVar">
+				<requirement class="CVar">
 					<property name="operation" value="Equals"/>
 					<property name="cvar" value="AcceleratedAnnihiliationSilverBuffCvar"/>
 					<property name="value" value="0"/>
@@ -368,15 +368,15 @@
 					<property name="cvar" value="AcceleratedAnnihiliationBronzeBuffCvar"/>
 					<property name="value" value="0"/>
 				</requirement>
-						<action class="BeltTooltip">
-				<property name="text" value="Time completed: BRONZE"/>
-				<property name="sound" value="twitch_celebrate"/>
+				<action class="BeltTooltip">
+					<property name="text" value="Time completed: BRONZE"/>
+					<property name="sound" value="twitch_celebrate"/>
 				</action>
-            </decision> 
+			</decision>
 		</action_sequence>
 		<action_sequence name="tier4_accelerated_annihiliation_reward">
-					<!-- refund_inactivity is the magic property that will stop gameevent after 40-50 seconds - set to false to make it run forever -->
-			<property name="refund_inactivity" value="false" />
+			<!-- refund_inactivity is the magic property that will stop gameevent after 40-50 seconds - set to false to make it run forever -->
+			<property name="refund_inactivity" value="false"/>
 			<loop class="While">
 				<property name="phase" value="1"/>
 				<requirement class="OnQuest">
@@ -426,7 +426,7 @@
 			</action>
 		</action_sequence>
 		<!-- TIER 4-->
-						<action_sequence name="tier5_accelerated_annihiliation_start">
+		<action_sequence name="tier5_accelerated_annihiliation_start">
 			<!-- reverse order so gold is on top in the display -->
 			<action class="AddBuff">
 				<property name="buff_name" value="AcceleratedAnnihiliationBronzeBuffTier5"/>
@@ -449,7 +449,7 @@
 				<property name="removes_buff" value="AcceleratedAnnihiliationBronzeBuffTier5" param1="removebuff"/>
 			</action>
 			
-						<action class="BeltTooltip">
+			<action class="BeltTooltip">
 				<property name="text" value="Time completed: GOLD!!"/>
 				<property name="sound" value="twitch_celebrate"/>
 				<requirement class="CVar">
@@ -472,20 +472,20 @@
 					<property name="cvar" value="AcceleratedAnnihiliationSilverBuffCvar"/>
 					<property name="value" value="0"/>
 				</requirement>
-						<action class="BeltTooltip">
-				<property name="text" value="Time completed: SILVER!"/>
-				<property name="sound" value="twitch_celebrate"/>
+				<action class="BeltTooltip">
+					<property name="text" value="Time completed: SILVER!"/>
+					<property name="sound" value="twitch_celebrate"/>
 				</action>
-            </decision> 
+			</decision>
 			
-						<decision class="If">
+			<decision class="If">
 				<property name="condition_type" value="All"/>
 				<requirement class="CVar">
 					<property name="operation" value="Equals"/>
 					<property name="cvar" value="AcceleratedAnnihiliationGoldBuffCvar"/>
 					<property name="value" value="0"/>
 				</requirement>
-								<requirement class="CVar">
+				<requirement class="CVar">
 					<property name="operation" value="Equals"/>
 					<property name="cvar" value="AcceleratedAnnihiliationSilverBuffCvar"/>
 					<property name="value" value="0"/>
@@ -495,15 +495,15 @@
 					<property name="cvar" value="AcceleratedAnnihiliationBronzeBuffCvar"/>
 					<property name="value" value="0"/>
 				</requirement>
-						<action class="BeltTooltip">
-				<property name="text" value="Time completed: BRONZE"/>
-				<property name="sound" value="twitch_celebrate"/>
+				<action class="BeltTooltip">
+					<property name="text" value="Time completed: BRONZE"/>
+					<property name="sound" value="twitch_celebrate"/>
 				</action>
-            </decision> 
+			</decision>
 		</action_sequence>
 		<action_sequence name="tier5_accelerated_annihiliation_reward">
-					<!-- refund_inactivity is the magic property that will stop gameevent after 40-50 seconds - set to false to make it run forever -->
-			<property name="refund_inactivity" value="false" />
+			<!-- refund_inactivity is the magic property that will stop gameevent after 40-50 seconds - set to false to make it run forever -->
+			<property name="refund_inactivity" value="false"/>
 			<loop class="While">
 				<property name="phase" value="1"/>
 				<requirement class="OnQuest">
@@ -552,7 +552,7 @@
 			</action>
 		</action_sequence>
 		<!-- TIER 5-->
-							<action_sequence name="tier6_accelerated_annihiliation_start">
+		<action_sequence name="tier6_accelerated_annihiliation_start">
 			<!-- reverse order so gold is on top in the display -->
 			<action class="AddBuff">
 				<property name="buff_name" value="AcceleratedAnnihiliationBronzeBuffTier6"/>
@@ -575,7 +575,7 @@
 				<property name="removes_buff" value="AcceleratedAnnihiliationBronzeBuffTier6" param1="removebuff"/>
 			</action>
 			
-						<action class="BeltTooltip">
+			<action class="BeltTooltip">
 				<property name="text" value="Time completed: GOLD!!"/>
 				<property name="sound" value="twitch_celebrate"/>
 				<requirement class="CVar">
@@ -598,20 +598,20 @@
 					<property name="cvar" value="AcceleratedAnnihiliationSilverBuffCvar"/>
 					<property name="value" value="0"/>
 				</requirement>
-						<action class="BeltTooltip">
-				<property name="text" value="Time completed: SILVER!"/>
-				<property name="sound" value="twitch_celebrate"/>
+				<action class="BeltTooltip">
+					<property name="text" value="Time completed: SILVER!"/>
+					<property name="sound" value="twitch_celebrate"/>
 				</action>
-            </decision> 
+			</decision>
 			
-						<decision class="If">
+			<decision class="If">
 				<property name="condition_type" value="All"/>
 				<requirement class="CVar">
 					<property name="operation" value="Equals"/>
 					<property name="cvar" value="AcceleratedAnnihiliationGoldBuffCvar"/>
 					<property name="value" value="0"/>
 				</requirement>
-								<requirement class="CVar">
+				<requirement class="CVar">
 					<property name="operation" value="Equals"/>
 					<property name="cvar" value="AcceleratedAnnihiliationSilverBuffCvar"/>
 					<property name="value" value="0"/>
@@ -621,15 +621,15 @@
 					<property name="cvar" value="AcceleratedAnnihiliationBronzeBuffCvar"/>
 					<property name="value" value="0"/>
 				</requirement>
-						<action class="BeltTooltip">
-				<property name="text" value="Time completed: BRONZE"/>
-				<property name="sound" value="twitch_celebrate"/>
+				<action class="BeltTooltip">
+					<property name="text" value="Time completed: BRONZE"/>
+					<property name="sound" value="twitch_celebrate"/>
 				</action>
-            </decision> 
+			</decision>
 		</action_sequence>
 		<action_sequence name="tier6_accelerated_annihiliation_reward">
-					<!-- refund_inactivity is the magic property that will stop gameevent after 40-50 seconds - set to false to make it run forever -->
-			<property name="refund_inactivity" value="false" />
+			<!-- refund_inactivity is the magic property that will stop gameevent after 40-50 seconds - set to false to make it run forever -->
+			<property name="refund_inactivity" value="false"/>
 			<loop class="While">
 				<property name="phase" value="1"/>
 				<requirement class="OnQuest">
