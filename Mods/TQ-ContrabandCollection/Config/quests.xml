@@ -14,7 +14,7 @@
 			<property name="difficulty_tier" value="1" param1="difficulty"/>
 			<property name="offer_key" value="contraband_collection_offer" param1="offer"/>
 			<property name="statement_key" value="contraband_collection_statement"/>
-			<property name="response_key" value="contraband_collection_response"/>
+			<property name="response_key" value="contraband_collection_responseT1_2_3"/>
 			<property name="login_rally_reset" value="true"/>
 			<property name="reward_choices_count" value="5"/>
 			<property name="extra_tags" value="" param1="extra_tags"/>
@@ -30,10 +30,10 @@
 				<property name="start_mode" value="Create"/>
 				<property name="phase" value="2"/>
 				<property name="nav_object" value="rally"/>
-				<property name="allowed_start_hour" value="22"/>
-				<property name="allowed_end_hour" value="1"/>
+				<!-- <property name="allowed_start_hour" value="22"/> -->
+				<!-- <property name="allowed_end_hour" value="1"/> -->
 			</objective>
-			<objective type="Time" time="4" value="3" phase="3" />
+			<objective type="Time" time="4" value="3" phase="3"/>
 			<action type="GameEvent">
 				<property name="event" value="playairdropsound"/>
 				<property name="phase" value="3"/>
@@ -94,18 +94,18 @@
 				<property name="phase" value="5"/>
 				<property name="nav_object" value="return_to_trader"/>
 			</objective>
-		<reward type="Exp" value="2500"/>
-		<reward type="Item" id="casinoCoin" value="330"/>
+			<reward type="Exp" value="2500"/>
+			<reward type="Item" id="casinoCoin" value="330"/>
 		
-		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
-		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="1"/>
-		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="1"/>
-		<reward type="LootItem" id="groupQuestResources" ischosen="true" value="1"/>
-		<reward type="LootItem" id="groupQuestAmmo,groupQuestResources,groupQuestMods,groupQuestT1SkillMagazineBundle" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestResources" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestAmmo,groupQuestResources,groupQuestMods,groupQuestT1SkillMagazineBundle" ischosen="true" value="1"/>
 		</quest>
 		
 		<!-- TIER 2 -->
-			<quest id="tier2_contraband_collection">
+		<quest id="tier2_contraband_collection">
 			<property name="name_key" value="tier2_contraband_collection_name"/>
 			<property name="subtitle_key" value="contraband_collection_subtitle"/>
 			<property name="description_key" value="contraband_collection_description"/>
@@ -116,7 +116,7 @@
 			<property name="difficulty_tier" value="2" param1="difficulty"/>
 			<property name="offer_key" value="contraband_collection_offer" param1="offer"/>
 			<property name="statement_key" value="contraband_collection_statement"/>
-			<property name="response_key" value="contraband_collection_response"/>
+			<property name="response_key" value="contraband_collection_responseT1_2_3"/>
 			<property name="login_rally_reset" value="true"/>
 			<property name="reward_choices_count" value="5"/>
 			<property name="extra_tags" value="" param1="extra_tags"/>
@@ -132,10 +132,10 @@
 				<property name="start_mode" value="Create"/>
 				<property name="phase" value="2"/>
 				<property name="nav_object" value="rally"/>
-				<property name="allowed_start_hour" value="22"/>
-				<property name="allowed_end_hour" value="1"/>
+				<!-- <property name="allowed_start_hour" value="22"/> -->
+				<!-- <property name="allowed_end_hour" value="1"/> -->
 			</objective>
-			<objective type="Time" time="4" value="3" phase="3" />
+			<objective type="Time" time="4" value="3" phase="3"/>
 			<action type="GameEvent">
 				<property name="event" value="playairdropsound"/>
 				<property name="phase" value="3"/>
@@ -196,21 +196,21 @@
 				<property name="phase" value="5"/>
 				<property name="nav_object" value="return_to_trader"/>
 			</objective>
-		<reward type="Exp" value="3750"/>
-		<reward type="Item" id="casinoCoin" value="560"/>
+			<reward type="Exp" value="3750"/>
+			<reward type="Item" id="casinoCoin" value="560"/>
 
-		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="2"/>
-		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="2"/>
-		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
-		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="2"/>
-		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
-		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="2"/>
-		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
-		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+			<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
 		</quest>
 		
 		<!-- TIER 3 -->
-			<quest id="tier3_contraband_collection">
+		<quest id="tier3_contraband_collection">
 			<property name="name_key" value="tier3_contraband_collection_name"/>
 			<property name="subtitle_key" value="contraband_collection_subtitle"/>
 			<property name="description_key" value="contraband_collection_description"/>
@@ -221,7 +221,7 @@
 			<property name="difficulty_tier" value="3" param1="difficulty"/>
 			<property name="offer_key" value="contraband_collection_offer" param1="offer"/>
 			<property name="statement_key" value="contraband_collection_statement"/>
-			<property name="response_key" value="contraband_collection_response"/>
+			<property name="response_key" value="contraband_collection_responseT1_2_3"/>
 			<property name="login_rally_reset" value="true"/>
 			<property name="reward_choices_count" value="5"/>
 			<property name="extra_tags" value="" param1="extra_tags"/>
@@ -237,10 +237,10 @@
 				<property name="start_mode" value="Create"/>
 				<property name="phase" value="2"/>
 				<property name="nav_object" value="rally"/>
-				<property name="allowed_start_hour" value="22"/>
-				<property name="allowed_end_hour" value="1"/>
+				<!-- <property name="allowed_start_hour" value="22"/> -->
+				<!-- <property name="allowed_end_hour" value="1"/> -->
 			</objective>
-			<objective type="Time" time="4" value="3" phase="3" />
+			<objective type="Time" time="4" value="3" phase="3"/>
 			<action type="GameEvent">
 				<property name="event" value="playairdropsound"/>
 				<property name="phase" value="3"/>
@@ -301,21 +301,21 @@
 				<property name="phase" value="5"/>
 				<property name="nav_object" value="return_to_trader"/>
 			</objective>
-		<reward type="Exp" value="5000"/>
-		<reward type="Item" id="casinoCoin" value="800"/>
+			<reward type="Exp" value="5000"/>
+			<reward type="Item" id="casinoCoin" value="800"/>
 
-		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="3"/>
-		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="3"/>
-		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
-		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="3"/>
-		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
-		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
-		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
-		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+			<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
 		</quest>
 		
 		<!-- TIER 4 -->
-			<quest id="tier4_contraband_collection">
+		<quest id="tier4_contraband_collection">
 			<property name="name_key" value="tier4_contraband_collection_name"/>
 			<property name="subtitle_key" value="contraband_collection_subtitle"/>
 			<property name="description_key" value="contraband_collection_description"/>
@@ -345,7 +345,7 @@
 				<property name="allowed_start_hour" value="22"/>
 				<property name="allowed_end_hour" value="1"/>
 			</objective>
-			<objective type="Time" time="4" value="3" phase="3" />
+			<objective type="Time" time="4" value="3" phase="3"/>
 			<action type="GameEvent">
 				<property name="event" value="playairdropsound"/>
 				<property name="phase" value="3"/>
@@ -406,21 +406,21 @@
 				<property name="phase" value="5"/>
 				<property name="nav_object" value="return_to_trader"/>
 			</objective>
-		<reward type="Exp" value="6250"/>
-		<reward type="Item" id="casinoCoin" value="1020"/>
+			<reward type="Exp" value="6250"/>
+			<reward type="Item" id="casinoCoin" value="1020"/>
 
-		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="4"/>
-		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="4"/>
-		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
-		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="4"/>
-		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="4"/>
-		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="4"/>
-		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
-		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+			<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
 		</quest>
 		
 		<!-- TIER 5 -->
-			<quest id="tier5_contraband_collection">
+		<quest id="tier5_contraband_collection">
 			<property name="name_key" value="tier5_contraband_collection_name"/>
 			<property name="subtitle_key" value="contraband_collection_subtitle"/>
 			<property name="description_key" value="contraband_collection_description"/>
@@ -450,7 +450,7 @@
 				<property name="allowed_start_hour" value="22"/>
 				<property name="allowed_end_hour" value="1"/>
 			</objective>
-			<objective type="Time" time="4" value="3" phase="3" />
+			<objective type="Time" time="4" value="3" phase="3"/>
 			<action type="GameEvent">
 				<property name="event" value="playairdropsound"/>
 				<property name="phase" value="3"/>
@@ -511,24 +511,24 @@
 				<property name="phase" value="5"/>
 				<property name="nav_object" value="return_to_trader"/>
 			</objective>
-		<reward type="Exp" value="12500"/>
-		<reward type="Item" id="casinoCoin" value="2040"/>
+			<reward type="Exp" value="12500"/>
+			<reward type="Item" id="casinoCoin" value="2040"/>
 
-		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="5"/>
-		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="5"/>
-		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
-		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="5"/>
-		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="5"/>
-		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="5"/>
-		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
-		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+			<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
 		</quest>
 	</insertAfter>
 	<append xpath="/quests/quest_list[@id='trader_quests']">
 		<quest id="tier1_contraband_collection"/>
 		<quest id="tier2_contraband_collection"/>
-	<quest id="tier3_contraband_collection"/>
-	<quest id="tier4_contraband_collection"/>
-	<quest id="tier5_contraband_collection"/>
+		<quest id="tier3_contraband_collection"/>
+		<quest id="tier4_contraband_collection"/>
+		<quest id="tier5_contraband_collection"/>
 	</append>
 </Config>

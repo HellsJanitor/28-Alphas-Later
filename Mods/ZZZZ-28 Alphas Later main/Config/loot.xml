@@ -8,13 +8,35 @@
 				<loot quality="6" prob="1"/>
 			</qualitytemplate>
 		</lootqualitytemplate>
+		
+		<lootqualitytemplate name="qualBasicTemplate">
+			<qualitytemplate level="1,999999" default_quality="1">
+				<loot quality="1" prob="1"/>
+			</qualitytemplate>
+		</lootqualitytemplate>
 	</insertafter>
 	
 	<insertafter xpath="//lootgroup[@name='groupToolsT3']">
 	<lootgroup name="groupLegendary" loot_quality_template="qualLegendaryTemplate">
 		<item name="meleeWpnBladeT666LegendaryPaintbrush"/>
 	</lootgroup>
-	</insertafter>	
+	
+	<lootgroup name="groupBasic" loot_quality_template="qualBasicTemplate">
+		<item name="meleeToolFarmT2IronHoe"/>
+	</lootgroup>
+	</insertafter>
+	
+	<append xpath="//lootgroup[@name='workstationToolsScaled']">
+		<item name="toolAmmoPress" loot_prob_template="ProbT1Cap"/>
+	</append>
+
+	<append xpath="//lootgroup[@name='groupToolsTiered']">
+		<item group="groupBasic" loot_prob_template="ProbT1"/>
+	</append>
+
+	<append xpath="//lootgroup[@name='groupToolsTieredBonus']">
+		<item group="groupBasic" loot_prob_template="ProbT1"/>
+	</append>
 	
 	<append xpath="//lootgroup[@name='groupToolsTiered']">
 		<item group="groupLegendary" loot_prob_template="ProbT3"/>
@@ -31,6 +53,17 @@
 	<append xpath="//lootgroup[@name='groupHardenedChestT5']">
 		<item group="groupLegendary" loot_prob_template="ProbT3"/>
 	</append>	
+	
+	<!-- *** adjust the quest resources loot group *** -->
+	<set xpath="//lootgroup[@name='groupQuestResources']">
+		<item name="resourceWood" count="500"/>
+		<item name="resourceCoal" count="300"/>
+		<item name="resourceGunPowder" count="200"/>
+		<item name="resourceGlue" count="5"/>
+		<item name="resourceDuctTape" count="5"/>
+		<item name="resourceMechanicalParts" count="5"/>
+		<item name="resourceRepairKit" count="2"/>
+	</set>
 	
 	<!-- *** Make player dropped bags bigger to accomodate new size *** -->
 	<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">10,10</set>
@@ -122,6 +155,7 @@
 	<set xpath="//item[@count='20,50']/@count">10,25</set>
 	<set xpath="//item[@count='20,60']/@count">10,30</set>
 	<set xpath="//item[@count='20,80']/@count">10,40</set>
+	<set xpath="//item[contains(@name,'resourceConcreteMix')]/@count">12,18</set>
 	<set xpath="//item[@count='20,120']/@count">10,60</set>
 	
 	<set xpath="//item[@count='25,35']/@count">16,24</set>
@@ -181,6 +215,7 @@
 	<!-- <set xpath="//item[@count='70']/@count">35</set> -->
 	<set xpath="//item[@count='75']/@count">37</set>
 	<set xpath="//item[@count='100']/@count">50</set>
+	<set xpath="//item[contains(@name,'VariantHelper')]/@count">10</set>
 	<set xpath="//item[@count='150']/@count">75</set>
 	<set xpath="//item[@count='200']/@count">100</set>
 	<set xpath="//item[@count='300']/@count">150</set>
@@ -203,15 +238,15 @@
 	</append>
 	
 	<append xpath="//lootgroup[@name='schematicsModsAndGeneralT0']">
-		<item name="modBicycleStaminaSaverSchematic"/>
+		<item name="modBicycleStaminaSaverSchematic" prob="0.75"/>
 	</append>
 	
 	<append xpath="/lootcontainers/lootgroup[@name='groupJunk02']">
-		<item name="meleeToolFarmT2IronHoeSchematic" prob="0.2"/>
+		<item name="meleeToolFarmT2IronHoeSchematic" prob="0.1"/>
     </append>	
 	
     <append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralCommon']">
-        <item name="meleeToolFarmT2IronHoeSchematic" prob="0.2"/>
+        <item name="meleeToolFarmT2IronHoeSchematic" prob="0.1"/>
     </append>
 
 	<!-- <append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralT2']">
@@ -226,7 +261,7 @@
 	</append>
 	
 	<append xpath="//lootgroup[@name='modGunMeleeT3']">
-		<item name="modGunMeleeBlessedMetal" loot_prob_template="ProbT3"/>
+		<item name="modGunMeleeBlessedMetal" loot_prob_template="ProbT1EarlyCap"/>
 	</append>
 	
 	<append xpath="//lootgroup[@name='modGunT3']">
@@ -366,9 +401,22 @@
 	<lootcontainer name="beehiveTreeStump" count="1,2" size="6,2" sound_open="UseActions/open_stump" sound_close="UseActions/close_stump" loot_quality_template="qualBaseTemplate">
 		<item name="foodHoney" loot_prob_template="high" count="1,2"/>
 		<item name="honeyBee" loot_prob_template="med" count="1"/>
-	</lootcontainer>																																											
+	</lootcontainer>
+
+	<lootcontainer name="cardboardboxloot" count="0,1" size="6,2" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
+		<item group="groupJunk"/>
+	</lootcontainer>
 	</insertbefore>
 
 	<!-- *** remove triple pocket mod schematic from loot *** -->
-	<remove xpath="//lootgroup[@name='schematicsModsAndGeneralT2']//item[@name='modArmorTripleStoragePocketSchematic']"/>	
+	<remove xpath="//lootgroup[@name='schematicsModsAndGeneralT2']//item[@name='modArmorTripleStoragePocketSchematic']"/>
+
+	<!-- *** reduce murky water in loot *** -->
+	<set xpath="//lootgroup//item[@name='drinkJarRiverWater']/@count">0,1</set>
+	<set xpath="//lootcontainer//item[@name='drinkJarRiverWater']/@count">0,1</set>
+	
+	<!-- *** remove concrete mix from loot *** -->
+	<!-- <remove xpath="//lootgroup[contains(@name,'Concrete')]"/> -->
+	<set xpath="//lootgroup[contains(@name,'groupCementMixer') or (contains(@name,'groupBuilding')) or (contains(@name,'twitch'))]//item[@name='resourceConcreteMix']/@name">resourceCrushedSand</set>
+	<set xpath="//lootgroup//item[contains(@name,'concrete')]/@name">resourceCement</set>
 </configs>

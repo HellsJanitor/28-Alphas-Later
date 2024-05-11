@@ -2,7 +2,7 @@
 	<!-- search find all *** for changes -->
 
 	<append xpath="/items">
-	<!-- *** fertilizer *** -->
+		<!-- *** fertilizer *** -->
 		<item name="resourceFertilizer">
 			<property name="HoldType" value="45"/>
 			<property name="Tags" value="junk"/>
@@ -20,7 +20,7 @@
 			<property name="CraftingIngredientTime" value=".5"/>
 		</item>
 	
-	<!-- *** feldspar *** -->
+		<!-- *** feldspar *** -->
 		<item name="resourceFeldspar">
 			<property name="CustomIcon" value="resourceCement"/>
 			<property name="DescriptionKey" value="resourceFeldsparDesc"/>
@@ -36,10 +36,25 @@
 			<property name="EconomicBundleSize" value="50"/>
 			<property name="Group" value="Resources"/>
 		</item>
-	
-	<!-- *** Hoe and Schematic *** -->
+		
+		<!-- *** bricks *** -->
+		<item name="resourceBricks">
+			<property name="CustomIcon" value="resourceBrick"/>
+			<property name="DescriptionKey" value="resourceBrickDesc"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceBricks"/>
+			<property name="Stacknumber" value="1000"/><!-- STK resource -->
+			<property name="EconomicValue" value="12"/>
+			<property name="EconomicBundleSize" value="100"/>
+			<property name="Group" value="Resources"/>
+			<property name="CraftingIngredientTime" value=".25"/>
+		</item>
+		
+		<!-- *** Hoe and Schematic *** -->
 		<item name="meleeToolFarmT2IronHoeSchematic">
-			<property name="Extends" value="schematicMaster"/>
+			<property name="Extends" value="schematicNoQualityMaster"/>
 			<property name="CreativeMode" value="Player"/>
 			<property name="CustomIcon" value="meleeToolFarmT2IronHoe"/>
 			<property name="Unlocks" value="meleeToolFarmT2IronHoe"/>
@@ -115,7 +130,7 @@
 			<property name="RepairExpMultiplier" value="1.0"/>
 		</item>
 		
-	<!-- *** lavender *** -->
+		<!-- *** lavender *** -->
 		<item name="resourceCropLavender">
 			<property name="DescriptionKey" value="resourceCropLavenderDesc"/>
 			<property name="HoldType" value="45"/>
@@ -129,7 +144,7 @@
 			<property name="CraftingIngredientTime" value="5"/>
 			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
 		</item>
-	<!-- *** chicken coop "fuel" *** -->
+		<!-- *** chicken coop "fuel" *** -->
 		<item name="fuelChicken">
 			<property name="CustomIcon" value="animalChicken"/>
 			<property name="DescriptionKey" value="fuelChickenDesc"/>
@@ -154,7 +169,7 @@
 			</effect_group>
 		</item>
 	
-	<!-- *** dew collector tools *** -->
+		<!-- *** dew collector tools *** -->
 		<item name="adcAdvancedFilter">
 			<property name="CustomIcon" value="Advanced_Water_Filter"/>
 			<property name="DescriptionKey" value="adcAdvancedFilterDesc"/>
@@ -163,7 +178,7 @@
 			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="Stacknumber" value="1"/>
-			<property name="EconomicValue" value="1200"/>
+			<property name="EconomicValue" value="2400"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="Group" value="Resources"/>
 		</item>
@@ -222,7 +237,7 @@
 			</effect_group>
 		</item>
 	
-	<!-- *** snare *** -->
+		<!-- *** snare *** -->
 		<item name="idcUpgradedStorage">
 			<property name="CustomIcon" value="Upgraded_Storage"/>
 			<property name="DescriptionKey" value="idcUpgradedStorageDesc"/>
@@ -235,7 +250,7 @@
 			<property name="Group" value="Resources"/>
 		</item>
 	
-	<!-- *** honeybee *** -->
+		<!-- *** honeybee *** -->
 		<item name="honeyBee">
 			<property name="CustomIcon" value="bee"/>
 			<property name="DescriptionKey" value="honeyBeeDesc"/>
@@ -260,7 +275,7 @@
 			</effect_group>
 		</item>
 
-	<!-- *** Reds Legendary Paintbrush *** -->
+		<!-- *** Reds Legendary Paintbrush *** -->
 		<item name="meleeWpnBladeT666LegendaryPaintbrush">
 			<property name="CreativeMode" value="Player"/>
 			<property name="DisplayType" value="meleeKnife"/>
@@ -366,8 +381,11 @@
 				<requirement name="EntityTagCompare" target="other" tags="radiated,mutated"/>
 				<passive_effect name="EntityDamage" operation="perc_add" value=".30"/>
 			</effect_group>
-		</item>
+		</item>	
 	</append>
+	
+	<!-- *** allowed upgrade items for repair tools *** -->
+	<append xpath="//item/property//property[@name='Allowed_upgrade_items']/@value">,resourceBricks,resourceWoodScraps</append>
 	
 	<!-- *** increase mod slots for T2 & T3 armor *** -->
 	<set xpath="//item[starts-with (@name,'armorLeather') and not (contains(@name,'Master'))]/effect_group//passive_effect[@name='ModSlots']/@value">2,2,2,3,4,5</set>
@@ -733,7 +751,7 @@
 			<property name="Stacknumber" value="20"/>
 		
 			<effect_group tiered="false">
-				<requirement name="EntityTagCompare" target="other" tags="radiated,mutated"/>
+				<requirement name="EntityTagCompare" target="other" tags="radiated,mutated,mutant"/>
 				<triggered_effect trigger="onSelfExplosionDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
 			</effect_group>
 		</item>
@@ -746,7 +764,7 @@
 			<property name="Stacknumber" value="25"/>
 		
 			<effect_group tiered="false">
-				<requirement name="EntityTagCompare" target="other" tags="radiated,mutated"/>
+				<requirement name="EntityTagCompare" target="other" tags="radiated,mutated,mutant"/>
 				<triggered_effect trigger="onSelfExplosionDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
 			</effect_group>
 		</item>
@@ -759,7 +777,7 @@
 			<property name="Stacknumber" value="25"/>
 		
 			<effect_group tiered="false">
-				<requirement name="EntityTagCompare" target="other" tags="radiated,mutated"/>
+				<requirement name="EntityTagCompare" target="other" tags="radiated,mutated,mutant"/>
 				<triggered_effect trigger="onSelfExplosionDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
 			</effect_group>
 		</item>
@@ -772,13 +790,13 @@
 			<property name="Stacknumber" value="20"/>
 		
 			<effect_group tiered="false">
-				<requirement name="EntityTagCompare" target="other" tags="radiated,mutated"/>
+				<requirement name="EntityTagCompare" target="other" tags="radiated,mutated,mutant"/>
 				<triggered_effect trigger="onSelfExplosionDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
 			</effect_group>
 		</item>
 	</append>
 	
-	<!-- *** icon tint for bukcet(s) *** -->
+	<!-- *** icon tint for bucket(s) *** -->
 	<insertbefore xpath="//item[@name='bucketEmpty']//property[@name='HoldType']">
 		<property name="TintColor" value="35,41,122"/>
 	</insertbefore>
@@ -979,6 +997,7 @@
 	<!-- *** steel knuckles *** -->
 	<insertafter xpath="//item[@name='meleeWpnKnucklesT3SteelKnuckles']/property[@name='Material']">
 		<property name="Weight" value="1"/>
+		<property name="EconomicValue" value="500"/>
 	</insertafter>
 	<!-- *** wire tool *** -->
 	<insertafter xpath="//item[@name='meleeToolWireTool']/property[@name='Material']">
@@ -1089,12 +1108,12 @@
 		<property name="ItemTypeIcon" value="workbench"/>		
 	</append> -->
 	
-	<!-- *** tablesaw is a workbench tool *** -->
-	<!-- <append xpath="/items">
-	<item name="toolTablesaw">
-		<property name="CustomIcon" value="tableSaw"/>
-		<property name="DescriptionKey" value="tableSawDesc"/>
-		<property name="UnlockedBy" value="craftingWorkstations" />		
+	<!-- *** ammo press is a workbench tool *** -->
+	<append xpath="/items">
+	<item name="toolAmmoPress">
+		<property name="CustomIcon" value="toolAmmoPress"/>
+		<property name="DescriptionKey" value="toolAmmoPressDesc"/>
+		<!-- <property name="UnlockedBy" value="craftingWorkstations" />		 -->
 		<property name="Tags" value="workstationSkill" />
 		<property name="HoldType" value="45" />
 		<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab" />
@@ -1106,7 +1125,7 @@
 		<property name="SellableToTrader" value="false" />
 		<property name="ItemTypeIcon" value="workbench" />
 	  </item>
-	</append> -->
+	</append>
 	
 	<!-- *** spider zombies cause poison *** -->
 	<append xpath="/items">
@@ -1333,6 +1352,25 @@
 					<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->
 			</effect_group>
+		</item>		
+		
+		<item name="meleeHandZombieMutantLongArms">
+			<property name="Extends" value="meleeHandZombie01"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="20"/>
+				<property name="DamageBlock" value="24"/>
+				<property name="Range" value="2.1"/>
+			</property>
+			<effect_group name="meleeHandZombieFeral" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+					weights=".11,.07,.07,.05,.29,.36,.11"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="15"><!--InfectionFeral-->
+					<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="2400"/><!--AbrasionFeral-->
+			</effect_group>
 		</item>
 	
 		<!-- *** snakes envenom *** -->
@@ -1395,6 +1433,26 @@
 				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffPoisoned"/>
 			</effect_group>
 		</item>
+		
+		<!-- *** mutant bug hand *** -->
+		<item name="meleeHandAnimalMutantBug">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="2.5"/>
+				<property name="Range" value="1.2"/>
+				<property name="DamageEntity" value="10"/>
+				<property name="DamageBlock" value="15"/>
+			</property>
+			<effect_group name="meleeHandAnimalSnake" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+								  buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffPoisoned"
+				                  weights=".11,.07,.07,.05,.29,.36,.11,1"/>
+			</effect_group>
+		</item>
 	</append>
 	
 	<!-- *** reduced zombie melee range *** -->
@@ -1439,10 +1497,10 @@
 	
 	<!-- *** modify blade(s) base damage *** -->
 	<set xpath="//item[@name='meleeWpnBladeT0BoneKnife']/effect_group[@name='meleeWpnBladeT0BoneKnife']//passive_effect[@name='EntityDamage'][@operation='base_set']/@value">6</set>
-	<set xpath="//item[@name='meleeWpnBladeT0BoneKnife']/effect_group[@name='Power Attack']//passive_effect[@value='5.1']/@value">3</set>
+	<set xpath="//item[@name='meleeWpnBladeT0BoneKnife']/effect_group[@name='Power Attack']//passive_effect[@value='5.1']/@value">4</set>
 	
-	<set xpath="//item[@name='meleeWpnBladeT1HuntingKnife']/effect_group[@name='meleeWpnBladeT1HuntingKnife']//passive_effect[@name='EntityDamage'][@operation='base_set']/@value">10</set>
-	<set xpath="//item[@name='meleeWpnBladeT1HuntingKnife']/effect_group[@name='Power Attack']//passive_effect[@value='6']/@value">5</set>
+	<set xpath="//item[@name='meleeWpnBladeT1HuntingKnife']/effect_group[@name='meleeWpnBladeT1HuntingKnife']//passive_effect[@name='EntityDamage'][@operation='base_set']/@value">12.5</set>
+	<set xpath="//item[@name='meleeWpnBladeT1HuntingKnife']/effect_group[@name='Power Attack']//passive_effect[@value='6']/@value">6.5</set>
 	
 	<!-- <set xpath="//item[@name='meleeWpnBladeT3Machete']/effect_group[@name='meleeWpnBladeT3Machete']//passive_effect[@name='EntityDamage'][@operation='base_set']/@value">30</set>
 	<insertbefore xpath="//item[@name='meleeWpnBladeT3Machete']/effect_group[@name='Power Attack']//passive_effect[@name='EntityDamage']">
@@ -1627,13 +1685,13 @@
 			<property name="Material" value="Mmetal"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="Weight" value="160"/>
-			<property name="EconomicValue" value="600"/>
+			<property name="EconomicValue" value="750"/>
 			<property name="Group" value="Resources,Chemicals"/>
 			<property name="DegradationBreaksAfter" value="true"/>
 			<property name="ShowQuality" value="true"/>
 			
 			<property class="Attributes">
-				<property name="DegradationMax" value="25"/>
+				<property name="DegradationMax" value="30"/>
 			</property>
 			<effect_group tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
@@ -2123,7 +2181,7 @@
 		<item name="foodCanCarrots">
 			<property name="Extends" value="foodCanMiso"/>
 			<property name="CustomIcon" value="foodCanCarrotsrusty"/>
-			<property name="EconomicValue" value="40"/>
+			<property name="EconomicValue" value="20"/>
 			<effect_group tiered="false" name="Food Tier 0">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="10"/><display_value name="dDysenteryRisk" value=".10"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
@@ -2301,7 +2359,7 @@
 		<item name="foodCanCarrotscooked">
 			<property name="CustomIcon" value="foodCanCarrots"/>
 			<property name="Extends" value="foodCanMisocooked"/>
-			<property name="EconomicValue" value="40"/>
+			<property name="EconomicValue" value="20"/>
 			<effect_group tiered="false" name="Food Tier 0">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
@@ -2801,7 +2859,8 @@
 			<property name="Meshfile" value="@:Other/Items/Health/painkillersPrefab.prefab"/>
 			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Morganic"/>
-			<property name="EconomicValue" value="240"/>
+			<property name="EconomicValue" value="750"/>
+			<property name="TraderStageTemplate" value="baseTier3"/>
 			<property name="Stacknumber" value="10"/><!-- STK loot -->
 			<property name="UnlockedBy" value="craftingMedical"/><!-- perkPhysician,drugAntibioticsSchematic, -->
 			<property name="DisplayType" value="cureDespair"/>
@@ -2826,7 +2885,8 @@
 			<property name="Meshfile" value="@:Other/Items/Health/painkillersPrefab.prefab"/>
 			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Morganic"/>
-			<property name="EconomicValue" value="120"/>
+			<property name="EconomicValue" value="375"/>
+			<property name="TraderStageTemplate" value="baseTier2"/>
 			<property name="Stacknumber" value="10"/><!-- STK loot -->
 			<property name="UnlockedBy" value="craftingMedical"/><!-- drugHerbalAntibioticsSchematic, -->
 			<property name="DisplayType" value="cureDespair"/>
@@ -2854,6 +2914,7 @@
 			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="EconomicValue" value="60"/>
+			<property name="TraderStageTemplate" value="baseTier1"/>
 			<property name="Stacknumber" value="10"/><!-- STK loot -->
 			<!-- <property name="UnlockedBy" value="craftingMedical"/> -->
 			<property name="DisplayType" value="cureDespair"/>
@@ -2948,8 +3009,8 @@
 		<effect_group>
 			<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffHeldLight"/>
 			<requirement name="CVarCompare" cvar="batteryFlashLight" operation="GT" value="0"/>
-		</effect_group>			
-		<effect_group>	
+		</effect_group>
+		<effect_group>
 			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHeldLight"/>
 			<requirement name="IsItemActive"/>
 			<requirement name="CVarCompare" cvar="batteryFlashLight" operation="GT" value="0"/>
@@ -2973,13 +3034,13 @@
 			<requirement name="CVarCompare" cvar="batteryNVG" operation="GT" value="0"/>
 		</effect_group>
 		<effect_group>
-		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffNightVision"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffNightVision"/>
 			<requirement name="IsItemActive"/>
 			<requirement name="CVarCompare" cvar="batteryNVG" operation="GT" value="0"/>
 		</effect_group>
 		<effect_group>
 			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffNightVision"/>
-			<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffNightVision"/>			
+			<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffNightVision"/>
 		</effect_group>
 	</append>
 </configs>

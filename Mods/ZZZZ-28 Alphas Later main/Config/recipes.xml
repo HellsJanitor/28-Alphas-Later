@@ -249,7 +249,7 @@
 	<recipe name="modBicycleStaminaSaver" count="1" tags="learnable">
 		<ingredient name="resourceCloth" count="50"/>
 		<ingredient name="resourceScrapPolymers" count="25"/>
-		<ingredient name="resourceAcid" count="2"/>
+		<!-- <ingredient name="resourceAcid" count="2"/> -->
 		<ingredient name="resourceSewingKit" count="2"/>
 	</recipe>
 
@@ -290,11 +290,12 @@
 		<ingredient name="resourceNail" count="20"/>
 	</recipe>
 	
-	<!-- <recipe name="ctnChickenCoop" count="1" craft_time="120" craft_area="workbench" craft_tool="meleeToolRepairT1ClawHammer" craft_exp_gain="500" tags="workbenchCrafting">
-		<ingredient name="resourceWood" count="100"/>
-		<ingredient name="resourceScrapIron" count="50"/>
-		<ingredient name="resourceNail" count="10"/>
-	</recipe> -->
+	<!-- *** composter *** -->
+	<recipe name="cntCompostBin" count="1" craft_time="120" craft_exp_gain="500" tags="learnable">
+		<ingredient name="resourceWood" count="200"/>
+		<!-- <ingredient name="resourceForgedIron" count="10"/> -->
+		<ingredient name="resourceNail" count="20"/>
+	</recipe>
 	
 	<!-- *** dew collector & tools *** -->
 	<recipe name="cntAdvancedDewCollector" count="1" craft_time="45" craft_exp_gain="500" tags="learnable,workbenchCrafting">
@@ -558,6 +559,16 @@
 	</recipe>
 	</append>
 	
+	<!-- *** cooking pot and grill *** -->
+	<setattribute xpath="//recipe[@name='toolCookingPot']" name="craft_tool">toolAnvil</setattribute>
+	<setattribute xpath="//recipe[@name='toolCookingGrill']" name="craft_tool">toolAnvil</setattribute>
+	<!-- *** ammo requires the ammo press tool *** -->
+	<setattribute xpath="//recipe[contains (@name,'9mmBullet')]" name="craft_tool">toolAmmoPress</setattribute>
+	<setattribute xpath="//recipe[contains (@name,'44MagnumBullet')]" name="craft_tool">toolAmmoPress</setattribute>
+	<setattribute xpath="//recipe[contains (@name,'762mmBullet')]" name="craft_tool">toolAmmoPress</setattribute>
+	<setattribute xpath="//recipe[contains (@name,'ShotgunShell')]" name="craft_tool">toolAmmoPress</setattribute>
+	<setattribute xpath="//recipe[contains (@name,'ShotgunSlug')]" name="craft_tool">toolAmmoPress</setattribute>
+	<setattribute xpath="//recipe[contains (@name,'ShotgunBreaching')]" name="craft_tool">toolAmmoPress</setattribute>
 	<!-- *** paper *** -->	
 	<set xpath="//recipe[@name='resourcePaper']/@count">50</set>
 	<set xpath="//recipe[@name='resourcePaper']//ingredient[@name='resourceWood']/@count">200</set>
@@ -600,6 +611,13 @@
 		<recipe name="resourceCobblestones" count="1" craft_area="cementMixer" tags="cementMixerCrafting">
 			<ingredient name="resourceClayLump" count="1"/>
 			<ingredient name="resourceRockSmall" count="1"/>
+		</recipe>
+	
+	<!-- *** bricks *** -->
+		<recipe name="resourceBricks" count="1" craft_area="forge" tags="perkAdvancedEngineering">
+			<ingredient name="resourceClayLump" count="2"/>
+			<ingredient name="resourceRockSmall" count="2"/>
+			<ingredient name="resourceCrushedSand" count="2"/>
 		</recipe>
 	</append>
 	
@@ -870,9 +888,7 @@
 	<set xpath="//recipe[@name='meleeWpnClubT0WoodenClub']//ingredient[@name='resourceWood']/@name">resourceBranch</set>
 	<append xpath="//recipe[@name='meleeWpnClubT0WoodenClub']">
 		<ingredient name="resourceYuccaFibers" count="5"/>
-	</append>
-	<set xpath="//recipe[@name='meleeToolTorch']//ingredient[@name='resourceWood']/@count">4</set>
-	<set xpath="//recipe[@name='meleeToolTorch']//ingredient[@name='resourceWood']/@name">resourceBranch</set>
+	</append>	
 	
 	<!-- *** iron arrows/bolts use branches instead of wood *** -->
 	<set xpath="//recipe[@name='ammoArrowIron']//ingredient[@name='resourceWood']/@name">resourceBranch</set>
@@ -960,76 +976,76 @@
 	
 	<!-- *** bullets/shells dismantle to component parts (70% return) *** -->
 	<!-- 9mm -->
-	<recipe name="resourceBulletTip" count="7" craft_area="workbench" tags="workbenchCrafting">
+	<recipe name="resourceBulletTip" count="7" craft_area="workbench" tags="workbenchCrafting" craft_tool="toolAmmoPress">
 		<secondary_output name="resourceGunPowder" count="7"/>
 		<secondary_output name="resourceBulletCasing" count="7"/>		
 		<ingredient name="ammo9mmBulletBall" count="10"/>
 	</recipe>
 	
-	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting">
+	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting" craft_tool="toolAmmoPress">
 		<secondary_output name="resourceGunPowder" count="7"/>
 		<secondary_output name="resourceBulletCasing" count="7"/>		
 		<ingredient name="ammo9mmBulletHP" count="10"/>
 	</recipe>
 	
-	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting">
+	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting" craft_tool="toolAmmoPress">
 		<secondary_output name="resourceGunPowder" count="14"/>
 		<secondary_output name="resourceBulletCasing" count="7"/>		
 		<ingredient name="ammo9mmBulletAP" count="10"/>
 	</recipe>
 	
 	<!-- .44 -->
-	<recipe name="resourceBulletTip" count="7" craft_area="workbench" tags="workbenchCrafting">
+	<recipe name="resourceBulletTip" count="7" craft_area="workbench" tags="workbenchCrafting" craft_tool="toolAmmoPress">
 		<secondary_output name="resourceGunPowder" count="14"/>
 		<secondary_output name="resourceBulletCasing" count="7"/>		
 		<ingredient name="ammo44MagnumBulletBall" count="10"/>
 	</recipe>
 	
-	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting">
+	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting" craft_tool="toolAmmoPress">
 		<secondary_output name="resourceGunPowder" count="14"/>
 		<secondary_output name="resourceBulletCasing" count="7"/>		
 		<ingredient name="ammo44MagnumBulletHP" count="10"/>
 	</recipe>
 	
-	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting">
+	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting" craft_tool="toolAmmoPress">
 		<secondary_output name="resourceGunPowder" count="21"/>
 		<secondary_output name="resourceBulletCasing" count="7"/>		
 		<ingredient name="ammo44MagnumBulletAP" count="10"/>
 	</recipe>
 	
 	<!-- 7.62mm -->
-	<recipe name="resourceBulletTip" count="7" craft_area="workbench" tags="workbenchCrafting">
+	<recipe name="resourceBulletTip" count="7" craft_area="workbench" tags="workbenchCrafting" craft_tool="toolAmmoPress">
 		<secondary_output name="resourceGunPowder" count="21"/>
 		<secondary_output name="resourceBulletCasing" count="7"/>		
 		<ingredient name="ammo762mmBulletBall" count="10"/>
 	</recipe>
 	
-	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting">
+	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting" craft_tool="toolAmmoPress">
 		<secondary_output name="resourceGunPowder" count="21"/>
 		<secondary_output name="resourceBulletCasing" count="7"/>		
 		<ingredient name="ammo762mmBulletHP" count="10"/>
 	</recipe>
 	
-	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting">
+	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting" craft_tool="toolAmmoPress">
 		<secondary_output name="resourceGunPowder" count="35"/>
 		<secondary_output name="resourceBulletCasing" count="7"/>		
 		<ingredient name="ammo762mmBulletAP" count="10"/>
 	</recipe>
 	
 	<!-- shotgun shells -->
-	<recipe name="resourceBuckshot" count="7" craft_area="workbench" tags="workbenchCrafting">
+	<recipe name="resourceBuckshot" count="7" craft_area="workbench" tags="workbenchCrafting" craft_tool="toolAmmoPress">
 		<secondary_output name="resourceGunPowder" count="28"/>
 		<secondary_output name="resourcePaper" count="7"/>		
 		<ingredient name="ammoShotgunShell" count="10"/>
 	</recipe>
 	
-	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting">
+	<recipe name="resourceBulletTip" count="14" craft_area="workbench" tags="workbenchCrafting" craft_tool="toolAmmoPress">
 		<secondary_output name="resourceGunPowder" count="35"/>
 		<secondary_output name="resourceScrapPolymers" count="7"/>		
 		<ingredient name="ammoShotgunSlug" count="10"/>
 	</recipe>
 	
-	<recipe name="resourceForgedSteel" count="35" craft_area="workbench" tags="workbenchCrafting">
+	<recipe name="resourceForgedSteel" count="35" craft_area="workbench" tags="workbenchCrafting" craft_tool="toolAmmoPress">
 		<secondary_output name="resourceClayLump" count="14"/>
 		<secondary_output name="resourceGunPowder" count="28"/>
 		<secondary_output name="resourceScrapPolymers" count="7"/>
@@ -1037,14 +1053,14 @@
 	</recipe>
 
 	<!-- *** rockets can be dismantled into component parts (50% gasoline return) *** -->
-	<recipe name="resourceRocketCasing" count="1" craft_area="workbench" tags="workbenchCrafting">
+	<recipe name="resourceRocketCasing" count="1" craft_area="workbench" tags="workbenchCrafting" craft_tool="toolAmmoPress">
 		<secondary_output name="resourceGunPowder" count="11"/>
 		<secondary_output name="ammoGasCan" count="250"/>
 		<secondary_output name="resourceBuckshot" count="18"/>		
 		<ingredient name="ammoRocketFrag" count="1"/>
 	</recipe>
 	
-	<recipe name="resourceRocketCasing" count="1" craft_area="workbench" tags="workbenchCrafting">
+	<recipe name="resourceRocketCasing" count="1" craft_area="workbench" tags="workbenchCrafting" craft_tool="toolAmmoPress">
 		<secondary_output name="resourceGunPowder" count="11"/>
 		<secondary_output name="ammoGasCan" count="250"/>
 		<secondary_output name="resourceRocketTip" count="1"/>		
@@ -1561,6 +1577,7 @@
 	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='5']/@count">6</set>
 	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='4']/@count">5</set>
 	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='3']/@count">4</set>
+	<!-- <set xpath="//recipe[@name='resourceBricks']/ingredient/@count">3</set> -->
 	
 	<!-- *** new vehicle bundles *** -->
 	<remove xpath="//recipe[@name='vehicle4x4TruckPlaceable']"/>
@@ -1600,7 +1617,7 @@
 	
 	<!-- *** various farming changes, seed crafting count tied to LotL *** -->
 	<setattribute xpath="//recipe[starts-with(@name,'planted') and not (contains(@name,'plantedtreeGrassSeed1'))]" name="tags">learnable,perkLivingOffTheLandCrafting</setattribute>
-	<set xpath="//recipe[starts-with(@name,'planted')]/ingredient/@count">5</set>
+	<set xpath="//recipe[starts-with(@name,'planted')]/ingredient/@count">4</set>
 	<insertafter xpath="//recipe[@name='plantedAloe1']/ingredient">
 	<effect_group>
       <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add" value="0,-1,-2" tags="resourceCropAloeLeaf"/>
@@ -1670,7 +1687,7 @@
 	<!-- *** new crop - lavender *** -->
 	<insertafter xpath="//recipe[@name='plantedPumpkin1']">
 	<recipe name="plantedLavender1" count="1" craft_time="1" tags="perkLivingOffTheLandCrafting">
-		<ingredient name="resourceCropLavender" count="5"/>
+		<ingredient name="resourceCropLavender" count="4"/>
 		<effect_group>
 			<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add" value="0,-1,-2" tags="resourceCropLavender"/>
 		</effect_group>

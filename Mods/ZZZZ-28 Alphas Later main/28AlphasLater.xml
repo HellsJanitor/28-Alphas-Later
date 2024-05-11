@@ -5,7 +5,66 @@
             <Description>### 28 Alphas Later ###
 			
 
-### 99% of features are now functioning correctly in multiplayer. "Headshots only" remains non-functional on dedicated servers ###
+Update 11/05/24
+
+## VERSION 1.4  - NEW SAVE HIGHLY RECOMMENDED! ##
+
+Added shape helper block for bricks @2500hp
+Bricks are harvestable from brick piles/pallets
+Changed the economic value of carrots to be the same as peas
+Added lootable cardboard boxes
+Added medicine cabinet to cabinet shape helper block
+Lowered amount of concrete in loot and trader stock
+Lowered amount of shape helpers in loot/quest rewards
+Hand-held torch requires fuel (gas)
+Changed secondary action for the torch to a power attack
+Burning shaft requires fuel (gas)
+Wall torch is a separate item requiring fuel. (removed the buff from the torches as it doesn't work anymore)
+Reduced crafting cost of portable water filter by 50%
+Fix spear action skill slow debuff progression
+Rework Living off the Land. Seeds now cost 4 crops by default, reduced from 5
+Reduced murky water in loot
+Cycling shorts and schematic are easier to craft and find
+Removed guaranteed cooking pots in POIs and trader stock - crafting a pot/grill in a forge requires an anvil
+The Dew collector now collects murky water with the filter as fuel, and converts to drinking water with the advanced filter
+Advanced Water Filter is more expensive
+Removed bleed particles from undead entities
+Fixed "crippled" zombies walking with no legs. Now they crawl, as they should
+Lithium and St. John's Wort are more expensive and rarer (esp. Lithium)
+Bloodmoon boss zombies now functioning correctly
+Removed tiers 1, 2, and 3 of restore power, and reworked tiers 1, 2, and 3 of Contraband Collection so they can be run during the day.
+Increased number of quests offered from 5 to 10 (credit Redbeard) (removed WMMTraderQuestMap from files as it's now incompatible)
+Zombies now have a "visible" backpack (loot bag), which drops loot when they're killed
+Lowered the number of zombie kills required for defend the safehouse quests
+Change the description and icon for small batteries 
+Added despair AOE buff to hostile animals
+Fixed Defend Air Drop spawns so they're sleeper game staged
+Removed headshot only. Instead, zombies take maximum damage from headshots and added a 90% reduction for hitting any other body parts
+Modified campfire buff so it includes "well lit". Sitting by a campfire ONLY will have a smaller effect on despair than also having a portable light source
+Add an "overfed" buff for a despair and passive health regen boost. Keeping both food AND water above 95% gives the buff
+Health bars removed
+Added stages for positive outlook. Stage one positive gives 5% stamina reduction, 10% buff resistance, and 5% general damage resistance, stage two 10%, 15% and 10%, and stage three 15%, 20%, and 15% respectively
+Added a "well-rested" buff. The longer you stay on your bed/bedroll, the longer the rested buff is, up to a max. of 10 mins
+Added a Compost bin. Plant fibre can be slowly turned into fertilizer, over time, in the compost bin
+Changed survival instinct/charismatic nature perks. Now you can have one or the other, but not both.
+Prevent random hordes from spawning for the first 15 minutes of a new game
+Reworked action skills/perk trees. Action skills govern damage/stamina/special effects, while perks cover magazines and books loot probability. Perks cost 1 skill point again
+Two new traders added
+Ammo press needed to craft and dismantle ammo in a workbench
+Demolitions expert action skills fixed
+Concrete mix can no longer be looted or purchased from traders
+Increased time that wall torches burn (50% longer)
+Increased the chance of harvesting a battery when wrenching
+Batteries more common in MoPower loot containers
+Economic value of batteries reduced
+Lithium and St. John's Wort now need an increased trader stage to offset medical traders being OP for despair meds in the early game
+Changed recipe for torch to require gas, not animal fat
+Add a recipe for the lantern that requires fuel (batteries) to run
+Increased portable water filter usage by 50%
+Lowered health and damage resistance for zombies slightly
+Fixed a discrepancy in zombie biome spawning
+Simplified farming so terrain blocks and POI farm plots only have to be upgraded once
+Added JoeSloeMoe's failsafe so action skills are not reset with Forgettin' Elixir
 
 Update 27/03/24
 added deco flashlights for harvesting small batteries, and lowered chance of battery to 20%

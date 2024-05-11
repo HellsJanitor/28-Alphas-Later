@@ -1,6 +1,10 @@
 <configs>
 	<!-- search find all *** for changes -->
 	
+	<!-- *** remove cooking pot & grill from trader stock *** -->
+	<remove xpath="//trader_items//item[@name='toolCookingPot']"/>
+	<remove xpath="//trader_items//item[@name='toolCookingGrill']"/>
+	
 	<!-- *** dew collector tools *** -->
 	<append xpath="/traders/trader_info[@id='1']">
 		<trader_items>
@@ -33,17 +37,17 @@
 	</append>
 	
 	<append xpath="//trader_item_group[@name='seeds']">
-	    <item name="meleeToolFarmT2IronHoe"/>
+	    <item name="meleeToolFarmT2IronHoe" quality="1"/>
 		<item name="resourceFertilizer" count="50,100"/>
 	</append>	
 	
 	<append xpath="//trader_item_group[@name='traderGeneral']">
-	    <item name="meleeToolFarmT2IronHoe"/>
+	    <item name="meleeToolFarmT2IronHoe" quality="1"/>
 		<item name="resourceFertilizer" count="50,100"/>
 	</append>
 	
 	<!-- *** increased buy markup, decreased sell markup *** -->
-	<setattribute xpath="/traders" name="buy_markup">5</setattribute>
+	<setattribute xpath="/traders" name="buy_markup">6</setattribute>
 	<setattribute xpath="/traders" name="sell_markdown">0.1</setattribute>
 	<removeattribute xpath="//trader_info[@id='4']/@override_buy_markup"/>
 	<removeattribute xpath="//trader_info[@id='10']/@override_buy_markup"/>	
@@ -79,6 +83,7 @@
 	<!-- *** add tablesaw to trader stock *** -->
 	<append xpath="//trader_item_group[@name='tools']">
 		<item name="playerTableSaw" prob="0.7"/>
+		<item name="toolAmmoPress" prob="0.7"/>
 	</append>
 	
 	<!-- *** add new mods to trader stock *** -->
@@ -102,12 +107,12 @@
 	<!-- *** add antivenom/St. John's wort to medical trader stock *** -->
 	<append xpath="//trader_item_group[@name='medicine']">
 	<item name="antivenom"/>
-	<item name="drugStJohnsWort" count="1,2"/>
+	<item name="drugStJohnsWort" count="1"/>
 	</append>
 	
 	<!-- *** add lithium to rare medical trader stock *** -->
 	<append xpath="//trader_item_group[@name='rareMedicine']">
-	<item name="drugLithium" count="1,2"/>
+	<item name="drugLithium" count="1"/>
 	</append>
 	
 	<!-- *** legendary paintbrush *** -->
@@ -171,5 +176,5 @@
 		<item name="modArmorAdvancedMuffledConnectors"/>
 	</set>
 	
-	<set xpath="//trader_item_group[@name='constructionSupplies']//item[@name='resourceConcreteMix']/@count">10,50</set>
+	<set xpath="//trader_item_group[@name='constructionSupplies']//item[@name='resourceConcreteMix']/@name">resourceCrushedSand</set>
 </configs>

@@ -1,5 +1,11 @@
 <xml>
 	<append xpath="/*[1]">
+		<buff name="test">
+			<effect_group>
+				<triggered_effect trigger="onSelfDamagedOther" action="_28AL.CC.MinEventActions.DropLootBag,28ALCC" target="other"/>
+			</effect_group>
+		</buff>
+
 		<buff name="buffLightLevelTest" hidden="true">
 			<update_rate value=".05"/>
 			<effect_group>

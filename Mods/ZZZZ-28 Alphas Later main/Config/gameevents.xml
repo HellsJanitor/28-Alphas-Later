@@ -59,7 +59,8 @@
 	<!-- *** hordes called in from Boomer explosions *** -->
 	<action_sequence name="boomer_horde_sequence">		
 	<property name="allow_user_trigger" value="true" />
-	<property name="category" value="twitch_actions" />
+	<property name="action_type" value="Game" />
+	<!-- <property name="category" value="twitch_actions" /> -->
 			
 		<action class="SetScreenEffect">
 			<property name="phase" value="2" />
@@ -114,7 +115,7 @@
 
 	<action_sequence name="000_action_pull">
         <property name="allow_user_trigger" value="true"/>
-        <property name="category" value="twitch_actions"/>
+        <!-- <property name="category" value="twitch_actions"/> -->
         <action class="SetScreenEffect">
             <property name="phase" value="1"/>
             <property name="screen_effect" value="Blur"/>
@@ -157,12 +158,20 @@
 		<variable name="zombiename" value="zombieArlene,zombieBoe,zombieJoe,zombieLab,zombieDarlene,zombieMarlene,zombieYo,zombieSteve,zombieBusinessMan,zombieNurse,zombieSkateboarder,zombiePartyGirl,zombieBurnt,zombieJanitor" />
 		<variable name="spawncount" value="5" />
 		<variable name="alertsound" value="zombiemalealert" />	
+		<variable name="gamestage_extra1" value="25" />
+		<variable name="spawncount_extra1" value="5" />
+		<variable name="gamestage_extra2" value="50" />
+		<variable name="spawncount_extra2" value="5" />
 	</action_sequence>
 	
 	<action_sequence name="boomer_horde_feral" template="vote_minor">
 		<variable name="zombiename" value="zombieArleneFeral,zombieBoeFeral,zombieJoeFeral,zombieLabFeral,zombieDarleneFeral,zombieMarleneFeral,zombieYoFeral,zombieSteveFeral,zombieBusinessManFeral,zombieNurseFeral,zombieSkateboarderFeral,zombiePartyGirlFeral,zombieJanitorFeral" />
 		<variable name="spawncount" value="5" />
 		<variable name="alertsound" value="zombieferalalert" />
+		<variable name="gamestage_extra1" value="25" />
+		<variable name="spawncount_extra1" value="5" />
+		<variable name="gamestage_extra2" value="50" />
+		<variable name="spawncount_extra2" value="5" />
 	</action_sequence>
 	
 	<!-- <action_sequence name="action_boomerpull">
@@ -200,6 +209,7 @@
 	
 	<!-- *** brass catcher *** -->
 	<action_sequence name="modBrassCatcher">
+	<property name="action_type" value="Game" />
 		<action class="AddItems">
 		<property name="added_items" value="resourceBulletCasing" />
 		<property name="added_item_counts" value="1" />

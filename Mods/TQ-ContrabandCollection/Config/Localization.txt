@@ -10,3 +10,4 @@ contraband_collection_description,Quest,Quest Info,,,So... I might have setup a 
 contraband_collection_offer,Quest,Quest Info,,,So... I might have setup a delivery from a buddy of mine in the military who's slipped a special package for me into a supply crate - but he can only deliver overnight when a supply crate going missing from the official drops might go unnoticed.  Are you up for heading out and collecting it for me? Oh and a warning - the package is a bit volatile - be wary of explosions!
 contraband_collection_statement,Quest,Quest Info,,,Supply Drop
 contraband_collection_response,Quest,Quest Info,,,Supply Drop [[DECEA3]Night Only[-]] ([DECEA3]{treasure.distance} {treasure.direction}[-])
+contraband_collection_responseT1_2_3,Quest,Quest Info,,,Supply Drop ([DECEA3]{treasure.distance} {treasure.direction}[-])

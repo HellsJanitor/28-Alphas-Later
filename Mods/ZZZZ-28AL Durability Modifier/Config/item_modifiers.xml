@@ -8,6 +8,8 @@
 			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffHelmetPurifierDeactivate"/>
 			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHelmetPurifierActivate"/>
 			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHelmetPurifierActive"/>
+			<triggered_effect trigger="onSelfAction2End" action="AddBuff" buff="buffHelmetPurifierActivate"/>
+			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffHelmetPurifierActivate"/>
 		</effect_group>
 	</set>
 	
@@ -54,7 +56,7 @@
 	
 	<!-- *** laser sight *** -->
 	<set xpath="//item_modifier[@name='modGunLaserSight']//effect_group[@name='external attachment prefab (old way)']">
-		<requirement name="!HoldingItemHasTags" tags="attachmentsIncluded"/>		
+		<requirement name="!HoldingItemHasTags" tags="attachmentsIncluded"/>
 		<triggered_effect trigger="onSelfItemDeactivate" action="SetTransformChildrenActive" active="false" parent_transform="Side" transform_path="gun_laser"/>
 		<triggered_effect trigger="onSelfEquipStop" action="SetTransformChildrenActive" active="false" parent_transform="Side" transform_path="gun_laser"/>
 		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffLaserLightDeactivate"/>
@@ -77,5 +79,30 @@
 		<requirement name="HasBuff" buff="buffLaserLightActive"/>
 		<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="-.2"/>
 		<passive_effect name="WeaponHandling" operation="perc_add" value=".2"/>
+	</set>
+	
+	<!-- *** burning shaft *** -->
+	<set xpath="//item_modifier[@name='modMeleeClubBurningShaft']//effect_group[@name='light/douse torch always']">
+		<!-- <triggered_effect trigger="onSelfWaterSurface" action="AddPart" part="Flames" prefab="property?FlameEffect" parentTransform="#HeldItemRoot"/> -->
+		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffBurningShaftDeactivate"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffBurningShaftActivate"/>
+		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffBurningShaftActivate"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffBurningShaftActive"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffBurningShaftActive"/>
+		<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Flames"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="Flames"/>
+		<triggered_effect trigger="onSelfDied" action="RemovePart" part="Flames"/>
+	</set>
+	
+	<set xpath="//item_modifier[@name='modMeleeClubBurningShaft']//effect_group[@name='new Fire Proc']">
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
+		<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="30"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement">
+			<requirement name="HasBuff" buff="buffBurningShaftActive"/></triggered_effect>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="10">
+			<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="0"/></triggered_effect>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="11">
+			<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="1"/></triggered_effect>
+	
 	</set>
 </Hells_Janitor>

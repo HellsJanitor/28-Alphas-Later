@@ -95,5 +95,37 @@
 				<property name="buff_name" value="buffNVGReloadSuccess"/>
 			</action>
 		</action_sequence>
+		
+		<action_sequence name="removeHandTorchBattery">
+			<property name="category" value="twitch_actions"/>
+			<property name="target_type" value="Block"/>
+			
+			<action class="RemoveItems">
+				<property name="items_location" value="Toolbelt,Backpack,Held"/>
+				<property name="items_tags" value="gasoline"/>
+				<property name="count_type" value="Items"/>
+				<property name="count" value="10"/>
+			</action>
+			
+			<action class="AddBuff">
+				<property name="buff_name" value="buffHandTorchReloadSuccess"/>
+			</action>
+		</action_sequence>
+		
+		<action_sequence name="removeBurningShaftBattery">
+			<property name="category" value="twitch_actions"/>
+			<property name="target_type" value="Block"/>
+			
+			<action class="RemoveItems">
+				<property name="items_location" value="Toolbelt,Backpack,Held"/>
+				<property name="items_tags" value="gasoline"/>
+				<property name="count_type" value="Items"/>
+				<property name="count" value="10"/>
+			</action>
+			
+			<action class="AddBuff">
+				<property name="buff_name" value="buffBurningShaftReloadSuccess"/>
+			</action>
+		</action_sequence>
 	</append>
 </Hells_Janitor>

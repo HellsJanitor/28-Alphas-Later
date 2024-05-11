@@ -36,67 +36,55 @@
 			<property name="BuffsWhenWalkedOn" value="buffHealHealth"/>
 			<requirement name="IsItemActive" value="true"/>
 			<requirement name="EntityTagCompare" tags="player"/>
+			<property name="Tags" value="bedroll"/>
 		</block>
 	</insertafter>
+	
+	<set xpath="//block[@name='bedroll']">
+		<property name="CreativeMode" value="Player"/>
+		<property name="Class" value="SleepingBag"/>
+		<property name="IndexName" value="brBlock"/> <!-- need this to show the bigger covering area -->
+		<property name="DescriptionKey" value="bedGroupDesc"/>
+		<property name="DisplayType" value="blockMulti"/>
+		<property name="CustomIconTint" value="50493F"/>
+		<property name="TintColor" value="50493F"/>
+		<property name="Stacknumber" value="10"/>
+		<property name="Material" value="Mplants"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/RespawnPoints/bedRollPrefab"/>
+		<property name="ModelOffset" value=".5,0,0"/>
+		<property name="MultiBlockDim" value="2,2,1"/>
+		<!-- <property name="GndAlign" value="1"/> -->
+		<property name="WaterFlow" value="permitted"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+		<property name="Place" value="TowardsPlacerInverted"/>
+		<property name="OnlySimpleRotations" value="true"/>
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+		<property name="FuelValue" value="20"/>
+		<property name="EconomicValue" value="10"/>
+		<property name="EconomicBundleSize" value="10"/>
+		<property name="MaxDamage" value="100"/>
+		<property name="FallDamage" value=".8"/>
+		<property name="CanPickup" value="true" param1="bedrollBlockVariantHelper"/>
+		<property name="IsTerrainDecoration" value="true"/>
+		<property class="RepairItems">
+			<property name="resourceYuccaFibers" value="20"/>
+		</property>
+		<drop event="Harvest" name="resourceYuccaFibers" count="5" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceYuccaFibers" count="1,3"/>
+		<drop event="Fall" name="resourceYuccaFibers" count="5" prob="1" stick_chance="0"/>
+		<property name="SortOrder1" value="B433"/>
+		<property name="SortOrder2" value="0001"/>
+		<property name="Group" value="Basics,Building,advBuilding"/>
+		<property name="Tags" value="bedroll"/>
+		<property name="FilterTags" value="MC_building,SC_decor"/>
+	</set>	
 	
 	<!-- *** double planted crops growth time *** -->
 	<set xpath="//block[@name='cropsGrowingMaster']//property[@name='PlantGrowing.GrowthRate']/@value">126</set>
 	
 	<!-- *** new fertilized terrain *** -->
-	<append xpath="/blocks">
-		<block name="terrFertileFarmland">
-			<property name="Material" value="Mfarmland"/>
-			<property name="Shape" value="Terrain"/>
-			<property name="Mesh" value="terrain"/>
-			<property name="Texture" value="11"/>
-			<property name="TerrainIndex" value="9"/>
-			<property name="LPHardnessScale" value="2"/>
-			<property name="Map.Color" value="20,50,21"/>
-			<property name="ImposterExclude" value="true"/>
-			<property name="CanMobsSpawnOn" value="false"/>
-			<property class="RepairItems"><property name="resourceClayLump" value="14"/></property>
-			<property class="UpgradeBlock">
-				<property name="ToBlock" value="terrFertilizedFarmland"/>
-				<property name="Item" value="resourceFertilizer"/>
-				<property name="ItemCount" value="5"/>
-				<property name="UpgradeHitCount" value="4"/>
-			</property>
-			<drop event="Harvest" name="resourceClayLump" count="22" tag="oreWoodHarvest"/>
-			<drop event="Destroy" count="0"/>
-			<drop event="Fall" name="terrFertileDirt" count="1" prob="0.25" stick_chance="1"/>
-			<drop event="Fall" name="resourceClayLump" count="44" prob="0.187" stick_chance="0"/>
-			<property name="DescriptionKey" value="terrainBlockGroupDesc"/>
-			<property name="FilterTags" value="fterrain"/>
-			<property name="SortOrder1" value="d0m0"/>
-			<property name="SortOrder2" value="0050"/>
-			<property name="DisplayType" value="blockTerrainFertile"/>
-		</block>
-	
-		<block name="terrFertilizedFarmland">
-			<property name="Material" value="MfertilizedFarmland"/>
-			<property name="Shape" value="Terrain"/>
-			<property name="Mesh" value="terrain"/>
-			<property name="Texture" value="1"/>
-			<property name="ImposterExclude" value="true"/>
-			<property name="CanMobsSpawnOn" value="false"/>
-			<property class="RepairItems"><property name="resourceClayLump" value="14"/></property>
-			<property class="UpgradeBlock">
-				<property name="ToBlock" value="terrFertilizedFarmland3"/>
-				<property name="Item" value="resourceFertilizer"/>
-				<property name="ItemCount" value="10"/>
-				<property name="UpgradeHitCount" value="4"/>
-			</property>
-			<drop event="Harvest" name="resourceClayLump" count="22" tag="oreWoodHarvest"/>
-			<drop event="Destroy" count="0"/>
-			<drop event="Fall" name="terrFertileDirt" count="1" prob="0.25" stick_chance="1"/>
-			<drop event="Fall" name="resourceClayLump" count="44" prob="0.187" stick_chance="0"/>
-			<property name="DescriptionKey" value="terrainBlockGroupDesc"/>
-			<property name="FilterTags" value="fterrain"/>
-			<property name="SortOrder1" value="d0m0"/>
-			<property name="SortOrder2" value="0050"/>
-			<property name="DisplayType" value="blockTerrainFertile"/>
-		</block>
-        
+	<append xpath="/blocks">        
 		<block name="terrFertilizedFarmland3">
 			<property name="Material" value="MfertilizedFarmland3"/>
 			<property name="Shape" value="Terrain"/>
@@ -126,9 +114,9 @@
 			<property name="DescriptionKey" value="ctnChickenCoopDesc"/>
 			<property name="Material" value="Mwood"/>
 			<property name="Shape" value="ModelEntity"/>
-			<property name="Model" value="#@modfolder:Resources/ChickenCoop.unity3d?ChickenCoop"/>
+			<property name="Model" value="#@modfolder:Resources/furnishings.unity3d?ChickenCoop"/>
 			<property name="ModelOffset" value="0,0,0"/>
-			<property name="MultiBlockDim" value="4,2,2"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="ImposterExchange" value="imposterBlock" param1="116"/>
 			<property name="WaterFlow" value="permitted"/>
 			<property name="Place" value="TowardsPlacerInverted"/>
@@ -194,7 +182,6 @@
 			<property name="OpenSound" value="open_workbench"/>
 			<property name="CloseSound" value="close_workbench"/>
 			<property name="ConvertSound" value="bucketfill_water,1"/>
-			<!-- changed for testing, change back to 15600 and 26000 when done -->
 			<property name="MinConvertTime" value="31200"/>
 			<property name="MaxConvertTime" value="52000"/>
 			<property name="EconomicValue" value="5"/>
@@ -211,7 +198,7 @@
 			<!-- <drop event="Destroy" name="cntAdvancedDewCollector" count="1"/> -->
 			<drop event="Harvest" name="resourceScrapPolymers" count="40,60" tag="allHarvest"/>
 			<drop event="Harvest" name="resourceMetalPipe" count="1,3" tag="allHarvest"/>
-			<drop event="Destroy" name="resourceWaterFilter" count="0,1"/>
+			<drop event="Destroy" name="resourceScrapPolymers" count="10"/>
 			<property name="DestroyFX" value="blockdestroy_cloth,collector_destroy"/>
 			<property name="SortOrder1" value="B281"/>
 			<property name="SortOrder2" value="0100"/>
@@ -226,12 +213,11 @@
 			<property name="ContColumns" value="3"/>
 			<property name="ContRows" value="1"/>
 			
-			<item_conversion item="drinkJarBoiledWater" lower_range="1" upper_range="1"/>
+			<item_conversion item="drinkJarRiverWater" lower_range="1" upper_range="1"/>
 			
-			<!-- <modifier name="adcMineralInfuser" effect="ReplaceItem" value="drinkJarBoiledWater" secondary="adcEnhancedWater"/> -->
-			<modifier name="adcLargeCatcher" effect="ItemQuantity" value="drinkJarBoiledWater" secondary="2" thirdValue="2"/>
-			<!-- <modifier name="adcLargeCatcher" effect="ItemQuantity" value="adcEnhancedWater" secondary="2" thirdValue="2"/> -->
-			<modifier name="adcAdvancedFilter" effect="Speed" value="-1.0"/>
+			<modifier name="adcAdvancedFilter" effect="ReplaceItem" value="drinkJarRiverWater" secondary="drinkJarBoiledWater"/>
+			<modifier name="adcLargeCatcher" effect="ItemQuantity" value="drinkJarRiverWater" secondary="2" thirdValue="2"/>
+			<!-- <modifier name="adcAdvancedFilter" effect="Speed" value="-1.0"/> -->
 			<modifier name="adcBigBarrel" effect="OutputSlots" value="2"/><!-- Additive effect -->
 		</block>
 	
@@ -294,7 +280,6 @@
 		<block name="cntIDCAnimalSnare">
 			<property name="CustomIcon" value="AnimalSnare"/>
 			<property name="Class" value="PassiveCollector, IDCCoreV2"/>
-			<!-- <property name="UnlockedBy" value="craftingWorkstations"/> -->
 			<property name="WorkstationIcon" value="ui_game_symbol_water"/>
 			<property name="CreativeMode" value="Player"/>
 			<property name="DescriptionKey" value="cntIDCAnimalSnareDesc"/>
@@ -350,7 +335,7 @@
 			<!-- <modifier name="idcMeatCooker" effect="ItemQuantity" value="foodCharredMeat" secondary="1" thirdValue="3"/> -->
 			<!-- <modifier name="idcEnhancedSkinningDevice" effect="ItemQuantity" value="resourceLeather" secondary="4" thirdValue="6"/> -->
 			<modifier name="idcUpgradedStorage" effect="OutputSlots" value="3"/>
-			<modifier name="plantedGraceCorn1" effect="Speed" value="-0.2"/>
+			<modifier name="plantedGraceCorn1" effect="Speed" value="-0.5"/>
 		</block>
 	
 	<!-- *** beehive and treestump *** -->
@@ -361,10 +346,11 @@
 			<property name="WorkstationIcon" value="ui_game_symbol_water"/>
 			<property name="CreativeMode" value="Player"/>
 			<property name="DescriptionKey" value="ctnIDCBeehiveDesc"/>
-			<property name="Material" value="MFuelBarrelPolymer"/>
+			<property name="Material" value="Mwood"/>
 			<property name="Shape" value="ModelEntity"/>
-			<property name="Model" value="#@modfolder:Assets/idc_beehive.unity3d?PrefabBeehive"/>
-			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="Model" value="#@modfolder:Resources/furnishings.unity3d?Beehive"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="ModelOffset" value="0,0,0"/>
 			<property name="ImposterExchange" value="imposterBlock" param1="116"/>
 			<property name="WaterFlow" value="permitted"/>
 			<property name="Place" value="TowardsPlacerInverted"/>
@@ -386,10 +372,10 @@
 			<property name="HeatMapTime" value="2000"/>
 			<property name="HeatMapFrequency" value="5000"/>
 			<property class="RepairItems">
-				<property name="resourceScrapPolymers" value="20"/>
+				<property name="resourceWood" value="20"/>
 				<property name="resourceForgedIron" value="10"/>
 			</property>
-			<drop event="Destroy" name="ctnIDCBeehive" count="1"/>
+			<drop event="Destroy" name="resourceWood" count="15"/>
 			<property name="SortOrder1" value="B281"/>
 			<property name="SortOrder2" value="0100"/>
 			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
@@ -404,6 +390,58 @@
 			
 			<item_conversion item="foodHoney" lower_range="1" upper_range="2"/>
 			<property name="FuelItem" value="honeyBee"/>
+		</block>
+		
+		<block name="cntCompostBin">
+			<property name="CustomIcon" value="composter"/>
+			<property name="Class" value="PassiveCollector, IDCCoreV2"/>
+			<property name="UnlockedBy" value="craftingWorkstations"/>
+			<property name="WorkstationIcon" value="ui_game_symbol_water"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="cntCompostBinDesc"/>
+			<property name="Material" value="Mwood"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/furnishings.unity3d?CompostBin"/>
+			<property name="MultiBlockDim" value="1,1,2"/>
+			<!-- <property name="ModelOffset" value="0,0,0"/> -->
+			<property name="ImposterExchange" value="imposterBlock" param1="116"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="RestrictSubmergedPlacement" value="true"/>
+			<property name="AllowedRotations" value="Basic90"/>
+			<property name="Path" value="solid"/>
+			<property name="IsDecoration" value="true"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="OpenSound" value="open_cooler"/>
+			<property name="CloseSound" value="close_cooler"/>
+			<property name="ConvertSound" value="close_corpse,1"/>
+			<property name="MinConvertTime" value="11000"/>
+			<property name="MaxConvertTime" value="15000"/>
+			<property name="EconomicValue" value="3"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="MaxDamage" value="1000"/>
+			<property name="HeatMapStrength" value="1"/>
+			<property name="HeatMapTime" value="2000"/>
+			<property name="HeatMapFrequency" value="5000"/>
+			<property class="RepairItems">
+				<property name="resourceWood" value="20"/>
+			</property>
+			<drop event="Destroy" name="resourceWood" count="15"/>
+			<property name="SortOrder1" value="B281"/>
+			<property name="SortOrder2" value="0100"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			<property name="HasModifiers" value="true"/>
+			<property name="HasItemConversions" value="true"/>
+			
+			<property name="ContColumns" value="3"/>
+			<property name="ContRows" value="1"/>
+			<property name="NumModifiersSlots" value="1"/>
+			
+			<item_conversion item="resourceFertilizer" lower_range="1" upper_range="2"/>
+			<property name="FuelItem" value="resourceYuccaFibers"/>
 		</block>
 		
 		<block name="beehiveTreeStump">
@@ -450,7 +488,7 @@
 			<property name="Stacknumber" value="1"/>
 			<property name="Material" value="Mmetal_weak"/>
 			<property name="Shape" value="ModelEntity"/>
-			<property name="Model" value="Entities/Furniture/woodBurningStovePrefab"/>
+			<property name="Model" value="#@modfolder:Resources/furnishings.unity3d?woodBurningStovePlayer"/>
 			<property name="ImposterDontBlock" value="true"/>
 			<property name="WaterFlow" value="permitted"/>
 			<property name="ParticleName" value="campfire"/>
@@ -482,7 +520,7 @@
 			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
 			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
 			
-			<property name="Fuels" value="resourceWood,100"/>
+			<!-- <property name="Fuels" value="resourceWood,100"/> -->
 		</block>
 		
 	<!-- *** wasteland boulders *** -->
@@ -592,7 +630,9 @@
 		<property class="UpgradeBlock">
 			<property name="ToBlock" value="terrFertileFarmland"/>
 			<property name="Item" value="meleeToolFarmT2IronHoe"/>
-			<property name="ItemCount" value="0"/>
+			<property name="ToBlock" value="terrFertilizedFarmland3"/>
+			<property name="Item" value="resourceFertilizer"/>
+			<property name="ItemCount" value="20"/>
 			<property name="UpgradeHitCount" value="4"/>
 		</property>
 	</append>
@@ -601,7 +641,9 @@
 		<property class="UpgradeBlock">
 			<property name="ToBlock" value="terrFertileFarmland"/>
 			<property name="Item" value="meleeToolFarmT2IronHoe"/>
-			<property name="ItemCount" value="0"/>
+			<property name="ToBlock" value="terrFertilizedFarmland3"/>
+			<property name="Item" value="resourceFertilizer"/>
+			<property name="ItemCount" value="20"/>
 			<property name="UpgradeHitCount" value="4"/>
 		</property>
 	</append>
@@ -610,7 +652,9 @@
 		<property class="UpgradeBlock">
 			<property name="ToBlock" value="terrFertileFarmland"/>
 			<property name="Item" value="meleeToolFarmT2IronHoe"/>
-			<property name="ItemCount" value="0"/>
+			<property name="ToBlock" value="terrFertilizedFarmland3"/>
+			<property name="Item" value="resourceFertilizer"/>
+			<property name="ItemCount" value="20"/>
 			<property name="UpgradeHitCount" value="4"/>
 		</property>
 	</append>
@@ -619,7 +663,9 @@
 		<property class="UpgradeBlock">
 			<property name="ToBlock" value="terrFertileFarmland"/>
 			<property name="Item" value="meleeToolFarmT2IronHoe"/>
-			<property name="ItemCount" value="0"/>
+			<property name="ToBlock" value="terrFertilizedFarmland3"/>
+			<property name="Item" value="resourceFertilizer"/>
+			<property name="ItemCount" value="20"/>
 			<property name="UpgradeHitCount" value="4"/>
 		</property>
 	</append>
@@ -726,6 +772,12 @@
 	<set xpath="//block[@name='palletBagFertilizerCapSml']//drop[@name='resourceFertilizer']/@count">2,3</set>
 	<set xpath="//block[@name='palletBagFertilizerSingleBent']//drop[@name='resourceFertilizer']/@count">1,2</set>
 	<set xpath="//block[@name='palletBagFertilizerSingleFlat']//drop[@name='resourceFertilizer']/@count">1,2</set>
+	
+	<!-- *** carboard boxes loot *** -->
+	<insertafter xpath="//block[@name='palletBrownBoxesBase']//property[@name='Material']">
+	<property name="Class" value="Loot"/>
+	<property name="LootList" value="cardboardboxloot"/>
+	</insertafter>
 	
 	<!-- *** makes various deco blocks able to be picked up *** -->
 	<!-- *** neon signs *** -->
@@ -1080,7 +1132,59 @@
 			<property name="SortOrder2" value="0000"/>
 			<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
 		</block>
+		
+	<!-- *** medicine cabinet added to cabinet shape helper *** -->
+		<block name="cntMedicineCabinetPlayer">
+			<property name="CreativeMode" value="Player"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="playerStorage"/>
+			<property name="CustomIcon" value="cntPillCaseClosed"/>
+			<property name="DescriptionKey" value="furnitureGroupDesc"/>
+			<property name="Material" value="Mwood_weak"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/LootContainers/pill_case_closedPrefab.prefab"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="144"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="HandleFace" value="South"/>
+			<property name="Path" value="solid"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="EconomicValue" value="6"/>
+			<property class="RepairItems">
+				<property name="resourceWood" value="8"/>
+			</property>
+			<drop event="Destroy" name="resourceWood" count="1,2"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property name="SortOrder1" value="B111"/>
+			<property name="SortOrder2" value="0200"/> 
+			<property name="FilterTags" value="MC_building,SC_loot"/>
+		</block>		
 	</append>
+	
+	<!-- *** adds medicine cabinet to cabinet shape helper *** -->
+	<append xpath="//block[@name='cntWoodFurnitureBlockVariantHelper2']//property[@name='PlaceAltBlockValue']/@value">,cntMedicineCabinetPlayer</append>
+	
+	<!-- *** upgrade path from cobblestone to brick *** -->
+	<set xpath="//block[@name='cobblestoneShapes']/property[@class='UpgradeBlock']//property[@name='ToBlock']/@value">brickShapes</set>
+	<set xpath="//block[@name='cobblestoneShapes']/property[@class='UpgradeBlock']//property[@name='Item']/@value">resourceBricks</set>
+	<set xpath="//block[@name='cobblestoneShapes']/property[@class='UpgradeBlock']//property[@name='ItemCount']/@value">12</set>
+	
+	<!-- *** upgrade path from brick to concrete *** -->
+	<set xpath="//block[@name='brickShapes']/property[@class='RepairItems']/property[@name='resourceCobblestones']/@name">resourceBricks</set>
+	<set xpath="//block[@name='brickShapes']/property[@class='UpgradeBlock']//property[@name='ToBlock']/@value">concreteShapes</set>
+	<set xpath="//block[@name='brickShapes']/property[@class='UpgradeBlock']//property[@name='Item']/@value">resourceConcreteMix</set>
+	<set xpath="//block[@name='brickShapes']/property[@class='UpgradeBlock']//property[@name='ItemCount']/@value">12</set>
+	
+	<!-- *** brick pallets and blocks give bricks *** -->
+	<set xpath="/blocks/block[@name='palletBricksBase']//drop[2]/@name">resourceBricks</set>
+	<set xpath="/blocks/block[@name='palletBricksBase']//drop[2]/@count">5,15</set>
+	<set xpath="/blocks/block[@name='bricksStack']//drop[1]/@name">resourceBricks</set>
+	<set xpath="/blocks/block[@name='bricksStack']//drop[1]/@count">5,15</set>
+	<set xpath="/blocks/block[@name='rubblePileBricks']//drop[2]/@name">resourceBricks</set>
+	<set xpath="/blocks/block[@name='rubblePileBricks']//drop[2]/@count">1,3</set>
+	<set xpath="/blocks/block[@name='brickNoUpgradeMaster']//drop[1]/@name">resourceBricks</set>
+	<set xpath="/blocks/block[@name='brickNoUpgradeMaster']//drop[1]/@count">1,3</set>
 	
 	<!-- *** wild crops can be picked up *** -->
 	<append xpath="//block[@name='mushroom01']">
@@ -1257,6 +1361,8 @@
 			<property name="HeatMapFrequency" value="1000"/>
 			<property name="OpenSound" value="open_workbench"/>
 			<property name="CloseSound" value="close_workbench"/>
+			<property name="CraftSound" value="tablesaw_start_click"/>
+			<property name="CraftCompleteSound" value="tablesaw_complete"/>
 			<property name="TakeDelay" value="15"/>
 			<property class="RepairItems">
 				<property name="resourceForgedIron" value="10"/>
@@ -1579,4 +1685,7 @@
 	<set xpath="//block//drop[@event='Harvest'][@count='200']/@count">100</set>
 	<set xpath="//block//drop[@event='Harvest'][@count='300']/@count">150</set>
 	<set xpath="//block//drop[@event='Harvest'][@count='400']/@count">200</set>
+	
+	<!-- *** adds Trader Red to the trader spawn block *** -->
+	<append xpath="//block[@name='spawnTrader']//property[@name='SpawnClass']/@value">,npcTraderRed,npcTraderHells</append>
 </configs>

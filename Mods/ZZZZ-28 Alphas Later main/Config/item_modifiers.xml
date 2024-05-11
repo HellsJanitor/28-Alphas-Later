@@ -98,7 +98,7 @@
 		<effect_group tiered="false">
 			<passive_effect name="EntityDamage" operation="perc_add" value=".30"/>			
 			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock">
-				<requirement name="EntityTagCompare" target="other" tags="radiated,mutated"/></triggered_effect>
+				<requirement name="EntityTagCompare" target="other" tags="radiated,mutated,mutant"/></triggered_effect>
 		</effect_group>		
 	</item_modifier>
 	

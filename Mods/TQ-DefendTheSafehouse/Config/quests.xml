@@ -1,551 +1,426 @@
 <Config>
-
-<!-- CautiousPancakeDefendPOIFromHorde -->
-
-
-<insertAfter xpath="/quests/quest[@id='tier1_fetch']">  
-
-<!-- Zombie Challenge Quests -->
-
-<!-- *** FETCH_QUESTS -->
-	<quest id="tier1_courier_rescue">
-		<property name="name_key" value="tier1_courier_rescue_name" />
-		<property name="subtitle_key" value="courier_rescue_subtitle"/>
-		<property name="description_key" value="courier_rescue_description"/>
-		<property name="icon" value="ui_game_symbol_quest"/>
-		<property name="repeatable" value="true"/>
-		<property name="category_key" value="quest"/>
-		<property name="difficulty" value="medium"/>
-		<property name="difficulty_tier" value="1" param1="difficulty" />
-		<property name="offer_key" value="courier_rescue_offer" param1="offer" />
-		<property name="statement_key" value="courier_rescue_statement"/>
-		<property name="response_key" value="courier_rescue_response"/>
-		<property name="login_rally_reset" value="true"/>
-		<property name="reward_choices_count" value="5" />
-		<property name="extra_tags" value="" param1="extra_tags" />
-		<property name="shareable" value="true"/>
-
-		<property name="completiontype" value="TurnIn"/>
-		<property name="completion_key" value="quest_fetch_completion"/>
-
-		<objective type="RandomPOIGoto">
-			<property name="phase" value="1"/>
-			<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type" />
-			<property name="biome_filter" value="burnt_forest" param1="biome_filter" />
-			<property name="nav_object" value="quest" />
+	<!-- CautiousPancakeDefendPOIFromHorde -->
+	<insertAfter xpath="/quests/quest[@id='tier1_fetch']">
+		<!-- Zombie Challenge Quests -->
+		<!-- *** FETCH_QUESTS -->
+		<quest id="tier1_courier_rescue">
+			<property name="name_key" value="tier1_courier_rescue_name"/>
+			<property name="subtitle_key" value="courier_rescue_subtitle"/>
+			<property name="description_key" value="courier_rescue_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="medium"/>
+			<property name="difficulty_tier" value="1" param1="difficulty"/>
+			<property name="offer_key" value="courier_rescue_offer" param1="offer"/>
+			<property name="statement_key" value="courier_rescue_statement"/>
+			<property name="response_key" value="courier_rescue_response"/>
+			<property name="login_rally_reset" value="true"/>
+			<property name="reward_choices_count" value="5"/>
+			<property name="extra_tags" value="" param1="extra_tags"/>
+			<property name="shareable" value="true"/>
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_fetch_completion"/>
+			<objective type="RandomPOIGoto">
+				<property name="phase" value="1"/>
+				<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type"/>
+				<property name="biome_filter" value="burnt_forest" param1="biome_filter"/>
+				<property name="nav_object" value="quest"/>
+			</objective>
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally"/>
+			</objective>
+			<objective type="Time" time="4" value="300" phase="3">
 		</objective>
-
-		<objective type="RallyPoint">
-			<property name="phase" value="2" />
-			<property name="nav_object" value="rally" />
-		</objective>
-
-		<objective type="Time" time="4" value="300" phase="3" >
-		</objective>
-		<!--- 300 seconds (5 mins) real time to clear (optional) and setup  -->
-
-
-		<objective type="POIStayWithin">
-			<property name="phase" value="3"/>
-			<property name="radius" value="25"/>
-		</objective>
-		
-		<!-- adding fetch only to see if this forces poi reset for multiplayer -->
-		
-		<objective type="FetchFromContainer">
-			<property name="phase" value="3"/>
-			<property name="quest_item_ID" value="1"/>
-			<property name="item_count" value="1"/>
-			<property name="default_container" value="cntFetchQuestSatchel"/>
-			<property name="nav_object" value="fetch_container" />
+			<!--- 300 seconds (5 mins) real time to clear (optional) and setup  -->
+			<objective type="POIStayWithin">
+				<property name="phase" value="3"/>
+				<property name="radius" value="25"/>
+			</objective>
+			<!-- adding fetch only to see if this forces poi reset for multiplayer -->
+			<objective type="FetchFromContainer">
+				<property name="phase" value="3"/>
+				<property name="quest_item_ID" value="1"/>
+				<property name="item_count" value="1"/>
+				<property name="default_container" value="cntFetchQuestSatchel"/>
+				<property name="nav_object" value="fetch_container"/>
 				<property name="optional" value="true"/>
+			</objective>
+			<action type="GameEvent">
+				<property name="event" value="tier1_courier_rescue_start"/>
+				<property name="phase" value="4"/>
+				<property name="hidden" value="true"/>
+			</action>
+			<objective type="POIStayWithin">
+				<property name="phase" value="4"/>
+				<property name="radius" value="25"/>
+			</objective>
+			<objective type="EntityKill" entity_names="Any Zombie" value="15" phase="4"/>
+			<objective type="GameEvent">
+				<property name="event" value="tier1_courier_rescue_stop"/>
+				<property name="event_tag" value="Game"/>
+				<property name="phase" value="5"/>
+				<property name="hidden" value="true"/>
+				<property name="force_phase_finish" value="true"/>
+			</objective>
+			<action type="UnlockPOI">
+				<property name="phase" value="6"/>
+			</action>
+			<objective type="ReturnToNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader"/>
+			</objective>
+			<objective type="InteractWithNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader"/>
+			</objective>
+			<reward type="Exp" value="3500"/>
+			<reward type="Item" id="casinoCoin" value="1000"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestResources" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestAmmo,groupQuestResources,groupQuestMods,groupQuestT1SkillMagazineBundle" ischosen="true" value="1"/>
+		</quest>
+		<quest id="tier2_courier_rescue">
+			<property name="name_key" value="tier2_courier_rescue_name"/>
+			<property name="subtitle_key" value="courier_rescue_subtitle"/>
+			<property name="description_key" value="courier_rescue_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="medium"/>
+			<property name="difficulty_tier" value="2" param1="difficulty"/>
+			<property name="offer_key" value="courier_rescue_offer" param1="offer"/>
+			<property name="statement_key" value="courier_rescue_statement"/>
+			<property name="response_key" value="courier_rescue_response"/>
+			<property name="login_rally_reset" value="true"/>
+			<property name="reward_choices_count" value="5"/>
+			<property name="extra_tags" value="" param1="extra_tags"/>
+			<property name="shareable" value="true"/>
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_fetch_completion"/>
+			<objective type="RandomPOIGoto">
+				<property name="phase" value="1"/>
+				<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type"/>
+				<property name="biome_filter" value="burnt_forest" param1="biome_filter"/>
+				<property name="nav_object" value="quest"/>
+			</objective>
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally"/>
+			</objective>
+			<objective type="Time" time="4" value="300" phase="3">
 		</objective>
-		
-
-		<action type="GameEvent" >
-			<property name="event" value="tier1_courier_rescue_start"/>
-			<property name="phase" value="4"/>
-			<property name="hidden" value="true"/>
-		</action>
-		
-		<objective type="POIStayWithin">
-			<property name="phase" value="4"/>
-			<property name="radius" value="25"/>
-		</objective>
-		
-		
-	   <objective type="EntityKill" entity_names="Any Zombie" value="25" phase="4" />
-
-	   
-	   
-	   	<objective type="GameEvent">
-			<property name="event" value="tier1_courier_rescue_stop" />
-			<property name="event_tag" value="Game" />
-			<property name="phase" value="5"/>
-			<property name="hidden" value="true"/>
-			<property name="force_phase_finish" value="true"/>
-		</objective>
-		
-		<action type="UnlockPOI" >
-			<property name="phase" value="6"/>
-		</action>
-	   		
-		<objective type="ReturnToNPC">
-			<property name="phase" value="6"/>
-			<property name="nav_object" value="return_to_trader" />
-		</objective>
-
-		<objective type="InteractWithNPC">
-			<property name="phase" value="6"/>
-			<property name="nav_object" value="return_to_trader" />
-		</objective>
-
-		<reward type="Exp" value="3500"/>
-		<reward type="Item" id="casinoCoin" value="1000"/>
-		
-		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
-		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="1"/>
-		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="1"/>
-		<reward type="LootItem" id="groupQuestResources" ischosen="true" value="1"/>
-		<reward type="LootItem" id="groupQuestAmmo,groupQuestResources,groupQuestMods,groupQuestT1SkillMagazineBundle" ischosen="true" value="1"/>
-	</quest>
-	
-	<quest id="tier2_courier_rescue">
-	
-		<property name="name_key" value="tier2_courier_rescue_name" />
-		<property name="subtitle_key" value="courier_rescue_subtitle"/>
-		<property name="description_key" value="courier_rescue_description"/>
-		<property name="icon" value="ui_game_symbol_quest"/>
-		<property name="repeatable" value="true"/>
-		<property name="category_key" value="challenge"/>
-		<property name="difficulty" value="medium"/>
-		<property name="difficulty_tier" value="2" param1="difficulty" />
-		<property name="offer_key" value="courier_rescue_offer" param1="offer" />
-		<property name="statement_key" value="courier_rescue_statement"/>
-		<property name="response_key" value="courier_rescue_response"/>
-		<property name="login_rally_reset" value="true"/>
-		<property name="reward_choices_count" value="5" />
-		<property name="extra_tags" value="" param1="extra_tags" />
-		<property name="shareable" value="true"/>
-
-		<property name="completiontype" value="TurnIn"/>
-		<property name="completion_key" value="quest_fetch_completion"/>
-		
-		
-
-		<objective type="RandomPOIGoto">
-			<property name="phase" value="1"/>
-			<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type" />
-			<property name="biome_filter" value="burnt_forest" param1="biome_filter" />
-			<property name="nav_object" value="quest" />
-		</objective>
-
-		<objective type="RallyPoint">
-			<property name="phase" value="2" />
-			<property name="nav_object" value="rally" />
-		</objective>
-
-		<objective type="Time" time="4" value="300" phase="3" >
-		</objective>
-		<!--- 300 seconds (5 mins) real time to clear (optional) and setup  -->
-
-
-		<objective type="POIStayWithin">
-			<property name="phase" value="3"/>
-			<property name="radius" value="25"/>
-			
-		</objective>
-		
-
-		<!-- adding fetch only to see if this forces poi reset for multiplayer -->
-		
-		<objective type="FetchFromContainer">
-			<property name="phase" value="3"/>
-			<property name="quest_item_ID" value="1"/>
-			<property name="item_count" value="1"/>
-			<property name="default_container" value="cntFetchQuestSatchel"/>
-			<property name="nav_object" value="fetch_container" />
+			<!--- 300 seconds (5 mins) real time to clear (optional) and setup  -->
+			<objective type="POIStayWithin">
+				<property name="phase" value="3"/>
+				<property name="radius" value="25"/>
+			</objective>
+			<!-- adding fetch only to see if this forces poi reset for multiplayer -->
+			<objective type="FetchFromContainer">
+				<property name="phase" value="3"/>
+				<property name="quest_item_ID" value="1"/>
+				<property name="item_count" value="1"/>
+				<property name="default_container" value="cntFetchQuestSatchel"/>
+				<property name="nav_object" value="fetch_container"/>
 				<property name="optional" value="true"/>
+			</objective>
+			<action type="GameEvent">
+				<property name="event" value="tier2_courier_rescue_start"/>
+				<property name="phase" value="4"/>
+				<property name="hidden" value="true"/>
+			</action>
+			<objective type="POIStayWithin">
+				<property name="phase" value="4"/>
+				<property name="radius" value="25"/>
+			</objective>
+			<objective type="EntityKill" entity_names="Any Zombie" value="30" phase="4"/>
+			<objective type="GameEvent">
+				<property name="event" value="tier2_courier_rescue_stop"/>
+				<property name="event_tag" value="Game"/>
+				<property name="phase" value="5"/>
+				<property name="hidden" value="true"/>
+				<property name="force_phase_finish" value="true"/>
+			</objective>
+			<action type="UnlockPOI">
+				<property name="phase" value="6"/>
+			</action>
+			<objective type="ReturnToNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader"/>
+			</objective>
+			<objective type="InteractWithNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader"/>
+			</objective>
+			<reward type="Exp" value="5060"/>
+			<reward type="Item" id="casinoCoin" value="1400"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+			<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+		</quest>
+		<quest id="tier3_courier_rescue">
+			<property name="name_key" value="tier3_courier_rescue_name"/>
+			<property name="subtitle_key" value="courier_rescue_subtitle"/>
+			<property name="description_key" value="courier_rescue_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="medium"/>
+			<property name="difficulty_tier" value="3" param1="difficulty"/>
+			<property name="offer_key" value="courier_rescue_offer" param1="offer"/>
+			<property name="statement_key" value="courier_rescue_statement"/>
+			<property name="response_key" value="courier_rescue_response"/>
+			<property name="login_rally_reset" value="true"/>
+			<property name="reward_choices_count" value="5"/>
+			<property name="extra_tags" value="" param1="extra_tags"/>
+			<property name="shareable" value="true"/>
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_fetch_completion"/>
+			<objective type="RandomPOIGoto">
+				<property name="phase" value="1"/>
+				<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type"/>
+				<property name="biome_filter" value="burnt_forest" param1="biome_filter"/>
+				<property name="nav_object" value="quest"/>
+			</objective>
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally"/>
+			</objective>
+			<objective type="Time" time="4" value="300" phase="3">
 		</objective>
-		
-		<action type="GameEvent" >
-			<property name="event" value="tier2_courier_rescue_start"/>
-			<property name="phase" value="4"/>
-			<property name="hidden" value="true"/>
-		</action>
-		
-		<objective type="POIStayWithin">
-			<property name="phase" value="4"/>
-			<property name="radius" value="25"/>
-		</objective>
-		
-		
-	   <objective type="EntityKill" entity_names="Any Zombie" value="50" phase="4" />
-
-	   
-	   
-	   	<objective type="GameEvent">
-			<property name="event" value="tier2_courier_rescue_stop" />
-			<property name="event_tag" value="Game" />
-			<property name="phase" value="5"/>
-			<property name="hidden" value="true"/>
-			<property name="force_phase_finish" value="true"/>
-		</objective>
-	   		
-		<action type="UnlockPOI" >
-			<property name="phase" value="6"/>
-		</action>
-
-		<objective type="ReturnToNPC">
-			<property name="phase" value="6"/>
-			<property name="nav_object" value="return_to_trader" />
-		</objective>
-
-		<objective type="InteractWithNPC">
-			<property name="phase" value="6"/>
-			<property name="nav_object" value="return_to_trader" />
-		</objective>
-
-		<reward type="Exp" value="5060"/>
-		<reward type="Item" id="casinoCoin" value="1400"/>
-
-		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="2"/>
-		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="2"/>
-		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
-		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="2"/>
-		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
-		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="2"/>
-		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
-		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
-	</quest>
-	
-	<quest id="tier3_courier_rescue" >
-		<property name="name_key" value="tier3_courier_rescue_name" />
-		<property name="subtitle_key" value="courier_rescue_subtitle"/>
-		<property name="description_key" value="courier_rescue_description"/>
-		<property name="icon" value="ui_game_symbol_quest"/>
-		<property name="repeatable" value="true"/>
-		<property name="category_key" value="challenge"/>
-		<property name="difficulty" value="medium"/>
-		<property name="difficulty_tier" value="3" param1="difficulty" />
-		<property name="offer_key" value="courier_rescue_offer" param1="offer" />
-		<property name="statement_key" value="courier_rescue_statement"/>
-		<property name="response_key" value="courier_rescue_response"/>
-		<property name="login_rally_reset" value="true"/>
-		<property name="reward_choices_count" value="5" />
-		<property name="extra_tags" value="" param1="extra_tags" />
-		<property name="shareable" value="true"/>
-
-		<property name="completiontype" value="TurnIn"/>
-		<property name="completion_key" value="quest_fetch_completion"/>
-
-		<objective type="RandomPOIGoto">
-			<property name="phase" value="1"/>
-			<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type" />
-			<property name="biome_filter" value="burnt_forest" param1="biome_filter" />
-			<property name="nav_object" value="quest" />
-		</objective>
-
-		<objective type="RallyPoint">
-			<property name="phase" value="2" />
-			<property name="nav_object" value="rally" />
-		</objective>
-
-		<objective type="Time" time="4" value="300" phase="3" >
-		</objective>
-		<!--- 300 seconds (5 mins) real time to clear (optional) and setup  -->
-
-
-		<objective type="POIStayWithin">
-			<property name="phase" value="3"/>
-			<property name="radius" value="25"/>
-			
-		</objective>
-		
-		<!-- adding fetch only to see if this forces poi reset for multiplayer -->
-		
-		<objective type="FetchFromContainer">
-			<property name="phase" value="3"/>
-			<property name="quest_item_ID" value="1"/>
-			<property name="item_count" value="1"/>
-			<property name="default_container" value="cntFetchQuestSatchel"/>
-			<property name="nav_object" value="fetch_container" />
+			<!--- 300 seconds (5 mins) real time to clear (optional) and setup  -->
+			<objective type="POIStayWithin">
+				<property name="phase" value="3"/>
+				<property name="radius" value="25"/>
+			</objective>
+			<!-- adding fetch only to see if this forces poi reset for multiplayer -->
+			<objective type="FetchFromContainer">
+				<property name="phase" value="3"/>
+				<property name="quest_item_ID" value="1"/>
+				<property name="item_count" value="1"/>
+				<property name="default_container" value="cntFetchQuestSatchel"/>
+				<property name="nav_object" value="fetch_container"/>
 				<property name="optional" value="true"/>
+			</objective>
+			<action type="GameEvent">
+				<property name="event" value="tier3_courier_rescue_start"/>
+				<property name="phase" value="4"/>
+				<property name="hidden" value="true"/>
+			</action>
+			<objective type="POIStayWithin">
+				<property name="phase" value="4"/>
+				<property name="radius" value="25"/>
+			</objective>
+			<objective type="EntityKill" entity_names="Any Zombie" value="45" phase="4"/>
+			<objective type="GameEvent">
+				<property name="event" value="tier3_courier_rescue_stop"/>
+				<property name="event_tag" value="Game"/>
+				<property name="phase" value="5"/>
+				<property name="hidden" value="true"/>
+				<property name="force_phase_finish" value="true"/>
+			</objective>
+			<action type="UnlockPOI">
+				<property name="phase" value="6"/>
+			</action>
+			<objective type="ReturnToNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader"/>
+			</objective>
+			<objective type="InteractWithNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader"/>
+			</objective>
+			<reward type="Exp" value="6750"/>
+			<reward type="Item" id="casinoCoin" value="2000"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+			<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+		</quest>
+		<quest id="tier4_courier_rescue">
+			<property name="name_key" value="tier4_courier_rescue_name"/>
+			<property name="subtitle_key" value="courier_rescue_subtitle"/>
+			<property name="description_key" value="courier_rescue_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="medium"/>
+			<property name="difficulty_tier" value="4" param1="difficulty"/>
+			<property name="offer_key" value="courier_rescue_offer" param1="offer"/>
+			<property name="statement_key" value="courier_rescue_statement"/>
+			<property name="response_key" value="courier_rescue_response"/>
+			<property name="login_rally_reset" value="true"/>
+			<property name="reward_choices_count" value="5"/>
+			<property name="extra_tags" value="" param1="extra_tags"/>
+			<property name="shareable" value="true"/>
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_fetch_completion"/>
+			<objective type="RandomPOIGoto">
+				<property name="phase" value="1"/>
+				<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type"/>
+				<property name="biome_filter" value="burnt_forest" param1="biome_filter"/>
+				<property name="nav_object" value="quest"/>
+			</objective>
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally"/>
+			</objective>
+			<objective type="Time" time="4" value="300" phase="3">
 		</objective>
-		
-
-		<action type="GameEvent" >
-			<property name="event" value="tier3_courier_rescue_start"/>
-			<property name="phase" value="4"/>
-			<property name="hidden" value="true"/>
-		</action>
-		
-		<objective type="POIStayWithin">
-			<property name="phase" value="4"/>
-			<property name="radius" value="25"/>
-		</objective>
-		
-		
-	   <objective type="EntityKill" entity_names="Any Zombie" value="75" phase="4" />
-
-	   
-	   
-	   	<objective type="GameEvent">
-			<property name="event" value="tier3_courier_rescue_stop" />
-			<property name="event_tag" value="Game" />
-			<property name="phase" value="5"/>
-			<property name="hidden" value="true"/>
-			<property name="force_phase_finish" value="true"/>
-		</objective>
-	   		
-					<action type="UnlockPOI" >
-			<property name="phase" value="6"/>
-		</action>
-
-		<objective type="ReturnToNPC">
-			<property name="phase" value="6"/>
-			<property name="nav_object" value="return_to_trader" />
-		</objective>
-
-		<objective type="InteractWithNPC">
-			<property name="phase" value="6"/>
-			<property name="nav_object" value="return_to_trader" />
-		</objective>
-
-		<reward type="Exp" value="6750"/>
-		<reward type="Item" id="casinoCoin" value="2000"/>
-
-		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="3"/>
-		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="3"/>
-		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
-		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="3"/>
-		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
-		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
-		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
-		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
-	</quest>
-	
-	<quest id="tier4_courier_rescue" >
-		<property name="name_key" value="tier4_courier_rescue_name" />
-		<property name="subtitle_key" value="courier_rescue_subtitle"/>
-		<property name="description_key" value="courier_rescue_description"/>
-		<property name="icon" value="ui_game_symbol_quest"/>
-		<property name="repeatable" value="true"/>
-		<property name="category_key" value="challenge"/>
-		<property name="difficulty" value="medium"/>
-		<property name="difficulty_tier" value="4" param1="difficulty" />
-		<property name="offer_key" value="courier_rescue_offer" param1="offer" />
-		<property name="statement_key" value="courier_rescue_statement"/>
-		<property name="response_key" value="courier_rescue_response"/>
-		<property name="login_rally_reset" value="true"/>
-		<property name="reward_choices_count" value="5" />
-		<property name="extra_tags" value="" param1="extra_tags" />
-		<property name="shareable" value="true"/>
-
-		<property name="completiontype" value="TurnIn"/>
-		<property name="completion_key" value="quest_fetch_completion"/>
-
-		<objective type="RandomPOIGoto">
-			<property name="phase" value="1"/>
-			<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type" />
-			<property name="biome_filter" value="burnt_forest" param1="biome_filter" />
-			<property name="nav_object" value="quest" />
-		</objective>
-
-		<objective type="RallyPoint">
-			<property name="phase" value="2" />
-			<property name="nav_object" value="rally" />
-		</objective>
-
-		<objective type="Time" time="4" value="300" phase="3" >
-		</objective>
-		<!--- 300 seconds (5 mins) real time to clear (optional) and setup  -->
-
-
-		<objective type="POIStayWithin">
-			<property name="phase" value="3"/>
-			<property name="radius" value="25"/>
-			
-		</objective>
-		
-
-		<!-- adding fetch only to see if this forces poi reset for multiplayer -->
-		
-		<objective type="FetchFromContainer">
-			<property name="phase" value="3"/>
-			<property name="quest_item_ID" value="1"/>
-			<property name="item_count" value="1"/>
-			<property name="default_container" value="cntFetchQuestSatchel"/>
-			<property name="nav_object" value="fetch_container" />
+			<!--- 300 seconds (5 mins) real time to clear (optional) and setup  -->
+			<objective type="POIStayWithin">
+				<property name="phase" value="3"/>
+				<property name="radius" value="25"/>
+			</objective>
+			<!-- adding fetch only to see if this forces poi reset for multiplayer -->
+			<objective type="FetchFromContainer">
+				<property name="phase" value="3"/>
+				<property name="quest_item_ID" value="1"/>
+				<property name="item_count" value="1"/>
+				<property name="default_container" value="cntFetchQuestSatchel"/>
+				<property name="nav_object" value="fetch_container"/>
 				<property name="optional" value="true"/>
+			</objective>
+			<action type="GameEvent">
+				<property name="event" value="tier4_courier_rescue_start"/>
+				<property name="phase" value="4"/>
+				<property name="hidden" value="true"/>
+			</action>
+			<objective type="POIStayWithin">
+				<property name="phase" value="4"/>
+				<property name="radius" value="25"/>
+			</objective>
+			<objective type="EntityKill" entity_names="Any Zombie" value="60" phase="4"/>
+			<objective type="GameEvent">
+				<property name="event" value="tier4_courier_rescue_stop"/>
+				<property name="event_tag" value="Game"/>
+				<property name="phase" value="5"/>
+				<property name="hidden" value="true"/>
+				<property name="force_phase_finish" value="true"/>
+			</objective>
+			<action type="UnlockPOI">
+				<property name="phase" value="6"/>
+			</action>
+			<objective type="ReturnToNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader"/>
+			</objective>
+			<objective type="InteractWithNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader"/>
+			</objective>
+			<reward type="Exp" value="8400"/>
+			<reward type="Item" id="casinoCoin" value="2300"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+			<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+		</quest>
+		<quest id="tier5_courier_rescue">
+			<property name="name_key" value="tier5_courier_rescue_name"/>
+			<property name="subtitle_key" value="courier_rescue_subtitle"/>
+			<property name="description_key" value="courier_rescue_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="medium"/>
+			<property name="difficulty_tier" value="5" param1="difficulty"/>
+			<property name="offer_key" value="courier_rescue_offer" param1="offer"/>
+			<property name="statement_key" value="courier_rescue_statement"/>
+			<property name="response_key" value="courier_rescue_response"/>
+			<property name="login_rally_reset" value="true"/>
+			<property name="reward_choices_count" value="5"/>
+			<property name="extra_tags" value="" param1="extra_tags"/>
+			<property name="shareable" value="true"/>
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_fetch_completion"/>
+			<objective type="RandomPOIGoto">
+				<property name="phase" value="1"/>
+				<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type"/>
+				<property name="biome_filter" value="burnt_forest" param1="biome_filter"/>
+				<property name="nav_object" value="quest"/>
+			</objective>
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally"/>
+			</objective>
+			<objective type="Time" time="4" value="300" phase="3">
 		</objective>
-		
-		<action type="GameEvent" >
-			<property name="event" value="tier4_courier_rescue_start"/>
-			<property name="phase" value="4"/>
-			<property name="hidden" value="true"/>
-		</action>
-		
-		<objective type="POIStayWithin">
-			<property name="phase" value="4"/>
-			<property name="radius" value="25"/>
-		</objective>
-		
-		
-	   <objective type="EntityKill" entity_names="Any Zombie" value="100" phase="4" />
-
-	   
-	   
-	   	<objective type="GameEvent">
-			<property name="event" value="tier4_courier_rescue_stop" />
-			<property name="event_tag" value="Game" />
-			<property name="phase" value="5"/>
-			<property name="hidden" value="true"/>
-			<property name="force_phase_finish" value="true"/>
-		</objective>
-	  
-		<action type="UnlockPOI" >
-			<property name="phase" value="6"/>
-		</action>	  
-
-		<objective type="ReturnToNPC">
-			<property name="phase" value="6"/>
-			<property name="nav_object" value="return_to_trader" />
-		</objective>
-
-		<objective type="InteractWithNPC">
-			<property name="phase" value="6"/>
-			<property name="nav_object" value="return_to_trader" />
-		</objective>
-
-		<reward type="Exp" value="8400"/>
-		<reward type="Item" id="casinoCoin" value="2300"/>
-
-		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="4"/>
-		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="4"/>
-		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
-		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="4"/>
-		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="4"/>
-		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="4"/>
-		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
-		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
-	</quest>
-	
-	<quest id="tier5_courier_rescue" >
-		<property name="name_key" value="tier5_courier_rescue_name" />
-		<property name="subtitle_key" value="courier_rescue_subtitle"/>
-		<property name="description_key" value="courier_rescue_description"/>
-		<property name="icon" value="ui_game_symbol_quest"/>
-		<property name="repeatable" value="true"/>
-		<property name="category_key" value="challenge"/>
-		<property name="difficulty" value="medium"/>
-		<property name="difficulty_tier" value="5" param1="difficulty" />
-		<property name="offer_key" value="courier_rescue_offer" param1="offer" />
-		<property name="statement_key" value="courier_rescue_statement"/>
-		<property name="response_key" value="courier_rescue_response"/>
-		<property name="login_rally_reset" value="true"/>
-		<property name="reward_choices_count" value="5" />
-		<property name="extra_tags" value="" param1="extra_tags" />
-		<property name="shareable" value="true"/>
-
-		<property name="completiontype" value="TurnIn"/>
-		<property name="completion_key" value="quest_fetch_completion"/>
-
-		<objective type="RandomPOIGoto">
-			<property name="phase" value="1"/>
-			<property name="biome_filter_type" value="SameBiome" param1="biome_filter_type" />
-			<property name="biome_filter" value="burnt_forest" param1="biome_filter" />
-			<property name="nav_object" value="quest" />
-		</objective>
-
-		<objective type="RallyPoint">
-			<property name="phase" value="2" />
-			<property name="nav_object" value="rally" />
-		</objective>
-
-		<objective type="Time" time="4" value="300" phase="3" >
-		</objective>
-		<!--- 300 seconds (5 mins) real time to clear (optional) and setup  -->
-
-
-		<objective type="POIStayWithin">
-			<property name="phase" value="3"/>
-			<property name="radius" value="25"/>
-			
-		</objective>
-	
-		<!-- adding fetch only to see if this forces poi reset for multiplayer -->
-		
-		<objective type="FetchFromContainer">
-			<property name="phase" value="3"/>
-			<property name="quest_item_ID" value="1"/>
-			<property name="item_count" value="1"/>
-			<property name="default_container" value="cntFetchQuestSatchel"/>
-			<property name="nav_object" value="fetch_container" />
+			<!--- 300 seconds (5 mins) real time to clear (optional) and setup  -->
+			<objective type="POIStayWithin">
+				<property name="phase" value="3"/>
+				<property name="radius" value="25"/>
+			</objective>
+			<!-- adding fetch only to see if this forces poi reset for multiplayer -->
+			<objective type="FetchFromContainer">
+				<property name="phase" value="3"/>
+				<property name="quest_item_ID" value="1"/>
+				<property name="item_count" value="1"/>
+				<property name="default_container" value="cntFetchQuestSatchel"/>
+				<property name="nav_object" value="fetch_container"/>
 				<property name="optional" value="true"/>
-		</objective>
-			
-
-		<action type="GameEvent" >
-			<property name="event" value="tier5_courier_rescue_start"/>
-			<property name="phase" value="4"/>
-			<property name="hidden" value="true"/>
-		</action>
-		
-		<objective type="POIStayWithin">
-			<property name="phase" value="4"/>
-			<property name="radius" value="25"/>
-		</objective>
-		
-		
-	   <objective type="EntityKill" entity_names="Any Zombie" value="125" phase="4" />
-
-	   
-	   
-	   	<objective type="GameEvent">
-			<property name="event" value="tier5_courier_rescue_stop" />
-			<property name="event_tag" value="Game" />
-			<property name="phase" value="5"/>
-			<property name="hidden" value="true"/>
-			<property name="force_phase_finish" value="true"/>
-		</objective>
-	   		
-		<action type="UnlockPOI" >
-			<property name="phase" value="6"/>
-		</action>
-
-		<objective type="ReturnToNPC">
-			<property name="phase" value="6"/>
-			<property name="nav_object" value="return_to_trader" />
-		</objective>
-
-		<objective type="InteractWithNPC">
-			<property name="phase" value="6"/>
-			<property name="nav_object" value="return_to_trader" />
-		</objective>
-
-		<reward type="Exp" value="16900"/>
-		<reward type="Item" id="casinoCoin" value="4600"/>
-
-		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="5"/>
-		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="5"/>
-		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="5"/>
-		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
-		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="5"/>
-		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="5"/>
-		<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
-		<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
-	</quest>
-  
-	
-</insertAfter>
-
-<append xpath="/quests/quest_list[@id='trader_quests']">  
-	<quest id="tier1_courier_rescue"/>
-	<quest id="tier2_courier_rescue"/>
-	<quest id="tier3_courier_rescue"/>
-	<quest id="tier4_courier_rescue"/>
-	<quest id="tier5_courier_rescue"/>
-</append>
-
+			</objective>
+			<action type="GameEvent">
+				<property name="event" value="tier5_courier_rescue_start"/>
+				<property name="phase" value="4"/>
+				<property name="hidden" value="true"/>
+			</action>
+			<objective type="POIStayWithin">
+				<property name="phase" value="4"/>
+				<property name="radius" value="25"/>
+			</objective>
+			<objective type="EntityKill" entity_names="Any Zombie" value="75" phase="4"/>
+			<objective type="GameEvent">
+				<property name="event" value="tier5_courier_rescue_stop"/>
+				<property name="event_tag" value="Game"/>
+				<property name="phase" value="5"/>
+				<property name="hidden" value="true"/>
+				<property name="force_phase_finish" value="true"/>
+			</objective>
+			<action type="UnlockPOI">
+				<property name="phase" value="6"/>
+			</action>
+			<objective type="ReturnToNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader"/>
+			</objective>
+			<objective type="InteractWithNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader"/>
+			</objective>
+			<reward type="Exp" value="16900"/>
+			<reward type="Item" id="casinoCoin" value="4600"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestSteel" ischosen="true"/>
+			<reward type="LootItem" id="groupQuestT1SkillMagazineBundle" ischosen="true"/>
+		</quest>
+	</insertAfter>
+	<append xpath="/quests/quest_list[@id='trader_quests']">
+		<quest id="tier1_courier_rescue"/>
+		<quest id="tier2_courier_rescue"/>
+		<quest id="tier3_courier_rescue"/>
+		<quest id="tier4_courier_rescue"/>
+		<quest id="tier5_courier_rescue"/>
+	</append>
 </Config>

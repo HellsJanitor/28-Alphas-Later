@@ -26,7 +26,7 @@
 		<action_sequence name="tier1_contraband_collection_spawn">
 			<action class="SpawnEntity">
 				<property name="phase" value="1"/>
-				<property name="entity_group" value="BloodMoonHorde"/>
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="1"/>
 				<property name="air_spawn" value="false"/>
 				<property name="add_to_group" value="zombies"/>
@@ -40,7 +40,7 @@
 		<action_sequence name="tier2_contraband_collection_spawn">
 			<action class="SpawnEntity">
 				<property name="phase" value="1"/>
-				<property name="entity_group" value="BloodMoonHorde"/>
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="1"/>
 				<property name="air_spawn" value="false"/>
 				<property name="add_to_group" value="zombies"/>
@@ -56,7 +56,7 @@
 			</action>
 			<action class="SpawnEntity">
 				<property name="phase" value="3"/>
-				<property name="entity_group" value="BloodMoonHorde"/>
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="1"/>
 				<property name="air_spawn" value="false"/>
 				<property name="add_to_group" value="zombies"/>
@@ -70,7 +70,7 @@
 		<action_sequence name="tier3_contraband_collection_spawn">
 			<action class="SpawnEntity">
 				<property name="phase" value="1"/>
-				<property name="entity_group" value="BloodMoonHorde"/>
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="1"/>
 				<property name="air_spawn" value="false"/>
 				<property name="add_to_group" value="zombies"/>
@@ -86,7 +86,7 @@
 			</action>
 			<action class="SpawnEntity">
 				<property name="phase" value="3"/>
-				<property name="entity_group" value="BloodMoonHorde"/>
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="1"/>
 				<property name="air_spawn" value="false"/>
 				<property name="add_to_group" value="zombies"/>
@@ -102,7 +102,7 @@
 			</action>
 			<action class="SpawnEntity">
 				<property name="phase" value="5"/>
-				<property name="entity_group" value="BloodMoonHorde"/>
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="1"/>
 				<property name="air_spawn" value="false"/>
 				<property name="add_to_group" value="zombies"/>
@@ -116,7 +116,7 @@
 		<action_sequence name="tier4_contraband_collection_spawn">
 			<action class="SpawnEntity">
 				<property name="phase" value="1"/>
-				<property name="entity_group" value="BloodMoonHorde"/>
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="1"/>
 				<property name="air_spawn" value="false"/>
 				<property name="add_to_group" value="zombies"/>
@@ -132,7 +132,7 @@
 			</action>
 			<action class="SpawnEntity">
 				<property name="phase" value="3"/>
-				<property name="entity_group" value="BloodMoonHorde"/>
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="1"/>
 				<property name="air_spawn" value="false"/>
 				<property name="add_to_group" value="zombies"/>
@@ -148,7 +148,7 @@
 			</action>
 			<action class="SpawnEntity">
 				<property name="phase" value="5"/>
-				<property name="entity_group" value="BloodMoonHorde"/>
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="1"/>
 				<property name="air_spawn" value="false"/>
 				<property name="add_to_group" value="zombies"/>
@@ -164,7 +164,7 @@
 			</action>
 			<action class="SpawnEntity">
 				<property name="phase" value="7"/>
-				<property name="entity_group" value="BloodMoonHorde"/>
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="1"/>
 				<property name="air_spawn" value="false"/>
 				<property name="add_to_group" value="zombies"/>
@@ -178,7 +178,7 @@
 		<action_sequence name="tier5_contraband_collection_spawn">
 			<action class="SpawnEntity">
 				<property name="phase" value="1"/>
-				<property name="entity_group" value="BloodMoonHorde"/>
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="1"/>
 				<property name="air_spawn" value="false"/>
 				<property name="add_to_group" value="zombies"/>
@@ -194,7 +194,7 @@
 			</action>
 			<action class="SpawnEntity">
 				<property name="phase" value="3"/>
-				<property name="entity_group" value="BloodMoonHorde"/>
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="1"/>
 				<property name="air_spawn" value="false"/>
 				<property name="add_to_group" value="zombies"/>
@@ -210,7 +210,7 @@
 			</action>
 			<action class="SpawnEntity">
 				<property name="phase" value="5"/>
-				<property name="entity_group" value="BloodMoonHorde"/>
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="1"/>
 				<property name="air_spawn" value="false"/>
 				<property name="add_to_group" value="zombies"/>
@@ -226,7 +226,7 @@
 			</action>
 			<action class="SpawnEntity">
 				<property name="phase" value="7"/>
-				<property name="entity_group" value="BloodMoonHorde"/>
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="1"/>
 				<property name="air_spawn" value="false"/>
 				<property name="add_to_group" value="zombies"/>
@@ -242,7 +242,7 @@
 			</action>
 			<action class="SpawnEntity">
 				<property name="phase" value="9"/>
-				<property name="entity_group" value="BloodMoonHorde"/>
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="1"/>
 				<property name="air_spawn" value="false"/>
 				<property name="add_to_group" value="zombies"/>
@@ -261,7 +261,7 @@
 			</action>
 			<action class="SpawnEntity">
 				<property name="phase" value="1"/>
-				<property name="entity_group" value="BloodMoonHorde"/>
+				<property name="entity_group" value="SleeperGSList"/>
 				<property name="spawn_count" value="1"/>
 				<property name="air_spawn" value="false"/>
 				<property name="add_to_group" value="zombies"/>

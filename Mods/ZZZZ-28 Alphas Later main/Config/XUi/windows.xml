@@ -39,7 +39,7 @@
 		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
 
 			<grid name="inventory" rows="2" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true"
-			required_tools="meleeToolSalvageT1Wrench,meleeToolRepairT1ClawHammer,meleeToolSalvageT2Ratchet,meleeToolSalvageT3ImpactDriver,meleeToolRepairT3Nailgun" required_tools_only="true"> <!--,toolTablesaw,meleeWpnBladeT1HuntingKnife-->
+			required_tools="meleeToolSalvageT1Wrench,meleeToolRepairT1ClawHammer,meleeToolSalvageT2Ratchet,meleeToolSalvageT3ImpactDriver,meleeToolRepairT3Nailgun,toolAmmoPress" required_tools_only="true"> <!--,toolTablesaw,meleeWpnBladeT1HuntingKnife-->
 				<item_stack controller="RequiredItemStack" name="0"/>
 			</grid>
 		</rect>
@@ -139,7 +139,7 @@
 				<label depth="2" name="onoff" pos="0,-6" justify="center" text="TURN ON" text_key="xuiTurnOn" font_size="26" />
 			</rect>
 		</panel>
-	</window>
+	</window>	
 	
 	<!-- *** tablesaw *** -->
 	<window name="windowTablesawOutput" width="228" height="198" anchor="CenterTop" panel="Right" cursor_area="true" controller="WorkstationOutputWindow" >
@@ -268,7 +268,7 @@
 		</panel>
 
 		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
-			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="PassiveCollectorToolGrid, IDCCoreV2" repeat_content="true"
+			<grid name="inventory" rows="2" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="PassiveCollectorToolGrid, IDCCoreV2" repeat_content="true"
 			required_tools="adcAdvancedFilter,adcLargeCatcher,adcBigBarrel" required_tools_only="true">
 				<item_stack controller="RequiredItemStack" name="0"/>
 			</grid>
@@ -292,19 +292,18 @@
 	</window>
 	
 	<window name="idcWindowFuelAdvCollector" width="125" height="166" panel="Right" cursor_area="true">
-	<!--#$-IGS END.-$#-->
-		<panel style="header.panel">
+		<panel style="header.panel" pos="0,-81">
 			<sprite style="header.icon" sprite="resourceWaterFilter"/>
 			<label style="header.name" text="FUEL" text_key="xuiFilter" />
 		</panel>
 
 		<rect name="content" depth="0" pos="0,-46" height="79" >
 			<rect disablefallthrough="true">
-				<grid rows="1" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="PassiveCollectorFuelStackGrid, IDCCoreV2" repeat_content="true">
+				<grid rows="1" cols="1" pos="3,-83" cell_width="75" cell_height="75" controller="PassiveCollectorFuelStackGrid, IDCCoreV2" repeat_content="true">
 					<item_stack name="0"/>
 				</grid>
 			</rect>
-			<grid name="slot_preview" depth="1" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="SlotPreview">
+			<grid name="slot_preview" depth="1" rows="1" cols="3" pos="3,-83" cell_width="75" cell_height="75" controller="SlotPreview">
 				<rect>
 					<sprite name="slot" depth="2" width="64" height="64" sprite="resourceWaterFilter" atlas="ItemIconAtlasGreyscale" pos="35,-35" pivot="center" foregroundlayer="true"/>
 				</rect>
@@ -466,11 +465,64 @@
 			</grid>
 		</rect>
 	</window>
+	
+	<window name="windowToolsComposter" width="76" height="121" panel="Right" cursor_area="true" >
+		<!-- <panel style="header.panel">
+			<sprite style="header.icon" sprite="ui_game_symbol_wrench"/>
+			<label style="header.name" text="MODIFIERS" text_key="idcXuiModifiers" />
+		</panel>
+
+		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+			<grid name="inventory" rows="1" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="PassiveCollectorToolGrid, IDCCoreV2" repeat_content="true"
+			required_tools="idcBetterAnimalBait" required_tools_only="true">
+				<item_stack controller="RequiredItemStack" name="0"/>
+			</grid>
+		</rect> -->
+
+	</window>
+	
+	<window name="windowComposter" width="{windowWidth}" height="378" controller="PassiveCollectorWindow, IDCCoreV2" panel="Left" anchor_side="bottomright" visible="false" cursor_area="true" >
+		<panel name="header" height="43" depth="0" disableautobackground="true" anchor_left="queue,0,-3" anchor_right="queue,1,0" >
+			<sprite depth="1" name="headerbackground" sprite="ui_game_panel_header" anchor_left="queue,0,-3" anchor_right="queue,1,0" />
+			<sprite depth="3" name="windowIcon" style="icon32px" pivot="center" pos="21,-21" sprite="ui_game_symbol_loot_sack" />
+			<label depth="2" name="lootName" pos="39,-6" width="180" height="32" text_key="idcXuiAnimalSnare" font_size="32" />
+			
+			<rect anchor_left="queue,1,-300" anchor_right="queue,1,0" pivot="topleft" pos="0,0" controller="ContainerStandardControls" createuiwidget="true" visible="false"></rect>
+		</panel>
+		<rect name="content" pos="3,-49" >
+			<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="queue,0,-3" anchor_bottom="queue,0,0" anchor_right="queue,1,0" anchor_top="queue,1,49" on_press="true" />
+			<grid depth="12" name="queue" rows="5" cols="5" cell_width="75" cell_height="75" repeat_content="true" controller="PassiveCollectorContainer, IDCCoreV2" required_item="drinkJarEmpty">
+				<beehive_collector_stack controller="DewCollectorStack" override_stack_count="1" name="0"/>
+			</grid>
+		</rect>
+	</window>
+	
+	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
+	<window name="idcWindowFuelComposter" width="76" height="166" panel="Right" cursor_area="true">
+	<!--#$-IGS END.-$#-->
+		<panel style="header.panel" pos="0,130">
+			<sprite style="header.icon" sprite="resourceYuccaFibers"/>
+			<label style="header.name" text="FUEL" text_key="xuiFibers" />
+		</panel>
+
+		<rect name="content" depth="0" pos="0,82" height="79" >
+			<rect disablefallthrough="true">
+				<grid rows="1" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="PassiveCollectorFuelStackGrid, IDCCoreV2" repeat_content="true">
+					<item_stack name="0"/>
+				</grid>
+			</rect>
+			<grid name="slot_preview" depth="1" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="SlotPreview">
+				<rect>
+					<sprite name="slot" depth="2" width="64" height="64" sprite="resourceYuccaFibers" atlas="ItemIconAtlasGreyscale" pos="35,-35" pivot="center" foregroundlayer="true"/>
+				</rect>
+			</grid>
+		</rect>
+	</window>	
 	</append>
 
 	<!-- *** HUD changes *** -->
-	<!-- allows the HP bar to work in all modes. To disable it, change `always` to `never` -->
-    <set xpath="/windows/window[@name='windowTargetBar']/@visibility">always</set>
+	<!-- allows the HP bar to work in all modes. Never,godmode,always -->
+    <set xpath="/windows/window[@name='windowTargetBar']/@visibility">godmode</set>
 	
 	<!-- removes zombie name from HP bar -->	
 	<set xpath="//window[@name='windowTargetBar']/rect[@visible='{isnotboss}']/label[@depth='3']/@text">{currentwithmax}</set>

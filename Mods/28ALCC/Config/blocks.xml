@@ -1,107 +1,22 @@
 <xml>
-	<set xpath="//block[@name='wallTorchLightPlayer']/property[@name='Class' and @value='TorchHeatMap']/@value">_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC</set>
+	<!-- <set xpath="//block[@name='wallTorchLightPlayer']/property[@name='Class' and @value='TorchHeatMap']/@value">_28AL.CC.Blocks.TorchHeatMapTE,28ALCC</set>
 	<append xpath="//block[@name='wallTorchLightPlayer']">
-		<property name="ActiveRadiusEffects" value="buffCampfireAOE(2);buffWallTorch(2)"/>
+		<property name="ActiveRadiusEffects" value="buffCampfireAOE(10)"/>
 	</append>
 
-	<set xpath="//block[@name='candleWallLightPlayer']/property[@name='Class']/@value">_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC</set>
-	<append xpath="//block[@name='candleWallLightPlayer']">
-		<property name="ActiveRadiusEffects" value="buffCampfireAOE(1);buffWallTorch(1)"/>
-	</append>	
-	
-	<append xpath="//block[@name='candleTableLightPlayer']">
-		<property name="ActiveRadiusEffects" value="buffCampfireAOE(1);buffWallTorch(1)"/>
-	</append>
-	
-	<!-- <set xpath="//block[@name='lanternDecorLightWhite_player']/property[@name='Class']/@value">_28AL.CC.Blocks.LightTE,28ALCC</set>
-	<append xpath="//block[@name='lanternDecorLightWhite_player']">
-		<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
-	</append> -->
-	
-	<!-- <append xpath="//block[@name='tvSmallStand1x1']">
-		<property name="Class" value="_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC"/>
-		<property name="ActiveRadiusEffects" value="buffCampfireAOE(1);buffWallTorch(1)"/>
-	</append>
-		
-	<append xpath="//block[@name='pictureCanvas_01a']">
-		<property name="Class" value="_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC"/>
-		<property name="ActiveRadiusEffects" value="buffCampfireAOE(1);buffWallTorch(1)"/>
-	</append>
-	
-	<append xpath="//block[@name='treePlant02']">
-		<property name="Class" value="_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC"/>
-		<property name="ActiveRadiusEffects" value="buffCampfireAOE(1);buffWallTorch(1)"/>
-	</append>
-	
-	<append xpath="//block[@name='officeChair01']">
-		<property name="Class" value="_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC"/>
-		<property name="ActiveRadiusEffects" value="buffCampfireAOE(1);buffWallTorch(1)"/>
-	</append>
-	
-	<append xpath="//block[@name='oldChair1']">
-		<property name="Class" value="_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC"/>
-		<property name="ActiveRadiusEffects" value="buffCampfireAOE(1);buffWallTorch(1)"/>
-	</append>
-	
-	<append xpath="//block[@name='chairFoldingMetalUnfoldedWhite']">
-		<property name="Class" value="_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC"/>
-		<property name="ActiveRadiusEffects" value="buffCampfireAOE(1);buffWallTorch(1)"/>
-	</append>
-	
-	<append xpath="//block[@name='chairCampingWhite']">
-		<property name="Class" value="_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC"/>
-		<property name="ActiveRadiusEffects" value="buffCampfireAOE(1);buffWallTorch(1)"/>
-	</append>
-	
-	<append xpath="//block[@name='barStool']">
-		<property name="Class" value="_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC"/>
-		<property name="ActiveRadiusEffects" value="buffCampfireAOE(1);buffWallTorch(1)"/>
-	</append>
-	
-	<append xpath="//block[@name='bedroll']">
-		<property name="Class" value="_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC"/>
-		<property name="ActiveRadiusEffects" value="buffCampfireAOE(1);buffWallTorch(1)"/>
-	</append>
-	
-	<append xpath="//block[starts-with(@name,'couch') and (contains(@name,'White'))]">
-		<property name="Class" value="_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC"/>
-		<property name="ActiveRadiusEffects" value="buffCampfireAOE(10);buffWallTorch(1)"/>
-	</append>
-	
-	<append xpath="//block[starts-with(@name,'sectional') and (contains(@name,'Middle'))]">
-		<property name="Class" value="_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC"/>
-		<property name="ActiveRadiusEffects" value="buffCampfireAOE(10);buffWallTorch(1)"/>
-	</append>
-	
-	<append xpath="//block[@name='couchModernSection']">
-		<property name="Class" value="_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC"/>
-		<property name="ActiveRadiusEffects" value="buffCampfireAOE(10);buffWallTorch(1)"/>
-	</append>	
-	
-	<append xpath="//block[@name='pedestalSink']">
-		<property name="Class" value="_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC"/>
-		<property name="ActiveRadiusEffects" value="buffCampfireAOE(1);buffWallTorch(1)"/>
-	</append>	
-	
-	<append xpath="//block[starts-with(@name,'flagWall') or (starts-with(@name,'flagTop'))]">
-		<property name="Class" value="_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC"/>
-		<property name="ActiveRadiusEffects" value="buffCampfireAOE(1);buffWallTorch(1)"/>
-	</append> -->
-</xml>
-
-	<!-- property classes for buffs -->
-	<!-- _28AL.CC.Blocks.GenericTE,28ALCC -->
-	<!-- _28AL.CC.Blocks.LightTE,28ALCC -->
-	<!-- _28AL.CC.Blocks.LightAlwaysOnTE,28ALCC -->
-	
-	<!-- Examples of usage: -->
-	
-	<!-- <append xpath="//block[@name='cntBathTubEmpty']">
+	<append xpath="//block[@name='cntBathTubEmpty']">
 		<property name="Class" value="_28AL.CC.Blocks.GenericTE,28ALCC"/>
 		<property name="ActiveRadiusEffects" value="buffBurningEnvironment(5)"/>
 	</append> -->
-	
+
+	<!-- Couldn't think of an example to test the non-always-on one. -->
 	<!-- <set xpath="//block[@name='candleWallLightPlayer']/property[@name='Class']/@value">_28AL.CC.Blocks.LightTE,28ALCC</set> -->
 	<!-- <append xpath="//block[@name='candleWallLightPlayer']"> -->
 	<!-- 	<property name="ActiveRadiusEffects" value="buffShocked(5)"/> -->
 	<!-- </append> -->
+
+	<!-- <set xpath="//block[@name='candleWallLightPlayer']/property[@name='Class']/@value">_28AL.CC.Blocks.LightAlwaysOnTE,28ALCC</set>
+	<append xpath="//block[@name='candleWallLightPlayer']">
+		<property name="ActiveRadiusEffects" value="twitch_buffTrippy(5)"/>
+	</append> -->
+</xml>

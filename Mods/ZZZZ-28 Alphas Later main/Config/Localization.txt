@@ -16,7 +16,7 @@ adcAdvancedFilter,Advanced Water Filter
 adcLargeCatcher,Large Water Catcher
 adcBigBarrel,Large Water Barrel
 adcBigBarrelDesc,It's a water barrel but bigger. Do I really need to explain further?\n\nIncreases capacity to 9 slots.
-adcAdvancedFilterDesc,An even better water filter. Makes use of highly complicated purification techniques.\n\nIncreases speed by 20%
+adcAdvancedFilterDesc,An even better water filter. Makes use of highly complicated purification techniques.\n\nConverts murky water into drinkable water.
 adcMineralInfuserDesc,State of the art mineral infusing technology. Takes boring water and infuses it with your daily intake of vitamins and minerals (at least that's what the package says).\n\nProduces enhanced water instead of regular water.
 adcLargeCatcherDesc,It's a large tarp. It collects more water than a smaller one.\n\nWill increase water collection x3
 adcEnhancedWater,Infused Water
@@ -24,9 +24,12 @@ adcEnhancedWaterDesc,While not as powerful as mineral water its still better tha
 adcXuiModifiers,MODIFIERS
 idcXuiAnimalSnare,Contents
 idcXuiBait,Animal Feed
+bedrollTip,When you place a Bedroll you will see a Bed Icon on your compass and map. This will lead you back to your home and will act as a respawn point if you die.\nYou can only have one bedroll active and your last placed bedroll is your active bedroll. Placing a new bed or picking up the last placed bed will permanently clear all previous respawn points.\n\nA placed and active bedroll will prevent enemy respawn in the area. The size of this area is shown while you place a bedroll.\n\nReceive a [008000 ]Well Rested[-] buff by standing on it while [ff4500]inside[-] and next to a [ff4500]campfire[-].
 cntIDCAnimalSnare,Chicken trap
 cntIDCAnimalSnareDesc,A chicken trap. Will trap a chicken to use in a chicken coop. Can be upgraded with tools.
+cntMedicineCabinetPlayer,Medicine Cabinet
 flagBlockVariantHelper,Flags
+JailVariantHelper,Jail Doors
 JailVariantHelper,Jail Doors
 playerDoorSingleVariantHelper,Single Exterior Door
 playerDoorDoubleVariantHelper,Double Exterior Door
@@ -77,13 +80,15 @@ idcAnimalBaitDesc,It attracts animals. Place in the animal snare.
 idcXuiBaitSnare,Bait
 ctnIDCBeehive,Beehive
 ctnIDCBeehiveDesc,Produces honey.\n\nCan be crafted with any [FF4500]repair tool[-] in your [008000]inventory[-].
+cntCompostBin,Composter
+cntCompostBinDesc,"Produces fertilizer very slowly over time.\n\nCan be crafted with any [FF4500]repair tool[-] in your [008000]inventory[-]."
 idcXuiBait,Bee
 beehiveTreeStump,Beehive
 honeyBeeDesc,A wild honey bee. Will produce up to 20 honey when placed in a bee hive.
 honeyBee,Bee						 
 goDifficultyDesc,"Choose from 6 Difficulty settings.\n\n1. Scavenger: [FFC800]Enemies deal 100% damage[-]\n[FF4500]Enemies have no health bonus[-]\n2. Adventurer: [FFC800]Enemies deal 25% more damage[-] \n[FF4500]Enemies have 10% more health[-]\n3. Nomad: [FFC800]Enemies deal 50% more damage[-] \n[FF4500]Enemies have 20% more health[-]\n4. Warrior: [FFC800]Enemies deal 75% more damage[-] \n[FF4500]Enemies have 30% more health[-]\n5. Survivalist: [FFC800]Enemies deal 100% more damage[-] \n[FF4500]Enemies have 40% more health[-]\n6. Insane: [FFC800]Enemies deal 150% more damage[-] \n[FF4500]Enemies have 50% more health[-]"
 goLootAbundanceDesc,The percentage of loot to spawn in containers and on zombies. 100% [FFC800]MINIMUM[-] is [FFC800]HIGHLY[-] recommended.
-HellsModSpawnText,"This mod will challenge you in ways that the vanilla game doesn't,\nwhile keeping the familiar vanilla look & feel.\n\n[00FF00]Important Points![-]\nZombies only take damage with [FFC800]headshots[-],[FFC800] fire[-], & [FFC800]explosives[-]!\nZombies[FF4500] DO NOT [-]bleed!\nThe Wasteland biome is [00FF00]IRRADIATED[-]! (a Hazmat suit is required)\n\nLoot is reduced, harvest counts are reduced, crafting costs more resources, and traders are more expensive.\n\nHave fun!!"
+HellsModSpawnText,"This mod will challenge you in ways that the vanilla game doesn't,\nwhile keeping the familiar vanilla look & feel.\n\n[00FF00]Important Points![-]\nZombies only take MAXIMUM damage with [FFC800]headshots[-],[FFC800] fire[-], & [FFC800]explosives[-]!\nZombies[FF4500] DO NOT [-]bleed!\nThe Wasteland biome is [00FF00]IRRADIATED[-]! (a Hazmat suit is required)\n\nLoot is reduced, harvest counts are reduced, crafting costs more resources, and traders are more expensive.\n\nHave fun!!"
 HellsModSpawnText_title,"Welcome to [FFC800]28 ALPHAS LATER[-]!"
 4x4Bundle,4x4
 4x4BundleDesc,Take this bundle to where you want to place your 4x4 [FFC800]BEFORE[-] you open it!
@@ -163,13 +168,14 @@ BarteringSauceThreeDesc,"This will make you a Mercenary.\n\nPermanently gain acc
 BarteringSauceTwo,"Plunderer's Sauce"
 BarteringSauceTwoDesc,"This will make you a Plunderer.\n\nPermanently gain access to even better trader items and get 10% more dukes.\n\nGet a 10% better deal when buying & selling."
 bedPlayer,King-size bed
+bedGroupDesc,Placing a bed on the ground will allow you to respawn there when you die. Placing a new bed or picking up the last placed bed will permanently clear all previous respawn points. The bed shows on your map and compass and prevents zombie spawning near it.\n\nReceive a [008000 ]Well Rested[-] buff by standing on it while [ff4500 ]inside[-] and next to a [ff4500 ]campfire[-]. The king-size bed also heals you over time.
 BowRepairKit,Bow Repair Kit
 BowRepairKitDesc,This Repair Kit is used to repair bows and crossbows.
 bucketRiverWaterDesc,Water can be dumped into an enclosed structure or hole in the ground to store it.\n\nIt is also an essential ingerdient in concrete mix.
 buffDespairCureDisplayName,Treated Despair
 buffDespairCureDisplayDesc,You are feeling optimistic about your chances of surviving.
 buffDespair01UntreatedName,Despair
-buffDespair01UntreatedDesc,"You are not very optimistic about your survival.\n\nEating certain foods, finding warmth and shelter, or taking medication will help you start to feel better."
+buffDespair01UntreatedDesc,"You are not very optimistic about your survival.\n\nEating certain foods, finding warmth and shelter, or taking medication will help you start to feel better.\n\nResting on a bed near a campfire while sheltered will help ..."
 buffDespair01UntreatedTooltip,It's feeling a little hopeless ...
 buffDespair01GetBetterName,More optimistic
 buffDespair01GetBetterDesc,You are starting to feel better about your chances of surviving.
@@ -182,8 +188,12 @@ buffDespair03UntreatedDesc,"You feel the outlook is bleak, and are close to givi
 buffDespair03GetBetterName,Hopeful
 buffDespair03GetBetterDesc,You are starting to feel better about your chances of surviving.
 buffDespair04Tooltip,The hopelessness of your situation has gotten too much for you to bear.
-buffDespairCureDisplayPositiveName,Optimism
-buffDespairCureDisplayPositiveDesc,"You are feeling positive and energized.\n\nYou have:\n10% decreased stamina loss.\n10% decreased health loss.\n50% critical hit resistance."
+buffDespairCureDisplayPositive01Name,Hope
+buffDespairCureDisplayPositive01Desc,"You are feeling hopeful and buoyant.\n\nYou have:\n5% decreased stamina loss.\n5% decreased health loss from damage taken.\n10% critical hit resistance."
+buffDespairCureDisplayPositive02Name,Enthusiastic
+buffDespairCureDisplayPositive02Desc,"You feel enthusiastic and cheerful.\n\nYou have:\n10% decreased stamina loss.\n10% decreased health loss from damage taken.\n15% critical hit resistance."
+buffDespairCureDisplayPositive03Name,Confident
+buffDespairCureDisplayPositive03Desc,"You are brimming with confidence and energy.\n\nYou have:\n15% decreased stamina loss.\n15% decreased health loss from damage taken.\n20% critical hit resistance."
 buffResurrectName,Double Tap!
 buffResurrectDesc,"You might wanna double check that these guys are actually dead ...\n\nDuring horde night, [FFC800]most[-] zombies have a 10% chance to respawn. Kill them with [CC5500]fire[-] damage or [CC5500]explosives[-] to ensure they stay dead."
 buffCampfireAOEEffectDesc,"You are warmed by the fire.\n\nCold Resist +15\n\nThis warming effect, combined with shelter and light, can slowly reduce your despair."
@@ -201,6 +211,12 @@ buffArrowBleedName,Arrows Cause Bleed
 buffArrowBleedtip,Arrows and bolts can make living things bleed
 buffCorpseRunName,Corpse Run
 buffCorpseRunDesc,"After your recent *ahem* 'Near Death Experience', you have a temporary boost to run speed, stamina regen, and damage resistance.\n\nTry to stay safe from now on, ok?"
+buffWellFedName,Well Fed
+buffWellFedDesc,"You are feeling well and truly sated, and as a result, your mental health has improved significantly.\n\nDespair will increase slower while you have this effect, and you have 2.5% better passive healing."
+buffWellRestedName,Well Rested
+buffWellRestedDesc,"You are thoroughly rested, and ready to take on the world!\n\n10% better stamina regen for the duration of this effect."
+buffWellRestedTriggerName,Resting
+buffWellRestedTriggerDesc,"After a hard day of adventuring and zombie slaying, you're ready to recharge.\n\nYou are building your strength for the next ordeal."
 buffDaringAdventurerFiveDesc,"You are an Ultimate Adventurer.\n\nYou have access to the best trader items, get 25% more Dukes from quests, and a 25% better deal when buying & selling.\n\nPick three quest rewards."
 buffDaringAdventurerFiveName,"Ultimate Adventurer"
 buffDaringAdventurerFiveTooltip,"Your bartering & quest rewards have increased 5%!!"
@@ -249,7 +265,6 @@ buffWastelanddTooltip,"You are in a wasteland biome"
 chickenCoopDesc,"A home for your chickens.\n\n Place a chicken in the fuel slot to produce eggs over time.\n\nWill stop producing eggs when the chicken is spent."
 ClubRepairKit,Club Repair Kit
 ClubRepairKitDesc,This Repair Kit is used to repair steel clubs.
-drinkJarGrandpasForgettingElixirPromptDesc,Are you sure you want to reset all of your skills?\n\nAll points will be returned for use on other skills.\n\n[FFC800]ALL ACTION SKILLS WILL BE RESET ALSO!![-]
 foodCanBeefcooked,Cooked Beef Ration
 foodCanBeefcookedDesc,"It's not from your favorite steakhouse but this can of cooked beef will fill you up, and not be as likely to give you the shits..."
 foodCanCarrots,Can of Carrots
@@ -343,7 +358,7 @@ loadingTipBladedWeapons,"Bladed weapons such as knives and machetes are best at 
 loadingTipBleedingArrows,"Any time you shoot a living thing with an arrow or crossbow bolt, it has a 25% chance to make your target bleed"
 loadingTipBleedingArrows_title,"Arrows can cause bleeding"
 loadingTipEncumbrance,"Carrying too many items in your inventory will slow you down, and carrying motor vehicles will prevent you from moving at all.\nFind or craft pocket mods for clothing or armor to remove encumbrance penalties. Alternatively you can purchase the Pack Mule perk."
-loadingTipHeadShotsOnly,"Don't you watch any zombie movies? The only way to kill anything undead is with a [FFC800]headshot[-].\nExplosives and fire will work too."
+loadingTipHeadShotsOnly,"Don't you watch any zombie movies? The only way to quickly kill anything undead is with a [FFC800]headshot[-].\nAim for the head for maximum damage. Explosives and fire will work too."
 loadingTipHeadShotsOnly_title,"Headshots only!"
 loadingTipPermanentInfection,"You are permanently affected by [FFC800]Despair[-]. There is no cure, only treatment.\nYour environment is a factor as to how Despair will affect you; so stay warm, dry, sheltered and well lit.\nConsuming certain food & drink will help. There is medication available in loot and from traders to treat Despair."
 loadingTipPermanentInfection_title,"Despair"
@@ -424,18 +439,6 @@ perkCharismaticNatureRank2LongDesc,"You're a team leader that empowers others.\n
 perkCharismaticNatureRank3LongDesc,"You're a strong motivational force.\nAllies and Party Members take 10% less damage from all sources, take half damage from bleeding and stop bleeding twice as fast.\n\nDespair affects Allies & Party Members an additional 5 - 10% less."
 perkCharismaticNatureRank4LongDesc,"Your leadership abilities are top shelf.\nAllies and Party Members find 10% better loot.\n\nDespair affects Allies & Party Members an additional 5 - 10% less."
 perkCharismaticNatureRank5LongDesc,"You're a true hero.\nAllies and Party Members find 20% better loot and gain +1 to all attributes.\n\nDespair affects Allies & Party Members an additional 10 - 20% less."
-perkDeepCutsDesc,Specialize in using bladed weapons like knives or machetes. Bleed living things dry. Not much use for the undead though.
-perkDeepCutsName,Deep Cuts
-perkDeepCutsRank1Desc,Dull Blade
-perkDeepCutsRank1LongDesc,"You might have a dull blade, but you know how to use it. Bladed weapons deal 10% more damage. Inflict up to 3 Bleeding Wounds on 'living' things and a power attack inflicts 2. Every attack refreshes the duration on bleeding. Stamina costs are reduced by 8% and 15% for power attacks. Find more bladed weapons and parts in loot."
-perkDeepCutsRank2Desc,Knife Guy
-perkDeepCutsRank2LongDesc,Your friends say you're a really knife guy. Bladed weapons deal 20% more damage. Inflict up to 4 Bleeding Wounds on 'living' things and a power attack inflicts 3. Stamina costs are reduced by 15% and 30% for power attacks. Find more bladed weapons and parts in loot.
-perkDeepCutsRank3Desc,Fencer
-perkDeepCutsRank3LongDesc,You're a cut above the rest. Bladed weapons deal 30% more damage. Inflict up to 5 Bleeding Wounds on 'living' things and a power attack inflicts 4. Glancing blows have a 40% chance to cause 1 Bleeding Wound. Stamina costs are reduced by 20% and 40% for power attacks. Killing blows grant 10 stamina. Find more bladed weapons and parts in loot.
-perkDeepCutsRank4Desc,Swordsman
-perkDeepCutsRank4LongDesc,You're quite lethal with bladed weapons. Bladed weapons deal 40% more damage. Inflict up to 6 Bleeding Wounds on 'living' things and a power attack inflicts 4. Glancing blows have a 70% chance to cause 1 Bleeding Wound. Stamina costs are reduced by 25% and 50% for power attacks. Killing blows grant 20 stamina. Find more bladed weapons and parts in loot.
-perkDeepCutsRank5Desc,Samurai
-perkDeepCutsRank5LongDesc,You're a samurai and can make sushi out of your foes. Bladed weapons deal 50% more damage. Inflict up to 7 Bleeding Wounds on 'living' things and a power attack inflicts 5. All glancing blows cause 1 Bleeding Wound. Killing blows grant 30 stamina. Find more bladed weapons and parts in loot.
 perkLivingOffTheLandRank1LongDesc,Farm plots cost 30% less to craft.
 perkLivingOffTheLandRank2LongDesc,Farm plots cost 50% less to craft.\nSeeds cost one crop fewer to craft.
 perkLivingOffTheLandRank3LongDesc,Seeds cost 2 crops fewer to craft.
@@ -459,6 +462,10 @@ perkUrbanCombatCigarLongDesc,"Unlocks crafting for the brass catcher mod.\n\nRet
 perkWasteTreasuresAcidDesc,Adds a chance to harvest acid from cars and medical equipment. Unlocks acid crafting.
 perkWasteTreasuresAcidLongDesc,"Acid: Acid is an extremely rare and powerful crafting agent. I figured out this tip to sometimes harvest a little from cars and medical equipment. Adds a chance to harvest acid from cars, medical equipment and acid barrels. You can extract acid from car batteries in your Workbench, and you can craft it in the Chemistry Station."
 perkWellInsulatedRank3LongDesc,You can now handle severe weather and typically couldn't care less what the weather conditions are. You will never have the more severe stages of temperature status effects.\n\n[FFC800]Immune to slow effects from frozen zombie attacks.[-]
+reqSurvivalInstinctLevel00,"You have points in Survival Instinct. You cannot now use points in Charismatic Nature"
+reqCharismaticNatureLevel00,"You have points in Charismatic Nature. You cannot now use points in Survival Instinct"
+toolAmmoPress,Ammunition Press
+toolAmmoPressDesc,This tool is required to assemble and dismantle firearm rounds at a workbench.
 playerTableSaw,Tablesaw
 playerWoodBurningStove,Wood Burning Stove
 potofbeefDesc,"Two cans of beef rations cooked in a pot. Tender and filling."
@@ -476,13 +483,17 @@ potofstockDesc,"Twice as much stock in this pot doesn't make it any better reall
 potoftunaDesc,"Two cans of chunky tuna have got to be better than one, right?"
 resourceBranch,Branch
 resourceBranchDesc,"A small stout branch. Used for stone tools and arrows.\n\nCan also be used as fuel."
-resourceConcreteMixDesc,"Can be used as a resource to upgrade cobblestone into solid concrete walls or to craft concrete blocks in a cement mixer.\n\nRequires a bucket of water.\nCrafted in batches of 250."
-resourceConcreteMixDesc,Can be used as a resource to upgrade cobblestone into solid concrete walls or to craft concrete blocks in a cement mixer.\n\nCrafted in batches of 250
+resourceConcreteMixDesc,"Can be used as a resource to upgrade bricks into solid concrete walls or to craft concrete blocks in a cement mixer.\n\nRequires a bucket of water.\nCrafted in batches of 250."
+resourceConcreteMixDesc,Can be used as a resource to upgrade bricks into solid concrete walls or to craft concrete blocks in a cement mixer.\n\nCrafted in batches of 250
+resourceBricks,Brick
+resourceBrickDesc,"Bricks can be used to build sturdy brick structures, which are stronger than cobblestone."
+materialMbrick_shapesPlayer,Bricks
 resourceLiquidLead,Liquid Lead
 resourceLiquidLeadDesc,Liquid Lead is an ingredient that has radiation removing properties.\n\nUsed for crafting anti-rad thrown explosives.
 resourcePaperDesc,"Paper can be used with other ingredients to make shotgun ammo and dynamite. Crafted in lots of 50."
 resourceWaterFilter,Water Filter
-resourceWaterFilterDesc,"A limited-use water filter, used in the dew collector.\n\nGood for about 25 collection cycles.\n\nMust be replaced when broken."
+resourceWaterFilterDesc,"A tool used to convert murky water to drinkable water, used in the dew collector."
+resourceWoodDesc,"A piece of wood. Great for building tools and constructing wood frames for building.\n\nPlace logs like a block and chop with an axe, or use a tablesaw for a higher yield."
 resourceWoodScraps,Wood scraps
 resourceWoodScrapsDesc,"Small fragments of wood.\n\nCan be used for fuel and basic building blocks, but not much else."
 resourceCropLavender,Lavender Flower
@@ -548,6 +559,7 @@ venomDesc,"Key ingredient for antivenom."
 XuiCollectorModifiers,MODIFIERS
 xuiFilter,"Filter"
 xuiBucket,"Bucket"
+xuiFibers,Fibres
 xuiTSBasics,Basics
 zombieArlene,Putrid Girl
 zombieArleneFeral,Feral Putrid Girl
@@ -671,3 +683,25 @@ zombieYoFrozen,Frozen Carcass
 zombieYoMutated,Mutated Carcass
 zombieYoRotten,Rotting Carcass
 zombieBunkerBuster,Bunker Buster
+npcTraderRed,Trader Red
+npcTraderHells,Trader Hells
+hellsZombieHungryMutant,Hungry Mutant
+hellsZombieHumanExperiment,Human Experiment
+hellsZombieParasite,Parasitic Mutant
+hellsZombieGiantMutant,Giant Mutant
+hellsZombieBuffedMutant,Buffed Mutant
+hellsZombieBlindMutant,Blind Hunter
+hellsZombieHeavyDemon,Nyaphim
+hellsZombieMutant4,Mutant Neomorph
+hellsZombieDoomDemon,Nyaphim Exo
+hellsZombieMutant1,Mutant Amorph
+hellsZombieMutantTentacles,Mutant Hypermorph
+hellsZombieMutantHeadHunter,Mutant Hypomorph
+hellsZombieMutantBoomer,Mutated Boomer
+hellsZombieMutantReaper,Mutant Reaper
+hellsZombieWendigo1,Lupine Mutant
+hellsZombieWendigo2,Canine Mutant
+animalMutantBug,Mutant Bug
+animalCockroach,Mutated Cockroach
+trader_red,Trader Red
+trader_hells,Trader Hells
