@@ -1,8 +1,13 @@
-# 28 Alphas Later v1.4
+# 28 Alphas Later v1.4.1
 
 The idea behind this mod is to slow progression, make traders less powerful, and generally extend the time for a playthrough, while keeping the vanilla look and feel.
 
 ## INSTALLATION INSTRUCTIONS
+
+># Changelog for v1.4.1
+>
+Restored WMMTraderQuestMap and added separate modlet (ZZZZ-28AL WMMTraderQuestMap Fix) as a workaround for the compatibility issue with adding more quest choices in 1.4
+
 
 >[!NOTE]
 ># VERSION 1.4  - NEW SAVE HIGHLY RECOMMENDED! #
@@ -266,7 +271,7 @@ Added JoeSloeMoe's failsafe so action skills are not reset with Forgettin' Elixi
 >2. Copy the folder into `%AppData%\Roaming\7DaysToDie`
 >3. Alternatively, you can use the mod launcher, available from here: [https://7d2dmodlauncher.org/](url)
 
-## FEATURES 
+## FEATURES
 
 ### STARTER ITEMS
 
@@ -430,7 +435,7 @@ Living off the Land now offers a discount to crops needed to make seeds, level 2
 
 Clothing that gives perk updates has been removed. Instead, the looting and night vision goggles, and the bandanna, have a mod slot. There are 5 mods available, specifically for these items, and each mod increases the 5 different perks by one. The bartering bonus (from cigars originally), and the crafting speed and XP gain (from the nerdy glasses) have been removed. The cigar itself remains as a recipe unlock (craft only).
 
-### RESOURCES 
+### RESOURCES
 
 Trees no longer give wood, they give wood logs, scraps, and branches. Logs can be placed and then chopped with an axe for wood, or use the table saw to do it quicker and better.
 
@@ -497,9 +502,9 @@ CustomDifficulty				- Author: Mythix
 Trader Quest addendum				- Author: CautiousPancake
 
 Radiated Wasteland (xml code)	- Author: gemini
-						
+
 ### Also a huge thank you to Frantic_Dan & redbeardt for the custom HUD base code, main menu localization changes, and to YubiNashi and Frantic_Dan for ideas/balancing and playtesting.
 
 
 
- 
+
