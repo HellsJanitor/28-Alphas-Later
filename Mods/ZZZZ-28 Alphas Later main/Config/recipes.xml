@@ -1585,28 +1585,28 @@
 	<remove xpath="//recipe[@name='vehicleMinibikePlaceable']"/>
 	<remove xpath="//recipe[@name='vehicleMotorcyclePlaceable']"/>
 	<insertafter xpath="//recipe[@name='vaultDoor01Double_Powered']">
-		<recipe name="4x4Bundle" count="1" craft_time="1050" craft_area="workbench" craft_tool="meleeToolSalvageT2Ratchet" tags="learnable,workbenchCrafting,perkGreaseMonkey">
+		<recipe name="4x4Bundle" count="1" craft_time="1050" craft_area="workbench" craft_tool="meleeToolSalvageT2Ratchet" tags="workbenchCrafting,perkGreaseMonkey">
 			<ingredient name="vehicleWheels" count="4"/>
 			<ingredient name="vehicle4x4TruckChassis" count="1"/>
 			<ingredient name="vehicle4x4TruckAccessories" count="1"/>
 			<ingredient name="smallEngine" count="1"/>
 			<ingredient name="carBattery" count="1"/>
 		</recipe>
-		<recipe name="GyroBundle" count="1" craft_time="1350" craft_area="workbench" craft_tool="meleeToolSalvageT3ImpactDriver" tags="learnable,workbenchCrafting,perkGreaseMonkey">
+		<recipe name="GyroBundle" count="1" craft_time="1350" craft_area="workbench" craft_tool="meleeToolSalvageT3ImpactDriver" tags="workbenchCrafting,perkGreaseMonkey">
 			<ingredient name="vehicleWheels" count="3"/>
 			<ingredient name="vehicleGyroCopterChassis" count="1"/>
 			<ingredient name="vehicleGyroCopterAccessories" count="1"/>
 			<ingredient name="smallEngine" count="1"/>
 			<ingredient name="carBattery" count="1"/>
 		</recipe>
-		<recipe name="MinibikeBundle" count="1" craft_time="450" craft_area="workbench" craft_tool="meleeToolSalvageT1Wrench" tags="learnable,workbenchCrafting,perkGreaseMonkey">
+		<recipe name="MinibikeBundle" count="1" craft_time="450" craft_area="workbench" craft_tool="meleeToolSalvageT1Wrench" tags="workbenchCrafting,perkGreaseMonkey">
 			<ingredient name="vehicleWheels" count="2"/>
 			<ingredient name="vehicleMinibikeChassis" count="1"/>
 			<ingredient name="vehicleMinibikeHandlebars" count="1"/>
 			<ingredient name="smallEngine" count="1"/>
 			<ingredient name="carBattery" count="1"/>
 		</recipe>
-		<recipe name="MotorcycleBundle" count="1" craft_time="750" craft_area="workbench" craft_tool="meleeToolSalvageT2Ratchet" tags="learnable,workbenchCrafting,perkGreaseMonkey">
+		<recipe name="MotorcycleBundle" count="1" craft_time="750" craft_area="workbench" craft_tool="meleeToolSalvageT2Ratchet" tags="workbenchCrafting,perkGreaseMonkey">
 			<ingredient name="vehicleWheels" count="2"/>
 			<ingredient name="vehicleMotorcycleChassis" count="1"/>
 			<ingredient name="vehicleMotorcycleHandlebars" count="1"/>
