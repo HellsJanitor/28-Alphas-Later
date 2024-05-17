@@ -4,6 +4,12 @@
         <Server Name="28 Alphas Later" Logo="https://media.discordapp.net/attachments/1155647724478275614/1180961617417085000/background.png">
             <Description>### 28 Alphas Later ###
 			
+Update v 1.4.1
+The kingsize bed will no longer heal the player if they're in combat
+Lithium and St John's Wort now have a cooldown between uses
+Player can develop a resistance/tolerance to Lithium and St John's Wort. Continued usage over time makes the drug(s) less effective
+Streamlined the weapon/tool/armour specific repair kits and removed excess recipes
+Food recipes requiring canned food now require cooked cans.
 
 Update 11/05/24
 
@@ -36,7 +42,7 @@ Removed tiers 1, 2, and 3 of restore power, and reworked tiers 1, 2, and 3 of Co
 Increased number of quests offered from 5 to 10 (credit Redbeard) (removed WMMTraderQuestMap from files as it's now incompatible)
 Zombies now have a "visible" backpack (loot bag), which drops loot when they're killed
 Lowered the number of zombie kills required for defend the safehouse quests
-Change the description and icon for small batteries 
+Change the description and icon for small batteries
 Added despair AOE buff to hostile animals
 Fixed Defend Air Drop spawns so they're sleeper game staged
 Removed headshot only. Instead, zombies take maximum damage from headshots and added a 90% reduction for hitting any other body parts
