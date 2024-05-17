@@ -244,6 +244,7 @@
 				<requirement name="BlockStandingOn" tags="bedroll"/>
 				<requirement name="IsIndoors"/>
 				<requirement name="HasBuff" target="self" buff="buffCampfireAOEEffect"/>
+				<requirement name="!HasBuff" target="self" buff="buffInCombat"/>
 				<requirement name="CVarCompare" cvar="is_bloodmoon" operation="Equals" value="0"/>
 			</effect_group>
 			<effect_group compare_type="or">
@@ -251,7 +252,24 @@
 				<requirement name="!BlockStandingOn" tags="bedroll"/>
 				<requirement name="!IsIndoors"/>
 				<requirement name="!HasBuff" target="self" buff="buffCampfireAOEEffect"/>
+				<requirement name="HasBuff" target="self" buff="buffInCombat"/>
 				<requirement name="CVarCompare" cvar="is_bloodmoon" operation="Equals" value="1"/>
+			</effect_group>
+			<!-- passive healing when standing on a bed -->
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffHealHealth"/>
+				<requirement name="BlockStandingOn" tags="playercraftedbed"/>
+				<requirement name="IsIndoors"/>
+				<requirement name="!HasBuff" target="self" buff="buffInCombat"/>
+				<requirement name="CVarCompare" cvar="is_bloodmoon" operation="Equals" value="0"/>
+			</effect_group>
+			<effect_group compare_type="or">
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHealHealth"/>
+				<requirement name="!BlockStandingOn" tags="playercraftedbed"/>
+				<requirement name="!IsIndoors"/>
+				<requirement name="HasBuff" target="self" buff="buffInCombat"/>
+				<requirement name="CVarCompare" cvar="is_bloodmoon" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="inCombat" operation="GTE" value="1"/>
 			</effect_group>
 			<!-- bloodmoon XP adjustment -->
 			<effect_group>
@@ -342,10 +360,25 @@
 					<requirement name="HasBuff" buff="buffRadSuitBoots"/>
 				</triggered_effect>
 			</effect_group>
+			<!-- determines if the player is in combat or not -->
+			<effect_group>
+				<triggered_effect trigger="onCombatEntered" action="AddBuff" buff="buffInCombat"/>
+			</effect_group>
+			<!-- initialise meds resistance cvars -->
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" target="self" action="ModifyCVar" cvar="lithiumrescount" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" target="self" action="ModifyCVar" cvar="wortrescount" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+		
+		<!-- *** dummy buff to determine if player is in combat or not *** -->
+		<buff name="buffInCombat" name_key="buffInCombatName" description_key="buffInCombatDesc" showonhud="false" icon="ui_game_symbol_twitch_no_melee" icon_color="139,0,0">
+			<duration value="20"/>
+			<stack_type value="replace"/>
 		</buff>
 		
 		<!-- *** verifies Action Skill levels after forgettin' elixir has been used *** -->
-		<buff name="buffVerifyLBU_ProgressLevels" hidden="true" >
+		<buff name="buffVerifyLBU_ProgressLevels" hidden="true">
 			<stack_type value="ignore"/>
 			<duration value="0"/>
 			<effect_group>
@@ -355,151 +388,151 @@
 			<!-- INTELLECT -->
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="lbu_Robotics" level="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_Robotics" operation="LT" value="@lbu_Robotics_Lvl"/> 
-				</triggered_effect>		
+					<requirement name="ProgressionLevel" progression_name="lbu_Robotics" operation="LT" value="@lbu_Robotics_Lvl"/>
+				</triggered_effect>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_Robotics_Lvl" operation="add" value="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_Robotics" operation="GT" value="@lbu_Robotics_Lvl"/> 
-				</triggered_effect>		
+					<requirement name="ProgressionLevel" progression_name="lbu_Robotics" operation="GT" value="@lbu_Robotics_Lvl"/>
+				</triggered_effect>
 			
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="lbu_Electrocutioner" level="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_Electrocutioner" operation="LT" value="@lbu_Electrocutioner_Lvl"/> 	
-				</triggered_effect>		
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_Electrocutioner_Lvl" operation="add" value="1">		
-					<requirement name="ProgressionLevel" progression_name="lbu_Electrocutioner" operation="GT" value="@lbu_Electrocutioner_Lvl"/> 
-				</triggered_effect>				
+					<requirement name="ProgressionLevel" progression_name="lbu_Electrocutioner" operation="LT" value="@lbu_Electrocutioner_Lvl"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_Electrocutioner_Lvl" operation="add" value="1">
+					<requirement name="ProgressionLevel" progression_name="lbu_Electrocutioner" operation="GT" value="@lbu_Electrocutioner_Lvl"/>
+				</triggered_effect>
 			</effect_group>
 			
 			<!--AGILITY-->
-			<effect_group>			
+			<effect_group>
 			
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="lbu_HiddenStrike" level="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_HiddenStrike" operation="LT" value="@lbu_HiddenStrike_Lvl"/> 
-				</triggered_effect>	
+					<requirement name="ProgressionLevel" progression_name="lbu_HiddenStrike" operation="LT" value="@lbu_HiddenStrike_Lvl"/>
+				</triggered_effect>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_HiddenStrike_Lvl" operation="add" value="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_HiddenStrike" operation="GT" value="@lbu_HiddenStrike_Lvl"/> 
-				</triggered_effect>		
+					<requirement name="ProgressionLevel" progression_name="lbu_HiddenStrike" operation="GT" value="@lbu_HiddenStrike_Lvl"/>
+				</triggered_effect>
 		
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="lbu_DeepCuts" level="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_DeepCuts" operation="LT" value="@lbu_DeepCuts_Lvl"/> 
-				</triggered_effect>	
+					<requirement name="ProgressionLevel" progression_name="lbu_DeepCuts" operation="LT" value="@lbu_DeepCuts_Lvl"/>
+				</triggered_effect>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_DeepCuts_Lvl" operation="add" value="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_DeepCuts" operation="GT" value="@lbu_DeepCuts_Lvl"/> 
-				</triggered_effect>		
+					<requirement name="ProgressionLevel" progression_name="lbu_DeepCuts" operation="GT" value="@lbu_DeepCuts_Lvl"/>
+				</triggered_effect>
 		
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="lbu_Gunslinger" level="1">			
-					<requirement name="ProgressionLevel" progression_name="lbu_Gunslinger" operation="LT" value="@lbu_Gunslinger_Lvl"/> 
-				</triggered_effect>		
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_Gunslinger_Lvl" operation="add" value="1">					
-					<requirement name="ProgressionLevel" progression_name="lbu_Gunslinger" operation="GT" value="@lbu_Gunslinger_Lvl"/> 
-				</triggered_effect>		
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="lbu_Gunslinger" level="1">
+					<requirement name="ProgressionLevel" progression_name="lbu_Gunslinger" operation="LT" value="@lbu_Gunslinger_Lvl"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_Gunslinger_Lvl" operation="add" value="1">
+					<requirement name="ProgressionLevel" progression_name="lbu_Gunslinger" operation="GT" value="@lbu_Gunslinger_Lvl"/>
+				</triggered_effect>
 		
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="lbu_Archery" level="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_Archery" operation="LT" value="@lbu_Archery_Lvl"/> 
+					<requirement name="ProgressionLevel" progression_name="lbu_Archery" operation="LT" value="@lbu_Archery_Lvl"/>
 				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_Archery_Lvl" operation="add" value="1">					
-					<requirement name="ProgressionLevel" progression_name="lbu_Archery" operation="GT" value="@lbu_Archery_Lvl"/> 
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_Archery_Lvl" operation="add" value="1">
+					<requirement name="ProgressionLevel" progression_name="lbu_Archery" operation="GT" value="@lbu_Archery_Lvl"/>
 				</triggered_effect>
 			</effect_group>
 			
 			<!--FORTITUDE-->
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="lbu_MachineGunner" level="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_MachineGunner" operation="LT" value="@lbu_MachineGunner_Lvl"/> 
-				</triggered_effect>	
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_MachineGunner_Lvl" operation="add" value="1">					
-					<requirement name="ProgressionLevel" progression_name="lbu_MachineGunner" operation="GT" value="@lbu_MachineGunner_Lvl"/> 
-				</triggered_effect>		
+					<requirement name="ProgressionLevel" progression_name="lbu_MachineGunner" operation="LT" value="@lbu_MachineGunner_Lvl"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_MachineGunner_Lvl" operation="add" value="1">
+					<requirement name="ProgressionLevel" progression_name="lbu_MachineGunner" operation="GT" value="@lbu_MachineGunner_Lvl"/>
+				</triggered_effect>
 			
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="lbu_Brawler" level="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_Brawler" operation="LT" value="@lbu_Brawler_Lvl"/> 
-				</triggered_effect>			
+					<requirement name="ProgressionLevel" progression_name="lbu_Brawler" operation="LT" value="@lbu_Brawler_Lvl"/>
+				</triggered_effect>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_Brawler_Lvl" operation="add" value="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_Brawler" operation="GT" value="@lbu_Brawler_Lvl"/> 
-				</triggered_effect>			
+					<requirement name="ProgressionLevel" progression_name="lbu_Brawler" operation="GT" value="@lbu_Brawler_Lvl"/>
+				</triggered_effect>
 			</effect_group>
 			
 			<!--STRENGTH -->
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="lbu_Miner69er" level="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_Miner69er" operation="LT" value="@lbu_Miner69er_Lvl"/> 
-				</triggered_effect>				
+					<requirement name="ProgressionLevel" progression_name="lbu_Miner69er" operation="LT" value="@lbu_Miner69er_Lvl"/>
+				</triggered_effect>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_Miner69er_Lvl" operation="add" value="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_Miner69er" operation="GT" value="@lbu_Miner69er_Lvl"/> 
-				</triggered_effect>				
+					<requirement name="ProgressionLevel" progression_name="lbu_Miner69er" operation="GT" value="@lbu_Miner69er_Lvl"/>
+				</triggered_effect>
 			
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="lbu_SkullCrusher" level="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_SkullCrusher" operation="LT" value="@lbu_SkullCrusher_Lvl"/> 
-				</triggered_effect>				
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_SkullCrusher_Lvl" operation="add" value="1">					
-					<requirement name="ProgressionLevel" progression_name="lbu_SkullCrusher" operation="GT" value="@lbu_SkullCrusher_Lvl"/> 
-				</triggered_effect>	
+					<requirement name="ProgressionLevel" progression_name="lbu_SkullCrusher" operation="LT" value="@lbu_SkullCrusher_Lvl"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_SkullCrusher_Lvl" operation="add" value="1">
+					<requirement name="ProgressionLevel" progression_name="lbu_SkullCrusher" operation="GT" value="@lbu_SkullCrusher_Lvl"/>
+				</triggered_effect>
 			
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="lbu_PummelPete" level="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_PummelPete" operation="LT" value="@lbu_PummelPete_Lvl"/> 
-				</triggered_effect>	
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_PummelPete_Lvl" operation="add" value="1">					
-					<requirement name="ProgressionLevel" progression_name="lbu_PummelPete" operation="GT" value="@lbu_PummelPete_Lvl"/> 
-				</triggered_effect>		
+					<requirement name="ProgressionLevel" progression_name="lbu_PummelPete" operation="LT" value="@lbu_PummelPete_Lvl"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_PummelPete_Lvl" operation="add" value="1">
+					<requirement name="ProgressionLevel" progression_name="lbu_PummelPete" operation="GT" value="@lbu_PummelPete_Lvl"/>
+				</triggered_effect>
 			
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="lbu_Boomstick" level="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_Boomstick" operation="LT" value="@lbu_Boomstick_Lvl"/> 
-				</triggered_effect>		
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_Boomstick_Lvl" operation="add" value="1">					
-					<requirement name="ProgressionLevel" progression_name="lbu_Boomstick" operation="GT" value="@lbu_Boomstick_Lvl"/> 
-				</triggered_effect>			
+					<requirement name="ProgressionLevel" progression_name="lbu_Boomstick" operation="LT" value="@lbu_Boomstick_Lvl"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_Boomstick_Lvl" operation="add" value="1">
+					<requirement name="ProgressionLevel" progression_name="lbu_Boomstick" operation="GT" value="@lbu_Boomstick_Lvl"/>
+				</triggered_effect>
 			</effect_group>
 			
 			<!--PERCEPTION-->
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="lbu_Salvage" level="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_Salvage" operation="LT" value="@lbu_Salvage_Lvl"/> 
-				</triggered_effect>		
+					<requirement name="ProgressionLevel" progression_name="lbu_Salvage" operation="LT" value="@lbu_Salvage_Lvl"/>
+				</triggered_effect>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_Salvage_Lvl" operation="add" value="1">
-						<requirement name="ProgressionLevel" progression_name="lbu_Salvage" operation="GT" value="@lbu_Salvage_Lvl"/> 
-				</triggered_effect>		
+					<requirement name="ProgressionLevel" progression_name="lbu_Salvage" operation="GT" value="@lbu_Salvage_Lvl"/>
+				</triggered_effect>
 			
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="lbu_SpearMaster" level="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="LT" value="@lbu_SpearMaster_Lvl"/> 
-				</triggered_effect>		
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_SpearMaster_Lvl" operation="add" value="1">					
-					<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="GT" value="@lbu_SpearMaster_Lvl"/> 
-				</triggered_effect>			
+					<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="LT" value="@lbu_SpearMaster_Lvl"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_SpearMaster_Lvl" operation="add" value="1">
+					<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="GT" value="@lbu_SpearMaster_Lvl"/>
+				</triggered_effect>
 			
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="lbu_DemolitionsExpert" level="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_DemolitionsExpert" operation="LT" value="@lbu_DemolitionsExpert_Lvl"/> 
-				</triggered_effect>		
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_DemolitionsExpert_Lvl" operation="add" value="1">			
-					<requirement name="ProgressionLevel" progression_name="lbu_DemolitionsExpert" operation="GT" value="@lbu_DemolitionsExpert_Lvl"/> 
-				</triggered_effect>							
+					<requirement name="ProgressionLevel" progression_name="lbu_DemolitionsExpert" operation="LT" value="@lbu_DemolitionsExpert_Lvl"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_DemolitionsExpert_Lvl" operation="add" value="1">
+					<requirement name="ProgressionLevel" progression_name="lbu_DemolitionsExpert" operation="GT" value="@lbu_DemolitionsExpert_Lvl"/>
+				</triggered_effect>
 			
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="lbu_DeadEye" level="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_DeadEye" operation="LT" value="@lbu_DeadEye_Lvl"/> 
+					<requirement name="ProgressionLevel" progression_name="lbu_DeadEye" operation="LT" value="@lbu_DeadEye_Lvl"/>
 				</triggered_effect>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lbu_DeadEye_Lvl" operation="add" value="1">
-					<requirement name="ProgressionLevel" progression_name="lbu_DeadEye" operation="GT" value="@lbu_DeadEye_Lvl"/> 
-				</triggered_effect>	
+					<requirement name="ProgressionLevel" progression_name="lbu_DeadEye" operation="GT" value="@lbu_DeadEye_Lvl"/>
+				</triggered_effect>
 			</effect_group>
 			
 			<!--if all is equal - remove buff-->
 			<effect_group>
-				<requirement name="ProgressionLevel" progression_name="lbu_DeadEye" operation="EQ" value="@lbu_DeadEye_Lvl"/> 
-				<requirement name="ProgressionLevel" progression_name="lbu_DemolitionsExpert" operation="EQ" value="@lbu_DemolitionsExpert_Lvl"/> 
-				<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="EQ" value="@lbu_SpearMaster_Lvl"/> 
-				<requirement name="ProgressionLevel" progression_name="lbu_Salvage" operation="EQ" value="@lbu_Salvage_Lvl"/> 
-				<requirement name="ProgressionLevel" progression_name="lbu_Boomstick" operation="EQ" value="@lbu_Boomstick_Lvl"/> 
-				<requirement name="ProgressionLevel" progression_name="lbu_PummelPete" operation="EQ" value="@lbu_PummelPete_Lvl"/> 
-				<requirement name="ProgressionLevel" progression_name="lbu_SkullCrusher" operation="EQ" value="@lbu_SkullCrusher_Lvl"/> 
-				<requirement name="ProgressionLevel" progression_name="lbu_Miner69er" operation="EQ" value="@lbu_Miner69er_Lvl"/> 
-				<requirement name="ProgressionLevel" progression_name="lbu_Brawler" operation="EQ" value="@lbu_Brawler_Lvl"/> 
-				<requirement name="ProgressionLevel" progression_name="lbu_MachineGunner" operation="EQ" value="@lbu_MachineGunner_Lvl"/> 
-				<requirement name="ProgressionLevel" progression_name="lbu_Archery" operation="EQ" value="@lbu_Archery_Lvl"/> 
-				<requirement name="ProgressionLevel" progression_name="lbu_Gunslinger" operation="EQ" value="@lbu_Gunslinger_Lvl"/> 
-				<requirement name="ProgressionLevel" progression_name="lbu_DeepCuts" operation="EQ" value="@lbu_DeepCuts_Lvl"/> 
-				<requirement name="ProgressionLevel" progression_name="lbu_HiddenStrike" operation="EQ" value="@lbu_HiddenStrike_Lvl"/> 
-				<requirement name="ProgressionLevel" progression_name="lbu_Electrocutioner" operation="EQ" value="@lbu_Electrocutioner_Lvl"/> 
-				<requirement name="ProgressionLevel" progression_name="lbu_Robotics" operation="EQ" value="@lbu_Robotics_Lvl"/> 
-					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffVerifyLBU_ProgressLevels"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="LEARN BY USE: Progress levels verified!"/>
+				<requirement name="ProgressionLevel" progression_name="lbu_DeadEye" operation="EQ" value="@lbu_DeadEye_Lvl"/>
+				<requirement name="ProgressionLevel" progression_name="lbu_DemolitionsExpert" operation="EQ" value="@lbu_DemolitionsExpert_Lvl"/>
+				<requirement name="ProgressionLevel" progression_name="lbu_SpearMaster" operation="EQ" value="@lbu_SpearMaster_Lvl"/>
+				<requirement name="ProgressionLevel" progression_name="lbu_Salvage" operation="EQ" value="@lbu_Salvage_Lvl"/>
+				<requirement name="ProgressionLevel" progression_name="lbu_Boomstick" operation="EQ" value="@lbu_Boomstick_Lvl"/>
+				<requirement name="ProgressionLevel" progression_name="lbu_PummelPete" operation="EQ" value="@lbu_PummelPete_Lvl"/>
+				<requirement name="ProgressionLevel" progression_name="lbu_SkullCrusher" operation="EQ" value="@lbu_SkullCrusher_Lvl"/>
+				<requirement name="ProgressionLevel" progression_name="lbu_Miner69er" operation="EQ" value="@lbu_Miner69er_Lvl"/>
+				<requirement name="ProgressionLevel" progression_name="lbu_Brawler" operation="EQ" value="@lbu_Brawler_Lvl"/>
+				<requirement name="ProgressionLevel" progression_name="lbu_MachineGunner" operation="EQ" value="@lbu_MachineGunner_Lvl"/>
+				<requirement name="ProgressionLevel" progression_name="lbu_Archery" operation="EQ" value="@lbu_Archery_Lvl"/>
+				<requirement name="ProgressionLevel" progression_name="lbu_Gunslinger" operation="EQ" value="@lbu_Gunslinger_Lvl"/>
+				<requirement name="ProgressionLevel" progression_name="lbu_DeepCuts" operation="EQ" value="@lbu_DeepCuts_Lvl"/>
+				<requirement name="ProgressionLevel" progression_name="lbu_HiddenStrike" operation="EQ" value="@lbu_HiddenStrike_Lvl"/>
+				<requirement name="ProgressionLevel" progression_name="lbu_Electrocutioner" operation="EQ" value="@lbu_Electrocutioner_Lvl"/>
+				<requirement name="ProgressionLevel" progression_name="lbu_Robotics" operation="EQ" value="@lbu_Robotics_Lvl"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffVerifyLBU_ProgressLevels"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="LEARN BY USE: Progress levels verified!"/>
 			</effect_group>
 		</buff>
 		
@@ -724,7 +757,7 @@
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wellrested" operation="subtract" value="1"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wellrested" operation="set" value="0">
-				<requirement name="CVarCompare" cvar="wellrested" operation="LT" value="0"/></triggered_effect>
+					<requirement name="CVarCompare" cvar="wellrested" operation="LT" value="0"/></triggered_effect>
 			</effect_group>
 			<effect_group>
 				<passive_effect name="StaminaChangeOT" operation="perc_add" value=".1"/>
@@ -1760,6 +1793,53 @@
 			</effect_group>
 		</buff>
 	
+		<!-- *** despair meds blocking buff *** -->
+		<buff name="buffLithiumBlocker" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="1500"/>
+			<update_rate value="1"/>
+		
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffLithiumResistance"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffLithiumBlocker"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="buffLithiumResistance" hidden="true">
+			<duration value="1"/>
+			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="lithiumrescount" operation="add" value=".5"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="lithiumrescount" operation="set" value="15"/>
+				<requirement name="CVarCompare" cvar="lithiumrescount" operation="GTE" value="15"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="buffStJohnsWortBlocker" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="600"/>
+			<update_rate value="1"/>
+		
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffStJohnsWortResistance"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffStJohnsWortBlocker"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="buffStJohnsWortResistance" hidden="true">
+			<duration value="1"/>
+			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="wortrescount" operation="add" value=".25"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="wortrescount" operation="set" value="5"/>
+				<requirement name="CVarCompare" cvar="wortrescount" operation="GTE" value="5"/>
+			</effect_group>
+		</buff>
+		
 		<!-- *** dummy buffs for manipulating cvars for UI elements *** -->
 		<buff name="buffWarm" hidden="true">
 			<stack_type value="replace"/>
@@ -2877,7 +2957,7 @@
 			<stack_type value="replace"/>
 			<duration value="0.01"/>
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="modBrassCatcher"/>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="modBrassCatcher" allow_client_call="true"/>
 			</effect_group>
 		</buff>
 	</append>
@@ -2950,7 +3030,7 @@
 	</insertafter>
 	
 	<!-- *** lowers stamina regen pause on power attack *** -->
-	<set xpath="//buff[@name='buffPowerAttackStaminaStunt']/duration/@value">1.5</set>	
+	<set xpath="//buff[@name='buffPowerAttackStaminaStunt']/duration/@value">1.5</set>
 
 	<!-- *** Survival Instinct *** -->
 	<insertAfter xpath="//buff[@name='buffDeadEye']">

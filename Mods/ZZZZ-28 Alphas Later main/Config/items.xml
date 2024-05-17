@@ -2869,11 +2869,15 @@
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
 				<property name="Sound_start" value="player_painkillers"/>
+				<requirement name="NotHasBuff" buff="buffLithiumBlocker" />
+				<requirement name="NotHasBuff" buff="buffStJohnsWortBlocker" />
 			</property>
 			<effect_group tiered="false">
-				<display_value name="dCureDespair" value=".25"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="25"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+				<display_value name="dCureDespair" value=".25"/>				
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="25"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="subtract" value="@lithiumrescount"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffDespairAddCure"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffLithiumBlocker"/>
 			</effect_group>
 		</item>
 	
@@ -2897,11 +2901,15 @@
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
 				<property name="Sound_start" value="player_painkillers"/>
+				<requirement name="NotHasBuff" buff="buffStJohnsWortBlocker" />
+				<requirement name="NotHasBuff" buff="buffLithiumBlocker" />
 			</property>
 			<effect_group tiered="false">
 				<display_value name="dCureDespair" value=".1"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="10"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDespairAddCure"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffDespairAddCurePerc" operation="subtract" value="@wortrescount"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffDespairAddCure"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffStJohnsWortBlocker"/>
 			</effect_group>
 		</item>
 	

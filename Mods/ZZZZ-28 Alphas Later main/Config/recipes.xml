@@ -1162,7 +1162,7 @@
 		<ingredient name="foodCropCorn" count="2"/>
 		<ingredient name="foodCanCarrots" count="2"/>
 		<effect_group>
-			<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-1" tags="foodCanChicken"/>
+			<passive_effect name="CraftingIngredientCount" level="3" operation="base_add" value="-1" tags="foodCanChicken"/>
 		</effect_group>
 	</recipe>
 	<recipe name="foodChickenMiso" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
@@ -1172,7 +1172,7 @@
 		<ingredient name="foodEggBoiled" count="1"/>
 		<ingredient name="foodCropMushrooms" count="2"/>
 		<effect_group>
-			<passive_effect name="CraftingIngredientCount" level="4,5" operation="base_add" value="-1" tags="foodCanChicken"/>
+			<passive_effect name="CraftingIngredientCount" level="3" operation="base_add" value="-1" tags="foodCanChicken"/>
 		</effect_group>
 	</recipe>	
 	<recipe name="foodMeatStew" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
@@ -1208,6 +1208,9 @@
 		<ingredient name="foodCropPotato" count="2"/>
 		<ingredient name="foodCropCorn" count="2"/>
 		<ingredient name="drinkJarBoiledWater" count="1"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="foodShamSandwich"/>
+		</effect_group>
 	</recipe>
 	<recipe name="foodShepardsPie" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
 		<ingredient name="foodCanLamb" count="1"/>
@@ -1292,32 +1295,11 @@
 	<!-- *** weapon/tool/armour specific repair kits *** -->
 	<recipe name="HandgunRepairKit" count="1">
 		<ingredient name="gunHandgunT1PistolParts" count="1"/>
-		<ingredient name="resourceForgedIron" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceMechanicalParts" count="2"/>
-		<ingredient name="resourceOil" count="2"/>
-	</recipe>
-	<recipe name="HandgunRepairKit" count="1">
-		<ingredient name="gunHandgunT1PistolParts" count="1"/>
 		<ingredient name="resourceRepairKit" count="1"/>		
 	</recipe>
 	<recipe name="ShotgunRepairKit" count="1">
 		<ingredient name="gunShotgunT1DoubleBarrelParts" count="1"/>
-		<ingredient name="resourceForgedIron" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceMechanicalParts" count="2"/>
-		<ingredient name="resourceOil" count="2"/>
-	</recipe>
-	<recipe name="ShotgunRepairKit" count="1">
-		<ingredient name="gunShotgunT1DoubleBarrelParts" count="1"/>
 		<ingredient name="resourceRepairKit" count="1"/>
-	</recipe>
-	<recipe name="MachinegunRepairKit" count="1">
-		<ingredient name="gunMGT1AK47Parts" count="1"/>
-		<ingredient name="resourceForgedIron" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceMechanicalParts" count="2"/>
-		<ingredient name="resourceOil" count="2"/>
 	</recipe>
 	<recipe name="MachinegunRepairKit" count="1">
 		<ingredient name="gunMGT1AK47Parts" count="1"/>
@@ -1325,21 +1307,7 @@
 	</recipe>
 	<recipe name="RifleRepairKit" count="1">
 		<ingredient name="gunRifleT1HuntingRifleParts" count="1"/>
-		<ingredient name="resourceForgedIron" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceMechanicalParts" count="2"/>
-		<ingredient name="resourceOil" count="2"/>
-	</recipe>
-	<recipe name="RifleRepairKit" count="1">
-		<ingredient name="gunRifleT1HuntingRifleParts" count="1"/>
 		<ingredient name="resourceRepairKit" count="1"/>
-	</recipe>
-	<recipe name="RobotRepairKit" count="1">
-		<ingredient name="gunBotRoboticsParts" count="1"/>
-		<ingredient name="resourceForgedIron" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceMechanicalParts" count="2"/>
-		<ingredient name="resourceOil" count="2"/>
 	</recipe>
 	<recipe name="RobotRepairKit" count="1">
 		<ingredient name="gunBotRoboticsParts" count="1"/>
@@ -1347,21 +1315,7 @@
 	</recipe>
 	<recipe name="BowRepairKit" count="1">
 		<ingredient name="gunBowT1WoodenBowParts" count="1"/>
-		<ingredient name="resourceForgedIron" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceMechanicalParts" count="2"/>
-		<ingredient name="resourceOil" count="2"/>
-	</recipe>
-	<recipe name="BowRepairKit" count="1">
-		<ingredient name="gunBowT1WoodenBowParts" count="1"/>
 		<ingredient name="resourceRepairKit" count="1"/>
-	</recipe>
-	<recipe name="StunBatonRepairKit" count="1">
-		<ingredient name="meleeWpnBatonT2StunBatonParts" count="1"/>
-		<ingredient name="resourceForgedIron" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceMechanicalParts" count="2"/>
-		<ingredient name="resourceOil" count="2"/>
 	</recipe>
 	<recipe name="StunBatonRepairKit" count="1">
 		<ingredient name="meleeWpnBatonT2StunBatonParts" count="1"/>
@@ -1369,21 +1323,7 @@
 	</recipe>
 	<recipe name="KnucklesRepairKit" count="1">
 		<ingredient name="meleeWpnKnucklesT3SteelKnucklesParts" count="1"/>
-		<ingredient name="resourceForgedIron" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceMechanicalParts" count="2"/>
-		<ingredient name="resourceOil" count="2"/>
-	</recipe>
-	<recipe name="KnucklesRepairKit" count="1">
-		<ingredient name="meleeWpnKnucklesT3SteelKnucklesParts" count="1"/>
 		<ingredient name="resourceRepairKit" count="1"/>
-	</recipe>
-	<recipe name="ClubRepairKit" count="1">
-		<ingredient name="meleeWpnClubT3SteelClubParts" count="1"/>
-		<ingredient name="resourceForgedIron" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceMechanicalParts" count="2"/>
-		<ingredient name="resourceOil" count="2"/>
 	</recipe>
 	<recipe name="ClubRepairKit" count="1">
 		<ingredient name="meleeWpnClubT3SteelClubParts" count="1"/>
@@ -1391,21 +1331,7 @@
 	</recipe>
 	<recipe name="SledgehammerRepairKit" count="1">
 		<ingredient name="meleeWpnSledgeT3SteelSledgehammerParts" count="1"/>
-		<ingredient name="resourceForgedIron" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceMechanicalParts" count="2"/>
-		<ingredient name="resourceOil" count="2"/>
-	</recipe>
-	<recipe name="SledgehammerRepairKit" count="1">
-		<ingredient name="meleeWpnSledgeT3SteelSledgehammerParts" count="1"/>
 		<ingredient name="resourceRepairKit" count="1"/>
-	</recipe>
-	<recipe name="MacheteRepairKit" count="1">
-		<ingredient name="meleeWpnBladeT3MacheteParts" count="1"/>
-		<ingredient name="resourceForgedIron" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceMechanicalParts" count="2"/>
-		<ingredient name="resourceOil" count="2"/>
 	</recipe>
 	<recipe name="MacheteRepairKit" count="1">
 		<ingredient name="meleeWpnBladeT3MacheteParts" count="1"/>
@@ -1413,21 +1339,7 @@
 	</recipe>
 	<recipe name="SpearRepairKit" count="1">
 		<ingredient name="meleeWpnSpearT3SteelSpearParts" count="1"/>
-		<ingredient name="resourceForgedIron" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceMechanicalParts" count="2"/>
-		<ingredient name="resourceOil" count="2"/>
-	</recipe>
-	<recipe name="SpearRepairKit" count="1">
-		<ingredient name="meleeWpnSpearT3SteelSpearParts" count="1"/>
 		<ingredient name="resourceRepairKit" count="1"/>
-	</recipe>
-	<recipe name="RocketLauncherRepairKit" count="1">
-		<ingredient name="gunExplosivesT3RocketLauncherParts" count="1"/>
-		<ingredient name="resourceForgedIron" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceMechanicalParts" count="2"/>
-		<ingredient name="resourceOil" count="2"/>
 	</recipe>
 	<recipe name="RocketLauncherRepairKit" count="1">
 		<ingredient name="gunExplosivesT3RocketLauncherParts" count="1"/>
@@ -1435,21 +1347,7 @@
 	</recipe>
 	<recipe name="SteelToolRepairKit" count="1">
 		<ingredient name="meleeToolAllSteelParts" count="1"/>
-		<ingredient name="resourceForgedIron" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceMechanicalParts" count="2"/>
-		<ingredient name="resourceOil" count="2"/>
-	</recipe>
-	<recipe name="SteelToolRepairKit" count="1">
-		<ingredient name="meleeToolAllSteelParts" count="1"/>
 		<ingredient name="resourceRepairKit" count="1"/>
-	</recipe>
-	<recipe name="MotorToolRepairKit" count="1">
-		<ingredient name="meleeToolAxeT3ChainsawParts" count="1"/>
-		<ingredient name="resourceForgedIron" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceMechanicalParts" count="2"/>
-		<ingredient name="resourceOil" count="2"/>
 	</recipe>
 	<recipe name="MotorToolRepairKit" count="1">
 		<ingredient name="meleeToolAxeT3ChainsawParts" count="1"/>
@@ -1457,21 +1355,7 @@
 	</recipe>
 	<recipe name="MilitaryArmourRepairKit" count="1">
 		<ingredient name="armorMilitarySetParts" count="1"/>
-		<ingredient name="resourceForgedIron" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceMechanicalParts" count="2"/>
-		<ingredient name="resourceOil" count="2"/>
-	</recipe>
-	<recipe name="MilitaryArmourRepairKit" count="1">
-		<ingredient name="armorMilitarySetParts" count="1"/>
 		<ingredient name="resourceRepairKit" count="1"/>
-	</recipe>
-	<recipe name="SteelArmourRepairKit" count="1">
-		<ingredient name="armorSteelSetParts" count="1"/>
-		<ingredient name="resourceForgedIron" count="2"/>
-		<ingredient name="resourceDuctTape" count="2"/>
-		<ingredient name="resourceMechanicalParts" count="2"/>
-		<ingredient name="resourceOil" count="2"/>
 	</recipe>
 	<recipe name="SteelArmourRepairKit" count="1">
 		<ingredient name="armorSteelSetParts" count="1"/>
@@ -1510,7 +1394,10 @@
 			<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="foodCanCatfood"/>
 		</effect_group>
 	</recipe>
-	</append>	
+	</append>
+
+	<!-- *** replace uncooked cans with cooked cans in recipes *** -->
+	<append xpath="//recipe[not (contains(@name,'cooked'))]//ingredient[starts-with (@name,'foodCan') and not (contains(@name,'Catfood')) and not (contains(@name,'Dogfood'))]/@name">cooked</append>
 	
 	<!-- <set xpath="//recipe[starts-with(@name,'food') or (starts-with(@name,'drink'))]/@craft_area">campfire,playerOvenModern</set> -->
 	<!-- *** adds eggs to paint recipe (disabled as it makes dye unscrappable?) *** -->

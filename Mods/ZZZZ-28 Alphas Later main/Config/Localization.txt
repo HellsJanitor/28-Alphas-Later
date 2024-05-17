@@ -168,7 +168,7 @@ BarteringSauceThreeDesc,"This will make you a Mercenary.\n\nPermanently gain acc
 BarteringSauceTwo,"Plunderer's Sauce"
 BarteringSauceTwoDesc,"This will make you a Plunderer.\n\nPermanently gain access to even better trader items and get 10% more dukes.\n\nGet a 10% better deal when buying & selling."
 bedPlayer,King-size bed
-bedGroupDesc,Placing a bed on the ground will allow you to respawn there when you die. Placing a new bed or picking up the last placed bed will permanently clear all previous respawn points. The bed shows on your map and compass and prevents zombie spawning near it.\n\nReceive a [008000 ]Well Rested[-] buff by standing on it while [ff4500 ]inside[-] and next to a [ff4500 ]campfire[-]. The king-size bed also heals you over time.
+bedGroupDesc,Placing a bed on the ground will allow you to respawn there when you die. Placing a new bed or picking up the last placed bed will permanently clear all previous respawn points. The bed shows on your map and compass and prevents zombie spawning near it.\n\nReceive a [008000]Well Rested[-] buff by standing on it while [ff4500]inside[-] and next to a [ff4500]campfire[-]. The king-size bed also heals you over time.
 BowRepairKit,Bow Repair Kit
 BowRepairKitDesc,This Repair Kit is used to repair bows and crossbows.
 bucketRiverWaterDesc,Water can be dumped into an enclosed structure or hole in the ground to store it.\n\nIt is also an essential ingerdient in concrete mix.
@@ -242,6 +242,8 @@ buffDysenteryCureDisplayName,Dysentery Medicine
 buffImmobilizedDesc,"If you attempt to pick up any vehicle other than a bicycle, you will be unable to move until you put it down."
 buffImmobilizedName,Immobilization
 buffImmobilizedTooltip,"This vehicle is far too heavy. Put it down!!"
+buffInCombatName,"You are in combat!"
+buffInCombatDesc,"What did you think Jonah, that you could heal yourself on a bed while fighting for your life?\n\nPassive healing from your bed is paused while you're in combat"
 buffPerkSurvivalInstinctDesc,"You are using your instincts of survival!"
 buffPoisonedDesc,"You're envenomed. Your attributes are lowered by one, and you are slowly taking damage.\n\nYou'll want some antivenom, and fast."
 buffPoisonedName,Envenomed!
