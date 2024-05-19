@@ -172,6 +172,8 @@ bedGroupDesc,Placing a bed on the ground will allow you to respawn there when yo
 BowRepairKit,Bow Repair Kit
 BowRepairKitDesc,This Repair Kit is used to repair bows and crossbows.
 bucketRiverWaterDesc,Water can be dumped into an enclosed structure or hole in the ground to store it.\n\nIt is also an essential ingerdient in concrete mix.
+buffBedHealHealthName,Healing
+buffBedHealHealthDesc,"You are healing at 0.5 health per second while this buff is active.\n\nEntering combat or moving from the bed will remove this effect."
 buffDespairCureDisplayName,Treated Despair
 buffDespairCureDisplayDesc,You are feeling optimistic about your chances of surviving.
 buffDespair01UntreatedName,Despair
