@@ -194,6 +194,10 @@ buffDespairCureDisplayPositive02Name,Enthusiastic
 buffDespairCureDisplayPositive02Desc,"You feel enthusiastic and cheerful.\n\nYou have:\n10% decreased stamina loss.\n10% decreased health loss from damage taken.\n15% critical hit resistance."
 buffDespairCureDisplayPositive03Name,Confident
 buffDespairCureDisplayPositive03Desc,"You are brimming with confidence and energy.\n\nYou have:\n15% decreased stamina loss.\n15% decreased health loss from damage taken.\n20% critical hit resistance."
+buffLithiumBlockerName,"Lithium"
+buffStJohnsWortBlockerName,"St. John's Wort"
+buffLithiumBlockerTooltip,"The treatment from Lithium and St. John's Wort must expire before the drug can be taken again."
+buffLithiumBlockerDesc,"Lithim and St. John's Wort are not candy!\n\nIt makes you thirsty, and you'll need to wait until the medication wears off before you can use it again."
 buffResurrectName,Double Tap!
 buffResurrectDesc,"You might wanna double check that these guys are actually dead ...\n\nDuring horde night, [FFC800]most[-] zombies have a 10% chance to respawn. Kill them with [CC5500]fire[-] damage or [CC5500]explosives[-] to ensure they stay dead."
 buffCampfireAOEEffectDesc,"You are warmed by the fire.\n\nCold Resist +15\n\nThis warming effect, combined with shelter and light, can slowly reduce your despair."
@@ -201,9 +205,9 @@ buffGoodCompanyFromTraderName,Good Company
 buffGoodCompanyFromTraderDesc,Your spirits are raised by being in good company.
 statCureDespair,Treat Despair
 drugLithium,Lithium
-drugLithiumDesc,Lithium is the most effective treatment for despair.
+drugLithiumDesc,"Lithium is the most effective treatment for despair, however, it has it's downside.\n\nEach time you use this drug, you develop a tolerance to it, reducing its efficacy over time.\n\n25% [CC5500]MAXIMUM[-] cure. At max tolerance, reduced to 15%"
 drugStJohnsWort,St. John's Wort
-drugStJohnsWortDesc,"St. John's wort is a herbal treatment, and is effective at treating despair."
+drugStJohnsWortDesc,"St. John's wort is a herbal treatment, and is effective at treating despair, however ...\n\nEach time you use this drug, your resistance to it's effects increases, reducing its efficacy over time.\n\n10% [CC5500]MAXIMUM[-] cure. At max tolerance, reduced to 5%"
 DespairTip,"You are overwhelmed by how hopeless the situation appears. You can combat this by staying in a well-lit area, staying warm, and staying dry.\n\nProlonged periods of being wet, in darkness, or cold temperatures will increase the rate at which your despair grows. Injuries sustained, along with hunger and thirst also have an adverse effect, as does being in close proximity to zombies.\n\nThere is medication available to reduce your symptoms, and consuming certain food or drink may help too.\n\nTreatment from consumables:\n\nCooked Canned Food: [FFC800]0.1%[-]\nBoiled egg & Charred meat: [FFC800]0.20%[-]\nTier 1 food: [FFC800]0.25%[-]\nGoldenrod & Red tea: [FFC800]0.5%[-]\nBacon & Eggs and Coffee: [FFC800]1%[-]\nTier 2 food, Blackstrap coffee,smoothies, mineral water & beer: [FFC800]2%[-]\nTier 3 food: [FFC800]3%[-]\nTier 4 food: [FFC800]5%[-]"
 DespairTip_title,Despair
 buffArrowBleedDesc,Your arrows & crossbow bolts have a 25% chance to make [FFC800]living[-] things bleed - when they hit that is...

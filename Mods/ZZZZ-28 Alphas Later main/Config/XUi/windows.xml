@@ -28,7 +28,7 @@
 	</set>	
 	
 	<append xpath="/windows">	
-	<!-- *** adds wrench, hammer, ratchet, impact driver, nailgun and knife as workbench tools *** -->
+	<!-- *** adds workbench tools *** -->
 	<window name="windowToolsWorkbench" width="228" height="121" panel="Right" cursor_area="true" >
 	<!--#$-IGS END.-$#-->
 		<panel style="header.panel">

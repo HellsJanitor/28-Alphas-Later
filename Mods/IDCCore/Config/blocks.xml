@@ -13,7 +13,7 @@
 				<property name="NoTraderIconsNight" value="true"/>
 			</property>
 			<property class="ScreamerOptions">
-				<property name="MultiScreamerEnabled" value="false"/>
+				<property name="MultiScreamerEnabled" value="true"/>
 				<property name="MultiScreamerChance" value="0.5"/>
 				<property name="MultiScreamerBounds" value="2,4"/>
 			</property>

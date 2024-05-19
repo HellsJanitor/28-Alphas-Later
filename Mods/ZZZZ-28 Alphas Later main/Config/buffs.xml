@@ -369,6 +369,9 @@
 				<triggered_effect trigger="onSelfBuffStart" target="self" action="ModifyCVar" cvar="lithiumrescount" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfBuffStart" target="self" action="ModifyCVar" cvar="wortrescount" operation="set" value="0"/>
 			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfPlaceBlock" target="self" action="ModifyCVar" cvar="testingcvar" operation="add" value="1"/>
+			</effect_group>
 		</buff>
 		
 		<!-- *** dummy buff to determine if player is in combat or not *** -->
@@ -1794,14 +1797,23 @@
 		</buff>
 	
 		<!-- *** despair meds blocking buff *** -->
-		<buff name="buffLithiumBlocker" hidden="true">
+		<buff name="buffLithiumBlocker" tooltip_key="buffLithiumBlockerTooltip" name_key="buffLithiumBlockerName" description_key="buffLithiumBlockerDesc" showonhud="true" icon_color="219,112,147" icon="ui_game_symbol_pills" icon_blink="true">
 			<stack_type value="ignore"/>
 			<duration value="1500"/>
 			<update_rate value="1"/>
+			<display_value_key value="{0:0.0}"/>
+			<display_value_format value="time"/>
+			<display_value value="lithiumblocker"/>
 		
 			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="lithiumblocker" operation="set" value="1500"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffLithiumResistance"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="lithiumblocker" operation="subtract" value="1"/>
 				<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffLithiumBlocker"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="lithiumblocker" operation="set" value="0"/>
+			</effect_group>
+			<effect_group>
+				<passive_effect name="WaterChangeOT" operation="base_subtract" value=".05"/>
 			</effect_group>
 		</buff>
 		
@@ -1817,14 +1829,23 @@
 			</effect_group>
 		</buff>
 		
-		<buff name="buffStJohnsWortBlocker" hidden="true">
+		<buff name="buffStJohnsWortBlocker" tooltip_key="buffLithiumBlockerTooltip" name_key="buffStJohnsWortBlockerName" description_key="buffLithiumBlockerDesc" showonhud="true" icon_color="255,196,12" icon="ui_game_symbol_pills" icon_blink="true">
 			<stack_type value="ignore"/>
 			<duration value="600"/>
 			<update_rate value="1"/>
+			<display_value_key value="{0:0.0}"/>
+			<display_value_format value="time"/>
+			<display_value value="stjohnswortblocker"/>
 		
 			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="stjohnswortblocker" operation="set" value="600"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffStJohnsWortResistance"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="stjohnswortblocker" operation="subtract" value="1"/>
 				<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffStJohnsWortBlocker"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="stjohnswortblocker" operation="set" value="0"/>
+			</effect_group>
+			<effect_group>
+				<passive_effect name="WaterChangeOT" operation="base_subtract" value=".05"/>
 			</effect_group>
 		</buff>
 		

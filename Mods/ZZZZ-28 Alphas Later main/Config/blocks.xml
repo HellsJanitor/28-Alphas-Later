@@ -675,6 +675,7 @@
 	
 	<append xpath="//block[starts-with(@name,'planted') and contains(@name,'HarvestPlayer')]">
 		<property name="Class" value="CropsGrown"/>
+		<property name="Tags" value="cropTrample"/>
 	</append>
 	
 	<insertafter xpath="//block[starts-with(@name,'planted') and not (contains(@name,'HarvestPlayer'))]//property[1]">
