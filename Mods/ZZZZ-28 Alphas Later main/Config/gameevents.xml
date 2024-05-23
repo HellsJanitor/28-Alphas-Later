@@ -81,9 +81,9 @@
 			<property name="fade_time" value="10" />
 		</action>
 
-		<action class="SpawnEntity">
+		<action class="SpawnEntity">			
 			<property name="entity_group" value="SleeperGSList" />
-			<property name="spawn_count" value="5"  />
+			<property name="spawn_count" value="5" />
 			<property name="air_spawn" value="false" />
 			<property name="add_to_group" value="zombies" />
 			<property name="safe_spawn" value="true" />

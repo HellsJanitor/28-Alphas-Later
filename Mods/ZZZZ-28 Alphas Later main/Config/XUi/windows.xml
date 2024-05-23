@@ -27,6 +27,10 @@
 	</grid>
 	</set>	
 	
+	<!-- <set xpath="//window[@name='windowResponses']/@height">400</set> -->
+	<!-- <setattribute xpath="//window[@name='windowQuestList']" name="pos">9999,0</setattribute> -->
+	<!-- <set xpath="//window[@name='windowQuestList']/rect[@name='content']/@pos">9999,0</set> -->
+	
 	<append xpath="/windows">	
 	<!-- *** adds workbench tools *** -->
 	<window name="windowToolsWorkbench" width="228" height="121" panel="Right" cursor_area="true" >

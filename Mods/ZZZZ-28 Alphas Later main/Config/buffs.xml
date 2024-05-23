@@ -958,7 +958,7 @@
 					<requirement name="CVarCompare" cvar="$DespairMaxDuration" operation="Equals" value="0"/>
 				</triggered_effect>
 			
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="DespairCounterModifier" operation="set" value="1.25"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="DespairCounterModifier" operation="set" value="1.5"/>
 
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$DespairStage2Duration" operation="set" value="30"/><!-- % of the full buff duration -->
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$DespairStage3Duration" operation="set" value="65"/><!-- % of the full buff duration -->
@@ -1038,7 +1038,7 @@
 		
 			<!-- Indoors, daytime -->
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounterModifier" operation="set" value=".75"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounterModifier" operation="set" value="1"/>
 				<requirement name="IsIndoors"/>
 				<requirement name="IsDay"/>
 			</effect_group>
@@ -1275,7 +1275,7 @@
 			</effect_group>
 			<!-- killing enemies -->
 			<effect_group>
-				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="DespairCounter" operation="add" value="-15"/>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="DespairCounter" operation="add" value="-5"/>
 			</effect_group>
 			<!-- reduces tick rate if player has drone morale booster buff -->
 			<effect_group>
