@@ -3,6 +3,15 @@
     <ServerGroup Name="28 Alphas Later" Logo="https://media.discordapp.net/attachments/1155647724478275614/1180961617417085000/background.png" Description="Will you survive?">
         <Server Name="28 Alphas Later" Logo="https://media.discordapp.net/attachments/1155647724478275614/1180961617417085000/background.png">
             <Description>### 28 Alphas Later ###
+
+30/05/24 1.4.2
+All brick shapes now give a few bricks when harvested
+Mutated zombies now give correct XP on kill
+Fixed corpse run/rad protection buff not applying on player death
+Exploding arrows/bolts now craft in batches of 5 but still only require one duct tape
+Mutated zombies will now appear earlier in Blood Moons
+lowered volume for 4x4 horn and tablesaw
+added food smell - carrying too much food will alert and enrage nearby zombies
 			
 Update v 1.4.1
 The kingsize bed will no longer heal the player if they're in combat

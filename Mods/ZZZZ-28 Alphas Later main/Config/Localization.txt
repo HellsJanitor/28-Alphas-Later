@@ -470,8 +470,6 @@ perkUrbanCombatCigarLongDesc,"Unlocks crafting for the brass catcher mod.\n\nRet
 perkWasteTreasuresAcidDesc,Adds a chance to harvest acid from cars and medical equipment. Unlocks acid crafting.
 perkWasteTreasuresAcidLongDesc,"Acid: Acid is an extremely rare and powerful crafting agent. I figured out this tip to sometimes harvest a little from cars and medical equipment. Adds a chance to harvest acid from cars, medical equipment and acid barrels. You can extract acid from car batteries in your Workbench, and you can craft it in the Chemistry Station."
 perkWellInsulatedRank3LongDesc,You can now handle severe weather and typically couldn't care less what the weather conditions are. You will never have the more severe stages of temperature status effects.\n\n[FFC800]Immune to slow effects from frozen zombie attacks.[-]
-reqSurvivalInstinctLevel00,"You have points in Survival Instinct. You cannot now use points in Charismatic Nature"
-reqCharismaticNatureLevel00,"You have points in Charismatic Nature. You cannot now use points in Survival Instinct"
 toolAmmoPress,Ammunition Press
 toolAmmoPressDesc,This tool is required to assemble and dismantle firearm rounds at a workbench.
 playerTableSaw,Tablesaw
@@ -564,6 +562,7 @@ toolBellowsDesc,A tool that can be installed in a forge. It increases air flow a
 ttItemNeedsRepair,"This item is knackered and needs fixing"
 ttRepairBeforePickup,"It's knackered and needs repairing before picking it up."
 venomDesc,"Key ingredient for antivenom."
+woodLogPillar100Desc,Wood logs are good for crude walls or palisades or as fuel for campfires.\n\nPlace them as a block and chop them with an axe for wood planks.
 XuiCollectorModifiers,MODIFIERS
 xuiFilter,"Filter"
 xuiBucket,"Bucket"

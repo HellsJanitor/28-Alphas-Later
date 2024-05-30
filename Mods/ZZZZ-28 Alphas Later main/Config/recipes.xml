@@ -17,7 +17,7 @@
 	<remove xpath="//recipe[@name='apparelCigar']"/>
 	
 	<!-- *** remove vanilla hobo stew recipe *** -->
-	<remove xpath="//recipe[@name='foodHoboStew']"/>
+	<!-- <remove xpath="//recipe[@name='foodHoboStew']"/> -->
 	
 	<!-- *** Urban Combat Volume 2 unlocks *** -->
 	<append xpath="/recipes">
@@ -895,6 +895,37 @@
 	<set xpath="//recipe[@name='ammoBundleArrowIron']//ingredient[@name='resourceWood']/@name">resourceBranch</set>
 	<set xpath="//recipe[@name='ammoCrossbowBoltIron']//ingredient[@name='resourceWood']/@name">resourceBranch</set>
 	<set xpath="//recipe[@name='ammoBundleCrossbowBoltIron']//ingredient[@name='resourceWood']/@name">resourceBranch</set>	
+	
+	<!-- *** exploding arrows/bolts crafted in 5's (reduces tape required) *** -->
+	<set xpath="//recipe[@name='ammoArrowExploding']/@count">5</set>
+	<set xpath="//recipe[@name='ammoArrowExploding']">
+	<ingredient name="resourceArrowHeadSteelAP" count="5"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceGunPowder" count="30"/>
+	<ingredient name="resourceDuctTape" count="1"/>
+	</set>
+	
+	<set xpath="//recipe[@name='ammoBundleArrowExploding']">
+	<ingredient name="resourceArrowHeadSteelAP" count="60"/>
+	<ingredient name="resourceScrapPolymers" count="120"/>
+	<ingredient name="resourceGunPowder" count="360"/>
+	<ingredient name="resourceDuctTape" count="12"/>
+	</set>
+	
+	<set xpath="//recipe[@name='ammoCrossbowBoltExploding']/@count">5</set>
+	<set xpath="//recipe[@name='ammoCrossbowBoltExploding']">
+	<ingredient name="resourceArrowHeadSteelAP" count="5"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceGunPowder" count="40"/>
+	<ingredient name="resourceDuctTape" count="1"/>
+	</set>
+	
+	<set xpath="//recipe[@name='ammoBundleCrossbowBoltExploding']">
+	<ingredient name="resourceArrowHeadSteelAP" count="60"/>
+	<ingredient name="resourceScrapPolymers" count="120"/>
+	<ingredient name="resourceGunPowder" count="480"/>
+	<ingredient name="resourceDuctTape" count="12"/>
+	</set>
 		
 	<!-- *** new wood arrow/bolt. No feathers, no stone, low damage, always breaks *** -->
 	<append xpath="/recipes">
@@ -1460,8 +1491,9 @@
 	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='9']/@count">11</set>
 	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='8']/@count">10</set>
 	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='7']/@count">9</set>
-	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='6']/@count">8</set>
+	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='6']/@count">8</set>	
 	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='5']/@count">6</set>
+	<set xpath="//recipe[contains(@name,'Exploding')]/ingredient[@count='6']/@count">5</set>
 	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='4']/@count">5</set>
 	<set xpath="//recipe[not (contains(@name,'Bundle'))]/ingredient[@count='3']/@count">4</set>
 	<!-- <set xpath="//recipe[@name='resourceBricks']/ingredient/@count">3</set> -->
@@ -1591,7 +1623,7 @@
 	<ingredient name="resourceCrushedSand" count="250"/>
 	<ingredient name="resourceRockSmall" count="250"/>			
 	<ingredient name="resourceCement" count="250"/>
-	<ingredient name="resourceFeldspar" count="25"/>
+	<ingredient name="resourceFeldspar" count="250"/>
 	<ingredient name="bucketRiverWater" count="1"/>
 	</set>	
 </configs>

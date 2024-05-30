@@ -1181,8 +1181,12 @@
 	<set xpath="/blocks/block[@name='bricksStack']//drop[1]/@count">5,15</set>
 	<set xpath="/blocks/block[@name='rubblePileBricks']//drop[2]/@name">resourceBricks</set>
 	<set xpath="/blocks/block[@name='rubblePileBricks']//drop[2]/@count">1,3</set>
-	<set xpath="/blocks/block[@name='brickNoUpgradeMaster']//drop[1]/@name">resourceBricks</set>
-	<set xpath="/blocks/block[@name='brickNoUpgradeMaster']//drop[1]/@count">1,3</set>
+	<insertafter xpath="/blocks/block[@name='brickNoUpgradeMaster']//drop[@event='Harvest']">
+	<drop event="Harvest" name="resourceBricks" count="1,3" tag="allHarvest"/>
+	</insertafter>
+	<insertafter xpath="/blocks/block[@name='brickShapes']//drop[@event='Harvest']">
+	<drop event="Harvest" name="resourceBricks" count="1,3" tag="allHarvest"/>
+	</insertafter>
 	
 	<!-- *** wild crops can be picked up *** -->
 	<append xpath="//block[@name='mushroom01']">

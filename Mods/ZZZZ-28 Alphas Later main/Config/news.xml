@@ -1,0 +1,15 @@
+<news>
+<entry>
+        <date>2024-05-30 22:00:00Z</date><!-- year/month/day time GMT -->
+        <title>Latest Updates</title>
+            <text>	• All brick shapes now give a few bricks when harvested
+					• Mutated zombies now give correct XP on kill
+					• Fixed corpse run/rad protection buff not applying on player death
+					• Exploding arrows/bolts now craft in batches of 5 but still only require one duct tape
+					• Mutated zombies will now appear earlier in Blood Moons
+					• Lowered volume for 4x4 horn and tablesaw
+					• Added food smell. Carrying too much food will alert and enrage nearby zombies.
+            </text>
+        <link>https://community.7daystodie.com/topic/34695-28-alphas-later/</link>
+    </entry>
+</news>

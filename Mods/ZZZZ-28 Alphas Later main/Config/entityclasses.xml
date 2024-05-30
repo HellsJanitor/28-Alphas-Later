@@ -2781,7 +2781,7 @@
 			<property name="MoveSpeedAggro" value="0.6, 1.45"/><!-- fit, feral -->
 			<property name="JumpMaxDistance" value="4.6, 5"/>
 			<property name="HandItem" value="meleeHandZombieFeral"/>
-			<property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+			<property name="ExperienceGain" value="1750"/><!-- XP grunt feral -->
 			<property name="LootDropProb" value=".03"/><!-- Feral -->
 
 			<effect_group name="Base Effects">
@@ -2825,7 +2825,7 @@
 			<property name="MoveSpeedAggro" value="0.6, 1.45"/><!-- fit, feral -->
 			<property name="JumpMaxDistance" value="4.6, 5"/>
 			<property name="HandItem" value="meleeHandZombieFeral"/>
-			<property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+			<property name="ExperienceGain" value="1750"/><!-- XP grunt feral -->
 			<property name="LootDropProb" value=".03"/><!-- Feral -->
 
 			<effect_group name="Base Effects">
@@ -2861,7 +2861,7 @@
 			<property name="MoveSpeedAggro" value="0.2, 1.2"/> <!-- strong, regular -->
 			<property name="JumpMaxDistance" value=".8, 1.1"/>
 			<property name="HandItem" value="meleeHandZombieStrong"/>
-			<property name="ExperienceGain" value="750"/><!-- XP strong -->
+			<property name="ExperienceGain" value="1750"/><!-- XP strong -->
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 
 			<effect_group name="Base Effects">
@@ -2905,7 +2905,7 @@
 			<property name="MoveSpeedAggro" value="0.6, 1.45"/><!-- fit, feral -->
 			<property name="JumpMaxDistance" value="4.6, 5"/>
 			<property name="HandItem" value="meleeHandZombieFeral"/>
-			<property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+			<property name="ExperienceGain" value="1750"/><!-- XP grunt feral -->
 			<property name="LootDropProb" value=".03"/><!-- Feral -->
 
 			<effect_group name="Base Effects">
@@ -2949,7 +2949,7 @@
 			<property name="MoveSpeedAggro" value="0.6, 1.45"/><!-- fit, feral -->
 			<property name="JumpMaxDistance" value="4.6, 5"/>
 			<property name="HandItem" value="meleeHandZombieFeral"/>
-			<property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+			<property name="ExperienceGain" value="1750"/><!-- XP grunt feral -->
 			<property name="LootDropProb" value=".03"/><!-- Feral -->
 
 			<effect_group name="Base Effects">
@@ -2985,7 +2985,7 @@
 			<property name="MoveSpeedAggro" value="0.2, 1.2"/> <!-- strong, regular -->
 			<property name="JumpMaxDistance" value=".8, 1.1"/>
 			<property name="HandItem" value="meleeHandZombieStrong"/>
-			<property name="ExperienceGain" value="750"/><!-- XP strong -->
+			<property name="ExperienceGain" value="1750"/><!-- XP strong -->
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 
 			<effect_group name="Base Effects">
@@ -3029,7 +3029,7 @@
 			<property name="MoveSpeedAggro" value="0.6, 1.45"/><!-- fit, feral -->
 			<property name="JumpMaxDistance" value="4.6, 5"/>
 			<property name="HandItem" value="meleeHandZombieFeral"/>
-			<property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+			<property name="ExperienceGain" value="1750"/><!-- XP grunt feral -->
 			<property name="LootDropProb" value=".03"/><!-- Feral -->
 
 			<effect_group name="Base Effects">
@@ -3073,7 +3073,7 @@
 			<property name="MoveSpeedAggro" value="0.6, 1.45"/><!-- fit, feral -->
 			<property name="JumpMaxDistance" value="4.6, 5"/>
 			<property name="HandItem" value="meleeHandZombieFeral"/>
-			<property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+			<property name="ExperienceGain" value="1750"/><!-- XP grunt feral -->
 			<property name="LootDropProb" value=".03"/><!-- Feral -->
 
 			<effect_group name="Base Effects">
@@ -3117,7 +3117,7 @@
 			<property name="MoveSpeedAggro" value="0.6, 1.45"/><!-- fit, feral -->
 			<property name="JumpMaxDistance" value="4.6, 5"/>
 			<property name="HandItem" value="meleeHandZombieFeral"/>
-			<property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+			<property name="ExperienceGain" value="1750"/><!-- XP grunt feral -->
 			<property name="LootDropProb" value=".03"/><!-- Feral -->
 
 			<effect_group name="Base Effects">
@@ -3161,7 +3161,7 @@
 			<property name="MoveSpeedAggro" value="0.6, 1.45"/><!-- fit, feral -->
 			<property name="JumpMaxDistance" value="4.6, 5"/>
 			<property name="HandItem" value="meleeHandZombieFeral"/>
-			<property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+			<property name="ExperienceGain" value="1750"/><!-- XP grunt feral -->
 			<property name="LootDropProb" value=".03"/><!-- Feral -->
 
 			<effect_group name="Base Effects">
@@ -3205,7 +3205,7 @@
 			<property name="MoveSpeedAggro" value="0.6, 1.45"/><!-- fit, feral -->
 			<property name="JumpMaxDistance" value="4.6, 5"/>
 			<property name="HandItem" value="meleeHandZombieMutantLongArms"/>
-			<property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+			<property name="ExperienceGain" value="1750"/><!-- XP grunt feral -->
 			<property name="LootDropProb" value=".03"/><!-- Feral -->
 
 			<effect_group name="Base Effects">
@@ -3249,7 +3249,7 @@
 			<property name="MoveSpeedAggro" value="0.6, 1.45"/><!-- fit, feral -->
 			<property name="JumpMaxDistance" value="4.6, 5"/>
 			<property name="HandItem" value="meleeHandZombieMutantLongArms"/>
-			<property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+			<property name="ExperienceGain" value="1750"/><!-- XP grunt feral -->
 			<property name="LootDropProb" value=".03"/><!-- Feral -->
 
 			<effect_group name="Base Effects">
@@ -3293,7 +3293,7 @@
 			<property name="MoveSpeedAggro" value="0.6, 1.45"/><!-- fit, feral -->
 			<property name="JumpMaxDistance" value="4.6, 5"/>
 			<property name="HandItem" value="meleeHandZombieFeral"/>
-			<property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+			<property name="ExperienceGain" value="1750"/><!-- XP grunt feral -->
 			<property name="LootDropProb" value=".03"/><!-- Feral -->
 
 			<effect_group name="Base Effects">
@@ -3337,7 +3337,7 @@
 			<property name="MoveSpeedAggro" value="0.6, 1.45"/><!-- fit, feral -->
 			<property name="JumpMaxDistance" value="4.6, 5"/>
 			<property name="HandItem" value="meleeHandZombieFeral"/>
-			<property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+			<property name="ExperienceGain" value="1750"/><!-- XP grunt feral -->
 			<property name="LootDropProb" value=".03"/><!-- Feral -->
 
 			<effect_group name="Base Effects">
@@ -3381,7 +3381,7 @@
 			<property name="MoveSpeedAggro" value="0.6, 1.45"/><!-- fit, feral -->
 			<property name="JumpMaxDistance" value="4.6, 5"/>
 			<property name="HandItem" value="meleeHandZombieFeral"/>
-			<property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+			<property name="ExperienceGain" value="1750"/><!-- XP grunt feral -->
 			<property name="LootDropProb" value=".03"/><!-- Feral -->
 
 			<effect_group name="Base Effects">
@@ -3425,7 +3425,7 @@
 			<property name="MoveSpeedAggro" value="0.6, 1.45"/><!-- fit, feral -->
 			<property name="JumpMaxDistance" value="4.6, 5"/>
 			<property name="HandItem" value="meleeHandZombieFeral"/>
-			<property name="ExperienceGain" value="750"/><!-- XP grunt feral -->
+			<property name="ExperienceGain" value="1750"/><!-- XP grunt feral -->
 			<property name="LootDropProb" value=".03"/><!-- Feral -->
 
 			<effect_group name="Base Effects">

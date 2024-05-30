@@ -48870,7 +48870,7 @@
 		zombieBunkerBuster, 2
 	</csv>
 	
-	<csv xpath="/entitygroups/entitygroup[substring-after(@name, 'feralHordeStageGS') &gt; 149]/text()" delim="\n" op="add" >
+	<csv xpath="/entitygroups/entitygroup[substring-after(@name, 'feralHordeStageGS') &gt; 99]/text()" delim="\n" op="add" >
 		hellsZombieHumanExperiment
 		hellsZombieHungryMutant
 		hellsZombieParasite
@@ -48889,7 +48889,7 @@
 		hellsZombieWendigo2
 	</csv>	
 
-	<csv xpath="/entitygroups/entitygroup[substring-after(@name, 'sleeperHordeStageGS') &gt; 199]/text()" delim="\n" op="add" >
+	<csv xpath="/entitygroups/entitygroup[substring-after(@name, 'sleeperHordeStageGS') &gt; 99]/text()" delim="\n" op="add" >
 		hellsZombieHumanExperiment
 		hellsZombieHungryMutant
 		hellsZombieParasite
@@ -48908,7 +48908,7 @@
 		hellsZombieWendigo2
 	</csv>	
 	
-	<csv xpath="/entitygroups/entitygroup[substring-after(@name, 'scoutHordeStageGS') &gt; 199]/text()" delim="\n" op="add" >
+	<csv xpath="/entitygroups/entitygroup[substring-after(@name, 'scoutHordeStageGS') &gt; 99]/text()" delim="\n" op="add" >
 		hellsZombieHumanExperiment
 		hellsZombieHungryMutant
 		hellsZombieParasite
@@ -48927,7 +48927,7 @@
 		hellsZombieWendigo2
 	</csv>	
 	
-	<csv xpath="/entitygroups/entitygroup[substring-after(@name, 'defenseHordeStageGS') &gt; 349]/text()" delim="\n" op="add" >
+	<csv xpath="/entitygroups/entitygroup[substring-after(@name, 'defenseHordeStageGS') &gt; 299]/text()" delim="\n" op="add" >
 		zombieArleneMutated 
 		zombieMarleneMutated 
 		zombiePartyGirlMutated 
@@ -48973,7 +48973,7 @@
 		hellsZombieWendigo2
 	</csv>	
 	
-	<csv xpath="/entitygroups/entitygroup[substring-after(@name, 'policeCarHordeStageGS') &gt; 149]/text()" delim="\n" op="add" >
+	<csv xpath="/entitygroups/entitygroup[substring-after(@name, 'policeCarHordeStageGS') &gt; 99]/text()" delim="\n" op="add" >
 		zombieArleneMutated 
 		zombieMarleneMutated 
 		zombiePartyGirlMutated 
