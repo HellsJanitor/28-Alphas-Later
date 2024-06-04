@@ -34,7 +34,8 @@
 				<requirement name="PlayerItemCount" item_name="foodScrambledEggs" operation="GTE" value="5"/>
 				<requirement name="PlayerItemCount" item_name="foodTrampStew" operation="GTE" value="5"/>
 				<requirement name="PlayerItemCount" item_name="foodVagabondStew" operation="GTE" value="5"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffSmell"/>
+				<!-- <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffSmell"/> -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="fresh_meat" allow_client_call="true"/>
 			</effect_group>
 		</buff>
 		
@@ -55,7 +56,7 @@
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="smell" operation="add" value="-1"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="fresh_meat" allow_client_call="true"/>
+				<!-- <triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="fresh_meat" allow_client_call="true"/> -->
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="smell" operation="set" value="15"/>

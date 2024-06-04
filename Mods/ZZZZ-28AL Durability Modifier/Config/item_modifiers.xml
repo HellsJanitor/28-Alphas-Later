@@ -41,7 +41,7 @@
 		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffWeaponLightDeactivate"/>
 		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffWeaponLightActivate"/>
 		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffWeaponLightActive"/>
-		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffWeaponLightActive"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffWeaponLightActive"/>		
 	</set>
 	
 	<set xpath="//item_modifier[@name='modGunFlashlight']//effect_group[@name='internal attachment prefab (A19)']">
@@ -51,7 +51,7 @@
 		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffWeaponLightDeactivate"/>
 		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffWeaponLightActivate"/>
 		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffWeaponLightActive"/>
-		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffWeaponLightActive"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffWeaponLightActive"/>		
 	</set>
 	
 	<!-- *** laser sight *** -->
@@ -62,7 +62,7 @@
 		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffLaserLightDeactivate"/>
 		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffLaserLightActivate"/>
 		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffLaserLightActive"/>
-		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffLaserLightActive"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffLaserLightActive"/>		
 	</set>
 	
 	<set xpath="//item_modifier[@name='modGunLaserSight']//effect_group[@name='internal attachment prefab (A19)']">
@@ -72,7 +72,7 @@
 		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffLaserLightDeactivate"/>
 		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffLaserLightActivate"/>
 		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffLaserLightActive"/>
-		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffLaserLightActive"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffLaserLightActive"/>		
 	</set>
 	
 	<set xpath="//item_modifier[@name='modGunLaserSight']//effect_group[@name='mod effects']">
@@ -91,7 +91,7 @@
 		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffBurningShaftActive"/>
 		<triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Flames"/>
 		<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="Flames"/>
-		<triggered_effect trigger="onSelfDied" action="RemovePart" part="Flames"/>
+		<triggered_effect trigger="onSelfDied" action="RemovePart" part="Flames"/>		
 	</set>
 	
 	<set xpath="//item_modifier[@name='modMeleeClubBurningShaft']//effect_group[@name='new Fire Proc']">

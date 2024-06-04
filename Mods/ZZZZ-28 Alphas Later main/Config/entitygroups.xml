@@ -48868,7 +48868,7 @@
 		
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name,'feralHordeStage')]/text()" delim="\n" op="add" >
 		zombieBunkerBuster, 2
-	</csv>
+	</csv>	 
 	
 	<csv xpath="/entitygroups/entitygroup[substring-after(@name, 'feralHordeStageGS') &gt; 99]/text()" delim="\n" op="add" >
 		hellsZombieHumanExperiment
@@ -48890,6 +48890,38 @@
 	</csv>	
 
 	<csv xpath="/entitygroups/entitygroup[substring-after(@name, 'sleeperHordeStageGS') &gt; 99]/text()" delim="\n" op="add" >
+		zombieArleneMutated 
+		zombieMarleneMutated 
+		zombiePartyGirlMutated 
+		zombieNurseMutated 
+		zombieJoeMutated
+		zombieSteveMutated
+		zombieTomClarkMutated
+		zombieBusinessManMutated 
+		zombieBurntMutated 
+		zombieSpiderMutated 
+		zombieBoeMutated 
+		zombieMaleHazmatMutated 
+		zombieJanitorMutated 
+		zombieMoeMutated
+		zombieLabMutated 
+		zombieDarleneMutated 
+		zombieYoMutated
+		zombieUtilityWorkerMutated 
+		zombieBikerMutated 
+		zombieFemaleFatMutated 
+		zombieFatHawaiianMutated
+		zombieFatCopMutated
+		zombieSkateboarderMutated
+		zombieSoldierMutated
+		zombieLumberjackMutated
+		zombieWightMutated
+		zombieMutatedMutated
+		zombieMutatedDemolition
+		zombieSteveCrawlerMutated		
+	</csv>	
+	
+	<csv xpath="/entitygroups/entitygroup[substring-after(@name, 'sleeperHordeStageGS') &gt; 149]/text()" delim="\n" op="add" >
 		hellsZombieHumanExperiment
 		hellsZombieHungryMutant
 		hellsZombieParasite
@@ -48906,9 +48938,41 @@
 		hellsZombieMutantReaper
 		hellsZombieWendigo1
 		hellsZombieWendigo2
-	</csv>	
+	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[substring-after(@name, 'scoutHordeStageGS') &gt; 99]/text()" delim="\n" op="add" >
+		zombieArleneMutated 
+		zombieMarleneMutated 
+		zombiePartyGirlMutated 
+		zombieNurseMutated 
+		zombieJoeMutated
+		zombieSteveMutated
+		zombieTomClarkMutated
+		zombieBusinessManMutated 
+		zombieBurntMutated 
+		zombieSpiderMutated 
+		zombieBoeMutated 
+		zombieMaleHazmatMutated 
+		zombieJanitorMutated 
+		zombieMoeMutated
+		zombieLabMutated 
+		zombieDarleneMutated 
+		zombieYoMutated
+		zombieUtilityWorkerMutated 
+		zombieBikerMutated 
+		zombieFemaleFatMutated 
+		zombieFatHawaiianMutated
+		zombieFatCopMutated
+		zombieSkateboarderMutated
+		zombieSoldierMutated
+		zombieLumberjackMutated
+		zombieWightMutated
+		zombieMutatedMutated
+		zombieMutatedDemolition
+		zombieSteveCrawlerMutated		
+	</csv>	
+	
+	<csv xpath="/entitygroups/entitygroup[substring-after(@name, 'scoutHordeStageGS') &gt; 149]/text()" delim="\n" op="add" >
 		hellsZombieHumanExperiment
 		hellsZombieHungryMutant
 		hellsZombieParasite

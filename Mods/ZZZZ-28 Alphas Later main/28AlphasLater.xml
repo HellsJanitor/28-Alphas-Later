@@ -3,6 +3,11 @@
     <ServerGroup Name="28 Alphas Later" Logo="https://media.discordapp.net/attachments/1155647724478275614/1180961617417085000/background.png" Description="Will you survive?">
         <Server Name="28 Alphas Later" Logo="https://media.discordapp.net/attachments/1155647724478275614/1180961617417085000/background.png">
             <Description>### 28 Alphas Later ###
+04/06/2024 1.4.2
+UI Tweaks
+Smell mechanic disabled in landclaimed areas
+Entity groups staging adjusted
+Change smoothie recipe from uncooked to cooked pears
 
 30/05/24 1.4.2
 All brick shapes now give a few bricks when harvested

@@ -1449,7 +1449,7 @@
 	
 	<!-- *** can of pears added to fruit smoothie *** -->
 	<insertAfter xpath="/recipes/recipe[@name='drinkYuccaJuiceSmoothie']//ingredient[1]">
-		<ingredient name="foodCanPears" count="1"/>
+		<ingredient name="foodCanPearscooked" count="1"/>
 	</insertAfter>
 	
 	<!-- *** animal fat added to bacon and egg recipe *** -->

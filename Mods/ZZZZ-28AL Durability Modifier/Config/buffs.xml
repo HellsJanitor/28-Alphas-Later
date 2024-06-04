@@ -25,7 +25,7 @@
 			</effect_group>
 		</buff>
 		
-		<buff name="buffHelmetPurifierActive" name_key="buffHelmetPurifierActive" description_key="buffHelmetPurifierActiveDesc" icon="ui_game_symbol_water" icon_color="0,255,255">
+		<buff name="buffHelmetPurifierActive" name_key="buffHelmetPurifierActive" description_key="buffHelmetPurifierActiveDesc" icon="ui_game_symbol_water" icon_color="0,255,255" showonhud="false">
 			<stack_type value="effect"/>
 			<duration value="0"/>
 			<update_rate value="2"/>
@@ -45,6 +45,10 @@
 				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffDysenteryCatchDrink"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffWaterPurifier"/>
 				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffWaterPurifier"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="helmetfilterequipped" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="helmetfilterequipped" operation="set" value="0"/>
 			</effect_group>
 		</buff>
 		
@@ -96,7 +100,7 @@
 			</effect_group>
 		</buff>
 		
-		<buff name="buffHelmetLightActive" name_key="buffHelmetLightActive" description_key="buffHelmetLightActiveDesc" icon="ui_game_symbol_electric_power" icon_color="0,255,0">
+		<buff name="buffHelmetLightActive" name_key="buffHelmetLightActive" description_key="buffHelmetLightActiveDesc" icon="ui_game_symbol_electric_power" icon_color="0,255,0" showonhud="false">
 			<!-- hidden="true" -->
 			<stack_type value="effect"/>
 			<duration value="0"/>
@@ -112,6 +116,8 @@
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$batteryHelmetLightEfficiency" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$batteryHelmetLightTick" operation="multiply" value="@$batteryHelmetLightEfficiency"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="batteryHelmetLight" operation="subtract" value="@$batteryHelmetLightTick"/>
+				<!-- <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="batteryHelmetLightHUD" operation="set" value="@$batteryHelmetLight"/> -->
+				<!-- <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="batteryHelmetLightHUD" operation="divide" value="100"/> -->
 				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffHelmetLightReload">
 					<requirement name="CVarCompare" cvar="batteryHelmetLight" operation="LT" value="0"/>
 				</triggered_effect>
@@ -126,6 +132,10 @@
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="batteryHelmetLightDisplay" operation="set" value="@batteryHelmetLight"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="batteryHelmetLightDisplay" operation="divide" value="100"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="helmetlightequipped" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="helmetlightequipped" operation="set" value="0"/>
 			</effect_group>
 		</buff>
 		
@@ -174,7 +184,7 @@
 			</effect_group>
 		</buff>
 		
-		<buff name="buffWeaponLightActive" name_key="buffWeaponLightActive" description_key="buffWeaponLightActiveDesc" icon="ui_game_symbol_electric_power" icon_color="255,165,0">
+		<buff name="buffWeaponLightActive" name_key="buffWeaponLightActive" description_key="buffWeaponLightActiveDesc" icon="ui_game_symbol_electric_power" icon_color="255,165,0" showonhud="false">
 			<!-- hidden="true" -->
 			<stack_type value="effect"/>
 			<duration value="0"/>
@@ -204,6 +214,10 @@
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="batteryWeaponLightDisplay" operation="set" value="@batteryWeaponLight"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="batteryWeaponLightDisplay" operation="divide" value="100"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="gunlightequipped" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="gunlightequipped" operation="set" value="0"/>
 			</effect_group>
 		</buff>
 		
@@ -252,7 +266,7 @@
 			</effect_group>
 		</buff>
 		
-		<buff name="buffLaserLightActive" name_key="buffLaserLightActive" description_key="buffLaserLightActiveDesc" icon="ui_game_symbol_electric_power" icon_color="204,0,0">
+		<buff name="buffLaserLightActive" name_key="buffLaserLightActive" description_key="buffLaserLightActiveDesc" icon="ui_game_symbol_electric_power" icon_color="204,0,0" showonhud="false">
 			<!-- hidden="true" -->
 			<stack_type value="effect"/>
 			<duration value="0"/>
@@ -282,6 +296,10 @@
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="batteryLaserLightDisplay" operation="set" value="@batteryLaserLight"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="batteryLaserLightDisplay" operation="divide" value="100"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="laserlightequipped" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="laserlightequipped" operation="set" value="0"/>
 			</effect_group>
 		</buff>
 		
@@ -329,7 +347,7 @@
 			</effect_group>
 		</buff>
 		
-		<buff name="buffFlashLightActive" name_key="buffFlashLightActive" description_key="buffFlashLightActiveDesc" icon="ui_game_symbol_electric_power" icon_color="192,192,192">
+		<buff name="buffFlashLightActive" name_key="buffFlashLightActive" description_key="buffFlashLightActiveDesc" icon="ui_game_symbol_electric_power" icon_color="192,192,192" showonhud="false">
 			<!-- hidden="true" -->
 			<stack_type value="effect"/>
 			<duration value="0"/>
@@ -357,6 +375,10 @@
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="batteryFlashLightDisplay" operation="set" value="@batteryFlashLight"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="batteryFlashLightDisplay" operation="divide" value="100"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="flashlightequipped" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="flashlightequipped" operation="set" value="0"/>
 			</effect_group>
 		</buff>
 		
@@ -405,7 +427,7 @@
 			</effect_group>
 		</buff>
 		
-		<buff name="buffNVGActive" name_key="buffNVGActive" description_key="buffNVGActiveDesc" icon="ui_game_symbol_electric_power" icon_color="255,99,71">
+		<buff name="buffNVGActive" name_key="buffNVGActive" description_key="buffNVGActiveDesc" icon="ui_game_symbol_electric_power" icon_color="255,99,71" showonhud="false">
 			<!-- hidden="true" -->
 			<stack_type value="effect"/>
 			<duration value="0"/>
@@ -438,6 +460,11 @@
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="batteryNVGDisplay" operation="set" value="@batteryNVG"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="batteryNVGDisplay" operation="divide" value="100"/>
+			</effect_group>
+			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="nvgequipped" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="nvgequipped" operation="set" value="0"/>
 			</effect_group>
 		</buff>
 		
@@ -488,7 +515,7 @@
 			</effect_group>
 		</buff>
 		
-		<buff name="buffHandTorchActive" name_key="buffHandTorchActive" description_key="buffHandTorchActiveDesc" icon="ui_game_symbol_fire" icon_color="255,69,0">
+		<buff name="buffHandTorchActive" name_key="buffHandTorchActive" description_key="buffHandTorchActiveDesc" icon="ui_game_symbol_fire" icon_color="255,69,0" showonhud="false">
 			<!-- hidden="true" -->
 			<stack_type value="effect"/>
 			<duration value="0"/>
@@ -517,6 +544,10 @@
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="batteryHandTorchDisplay" operation="set" value="@batteryHandTorch"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="batteryHandTorchDisplay" operation="divide" value="100"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="torchequipped" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="torchequipped" operation="set" value="0"/>
 			</effect_group>
 		</buff>
 		
@@ -564,7 +595,7 @@
 			</effect_group>
 		</buff>
 		
-		<buff name="buffBurningShaftActive" name_key="buffBurningShaftActive" description_key="buffBurningShaftActiveDesc" icon="ui_game_symbol_fire" icon_color="204,85,0">
+		<buff name="buffBurningShaftActive" name_key="buffBurningShaftActive" description_key="buffBurningShaftActiveDesc" icon="ui_game_symbol_fire" icon_color="204,85,0" showonhud="false">
 			<!-- hidden="true" -->
 			<stack_type value="effect"/>
 			<duration value="0"/>
@@ -591,6 +622,10 @@
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="batteryBurningShaftDisplay" operation="set" value="@batteryBurningShaft"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="batteryBurningShaftDisplay" operation="divide" value="100"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="burningshaftequipped" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="burningshaftequipped" operation="set" value="0"/>
 			</effect_group>
 		</buff>
 		

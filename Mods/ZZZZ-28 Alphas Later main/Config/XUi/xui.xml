@@ -46,6 +46,8 @@
 	<insertAfter xpath="//window_group/window[@name='HUDLeftStatBars']">
 		<window name="HUDCenterStatBars" anchor="CenterBottom"/>
 		<window name="HUDTopLeftStatBars"/>
+		<window name="HUDCentreLeftStatBars"/>
+		<window name="HUDCentreRightStatBars"/>
 	</insertAfter>
 	
 	<append xpath="/xui/ruleset">

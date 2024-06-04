@@ -4,6 +4,16 @@
 			<requirement class="NearbyEntities">
 				<property name="max_distance" value="150"/>
 			</requirement>
+			
+			<requirement class="InSafeZone">
+				<property name="invert" value="true" />
+			</requirement>
+			
+			<action class="AddBuff">
+				<property name="phase" value="0" />
+				<property name="buff_name" value="buffSmell" />
+			</action>			
+			
 			<action class="AddSpawnedEntitiesToGroup">
 				<property name="phase" value="1"/>
 				<property name="group_name" value="zombies"/>

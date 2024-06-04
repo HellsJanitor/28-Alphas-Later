@@ -615,6 +615,42 @@
 					<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,240" type="sliced" />
 				</rect>
 			</grid>
+			
+			<grid name="HUDDespair" pos="-353,13" rows="2" cols="1" cell_height="46" arrangement="vertical">
+				<!-- <rect width="171" height="44" controller="HUDStatBar" visible="{# cvar('.DespairDisplayHUD') &gt; 0}">
+					<sprite depth="1" name="background" color="0,0,0,220" type="sliced"/>
+					<filledsprite depth="2" name="BarContent" pos="2,-2" width="167" height="40" color="255,244,79,128" type="filled" fill="{cvar(.DespairDisplayHUD)}" />
+					<sprite depth="3" name="Icon" sprite="ui_game_symbol_intellect" size="35,35" pos="26,-22" pivot="center" foregroundlayer="true"/>
+					<label depth="4" name="TextContent" pos="44,-23" font_size="32" color="[white]" justify="center" pivot="left" text="{# round(cvar('.DespairDisplayHUD') * 100, 1)}%" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
+					<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,240" type="sliced" />
+				</rect>	
+				
+				<rect width="171" height="44" controller="HUDStatBar" visible="{# cvar('.DespairDisplayPositive01HUD') &gt; 0.006}">
+					<sprite depth="1" name="background" color="0,0,0,220" type="sliced"/>
+					<filledsprite depth="2" name="BarContent" pos="2,-2" width="167" height="40" color="208,255,20,128" type="filled" fill="{cvar(.DespairDisplayPositive01HUD)}" />
+					<sprite depth="3" name="Icon" sprite="ui_game_symbol_muscle" size="35,35" pos="26,-22" pivot="center" foregroundlayer="true"/>
+					<label depth="4" name="TextContent" pos="44,-23" font_size="32" color="[white]" justify="center" pivot="left" text="{# round(cvar('.DespairDisplayPositive01HUD') * 100, 1)}%" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
+					<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,240" type="sliced" />
+				</rect> -->
+
+				<!-- <rect width="171" height="44" controller="HUDStatBar" visible="{# cvar('.DespairCureDisplayHUD') &gt; 0}">
+					<sprite depth="1" name="background" color="0,0,0,220" type="sliced"/>
+					<filledsprite depth="2" name="BarContent" pos="2,-2" width="167" height="40" color="219,112,147,128" type="filled" fill="{cvar(.DespairCureDisplayHUD)}" />
+					<sprite depth="3" name="Icon" sprite="ui_game_symbol_pills" size="35,35" pos="26,-22" pivot="center" foregroundlayer="true"/>
+					<label depth="4" name="TextContent" pos="44,-23" font_size="32" color="[white]" justify="center" pivot="left" text="{# round(cvar('.DespairCureDisplayHUD') * 100, 1)}%" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
+					<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,240" type="sliced" />
+				</rect> -->					
+			</grid>
+			
+			<!-- <grid name="HUDRest" pos="1110,13" rows="2" cols="1" cell_height="46" arrangement="vertical">
+				<rect width="171" height="44" controller="HUDStatBar" visible="{# cvar('wellrestedHUD') &gt; 0}">
+					<sprite depth="1" name="background" color="0,0,0,220" type="sliced"/>
+					<filledsprite depth="2" name="BarContent" pos="2,-2" width="167" height="40" color="50,205,50,128" type="filled" fill="{cvar(wellrestedHUD)}" />
+					<sprite depth="3" name="Icon" sprite="ui_game_symbol_map_bed" size="35,35" pos="26,-22" pivot="center" foregroundlayer="true"/>
+					<label depth="4" name="TextContent" pos="44,-23" font_size="32" color="[white]" justify="center" pivot="left" text="Rested: {# round(cvar('wellrestedHUD') * 100, 1)}%" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
+					<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,240" type="sliced" />
+				</rect>									
+			</grid> -->
 
 			<!-- Big Vehicle Bars -->
 			<rect name="hud" pos="0,13" rows="2" cols="1" width="168" side="right">
@@ -639,12 +675,12 @@
 			</rect>
 		</window>
 
-		<!-- icons appear/face depending on conditions met -->
+		<!-- icons appear/fade depending on conditions met -->
 		<window name="HUDTopLeftStatBars" anchor="LeftTop" pos="20,-20" visible="{# cvar('warm') > 0}">
 		<grid name="HUDInfoLeft" cols="3" cell_width="120" arrangement="horizontal">
 			<rect name="hudWarmth" width="32" height="32" controller="HUDStatBar" visible="{# cvar('warmAlpha') > 1}"> <!--visible="{# cvar('warmAlpha') > 1}"-->
 				<sprite depth="1" name="background" color="0,0,0,{cvar(warmAlpha)}" type="sliced"/>
-				<filledsprite depth="2" name="BarContent" pos="2,-2" width="29" height="29" color="{# cvar('warm') > 0 ? '0,128,0' : '255,0,0' },{cvar(warmAlpha)}" />
+				<filledsprite depth="2" name="BarContent" pos="2,-2" width="29" height="29" color="{# cvar('warm') > 0 ? '0,128,0' : '255,0,0' },{cvar(warmAlpha)}" type="filled" fill="1" flip="Horizontally"/>
 				<sprite depth="3" name="Icon" sprite="{# cvar('warm') > 0 ? 'ui_game_symbol_check' : 'ui_game_symbol_x' }" color="{# cvar('warm') > 0 ? '255,255,255' : '255,255,255' },{cvar(warmAlpha)}" size="24,24" pos="16,-16" pivot="center" foregroundlayer="true"/>
 				<label depth="4" name="TextContent" pos="8,-16" font_size="24" color="255,255,255,{cvar(warmAlpha)}" justify="center" pivot="left" text="Warmth" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
 				<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,{cvar(warmAlpha)}" type="sliced" />
@@ -652,7 +688,7 @@
 			
 			<rect name="hudShelter" width="32" height="32" controller="HUDStatBar" visible="{# cvar('shelterAlpha') > 1}"> <!--visible="{# cvar('shelterAlpha') > 1}"-->
 				<sprite depth="1" name="background" color="0,0,0,{cvar(shelterAlpha)}" type="sliced"/>
-				<filledsprite depth="2" name="BarContent" pos="2,-2" width="29" height="29" color="{# cvar('shelter') > 0 ? '0,128,0' : '255,0,0' },{cvar(shelterAlpha)}" />
+				<filledsprite depth="2" name="BarContent" pos="2,-2" width="29" height="29" color="{# cvar('shelter') > 0 ? '0,128,0' : '255,0,0' },{cvar(shelterAlpha)}" type="filled" fill="1" flip="Horizontally"/>
 				<sprite depth="3" name="Icon" sprite="{# cvar('shelter') > 0 ? 'ui_game_symbol_check' : 'ui_game_symbol_x' }" color="{# cvar('shelter') > 0 ? '255,255,255' : '255,255,255' },{cvar(shelterAlpha)}" size="24,24" pos="16,-16" pivot="center" foregroundlayer="true"/>
 				<label depth="4" name="TextContent" pos="8,-16" font_size="24" color="255,255,255,{cvar(shelterAlpha)}" justify="center" pivot="left" text="Shelter" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
 				<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,{cvar(shelterAlpha)}" type="sliced" />
@@ -660,7 +696,7 @@
 			
 			<rect name="hudComfort" width="32" height="32" controller="HUDStatBar" visible="{# cvar('welllitAlpha') > 1}"> <!--visible="{# cvar('welllitAlpha') > 1}"-->
 				<sprite depth="1" name="background" color="0,0,0,{cvar(welllitAlpha)}" type="sliced"/>
-				<filledsprite depth="2" name="BarContent" pos="2,-2" width="29" height="29" color="{# cvar('comfort') > 0 ? '0,128,0' : '255,0,0' },{cvar(welllitAlpha)}" />
+				<filledsprite depth="2" name="BarContent" pos="2,-2" width="29" height="29" color="{# cvar('comfort') > 0 ? '0,128,0' : '255,0,0' },{cvar(welllitAlpha)}" type="filled" fill="1" flip="Horizontally"/>
 				<sprite depth="3" name="Icon" sprite="{# cvar('comfort') > 0 ? 'ui_game_symbol_check' : 'ui_game_symbol_x' }" color="{# cvar('shelter') > 0 ? '255,255,255' : '255,255,255' },{cvar(welllitAlpha)}" size="24,24" pos="16,-16" pivot="center" foregroundlayer="true"/>
 				<label depth="4" name="TextContent" pos="8,-16" font_size="24" color="255,255,255,{cvar(welllitAlpha)}" justify="center" pivot="left" text="Well Lit" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
 				<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,{cvar(welllitAlpha)}" type="sliced" />
@@ -700,7 +736,7 @@
 	<!-- ### -->
 
 	<set xpath="/windows/window[@name='HUDLeftStatBars']">
-		<rect name="hud" pos="90,90" side="left" controller="BuffPopoutList" pivot="BottomLeft">
+		<rect name="hud" pos="90,176" side="left" controller="BuffPopoutList" pivot="BottomLeft">
 			<panel width="168" height="46" name="item" visible="false" pivot="right" disableautobackground="true" pos="70,-80" style="press" sound="[recipe_click]" on_hover="true" >
 				<sprite depth="3" pos="0,-40"  name="Background" sprite="ui_game_popup" height="46" width="162" pivot="center" flip="Horizontally" color="[transparent]" />
 				<sprite depth="4" name="Icon" size="40,40" pos="-54,-40" pivot="center" color="[transparent]"/>
@@ -708,11 +744,35 @@
 			</panel>
 		</rect>	
 	
-		<rect name="hudStealth" width="171" height="44" pos="10,70" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
+		<rect name="hudStealth" width="171" height="44" pos="10,157" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
 			<sprite depth="1" name="background" color="0,0,0,220" type="sliced"/>
 			<filledsprite depth="2" name="BarContent" pos="2,-2" width="167" height="40" color="{stealthcolor}" type="filled" fill="0" />
 			<sprite depth="3" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="35,35" pos="26,-22" pivot="center" foregroundlayer="true"/>
 			<label depth="4" name="TextContent" pos="44,-23" font_size="32" color="[white]" justify="center" pivot="left" text="{statcurrent}" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
+			<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,240" type="sliced" />
+		</rect>
+		
+		<rect name="hudRest" width="171" height="44" pos="10,65" controller="HUDStatBar" visible="{# cvar('wellrestedHUD') &gt; 0}">
+			<sprite depth="1" name="background" color="0,0,0,220" type="sliced"/>
+			<filledsprite depth="2" name="BarContent" pos="2,-2" width="167" height="40" color="50,205,50,128" type="filled" fill="{cvar(wellrestedHUD)}" />
+			<sprite depth="3" name="Icon" sprite="ui_game_symbol_map_bed" size="35,35" pos="26,-22" pivot="center" foregroundlayer="true"/>
+			<label depth="4" name="TextContent" pos="44,-23" font_size="32" color="[white]" justify="center" pivot="left" text="Rested: {# round(cvar('wellrestedHUD') * 100, 1)}%" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
+			<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,240" type="sliced" />
+		</rect>
+		
+		<rect name="hudDespair" width="171" height="44" pos="10,111" controller="HUDStatBar" visible="{# cvar('.DespairDisplayHUD') &gt; 0}">
+			<sprite depth="1" name="background" color="0,0,0,220" type="sliced"/>
+			<filledsprite depth="2" name="BarContent" pos="2,-2" width="167" height="40" color="255,244,79,128" type="filled" fill="{cvar(.DespairDisplayHUD)}" />
+			<sprite depth="3" name="Icon" sprite="ui_game_symbol_intellect" size="35,35" pos="26,-22" pivot="center" foregroundlayer="true"/>
+			<label depth="4" name="TextContent" pos="44,-23" font_size="32" color="[white]" justify="center" pivot="left" text="{# round(cvar('.DespairDisplayHUD') * 100, 1)}%" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
+			<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,240" type="sliced" />
+		</rect>	
+		
+		<rect name="hudDespairPos" width="171" height="44" pos="10,111" controller="HUDStatBar" visible="{# cvar('.DespairDisplayHUD') &lt; 0}">
+			<sprite depth="1" name="background" color="0,0,0,220" type="sliced"/>
+			<filledsprite depth="2" name="BarContent" pos="2,-2" width="167" height="40" color="208,255,20,128" type="filled" fill="{cvar(.DespairDisplayPositive01HUD)}" />
+			<sprite depth="3" name="Icon" sprite="ui_game_symbol_muscle" size="35,35" pos="26,-22" pivot="center" foregroundlayer="true"/>
+			<label depth="4" name="TextContent" pos="44,-23" font_size="32" color="[white]" justify="center" pivot="left" text="{# round(cvar('.DespairDisplayPositive01HUD') * 100, 1)}%" width="125" height="35" effect="Outline8" effect_color="0,0,0,255" effect_distance="1,1"/>
 			<sprite depth="5" name="border" sprite="menu_empty3px" fillcenter="false" color="0,0,0,240" type="sliced" />
 		</rect>
 		

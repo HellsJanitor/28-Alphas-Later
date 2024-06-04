@@ -563,7 +563,7 @@
 		</buff>
 		
 		<!-- *** well rested buff, increases stamina regen for its duration *** -->
-		<buff name="buffWellRestedTrigger" name_key="buffWellRestedTriggerName" description_key="buffWellRestedTriggerDesc" icon="ui_game_symbol_map_bed" icon_color="208,255,20">
+		<buff name="buffWellRestedTrigger" name_key="buffWellRestedTriggerName" description_key="buffWellRestedTriggerDesc" icon="ui_game_symbol_map_bed" icon_color="208,255,20" showonhud="false">
 			<duration value="0"/>
 			<stack_type value="effect"/>
 			<display_value value="wellrested"/>
@@ -582,12 +582,17 @@
 					<requirement name="CVarCompare" cvar="wellrested" operation="GTE" value="600"/></triggered_effect>
 			</effect_group>
 			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wellrestedHUD" operation="set" value="@wellrested"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wellrestedHUD" operation="divide" value="600"/>
+				<!-- <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wellrestedHUD" operation="multiply" value="100"/> -->
+			</effect_group>
+			<effect_group>
 				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffWellRested"/>
 				<requirement name="CVarCompare" cvar="wellrested" operation="GTE" value="1"/>
 			</effect_group>
 		</buff>
 		
-		<buff name="buffWellRested" name_key="buffWellRestedName" description_key="buffWellRestedDesc" icon="ui_game_symbol_survival" icon_color="0,66,37">
+		<buff name="buffWellRested" name_key="buffWellRestedName" description_key="buffWellRestedDesc" icon="ui_game_symbol_survival" icon_color="0,66,37" showonhud="false">
 			<duration value="0"/>
 			<stack_type value="effect"/>
 			<display_value value="wellrested"/>
@@ -603,6 +608,11 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wellrested" operation="subtract" value="1"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wellrested" operation="set" value="0">
 					<requirement name="CVarCompare" cvar="wellrested" operation="LT" value="0"/></triggered_effect>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wellrestedHUD" operation="set" value="@wellrested"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wellrestedHUD" operation="divide" value="600"/>
+				<!-- <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wellrestedHUD" operation="multiply" value="100"/> -->
 			</effect_group>
 			<effect_group>
 				<passive_effect name="StaminaChangeOT" operation="perc_add" value=".1"/>
@@ -796,7 +806,7 @@
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$DespairStage3Duration" operation="set" value="65"/><!-- % of the full buff duration -->
 
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$DespairDisplayDivisor" operation="set" value="@$DespairMaxDuration"/>
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$DespairDisplayDivisor" operation="divide" value="100"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$DespairDisplayDivisor" operation="divide" value="100"/>				
 				<!-- DespairDisplayPerc = DespairCounter / DespairDisplayDivisor -->
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$DespairStage2Duration" operation="multiply" value="@$DespairDisplayDivisor"/>
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$DespairStage3Duration" operation="multiply" value="@$DespairDisplayDivisor"/>
@@ -1217,6 +1227,10 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DespairDisplayPerc" operation="divide" value="@$DespairDisplayDivisor"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DespairCureDisplayPerc" operation="set" value="@$DespairCureCounter"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DespairCureDisplayPerc" operation="divide" value="@$DespairDisplayDivisor"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DespairDisplayHUD" operation="set" value="@.DespairDisplayPerc"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DespairDisplayHUD" operation="divide" value="100"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DespairCureDisplayHUD" operation="set" value="@.DespairCureDisplayPerc"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DespairCureDisplayHUD" operation="divide" value="100"/>
 			</effect_group>
 
 			<effect_group name="signaling buffs">
@@ -1350,7 +1364,7 @@
 			</effect_group>
 		</buff>
 	
-		<buff name="buffDespairCureDisplayPositive01" name_key="buffDespairCureDisplayPositive01Name" description_key="buffDespairCureDisplayPositive01Desc" remove_on_death="false" icon="ui_game_symbol_muscle" icon_color="208,255,20">
+		<buff name="buffDespairCureDisplayPositive01" name_key="buffDespairCureDisplayPositive01Name" description_key="buffDespairCureDisplayPositive01Desc" remove_on_death="false" icon="ui_game_symbol_muscle" icon_color="208,255,20" showonhud="false">
 			<duration value="0"/>
 			<!-- <update_rate value="1.7"/> -->
 			<display_value_key value="{0:0.0}%"/>
@@ -1372,6 +1386,8 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value=".75"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DespairDisplayPositivePerc" operation="set" value="@.DespairDisplayPerc"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DespairDisplayPositivePerc" operation="multiply" value="-1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DespairDisplayPositive01HUD" operation="set" value="@.DespairDisplayPositivePerc"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DespairDisplayPositive01HUD" operation="divide" value="100"/>
 					
 				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.05"/>
 				<passive_effect name="BuffResistance" operation="base_add" value=".1" tags="buffInjuryBleeding,buffInjuryStunned00,buffInjuryStunned01,buffInjuryStunned01Shotgun,buffInjuryStunned02,buffInjuryStunned02Shotgun,buffInjuryStunned03,buffInjuryStunned03Shotgun,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
@@ -1387,7 +1403,7 @@
 			</effect_group>
 		</buff>
 		
-		<buff name="buffDespairCureDisplayPositive02" name_key="buffDespairCureDisplayPositive02Name" description_key="buffDespairCureDisplayPositive02Desc" remove_on_death="false" icon="ui_game_symbol_muscle" icon_color="144,238,144">
+		<buff name="buffDespairCureDisplayPositive02" name_key="buffDespairCureDisplayPositive02Name" description_key="buffDespairCureDisplayPositive02Desc" remove_on_death="false" icon="ui_game_symbol_muscle" icon_color="144,238,144" showonhud="false">
 			<duration value="0"/>
 			<!-- <update_rate value="1.7"/> -->
 			<display_value_key value="{0:0.0}%"/>
@@ -1409,6 +1425,8 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value=".8"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DespairDisplayPositivePerc" operation="set" value="@.DespairDisplayPerc"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DespairDisplayPositivePerc" operation="multiply" value="-1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DespairDisplayPositive02HUD" operation="set" value="@.DespairDisplayPositivePerc"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DespairDisplayPositive02HUD" operation="divide" value="100"/>
 					
 				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.1"/>
 				<passive_effect name="BuffResistance" operation="base_add" value=".15" tags="buffInjuryBleeding,buffInjuryStunned00,buffInjuryStunned01,buffInjuryStunned01Shotgun,buffInjuryStunned02,buffInjuryStunned02Shotgun,buffInjuryStunned03,buffInjuryStunned03Shotgun,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
@@ -1425,7 +1443,7 @@
 			</effect_group>
 		</buff>
 		
-		<buff name="buffDespairCureDisplayPositive03" name_key="buffDespairCureDisplayPositive03Name" description_key="buffDespairCureDisplayPositive03Desc" remove_on_death="false" icon="ui_game_symbol_muscle" icon_color="50,205,50">
+		<buff name="buffDespairCureDisplayPositive03" name_key="buffDespairCureDisplayPositive03Name" description_key="buffDespairCureDisplayPositive03Desc" remove_on_death="false" icon="ui_game_symbol_muscle" icon_color="50,205,50" showonhud="false">
 			<duration value="0"/>
 			<!-- <update_rate value="1.7"/> -->
 			<display_value_key value="{0:0.0}%"/>
@@ -1447,6 +1465,8 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value=".85"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DespairDisplayPositivePerc" operation="set" value="@.DespairDisplayPerc"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DespairDisplayPositivePerc" operation="multiply" value="-1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DespairDisplayPositive03HUD" operation="set" value="@.DespairDisplayPositivePerc"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".DespairDisplayPositive03HUD" operation="divide" value="100"/>
 					
 				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.15"/>
 				<passive_effect name="BuffResistance" operation="base_add" value=".2" tags="buffInjuryBleeding,buffInjuryStunned00,buffInjuryStunned01,buffInjuryStunned01Shotgun,buffInjuryStunned02,buffInjuryStunned02Shotgun,buffInjuryStunned03,buffInjuryStunned03Shotgun,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
@@ -1462,7 +1482,7 @@
 			</effect_group>
 		</buff>
 		
-		<buff name="buffDespair01Untreated" remove_on_death="false" name_key="buffDespair01UntreatedName" description_key="buffDespair01UntreatedDesc" tooltip_key="buffDespair01UntreatedTooltip" icon="ui_game_symbol_intellect" icon_color="255,244,79">
+		<buff name="buffDespair01Untreated" remove_on_death="false" name_key="buffDespair01UntreatedName" description_key="buffDespair01UntreatedDesc" tooltip_key="buffDespair01UntreatedTooltip" icon="ui_game_symbol_intellect" icon_color="255,244,79" showonhud="false">
 			<damage_type value="Disease"/>
 			<stack_type value="ignore"/>
 			<duration value="0"/>
@@ -1488,7 +1508,7 @@
 			</effect_group>
 		</buff>
 	
-		<buff name="buffDespair01GetBetter" remove_on_death="false" name_key="buffDespair01GetBetterName" description_key="buffDespair01GetBetterDesc" icon="ui_game_symbol_intellect" showonhud="true" icon_color="219,112,147">
+		<buff name="buffDespair01GetBetter" remove_on_death="false" name_key="buffDespair01GetBetterName" description_key="buffDespair01GetBetterDesc" icon="ui_game_symbol_intellect" icon_color="219,112,147" showonhud="false">
 			<damage_type value="Disease"/>
 			<stack_type value="ignore"/>
 			<duration value="0"/>
@@ -1505,7 +1525,7 @@
 			</effect_group>
 		</buff>
 	
-		<buff name="buffDespair02Untreated" remove_on_death="false" name_key="buffDespair02UntreatedName" description_key="buffDespair02UntreatedDesc" icon="ui_game_symbol_intellect" icon_color="255,128,0">
+		<buff name="buffDespair02Untreated" remove_on_death="false" name_key="buffDespair02UntreatedName" description_key="buffDespair02UntreatedDesc" icon="ui_game_symbol_intellect" icon_color="255,128,0" showonhud="false">
 			<damage_type value="Disease"/>
 			<stack_type value="ignore"/>
 			<duration value="0"/>
@@ -1527,7 +1547,7 @@
 			</effect_group>
 		</buff>
 	
-		<buff name="buffDespair02GetBetter" remove_on_death="false" name_key="buffDespair02GetBetterName" description_key="buffDespair02GetBetterDesc" icon="ui_game_symbol_intellect" showonhud="true" icon_color="219,112,147">
+		<buff name="buffDespair02GetBetter" remove_on_death="false" name_key="buffDespair02GetBetterName" description_key="buffDespair02GetBetterDesc" icon="ui_game_symbol_intellect" icon_color="219,112,147" showonhud="false">
 			<damage_type value="Disease"/>
 			<stack_type value="ignore"/>
 			<duration value="0"/>
@@ -1548,7 +1568,7 @@
 			</effect_group>
 		</buff>
 	
-		<buff name="buffDespair03Untreated" remove_on_death="false" name_key="buffDespair03UntreatedName" description_key="buffDespair03UntreatedDesc" icon="ui_game_symbol_intellect" icon_color="255,0,0" icon_blink="true">
+		<buff name="buffDespair03Untreated" remove_on_death="false" name_key="buffDespair03UntreatedName" description_key="buffDespair03UntreatedDesc" icon="ui_game_symbol_intellect" icon_color="255,0,0" icon_blink="true" showonhud="false">
 			<damage_type value="Disease"/>
 			<stack_type value="ignore"/>
 			<duration value="0"/>
@@ -1573,7 +1593,7 @@
 			</effect_group>
 		</buff>
 	
-		<buff name="buffDespair03GetBetter" remove_on_death="false" name_key="buffDespair03GetBetterName" description_key="buffDespair03GetBetterDesc" icon="ui_game_symbol_intellect" showonhud="true" icon_color="219,112,147">
+		<buff name="buffDespair03GetBetter" remove_on_death="false" name_key="buffDespair03GetBetterName" description_key="buffDespair03GetBetterDesc" icon="ui_game_symbol_intellect" icon_color="219,112,147" showonhud="false">
 			<damage_type value="Disease"/>
 			<stack_type value="ignore"/>
 			<duration value="0"/>
@@ -1597,7 +1617,7 @@
 			</effect_group>
 		</buff>
 	
-		<buff name="buffDespair04" tooltip_key="buffDespair04Tooltip" icon="ui_game_symbol_near_death_trauma" showonhud="true" icon_color="255,0,0" icon_blink="true">
+		<buff name="buffDespair04" tooltip_key="buffDespair04Tooltip" icon="ui_game_symbol_near_death_trauma" icon_color="255,0,0" icon_blink="true" showonhud="false">
 			<damage_type value="Infection"/>
 			<stack_type value="ignore"/>
 			<duration value="0"/>
