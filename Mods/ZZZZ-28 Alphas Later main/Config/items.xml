@@ -3015,13 +3015,16 @@
 	<!-- *** buffs to negate despair *** -->
 	<append xpath="//item[@name='meleeToolFlashlight02']">
 		<effect_group>
+			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffHeldLight"/>
+		</effect_group>
+		<effect_group>
 			<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffHeldLight"/>
-			<requirement name="CVarCompare" cvar="batteryFlashLight" operation="GT" value="0"/>
+			<requirement name="CVarCompare" cvar="batteryFlashLight" operation="GT" value="0.5"/>
 		</effect_group>
 		<effect_group>
 			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHeldLight"/>
 			<requirement name="IsItemActive"/>
-			<requirement name="CVarCompare" cvar="batteryFlashLight" operation="GT" value="0"/>
+			<requirement name="CVarCompare" cvar="batteryFlashLight" operation="GT" value="0.5"/>
 		</effect_group>
 		<effect_group>
 			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHeldLight"/>
@@ -3030,21 +3033,28 @@
 	</append>
 	
 	<append xpath="//item[@name='meleeToolTorch']">
+		<effect_group>
+			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffHeldTorch"/>
+		</effect_group>
 		<effect_group tiered="false">
-			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHeldTorch"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHeldTorch">
+			<requirement name="CVarCompare" cvar="batteryHandTorch" operation="GT" value="0.5"/></triggered_effect>
 			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHeldTorch"/>
 		</effect_group>
 	</append>
 	
 	<append xpath="//item[@name='apparelNightvisionGoggles']">
 		<effect_group>
+			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffNightVision"/>
+		</effect_group>
+		<effect_group>
 			<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffNightVision"/>
-			<requirement name="CVarCompare" cvar="batteryNVG" operation="GT" value="0"/>
+			<requirement name="CVarCompare" cvar="batteryNVG" operation="GT" value="0.5"/>
 		</effect_group>
 		<effect_group>
 			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffNightVision"/>
 			<requirement name="IsItemActive"/>
-			<requirement name="CVarCompare" cvar="batteryNVG" operation="GT" value="0"/>
+			<requirement name="CVarCompare" cvar="batteryNVG" operation="GT" value="0.5"/>
 		</effect_group>
 		<effect_group>
 			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffNightVision"/>

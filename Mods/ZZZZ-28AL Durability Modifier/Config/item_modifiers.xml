@@ -26,6 +26,7 @@
 			<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="HeadLightCam"/>
 			<triggered_effect trigger="onSelfItemDeactivate" action="SetPartActive" part="HeadLight" active="false"/>
 			<triggered_effect trigger="onSelfItemDeactivate" action="SetPartActive" part="HeadLightCam" active="false"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffHelmetLightActive"/>
 			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffHelmetLightDeactivate"/>
 			<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffHelmetLightActivate"/>
 			<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffHelmetLightActive"/>
@@ -38,6 +39,7 @@
 		<requirement name="!HoldingItemHasTags" tags="attachmentsIncluded"/>
 		<triggered_effect trigger="onSelfItemDeactivate" action="SetTransformActive" active="false" parent_transform="Side" transform_path="lightSource"/>
 		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="Side" transform_path="lightSource"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffWeaponLightActive"/>
 		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffWeaponLightDeactivate"/>
 		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffWeaponLightActivate"/>
 		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffWeaponLightActive"/>
@@ -48,6 +50,7 @@
 		<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
 		<triggered_effect trigger="onSelfItemDeactivate" action="SetTransformActive" active="false" parent_transform="Gunjoint" transform_path="flashlight_lightSource"/>
 		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="Gunjoint" transform_path="flashlight_lightSource"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffWeaponLightActive"/>
 		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffWeaponLightDeactivate"/>
 		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffWeaponLightActivate"/>
 		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffWeaponLightActive"/>
@@ -59,6 +62,7 @@
 		<requirement name="!HoldingItemHasTags" tags="attachmentsIncluded"/>
 		<triggered_effect trigger="onSelfItemDeactivate" action="SetTransformChildrenActive" active="false" parent_transform="Side" transform_path="gun_laser"/>
 		<triggered_effect trigger="onSelfEquipStop" action="SetTransformChildrenActive" active="false" parent_transform="Side" transform_path="gun_laser"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffLaserLightActive"/>
 		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffLaserLightDeactivate"/>
 		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffLaserLightActivate"/>
 		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffLaserLightActive"/>
@@ -67,8 +71,9 @@
 	
 	<set xpath="//item_modifier[@name='modGunLaserSight']//effect_group[@name='internal attachment prefab (A19)']">
 		<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
-		<triggered_effect trigger="onSelfItemDeactivate" action="SetTransformActive" active="false" parent_transform="gunlaser" transform_path="gunlaser"/>
+		<triggered_effect trigger="onSelfItemDeactivate" action="SetTransformChildrenActive" active="false" parent_transform="Side" transform_path="gun_laser"/>
 		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="gunlaser" transform_path="gunlaser"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffLaserLightActive"/>
 		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffLaserLightDeactivate"/>
 		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffLaserLightActivate"/>
 		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffLaserLightActive"/>
@@ -84,6 +89,7 @@
 	<!-- *** burning shaft *** -->
 	<set xpath="//item_modifier[@name='modMeleeClubBurningShaft']//effect_group[@name='light/douse torch always']">
 		<!-- <triggered_effect trigger="onSelfWaterSurface" action="AddPart" part="Flames" prefab="property?FlameEffect" parentTransform="#HeldItemRoot"/> -->
+		<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffBurningShaftActive"/>
 		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffBurningShaftDeactivate"/>
 		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffBurningShaftActivate"/>
 		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffBurningShaftActivate"/>

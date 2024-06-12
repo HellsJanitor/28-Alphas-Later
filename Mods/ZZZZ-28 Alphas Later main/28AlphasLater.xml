@@ -3,6 +3,21 @@
     <ServerGroup Name="28 Alphas Later" Logo="https://media.discordapp.net/attachments/1155647724478275614/1180961617417085000/background.png" Description="Will you survive?">
         <Server Name="28 Alphas Later" Logo="https://media.discordapp.net/attachments/1155647724478275614/1180961617417085000/background.png">
             <Description>### 28 Alphas Later ###
+09/06/2024 1.4.2
+
+Fixed "super rad" colours not applying properly to certain zombies
+Fixed super-rad zombies reverting to radiated colours when decapped
+All "fat" zombies now have a vomit attack
+Fixed bug with Well Lit showing even when batteries/fuel are depleted from light source
+Reworked the UI a little more - fixed some scaling issues
+Fixed the "double laser" from the laser sight mod
+Removed a few mutated entities due to performance issues
+Halved the level for action skills. Max level is now 50, not 100
+Lowered the number of zombie nightspawns across all biomes at later gamestages
+Fixed headshot damage multiplier applying to non-zombies
+Well Rested buff now counts up quicker, and counts down slower (lasts longer)
+
+
 04/06/2024 1.4.2
 UI Tweaks
 Smell mechanic disabled in landclaimed areas

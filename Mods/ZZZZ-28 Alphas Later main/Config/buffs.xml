@@ -232,7 +232,17 @@
 	<append xpath="/buffs">
 		<!-- *** all running player buffs *** -->
 		<buff name="buff28AlphasLaterPlayer" hidden="true">
-			<!-- start with despair -->
+			<!-- remove all "light" buffs on entering game -->
+			<effect_group>
+				<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffHeldLight"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffHelmetLight"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffHeldTorch"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffGunFlashlight"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffNightVision"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffBurningShaft"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffWallTorch"/>
+			</effect_group>			
+			<!-- start with despair -->			
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffDespairMain"/>
 				<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffDespairMain"/>
@@ -297,6 +307,7 @@
 			<!-- damage modifier for missed headshots -->
 			<effect_group>
 				<requirement name="HitLocation" body_parts="Torso,LeftUpperArm,RightUpperArm,LeftLowerArm,RightLowerArm,LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
+				<requirement name="EntityTagCompare" target="other" tags="zombie,feral,radiated,hazmat,mutated,mutant"/>
 				<requirement name="IsAlive" target="other" tags="zombie,mutated,mutant"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.90"/>
 			</effect_group>
@@ -575,7 +586,7 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffWellRested"/>
 			</effect_group>
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wellrested" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wellrested" operation="add" value="2"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wellrested" operation="set" value="600">
@@ -605,7 +616,7 @@
 					<requirement name="CVarCompare" cvar="wellrested" operation="LTE" value="0"/></triggered_effect>
 			</effect_group>
 			<effect_group>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wellrested" operation="subtract" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wellrested" operation="subtract" value=".66"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wellrested" operation="set" value="0">
 					<requirement name="CVarCompare" cvar="wellrested" operation="LT" value="0"/></triggered_effect>
 			</effect_group>
@@ -728,6 +739,7 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value="-.25"/>
 				<requirement name="!HasBuff" buff="buffDespairCureDisplay"/>
 				<requirement name="HasBuff" buff="buffHeldLight"/>
+				<requirement name="HasBuff" buff="buffFlashLightActive"/>
 			</effect_group>
 		</buff>
 	
@@ -738,6 +750,7 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value="-.25"/>
 				<requirement name="!HasBuff" buff="buffDespairCureDisplay"/>
 				<requirement name="HasBuff" buff="buffHelmetLight"/>
+				<requirement name="HasBuff" buff="buffHelmetLightActive"/>
 			</effect_group>
 		</buff>
 	
@@ -748,6 +761,7 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value="-.25"/>
 				<requirement name="!HasBuff" buff="buffDespairCureDisplay"/>
 				<requirement name="HasBuff" buff="buffHeldTorch"/>
+				<requirement name="HasBuff" buff="buffHandTorchActive"/>
 			</effect_group>
 		</buff>
 	
@@ -758,6 +772,7 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value="-.25"/>
 				<requirement name="!HasBuff" buff="buffDespairCureDisplay"/>
 				<requirement name="HasBuff" buff="buffGunFlashlight"/>
+				<requirement name="HasBuff" buff="buffWeaponLightActive"/>
 			</effect_group>
 		</buff>
 	
@@ -771,7 +786,7 @@
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounter" operation="add" value="-.25"/>
 				<requirement name="!HasBuff" buff="buffDespairCureDisplay"/>
-				<requirement name="HasBuff" buff="buffBurningShaft"/>
+				<requirement name="HasBuff" buff="buffBurningShaftActive"/>
 			</effect_group>
 		</buff>
 	
@@ -833,6 +848,48 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounterModifier" operation="set" value="15"/>
 				<requirement name="!IsIndoors"/>
 				<requirement name="IsNight"/>
+			</effect_group>
+			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounterModifier" operation="set" value="15"/>
+				<requirement name="!IsIndoors"/>
+				<requirement name="IsNight"/>
+				<requirement name="!HasBuff" target="self" buff="buffHeldLight"/>
+			</effect_group>
+			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounterModifier" operation="set" value="15"/>
+				<requirement name="!IsIndoors"/>
+				<requirement name="IsNight"/>
+				<requirement name="!HasBuff" target="self" buff="buffHeldTorch"/>
+			</effect_group>
+			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounterModifier" operation="set" value="15"/>
+				<requirement name="!IsIndoors"/>
+				<requirement name="IsNight"/>
+				<requirement name="!HasBuff" target="self" buff="buffHelmetLight"/>
+			</effect_group>
+			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounterModifier" operation="set" value="15"/>
+				<requirement name="!IsIndoors"/>
+				<requirement name="IsNight"/>
+				<requirement name="!HasBuff" target="self" buff="buffGunFlashlight"/>
+			</effect_group>
+			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounterModifier" operation="set" value="15"/>
+				<requirement name="!IsIndoors"/>
+				<requirement name="IsNight"/>
+				<requirement name="!HasBuff" target="self" buff="buffNightVision"/>
+			</effect_group>
+			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DespairCounterModifier" operation="set" value="15"/>
+				<requirement name="!IsIndoors"/>
+				<requirement name="IsNight"/>
+				<requirement name="!HasBuff" target="self" buff="buffBurningShaft"/>
 			</effect_group>
 		
 			<!-- outdoors at night, with a light -->
@@ -1080,12 +1137,12 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffWellLit"/>
 				<!-- <requirement name="IsIndoors"/>	 -->
 				<requirements compare_type="or">
-					<requirement name="HasBuff" target="self" buff="buffHeldLight"/>
-					<requirement name="HasBuff" target="self" buff="buffHelmetLight"/>
-					<requirement name="HasBuff" target="self" buff="buffHeldTorch"/>
-					<requirement name="HasBuff" target="self" buff="buffGunFlashlight"/>
-					<requirement name="HasBuff" target="self" buff="buffNightVision"/>
-					<requirement name="HasBuff" target="self" buff="buffBurningShaft"/>
+					<requirement name="HasBuff" target="self" buff="buffFlashLightActive"/>
+					<requirement name="HasBuff" target="self" buff="buffHelmetLightActive"/>
+					<requirement name="HasBuff" target="self" buff="buffHandTorchActive"/>
+					<requirement name="HasBuff" target="self" buff="buffWeaponLightActive"/>
+					<requirement name="HasBuff" target="self" buff="buffNVGActive"/>
+					<requirement name="HasBuff" target="self" buff="buffBurningShaftActive"/>
 					<requirement name="HasBuff" target="self" buff="buffWallTorch"/>
 					<requirement name="HasBuff" target="self" buff="buffCampfireAOEEffect"/>
 				</requirements>
@@ -1094,12 +1151,12 @@
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="comfort" operation="set" value="0"/>
 				<requirements compare_type="and">
-					<requirement name="!HasBuff" target="self" buff="buffHeldLight"/>
-					<requirement name="!HasBuff" target="self" buff="buffHelmetLight"/>
-					<requirement name="!HasBuff" target="self" buff="buffHeldTorch"/>
-					<requirement name="!HasBuff" target="self" buff="buffGunFlashlight"/>
-					<requirement name="!HasBuff" target="self" buff="buffNightVision"/>
-					<requirement name="!HasBuff" target="self" buff="buffBurningShaft"/>
+					<requirement name="!HasBuff" target="self" buff="buffFlashLightActive"/>
+					<requirement name="!HasBuff" target="self" buff="buffHelmetLightActive"/>
+					<requirement name="!HasBuff" target="self" buff="buffHandTorchActive"/>
+					<requirement name="!HasBuff" target="self" buff="buffWeaponLightActive"/>
+					<requirement name="!HasBuff" target="self" buff="buffNVGActive"/>
+					<requirement name="!HasBuff" target="self" buff="buffBurningShaftActive"/>
 					<requirement name="!HasBuff" target="self" buff="buffWallTorch"/>
 					<requirement name="!HasBuff" target="self" buff="buffCampfireAOEEffect"/>
 				</requirements>
@@ -1804,23 +1861,23 @@
 			</effect_group>
 			<effect_group compare_type="or">
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="welllitAlpha" operation="set" value="255"/>
-				<requirement name="HasBuff" buff="buffHeldLight"/>
-				<requirement name="HasBuff" buff="buffHeldTorch"/>
-				<requirement name="HasBuff" buff="buffHelmetLight"/>
-				<requirement name="HasBuff" buff="buffNightVision"/>
-				<requirement name="HasBuff" buff="buffBurningShaft"/>
-				<requirement name="HasBuff" buff="buffGunFlashlight"/>
+				<requirement name="HasBuff" buff="buffFlashLightActive"/>
+				<requirement name="HasBuff" buff="buffHandTorchActive"/>
+				<requirement name="HasBuff" buff="buffHelmetLightActive"/>
+				<requirement name="HasBuff" buff="buffNVGActive"/>
+				<requirement name="HasBuff" buff="buffBurningShaftActive"/>
+				<requirement name="HasBuff" buff="buffWeaponLightActive"/>
 				<requirement name="HasBuff" buff="buffWallTorch"/>
 				<requirement name="HasBuff" buff="buffCampfireAOEEffect"/>
 			</effect_group>
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffWellLitFade"/>
-				<requirement name="!HasBuff" buff="buffHeldLight"/>
-				<requirement name="!HasBuff" buff="buffHeldTorch"/>
-				<requirement name="!HasBuff" buff="buffHelmetLight"/>
-				<requirement name="!HasBuff" buff="buffNightVision"/>
-				<requirement name="!HasBuff" buff="buffBurningShaft"/>
-				<requirement name="!HasBuff" buff="buffGunFlashlight"/>
+				<requirement name="!HasBuff" buff="buffFlashLightActive"/>
+				<requirement name="!HasBuff" buff="buffHandTorchActive"/>
+				<requirement name="!HasBuff" buff="buffHelmetLightActive"/>
+				<requirement name="!HasBuff" buff="buffNVGActive"/>
+				<requirement name="!HasBuff" buff="buffBurningShaftActive"/>
+				<requirement name="!HasBuff" buff="buffWeaponLightActive"/>
 				<requirement name="!HasBuff" buff="buffWallTorch"/>
 				<requirement name="!HasBuff" buff="buffCampfireAOEEffect"/>
 			</effect_group>
@@ -2600,8 +2657,10 @@
 			
 				<triggered_effect trigger="onSelfAttackedOther" action="Explode" blast_power="0" block_damage="750" block_radius="5" entity_damage="30" entity_radius="4"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyStats" stat="Health" operation="set" value="0"/>
+				
 				<triggered_effect trigger="onSelfDamagedBlock" action="Explode" blast_power="0" block_damage="750" block_radius="5" entity_damage="30" entity_radius="4"/>
 				<triggered_effect trigger="onSelfDamagedBlock" action="ModifyStats" stat="Health" operation="set" value="0"/>
+				
 				<triggered_effect trigger="onSelfDied" action="Explode" blast_power="0" block_damage="0" block_radius="1" entity_damage="50" entity_radius="4"/>
 			</effect_group>
 		</buff>

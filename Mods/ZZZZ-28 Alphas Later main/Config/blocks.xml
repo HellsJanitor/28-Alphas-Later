@@ -211,9 +211,8 @@
 			<property name="ContRows" value="1"/>
 			
 			<item_conversion item="drinkJarRiverWater" lower_range="1" upper_range="1"/>
-			
-			<modifier name="adcAdvancedFilter" effect="ReplaceItem" value="drinkJarRiverWater" secondary="drinkJarBoiledWater"/>
 			<modifier name="adcLargeCatcher" effect="ItemQuantity" value="drinkJarRiverWater" secondary="2" thirdValue="2"/>
+			<modifier name="adcAdvancedFilter" effect="ReplaceItem" value="drinkJarRiverWater" secondary="drinkJarBoiledWater"/>			
 			<!-- <modifier name="adcAdvancedFilter" effect="Speed" value="-1.0"/> -->
 			<modifier name="adcBigBarrel" effect="OutputSlots" value="2"/><!-- Additive effect -->
 		</block>

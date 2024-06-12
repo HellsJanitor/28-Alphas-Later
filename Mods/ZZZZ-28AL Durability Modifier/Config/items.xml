@@ -70,6 +70,7 @@
 	<remove xpath="//item[@name='meleeToolFlashlight02']/effect_group[@name='meleeToolFlashlight02']//triggered_effect[@trigger='onSelfItemDeactivate']"/>
 	
 	<append xpath="//item[@name='meleeToolFlashlight02']/effect_group[@name='meleeToolFlashlight02']">
+		<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffFlashLightActive"/>
 		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffFlashLightDeactivate"/>
 		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffFlashLightActivate"/>
 		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffFlashLightActive"/>
@@ -78,6 +79,7 @@
 	
 	<set xpath="/items/item[@name='apparelNightvisionGoggles']/effect_group">
 		<requirement name="IsLocalPlayer"/>
+		<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffNVGActive"/>
 		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffNVGDeactivate"/>
 		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="buffNVGActivate"/>
 		<triggered_effect trigger="onSelfItemDeactivate" action="RemoveBuff" buff="buffNVGActive"/>
@@ -143,6 +145,7 @@
 	
 	<append xpath="//item[@name='meleeToolTorch']">
 		<effect_group name="add or remove flames/fuel check" tiered="false">
+			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffHandTorchActive"/>
 			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffHandTorchDeactivate"/>
 			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHandTorchActivate"/>
 			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHandTorchActive"/>			
